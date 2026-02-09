@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy! - Kelly's Game Night</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JEOPARDY!</h1>
+            <div class="score-board">
+                <span>Score: $<span id="score">0</span></span>
+            </div>
+        </header>
+
+        <div class="game-board" id="gameBoard">
+            <!-- Categories -->
+            <div class="category">90s Throwbacks</div>
+            <div class="category">Wild Science</div>
+            <div class="category">Animal Kingdom</div>
+            <div class="category">Movie Quotes</div>
+            <div class="category">Food & Drink</div>
+
+            <!-- Questions -->
+            <!-- Category 1: 90s Throwbacks -->
+            <div class="clue" data-value="200" data-category="0" data-question="0">$200</div>
+            <div class="clue" data-value="200" data-category="1" data-question="0">$200</div>
+            <div class="clue" data-value="200" data-category="2" data-question="0">$200</div>
+            <div class="clue" data-value="200" data-category="3" data-question="0">$200</div>
+            <div class="clue" data-value="200" data-category="4" data-question="0">$200</div>
+
+            <div class="clue" data-value="400" data-category="0" data-question="1">$400</div>
+            <div class="clue" data-value="400" data-category="1" data-question="1">$400</div>
+            <div class="clue" data-value="400" data-category="2" data-question="1">$400</div>
+            <div class="clue" data-value="400" data-category="3" data-question="1">$400</div>
+            <div class="clue" data-value="400" data-category="4" data-question="1">$400</div>
+
+            <div class="clue" data-value="600" data-category="0" data-question="2">$600</div>
+            <div class="clue" data-value="600" data-category="1" data-question="2">$600</div>
+            <div class="clue" data-value="600" data-category="2" data-question="2">$600</div>
+            <div class="clue" data-value="600" data-category="3" data-question="2">$600</div>
+            <div class="clue" data-value="600" data-category="4" data-question="2">$600</div>
+
+            <div class="clue" data-value="800" data-category="0" data-question="3">$800</div>
+            <div class="clue" data-value="800" data-category="1" data-question="3">$800</div>
+            <div class="clue" data-value="800" data-category="2" data-question="3">$800</div>
+            <div class="clue" data-value="800" data-category="3" data-question="3">$800</div>
+            <div class="clue" data-value="800" data-category="4" data-question="3">$800</div>
+
+            <div class="clue" data-value="1000" data-category="0" data-question="4">$1000</div>
+            <div class="clue" data-value="1000" data-category="1" data-question="4">$1000</div>
+            <div class="clue" data-value="1000" data-category="2" data-question="4">$1000</div>
+            <div class="clue" data-value="1000" data-category="3" data-question="4">$1000</div>
+            <div class="clue" data-value="1000" data-category="4" data-question="4">$1000</div>
+        </div>
+
+        <!-- Modal for questions -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2 id="modalValue"></h2>
+                <p id="modalQuestion"></p>
+                <input type="text" id="answerInput" placeholder="What is..." autocomplete="off">
+                <div class="modal-buttons">
+                    <button id="submitBtn">Submit Answer</button>
+                    <button id="closeBtn">Pass</button>
+                </div>
+                <p id="feedback"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
