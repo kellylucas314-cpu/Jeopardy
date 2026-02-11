@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy! - Custom Topics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0a0a2e 0%, #1a1a4e 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Setup Screen */
+        .setup-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+            text-align: center;
+        }
+
+        .setup-screen h1 {
+            font-size: 4rem;
+            color: #ffcc00;
+            text-shadow: 4px 4px 0 #000;
+            margin-bottom: 10px;
+            letter-spacing: 8px;
+        }
+
+        .setup-screen p {
+            color: #aaa;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+        }
+
+        .topic-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .topic-input-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topic-input-group label {
+            width: 30px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .topic-input-group input {
+            flex: 1;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background: #1a1a3e;
+            color: white;
+            transition: border-color 0.3s;
+        }
+
+        .topic-input-group input:focus {
+            outline: none;
+            border-color: #ffcc00;
+        }
+
+        .topic-input-group input::placeholder {
+            color: #666;
+        }
+
+        .start-btn {
+            padding: 20px 60px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: #ffcc00;
+            color: #0a0a2e;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .start-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 204, 0, 0.3);
+        }
+
+        .preset-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .preset-btn {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            background: transparent;
+            color: #888;
+            border: 1px solid #444;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preset-btn:hover {
+            background: #333;
+            color: #fff;
+            border-color: #666;
+        }
+
+        /* Game Screen */
+        .game-screen {
+            display: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #ffcc00;
+            text-shadow: 3px 3px 0 #000;
+            letter-spacing: 4px;
+        }
+
+        .score-board {
+            font-size: 1.5rem;
+            background: #1a1a3e;
+            padding: 10px 30px;
+            border-radius: 10px;
+            border: 2px solid #ffcc00;
+        }
+
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            background: #000;
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        .category {
+            background: linear-gradient(180deg, #1a237e 0%, #0d1b5e 100%);
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border-radius: 5px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .clue {
+            background: linear-gradient(180deg, #1565c0 0%, #0d47a1 100%);
+            color: #ffcc00;
+            padding: 30px 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-shadow: 2px 2px 0 #000;
+        }
+
+        .clue:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 20px rgba(255, 204, 0, 0.3);
+        }
+
+        .clue.answered {
+            background: #1a1a3e;
+            color: #333;
+            cursor: default;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .difficulty {
+            font-size: 0.7rem;
+            color: #aaa;
+            margin-top: 5px;
+            text-shadow: none;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: linear-gradient(180deg, #1a237e 0%, #0d1b5e 100%);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 700px;
+            width: 90%;
+            border: 3px solid #ffcc00;
+        }
+
+        .modal-content h2 {
+            color: #ffcc00;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .modal-content .topic-name {
+            color: #888;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .modal-content .question-prompt {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        .modal-content .difficulty-hint {
+            background: #0a0a2e;
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .modal-buttons button {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .correct-btn {
+            background: #4caf50;
+            color: white;
+        }
+
+        .incorrect-btn {
+            background: #f44336;
+            color: white;
+        }
+
+        .modal-buttons button:hover {
+            transform: scale(1.05);
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: transparent;
+            color: #888;
+            border: 1px solid #444;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .back-btn:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        /* Winner Screen */
+        .winner-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1001;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .winner-content {
+            text-align: center;
+        }
+
+        .winner-content h1 {
+            font-size: 4rem;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .winner-content .final-score {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        .play-again-btn {
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            background: #ffcc00;
+            color: #0a0a2e;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .setup-screen h1 {
+                font-size: 2.5rem;
+            }
+            
+            .clue {
+                padding: 15px 5px;
+                font-size: 1rem;
+            }
+            
+            .category {
+                font-size: 0.7rem;
+                padding: 10px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Setup Screen -->
+        <div class="setup-screen" id="setupScreen">
+            <h1>JEOPARDY!</h1>
+            <p>Enter 5 topics to generate your custom game</p>
+            
+            <div class="preset-buttons">
+                <button class="preset-btn" onclick="loadPreset('party')">🎉 Party Mix</button>
+                <button class="preset-btn" onclick="loadPreset('science')">🔬 Science</button>
+                <button class="preset-btn" onclick="loadPreset('pop')">🎬 Pop Culture</button>
+                <button class="preset-btn" onclick="loadPreset('sports')">⚽ Sports</button>
+                <button class="preset-btn" onclick="loadPreset('random')">🎲 Random</button>
+            </div>
+
+            <div class="topic-inputs">
+                <div class="topic-input-group">
+                    <label>1</label>
+                    <input type="text" id="topic1" placeholder="e.g., Formula 1 Racing">
+                </div>
+                <div class="topic-input-group">
+                    <label>2</label>
+                    <input type="text" id="topic2" placeholder="e.g., 90s Music">
+                </div>
+                <div class="topic-input-group">
+                    <label>3</label>
+                    <input type="text" id="topic3" placeholder="e.g., World Geography">
+                </div>
+                <div class="topic-input-group">
+                    <label>4</label>
+                    <input type="text" id="topic4" placeholder="e.g., Marvel Movies">
+                </div>
+                <div class="topic-input-group">
+                    <label>5</label>
+                    <input type="text" id="topic5" placeholder="e.g., Food & Cooking">
+                </div>
+            </div>
+
+            <button class="start-btn" onclick="startGame()">START GAME</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div class="game-screen" id="gameScreen">
+            <button class="back-btn" onclick="backToSetup()">← New Game</button>
+            
+            <header>
+                <h1>JEOPARDY!</h1>
+                <div class="score-board">
+                    Score: $<span id="score">0</span>
+                </div>
+            </header>
+
+            <div class="game-board" id="gameBoard">
+                <!-- Categories will be populated -->
+            </div>
+        </div>
+
+        <!-- Question Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2 id="modalValue">$200</h2>
+                <div class="topic-name" id="modalTopic">TOPIC</div>
+                <div class="question-prompt">
+                    <p>Ask a <strong id="difficultyText">easy</strong> question about:</p>
+                    <p style="font-size: 2rem; color: #ffcc00; margin-top: 15px;" id="questionTopic">Topic</p>
+                </div>
+                <div class="difficulty-hint" id="difficultyHint">
+                    Easy: Basic facts most people would know
+                </div>
+                <div class="modal-buttons">
+                    <button class="correct-btn" onclick="markCorrect()">✓ Correct</button>
+                    <button class="incorrect-btn" onclick="markIncorrect()">✗ Wrong</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Winner Modal -->
+        <div id="winnerModal" class="winner-modal">
+            <div class="winner-content">
+                <h1>🎉 GAME OVER! 🎉</h1>
+                <div class="final-score">Final Score: $<span id="finalScore">0</span></div>
+                <button class="play-again-btn" onclick="backToSetup()">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let topics = [];
+        let score = 0;
+        let currentClue = null;
+        let answeredCount = 0;
+
+        const difficultyHints = {
+            200: { text: 'very easy', hint: 'Basic facts anyone would know' },
+            400: { text: 'easy', hint: 'Common knowledge for people familiar with the topic' },
+            600: { text: 'medium', hint: 'Requires some specific knowledge' },
+            800: { text: 'hard', hint: 'Detailed knowledge needed' },
+            1000: { text: 'expert', hint: 'Only enthusiasts would know this' }
+        };
+
+        const presets = {
+            party: ['90s Nostalgia', 'Celebrity Gossip', 'Viral Memes', 'Reality TV', 'TikTok Trends'],
+            science: ['Space & Astronomy', 'Human Biology', 'Chemistry', 'Inventions', 'Animals'],
+            pop: ['Marvel Movies', 'Taylor Swift', 'Video Games', 'Netflix Shows', 'Classic Movies'],
+            sports: ['Formula 1', 'NBA Basketball', 'World Cup Soccer', 'Olympics', 'Tennis'],
+            random: ['Weird Laws', 'Food Origins', 'Famous Fails', 'Odd Jobs', 'Unsolved Mysteries']
+        };
+
+        function loadPreset(presetName) {
+            const preset = presets[presetName];
+            for (let i = 0; i < 5; i++) {
+                document.getElementById(`topic${i + 1}`).value = preset[i];
+            }
+        }
+
+        function startGame() {
+            topics = [];
+            for (let i = 1; i <= 5; i++) {
+                const topic = document.getElementById(`topic${i}`).value.trim();
+                if (!topic) {
+                    alert(`Please enter a topic for category ${i}`);
+                    return;
+                }
+                topics.push(topic);
+            }
+
+            score = 0;
+            answeredCount = 0;
+            document.getElementById('score').textContent = '0';
+            
+            buildGameBoard();
+            
+            document.getElementById('setupScreen').style.display = 'none';
+            document.getElementById('gameScreen').style.display = 'block';
+        }
+
+        function buildGameBoard() {
+            const board = document.getElementById('gameBoard');
+            board.innerHTML = '';
+
+            // Add categories
+            topics.forEach(topic => {
+                const cat = document.createElement('div');
+                cat.className = 'category';
+                cat.textContent = topic;
+                board.appendChild(cat);
+            });
+
+            // Add clues
+            const values = [200, 400, 600, 800, 1000];
+            values.forEach((value, qIndex) => {
+                topics.forEach((topic, catIndex) => {
+                    const clue = document.createElement('div');
+                    clue.className = 'clue';
+                    clue.innerHTML = `$${value}<div class="difficulty">${difficultyHints[value].text}</div>`;
+                    clue.dataset.value = value;
+                    clue.dataset.category = catIndex;
+                    clue.dataset.question = qIndex;
+                    clue.onclick = () => openClue(clue, catIndex, value);
+                    board.appendChild(clue);
+                });
+            });
+        }
+
+        function openClue(element, categoryIndex, value) {
+            if (element.classList.contains('answered')) return;
+
+            currentClue = {
+                element: element,
+                category: categoryIndex,
+                value: value,
+                topic: topics[categoryIndex]
+            };
+
+            const modal = document.getElementById('modal');
+            document.getElementById('modalValue').textContent = '$' + value;
+            document.getElementById('modalTopic').textContent = topics[categoryIndex];
+            document.getElementById('difficultyText').textContent = difficultyHints[value].text;
+            document.getElementById('questionTopic').textContent = topics[categoryIndex];
+            document.getElementById('difficultyHint').textContent = difficultyHints[value].hint;
+
+            modal.style.display = 'flex';
+        }
+
+        function markCorrect() {
+            if (!currentClue) return;
+            
+            score += currentClue.value;
+            document.getElementById('score').textContent = score;
+            currentClue.element.classList.add('answered');
+            answeredCount++;
+            
+            closeModal();
+            checkGameEnd();
+        }
+
+        function markIncorrect() {
+            if (!currentClue) return;
+            
+            currentClue.element.classList.add('answered');
+            answeredCount++;
+            
+            closeModal();
+            checkGameEnd();
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            currentClue = null;
+        }
+
+        function checkGameEnd() {
+            if (answeredCount >= 25) {
+                document.getElementById('finalScore').textContent = score;
+                document.getElementById('winnerModal').style.display = 'flex';
+            }
+        }
+
+        function backToSetup() {
+            document.getElementById('gameScreen').style.display = 'none';
+            document.getElementById('winnerModal').style.display = 'none';
+            document.getElementById('setupScreen').style.display = 'flex';
+        }
+
+        // Close modal on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Close modal on outside click
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (e.target.id === 'modal') closeModal();
+        });
+    </script>
+</body>
+</html>
