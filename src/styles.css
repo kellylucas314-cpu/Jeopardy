@@ -1,0 +1,1033 @@
+/* ============================================
+   JEOPARDY! — Authentic Game Styling
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --jeopardy-blue: #060ce9;
+  --jeopardy-dark: #00008b;
+  --jeopardy-gold: #d4a843;
+  --jeopardy-light-gold: #f4d03f;
+  --board-bg: #060ce9;
+  --clue-bg: #060ce9;
+  --clue-hover: #1414ff;
+  --correct: #4caf50;
+  --wrong: #f44336;
+  --text: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #0a0a2e;
+  color: var(--text);
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ——— Shared ——— */
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 4rem;
+  color: var(--jeopardy-gold);
+  text-shadow:
+    0 0 20px rgba(212, 168, 67, 0.4),
+    2px 2px 0 #1a1a5e,
+    4px 4px 8px var(--shadow);
+  letter-spacing: 6px;
+  text-align: center;
+}
+
+.negative { color: var(--wrong) !important; }
+
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+button:hover { transform: scale(1.03); filter: brightness(1.1); }
+button:active { transform: scale(0.98); }
+button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; filter: none; }
+
+input {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ——— Setup Screen ——— */
+
+.setup-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn 0.6s ease;
+}
+
+.logo-container { text-align: center; }
+
+.logo-subtitle {
+  font-size: 1rem;
+  color: var(--jeopardy-gold);
+  opacity: 0.7;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.setup-card {
+  background: linear-gradient(145deg, #12125a, #0a0a3e);
+  border: 2px solid var(--jeopardy-gold);
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  box-shadow: 0 8px 32px var(--shadow);
+}
+
+.setup-card h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--jeopardy-gold);
+}
+
+.player-count-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-player-count {
+  flex: 1;
+  padding: 12px;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+
+.btn-player-count.selected {
+  background: var(--jeopardy-gold);
+  color: #0a0a2e;
+  border-color: var(--jeopardy-gold);
+}
+
+.name-input-group {
+  margin-bottom: 12px;
+}
+
+.name-input-group label {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+.name-input-group input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.name-input-group input:focus {
+  border-color: var(--jeopardy-gold);
+}
+
+.btn-start {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.2rem;
+  background: var(--jeopardy-gold);
+  color: #0a0a2e;
+  border-radius: 10px;
+  margin-top: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.setup-footer {
+  text-align: center;
+}
+
+.sound-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.sound-toggle input { cursor: pointer; }
+
+/* ——— Loading ——— */
+
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--jeopardy-gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.loading-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ——— Game Board ——— */
+
+.board-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  animation: fadeIn 0.4s ease;
+}
+
+.board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  flex-shrink: 0;
+}
+
+.round-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--jeopardy-gold);
+  font-weight: 900;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 16px;
+}
+
+.player-score {
+  text-align: center;
+  padding: 6px 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s;
+}
+
+.player-score.active {
+  background: rgba(212, 168, 67, 0.15);
+  border: 1px solid var(--jeopardy-gold);
+}
+
+.player-name {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.player-amount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--jeopardy-gold);
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  flex: 1;
+  padding: 4px;
+  min-height: 0;
+}
+
+.game-board.revealing .board-category {
+  animation: revealCategory 0.6s ease backwards;
+}
+
+.board-category {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.board-category:nth-child(1) { animation-delay: 0s; }
+.board-category:nth-child(2) { animation-delay: 0.1s; }
+.board-category:nth-child(3) { animation-delay: 0.2s; }
+.board-category:nth-child(4) { animation-delay: 0.3s; }
+.board-category:nth-child(5) { animation-delay: 0.4s; }
+.board-category:nth-child(6) { animation-delay: 0.5s; }
+
+@keyframes revealCategory {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.category-header {
+  background: var(--jeopardy-blue);
+  border: 2px solid #2020ff;
+  border-radius: 4px;
+  padding: 10px 6px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text);
+  text-shadow: 1px 1px 2px var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  line-height: 1.2;
+}
+
+.board-clue {
+  flex: 1;
+  background: var(--jeopardy-blue);
+  border: 2px solid #2020ff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--jeopardy-gold);
+  text-shadow: 1px 1px 3px var(--shadow);
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.board-clue:hover:not(.answered) {
+  background: var(--clue-hover);
+  transform: scale(1.04);
+  box-shadow: 0 0 16px rgba(212, 168, 67, 0.3);
+  z-index: 2;
+}
+
+.board-clue.answered {
+  background: #0a0a40;
+  border-color: #1a1a5e;
+  color: transparent;
+  cursor: default;
+}
+
+.board-footer {
+  text-align: center;
+  padding: 6px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+/* ——— Clue Screen ——— */
+
+.clue-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: var(--jeopardy-blue);
+  padding: 30px;
+  animation: clueZoomIn 0.4s ease;
+}
+
+@keyframes clueZoomIn {
+  from { opacity: 0; transform: scale(1.1); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.clue-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 10px;
+}
+
+.clue-category {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+.clue-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--jeopardy-gold);
+  font-weight: 700;
+}
+
+.clue-timer {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.timer-bar-bg {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.timer-bar {
+  height: 100%;
+  width: 100%;
+  background: var(--jeopardy-gold);
+  border-radius: 3px;
+  transition: width 1s linear;
+}
+
+.timer-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--jeopardy-gold);
+  min-width: 24px;
+  text-align: right;
+}
+
+.clue-text {
+  font-size: 1.8rem;
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px var(--shadow);
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.clue-player {
+  font-size: 0.85rem;
+  color: var(--jeopardy-gold);
+  margin-bottom: 20px;
+}
+
+.clue-answer-area {
+  width: 100%;
+  max-width: 500px;
+}
+
+.answer-input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: var(--text);
+  outline: none;
+  margin-bottom: 14px;
+}
+
+.answer-input:focus {
+  border-color: var(--jeopardy-gold);
+  box-shadow: 0 0 12px rgba(212, 168, 67, 0.25);
+}
+
+.clue-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-submit {
+  flex: 2;
+  padding: 14px;
+  font-size: 1.1rem;
+  background: var(--correct);
+  color: white;
+  border-radius: 10px;
+}
+
+.btn-skip {
+  flex: 1;
+  padding: 14px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.clue-feedback {
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.clue-feedback.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feedback-correct {
+  color: var(--correct);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.feedback-wrong {
+  color: var(--wrong);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.feedback-skip {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.1rem;
+}
+
+.feedback-icon {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.correct-response {
+  font-size: 0.95rem;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+/* ——— Daily Double ——— */
+
+.daily-double-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: var(--jeopardy-blue);
+  padding: 30px;
+  animation: fadeIn 0.3s ease;
+}
+
+.dd-flash {
+  animation: ddFlash 0.6s ease;
+  margin-bottom: 30px;
+}
+
+@keyframes ddFlash {
+  0%, 20%, 40% { opacity: 1; transform: scale(1); }
+  10%, 30% { opacity: 0.5; transform: scale(1.05); }
+}
+
+.dd-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--jeopardy-gold);
+  text-align: center;
+  text-shadow: 0 0 30px rgba(212, 168, 67, 0.5), 3px 3px 0 #1a1a5e;
+  line-height: 1.1;
+}
+
+.dd-content {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.dd-category {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.dd-player {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.dd-score {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 24px;
+}
+
+.dd-wager-area label {
+  display: block;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.wager-input-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.wager-dollar {
+  font-size: 1.4rem;
+  color: var(--jeopardy-gold);
+  font-weight: 700;
+}
+
+.wager-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: var(--jeopardy-gold);
+  outline: none;
+  text-align: center;
+}
+
+.wager-input:focus {
+  border-color: var(--jeopardy-gold);
+}
+
+.wager-range {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 14px;
+}
+
+.wager-presets {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.btn-preset {
+  flex: 1;
+  padding: 8px;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+}
+
+.btn-wager-submit {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  background: var(--jeopardy-gold);
+  color: #0a0a2e;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ——— Round Transition ——— */
+
+.transition-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 30px;
+  animation: fadeIn 0.5s ease;
+}
+
+.transition-scores {
+  text-align: center;
+}
+
+.transition-scores h3 {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.transition-player {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  padding: 8px 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.transition-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--jeopardy-gold);
+  text-shadow: 0 0 20px rgba(212, 168, 67, 0.4), 3px 3px 0 #1a1a5e;
+  animation: pulseGlow 1.5s ease infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { text-shadow: 0 0 20px rgba(212, 168, 67, 0.4), 3px 3px 0 #1a1a5e; }
+  50% { text-shadow: 0 0 40px rgba(212, 168, 67, 0.6), 3px 3px 0 #1a1a5e; }
+}
+
+.transition-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-continue {
+  padding: 14px 40px;
+  font-size: 1.1rem;
+  background: var(--jeopardy-gold);
+  color: #0a0a2e;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ——— Final Jeopardy ——— */
+
+.final-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background: linear-gradient(180deg, #0a0a2e 0%, #060ce9 100%);
+  animation: fadeIn 0.5s ease;
+  overflow-y: auto;
+}
+
+.final-header {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--jeopardy-gold);
+  text-shadow: 0 0 20px rgba(212, 168, 67, 0.4);
+}
+
+.final-scores {
+  text-align: center;
+}
+
+.final-category-reveal {
+  text-align: center;
+  animation: revealCategory 0.8s ease;
+}
+
+.final-category-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.final-category-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text);
+  text-shadow: 2px 2px 4px var(--shadow);
+  text-transform: uppercase;
+}
+
+.final-category-name.small {
+  font-size: 1.2rem;
+}
+
+.final-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.final-wager-form, .final-answer-form {
+  width: 100%;
+  max-width: 450px;
+}
+
+.final-wager-player, .final-answer-player {
+  margin-bottom: 16px;
+}
+
+.fwp-name {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.wager-note {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.final-clue-text {
+  font-size: 1.6rem;
+  text-align: center;
+  max-width: 650px;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px var(--shadow);
+}
+
+.final-answer-player label {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+.final-answer-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: var(--text);
+  outline: none;
+}
+
+.final-answer-input:focus {
+  border-color: var(--jeopardy-gold);
+}
+
+.think-music-note {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.3);
+  animation: pulseGlow 2s ease infinite;
+}
+
+.final-correct-response {
+  text-align: center;
+}
+
+.final-correct-response .label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.final-correct-response .response {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--jeopardy-gold);
+  margin-top: 4px;
+}
+
+.final-results-list {
+  width: 100%;
+  max-width: 450px;
+}
+
+.final-result-player {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 16px;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.final-result-player.correct { border-left: 4px solid var(--correct); }
+.final-result-player.wrong { border-left: 4px solid var(--wrong); }
+
+.frp-name { font-weight: 700; }
+.frp-wager { text-align: right; font-weight: 600; }
+.final-result-player.correct .frp-wager { color: var(--correct); }
+.final-result-player.wrong .frp-wager { color: var(--wrong); }
+.frp-answer { font-size: 0.85rem; color: rgba(255, 255, 255, 0.5); }
+.frp-total { text-align: right; font-size: 0.85rem; color: var(--jeopardy-gold); }
+
+/* ——— Results Screen ——— */
+
+.results-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  animation: fadeIn 0.5s ease;
+}
+
+.results-crown {
+  font-size: 4rem;
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.results-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--jeopardy-gold);
+  text-shadow: 0 0 20px rgba(212, 168, 67, 0.4);
+}
+
+.results-scores {
+  width: 100%;
+  max-width: 400px;
+}
+
+.result-player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.result-player.winner {
+  background: rgba(212, 168, 67, 0.1);
+  border: 2px solid var(--jeopardy-gold);
+}
+
+.result-rank { font-size: 1.8rem; }
+.result-name { flex: 1; font-size: 1.2rem; font-weight: 600; }
+.result-score { font-size: 1.3rem; font-weight: 700; color: var(--jeopardy-gold); }
+
+.btn-play-again {
+  padding: 16px 48px;
+  font-size: 1.2rem;
+  background: var(--jeopardy-gold);
+  color: #0a0a2e;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+/* ——— Animations ——— */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ——— Mobile Responsive ——— */
+
+@media (max-width: 768px) {
+  .logo { font-size: 2.5rem; letter-spacing: 3px; }
+
+  .board-header {
+    flex-direction: column;
+    gap: 6px;
+    padding: 4px;
+  }
+
+  .round-name { font-size: 1rem; }
+
+  .scoreboard { gap: 8px; }
+
+  .player-score { padding: 4px 10px; }
+  .player-name { font-size: 0.65rem; }
+  .player-amount { font-size: 0.85rem; }
+
+  .game-board { gap: 2px; padding: 2px; }
+
+  .category-header {
+    font-size: 0.55rem;
+    padding: 6px 3px;
+    min-height: 40px;
+  }
+
+  .board-clue {
+    font-size: 0.85rem;
+    border-width: 1px;
+  }
+
+  .clue-text { font-size: 1.2rem; }
+  .clue-screen { padding: 16px; }
+
+  .dd-title { font-size: 2.2rem; }
+  .transition-title { font-size: 2rem; }
+  .final-header { font-size: 1.6rem; }
+  .final-category-name { font-size: 1.4rem; }
+  .final-clue-text { font-size: 1.2rem; }
+  .results-title { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  .logo { font-size: 2rem; }
+
+  .category-header {
+    font-size: 0.5rem;
+    padding: 4px 2px;
+    min-height: 32px;
+  }
+
+  .board-clue {
+    font-size: 0.7rem;
+  }
+
+  .setup-card { padding: 20px; }
+  .btn-start { font-size: 1rem; }
+}
+
+/* ——— Scrollbar ——— */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 3px; }

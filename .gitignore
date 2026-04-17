@@ -1,0 +1,5 @@
+node_modules/
+dist/
+jeopardy_dataset.tsv
+*.log
+.DS_Store
