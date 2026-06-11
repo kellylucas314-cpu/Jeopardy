@@ -19,6 +19,16 @@ let boardRevealDone = false;
 const PLAYER_COLORS = ['var(--p0)', 'var(--p1)', 'var(--p2)'];
 const AVATARS = ['🦊', '🐙', '🦉', '🐸', '🦄', '🐯', '🐼', '👾', '🤖', '🍕', '🌟', '🐳'];
 let prevScores = []; // for score-bump animation on the board
+let prevLeader = null; // for lead-change announcements
+
+// Personality — the game reacts like a host, not a spreadsheet
+const CORRECT_LINES = ['Nailed it!', 'Big brain energy!', 'Money in the bank!', 'Too easy for you!', "That's the one!", 'Scholar alert!', 'Certified genius!'];
+const WRONG_LINES = ['Not this time!', 'Ooh, so close!', 'The judges say no!', 'Swing and a miss!', "That's gonna sting!", 'Bold... but no.'];
+const TIMEOUT_LINES = ["Time's up!", 'The clock got you!', 'Frozen at the buzzer!'];
+const NOBUZZ_LINES = ['No takers!', 'Crickets...', 'Tough crowd!', "Nobody's biting!"];
+const STEAL_LINES = ['It can be stolen!', 'Free money on the table!', 'Who wants it?'];
+
+const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 // Buzz-mode bookkeeping (imperative, within the clue screen)
 const BUZZ_KEYS = ['q', 'p', 'b']; // player 1, 2, 3
@@ -107,7 +117,7 @@ function handleTimeExpired() {
   showFeedback(`
     <div class="feedback-wrong">
       <div class="feedback-icon">&#x23F0;</div>
-      <div>Time's up! -$${formatMoney(result.value)}</div>
+      <div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
@@ -122,7 +132,10 @@ function renderSetup() {
   const savedAvatars = prefs.avatars || [];
   const playerCount = prefs.playerCount || 2;
   const gameMode = prefs.gameMode || 'turns';
+  const gameLength = prefs.gameLength || 'full';
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
+  prevLeader = null;
+  prevScores = [];
 
   app.innerHTML = `
     <div class="setup-screen">
@@ -140,6 +153,15 @@ function renderSetup() {
           `).join('')}
         </div>
         <div id="player-names"></div>
+        <h2 class="mode-title">Game length</h2>
+        <div class="player-count-buttons length-buttons">
+          <button class="btn-player-count btn-length ${gameLength === 'quick' ? 'selected' : ''}" data-length="quick">
+            Quick &middot; ~20 min
+          </button>
+          <button class="btn-player-count btn-length ${gameLength === 'full' ? 'selected' : ''}" data-length="full">
+            Full &middot; ~45 min
+          </button>
+        </div>
         <div id="mode-section">
           <h2 class="mode-title">Game mode</h2>
           <div class="mode-buttons">
@@ -168,13 +190,21 @@ function renderSetup() {
   updateModeVisibility(playerCount);
 
   // Player count buttons
-  document.querySelectorAll('.btn-player-count').forEach(btn => {
+  document.querySelectorAll('.btn-player-count:not(.btn-length)').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-player-count').forEach(b => b.classList.remove('selected'));
+      document.querySelectorAll('.btn-player-count:not(.btn-length)').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       const count = parseInt(btn.dataset.count);
       renderPlayerInputs(count, savedNames, savedAvatars);
       updateModeVisibility(count);
+    });
+  });
+
+  // Game length buttons
+  document.querySelectorAll('.btn-length').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.btn-length').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
     });
   });
 
@@ -200,9 +230,10 @@ function renderSetup() {
     );
     const avatars = Array.from(document.querySelectorAll('.avatar-btn')).map(b => b.textContent.trim());
     const mode = document.querySelector('.btn-mode.selected')?.dataset.mode || 'turns';
-    savePrefs({ names, avatars, playerCount: names.length, gameMode: mode, sound: sounds.isEnabled() });
+    const length = document.querySelector('.btn-length.selected')?.dataset.length || 'full';
+    savePrefs({ names, avatars, playerCount: names.length, gameMode: mode, gameLength: length, sound: sounds.isEnabled() });
     sounds.playSelect();
-    startGame(names, mode, avatars);
+    startGame(names, mode, avatars, length);
   });
 }
 
@@ -264,6 +295,7 @@ function renderBoard() {
         <div class="round-meta">
           <div class="round-name">${roundName}</div>
           <div class="round-progress"><div class="round-progress-fill" style="width:${progress}%"></div></div>
+          ${players.length > 1 ? `<div class="picks-cue" style="--pc: ${PLAYER_COLORS[activePlayer]}">🎯 ${escapeHtml(players[activePlayer].name)} picks</div>` : ''}
         </div>
         <div class="scoreboard">
           ${players.map((p, i) => `
@@ -316,6 +348,17 @@ function renderBoard() {
   });
   prevScores = players.map(p => p.score);
 
+  // Lead-change announcement — keeps the race dramatic and visible
+  if (players.length > 1) {
+    const top = Math.max(...players.map(p => p.score));
+    const leaders = players.map((p, i) => i).filter(i => players[i].score === top);
+    const leader = leaders.length === 1 ? leaders[0] : null;
+    if (leader !== null && prevLeader !== null && leader !== prevLeader) {
+      showToast(`👑 ${escapeHtml(players[leader].name)} takes the lead!`, PLAYER_COLORS[leader]);
+    }
+    if (leader !== null) prevLeader = leader;
+  }
+
   // Clue click handlers — zoom the cell into the clue screen
   document.querySelectorAll('.board-clue:not(.answered)').forEach(el => {
     el.addEventListener('click', () => {
@@ -330,6 +373,17 @@ function renderBoard() {
     getState().showCategoryIntro = false; // consume without re-render
     playCategoryIntro(categories);
   }
+}
+
+/** TV-chyron style announcement banner. */
+function showToast(html, color = 'var(--accent-1)') {
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.style.setProperty('--pc', color);
+  toast.innerHTML = html;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.classList.add('leaving'), 2200);
+  setTimeout(() => toast.remove(), 2700);
 }
 
 /** Animate the clicked board cell expanding to fill the screen, then run `then`. */
@@ -355,7 +409,8 @@ function playCategoryIntro(categories) {
     <div class="ci-name" id="ci-name"></div>
     <div class="ci-skip">tap to skip</div>
   `;
-  app.appendChild(overlay);
+  // Mounted on <body> so board re-renders can't wipe it mid-sequence
+  document.body.appendChild(overlay);
 
   const nameEl = overlay.querySelector('#ci-name');
   let i = 0;
@@ -426,6 +481,12 @@ function showFeedback(html) {
   feedback.classList.add('show');
 }
 
+/** "🔥 3 in a row" bonus callout when a streak pays extra. */
+function bonusHtml(result) {
+  if (!result.bonus) return '';
+  return `<div class="streak-callout">&#x1F525; ${result.streak} in a row &middot; +$${formatMoney(result.bonus)} streak bonus</div>`;
+}
+
 // — Turns mode (and daily doubles in any mode) —
 
 function renderTurnsClue() {
@@ -476,15 +537,16 @@ function handleSubmitAnswer() {
     showFeedback(`
       <div class="feedback-correct">
         <div class="feedback-icon">&#x2713;</div>
-        <div>Correct! +$${formatMoney(result.value)}</div>
+        <div>${pick(CORRECT_LINES)} +$${formatMoney(result.value)}</div>
+        ${bonusHtml(result)}
       </div>
     `);
-    setTimeout(() => { lastScreen = null; returnToBoard(); }, 2000);
+    setTimeout(() => { lastScreen = null; returnToBoard(); }, result.bonus ? 2400 : 2000);
   } else {
     showFeedback(`
       <div class="feedback-wrong">
         <div class="feedback-icon">&#x2717;</div>
-        <div>Incorrect! -$${formatMoney(result.value)}</div>
+        <div>${pick(WRONG_LINES)} -$${formatMoney(result.value)}</div>
         <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
         <div class="feedback-actions">
           <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
@@ -506,9 +568,10 @@ function handleOverride() {
     <div class="feedback-correct">
       <div class="feedback-icon">&#x2713;</div>
       <div>We'll accept it! +$${formatMoney(result.value)} (penalty refunded)</div>
+      ${bonusHtml(result)}
     </div>
   `);
-  setTimeout(() => { lastScreen = null; returnToBoard(); }, 1800);
+  setTimeout(() => { lastScreen = null; returnToBoard(); }, result.bonus ? 2200 : 1800);
 }
 
 function handleSkip() {
@@ -608,6 +671,7 @@ function tryBuzz(playerIndex) {
     // Buzzed too early — brief lockout, just like the show
     buzzLockedUntil[playerIndex] = Date.now() + 1200;
     sounds.playLockout();
+    navigator.vibrate?.([30, 40, 30]);
     const btn = document.querySelector(`.btn-buzzer[data-player="${playerIndex}"]`);
     if (btn) {
       btn.classList.add('locked');
@@ -619,6 +683,7 @@ function tryBuzz(playerIndex) {
   if (buzzPhase !== 'open') return;
   buzzPhase = 'answering';
   clearInterval(timerInterval);
+  navigator.vibrate?.(40);
   buzzIn(playerIndex);
 
   const { players } = getState();
@@ -671,23 +736,24 @@ function resolveBuzzAnswer(answer, timedOut) {
     showFeedback(`
       <div class="feedback-correct">
         <div class="feedback-icon">&#x2713;</div>
-        <div>Correct! +$${formatMoney(result.value)}</div>
+        <div>${pick(CORRECT_LINES)} +$${formatMoney(result.value)}</div>
+        ${bonusHtml(result)}
       </div>
     `);
-    setTimeout(() => { lastScreen = null; returnToBoard(); }, 2000);
+    setTimeout(() => { lastScreen = null; returnToBoard(); }, result.bonus ? 2400 : 2000);
     return;
   }
 
   // Wrong (or silent) — maybe others can still steal it
   const header = timedOut
-    ? `<div class="feedback-icon">&#x23F0;</div><div>Time's up! -$${formatMoney(result.value)}</div>`
-    : `<div class="feedback-icon">&#x2717;</div><div>Incorrect! -$${formatMoney(result.value)}</div>`;
+    ? `<div class="feedback-icon">&#x23F0;</div><div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>`
+    : `<div class="feedback-icon">&#x2717;</div><div>${pick(WRONG_LINES)} -$${formatMoney(result.value)}</div>`;
 
   if (result.canRebuzz) {
     showFeedback(`
       <div class="feedback-wrong">
         ${header}
-        <div class="correct-response">${result.remaining} player${result.remaining > 1 ? 's' : ''} can steal!</div>
+        <div class="correct-response">${pick(STEAL_LINES)} ${result.remaining} player${result.remaining > 1 ? 's' : ''} can buzz.</div>
         <div class="feedback-actions">
           <button class="btn-feedback-continue" id="btn-fb-continue">Open Buzzers &#x1F514;</button>
           ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">We'll accept it &#x2713;</button>`}
@@ -746,7 +812,7 @@ function handleNoBuzz() {
 
   showFeedback(`
     <div class="feedback-skip">
-      <div>No takers!</div>
+      <div>${pick(NOBUZZ_LINES)}</div>
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
@@ -818,20 +884,22 @@ function renderDailyDouble() {
 
 function renderRoundTransition() {
   const { players } = getState();
+  const lowest = players.reduce((minI, p, i, arr) => (p.score < arr[minI].score ? i : minI), 0);
 
   app.innerHTML = `
     <div class="transition-screen">
       <div class="transition-scores">
-        <h3>End of Jeopardy! Round</h3>
+        <h3>End of Round 1</h3>
         ${players.map(p => `
           <div class="transition-player">
-            <span>${escapeHtml(p.name)}</span>
+            <span>${p.avatar || ''} ${escapeHtml(p.name)}</span>
             <span class="${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</span>
           </div>
         `).join('')}
       </div>
-      <div class="transition-title">Double Jeopardy!</div>
-      <div class="transition-subtitle">Values are doubled!</div>
+      <div class="transition-title">Round 2</div>
+      <div class="transition-subtitle">All values are doubled!</div>
+      ${players.length > 1 ? `<div class="transition-note">${players[lowest].avatar || ''} <strong>${escapeHtml(players[lowest].name)}</strong> is trailing and gets first pick</div>` : ''}
       <button class="btn-continue" id="btn-continue">Continue</button>
     </div>
   `;
@@ -1042,6 +1110,7 @@ function renderResults() {
     lastScreen = null;
     boardRevealDone = false;
     prevScores = [];
+    prevLeader = null;
     resetForNewGame();
   });
 }

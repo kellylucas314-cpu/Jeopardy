@@ -1484,6 +1484,71 @@ input { font-family: inherit; }
 }
 
 /* ============================================================
+   GAME FEEL — toasts, streak callouts, cues
+   ============================================================ */
+
+.toast {
+  position: fixed;
+  top: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 90;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: rgba(10, 12, 24, 0.85);
+  border: 1.5px solid var(--pc, var(--accent-1));
+  box-shadow: 0 8px 36px color-mix(in srgb, var(--pc, var(--accent-1)) 40%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+  animation: toastIn 0.45s var(--ease-spring);
+  pointer-events: none;
+}
+
+.toast.leaving { transition: opacity 0.5s, transform 0.5s; opacity: 0; transform: translateX(-50%) translateY(-14px); }
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(-22px) scale(0.92); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+}
+
+.streak-callout {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  animation: popIn 0.45s var(--ease-spring);
+  box-shadow: 0 0 24px rgba(251, 191, 36, 0.2);
+}
+
+.picks-cue {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--pc, var(--text-dim));
+  letter-spacing: 0.04em;
+}
+
+.transition-note {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--stroke);
+}
+
+.transition-note strong { color: var(--text); }
+
+.length-buttons { margin-bottom: 4px; }
+
+/* ============================================================
    CONFETTI
    ============================================================ */
 

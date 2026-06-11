@@ -12,12 +12,21 @@ function newPlayer(name, avatar) {
 }
 
 /**
+ * Hot-streak bonus (Kahoot-style): from 3 in a row, each correct answer
+ * pays an extra streak × $100 on top of the clue value.
+ */
+export function streakBonus(streak) {
+  return streak >= 3 ? streak * 100 : 0;
+}
+
+/**
  * Start a new game with the given player names and mode ('turns' | 'buzz').
  */
-export async function startGame(playerNames, gameMode = 'turns', avatars = []) {
+export async function startGame(playerNames, gameMode = 'turns', avatars = [], gameLength = 'full') {
   setState({
     players: playerNames.map((name, i) => newPlayer(name, avatars[i] || '🎲')),
     gameMode: playerNames.length > 1 ? gameMode : 'turns',
+    gameLength,
     activePlayer: 0,
     answeringPlayer: 0,
     lastCorrectPlayer: 0,
@@ -174,11 +183,14 @@ export function submitAnswer(userAnswer) {
   const updatedPlayers = [...players];
   const p = updatedPlayers[answeringPlayer];
 
+  let bonus = 0;
+  let streak = 0;
   if (result.correct) {
-    const streak = p.streak + 1;
+    streak = p.streak + 1;
+    bonus = streakBonus(streak);
     updatedPlayers[answeringPlayer] = {
       ...p,
-      score: p.score + value,
+      score: p.score + value + bonus,
       correct: p.correct + 1,
       streak,
       bestStreak: Math.max(p.bestStreak, streak),
@@ -219,6 +231,8 @@ export function submitAnswer(userAnswer) {
     correct: result.correct,
     correctResponse: currentClue.response,
     value,
+    bonus,
+    streak,
     canRebuzz,
     remaining,
   };
@@ -236,9 +250,10 @@ export function overrideCorrect() {
   const updatedPlayers = [...players];
   const p = updatedPlayers[playerIndex];
   const streak = p.streak + 1;
+  const bonus = streakBonus(streak);
   updatedPlayers[playerIndex] = {
     ...p,
-    score: p.score + value * 2, // refund the penalty + award the value
+    score: p.score + value * 2 + bonus, // refund the penalty + award the value (+ streak bonus)
     correct: p.correct + 1,
     wrong: Math.max(0, p.wrong - 1),
     streak,
@@ -260,7 +275,7 @@ export function overrideCorrect() {
   if (clueStillOpen) markClueAnswered();
 
   sounds.playCorrect();
-  return { value };
+  return { value, bonus, streak };
 }
 
 /**
@@ -281,17 +296,17 @@ export function noBuzz() {
  * Called when the answer result has been shown and we return to the board.
  */
 export function returnToBoard() {
-  const { cluesAnswered, totalClues, round, players, lastCorrectPlayer } = getState();
+  const { cluesAnswered, totalClues, round, players, lastCorrectPlayer, gameLength } = getState();
 
   // The last player to answer correctly picks the next clue
   const nextPlayer = players.length > 1 ? lastCorrectPlayer : 0;
 
   if (cluesAnswered >= totalClues) {
     // Round is complete
-    if (round === 1) {
+    if (round === 1 && gameLength !== 'quick') {
       setState({ currentClue: null, screen: 'round-transition' });
     } else {
-      // Go to Final Jeopardy
+      // Go to Final Jeopardy (quick games skip Double Jeopardy)
       setState({ currentClue: null, screen: 'loading' });
       startFinalJeopardy();
     }
@@ -343,9 +358,18 @@ export function skipClue() {
 
 /**
  * Advance to Double Jeopardy round.
+ * Like the real show, the trailing player gets first pick — a natural
+ * catch-up mechanic that keeps everyone in the race.
  */
 export async function startDoubleJeopardy() {
-  setState({ screen: 'loading' });
+  const { players } = getState();
+  const updates = { screen: 'loading' };
+  if (players.length > 1) {
+    const lowest = players.reduce((minI, p, i, arr) => (p.score < arr[minI].score ? i : minI), 0);
+    updates.activePlayer = lowest;
+    updates.lastCorrectPlayer = lowest;
+  }
+  setState(updates);
   sounds.playRoundTransition();
   await loadRound(2);
 }

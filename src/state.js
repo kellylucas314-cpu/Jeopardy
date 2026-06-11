@@ -9,6 +9,7 @@ const state = {
   round: 1,        // 1 = Jeopardy, 2 = Double Jeopardy, 3 = Final Jeopardy
 
   gameMode: 'turns', // 'turns' = take turns | 'buzz' = race to buzz in
+  gameLength: 'full', // 'quick' = 1 round + final | 'full' = 2 rounds + final
 
   players: [],       // [{ name, score, correct, wrong, streak, bestStreak }]
   activePlayer: 0,   // index of the player picking clues
@@ -60,6 +61,7 @@ function notify() {
 export function resetForNewGame() {
   state.screen = 'setup';
   state.round = 1;
+  state.gameLength = 'full';
   state.players = [];
   state.activePlayer = 0;
   state.answeringPlayer = 0;
