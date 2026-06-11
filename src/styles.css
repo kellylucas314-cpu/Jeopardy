@@ -619,6 +619,7 @@ input { font-family: var(--font-ui); }
   background: var(--brass);
   border-radius: 2px;
   transition: width 1s linear;
+  box-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
 }
 
 .timer-text {
@@ -942,6 +943,8 @@ input { font-family: var(--font-ui); }
 }
 .btn-preset:hover { color: var(--brass); border-color: rgba(216, 168, 90, 0.4); }
 
+.btn-preset:hover { border-color: var(--money); color: var(--money); }
+
 .btn-wager-submit {
   width: 100%;
   padding: 15px;
@@ -999,6 +1002,8 @@ input { font-family: var(--font-ui); }
 }
 .transition-player:last-child { border-bottom: none; }
 
+.transition-player:last-child { border-bottom: none; }
+
 .transition-title {
   font-family: var(--font-display);
   font-size: 3rem;
@@ -1037,7 +1042,7 @@ input { font-family: var(--font-ui); }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 22px;
   width: 100%;
   height: 100%;
   padding: 32px;
