@@ -31,7 +31,10 @@ html, body {
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: #0a0a2e;
+  background:
+    radial-gradient(ellipse at 50% -20%, rgba(6, 12, 233, 0.35), transparent 60%),
+    radial-gradient(ellipse at 80% 110%, rgba(212, 168, 67, 0.08), transparent 50%),
+    #0a0a2e;
   color: var(--text);
 }
 
@@ -310,9 +313,10 @@ input {
 }
 
 .category-header {
-  background: var(--jeopardy-blue);
+  background: linear-gradient(180deg, #0d12d8 0%, #050a9e 100%);
   border: 2px solid #2020ff;
   border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   padding: 10px 6px;
   text-align: center;
   font-size: 0.75rem;
@@ -329,9 +333,10 @@ input {
 
 .board-clue {
   flex: 1;
-  background: var(--jeopardy-blue);
+  background: linear-gradient(160deg, #1018f5 0%, var(--jeopardy-blue) 40%, #0408b8 100%);
   border: 2px solid #2020ff;
   border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -2px 6px rgba(0, 0, 0, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -376,7 +381,9 @@ input {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: var(--jeopardy-blue);
+  background:
+    radial-gradient(ellipse at 50% 25%, rgba(40, 60, 255, 0.55), transparent 65%),
+    linear-gradient(180deg, #0a10d8 0%, #04067e 100%);
   padding: 30px;
   animation: clueZoomIn 0.4s ease;
 }
@@ -441,11 +448,14 @@ input {
 }
 
 .clue-text {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
+  font-weight: 600;
   text-align: center;
-  max-width: 700px;
-  line-height: 1.5;
-  text-shadow: 2px 2px 4px var(--shadow);
+  text-transform: uppercase;
+  max-width: 760px;
+  line-height: 1.45;
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 5px var(--shadow);
   margin-bottom: 20px;
   flex-shrink: 0;
 }
@@ -553,7 +563,9 @@ input {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: var(--jeopardy-blue);
+  background:
+    radial-gradient(ellipse at 50% 25%, rgba(40, 60, 255, 0.55), transparent 65%),
+    linear-gradient(180deg, #0a10d8 0%, #04067e 100%);
   padding: 30px;
   animation: fadeIn 0.3s ease;
 }
@@ -1024,6 +1036,316 @@ input {
 
   .setup-card { padding: 20px; }
   .btn-start { font-size: 1rem; }
+}
+
+/* ——— Game Mode Selector ——— */
+
+.mode-title {
+  margin-top: 8px;
+}
+
+.mode-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.btn-mode {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.btn-mode.selected {
+  background: rgba(212, 168, 67, 0.12);
+  border-color: var(--jeopardy-gold);
+  box-shadow: 0 0 14px rgba(212, 168, 67, 0.2);
+}
+
+.mode-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.btn-mode.selected .mode-name { color: var(--jeopardy-gold); }
+
+.mode-desc {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* ——— Streak Badge ——— */
+
+.streak {
+  font-size: 0.7rem;
+  color: #ff9d4d;
+  font-weight: 700;
+}
+
+/* ——— Category Intro Overlay ——— */
+
+.category-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(6, 12, 233, 0.5), transparent 70%),
+    rgba(5, 5, 30, 0.96);
+  cursor: pointer;
+  animation: fadeIn 0.3s ease;
+  transition: opacity 0.4s ease;
+}
+
+.category-intro.fade-out { opacity: 0; pointer-events: none; }
+
+.ci-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.ci-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--text);
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 30px rgba(6, 12, 233, 0.8), 2px 2px 4px var(--shadow);
+  max-width: 80vw;
+  line-height: 1.15;
+  min-height: 1.2em;
+}
+
+.ci-name.pop {
+  animation: ciPop 0.45s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+
+@keyframes ciPop {
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.ci-skip {
+  position: absolute;
+  bottom: 30px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ——— Buzz Mode ——— */
+
+.buzz-status {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  min-height: 2.2rem;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.buzz-status.open {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--jeopardy-light-gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: buzzPulse 0.7s ease infinite;
+}
+
+@keyframes buzzPulse {
+  0%, 100% { transform: scale(1); text-shadow: 0 0 12px rgba(244, 208, 63, 0.5); }
+  50% { transform: scale(1.07); text-shadow: 0 0 28px rgba(244, 208, 63, 0.9); }
+}
+
+.buzzer-row {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+  max-width: 640px;
+  margin-top: 10px;
+}
+
+.btn-buzzer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 18px 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.btn-buzzer:hover { border-color: var(--jeopardy-gold); }
+
+.btn-buzzer.locked {
+  border-color: var(--wrong);
+  animation: shake 0.3s ease;
+  opacity: 0.6;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.btn-buzzer.out {
+  opacity: 0.3;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.buzzer-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.buzzer-key {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--jeopardy-gold);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(212, 168, 67, 0.4);
+  border-radius: 8px;
+  padding: 2px 14px;
+}
+
+.buzzed-flash {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--jeopardy-light-gold);
+  animation: ciPop 0.4s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+
+/* ——— Feedback Action Buttons ——— */
+
+.feedback-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.btn-feedback-continue {
+  padding: 12px 28px;
+  font-size: 1rem;
+  background: var(--jeopardy-gold);
+  color: #0a0a2e;
+  border-radius: 10px;
+}
+
+.btn-feedback-accept {
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  background: rgba(76, 175, 80, 0.15);
+  color: var(--correct);
+  border: 1px solid var(--correct);
+  border-radius: 10px;
+}
+
+/* ——— Final Jeopardy Override ——— */
+
+.btn-final-override {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-top: 6px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+}
+
+.final-result-player.wrong .btn-final-override {
+  color: var(--correct);
+  border-color: rgba(76, 175, 80, 0.5);
+}
+
+/* ——— Results Stats ——— */
+
+.result-player {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.result-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.result-stats {
+  display: flex;
+  gap: 14px;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  padding-left: 42px;
+}
+
+.stat-good { color: var(--correct); }
+.stat-bad { color: var(--wrong); }
+
+/* ——— Confetti ——— */
+
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.confetti {
+  position: absolute;
+  top: -20px;
+  border-radius: 2px;
+  opacity: 0.9;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(105vh) rotate(720deg); opacity: 0.6; }
+}
+
+/* ——— Buzz Mode Mobile ——— */
+
+@media (max-width: 768px) {
+  .buzzer-row { gap: 8px; }
+  .btn-buzzer { padding: 14px 6px; }
+  .buzzer-name { font-size: 0.8rem; }
+  .buzzer-key { font-size: 1rem; padding: 2px 10px; }
+  .ci-name { font-size: 1.8rem; }
+  .buzz-status.open { font-size: 1.2rem; }
+  .mode-desc { font-size: 0.62rem; }
+  .result-stats { gap: 10px; font-size: 0.7rem; padding-left: 0; justify-content: center; }
 }
 
 /* ——— Scrollbar ——— */

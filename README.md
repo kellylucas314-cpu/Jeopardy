@@ -1,29 +1,34 @@
-# Jeopardy Game - Kelly's Game Night Edition 🎮
+# Jeopardy! — Game Night Edition 🎮
 
-A fun, browser-based Jeopardy game for Kelly and friends!
+A browser-based Jeopardy game built for game night — **play it here:**
 
-## Categories:
-- 🎬 90s Throwbacks
-- 🔬 Wild Science
-- 🦁 Animal Kingdom
-- 🎭 Movie Quotes
-- 🍕 Food & Drink
+### 👉 https://kellylucas314-cpu.github.io/Jeopardy/
 
-## How to Play:
-1. Click on any dollar value to reveal a question
-2. Type your answer (no need for "What is...")
-3. Submit or pass
-4. Try to get the highest score!
+Share that link with friends and play on any device.
 
-## Features:
-- 25 trivia questions across 5 categories
-- Score tracking
-- Mobile-responsive design
-- Classic Jeopardy look and feel
+## Features
 
-Built with ❤️ by Kip 🦉
+- **~530,000 real Jeopardy clues** from the actual show — every game is a fresh board
+- **Two game modes:**
+  - 🔔 **Buzz In!** — race to the buzzer like the real show (`Q` / `P` / `B` keys, or tap), with early-buzz lockouts and steals after wrong answers
+  - 🔁 **Take Turns** — pass the keyboard, answer one at a time
+- **Full authentic game flow:** Jeopardy! → Double Jeopardy! → Final Jeopardy!
+- **Daily Doubles** with wagering (1 in round one, 2 in round two)
+- **Category intro sequence** revealing each round's categories
+- **Smart answer judging** — fuzzy matching forgives typos and phrasing, plus a "We'll accept it ✓" override so the table is always the final judge
+- **Hot streaks 🔥**, per-player stats, accuracy, and confetti for the winner
+- 1–3 players, remembers your names & settings, sound effects, mobile friendly
+
+## Development
+
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # production build to dist/
+```
+
+Pushes to `main` auto-deploy to GitHub Pages via Actions.
 
 ---
 
-**Created:** February 8, 2026  
-**For:** Kelly Lucas & Friends  
+Built with ❤️ for Kelly Lucas & Friends

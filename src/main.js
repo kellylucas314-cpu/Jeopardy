@@ -2,11 +2,11 @@
  * Main entry — renders all screens based on game state.
  */
 
-import { getState, setState, subscribe, resetForNewGame } from './state.js';
+import { getState, setState, subscribe, resetForNewGame, loadPrefs, savePrefs } from './state.js';
 import {
-  startGame, selectClue, submitWager, submitAnswer,
-  returnToBoard, timeExpired, skipClue, startDoubleJeopardy,
-  submitFinalWagers, submitFinalAnswers, showResults,
+  startGame, selectClue, submitWager, submitAnswer, buzzIn, noBuzz,
+  overrideCorrect, overrideFinalAnswer, returnToBoard, timeExpired,
+  skipClue, startDoubleJeopardy, submitFinalWagers, submitFinalAnswers, showResults,
 } from './engine.js';
 import * as sounds from './sounds.js';
 
@@ -14,6 +14,13 @@ const app = document.getElementById('app');
 let timerInterval = null;
 let lastScreen = null;
 let boardRevealDone = false;
+
+// Buzz-mode bookkeeping (imperative, within the clue screen)
+const BUZZ_KEYS = ['q', 'p', 'b']; // player 1, 2, 3
+let buzzPhase = null; // 'reading' | 'open' | 'answering' | 'done'
+let buzzLockedUntil = [];
+let buzzTimeouts = [];
+let buzzKeyHandler = null;
 
 // ——— Screen Router ———
 
@@ -25,7 +32,7 @@ function render() {
   lastScreen = state.screen;
 
   // Stop any running timer when leaving the clue screen
-  if (state.screen !== 'clue') stopTimer();
+  if (state.screen !== 'clue') cleanupClue();
 
   switch (state.screen) {
     case 'setup': renderSetup(); break;
@@ -46,26 +53,30 @@ subscribe(render);
 
 // ——— Timer ———
 
-function startTimer() {
+function startTimer(totalSeconds, onExpire) {
   clearInterval(timerInterval);
-  let seconds = 30;
+  let seconds = totalSeconds;
+  updateTimerDisplay(seconds, totalSeconds);
 
   timerInterval = setInterval(() => {
     seconds--;
 
     if (seconds <= 5 && seconds > 0) sounds.playTick();
-
-    const timerEl = document.getElementById('timer-bar');
-    if (timerEl) timerEl.style.width = `${(seconds / 30) * 100}%`;
-
-    const timerText = document.getElementById('timer-text');
-    if (timerText) timerText.textContent = seconds;
+    updateTimerDisplay(seconds, totalSeconds);
 
     if (seconds <= 0) {
       clearInterval(timerInterval);
-      handleTimeExpired();
+      onExpire();
     }
   }, 1000);
+}
+
+function updateTimerDisplay(seconds, total) {
+  const timerEl = document.getElementById('timer-bar');
+  if (timerEl) timerEl.style.width = `${(Math.max(0, seconds) / total) * 100}%`;
+
+  const timerText = document.getElementById('timer-text');
+  if (timerText) timerText.textContent = seconds;
 }
 
 function stopTimer() {
@@ -73,27 +84,40 @@ function stopTimer() {
   setState({ timerRunning: false });
 }
 
+function cleanupClue() {
+  clearInterval(timerInterval);
+  for (const t of buzzTimeouts) clearTimeout(t);
+  buzzTimeouts = [];
+  buzzPhase = null;
+  if (buzzKeyHandler) {
+    window.removeEventListener('keydown', buzzKeyHandler);
+    buzzKeyHandler = null;
+  }
+}
+
 function handleTimeExpired() {
   const result = timeExpired();
   if (!result) return;
 
-  const feedback = document.getElementById('clue-feedback');
-  if (feedback) {
-    feedback.innerHTML = `
-      <div class="feedback-wrong">
-        <div class="feedback-icon">&#x23F0;</div>
-        <div>Time's up!</div>
-        <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
-      </div>
-    `;
-    feedback.classList.add('show');
-  }
+  showFeedback(`
+    <div class="feedback-wrong">
+      <div class="feedback-icon">&#x23F0;</div>
+      <div>Time's up! -$${formatMoney(result.value)}</div>
+      <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
+    </div>
+  `);
   setTimeout(() => { lastScreen = null; returnToBoard(); }, 3000);
 }
 
 // ——— Setup Screen ———
 
 function renderSetup() {
+  const prefs = loadPrefs();
+  const savedNames = prefs.names || [];
+  const playerCount = prefs.playerCount || 2;
+  const gameMode = prefs.gameMode || 'turns';
+  if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
+
   app.innerHTML = `
     <div class="setup-screen">
       <div class="logo-container">
@@ -103,18 +127,24 @@ function renderSetup() {
       <div class="setup-card">
         <h2>How many players?</h2>
         <div class="player-count-buttons">
-          <button class="btn-player-count" data-count="1">1 Player</button>
-          <button class="btn-player-count selected" data-count="2">2 Players</button>
-          <button class="btn-player-count" data-count="3">3 Players</button>
+          ${[1, 2, 3].map(n => `
+            <button class="btn-player-count ${n === playerCount ? 'selected' : ''}" data-count="${n}">
+              ${n} Player${n > 1 ? 's' : ''}
+            </button>
+          `).join('')}
         </div>
-        <div id="player-names">
-          <div class="name-input-group">
-            <label>Player 1</label>
-            <input type="text" class="player-name-input" placeholder="Enter name" value="Player 1" data-index="0">
-          </div>
-          <div class="name-input-group">
-            <label>Player 2</label>
-            <input type="text" class="player-name-input" placeholder="Enter name" value="Player 2" data-index="1">
+        <div id="player-names"></div>
+        <div id="mode-section">
+          <h2 class="mode-title">Game mode</h2>
+          <div class="mode-buttons">
+            <button class="btn-mode ${gameMode === 'turns' ? 'selected' : ''}" data-mode="turns">
+              <span class="mode-name">Take Turns</span>
+              <span class="mode-desc">Pass the keyboard, answer one at a time</span>
+            </button>
+            <button class="btn-mode ${gameMode === 'buzz' ? 'selected' : ''}" data-mode="buzz">
+              <span class="mode-name">&#x1F514; Buzz In!</span>
+              <span class="mode-desc">Race to the buzzer like the real show</span>
+            </button>
           </div>
         </div>
         <button class="btn-start" id="btn-start-game">Start Game</button>
@@ -128,19 +158,32 @@ function renderSetup() {
     </div>
   `;
 
+  renderPlayerInputs(playerCount, savedNames);
+  updateModeVisibility(playerCount);
+
   // Player count buttons
   document.querySelectorAll('.btn-player-count').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.btn-player-count').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       const count = parseInt(btn.dataset.count);
-      renderPlayerInputs(count);
+      renderPlayerInputs(count, savedNames);
+      updateModeVisibility(count);
+    });
+  });
+
+  // Mode buttons
+  document.querySelectorAll('.btn-mode').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.btn-mode').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
     });
   });
 
   // Sound toggle
   document.getElementById('sound-checkbox').addEventListener('change', (e) => {
     sounds.setEnabled(e.target.checked);
+    savePrefs({ sound: e.target.checked });
   });
 
   // Start button
@@ -149,19 +192,27 @@ function renderSetup() {
     const names = Array.from(inputs).map((input, i) =>
       input.value.trim() || `Player ${i + 1}`
     );
+    const mode = document.querySelector('.btn-mode.selected')?.dataset.mode || 'turns';
+    savePrefs({ names, playerCount: names.length, gameMode: mode, sound: sounds.isEnabled() });
     sounds.playSelect();
-    startGame(names);
+    startGame(names, mode);
   });
 }
 
-function renderPlayerInputs(count) {
+function updateModeVisibility(count) {
+  const section = document.getElementById('mode-section');
+  if (section) section.style.display = count > 1 ? '' : 'none';
+}
+
+function renderPlayerInputs(count, savedNames = []) {
   const container = document.getElementById('player-names');
   let html = '';
   for (let i = 0; i < count; i++) {
+    const value = savedNames[i] || `Player ${i + 1}`;
     html += `
       <div class="name-input-group">
         <label>Player ${i + 1}</label>
-        <input type="text" class="player-name-input" placeholder="Enter name" value="Player ${i + 1}" data-index="${i}">
+        <input type="text" class="player-name-input" placeholder="Enter name" value="${escapeHtml(value)}" data-index="${i}">
       </div>
     `;
   }
@@ -183,7 +234,7 @@ function renderLoading() {
 // ——— Game Board ———
 
 function renderBoard() {
-  const { categories, players, activePlayer, round, cluesAnswered, totalClues } = getState();
+  const { categories, players, activePlayer, round, cluesAnswered, totalClues, gameMode } = getState();
   const roundName = round === 1 ? 'Jeopardy!' : 'Double Jeopardy!';
 
   app.innerHTML = `
@@ -193,7 +244,7 @@ function renderBoard() {
         <div class="scoreboard">
           ${players.map((p, i) => `
             <div class="player-score ${i === activePlayer ? 'active' : ''}">
-              <div class="player-name">${escapeHtml(p.name)}</div>
+              <div class="player-name">${escapeHtml(p.name)}${p.streak >= 2 ? ` <span class="streak">&#x1F525;${p.streak}</span>` : ''}</div>
               <div class="player-amount ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
             </div>
           `).join('')}
@@ -213,7 +264,10 @@ function renderBoard() {
         `).join('')}
       </div>
       <div class="board-footer">
-        <div class="clues-remaining">${totalClues - cluesAnswered} clues remaining</div>
+        <div class="clues-remaining">
+          ${totalClues - cluesAnswered} clues remaining
+          ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; Buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} = ${BUZZ_KEYS[i].toUpperCase()}`).join(' &middot; ')}` : ''}
+        </div>
       </div>
     </div>
   `;
@@ -234,18 +288,68 @@ function renderBoard() {
       selectClue(ci, cli);
     });
   });
+
+  // Category intro sequence (once per round)
+  if (getState().showCategoryIntro) {
+    getState().showCategoryIntro = false; // consume without re-render
+    playCategoryIntro(categories);
+  }
+}
+
+function playCategoryIntro(categories) {
+  const overlay = document.createElement('div');
+  overlay.className = 'category-intro';
+  overlay.innerHTML = `
+    <div class="ci-label">The categories are...</div>
+    <div class="ci-name" id="ci-name"></div>
+    <div class="ci-skip">tap to skip</div>
+  `;
+  app.appendChild(overlay);
+
+  const nameEl = overlay.querySelector('#ci-name');
+  let i = 0;
+  let timeout = null;
+
+  function showNext() {
+    if (i >= categories.length) { finish(); return; }
+    nameEl.textContent = categories[i].name;
+    nameEl.classList.remove('pop');
+    void nameEl.offsetWidth; // restart animation
+    nameEl.classList.add('pop');
+    sounds.playCategoryBlip();
+    i++;
+    timeout = setTimeout(showNext, 1100);
+  }
+
+  function finish() {
+    clearTimeout(timeout);
+    overlay.classList.add('fade-out');
+    setTimeout(() => overlay.remove(), 400);
+  }
+
+  overlay.addEventListener('click', finish);
+  showNext();
 }
 
 // ——— Clue Screen ———
 
 function renderClue() {
-  const { currentClue, players, activePlayer } = getState();
+  const { currentClue, gameMode } = getState();
   if (!currentClue) return;
 
+  if (gameMode === 'buzz' && !currentClue.isDailyDouble) {
+    renderBuzzClue();
+  } else {
+    renderTurnsClue();
+  }
+}
+
+function clueShell(extraHtml) {
+  const { currentClue } = getState();
   const isDailyDouble = currentClue.isDailyDouble;
   const displayValue = isDailyDouble ? getState().wagerAmount : currentClue.value;
 
-  app.innerHTML = `
+  return `
     <div class="clue-screen">
       <div class="clue-header">
         <span class="clue-category">${escapeHtml(currentClue.categoryName)}</span>
@@ -255,25 +359,42 @@ function renderClue() {
         <div class="timer-bar-bg">
           <div class="timer-bar" id="timer-bar"></div>
         </div>
-        <span class="timer-text" id="timer-text">30</span>
+        <span class="timer-text" id="timer-text"></span>
       </div>
       <div class="clue-text">${escapeHtml(currentClue.clue)}</div>
-      <div class="clue-player">
-        ${players.length > 1 ? `<span>${escapeHtml(players[activePlayer].name)}'s turn</span>` : ''}
-      </div>
-      <div class="clue-answer-area">
-        <input type="text" id="answer-input" class="answer-input"
-               placeholder="What is..." autocomplete="off">
-        <div class="clue-buttons">
-          <button class="btn-submit" id="btn-submit">Submit</button>
-          <button class="btn-skip" id="btn-skip">Pass</button>
-        </div>
-      </div>
+      ${extraHtml}
       <div class="clue-feedback" id="clue-feedback"></div>
     </div>
   `;
+}
 
-  startTimer();
+function showFeedback(html) {
+  const feedback = document.getElementById('clue-feedback');
+  if (!feedback) return;
+  feedback.innerHTML = html;
+  feedback.classList.add('show');
+}
+
+// — Turns mode (and daily doubles in any mode) —
+
+function renderTurnsClue() {
+  const { players, answeringPlayer, gameMode, currentClue } = getState();
+
+  app.innerHTML = clueShell(`
+    <div class="clue-player">
+      ${players.length > 1 ? `<span>${escapeHtml(players[answeringPlayer].name)}'s ${currentClue.isDailyDouble && gameMode === 'buzz' ? 'Daily Double' : 'turn'}</span>` : ''}
+    </div>
+    <div class="clue-answer-area">
+      <input type="text" id="answer-input" class="answer-input"
+             placeholder="What is..." autocomplete="off">
+      <div class="clue-buttons">
+        <button class="btn-submit" id="btn-submit">Submit</button>
+        <button class="btn-skip" id="btn-skip">Pass</button>
+      </div>
+    </div>
+  `);
+
+  startTimer(30, handleTimeExpired);
 
   const input = document.getElementById('answer-input');
   setTimeout(() => input.focus(), 50);
@@ -300,26 +421,43 @@ function handleSubmitAnswer() {
   const result = submitAnswer(answer);
   if (!result) return;
 
-  const feedback = document.getElementById('clue-feedback');
   if (result.correct) {
-    feedback.innerHTML = `
+    showFeedback(`
       <div class="feedback-correct">
         <div class="feedback-icon">&#x2713;</div>
         <div>Correct! +$${formatMoney(result.value)}</div>
       </div>
-    `;
+    `);
+    setTimeout(() => { lastScreen = null; returnToBoard(); }, 2000);
   } else {
-    feedback.innerHTML = `
+    showFeedback(`
       <div class="feedback-wrong">
         <div class="feedback-icon">&#x2717;</div>
         <div>Incorrect! -$${formatMoney(result.value)}</div>
         <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
+        <div class="feedback-actions">
+          <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
+          <button class="btn-feedback-accept" id="btn-fb-accept">We'll accept it &#x2713;</button>
+        </div>
       </div>
-    `;
+    `);
+    document.getElementById('btn-fb-continue').addEventListener('click', () => {
+      lastScreen = null; returnToBoard();
+    });
+    document.getElementById('btn-fb-accept').addEventListener('click', handleOverride);
   }
-  feedback.classList.add('show');
+}
 
-  setTimeout(() => { lastScreen = null; returnToBoard(); }, result.correct ? 2000 : 3000);
+function handleOverride() {
+  const result = overrideCorrect();
+  if (!result) return;
+  showFeedback(`
+    <div class="feedback-correct">
+      <div class="feedback-icon">&#x2713;</div>
+      <div>We'll accept it! +$${formatMoney(result.value)} (penalty refunded)</div>
+    </div>
+  `);
+  setTimeout(() => { lastScreen = null; returnToBoard(); }, 1800);
 }
 
 function handleSkip() {
@@ -327,23 +465,247 @@ function handleSkip() {
   const result = skipClue();
   if (!result) return;
 
-  const feedback = document.getElementById('clue-feedback');
-  feedback.innerHTML = `
+  showFeedback(`
     <div class="feedback-skip">
       <div>Passed</div>
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
-  `;
-  feedback.classList.add('show');
+  `);
+  setTimeout(() => { lastScreen = null; returnToBoard(); }, 2500);
+}
 
+// — Buzz mode —
+
+function renderBuzzClue() {
+  const { currentClue } = getState();
+
+  app.innerHTML = clueShell(`
+    <div class="buzz-status" id="buzz-status">Read the clue&hellip;</div>
+    <div class="clue-answer-area" id="answer-area" style="display:none">
+      <div class="clue-player" id="answering-name"></div>
+      <input type="text" id="answer-input" class="answer-input"
+             placeholder="What is..." autocomplete="off">
+      <div class="clue-buttons">
+        <button class="btn-submit" id="btn-submit">Submit</button>
+      </div>
+    </div>
+    <div class="buzzer-row" id="buzzer-row"></div>
+  `);
+
+  buzzPhase = 'reading';
+  buzzLockedUntil = getState().players.map(() => 0);
+  renderBuzzerRow();
+  attachBuzzKeys();
+
+  // Reading time scales with clue length, then the buzzers open
+  const readingMs = Math.min(1500 + currentClue.clue.length * 25, 6000);
+  buzzTimeouts.push(setTimeout(openBuzzers, readingMs));
+}
+
+function renderBuzzerRow() {
+  const { players, buzzAttempted } = getState();
+  const row = document.getElementById('buzzer-row');
+  if (!row) return;
+
+  row.innerHTML = players.map((p, i) => `
+    <button class="btn-buzzer ${buzzAttempted[i] ? 'out' : ''}" data-player="${i}" ${buzzAttempted[i] ? 'disabled' : ''}>
+      <span class="buzzer-name">${escapeHtml(p.name)}</span>
+      <span class="buzzer-key">${buzzAttempted[i] ? '&#x2717;' : BUZZ_KEYS[i].toUpperCase()}</span>
+    </button>
+  `).join('');
+
+  row.querySelectorAll('.btn-buzzer:not(.out)').forEach(btn => {
+    btn.addEventListener('click', () => tryBuzz(parseInt(btn.dataset.player)));
+  });
+}
+
+function attachBuzzKeys() {
+  buzzKeyHandler = (e) => {
+    if (e.repeat) return;
+    if (buzzPhase === 'answering' || buzzPhase === 'done') return;
+    const idx = BUZZ_KEYS.indexOf(e.key.toLowerCase());
+    if (idx >= 0 && idx < getState().players.length) {
+      e.preventDefault();
+      tryBuzz(idx);
+    }
+  };
+  window.addEventListener('keydown', buzzKeyHandler);
+}
+
+function openBuzzers() {
+  if (buzzPhase === 'done') return;
+  buzzPhase = 'open';
+
+  const status = document.getElementById('buzz-status');
+  if (status) {
+    status.innerHTML = '&#x1F514; BUZZ IN!';
+    status.classList.add('open');
+  }
+  sounds.playBuzzersOpen();
+
+  // Nobody buzzes within the window → reveal the answer, no penalty
+  startTimer(7, handleNoBuzz);
+}
+
+function tryBuzz(playerIndex) {
+  const { buzzAttempted } = getState();
+  if (buzzAttempted[playerIndex]) return;
+  if (Date.now() < buzzLockedUntil[playerIndex]) return;
+
+  if (buzzPhase === 'reading') {
+    // Buzzed too early — brief lockout, just like the show
+    buzzLockedUntil[playerIndex] = Date.now() + 1200;
+    sounds.playLockout();
+    const btn = document.querySelector(`.btn-buzzer[data-player="${playerIndex}"]`);
+    if (btn) {
+      btn.classList.add('locked');
+      setTimeout(() => btn.classList.remove('locked'), 1200);
+    }
+    return;
+  }
+
+  if (buzzPhase !== 'open') return;
+  buzzPhase = 'answering';
+  clearInterval(timerInterval);
+  buzzIn(playerIndex);
+
+  const { players } = getState();
+
+  // Highlight who buzzed, hide the rest
+  const status = document.getElementById('buzz-status');
+  if (status) {
+    status.innerHTML = '';
+    status.classList.remove('open');
+  }
+  document.getElementById('buzzer-row').style.display = 'none';
+
+  const area = document.getElementById('answer-area');
+  area.style.display = '';
+  document.getElementById('answering-name').innerHTML =
+    `<span class="buzzed-flash">${escapeHtml(players[playerIndex].name)} buzzed in!</span>`;
+
+  const input = document.getElementById('answer-input');
+  setTimeout(() => input.focus(), 50);
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') handleBuzzAnswer();
+    e.stopPropagation();
+  });
+  document.getElementById('btn-submit').addEventListener('click', handleBuzzAnswer);
+
+  startTimer(12, () => resolveBuzzAnswer('', true));
+}
+
+function handleBuzzAnswer() {
+  const input = document.getElementById('answer-input');
+  if (!input) return;
+  const answer = input.value.trim();
+  if (!answer) return;
+  resolveBuzzAnswer(answer, false);
+}
+
+function resolveBuzzAnswer(answer, timedOut) {
+  clearInterval(timerInterval);
+
+  const input = document.getElementById('answer-input');
+  if (input) input.disabled = true;
+  const submitBtn = document.getElementById('btn-submit');
+  if (submitBtn) submitBtn.disabled = true;
+
+  const result = submitAnswer(answer);
+  if (!result) return;
+
+  if (result.correct) {
+    buzzPhase = 'done';
+    showFeedback(`
+      <div class="feedback-correct">
+        <div class="feedback-icon">&#x2713;</div>
+        <div>Correct! +$${formatMoney(result.value)}</div>
+      </div>
+    `);
+    setTimeout(() => { lastScreen = null; returnToBoard(); }, 2000);
+    return;
+  }
+
+  // Wrong (or silent) — maybe others can still steal it
+  const header = timedOut
+    ? `<div class="feedback-icon">&#x23F0;</div><div>Time's up! -$${formatMoney(result.value)}</div>`
+    : `<div class="feedback-icon">&#x2717;</div><div>Incorrect! -$${formatMoney(result.value)}</div>`;
+
+  if (result.canRebuzz) {
+    showFeedback(`
+      <div class="feedback-wrong">
+        ${header}
+        <div class="correct-response">${result.remaining} player${result.remaining > 1 ? 's' : ''} can steal!</div>
+        <div class="feedback-actions">
+          <button class="btn-feedback-continue" id="btn-fb-continue">Open Buzzers &#x1F514;</button>
+          ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">We'll accept it &#x2713;</button>`}
+        </div>
+      </div>
+    `);
+    document.getElementById('btn-fb-continue').addEventListener('click', reopenBuzzers);
+    const acceptBtn = document.getElementById('btn-fb-accept');
+    if (acceptBtn) acceptBtn.addEventListener('click', handleOverride);
+  } else {
+    buzzPhase = 'done';
+    showFeedback(`
+      <div class="feedback-wrong">
+        ${header}
+        <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
+        <div class="feedback-actions">
+          <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
+          ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">We'll accept it &#x2713;</button>`}
+        </div>
+      </div>
+    `);
+    document.getElementById('btn-fb-continue').addEventListener('click', () => {
+      lastScreen = null; returnToBoard();
+    });
+    const acceptBtn = document.getElementById('btn-fb-accept');
+    if (acceptBtn) acceptBtn.addEventListener('click', handleOverride);
+  }
+}
+
+function reopenBuzzers() {
+  const feedback = document.getElementById('clue-feedback');
+  if (feedback) { feedback.innerHTML = ''; feedback.classList.remove('show'); }
+
+  const area = document.getElementById('answer-area');
+  if (area) {
+    area.style.display = 'none';
+    const input = document.getElementById('answer-input');
+    if (input) { input.disabled = false; input.value = ''; }
+    const submitBtn = document.getElementById('btn-submit');
+    if (submitBtn) submitBtn.disabled = false;
+  }
+
+  const row = document.getElementById('buzzer-row');
+  if (row) row.style.display = '';
+  renderBuzzerRow();
+  openBuzzers();
+}
+
+function handleNoBuzz() {
+  buzzPhase = 'done';
+  const result = noBuzz();
+  if (!result) return;
+
+  const status = document.getElementById('buzz-status');
+  if (status) { status.innerHTML = ''; status.classList.remove('open'); }
+
+  showFeedback(`
+    <div class="feedback-skip">
+      <div>No takers!</div>
+      <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
+    </div>
+  `);
   setTimeout(() => { lastScreen = null; returnToBoard(); }, 2500);
 }
 
 // ——— Daily Double ———
 
 function renderDailyDouble() {
-  const { currentClue, players, activePlayer } = getState();
-  const player = players[activePlayer];
+  const { currentClue, players, answeringPlayer } = getState();
+  const player = players[answeringPlayer];
   const maxWager = Math.max(player.score, currentClue.value * 2);
 
   app.innerHTML = `
@@ -547,12 +909,23 @@ function renderFinalAnswer() {
             <div class="frp-answer">"${escapeHtml(finalAnswers[i].answer || '(no answer)')}"</div>
             <div class="frp-wager">${finalAnswers[i].correct ? '+' : '-'}$${formatMoney(finalWagers[i])}</div>
             <div class="frp-total">$${formatMoney(p.score)}</div>
+            ${finalWagers[i] > 0 || finalAnswers[i].answer ? `
+              <button class="btn-final-override" data-player="${i}">
+                ${finalAnswers[i].correct ? 'Mark wrong &#x2717;' : "We'll accept it &#x2713;"}
+              </button>
+            ` : ''}
           </div>
         `).join('')}
       </div>
       <button class="btn-continue" id="btn-show-results">Final Scores</button>
     </div>
   `;
+
+  document.querySelectorAll('.btn-final-override').forEach(btn => {
+    btn.addEventListener('click', () => {
+      overrideFinalAnswer(parseInt(btn.dataset.player));
+    });
+  });
 
   document.getElementById('btn-show-results').addEventListener('click', showResults);
 }
@@ -570,25 +943,59 @@ function renderResults() {
       <div class="results-crown">&#x1F3C6;</div>
       <div class="results-title">${isTie ? "It's a Tie!" : `${escapeHtml(winner.name)} Wins!`}</div>
       <div class="results-scores">
-        ${sorted.map((p, i) => `
-          <div class="result-player ${i === 0 ? 'winner' : ''}">
-            <div class="result-rank">${i === 0 ? '&#x1F947;' : i === 1 ? '&#x1F948;' : '&#x1F949;'}</div>
-            <div class="result-name">${escapeHtml(p.name)}</div>
-            <div class="result-score ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
-          </div>
-        `).join('')}
+        ${sorted.map((p, i) => {
+          const attempts = p.correct + p.wrong;
+          const accuracy = attempts > 0 ? Math.round((p.correct / attempts) * 100) : 0;
+          return `
+            <div class="result-player ${i === 0 ? 'winner' : ''}">
+              <div class="result-main">
+                <div class="result-rank">${i === 0 ? '&#x1F947;' : i === 1 ? '&#x1F948;' : '&#x1F949;'}</div>
+                <div class="result-name">${escapeHtml(p.name)}</div>
+                <div class="result-score ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
+              </div>
+              <div class="result-stats">
+                <span class="stat-good">&#x2713; ${p.correct}</span>
+                <span class="stat-bad">&#x2717; ${p.wrong}</span>
+                <span>${accuracy}% accuracy</span>
+                ${p.bestStreak >= 2 ? `<span>&#x1F525; best streak ${p.bestStreak}</span>` : ''}
+              </div>
+            </div>
+          `;
+        }).join('')}
       </div>
       <button class="btn-play-again" id="btn-play-again">Play Again</button>
     </div>
   `;
 
   sounds.playFanfare();
+  if (!isTie || sorted[0].score > 0) spawnConfetti();
 
   document.getElementById('btn-play-again').addEventListener('click', () => {
     lastScreen = null;
     boardRevealDone = false;
     resetForNewGame();
   });
+}
+
+function spawnConfetti() {
+  const colors = ['#d4a843', '#f4d03f', '#060ce9', '#ffffff', '#4caf50', '#ff6b9d'];
+  const container = document.createElement('div');
+  container.className = 'confetti-container';
+
+  for (let i = 0; i < 120; i++) {
+    const piece = document.createElement('div');
+    piece.className = 'confetti';
+    piece.style.left = `${Math.random() * 100}%`;
+    piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+    piece.style.animationDuration = `${2.5 + Math.random() * 2.5}s`;
+    piece.style.animationDelay = `${Math.random() * 1.5}s`;
+    piece.style.width = `${6 + Math.random() * 6}px`;
+    piece.style.height = `${8 + Math.random() * 8}px`;
+    container.appendChild(piece);
+  }
+
+  document.body.appendChild(container);
+  setTimeout(() => container.remove(), 7000);
 }
 
 // ——— Helpers ———
