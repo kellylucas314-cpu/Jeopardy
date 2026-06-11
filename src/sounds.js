@@ -82,6 +82,30 @@ export function playTick() {
   playTone(1000, 0.05, 'sine', 0.08);
 }
 
+/** Buzz-in — bright chirp */
+export function playBuzzIn() {
+  if (!enabled) return;
+  playTone(880, 0.08, 'square', 0.18);
+  setTimeout(() => playTone(1175, 0.12, 'square', 0.18), 70);
+}
+
+/** Buzzed too early — dull thunk */
+export function playLockout() {
+  playTone(120, 0.15, 'square', 0.12);
+}
+
+/** Buzzers open — quick rising sweep */
+export function playBuzzersOpen() {
+  if (!enabled) return;
+  playTone(660, 0.08, 'sine', 0.15);
+  setTimeout(() => playTone(990, 0.12, 'sine', 0.15), 80);
+}
+
+/** Category intro blip */
+export function playCategoryBlip() {
+  playTone(740, 0.12, 'triangle', 0.12);
+}
+
 /** Time's up buzzer */
 export function playBuzzer() {
   if (!enabled) return;

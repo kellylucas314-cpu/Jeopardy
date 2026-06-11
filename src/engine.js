@@ -7,13 +7,28 @@ import { loadRoundCategories, loadFinalClue } from './data.js';
 import { checkAnswer } from './fuzzy.js';
 import * as sounds from './sounds.js';
 
+function newPlayer(name, avatar) {
+  return { name, avatar, score: 0, correct: 0, wrong: 0, streak: 0, bestStreak: 0 };
+}
+
 /**
- * Start a new game with the given player names.
+ * Hot-streak bonus (Kahoot-style): from 3 in a row, each correct answer
+ * pays an extra streak × $100 on top of the clue value.
  */
-export async function startGame(playerNames) {
+export function streakBonus(streak) {
+  return streak >= 3 ? streak * 100 : 0;
+}
+
+/**
+ * Start a new game with the given player names and mode ('turns' | 'buzz').
+ */
+export async function startGame(playerNames, gameMode = 'turns', avatars = [], gameLength = 'full') {
   setState({
-    players: playerNames.map(name => ({ name, score: 0 })),
+    players: playerNames.map((name, i) => newPlayer(name, avatars[i] || '🎲')),
+    gameMode: playerNames.length > 1 ? gameMode : 'turns',
+    gameLength,
     activePlayer: 0,
+    answeringPlayer: 0,
     lastCorrectPlayer: 0,
     round: 1,
     cluesAnswered: 0,
@@ -41,6 +56,7 @@ async function loadRound(round) {
     dailyDoubleLocations: ddLocations,
     cluesAnswered: 0,
     totalClues: 30,
+    showCategoryIntro: true,
     screen: 'board',
   });
 
@@ -83,7 +99,7 @@ function placeDailyDoubles(categories, round) {
  * Player selects a clue on the board.
  */
 export function selectClue(catIndex, clueIndex) {
-  const { categories } = getState();
+  const { categories, players, activePlayer } = getState();
   const cat = categories[catIndex];
   const clue = cat.clues[clueIndex];
 
@@ -99,7 +115,12 @@ export function selectClue(catIndex, clueIndex) {
     categoryName: cat.name,
   };
 
-  setState({ currentClue });
+  setState({
+    currentClue,
+    answeringPlayer: activePlayer,
+    buzzAttempted: players.map(() => false),
+    lastJudgment: null,
+  });
 
   if (clue.isDailyDouble) {
     sounds.playDailyDouble();
@@ -123,33 +144,16 @@ export function submitWager(amount) {
 }
 
 /**
- * Submit an answer to the current clue.
+ * A player buzzes in (buzz mode) — they become the answering player.
  */
-export function submitAnswer(userAnswer) {
-  const { currentClue, players, activePlayer, categories, cluesAnswered, wagerAmount } = getState();
-  if (!currentClue) return null;
+export function buzzIn(playerIndex) {
+  setState({ answeringPlayer: playerIndex });
+  sounds.playBuzzIn();
+}
 
-  setState({ timerRunning: false });
-
-  const result = checkAnswer(userAnswer, currentClue.response);
-  const value = currentClue.isDailyDouble ? wagerAmount : currentClue.value;
-
-  const updatedPlayers = [...players];
-  if (result.correct) {
-    updatedPlayers[activePlayer] = {
-      ...updatedPlayers[activePlayer],
-      score: updatedPlayers[activePlayer].score + value,
-    };
-    sounds.playCorrect();
-  } else {
-    updatedPlayers[activePlayer] = {
-      ...updatedPlayers[activePlayer],
-      score: updatedPlayers[activePlayer].score - value,
-    };
-    sounds.playWrong();
-  }
-
-  // Mark clue as answered
+/** Mark the current clue answered on the board. */
+function markClueAnswered() {
+  const { categories, currentClue, cluesAnswered } = getState();
   const updatedCategories = categories.map((cat, ci) =>
     ci === currentClue.catIndex
       ? {
@@ -160,44 +164,149 @@ export function submitAnswer(userAnswer) {
         }
       : cat
   );
+  setState({ categories: updatedCategories, cluesAnswered: cluesAnswered + 1 });
+}
 
-  const newCluesAnswered = cluesAnswered + 1;
-  const lastCorrect = result.correct ? activePlayer : getState().lastCorrectPlayer;
+/**
+ * Submit an answer to the current clue (from the answering player).
+ * Returns { correct, correctResponse, value, canRebuzz, remaining }.
+ */
+export function submitAnswer(userAnswer) {
+  const { currentClue, players, answeringPlayer, gameMode, buzzAttempted, wagerAmount } = getState();
+  if (!currentClue) return null;
+
+  setState({ timerRunning: false });
+
+  const result = checkAnswer(userAnswer, currentClue.response);
+  const value = currentClue.isDailyDouble ? wagerAmount : currentClue.value;
+
+  const updatedPlayers = [...players];
+  const p = updatedPlayers[answeringPlayer];
+
+  let bonus = 0;
+  let streak = 0;
+  if (result.correct) {
+    streak = p.streak + 1;
+    bonus = streakBonus(streak);
+    updatedPlayers[answeringPlayer] = {
+      ...p,
+      score: p.score + value + bonus,
+      correct: p.correct + 1,
+      streak,
+      bestStreak: Math.max(p.bestStreak, streak),
+    };
+    sounds.playCorrect();
+  } else {
+    updatedPlayers[answeringPlayer] = {
+      ...p,
+      score: p.score - value,
+      wrong: p.wrong + 1,
+      streak: 0,
+    };
+    sounds.playWrong();
+  }
+
+  const updatedAttempted = [...buzzAttempted];
+  updatedAttempted[answeringPlayer] = true;
+  const remaining = updatedAttempted.filter(a => !a).length;
+
+  // In buzz mode a wrong answer reopens the buzzers for everyone else
+  // (daily doubles belong to the picker only — no rebuzz).
+  const canRebuzz =
+    !result.correct &&
+    gameMode === 'buzz' &&
+    !currentClue.isDailyDouble &&
+    remaining > 0;
 
   setState({
     players: updatedPlayers,
-    categories: updatedCategories,
-    cluesAnswered: newCluesAnswered,
-    lastCorrectPlayer: lastCorrect,
+    buzzAttempted: updatedAttempted,
+    lastJudgment: { playerIndex: answeringPlayer, value, correct: result.correct },
+    lastCorrectPlayer: result.correct ? answeringPlayer : getState().lastCorrectPlayer,
   });
+
+  if (!canRebuzz) markClueAnswered();
 
   return {
     correct: result.correct,
     correctResponse: currentClue.response,
     value,
+    bonus,
+    streak,
+    canRebuzz,
+    remaining,
   };
+}
+
+/**
+ * "We'll accept it" — the table overrules a wrong judgment.
+ * Refunds the penalty and awards the clue value.
+ */
+export function overrideCorrect() {
+  const { lastJudgment, players, currentClue, gameMode, buzzAttempted, cluesAnswered } = getState();
+  if (!lastJudgment || lastJudgment.correct) return null;
+
+  const { playerIndex, value } = lastJudgment;
+  const updatedPlayers = [...players];
+  const p = updatedPlayers[playerIndex];
+  const streak = p.streak + 1;
+  const bonus = streakBonus(streak);
+  updatedPlayers[playerIndex] = {
+    ...p,
+    score: p.score + value * 2 + bonus, // refund the penalty + award the value (+ streak bonus)
+    correct: p.correct + 1,
+    wrong: Math.max(0, p.wrong - 1),
+    streak,
+    bestStreak: Math.max(p.bestStreak, streak),
+  };
+
+  setState({
+    players: updatedPlayers,
+    lastCorrectPlayer: playerIndex,
+    lastJudgment: { ...lastJudgment, correct: true },
+  });
+
+  // If the clue was left open for a rebuzz, close it now.
+  const clueStillOpen =
+    gameMode === 'buzz' &&
+    currentClue &&
+    !currentClue.isDailyDouble &&
+    buzzAttempted.some(a => !a);
+  if (clueStillOpen) markClueAnswered();
+
+  sounds.playCorrect();
+  return { value, bonus, streak };
+}
+
+/**
+ * Buzz mode: nobody buzzed in — reveal the answer with no penalty.
+ */
+export function noBuzz() {
+  const { currentClue } = getState();
+  if (!currentClue) return null;
+
+  setState({ timerRunning: false });
+  sounds.playBuzzer();
+  markClueAnswered();
+
+  return { correctResponse: currentClue.response };
 }
 
 /**
  * Called when the answer result has been shown and we return to the board.
  */
 export function returnToBoard() {
-  const { cluesAnswered, totalClues, round, players, activePlayer, lastCorrectPlayer } = getState();
+  const { cluesAnswered, totalClues, round, players, lastCorrectPlayer, gameLength } = getState();
 
-  // Rotate to next player (or last correct player stays for next pick)
-  let nextPlayer;
-  if (players.length > 1) {
-    nextPlayer = lastCorrectPlayer;
-  } else {
-    nextPlayer = 0;
-  }
+  // The last player to answer correctly picks the next clue
+  const nextPlayer = players.length > 1 ? lastCorrectPlayer : 0;
 
   if (cluesAnswered >= totalClues) {
     // Round is complete
-    if (round === 1) {
+    if (round === 1 && gameLength !== 'quick') {
       setState({ currentClue: null, screen: 'round-transition' });
     } else {
-      // Go to Final Jeopardy
+      // Go to Final Jeopardy (quick games skip Double Jeopardy)
       setState({ currentClue: null, screen: 'loading' });
       startFinalJeopardy();
     }
@@ -207,10 +316,11 @@ export function returnToBoard() {
 }
 
 /**
- * Handle time running out.
+ * Handle time running out (turns mode, or a buzzed-in player going silent).
+ * Scores it as a wrong answer with no rebuzz.
  */
 export function timeExpired() {
-  const { currentClue, players, activePlayer, categories, cluesAnswered, wagerAmount } = getState();
+  const { currentClue, players, answeringPlayer, wagerAmount } = getState();
   if (!currentClue) return;
 
   setState({ timerRunning: false });
@@ -219,64 +329,47 @@ export function timeExpired() {
   const value = currentClue.isDailyDouble ? wagerAmount : currentClue.value;
 
   const updatedPlayers = [...players];
-  updatedPlayers[activePlayer] = {
-    ...updatedPlayers[activePlayer],
-    score: updatedPlayers[activePlayer].score - value,
+  const p = updatedPlayers[answeringPlayer];
+  updatedPlayers[answeringPlayer] = {
+    ...p,
+    score: p.score - value,
+    wrong: p.wrong + 1,
+    streak: 0,
   };
 
-  const updatedCategories = categories.map((cat, ci) =>
-    ci === currentClue.catIndex
-      ? {
-          ...cat,
-          clues: cat.clues.map((cl, cli) =>
-            cli === currentClue.clueIndex ? { ...cl, answered: true } : cl
-          ),
-        }
-      : cat
-  );
-
-  setState({
-    players: updatedPlayers,
-    categories: updatedCategories,
-    cluesAnswered: cluesAnswered + 1,
-  });
+  setState({ players: updatedPlayers, lastJudgment: null });
+  markClueAnswered();
 
   return { correctResponse: currentClue.response, value };
 }
 
 /**
- * Skip the current clue without penalty.
+ * Skip the current clue without penalty (turns mode).
  */
 export function skipClue() {
-  const { currentClue, categories, cluesAnswered } = getState();
+  const { currentClue } = getState();
   if (!currentClue) return;
 
-  setState({ timerRunning: false });
-
-  const updatedCategories = categories.map((cat, ci) =>
-    ci === currentClue.catIndex
-      ? {
-          ...cat,
-          clues: cat.clues.map((cl, cli) =>
-            cli === currentClue.clueIndex ? { ...cl, answered: true } : cl
-          ),
-        }
-      : cat
-  );
-
-  setState({
-    categories: updatedCategories,
-    cluesAnswered: cluesAnswered + 1,
-  });
+  setState({ timerRunning: false, lastJudgment: null });
+  markClueAnswered();
 
   return { correctResponse: currentClue.response };
 }
 
 /**
  * Advance to Double Jeopardy round.
+ * Like the real show, the trailing player gets first pick — a natural
+ * catch-up mechanic that keeps everyone in the race.
  */
 export async function startDoubleJeopardy() {
-  setState({ screen: 'loading' });
+  const { players } = getState();
+  const updates = { screen: 'loading' };
+  if (players.length > 1) {
+    const lowest = players.reduce((minI, p, i, arr) => (p.score < arr[minI].score ? i : minI), 0);
+    updates.activePlayer = lowest;
+    updates.lastCorrectPlayer = lowest;
+  }
+  setState(updates);
   sounds.playRoundTransition();
   await loadRound(2);
 }
@@ -314,7 +407,7 @@ export function submitFinalAnswers(answers) {
   sounds.stopThinkMusic();
 
   const { finalClue, finalWagers, players } = getState();
-  const results = answers.map((answer, i) => {
+  const results = answers.map((answer) => {
     const result = checkAnswer(answer, finalClue.response);
     return { answer, correct: result.correct };
   });
@@ -322,6 +415,8 @@ export function submitFinalAnswers(answers) {
   const updatedPlayers = players.map((player, i) => ({
     ...player,
     score: player.score + (results[i].correct ? finalWagers[i] : -finalWagers[i]),
+    correct: player.correct + (results[i].correct ? 1 : 0),
+    wrong: player.wrong + (results[i].correct ? 0 : finalWagers[i] > 0 || answers[i] ? 1 : 0),
   }));
 
   setState({
@@ -331,6 +426,32 @@ export function submitFinalAnswers(answers) {
   });
 
   return results;
+}
+
+/**
+ * Toggle a Final Jeopardy judgment ("we'll accept it" / "actually no").
+ * Flips the player's result and re-applies the wager both ways.
+ */
+export function overrideFinalAnswer(playerIndex) {
+  const { finalAnswers, finalWagers, players } = getState();
+  const entry = finalAnswers[playerIndex];
+  const wager = finalWagers[playerIndex];
+  const nowCorrect = !entry.correct;
+
+  // Reverse old wager effect, apply new: delta = 2 * wager in the new direction
+  const delta = (nowCorrect ? 1 : -1) * wager * 2;
+
+  const updatedPlayers = [...players];
+  updatedPlayers[playerIndex] = {
+    ...updatedPlayers[playerIndex],
+    score: updatedPlayers[playerIndex].score + delta,
+  };
+
+  const updatedAnswers = [...finalAnswers];
+  updatedAnswers[playerIndex] = { ...entry, correct: nowCorrect };
+
+  setState({ players: updatedPlayers, finalAnswers: updatedAnswers });
+  if (nowCorrect) sounds.playCorrect();
 }
 
 /**
