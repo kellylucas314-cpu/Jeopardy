@@ -7,16 +7,16 @@ import { loadRoundCategories, loadFinalClue } from './data.js';
 import { checkAnswer } from './fuzzy.js';
 import * as sounds from './sounds.js';
 
-function newPlayer(name) {
-  return { name, score: 0, correct: 0, wrong: 0, streak: 0, bestStreak: 0 };
+function newPlayer(name, avatar) {
+  return { name, avatar, score: 0, correct: 0, wrong: 0, streak: 0, bestStreak: 0 };
 }
 
 /**
  * Start a new game with the given player names and mode ('turns' | 'buzz').
  */
-export async function startGame(playerNames, gameMode = 'turns') {
+export async function startGame(playerNames, gameMode = 'turns', avatars = []) {
   setState({
-    players: playerNames.map(newPlayer),
+    players: playerNames.map((name, i) => newPlayer(name, avatars[i] || '🎲')),
     gameMode: playerNames.length > 1 ? gameMode : 'turns',
     activePlayer: 0,
     answeringPlayer: 0,

@@ -15,6 +15,11 @@ let timerInterval = null;
 let lastScreen = null;
 let boardRevealDone = false;
 
+// Player identity
+const PLAYER_COLORS = ['var(--p0)', 'var(--p1)', 'var(--p2)'];
+const AVATARS = ['🦊', '🐙', '🦉', '🐸', '🦄', '🐯', '🐼', '👾', '🤖', '🍕', '🌟', '🐳'];
+let prevScores = []; // for score-bump animation on the board
+
 // Buzz-mode bookkeeping (imperative, within the clue screen)
 const BUZZ_KEYS = ['q', 'p', 'b']; // player 1, 2, 3
 let buzzPhase = null; // 'reading' | 'open' | 'answering' | 'done'
@@ -114,6 +119,7 @@ function handleTimeExpired() {
 function renderSetup() {
   const prefs = loadPrefs();
   const savedNames = prefs.names || [];
+  const savedAvatars = prefs.avatars || [];
   const playerCount = prefs.playerCount || 2;
   const gameMode = prefs.gameMode || 'turns';
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
@@ -158,7 +164,7 @@ function renderSetup() {
     </div>
   `;
 
-  renderPlayerInputs(playerCount, savedNames);
+  renderPlayerInputs(playerCount, savedNames, savedAvatars);
   updateModeVisibility(playerCount);
 
   // Player count buttons
@@ -167,7 +173,7 @@ function renderSetup() {
       document.querySelectorAll('.btn-player-count').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       const count = parseInt(btn.dataset.count);
-      renderPlayerInputs(count, savedNames);
+      renderPlayerInputs(count, savedNames, savedAvatars);
       updateModeVisibility(count);
     });
   });
@@ -192,10 +198,11 @@ function renderSetup() {
     const names = Array.from(inputs).map((input, i) =>
       input.value.trim() || `Player ${i + 1}`
     );
+    const avatars = Array.from(document.querySelectorAll('.avatar-btn')).map(b => b.textContent.trim());
     const mode = document.querySelector('.btn-mode.selected')?.dataset.mode || 'turns';
-    savePrefs({ names, playerCount: names.length, gameMode: mode, sound: sounds.isEnabled() });
+    savePrefs({ names, avatars, playerCount: names.length, gameMode: mode, sound: sounds.isEnabled() });
     sounds.playSelect();
-    startGame(names, mode);
+    startGame(names, mode, avatars);
   });
 }
 
@@ -204,19 +211,32 @@ function updateModeVisibility(count) {
   if (section) section.style.display = count > 1 ? '' : 'none';
 }
 
-function renderPlayerInputs(count, savedNames = []) {
+function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
   const container = document.getElementById('player-names');
   let html = '';
   for (let i = 0; i < count; i++) {
     const value = savedNames[i] || `Player ${i + 1}`;
+    const avatar = savedAvatars[i] || AVATARS[i];
     html += `
       <div class="name-input-group">
+        <button class="avatar-btn" data-index="${i}" title="Tap to change avatar" type="button">${avatar}</button>
         <label>Player ${i + 1}</label>
-        <input type="text" class="player-name-input" placeholder="Enter name" value="${escapeHtml(value)}" data-index="${i}">
+        <input type="text" class="player-name-input" placeholder="Enter name"
+               value="${escapeHtml(value)}" data-index="${i}"
+               style="--pc: ${PLAYER_COLORS[i]}">
       </div>
     `;
   }
   container.innerHTML = html;
+
+  // Tap an avatar to cycle through the set
+  container.querySelectorAll('.avatar-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const current = AVATARS.indexOf(btn.textContent.trim());
+      btn.textContent = AVATARS[(current + 1) % AVATARS.length];
+      sounds.playSelect();
+    });
+  });
 }
 
 // ——— Loading Screen ———
@@ -235,17 +255,24 @@ function renderLoading() {
 
 function renderBoard() {
   const { categories, players, activePlayer, round, cluesAnswered, totalClues, gameMode } = getState();
-  const roundName = round === 1 ? 'Jeopardy!' : 'Double Jeopardy!';
+  const roundName = round === 1 ? 'Round 1' : 'Round 2 · Doubled';
+  const progress = Math.round((cluesAnswered / totalClues) * 100);
 
   app.innerHTML = `
     <div class="board-screen">
       <div class="board-header">
-        <div class="round-name">${roundName}</div>
+        <div class="round-meta">
+          <div class="round-name">${roundName}</div>
+          <div class="round-progress"><div class="round-progress-fill" style="width:${progress}%"></div></div>
+        </div>
         <div class="scoreboard">
           ${players.map((p, i) => `
-            <div class="player-score ${i === activePlayer ? 'active' : ''}">
-              <div class="player-name">${escapeHtml(p.name)}${p.streak >= 2 ? ` <span class="streak">&#x1F525;${p.streak}</span>` : ''}</div>
-              <div class="player-amount ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
+            <div class="player-score ${i === activePlayer ? 'active' : ''}" style="--pc: ${PLAYER_COLORS[i]}">
+              <div class="player-avatar">${p.avatar || '🎲'}</div>
+              <div class="player-meta">
+                <div class="player-name">${escapeHtml(p.name)}${p.streak >= 2 ? ` <span class="streak">&#x1F525;${p.streak}</span>` : ''}</div>
+                <div class="player-amount ${p.score < 0 ? 'negative' : ''}" data-index="${i}">$${formatMoney(p.score)}</div>
+              </div>
             </div>
           `).join('')}
         </div>
@@ -265,8 +292,8 @@ function renderBoard() {
       </div>
       <div class="board-footer">
         <div class="clues-remaining">
-          ${totalClues - cluesAnswered} clues remaining
-          ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; Buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} = ${BUZZ_KEYS[i].toUpperCase()}`).join(' &middot; ')}` : ''}
+          ${totalClues - cluesAnswered} clues left
+          ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
         </div>
       </div>
     </div>
@@ -280,12 +307,21 @@ function renderBoard() {
     setTimeout(() => board.classList.remove('revealing'), 800);
   }
 
-  // Clue click handlers
+  // Pulse any score that changed since the last board render
+  players.forEach((p, i) => {
+    if (prevScores[i] !== undefined && prevScores[i] !== p.score) {
+      const el = document.querySelector(`.player-amount[data-index="${i}"]`);
+      if (el) el.classList.add('bump');
+    }
+  });
+  prevScores = players.map(p => p.score);
+
+  // Clue click handlers — zoom the cell into the clue screen
   document.querySelectorAll('.board-clue:not(.answered)').forEach(el => {
     el.addEventListener('click', () => {
       const ci = parseInt(el.dataset.cat);
       const cli = parseInt(el.dataset.clue);
-      selectClue(ci, cli);
+      zoomFromCell(el, () => selectClue(ci, cli));
     });
   });
 
@@ -294,6 +330,21 @@ function renderBoard() {
     getState().showCategoryIntro = false; // consume without re-render
     playCategoryIntro(categories);
   }
+}
+
+/** Animate the clicked board cell expanding to fill the screen, then run `then`. */
+function zoomFromCell(cell, then) {
+  const rect = cell.getBoundingClientRect();
+  const ghost = document.createElement('div');
+  ghost.className = 'cell-ghost';
+  ghost.style.top = `${rect.top}px`;
+  ghost.style.left = `${rect.left}px`;
+  ghost.style.width = `${rect.width}px`;
+  ghost.style.height = `${rect.height}px`;
+  document.body.appendChild(ghost);
+
+  requestAnimationFrame(() => requestAnimationFrame(() => ghost.classList.add('expand')));
+  setTimeout(() => { then(); ghost.remove(); }, 340);
 }
 
 function playCategoryIntro(categories) {
@@ -508,8 +559,9 @@ function renderBuzzerRow() {
   if (!row) return;
 
   row.innerHTML = players.map((p, i) => `
-    <button class="btn-buzzer ${buzzAttempted[i] ? 'out' : ''}" data-player="${i}" ${buzzAttempted[i] ? 'disabled' : ''}>
-      <span class="buzzer-name">${escapeHtml(p.name)}</span>
+    <button class="btn-buzzer ${buzzAttempted[i] ? 'out' : ''}" data-player="${i}"
+            style="--pc: ${PLAYER_COLORS[i]}" ${buzzAttempted[i] ? 'disabled' : ''}>
+      <span class="buzzer-name">${p.avatar || ''} ${escapeHtml(p.name)}</span>
       <span class="buzzer-key">${buzzAttempted[i] ? '&#x2717;' : BUZZ_KEYS[i].toUpperCase()}</span>
     </button>
   `).join('');
@@ -582,7 +634,7 @@ function tryBuzz(playerIndex) {
   const area = document.getElementById('answer-area');
   area.style.display = '';
   document.getElementById('answering-name').innerHTML =
-    `<span class="buzzed-flash">${escapeHtml(players[playerIndex].name)} buzzed in!</span>`;
+    `<span class="buzzed-flash" style="--pc: ${PLAYER_COLORS[playerIndex]}">${players[playerIndex].avatar || ''} ${escapeHtml(players[playerIndex].name)} buzzed in!</span>`;
 
   const input = document.getElementById('answer-input');
   setTimeout(() => input.focus(), 50);
@@ -934,31 +986,47 @@ function renderFinalAnswer() {
 
 function renderResults() {
   const { players } = getState();
-  const sorted = [...players].sort((a, b) => b.score - a.score);
-  const winner = sorted[0];
-  const isTie = sorted.length > 1 && sorted[0].score === sorted[1].score;
+  const ranked = players
+    .map((p, originalIndex) => ({ ...p, originalIndex }))
+    .sort((a, b) => b.score - a.score);
+  const winner = ranked[0];
+  const isTie = ranked.length > 1 && ranked[0].score === ranked[1].score;
+
+  // Podium display order: 2nd, 1st, 3rd (1st in the middle, tallest)
+  const podiumOrder = ranked.length === 3 ? [ranked[1], ranked[0], ranked[2]]
+    : ranked.length === 2 ? [ranked[1], ranked[0]]
+    : [ranked[0]];
+  const medal = ['&#x1F947;', '&#x1F948;', '&#x1F949;'];
 
   app.innerHTML = `
     <div class="results-screen">
-      <div class="results-crown">&#x1F3C6;</div>
       <div class="results-title">${isTie ? "It's a Tie!" : `${escapeHtml(winner.name)} Wins!`}</div>
-      <div class="results-scores">
-        ${sorted.map((p, i) => {
+      <div class="podium">
+        ${podiumOrder.map(p => {
+          const rank = ranked.indexOf(p) + 1;
+          return `
+            <div class="podium-col rank-${rank}" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">
+              <div class="podium-avatar">${p.avatar || '🎲'}</div>
+              <div class="podium-name">${escapeHtml(p.name)}</div>
+              <div class="podium-money ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
+              <div class="podium-block">${medal[rank - 1]}</div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+      <div class="results-stats-list">
+        ${ranked.map(p => {
           const attempts = p.correct + p.wrong;
           const accuracy = attempts > 0 ? Math.round((p.correct / attempts) * 100) : 0;
           return `
-            <div class="result-player ${i === 0 ? 'winner' : ''}">
-              <div class="result-main">
-                <div class="result-rank">${i === 0 ? '&#x1F947;' : i === 1 ? '&#x1F948;' : '&#x1F949;'}</div>
-                <div class="result-name">${escapeHtml(p.name)}</div>
-                <div class="result-score ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
-              </div>
-              <div class="result-stats">
+            <div class="result-stats-row">
+              <span class="rsr-name" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">${p.avatar || ''} ${escapeHtml(p.name)}</span>
+              <span class="rsr-stats">
                 <span class="stat-good">&#x2713; ${p.correct}</span>
                 <span class="stat-bad">&#x2717; ${p.wrong}</span>
-                <span>${accuracy}% accuracy</span>
-                ${p.bestStreak >= 2 ? `<span>&#x1F525; best streak ${p.bestStreak}</span>` : ''}
-              </div>
+                <span>${accuracy}%</span>
+                ${p.bestStreak >= 2 ? `<span>&#x1F525;${p.bestStreak}</span>` : ''}
+              </span>
             </div>
           `;
         }).join('')}
@@ -973,6 +1041,7 @@ function renderResults() {
   document.getElementById('btn-play-again').addEventListener('click', () => {
     lastScreen = null;
     boardRevealDone = false;
+    prevScores = [];
     resetForNewGame();
   });
 }
