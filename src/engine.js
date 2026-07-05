@@ -110,6 +110,17 @@ function placeDailyDoubles(categories, round) {
 }
 
 /**
+ * Swap the board for a fresh set of categories — only allowed before any
+ * clue has been played this round.
+ */
+export async function rerollBoard() {
+  const { cluesAnswered, round } = getState();
+  if (cluesAnswered > 0) return;
+  setState({ screen: 'loading' });
+  await loadRound(round);
+}
+
+/**
  * Player selects a clue on the board.
  */
 export function selectClue(catIndex, clueIndex) {

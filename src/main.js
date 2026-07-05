@@ -6,7 +6,7 @@ import { getState, setState, subscribe, resetForNewGame, loadPrefs, savePrefs, l
 import {
   startGame, selectClue, submitWager, submitAnswer, buzzIn, noBuzz,
   overrideCorrect, overrideFinalAnswer, returnToBoard, timeExpired,
-  skipClue, startDoubleJeopardy, submitFinalWagers, submitFinalAnswers, showResults,
+  skipClue, startDoubleJeopardy, submitFinalWagers, submitFinalAnswers, showResults, rerollBoard,
 } from './engine.js';
 import * as sounds from './sounds.js';
 
@@ -409,6 +409,7 @@ function renderBoard() {
         `).join('')}
       </div>
       <div class="board-footer">
+        ${cluesAnswered === 0 ? '<button class="link-btn reroll-btn" id="btn-reroll">🎲 New categories</button>' : ''}
         <div class="clues-remaining">
           ${totalClues - cluesAnswered} clues left
           ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
@@ -447,6 +448,8 @@ function renderBoard() {
   }
 
   document.getElementById('btn-menu').addEventListener('click', confirmQuit);
+  const rerollBtn = document.getElementById('btn-reroll');
+  if (rerollBtn) rerollBtn.addEventListener('click', () => { boardRevealDone = false; rerollBoard(); });
 
   const openClue = (el) => {
     const ci = parseInt(el.dataset.cat);
@@ -686,6 +689,14 @@ function showFeedback(html) {
   feedback.classList.add('show');
 }
 
+/** Brief full-screen tint for a juicy correct/wrong beat. */
+function flashScreen(kind) {
+  const el = document.createElement('div');
+  el.className = `screen-flash ${kind}`;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 550);
+}
+
 /** "🔥 3 in a row" bonus callout when a streak pays extra. */
 function bonusHtml(result) {
   if (!result.bonus) return '';
@@ -737,6 +748,7 @@ function handleSubmitAnswer() {
 
   const result = submitAnswer(answer);
   if (!result) return;
+  flashScreen(result.correct ? "correct" : "wrong");
 
   if (result.correct) {
     showFeedback(`
@@ -946,6 +958,7 @@ function resolveBuzzAnswer(answer, timedOut) {
 
   const result = submitAnswer(answer);
   if (!result) return;
+  flashScreen(result.correct ? "correct" : "wrong");
 
   if (result.correct) {
     buzzPhase = 'done';
@@ -1378,12 +1391,15 @@ function renderResults() {
           `;
         }).join('')}
       </div>
-      <button class="btn-play-again" id="btn-play-again">Play Again</button>
+      <div class="results-actions">
+        <button class="btn-play-again" id="btn-play-again">Play Again</button>
+        <button class="btn-quiet btn-share" id="btn-share">Share Result</button>
+      </div>
     </div>
   `;
 
   sounds.playFanfare();
-  if (!isTie || sorted[0].score > 0) spawnConfetti();
+  if (!isTie || ranked[0].score > 0) spawnConfetti();
 
   document.getElementById('btn-play-again').addEventListener('click', () => {
     lastScreen = null;
@@ -1392,6 +1408,33 @@ function renderResults() {
     prevLeader = null;
     resetForNewGame();
   });
+
+  document.getElementById('btn-share').addEventListener('click', () => shareResult(ranked, isTie));
+}
+
+/** Copy a shareable summary of the game to the clipboard. */
+function shareResult(ranked, isTie) {
+  const medals = ['🥇', '🥈', '🥉'];
+  const lines = ranked.map((p, i) => `${medals[i] || '•'} ${p.name} — ${money(p.score)}`);
+  const header = isTie ? "It's a tie on Ring In! 🔔" : `${ranked[0].name} won Ring In! 🔔`;
+  const text = `${header}\n${lines.join('\n')}\n\nPlay: https://kellylucas314-cpu.github.io/Jeopardy/`;
+  const done = () => showToast('📋 Result copied — go brag!', 'var(--brass)');
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+  } else {
+    fallbackCopy(text, done);
+  }
+}
+
+function fallbackCopy(text, done) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); done(); } catch { /* ignore */ }
+  ta.remove();
 }
 
 function spawnConfetti() {

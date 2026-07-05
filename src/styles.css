@@ -1357,6 +1357,14 @@ input { font-family: var(--font-ui); }
 .stat-good { color: var(--correct); font-weight: 700; }
 .stat-bad { color: var(--wrong); font-weight: 700; }
 
+.results-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
 .btn-play-again {
   padding: 16px 52px;
   font-size: 1rem;
@@ -1364,8 +1372,17 @@ input { font-family: var(--font-ui); }
   border-radius: var(--r-md);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-top: 4px;
 }
+
+.btn-share {
+  padding: 10px 24px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--r-md);
+}
+
+.board-footer { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.reroll-btn { font-size: 0.78rem; }
 
 /* ============================================================
    CATEGORY INTRO OVERLAY
@@ -1559,6 +1576,28 @@ input { font-family: var(--font-ui); }
   from { opacity: 0; transform: translateX(-50%) translateY(-16px); }
   to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
+
+/* ============================================================
+   SCREEN FLASH (answer juice)
+   ============================================================ */
+
+.screen-flash {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  pointer-events: none;
+  animation: screenFlash 0.55s var(--ease) forwards;
+}
+.screen-flash.correct { background: radial-gradient(60% 50% at 50% 50%, rgba(78, 199, 143, 0.28), transparent 75%); }
+.screen-flash.wrong { background: radial-gradient(60% 50% at 50% 50%, rgba(219, 106, 72, 0.26), transparent 75%); }
+
+@keyframes screenFlash {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) { .screen-flash { display: none; } }
 
 /* ============================================================
    CONFETTI
