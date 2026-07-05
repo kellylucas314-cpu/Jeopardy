@@ -24,92 +24,118 @@ export function isEnabled() {
   return enabled;
 }
 
-function playTone(freq, duration, type = 'sine', gain = 0.3) {
+// A shared gentle low-pass keeps everything warm rather than piercing.
+let masterFilter = null;
+function master() {
+  const c = ensureResumed();
+  if (!masterFilter) {
+    masterFilter = c.createBiquadFilter();
+    masterFilter.type = 'lowpass';
+    masterFilter.frequency.value = 4200;
+    masterFilter.Q.value = 0.4;
+    masterFilter.connect(c.destination);
+  }
+  return masterFilter;
+}
+
+/**
+ * Play a single tone with a soft attack + smooth release (no clicky edges),
+ * routed through the warm master filter.
+ */
+function playTone(freq, duration, type = 'sine', gain = 0.3, when = 0) {
   if (!enabled) return;
   const c = ensureResumed();
+  const t = c.currentTime + when;
   const osc = c.createOscillator();
   const g = c.createGain();
   osc.type = type;
-  osc.frequency.value = freq;
-  g.gain.value = gain;
-  g.gain.exponentialRampToValueAtTime(0.001, c.currentTime + duration);
+  osc.frequency.setValueAtTime(freq, t);
+
+  const attack = Math.min(0.02, duration * 0.25);
+  g.gain.setValueAtTime(0.0001, t);
+  g.gain.exponentialRampToValueAtTime(gain, t + attack);       // soft attack
+  g.gain.exponentialRampToValueAtTime(0.0001, t + duration);   // smooth release
+
   osc.connect(g);
-  g.connect(c.destination);
-  osc.start(c.currentTime);
-  osc.stop(c.currentTime + duration);
+  g.connect(master());
+  osc.start(t);
+  osc.stop(t + duration + 0.02);
 }
 
-/** Board reveal / category reveal fanfare */
+// A warm chord tone = two detuned oscillators, for body instead of a thin beep.
+function playChime(freq, duration, gain = 0.2, when = 0) {
+  playTone(freq, duration, 'triangle', gain, when);
+  playTone(freq * 2.001, duration * 0.8, 'sine', gain * 0.35, when); // gentle octave shimmer
+}
+
+/** Board reveal / category reveal fanfare — warm major arpeggio */
 export function playFanfare() {
   if (!enabled) return;
-  const notes = [523, 659, 784, 1047]; // C5, E5, G5, C6
-  notes.forEach((freq, i) => {
-    setTimeout(() => playTone(freq, 0.3, 'triangle', 0.2), i * 150);
-  });
+  const notes = [523.25, 659.25, 783.99, 1046.5]; // C5 E5 G5 C6
+  notes.forEach((freq, i) => playChime(freq, 0.42, 0.16, i * 0.13));
 }
 
-/** Clue select — short blip */
+/** Clue select — soft muted pluck */
 export function playSelect() {
-  playTone(880, 0.1, 'sine', 0.15);
+  playTone(587.33, 0.09, 'sine', 0.12);
 }
 
-/** Correct answer */
+/** Correct answer — bright rising major triad */
 export function playCorrect() {
   if (!enabled) return;
-  playTone(523, 0.15, 'sine', 0.2);
-  setTimeout(() => playTone(659, 0.15, 'sine', 0.2), 100);
-  setTimeout(() => playTone(784, 0.25, 'sine', 0.2), 200);
+  playChime(523.25, 0.16, 0.18, 0);      // C5
+  playChime(659.25, 0.16, 0.18, 0.1);    // E5
+  playChime(783.99, 0.34, 0.2, 0.2);     // G5
 }
 
-/** Wrong answer — descending buzz */
+/** Wrong answer — soft descending two-note, not a harsh buzz */
 export function playWrong() {
   if (!enabled) return;
-  playTone(200, 0.5, 'sawtooth', 0.15);
-  setTimeout(() => playTone(150, 0.5, 'sawtooth', 0.15), 150);
+  playTone(311.13, 0.22, 'sine', 0.16, 0);       // Eb4
+  playTone(233.08, 0.34, 'sine', 0.16, 0.16);    // Bb3
 }
 
-/** Daily Double reveal */
+/** Daily Double reveal — playful bright run */
 export function playDailyDouble() {
   if (!enabled) return;
-  const notes = [440, 554, 659, 880, 659, 554, 440, 554, 659, 880];
-  notes.forEach((freq, i) => {
-    setTimeout(() => playTone(freq, 0.12, 'triangle', 0.2), i * 80);
-  });
+  const notes = [440, 554.37, 659.25, 880, 659.25, 554.37, 440, 554.37, 659.25, 880];
+  notes.forEach((freq, i) => playTone(freq, 0.14, 'triangle', 0.16, i * 0.08));
 }
 
-/** Timer tick */
+/** Timer tick — soft woodblock */
 export function playTick() {
-  playTone(1000, 0.05, 'sine', 0.08);
+  playTone(880, 0.045, 'sine', 0.07);
 }
 
-/** Buzz-in — bright chirp */
+/** Buzz-in — bright confident two-note chirp */
 export function playBuzzIn() {
   if (!enabled) return;
-  playTone(880, 0.08, 'square', 0.18);
-  setTimeout(() => playTone(1175, 0.12, 'square', 0.18), 70);
+  playTone(783.99, 0.07, 'triangle', 0.16, 0);
+  playTone(1174.66, 0.13, 'triangle', 0.16, 0.06);
 }
 
-/** Buzzed too early — dull thunk */
+/** Buzzed too early — soft low thunk */
 export function playLockout() {
-  playTone(120, 0.15, 'square', 0.12);
+  playTone(130.81, 0.16, 'sine', 0.14);
 }
 
-/** Buzzers open — quick rising sweep */
+/** Buzzers open — quick warm rising sweep */
 export function playBuzzersOpen() {
   if (!enabled) return;
-  playTone(660, 0.08, 'sine', 0.15);
-  setTimeout(() => playTone(990, 0.12, 'sine', 0.15), 80);
+  playTone(659.25, 0.08, 'triangle', 0.14, 0);
+  playTone(987.77, 0.14, 'triangle', 0.14, 0.07);
 }
 
 /** Category intro blip */
 export function playCategoryBlip() {
-  playTone(740, 0.12, 'triangle', 0.12);
+  playTone(698.46, 0.13, 'triangle', 0.1);
 }
 
-/** Time's up buzzer */
+/** Time's up — mellow low tone, not an ear-splitting square */
 export function playBuzzer() {
   if (!enabled) return;
-  playTone(150, 0.8, 'square', 0.2);
+  playTone(196, 0.5, 'triangle', 0.16, 0);
+  playTone(164.81, 0.5, 'sine', 0.12, 0);
 }
 
 /** Think music for Final Jeopardy — simple melody loop */

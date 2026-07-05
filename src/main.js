@@ -87,11 +87,17 @@ function startTimer(totalSeconds, onExpire) {
 }
 
 function updateTimerDisplay(seconds, total) {
+  const urgent = seconds <= 5;
   const timerEl = document.getElementById('timer-bar');
-  if (timerEl) timerEl.style.width = `${(Math.max(0, seconds) / total) * 100}%`;
-
+  if (timerEl) {
+    timerEl.style.width = `${(Math.max(0, seconds) / total) * 100}%`;
+    timerEl.classList.toggle('urgent', urgent);
+  }
   const timerText = document.getElementById('timer-text');
-  if (timerText) timerText.textContent = seconds;
+  if (timerText) {
+    timerText.textContent = seconds;
+    timerText.classList.toggle('urgent', urgent);
+  }
 }
 
 function stopTimer() {
@@ -108,6 +114,46 @@ function cleanupClue() {
     window.removeEventListener('keydown', buzzKeyHandler);
     buzzKeyHandler = null;
   }
+  cancelAdvance();
+}
+
+// Auto-return to the board after `ms`, but let the player skip the wait by
+// clicking or pressing Enter/Space. Keeps repeat play snappy.
+let advanceTimer = null;
+let advanceHandler = null;
+
+function scheduleReturn(ms) {
+  cancelAdvance();
+  const go = () => { cancelAdvance(); lastScreen = null; returnToBoard(); };
+  advanceTimer = setTimeout(go, ms);
+  advanceHandler = (e) => {
+    if (e.type === 'keydown' && !['Enter', ' ', 'Spacebar'].includes(e.key)) return;
+    if (e.target && e.target.closest && e.target.closest('button')) return; // let buttons work
+    go();
+  };
+  // Delay attaching so the same keypress/click that submitted doesn't instantly skip.
+  setTimeout(() => {
+    if (!advanceHandler) return;
+    document.addEventListener('click', advanceHandler);
+    window.addEventListener('keydown', advanceHandler);
+    const hint = document.getElementById('clue-feedback');
+    if (hint && hint.classList.contains('show') && !hint.querySelector('.tap-hint')
+        && !hint.querySelector('.feedback-actions')) {
+      const el = document.createElement('div');
+      el.className = 'tap-hint';
+      el.textContent = 'tap or press space to continue';
+      hint.appendChild(el);
+    }
+  }, 350);
+}
+
+function cancelAdvance() {
+  if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
+  if (advanceHandler) {
+    document.removeEventListener('click', advanceHandler);
+    window.removeEventListener('keydown', advanceHandler);
+    advanceHandler = null;
+  }
 }
 
 function handleTimeExpired() {
@@ -121,7 +167,7 @@ function handleTimeExpired() {
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
-  setTimeout(() => { lastScreen = null; returnToBoard(); }, 3000);
+  scheduleReturn(3000);
 }
 
 // ——— Setup Screen ———
@@ -620,7 +666,7 @@ function handleSubmitAnswer() {
         ${bonusHtml(result)}
       </div>
     `);
-    setTimeout(() => { lastScreen = null; returnToBoard(); }, result.bonus ? 2400 : 2000);
+    scheduleReturn(result.bonus ? 2400 : 2000);
   } else {
     showFeedback(`
       <div class="feedback-wrong">
@@ -650,7 +696,7 @@ function handleOverride() {
       ${bonusHtml(result)}
     </div>
   `);
-  setTimeout(() => { lastScreen = null; returnToBoard(); }, result.bonus ? 2200 : 1800);
+  scheduleReturn(result.bonus ? 2200 : 1800);
 }
 
 function handleSkip() {
@@ -664,7 +710,7 @@ function handleSkip() {
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
-  setTimeout(() => { lastScreen = null; returnToBoard(); }, 2500);
+  scheduleReturn(2500);
 }
 
 // — Buzz mode —
@@ -673,7 +719,7 @@ function renderBuzzClue() {
   const { currentClue } = getState();
 
   app.innerHTML = clueShell(`
-    <div class="buzz-status" id="buzz-status">Read the clue&hellip;</div>
+    <div class="buzz-status" id="buzz-status" title="Space to open buzzers">Read the clue&hellip; <span class="buzz-skip-hint">(space to ring in)</span></div>
     <div class="clue-answer-area" id="answer-area" style="display:none">
       <div class="clue-player" id="answering-name"></div>
       <input type="text" id="answer-input" class="answer-input"
@@ -689,6 +735,11 @@ function renderBuzzClue() {
   buzzLockedUntil = getState().players.map(() => 0);
   renderBuzzerRow();
   attachBuzzKeys();
+
+  // Tap the status to open buzzers early (the reader controls the pace).
+  document.getElementById('buzz-status').addEventListener('click', () => {
+    if (buzzPhase === 'reading') openBuzzers();
+  });
 
   // Reading time scales with clue length, then the buzzers open
   const readingMs = Math.min(1500 + currentClue.clue.length * 25, 6000);
@@ -717,6 +768,12 @@ function attachBuzzKeys() {
   buzzKeyHandler = (e) => {
     if (e.repeat) return;
     if (buzzPhase === 'answering' || buzzPhase === 'done') return;
+    // Space opens the buzzers early during the reading beat.
+    if ((e.key === ' ' || e.key === 'Spacebar') && buzzPhase === 'reading') {
+      e.preventDefault();
+      openBuzzers();
+      return;
+    }
     const idx = BUZZ_KEYS.indexOf(e.key.toLowerCase());
     if (idx >= 0 && idx < getState().players.length) {
       e.preventDefault();
@@ -819,7 +876,7 @@ function resolveBuzzAnswer(answer, timedOut) {
         ${bonusHtml(result)}
       </div>
     `);
-    setTimeout(() => { lastScreen = null; returnToBoard(); }, result.bonus ? 2400 : 2000);
+    scheduleReturn(result.bonus ? 2400 : 2000);
     return;
   }
 
@@ -895,7 +952,7 @@ function handleNoBuzz() {
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
-  setTimeout(() => { lastScreen = null; returnToBoard(); }, 2500);
+  scheduleReturn(2500);
 }
 
 // ——— Daily Double ———
