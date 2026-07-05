@@ -182,6 +182,7 @@ function renderSetup() {
           <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
           <span>Sound Effects</span>
         </label>
+        <button class="link-btn" id="btn-how-to">How to play</button>
       </div>
     </div>
   `;
@@ -221,6 +222,9 @@ function renderSetup() {
     sounds.setEnabled(e.target.checked);
     savePrefs({ sound: e.target.checked });
   });
+
+  // How to play
+  document.getElementById('btn-how-to').addEventListener('click', showHowTo);
 
   // Start button
   document.getElementById('btn-start-game').addEventListener('click', () => {
@@ -292,6 +296,7 @@ function renderBoard() {
   app.innerHTML = `
     <div class="board-screen">
       <div class="board-header">
+        <button class="btn-menu" id="btn-menu" aria-label="Game menu" title="Menu (Esc)">☰</button>
         <div class="round-meta">
           <div class="round-name">${roundName}</div>
           <div class="round-progress"><div class="round-progress-fill" style="width:${progress}%"></div></div>
@@ -359,6 +364,8 @@ function renderBoard() {
     if (leader !== null) prevLeader = leader;
   }
 
+  document.getElementById('btn-menu').addEventListener('click', confirmQuit);
+
   // Clue click handlers — zoom the cell into the clue screen
   document.querySelectorAll('.board-clue:not(.answered)').forEach(el => {
     el.addEventListener('click', () => {
@@ -374,6 +381,78 @@ function renderBoard() {
     playCategoryIntro(categories);
   }
 }
+
+/** First-timer rules card. */
+function showHowTo() {
+  if (document.querySelector('.modal-overlay')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = `
+    <div class="modal how-to" role="dialog" aria-modal="true" aria-label="How to play">
+      <div class="modal-title">How to play</div>
+      <ul class="how-to-list">
+        <li><strong>Pick a clue</strong> from the board — higher rows are worth more.</li>
+        <li><strong>Answer</strong> in plain words. Spelling and phrasing are forgiven, and you don't need "What is…".</li>
+        <li><strong>Right</strong> adds the value; <strong>wrong</strong> subtracts it. Get 3 right in a row for a 🔥 streak bonus.</li>
+        <li><strong>Buzz In! mode:</strong> race to ring in with your key (or tap) once the clue is read. Buzz too early and you're locked out briefly.</li>
+        <li><strong>Daily Doubles</strong> let you wager. Then it's <strong>Final</strong> — one clue, secret wagers, winner takes the night.</li>
+        <li>The table is the judge: hit <strong>"We'll accept it"</strong> if a close answer got marked wrong.</li>
+      </ul>
+      <div class="modal-actions">
+        <button class="btn-cta modal-cancel">Got it</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  const close = () => overlay.remove();
+  overlay.querySelector('.modal-cancel').addEventListener('click', close);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  overlay.querySelector('.modal-cancel').focus();
+}
+
+/** Quit-to-menu confirmation. Reachable from the board menu or Escape. */
+function confirmQuit() {
+  if (document.querySelector('.modal-overlay')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = `
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Leave game">
+      <div class="modal-title">Leave this game?</div>
+      <div class="modal-body">Your scores won't be saved.</div>
+      <div class="modal-actions">
+        <button class="btn-quiet modal-cancel">Keep Playing</button>
+        <button class="btn-danger modal-confirm">Leave Game</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  const close = () => overlay.remove();
+  overlay.querySelector('.modal-cancel').addEventListener('click', close);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  overlay.querySelector('.modal-confirm').addEventListener('click', () => {
+    close();
+    cleanupClue();
+    lastScreen = null;
+    boardRevealDone = false;
+    prevScores = [];
+    prevLeader = null;
+    sounds.stopThinkMusic();
+    resetForNewGame();
+  });
+  overlay.querySelector('.modal-cancel').focus();
+}
+
+// Escape opens the quit prompt while a game is in progress.
+window.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  const open = document.querySelector('.modal-overlay');
+  if (open) { open.remove(); return; }
+  const screen = getState().screen;
+  if (['board', 'clue', 'daily-double', 'round-transition',
+       'final-category', 'final-wager', 'final-clue', 'final-answer'].includes(screen)) {
+    confirmQuit();
+  }
+});
 
 /** TV-chyron style announcement banner. */
 function showToast(html, color = 'var(--accent-1)') {
@@ -469,7 +548,7 @@ function clueShell(extraHtml) {
       </div>
       <div class="clue-text">${escapeHtml(currentClue.clue)}</div>
       ${extraHtml}
-      <div class="clue-feedback" id="clue-feedback"></div>
+      <div class="clue-feedback" id="clue-feedback" role="status" aria-live="polite"></div>
     </div>
   `;
 }

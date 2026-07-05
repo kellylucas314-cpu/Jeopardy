@@ -1341,6 +1341,114 @@ input { font-family: var(--font-ui); }
 }
 
 /* ============================================================
+   MENU BUTTON + MODALS
+   ============================================================ */
+
+.btn-menu {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  line-height: 1;
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--cream-dim);
+}
+.btn-menu:hover { color: var(--cream); border-color: var(--line-strong); }
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--cream-dim);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 4px;
+}
+.link-btn:hover { color: var(--brass); }
+
+.btn-cta {
+  background: var(--jade);
+  color: #08251b;
+  font-weight: 700;
+}
+.btn-cta:hover { background: var(--jade-bright); }
+
+.btn-quiet {
+  background: var(--surface-3);
+  color: var(--cream-dim);
+  border: 1px solid var(--line);
+}
+.btn-quiet:hover { color: var(--cream); }
+
+.btn-danger {
+  background: var(--wrong);
+  color: #2a0f08;
+  font-weight: 700;
+}
+.btn-danger:hover { filter: brightness(1.08); }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(10, 8, 5, 0.72);
+  animation: fadeIn 0.2s ease;
+}
+
+.modal {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface-1);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-lg);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  animation: riseIn 0.28s var(--ease);
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.modal-body { font-size: 0.95rem; color: var(--cream-dim); margin-bottom: 22px; }
+
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.modal-actions button { padding: 12px 22px; font-size: 0.95rem; border-radius: var(--r-md); }
+
+.how-to .modal-title { margin-bottom: 16px; }
+.how-to-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.how-to-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--cream-dim);
+}
+.how-to-list li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brass);
+}
+.how-to-list strong { color: var(--cream); font-weight: 700; }
+.how-to .modal-actions { justify-content: center; }
+.how-to .modal-actions button { width: 100%; }
+
+/* ============================================================
    TOAST / CALLOUTS
    ============================================================ */
 
@@ -1458,6 +1566,24 @@ input { font-family: var(--font-ui); }
   .category-header { font-size: 0.5rem; min-height: 36px; }
   .board-clue { font-size: 0.8rem; }
   .avatar-btn { width: 44px; height: 44px; font-size: 1.3rem; }
+}
+
+/* ——— Reduced motion ——— */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .cell-ghost { display: none !important; }
+}
+
+/* ——— Setup footer layout ——— */
+.setup-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
 }
 
 /* ——— Scrollbar ——— */

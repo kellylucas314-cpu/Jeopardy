@@ -7,6 +7,9 @@ import { loadRoundCategories, loadFinalClue } from './data.js';
 import { checkAnswer } from './fuzzy.js';
 import * as sounds from './sounds.js';
 
+// Category/Final names already used this game — keeps a session fresh.
+let seenCategories = new Set();
+
 function newPlayer(name, avatar) {
   return { name, avatar, score: 0, correct: 0, wrong: 0, streak: 0, bestStreak: 0 };
 }
@@ -23,6 +26,7 @@ export function streakBonus(streak) {
  * Start a new game with the given player names and mode ('turns' | 'buzz').
  */
 export async function startGame(playerNames, gameMode = 'turns', avatars = [], gameLength = 'full') {
+  seenCategories = new Set();
   setState({
     players: playerNames.map((name, i) => newPlayer(name, avatars[i] || '🎲')),
     gameMode: playerNames.length > 1 ? gameMode : 'turns',
@@ -42,7 +46,7 @@ export async function startGame(playerNames, gameMode = 'turns', avatars = [], g
  * Load categories for a round and set up the board.
  */
 async function loadRound(round) {
-  const categories = await loadRoundCategories(round);
+  const categories = await loadRoundCategories(round, seenCategories);
 
   // Place daily doubles
   const ddLocations = placeDailyDoubles(categories, round);
@@ -378,7 +382,7 @@ export async function startDoubleJeopardy() {
  * Start Final Jeopardy.
  */
 async function startFinalJeopardy() {
-  const finalClue = await loadFinalClue();
+  const finalClue = await loadFinalClue(seenCategories);
   setState({
     round: 3,
     finalClue,
