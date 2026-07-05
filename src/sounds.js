@@ -131,6 +131,13 @@ export function playCategoryBlip() {
   playTone(698.46, 0.13, 'triangle', 0.1);
 }
 
+/** Lead change — a quick regal two-note flourish */
+export function playLeadChange() {
+  if (!enabled) return;
+  playChime(659.25, 0.14, 0.14, 0);
+  playChime(987.77, 0.24, 0.16, 0.11);
+}
+
 /** Time's up — mellow low tone, not an ear-splitting square */
 export function playBuzzer() {
   if (!enabled) return;

@@ -1173,6 +1173,39 @@ input { font-family: var(--font-ui); }
 
 .think-music-note { font-size: 0.85rem; color: var(--cream-faint); }
 
+/* Pass-the-device cover for private Final entries */
+.pass-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 34px 30px;
+  box-shadow: var(--shadow);
+  animation: riseIn 0.3s var(--ease);
+}
+.pass-avatar {
+  width: 68px; height: 68px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem;
+  background: var(--surface-3);
+  border: 2px solid var(--pc, var(--jade));
+}
+.pass-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; }
+.pass-sub { font-size: 0.9rem; color: var(--cream-dim); margin-bottom: 6px; }
+.pass-go { padding: 14px 30px; border-radius: var(--r-md); font-size: 0.98rem; }
+
+/* Keyboard cursor on the board */
+.board-clue.cursor {
+  outline: 2px solid var(--brass);
+  outline-offset: -2px;
+  box-shadow: 0 0 0 3px rgba(216, 168, 90, 0.2);
+}
+
 .final-correct-response { text-align: center; }
 .final-correct-response .label { font-size: 0.74rem; font-weight: 700; color: var(--cream-faint); text-transform: uppercase; letter-spacing: 0.2em; }
 .final-correct-response .response {

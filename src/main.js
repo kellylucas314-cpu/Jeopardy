@@ -54,6 +54,9 @@ function render() {
     document.querySelectorAll('.confetti-container').forEach(el => el.remove());
   }
 
+  // Board keyboard nav only lives on the board
+  if (state.screen !== 'board') detachBoardKeys();
+
   switch (state.screen) {
     case 'setup': renderSetup(); break;
     case 'loading': renderLoading(); break;
@@ -438,20 +441,25 @@ function renderBoard() {
     const leader = leaders.length === 1 ? leaders[0] : null;
     if (leader !== null && prevLeader !== null && leader !== prevLeader) {
       showToast(`👑 ${escapeHtml(players[leader].name)} takes the lead!`, PLAYER_COLORS[leader]);
+      sounds.playLeadChange();
     }
     if (leader !== null) prevLeader = leader;
   }
 
   document.getElementById('btn-menu').addEventListener('click', confirmQuit);
 
+  const openClue = (el) => {
+    const ci = parseInt(el.dataset.cat);
+    const cli = parseInt(el.dataset.clue);
+    zoomFromCell(el, () => selectClue(ci, cli));
+  };
+
   // Clue click handlers — zoom the cell into the clue screen
   document.querySelectorAll('.board-clue:not(.answered)').forEach(el => {
-    el.addEventListener('click', () => {
-      const ci = parseInt(el.dataset.cat);
-      const cli = parseInt(el.dataset.clue);
-      zoomFromCell(el, () => selectClue(ci, cli));
-    });
+    el.addEventListener('click', () => openClue(el));
   });
+
+  attachBoardKeys(openClue);
 
   // Category intro sequence (once per round)
   if (getState().showCategoryIntro) {
@@ -531,6 +539,46 @@ window.addEventListener('keydown', (e) => {
     confirmQuit();
   }
 });
+
+// Keyboard navigation of the board grid (arrows move, Enter picks).
+let boardKeyHandler = null;
+let boardCursor = { c: 0, r: 0 };
+
+function detachBoardKeys() {
+  if (boardKeyHandler) { window.removeEventListener('keydown', boardKeyHandler); boardKeyHandler = null; }
+}
+
+function attachBoardKeys(openClue) {
+  detachBoardKeys();
+  const cellAt = (c, r) => document.querySelector(`.board-clue[data-cat="${c}"][data-clue="${r}"]`);
+  const paint = () => {
+    document.querySelectorAll('.board-clue.cursor').forEach(el => el.classList.remove('cursor'));
+    const el = cellAt(boardCursor.c, boardCursor.r);
+    if (el) el.classList.add('cursor');
+  };
+  // Start the cursor on the first unanswered cell.
+  outer: for (let r = 0; r < 5; r++) for (let c = 0; c < 6; c++) {
+    const el = cellAt(c, r);
+    if (el && !el.classList.contains('answered')) { boardCursor = { c, r }; break outer; }
+  }
+  boardKeyHandler = (e) => {
+    if (getState().screen !== 'board') return;
+    if (document.querySelector('.modal-overlay, .category-intro')) return;
+    let handled = true;
+    if (e.key === 'ArrowLeft') boardCursor.c = (boardCursor.c + 5) % 6;
+    else if (e.key === 'ArrowRight') boardCursor.c = (boardCursor.c + 1) % 6;
+    else if (e.key === 'ArrowUp') boardCursor.r = (boardCursor.r + 4) % 5;
+    else if (e.key === 'ArrowDown') boardCursor.r = (boardCursor.r + 1) % 5;
+    else if (e.key === 'Enter') {
+      const el = cellAt(boardCursor.c, boardCursor.r);
+      if (el && !el.classList.contains('answered')) { detachBoardKeys(); openClue(el); }
+      handled = true;
+    } else handled = false;
+    if (handled) { e.preventDefault(); paint(); }
+  };
+  window.addEventListener('keydown', boardKeyHandler);
+  paint();
+}
 
 /** TV-chyron style announcement banner. */
 function showToast(html, color = 'var(--accent-1)') {
@@ -1087,7 +1135,7 @@ function renderFinalCategory() {
 
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Final Jeopardy!</div>
+      <div class="final-header">The Final</div>
       <div class="final-scores">
         ${players.map(p => `
           <div class="transition-player">
@@ -1111,72 +1159,132 @@ function renderFinalCategory() {
   });
 }
 
-function renderFinalWager() {
-  const { players } = getState();
-
+// A "hand the device to X" cover so nobody sees the next player's secret entry.
+function passCover(playerIdx, sub, onReady) {
+  const p = getState().players[playerIdx];
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Final Jeopardy!</div>
-      <div class="final-subtitle">Place your wagers</div>
-      <div class="final-wager-form">
-        ${players.map((p, i) => {
-          const maxW = Math.max(0, p.score);
-          return `
-            <div class="final-wager-player">
-              <div class="fwp-name">${escapeHtml(p.name)} — $${formatMoney(p.score)}</div>
-              <div class="wager-input-row">
-                <span class="wager-dollar">$</span>
-                <input type="number" class="wager-input final-wager-input"
-                       data-player="${i}" min="0" max="${maxW}"
-                       value="${Math.min(1000, maxW)}" ${p.score <= 0 ? 'disabled value="0"' : ''}>
-              </div>
-              ${p.score <= 0 ? '<div class="wager-note">Cannot wager with $0 or less</div>' : `<div class="wager-range">$0 to $${formatMoney(maxW)}</div>`}
-            </div>
-          `;
-        }).join('')}
-        <button class="btn-wager-submit" id="btn-final-wagers-submit">Lock In All Wagers</button>
+      <div class="final-header">The Final</div>
+      <div class="pass-card">
+        <div class="pass-avatar" style="--pc: ${PLAYER_COLORS[playerIdx]}">${p.avatar || '🎲'}</div>
+        <div class="pass-name">Pass the device to ${escapeHtml(p.name)}</div>
+        <div class="pass-sub">${sub}</div>
+        <button class="btn-cta pass-go" id="pass-go">I'm ${escapeHtml(p.name)} — Ready</button>
       </div>
     </div>
   `;
+  const go = document.getElementById('pass-go');
+  go.focus();
+  go.addEventListener('click', onReady);
+}
 
-  document.getElementById('btn-final-wagers-submit').addEventListener('click', () => {
-    const wagers = Array.from(document.querySelectorAll('.final-wager-input')).map((input, i) => {
-      const max = Math.max(0, players[i].score);
-      let val = parseInt(input.value) || 0;
-      return Math.max(0, Math.min(val, max));
-    });
-    submitFinalWagers(wagers);
-  });
+function renderFinalWager() {
+  const { players } = getState();
+  const wagers = players.map(() => 0);
+  const queue = players.map((_, i) => i).filter(i => players[i].score > 0);
+  const solo = players.length === 1;
+
+  if (queue.length === 0) { submitFinalWagers(wagers); return; }
+
+  let qi = 0;
+  const nextWager = () => {
+    if (qi >= queue.length) { submitFinalWagers(wagers); return; }
+    const idx = queue[qi];
+    if (solo) wagerEntry(idx);
+    else passCover(idx, 'Place your secret wager', () => wagerEntry(idx));
+  };
+
+  function wagerEntry(idx) {
+    const p = players[idx];
+    const maxW = Math.max(0, p.score);
+    app.innerHTML = `
+      <div class="final-screen">
+        <div class="final-header">The Final</div>
+        <div class="final-subtitle" style="--pc:${PLAYER_COLORS[idx]}">${p.avatar || ''} ${escapeHtml(p.name)} — you have $${formatMoney(p.score)}</div>
+        <div class="dd-wager-area" style="max-width:380px;width:100%">
+          <label>Your secret wager</label>
+          <div class="wager-input-row">
+            <span class="wager-dollar">$</span>
+            <input type="number" id="wager-input" class="wager-input" min="0" max="${maxW}" value="${Math.min(1000, maxW)}" step="100">
+          </div>
+          <div class="wager-range">$0 to $${formatMoney(maxW)}</div>
+          <div class="wager-presets">
+            <button class="btn-preset" data-amount="0">Nothing</button>
+            <button class="btn-preset" data-amount="${Math.floor(maxW / 2)}">Half</button>
+            <button class="btn-preset" data-amount="${maxW}">All In</button>
+          </div>
+          <button class="btn-wager-submit" id="btn-lock">${qi < queue.length - 1 ? 'Lock In &amp; Pass' : 'Lock In Wager'}</button>
+        </div>
+      </div>
+    `;
+    const input = document.getElementById('wager-input');
+    input.focus(); input.select();
+    document.querySelectorAll('.btn-preset').forEach(b =>
+      b.addEventListener('click', () => { input.value = b.dataset.amount; }));
+    const lock = () => {
+      let v = parseInt(input.value) || 0;
+      wagers[idx] = Math.max(0, Math.min(v, maxW));
+      qi++;
+      nextWager();
+    };
+    document.getElementById('btn-lock').addEventListener('click', lock);
+    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') lock(); });
+  }
+
+  nextWager();
 }
 
 function renderFinalClue() {
-  const { finalClue, players } = getState();
+  const { finalClue, players, finalWagers } = getState();
+  const solo = players.length === 1;
+  const answers = players.map(() => '');
+  const queue = players.map((_, i) => i).filter(i => finalWagers[i] > 0 || players[i].score > 0);
 
+  // Everyone reads the clue together, think music playing.
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Final Jeopardy!</div>
+      <div class="final-header">The Final</div>
       <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
       <div class="final-clue-text">${escapeHtml(finalClue.clue)}</div>
-      <div class="final-answer-form">
-        ${players.map((p, i) => `
-          <div class="final-answer-player">
-            <label>${escapeHtml(p.name)}</label>
-            <input type="text" class="answer-input final-answer-input"
-                   data-player="${i}" placeholder="What is..."
-                   ${p.score <= 0 && getState().finalWagers[i] === 0 ? 'disabled placeholder="No wager"' : ''}>
-          </div>
-        `).join('')}
-        <button class="btn-submit" id="btn-final-answers">Reveal Answers</button>
-      </div>
-      <div class="think-music-note">&#9835; Think music playing...</div>
+      <div class="think-music-note">&#9835; Think music playing…</div>
+      <button class="btn-submit" id="btn-begin-answers" style="max-width:340px">
+        ${solo ? 'Enter Answer' : 'Enter Answers'}
+      </button>
     </div>
   `;
 
-  document.getElementById('btn-final-answers').addEventListener('click', () => {
-    const answers = Array.from(document.querySelectorAll('.final-answer-input')).map(
-      input => input.value.trim()
-    );
-    submitFinalAnswers(answers);
+  document.getElementById('btn-begin-answers').addEventListener('click', () => {
+    if (queue.length === 0) { sounds.stopThinkMusic(); submitFinalAnswers(answers); return; }
+    let qi = 0;
+    const nextAnswer = () => {
+      if (qi >= queue.length) { sounds.stopThinkMusic(); submitFinalAnswers(answers); return; }
+      const idx = queue[qi];
+      if (solo) answerEntry(idx);
+      else passCover(idx, 'Type your response (no peeking!)', () => answerEntry(idx));
+    };
+    function answerEntry(idx) {
+      const p = players[idx];
+      app.innerHTML = `
+        <div class="final-screen">
+          <div class="final-header">The Final</div>
+          <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
+          <div class="final-clue-text" style="font-size:1.3rem">${escapeHtml(finalClue.clue)}</div>
+          <div class="final-answer-form">
+            <div class="final-answer-player">
+              <label style="--pc:${PLAYER_COLORS[idx]}">${p.avatar || ''} ${escapeHtml(p.name)} — your response</label>
+              <input type="text" id="final-answer-input" class="answer-input" placeholder="What is…" autocomplete="off">
+            </div>
+            <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock In &amp; Pass' : 'Reveal Answers'}</button>
+          </div>
+        </div>
+      `;
+      const input = document.getElementById('final-answer-input');
+      input.focus();
+      const lock = () => { answers[idx] = input.value.trim(); qi++; nextAnswer(); };
+      document.getElementById('btn-lock-answer').addEventListener('click', lock);
+      input.addEventListener('keydown', (e) => { if (e.key === 'Enter') lock(); });
+    }
+    nextAnswer();
   });
 }
 
@@ -1185,7 +1293,7 @@ function renderFinalAnswer() {
 
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Final Jeopardy!</div>
+      <div class="final-header">The Final</div>
       <div class="final-correct-response">
         <div class="label">Correct response:</div>
         <div class="response">${escapeHtml(finalClue.response)}</div>
