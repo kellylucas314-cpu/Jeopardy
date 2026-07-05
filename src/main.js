@@ -2,7 +2,7 @@
  * Main entry — renders all screens based on game state.
  */
 
-import { getState, setState, subscribe, resetForNewGame, loadPrefs, savePrefs } from './state.js';
+import { getState, setState, subscribe, resetForNewGame, loadPrefs, savePrefs, loadRecords, recordGame } from './state.js';
 import {
   startGame, selectClue, submitWager, submitAnswer, buzzIn, noBuzz,
   overrideCorrect, overrideFinalAnswer, returnToBoard, timeExpired,
@@ -49,9 +49,15 @@ function render() {
   // Stop any running timer when leaving the clue screen
   if (state.screen !== 'clue') cleanupClue();
 
+  // Clear celebratory confetti when leaving the results screen
+  if (state.screen !== 'results') {
+    document.querySelectorAll('.confetti-container').forEach(el => el.remove());
+  }
+
   switch (state.screen) {
     case 'setup': renderSetup(); break;
     case 'loading': renderLoading(); break;
+    case 'error': renderError(); break;
     case 'board': renderBoard(); break;
     case 'clue': renderClue(); break;
     case 'daily-double': renderDailyDouble(); break;
@@ -182,13 +188,22 @@ function renderSetup() {
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
   prevLeader = null;
   prevScores = [];
+  recordedThisGame = false;
+
+  const records = loadRecords();
+  const hof = records.lastWinner ? `
+    <div class="hall-of-fame">
+      <span class="hof-item">👑 Last win: <strong>${escapeHtml(records.lastWinner.name)}</strong> · ${money(records.lastWinner.score)}</span>
+      ${records.best ? `<span class="hof-item">🏆 Best: <strong>${escapeHtml(records.best.name)}</strong> · ${money(records.best.score)}</span>` : ''}
+    </div>` : '';
 
   app.innerHTML = `
     <div class="setup-screen">
       <div class="logo-container">
-        <h1 class="logo">JEOPARDY!</h1>
-        <div class="logo-subtitle">Game Night Edition</div>
+        <h1 class="logo">RING IN</h1>
+        <div class="logo-subtitle">Trivia Night</div>
       </div>
+      ${hof}
       <div class="setup-card">
         <h2>How many players?</h2>
         <div class="player-count-buttons">
@@ -325,11 +340,28 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
 function renderLoading() {
   app.innerHTML = `
     <div class="loading-screen">
-      <div class="logo">JEOPARDY!</div>
+      <div class="logo">RING IN</div>
       <div class="loading-spinner"></div>
       <div class="loading-text">Loading clues...</div>
     </div>
   `;
+}
+
+function renderError() {
+  app.innerHTML = `
+    <div class="loading-screen">
+      <div class="logo">RING IN</div>
+      <div class="error-box">
+        <div class="error-title">Couldn't load the clues</div>
+        <div class="error-body">Check your connection and try again.</div>
+        <button class="btn-cta" id="btn-error-retry">Back to Menu</button>
+      </div>
+    </div>
+  `;
+  document.getElementById('btn-error-retry').addEventListener('click', () => {
+    lastScreen = null;
+    resetForNewGame();
+  });
 }
 
 // ——— Game Board ———
@@ -1188,8 +1220,11 @@ function renderFinalAnswer() {
 
 // ——— Results Screen ———
 
+let recordedThisGame = false;
+
 function renderResults() {
   const { players } = getState();
+  if (!recordedThisGame) { recordGame(players); recordedThisGame = true; }
   const ranked = players
     .map((p, originalIndex) => ({ ...p, originalIndex }))
     .sort((a, b) => b.score - a.score);
@@ -1283,6 +1318,11 @@ function escapeHtml(text) {
 function formatMoney(amount) {
   if (amount < 0) return '-' + Math.abs(amount).toLocaleString();
   return amount.toLocaleString();
+}
+
+/** Signed dollar amount with the $ inside the sign: "-$1,200", "$3,400". */
+function money(amount) {
+  return (amount < 0 ? '-$' : '$') + Math.abs(amount).toLocaleString();
 }
 
 // ——— Bootstrap ———

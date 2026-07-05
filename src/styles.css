@@ -328,6 +328,36 @@ input { font-family: var(--font-ui); }
 
 .loading-text { font-size: 0.95rem; color: var(--cream-dim); letter-spacing: 0.06em; }
 
+.error-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  max-width: 340px;
+}
+.error-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--cream); }
+.error-body { font-size: 0.92rem; color: var(--cream-dim); margin-bottom: 8px; }
+.error-box button { padding: 13px 32px; border-radius: var(--r-md); font-size: 0.95rem; }
+
+/* ——— Hall of Fame ——— */
+.hall-of-fame {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin-top: -14px;
+}
+.hof-item {
+  font-size: 0.8rem;
+  color: var(--cream-dim);
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+}
+.hof-item strong { color: var(--cream); font-weight: 700; }
+
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ============================================================

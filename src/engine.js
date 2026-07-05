@@ -46,7 +46,17 @@ export async function startGame(playerNames, gameMode = 'turns', avatars = [], g
  * Load categories for a round and set up the board.
  */
 async function loadRound(round) {
-  const categories = await loadRoundCategories(round, seenCategories);
+  let categories;
+  try {
+    categories = await loadRoundCategories(round, seenCategories);
+  } catch (err) {
+    setState({ screen: 'error', errorContext: 'round' });
+    return;
+  }
+  if (!categories || categories.length < 6) {
+    setState({ screen: 'error', errorContext: 'round' });
+    return;
+  }
 
   // Place daily doubles
   const ddLocations = placeDailyDoubles(categories, round);
@@ -382,7 +392,17 @@ export async function startDoubleJeopardy() {
  * Start Final Jeopardy.
  */
 async function startFinalJeopardy() {
-  const finalClue = await loadFinalClue(seenCategories);
+  let finalClue;
+  try {
+    finalClue = await loadFinalClue(seenCategories);
+  } catch (err) {
+    setState({ screen: 'error', errorContext: 'final' });
+    return;
+  }
+  if (!finalClue) {
+    setState({ screen: 'error', errorContext: 'final' });
+    return;
+  }
   setState({
     round: 3,
     finalClue,

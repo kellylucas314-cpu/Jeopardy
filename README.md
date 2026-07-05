@@ -1,4 +1,4 @@
-# Jeopardy! — Game Night Edition 🎮
+# Ring In — Trivia Night 🔔
 
 A browser-based Jeopardy game built for game night — **play it here:**
 
