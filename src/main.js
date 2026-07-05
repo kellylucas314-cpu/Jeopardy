@@ -2,11 +2,11 @@
  * Main entry — renders all screens based on game state.
  */
 
-import { getState, setState, subscribe, resetForNewGame, loadPrefs, savePrefs } from './state.js';
+import { getState, setState, subscribe, resetForNewGame, loadPrefs, savePrefs, loadRecords, recordGame } from './state.js';
 import {
   startGame, selectClue, submitWager, submitAnswer, buzzIn, noBuzz,
   overrideCorrect, overrideFinalAnswer, returnToBoard, timeExpired,
-  skipClue, startDoubleJeopardy, submitFinalWagers, submitFinalAnswers, showResults,
+  skipClue, startDoubleJeopardy, submitFinalWagers, submitFinalAnswers, showResults, rerollBoard,
 } from './engine.js';
 import * as sounds from './sounds.js';
 
@@ -49,9 +49,18 @@ function render() {
   // Stop any running timer when leaving the clue screen
   if (state.screen !== 'clue') cleanupClue();
 
+  // Clear celebratory confetti when leaving the results screen
+  if (state.screen !== 'results') {
+    document.querySelectorAll('.confetti-container').forEach(el => el.remove());
+  }
+
+  // Board keyboard nav only lives on the board
+  if (state.screen !== 'board') detachBoardKeys();
+
   switch (state.screen) {
     case 'setup': renderSetup(); break;
     case 'loading': renderLoading(); break;
+    case 'error': renderError(); break;
     case 'board': renderBoard(); break;
     case 'clue': renderClue(); break;
     case 'daily-double': renderDailyDouble(); break;
@@ -87,11 +96,17 @@ function startTimer(totalSeconds, onExpire) {
 }
 
 function updateTimerDisplay(seconds, total) {
+  const urgent = seconds <= 5;
   const timerEl = document.getElementById('timer-bar');
-  if (timerEl) timerEl.style.width = `${(Math.max(0, seconds) / total) * 100}%`;
-
+  if (timerEl) {
+    timerEl.style.width = `${(Math.max(0, seconds) / total) * 100}%`;
+    timerEl.classList.toggle('urgent', urgent);
+  }
   const timerText = document.getElementById('timer-text');
-  if (timerText) timerText.textContent = seconds;
+  if (timerText) {
+    timerText.textContent = seconds;
+    timerText.classList.toggle('urgent', urgent);
+  }
 }
 
 function stopTimer() {
@@ -108,6 +123,46 @@ function cleanupClue() {
     window.removeEventListener('keydown', buzzKeyHandler);
     buzzKeyHandler = null;
   }
+  cancelAdvance();
+}
+
+// Auto-return to the board after `ms`, but let the player skip the wait by
+// clicking or pressing Enter/Space. Keeps repeat play snappy.
+let advanceTimer = null;
+let advanceHandler = null;
+
+function scheduleReturn(ms) {
+  cancelAdvance();
+  const go = () => { cancelAdvance(); lastScreen = null; returnToBoard(); };
+  advanceTimer = setTimeout(go, ms);
+  advanceHandler = (e) => {
+    if (e.type === 'keydown' && !['Enter', ' ', 'Spacebar'].includes(e.key)) return;
+    if (e.target && e.target.closest && e.target.closest('button')) return; // let buttons work
+    go();
+  };
+  // Delay attaching so the same keypress/click that submitted doesn't instantly skip.
+  setTimeout(() => {
+    if (!advanceHandler) return;
+    document.addEventListener('click', advanceHandler);
+    window.addEventListener('keydown', advanceHandler);
+    const hint = document.getElementById('clue-feedback');
+    if (hint && hint.classList.contains('show') && !hint.querySelector('.tap-hint')
+        && !hint.querySelector('.feedback-actions')) {
+      const el = document.createElement('div');
+      el.className = 'tap-hint';
+      el.textContent = 'tap or press space to continue';
+      hint.appendChild(el);
+    }
+  }, 350);
+}
+
+function cancelAdvance() {
+  if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
+  if (advanceHandler) {
+    document.removeEventListener('click', advanceHandler);
+    window.removeEventListener('keydown', advanceHandler);
+    advanceHandler = null;
+  }
 }
 
 function handleTimeExpired() {
@@ -121,7 +176,7 @@ function handleTimeExpired() {
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
-  setTimeout(() => { lastScreen = null; returnToBoard(); }, 3000);
+  scheduleReturn(3000);
 }
 
 // ——— Setup Screen ———
@@ -136,13 +191,22 @@ function renderSetup() {
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
   prevLeader = null;
   prevScores = [];
+  recordedThisGame = false;
+
+  const records = loadRecords();
+  const hof = records.lastWinner ? `
+    <div class="hall-of-fame">
+      <span class="hof-item">👑 Last win: <strong>${escapeHtml(records.lastWinner.name)}</strong> · ${money(records.lastWinner.score)}</span>
+      ${records.best ? `<span class="hof-item">🏆 Best: <strong>${escapeHtml(records.best.name)}</strong> · ${money(records.best.score)}</span>` : ''}
+    </div>` : '';
 
   app.innerHTML = `
     <div class="setup-screen">
       <div class="logo-container">
-        <h1 class="logo">JEOPARDY!</h1>
-        <div class="logo-subtitle">Game Night Edition</div>
+        <h1 class="logo">RING IN</h1>
+        <div class="logo-subtitle">Trivia Night</div>
       </div>
+      ${hof}
       <div class="setup-card">
         <h2>How many players?</h2>
         <div class="player-count-buttons">
@@ -182,6 +246,7 @@ function renderSetup() {
           <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
           <span>Sound Effects</span>
         </label>
+        <button class="link-btn" id="btn-how-to">How to play</button>
       </div>
     </div>
   `;
@@ -221,6 +286,9 @@ function renderSetup() {
     sounds.setEnabled(e.target.checked);
     savePrefs({ sound: e.target.checked });
   });
+
+  // How to play
+  document.getElementById('btn-how-to').addEventListener('click', showHowTo);
 
   // Start button
   document.getElementById('btn-start-game').addEventListener('click', () => {
@@ -275,11 +343,28 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
 function renderLoading() {
   app.innerHTML = `
     <div class="loading-screen">
-      <div class="logo">JEOPARDY!</div>
+      <div class="logo">RING IN</div>
       <div class="loading-spinner"></div>
       <div class="loading-text">Loading clues...</div>
     </div>
   `;
+}
+
+function renderError() {
+  app.innerHTML = `
+    <div class="loading-screen">
+      <div class="logo">RING IN</div>
+      <div class="error-box">
+        <div class="error-title">Couldn't load the clues</div>
+        <div class="error-body">Check your connection and try again.</div>
+        <button class="btn-cta" id="btn-error-retry">Back to Menu</button>
+      </div>
+    </div>
+  `;
+  document.getElementById('btn-error-retry').addEventListener('click', () => {
+    lastScreen = null;
+    resetForNewGame();
+  });
 }
 
 // ——— Game Board ———
@@ -292,6 +377,7 @@ function renderBoard() {
   app.innerHTML = `
     <div class="board-screen">
       <div class="board-header">
+        <button class="btn-menu" id="btn-menu" aria-label="Game menu" title="Menu (Esc)">☰</button>
         <div class="round-meta">
           <div class="round-name">${roundName}</div>
           <div class="round-progress"><div class="round-progress-fill" style="width:${progress}%"></div></div>
@@ -323,6 +409,7 @@ function renderBoard() {
         `).join('')}
       </div>
       <div class="board-footer">
+        ${cluesAnswered === 0 ? '<button class="link-btn reroll-btn" id="btn-reroll">🎲 New categories</button>' : ''}
         <div class="clues-remaining">
           ${totalClues - cluesAnswered} clues left
           ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
@@ -355,24 +442,145 @@ function renderBoard() {
     const leader = leaders.length === 1 ? leaders[0] : null;
     if (leader !== null && prevLeader !== null && leader !== prevLeader) {
       showToast(`👑 ${escapeHtml(players[leader].name)} takes the lead!`, PLAYER_COLORS[leader]);
+      sounds.playLeadChange();
     }
     if (leader !== null) prevLeader = leader;
   }
 
+  document.getElementById('btn-menu').addEventListener('click', confirmQuit);
+  const rerollBtn = document.getElementById('btn-reroll');
+  if (rerollBtn) rerollBtn.addEventListener('click', () => { boardRevealDone = false; rerollBoard(); });
+
+  const openClue = (el) => {
+    const ci = parseInt(el.dataset.cat);
+    const cli = parseInt(el.dataset.clue);
+    zoomFromCell(el, () => selectClue(ci, cli));
+  };
+
   // Clue click handlers — zoom the cell into the clue screen
   document.querySelectorAll('.board-clue:not(.answered)').forEach(el => {
-    el.addEventListener('click', () => {
-      const ci = parseInt(el.dataset.cat);
-      const cli = parseInt(el.dataset.clue);
-      zoomFromCell(el, () => selectClue(ci, cli));
-    });
+    el.addEventListener('click', () => openClue(el));
   });
+
+  attachBoardKeys(openClue);
 
   // Category intro sequence (once per round)
   if (getState().showCategoryIntro) {
     getState().showCategoryIntro = false; // consume without re-render
     playCategoryIntro(categories);
   }
+}
+
+/** First-timer rules card. */
+function showHowTo() {
+  if (document.querySelector('.modal-overlay')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = `
+    <div class="modal how-to" role="dialog" aria-modal="true" aria-label="How to play">
+      <div class="modal-title">How to play</div>
+      <ul class="how-to-list">
+        <li><strong>Pick a clue</strong> from the board — higher rows are worth more.</li>
+        <li><strong>Answer</strong> in plain words. Spelling and phrasing are forgiven, and you don't need "What is…".</li>
+        <li><strong>Right</strong> adds the value; <strong>wrong</strong> subtracts it. Get 3 right in a row for a 🔥 streak bonus.</li>
+        <li><strong>Buzz In! mode:</strong> race to ring in with your key (or tap) once the clue is read. Buzz too early and you're locked out briefly.</li>
+        <li><strong>Daily Doubles</strong> let you wager. Then it's <strong>Final</strong> — one clue, secret wagers, winner takes the night.</li>
+        <li>The table is the judge: hit <strong>"We'll accept it"</strong> if a close answer got marked wrong.</li>
+      </ul>
+      <div class="modal-actions">
+        <button class="btn-cta modal-cancel">Got it</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  const close = () => overlay.remove();
+  overlay.querySelector('.modal-cancel').addEventListener('click', close);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  overlay.querySelector('.modal-cancel').focus();
+}
+
+/** Quit-to-menu confirmation. Reachable from the board menu or Escape. */
+function confirmQuit() {
+  if (document.querySelector('.modal-overlay')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = `
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Leave game">
+      <div class="modal-title">Leave this game?</div>
+      <div class="modal-body">Your scores won't be saved.</div>
+      <div class="modal-actions">
+        <button class="btn-quiet modal-cancel">Keep Playing</button>
+        <button class="btn-danger modal-confirm">Leave Game</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  const close = () => overlay.remove();
+  overlay.querySelector('.modal-cancel').addEventListener('click', close);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  overlay.querySelector('.modal-confirm').addEventListener('click', () => {
+    close();
+    cleanupClue();
+    lastScreen = null;
+    boardRevealDone = false;
+    prevScores = [];
+    prevLeader = null;
+    sounds.stopThinkMusic();
+    resetForNewGame();
+  });
+  overlay.querySelector('.modal-cancel').focus();
+}
+
+// Escape opens the quit prompt while a game is in progress.
+window.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  const open = document.querySelector('.modal-overlay');
+  if (open) { open.remove(); return; }
+  const screen = getState().screen;
+  if (['board', 'clue', 'daily-double', 'round-transition',
+       'final-category', 'final-wager', 'final-clue', 'final-answer'].includes(screen)) {
+    confirmQuit();
+  }
+});
+
+// Keyboard navigation of the board grid (arrows move, Enter picks).
+let boardKeyHandler = null;
+let boardCursor = { c: 0, r: 0 };
+
+function detachBoardKeys() {
+  if (boardKeyHandler) { window.removeEventListener('keydown', boardKeyHandler); boardKeyHandler = null; }
+}
+
+function attachBoardKeys(openClue) {
+  detachBoardKeys();
+  const cellAt = (c, r) => document.querySelector(`.board-clue[data-cat="${c}"][data-clue="${r}"]`);
+  const paint = () => {
+    document.querySelectorAll('.board-clue.cursor').forEach(el => el.classList.remove('cursor'));
+    const el = cellAt(boardCursor.c, boardCursor.r);
+    if (el) el.classList.add('cursor');
+  };
+  // Start the cursor on the first unanswered cell.
+  outer: for (let r = 0; r < 5; r++) for (let c = 0; c < 6; c++) {
+    const el = cellAt(c, r);
+    if (el && !el.classList.contains('answered')) { boardCursor = { c, r }; break outer; }
+  }
+  boardKeyHandler = (e) => {
+    if (getState().screen !== 'board') return;
+    if (document.querySelector('.modal-overlay, .category-intro')) return;
+    let handled = true;
+    if (e.key === 'ArrowLeft') boardCursor.c = (boardCursor.c + 5) % 6;
+    else if (e.key === 'ArrowRight') boardCursor.c = (boardCursor.c + 1) % 6;
+    else if (e.key === 'ArrowUp') boardCursor.r = (boardCursor.r + 4) % 5;
+    else if (e.key === 'ArrowDown') boardCursor.r = (boardCursor.r + 1) % 5;
+    else if (e.key === 'Enter') {
+      const el = cellAt(boardCursor.c, boardCursor.r);
+      if (el && !el.classList.contains('answered')) { detachBoardKeys(); openClue(el); }
+      handled = true;
+    } else handled = false;
+    if (handled) { e.preventDefault(); paint(); }
+  };
+  window.addEventListener('keydown', boardKeyHandler);
+  paint();
 }
 
 /** TV-chyron style announcement banner. */
@@ -469,7 +677,7 @@ function clueShell(extraHtml) {
       </div>
       <div class="clue-text">${escapeHtml(currentClue.clue)}</div>
       ${extraHtml}
-      <div class="clue-feedback" id="clue-feedback"></div>
+      <div class="clue-feedback" id="clue-feedback" role="status" aria-live="polite"></div>
     </div>
   `;
 }
@@ -479,6 +687,14 @@ function showFeedback(html) {
   if (!feedback) return;
   feedback.innerHTML = html;
   feedback.classList.add('show');
+}
+
+/** Brief full-screen tint for a juicy correct/wrong beat. */
+function flashScreen(kind) {
+  const el = document.createElement('div');
+  el.className = `screen-flash ${kind}`;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 550);
 }
 
 /** "🔥 3 in a row" bonus callout when a streak pays extra. */
@@ -532,6 +748,7 @@ function handleSubmitAnswer() {
 
   const result = submitAnswer(answer);
   if (!result) return;
+  flashScreen(result.correct ? "correct" : "wrong");
 
   if (result.correct) {
     showFeedback(`
@@ -541,7 +758,7 @@ function handleSubmitAnswer() {
         ${bonusHtml(result)}
       </div>
     `);
-    setTimeout(() => { lastScreen = null; returnToBoard(); }, result.bonus ? 2400 : 2000);
+    scheduleReturn(result.bonus ? 2400 : 2000);
   } else {
     showFeedback(`
       <div class="feedback-wrong">
@@ -571,7 +788,7 @@ function handleOverride() {
       ${bonusHtml(result)}
     </div>
   `);
-  setTimeout(() => { lastScreen = null; returnToBoard(); }, result.bonus ? 2200 : 1800);
+  scheduleReturn(result.bonus ? 2200 : 1800);
 }
 
 function handleSkip() {
@@ -585,7 +802,7 @@ function handleSkip() {
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
-  setTimeout(() => { lastScreen = null; returnToBoard(); }, 2500);
+  scheduleReturn(2500);
 }
 
 // — Buzz mode —
@@ -594,7 +811,7 @@ function renderBuzzClue() {
   const { currentClue } = getState();
 
   app.innerHTML = clueShell(`
-    <div class="buzz-status" id="buzz-status">Read the clue&hellip;</div>
+    <div class="buzz-status" id="buzz-status" title="Space to open buzzers">Read the clue&hellip; <span class="buzz-skip-hint">(space to ring in)</span></div>
     <div class="clue-answer-area" id="answer-area" style="display:none">
       <div class="clue-player" id="answering-name"></div>
       <input type="text" id="answer-input" class="answer-input"
@@ -610,6 +827,11 @@ function renderBuzzClue() {
   buzzLockedUntil = getState().players.map(() => 0);
   renderBuzzerRow();
   attachBuzzKeys();
+
+  // Tap the status to open buzzers early (the reader controls the pace).
+  document.getElementById('buzz-status').addEventListener('click', () => {
+    if (buzzPhase === 'reading') openBuzzers();
+  });
 
   // Reading time scales with clue length, then the buzzers open
   const readingMs = Math.min(1500 + currentClue.clue.length * 25, 6000);
@@ -638,6 +860,12 @@ function attachBuzzKeys() {
   buzzKeyHandler = (e) => {
     if (e.repeat) return;
     if (buzzPhase === 'answering' || buzzPhase === 'done') return;
+    // Space opens the buzzers early during the reading beat.
+    if ((e.key === ' ' || e.key === 'Spacebar') && buzzPhase === 'reading') {
+      e.preventDefault();
+      openBuzzers();
+      return;
+    }
     const idx = BUZZ_KEYS.indexOf(e.key.toLowerCase());
     if (idx >= 0 && idx < getState().players.length) {
       e.preventDefault();
@@ -730,6 +958,7 @@ function resolveBuzzAnswer(answer, timedOut) {
 
   const result = submitAnswer(answer);
   if (!result) return;
+  flashScreen(result.correct ? "correct" : "wrong");
 
   if (result.correct) {
     buzzPhase = 'done';
@@ -740,7 +969,7 @@ function resolveBuzzAnswer(answer, timedOut) {
         ${bonusHtml(result)}
       </div>
     `);
-    setTimeout(() => { lastScreen = null; returnToBoard(); }, result.bonus ? 2400 : 2000);
+    scheduleReturn(result.bonus ? 2400 : 2000);
     return;
   }
 
@@ -816,7 +1045,7 @@ function handleNoBuzz() {
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
-  setTimeout(() => { lastScreen = null; returnToBoard(); }, 2500);
+  scheduleReturn(2500);
 }
 
 // ——— Daily Double ———
@@ -919,7 +1148,7 @@ function renderFinalCategory() {
 
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Final Jeopardy!</div>
+      <div class="final-header">The Final</div>
       <div class="final-scores">
         ${players.map(p => `
           <div class="transition-player">
@@ -943,72 +1172,132 @@ function renderFinalCategory() {
   });
 }
 
-function renderFinalWager() {
-  const { players } = getState();
-
+// A "hand the device to X" cover so nobody sees the next player's secret entry.
+function passCover(playerIdx, sub, onReady) {
+  const p = getState().players[playerIdx];
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Final Jeopardy!</div>
-      <div class="final-subtitle">Place your wagers</div>
-      <div class="final-wager-form">
-        ${players.map((p, i) => {
-          const maxW = Math.max(0, p.score);
-          return `
-            <div class="final-wager-player">
-              <div class="fwp-name">${escapeHtml(p.name)} — $${formatMoney(p.score)}</div>
-              <div class="wager-input-row">
-                <span class="wager-dollar">$</span>
-                <input type="number" class="wager-input final-wager-input"
-                       data-player="${i}" min="0" max="${maxW}"
-                       value="${Math.min(1000, maxW)}" ${p.score <= 0 ? 'disabled value="0"' : ''}>
-              </div>
-              ${p.score <= 0 ? '<div class="wager-note">Cannot wager with $0 or less</div>' : `<div class="wager-range">$0 to $${formatMoney(maxW)}</div>`}
-            </div>
-          `;
-        }).join('')}
-        <button class="btn-wager-submit" id="btn-final-wagers-submit">Lock In All Wagers</button>
+      <div class="final-header">The Final</div>
+      <div class="pass-card">
+        <div class="pass-avatar" style="--pc: ${PLAYER_COLORS[playerIdx]}">${p.avatar || '🎲'}</div>
+        <div class="pass-name">Pass the device to ${escapeHtml(p.name)}</div>
+        <div class="pass-sub">${sub}</div>
+        <button class="btn-cta pass-go" id="pass-go">I'm ${escapeHtml(p.name)} — Ready</button>
       </div>
     </div>
   `;
+  const go = document.getElementById('pass-go');
+  go.focus();
+  go.addEventListener('click', onReady);
+}
 
-  document.getElementById('btn-final-wagers-submit').addEventListener('click', () => {
-    const wagers = Array.from(document.querySelectorAll('.final-wager-input')).map((input, i) => {
-      const max = Math.max(0, players[i].score);
-      let val = parseInt(input.value) || 0;
-      return Math.max(0, Math.min(val, max));
-    });
-    submitFinalWagers(wagers);
-  });
+function renderFinalWager() {
+  const { players } = getState();
+  const wagers = players.map(() => 0);
+  const queue = players.map((_, i) => i).filter(i => players[i].score > 0);
+  const solo = players.length === 1;
+
+  if (queue.length === 0) { submitFinalWagers(wagers); return; }
+
+  let qi = 0;
+  const nextWager = () => {
+    if (qi >= queue.length) { submitFinalWagers(wagers); return; }
+    const idx = queue[qi];
+    if (solo) wagerEntry(idx);
+    else passCover(idx, 'Place your secret wager', () => wagerEntry(idx));
+  };
+
+  function wagerEntry(idx) {
+    const p = players[idx];
+    const maxW = Math.max(0, p.score);
+    app.innerHTML = `
+      <div class="final-screen">
+        <div class="final-header">The Final</div>
+        <div class="final-subtitle" style="--pc:${PLAYER_COLORS[idx]}">${p.avatar || ''} ${escapeHtml(p.name)} — you have $${formatMoney(p.score)}</div>
+        <div class="dd-wager-area" style="max-width:380px;width:100%">
+          <label>Your secret wager</label>
+          <div class="wager-input-row">
+            <span class="wager-dollar">$</span>
+            <input type="number" id="wager-input" class="wager-input" min="0" max="${maxW}" value="${Math.min(1000, maxW)}" step="100">
+          </div>
+          <div class="wager-range">$0 to $${formatMoney(maxW)}</div>
+          <div class="wager-presets">
+            <button class="btn-preset" data-amount="0">Nothing</button>
+            <button class="btn-preset" data-amount="${Math.floor(maxW / 2)}">Half</button>
+            <button class="btn-preset" data-amount="${maxW}">All In</button>
+          </div>
+          <button class="btn-wager-submit" id="btn-lock">${qi < queue.length - 1 ? 'Lock In &amp; Pass' : 'Lock In Wager'}</button>
+        </div>
+      </div>
+    `;
+    const input = document.getElementById('wager-input');
+    input.focus(); input.select();
+    document.querySelectorAll('.btn-preset').forEach(b =>
+      b.addEventListener('click', () => { input.value = b.dataset.amount; }));
+    const lock = () => {
+      let v = parseInt(input.value) || 0;
+      wagers[idx] = Math.max(0, Math.min(v, maxW));
+      qi++;
+      nextWager();
+    };
+    document.getElementById('btn-lock').addEventListener('click', lock);
+    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') lock(); });
+  }
+
+  nextWager();
 }
 
 function renderFinalClue() {
-  const { finalClue, players } = getState();
+  const { finalClue, players, finalWagers } = getState();
+  const solo = players.length === 1;
+  const answers = players.map(() => '');
+  const queue = players.map((_, i) => i).filter(i => finalWagers[i] > 0 || players[i].score > 0);
 
+  // Everyone reads the clue together, think music playing.
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Final Jeopardy!</div>
+      <div class="final-header">The Final</div>
       <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
       <div class="final-clue-text">${escapeHtml(finalClue.clue)}</div>
-      <div class="final-answer-form">
-        ${players.map((p, i) => `
-          <div class="final-answer-player">
-            <label>${escapeHtml(p.name)}</label>
-            <input type="text" class="answer-input final-answer-input"
-                   data-player="${i}" placeholder="What is..."
-                   ${p.score <= 0 && getState().finalWagers[i] === 0 ? 'disabled placeholder="No wager"' : ''}>
-          </div>
-        `).join('')}
-        <button class="btn-submit" id="btn-final-answers">Reveal Answers</button>
-      </div>
-      <div class="think-music-note">&#9835; Think music playing...</div>
+      <div class="think-music-note">&#9835; Think music playing…</div>
+      <button class="btn-submit" id="btn-begin-answers" style="max-width:340px">
+        ${solo ? 'Enter Answer' : 'Enter Answers'}
+      </button>
     </div>
   `;
 
-  document.getElementById('btn-final-answers').addEventListener('click', () => {
-    const answers = Array.from(document.querySelectorAll('.final-answer-input')).map(
-      input => input.value.trim()
-    );
-    submitFinalAnswers(answers);
+  document.getElementById('btn-begin-answers').addEventListener('click', () => {
+    if (queue.length === 0) { sounds.stopThinkMusic(); submitFinalAnswers(answers); return; }
+    let qi = 0;
+    const nextAnswer = () => {
+      if (qi >= queue.length) { sounds.stopThinkMusic(); submitFinalAnswers(answers); return; }
+      const idx = queue[qi];
+      if (solo) answerEntry(idx);
+      else passCover(idx, 'Type your response (no peeking!)', () => answerEntry(idx));
+    };
+    function answerEntry(idx) {
+      const p = players[idx];
+      app.innerHTML = `
+        <div class="final-screen">
+          <div class="final-header">The Final</div>
+          <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
+          <div class="final-clue-text" style="font-size:1.3rem">${escapeHtml(finalClue.clue)}</div>
+          <div class="final-answer-form">
+            <div class="final-answer-player">
+              <label style="--pc:${PLAYER_COLORS[idx]}">${p.avatar || ''} ${escapeHtml(p.name)} — your response</label>
+              <input type="text" id="final-answer-input" class="answer-input" placeholder="What is…" autocomplete="off">
+            </div>
+            <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock In &amp; Pass' : 'Reveal Answers'}</button>
+          </div>
+        </div>
+      `;
+      const input = document.getElementById('final-answer-input');
+      input.focus();
+      const lock = () => { answers[idx] = input.value.trim(); qi++; nextAnswer(); };
+      document.getElementById('btn-lock-answer').addEventListener('click', lock);
+      input.addEventListener('keydown', (e) => { if (e.key === 'Enter') lock(); });
+    }
+    nextAnswer();
   });
 }
 
@@ -1017,7 +1306,7 @@ function renderFinalAnswer() {
 
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Final Jeopardy!</div>
+      <div class="final-header">The Final</div>
       <div class="final-correct-response">
         <div class="label">Correct response:</div>
         <div class="response">${escapeHtml(finalClue.response)}</div>
@@ -1052,8 +1341,11 @@ function renderFinalAnswer() {
 
 // ——— Results Screen ———
 
+let recordedThisGame = false;
+
 function renderResults() {
   const { players } = getState();
+  if (!recordedThisGame) { recordGame(players); recordedThisGame = true; }
   const ranked = players
     .map((p, originalIndex) => ({ ...p, originalIndex }))
     .sort((a, b) => b.score - a.score);
@@ -1099,12 +1391,15 @@ function renderResults() {
           `;
         }).join('')}
       </div>
-      <button class="btn-play-again" id="btn-play-again">Play Again</button>
+      <div class="results-actions">
+        <button class="btn-play-again" id="btn-play-again">Play Again</button>
+        <button class="btn-quiet btn-share" id="btn-share">Share Result</button>
+      </div>
     </div>
   `;
 
   sounds.playFanfare();
-  if (!isTie || sorted[0].score > 0) spawnConfetti();
+  if (!isTie || ranked[0].score > 0) spawnConfetti();
 
   document.getElementById('btn-play-again').addEventListener('click', () => {
     lastScreen = null;
@@ -1113,6 +1408,33 @@ function renderResults() {
     prevLeader = null;
     resetForNewGame();
   });
+
+  document.getElementById('btn-share').addEventListener('click', () => shareResult(ranked, isTie));
+}
+
+/** Copy a shareable summary of the game to the clipboard. */
+function shareResult(ranked, isTie) {
+  const medals = ['🥇', '🥈', '🥉'];
+  const lines = ranked.map((p, i) => `${medals[i] || '•'} ${p.name} — ${money(p.score)}`);
+  const header = isTie ? "It's a tie on Ring In! 🔔" : `${ranked[0].name} won Ring In! 🔔`;
+  const text = `${header}\n${lines.join('\n')}\n\nPlay: https://kellylucas314-cpu.github.io/Jeopardy/`;
+  const done = () => showToast('📋 Result copied — go brag!', 'var(--brass)');
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+  } else {
+    fallbackCopy(text, done);
+  }
+}
+
+function fallbackCopy(text, done) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); done(); } catch { /* ignore */ }
+  ta.remove();
 }
 
 function spawnConfetti() {
@@ -1147,6 +1469,11 @@ function escapeHtml(text) {
 function formatMoney(amount) {
   if (amount < 0) return '-' + Math.abs(amount).toLocaleString();
   return amount.toLocaleString();
+}
+
+/** Signed dollar amount with the $ inside the sign: "-$1,200", "$3,400". */
+function money(amount) {
+  return (amount < 0 ? '-$' : '$') + Math.abs(amount).toLocaleString();
 }
 
 // ——— Bootstrap ———

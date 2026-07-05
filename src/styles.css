@@ -328,6 +328,36 @@ input { font-family: var(--font-ui); }
 
 .loading-text { font-size: 0.95rem; color: var(--cream-dim); letter-spacing: 0.06em; }
 
+.error-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  max-width: 340px;
+}
+.error-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--cream); }
+.error-body { font-size: 0.92rem; color: var(--cream-dim); margin-bottom: 8px; }
+.error-box button { padding: 13px 32px; border-radius: var(--r-md); font-size: 0.95rem; }
+
+/* ——— Hall of Fame ——— */
+.hall-of-fame {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin-top: -14px;
+}
+.hof-item {
+  font-size: 0.8rem;
+  color: var(--cream-dim);
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+}
+.hof-item strong { color: var(--cream); font-weight: 700; }
+
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ============================================================
@@ -622,6 +652,8 @@ input { font-family: var(--font-ui); }
   box-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
 }
 
+.timer-bar.urgent { background: var(--wrong); box-shadow: 0 0 10px rgba(219, 106, 72, 0.5); }
+
 .timer-text {
   font-family: var(--font-display);
   font-size: 0.9rem;
@@ -630,7 +662,10 @@ input { font-family: var(--font-ui); }
   color: var(--cream-dim);
   min-width: 26px;
   text-align: right;
+  transition: color 0.2s var(--ease);
 }
+
+.timer-text.urgent { color: var(--wrong); }
 
 .clue-text {
   font-size: 2.1rem;
@@ -724,6 +759,21 @@ input { font-family: var(--font-ui); }
 
 .correct-response { font-size: 0.95rem; margin-top: 8px; color: var(--cream-dim); font-weight: 400; }
 .correct-response strong { color: var(--cream); font-weight: 700; }
+
+.tap-hint {
+  margin-top: 14px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--cream-faint);
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  animation: fadeIn 0.4s ease;
+}
+
+.buzz-skip-hint { font-size: 0.7rem; font-weight: 500; color: var(--cream-faint); }
+.buzz-status { cursor: pointer; }
+.buzz-status.open { cursor: default; }
+.buzz-status.open .buzz-skip-hint { display: none; }
 
 .feedback-actions { display: flex; gap: 10px; justify-content: center; margin-top: 18px; }
 
@@ -1123,6 +1173,39 @@ input { font-family: var(--font-ui); }
 
 .think-music-note { font-size: 0.85rem; color: var(--cream-faint); }
 
+/* Pass-the-device cover for private Final entries */
+.pass-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 34px 30px;
+  box-shadow: var(--shadow);
+  animation: riseIn 0.3s var(--ease);
+}
+.pass-avatar {
+  width: 68px; height: 68px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem;
+  background: var(--surface-3);
+  border: 2px solid var(--pc, var(--jade));
+}
+.pass-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; }
+.pass-sub { font-size: 0.9rem; color: var(--cream-dim); margin-bottom: 6px; }
+.pass-go { padding: 14px 30px; border-radius: var(--r-md); font-size: 0.98rem; }
+
+/* Keyboard cursor on the board */
+.board-clue.cursor {
+  outline: 2px solid var(--brass);
+  outline-offset: -2px;
+  box-shadow: 0 0 0 3px rgba(216, 168, 90, 0.2);
+}
+
 .final-correct-response { text-align: center; }
 .final-correct-response .label { font-size: 0.74rem; font-weight: 700; color: var(--cream-faint); text-transform: uppercase; letter-spacing: 0.2em; }
 .final-correct-response .response {
@@ -1274,6 +1357,14 @@ input { font-family: var(--font-ui); }
 .stat-good { color: var(--correct); font-weight: 700; }
 .stat-bad { color: var(--wrong); font-weight: 700; }
 
+.results-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
 .btn-play-again {
   padding: 16px 52px;
   font-size: 1rem;
@@ -1281,8 +1372,17 @@ input { font-family: var(--font-ui); }
   border-radius: var(--r-md);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-top: 4px;
 }
+
+.btn-share {
+  padding: 10px 24px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--r-md);
+}
+
+.board-footer { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.reroll-btn { font-size: 0.78rem; }
 
 /* ============================================================
    CATEGORY INTRO OVERLAY
@@ -1341,6 +1441,114 @@ input { font-family: var(--font-ui); }
 }
 
 /* ============================================================
+   MENU BUTTON + MODALS
+   ============================================================ */
+
+.btn-menu {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  line-height: 1;
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--cream-dim);
+}
+.btn-menu:hover { color: var(--cream); border-color: var(--line-strong); }
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--cream-dim);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 4px;
+}
+.link-btn:hover { color: var(--brass); }
+
+.btn-cta {
+  background: var(--jade);
+  color: #08251b;
+  font-weight: 700;
+}
+.btn-cta:hover { background: var(--jade-bright); }
+
+.btn-quiet {
+  background: var(--surface-3);
+  color: var(--cream-dim);
+  border: 1px solid var(--line);
+}
+.btn-quiet:hover { color: var(--cream); }
+
+.btn-danger {
+  background: var(--wrong);
+  color: #2a0f08;
+  font-weight: 700;
+}
+.btn-danger:hover { filter: brightness(1.08); }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(10, 8, 5, 0.72);
+  animation: fadeIn 0.2s ease;
+}
+
+.modal {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface-1);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-lg);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  animation: riseIn 0.28s var(--ease);
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.modal-body { font-size: 0.95rem; color: var(--cream-dim); margin-bottom: 22px; }
+
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.modal-actions button { padding: 12px 22px; font-size: 0.95rem; border-radius: var(--r-md); }
+
+.how-to .modal-title { margin-bottom: 16px; }
+.how-to-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.how-to-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--cream-dim);
+}
+.how-to-list li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brass);
+}
+.how-to-list strong { color: var(--cream); font-weight: 700; }
+.how-to .modal-actions { justify-content: center; }
+.how-to .modal-actions button { width: 100%; }
+
+/* ============================================================
    TOAST / CALLOUTS
    ============================================================ */
 
@@ -1368,6 +1576,28 @@ input { font-family: var(--font-ui); }
   from { opacity: 0; transform: translateX(-50%) translateY(-16px); }
   to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
+
+/* ============================================================
+   SCREEN FLASH (answer juice)
+   ============================================================ */
+
+.screen-flash {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  pointer-events: none;
+  animation: screenFlash 0.55s var(--ease) forwards;
+}
+.screen-flash.correct { background: radial-gradient(60% 50% at 50% 50%, rgba(78, 199, 143, 0.28), transparent 75%); }
+.screen-flash.wrong { background: radial-gradient(60% 50% at 50% 50%, rgba(219, 106, 72, 0.26), transparent 75%); }
+
+@keyframes screenFlash {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) { .screen-flash { display: none; } }
 
 /* ============================================================
    CONFETTI
@@ -1458,6 +1688,24 @@ input { font-family: var(--font-ui); }
   .category-header { font-size: 0.5rem; min-height: 36px; }
   .board-clue { font-size: 0.8rem; }
   .avatar-btn { width: 44px; height: 44px; font-size: 1.3rem; }
+}
+
+/* ——— Reduced motion ——— */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .cell-ghost { display: none !important; }
+}
+
+/* ——— Setup footer layout ——— */
+.setup-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
 }
 
 /* ——— Scrollbar ——— */

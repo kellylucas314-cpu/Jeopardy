@@ -102,3 +102,34 @@ export function savePrefs(prefs) {
     // localStorage unavailable (private browsing etc.) — no big deal
   }
 }
+
+// ——— Hall of Fame (winners across sessions) ———
+
+const RECORDS_KEY = 'jeopardy-records';
+
+export function loadRecords() {
+  try {
+    return JSON.parse(localStorage.getItem(RECORDS_KEY)) || { games: 0 };
+  } catch {
+    return { games: 0 };
+  }
+}
+
+/** Record a finished game's winner and update the all-time high score. */
+export function recordGame(players) {
+  if (!players || players.length === 0) return;
+  const winner = players.reduce((best, p) => (p.score > best.score ? p : best), players[0]);
+  const rec = loadRecords();
+  rec.games = (rec.games || 0) + 1;
+  rec.lastWinner = { name: winner.name, avatar: winner.avatar, score: winner.score };
+  // Only celebrate a positive score as an all-time best.
+  if (winner.score > 0 && (!rec.best || winner.score > rec.best.score)) {
+    rec.best = { name: winner.name, avatar: winner.avatar, score: winner.score };
+  }
+  try {
+    localStorage.setItem(RECORDS_KEY, JSON.stringify(rec));
+  } catch {
+    // ignore
+  }
+  return rec;
+}
