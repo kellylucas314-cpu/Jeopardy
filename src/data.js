@@ -1,6 +1,13 @@
 /**
- * Data loading — fetches random chunks from the processed dataset.
+ * Data loading — fetches random chunks from the question packs.
+ *
+ * Two packs ship with the game:
+ *  - 'fresh'   → data/original/…  Original clues written for Ring In (default).
+ *  - 'archive' → data/…           A large unofficial archive of televised clues,
+ *                                 kept as an opt-in for personal play.
  */
+
+import { loadPrefs } from './state.js';
 
 let manifest = null;
 
@@ -15,12 +22,25 @@ function randomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+export function currentPack() {
+  const p = loadPrefs().pack;
+  return p === 'archive' ? 'archive' : 'fresh';
+}
+
+/** The archive was scraped with literal backslash-escapes baked into ~20% of rows. */
+function clean(text) {
+  return (text || '').replace(/\\"/g, '"').replace(/\\'/g, "'").trim();
+}
+
 // Clues that lean on audio/video/images we don't have — unanswerable on their own.
 const MEDIA_RE = /\b(seen here|shown here|heard here|pictured|depicted|this song|audio clue|video clue|in this picture|in the picture|the following clip|sung here|played here|read the|this painting shown|this logo)\b/i;
+// Clues whose answer may have gone stale since the clue aired.
+const DATED_RE = /\b(currently|to date|as of now|reigning|incumbent|is now called|now stars|now plays|newest|most recently)\b/i;
 
 function isPlayable(clue) {
   const t = clue.clue || '';
   if (MEDIA_RE.test(t)) return false;
+  if (DATED_RE.test(t)) return false;
   if (t.length < 8) return false;          // truncated/broken rows
   return true;
 }
@@ -29,10 +49,21 @@ function categoryIsPlayable(cat) {
   return cat.clues.length === 5 && cat.clues.every(isPlayable);
 }
 
-async function loadChunk(roundDir, chunkIndex) {
+async function loadChunk(baseDir, roundDir, chunkIndex) {
   const filename = `chunk-${String(chunkIndex).padStart(3, '0')}.json`;
-  const res = await fetch(`./data/${roundDir}/${filename}`);
+  const res = await fetch(`./data/${baseDir}${roundDir}/${filename}`);
   return res.json();
+}
+
+/** Chunk-count + base dir for the active pack, falling back to the archive. */
+async function packInfo(round) {
+  const m = await loadManifest();
+  const dirNames = { 1: 'jeopardy', 2: 'double', final: 'final' };
+  const dir = dirNames[round] || dirNames.final;
+  if (currentPack() === 'fresh' && m.original && m.original[dir] > 0) {
+    return { base: 'original/', dir, total: m.original[dir] };
+  }
+  return { base: '', dir, total: m[dir] };
 }
 
 /**
@@ -40,19 +71,18 @@ async function loadChunk(roundDir, chunkIndex) {
  * Returns an array of { name, clues: [{ clue, response, value }] }
  */
 export async function loadRoundCategories(round, seen = new Set()) {
-  const m = await loadManifest();
-  const dir = round === 1 ? 'jeopardy' : 'double';
-  const totalChunks = round === 1 ? m.jeopardy : m.double;
+  const { base, dir, total } = await packInfo(round);
 
   // Gather playable, unseen categories, pulling extra chunks if a chunk runs thin.
   const pool = [];
   const triedChunks = new Set();
-  while (pool.length < 6 && triedChunks.size < totalChunks && triedChunks.size < 6) {
-    const chunkIdx = randomInt(totalChunks);
+  const maxTries = Math.min(total, 8);
+  while (pool.length < 6 && triedChunks.size < maxTries) {
+    const chunkIdx = randomInt(total);
     if (triedChunks.has(chunkIdx)) continue;
     triedChunks.add(chunkIdx);
 
-    const categories = await loadChunk(dir, chunkIdx);
+    const categories = await loadChunk(base, dir, chunkIdx);
     for (let i = categories.length - 1; i > 0; i--) {
       const j = randomInt(i + 1);
       [categories[i], categories[j]] = [categories[j], categories[i]];
@@ -62,14 +92,25 @@ export async function loadRoundCategories(round, seen = new Set()) {
     }
   }
 
+  // A small pack can run dry against a long `seen` list — allow repeats rather than stall.
+  if (pool.length < 6) {
+    for (const idx of triedChunks) {
+      const categories = await loadChunk(base, dir, idx);
+      for (const cat of categories) {
+        if (categoryIsPlayable(cat) && !pool.includes(cat)) pool.push(cat);
+      }
+      if (pool.length >= 6) break;
+    }
+  }
+
   const chosen = pool.slice(0, 6);
   for (const cat of chosen) seen.add(cat.name);
 
   return chosen.map(cat => ({
-    name: cat.name,
+    name: clean(cat.name),
     clues: cat.clues.map(c => ({
-      clue: c.clue,
-      response: c.response,
+      clue: clean(c.clue),
+      response: clean(c.response),
       value: c.value,
       answered: false,
       isDailyDouble: false, // We assign these ourselves
@@ -78,21 +119,22 @@ export async function loadRoundCategories(round, seen = new Set()) {
 }
 
 /**
- * Load a random Final Jeopardy clue.
+ * Load a random Final clue.
  */
 export async function loadFinalClue(seen = new Set()) {
-  const m = await loadManifest();
+  const { base, dir, total } = await packInfo('final');
   for (let attempt = 0; attempt < 8; attempt++) {
-    const chunkIdx = randomInt(m.final);
-    const clues = await loadChunk('final', chunkIdx);
+    const chunkIdx = randomInt(total);
+    const clues = await loadChunk(base, dir, chunkIdx);
     const playable = clues.filter(c => isPlayable(c) && !seen.has(c.name));
     if (playable.length) {
       const pick = playable[randomInt(playable.length)];
       seen.add(pick.name);
-      return pick;
+      return { name: clean(pick.name), clue: clean(pick.clue), response: clean(pick.response) };
     }
   }
   // Fallback: any clue from a random chunk
-  const clues = await loadChunk('final', randomInt(m.final));
-  return clues[randomInt(clues.length)];
+  const clues = await loadChunk(base, dir, randomInt(total));
+  const pick = clues[randomInt(clues.length)];
+  return { name: clean(pick.name), clue: clean(pick.clue), response: clean(pick.response) };
 }
