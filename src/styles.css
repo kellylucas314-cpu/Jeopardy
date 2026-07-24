@@ -255,6 +255,46 @@ input { font-family: var(--font-ui); }
 .length-buttons { margin-bottom: 4px; }
 
 .mode-buttons { display: flex; gap: 10px; margin-bottom: 4px; }
+.pack-buttons { margin-bottom: 12px; }
+
+.solo-scorecard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 28px auto 24px;
+  padding: 26px 48px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(216, 168, 90, 0.25);
+  border-radius: 18px;
+  width: fit-content;
+  animation: popIn 0.5s ease both;
+}
+.solo-scorecard .podium-avatar { font-size: 3rem; }
+.solo-score-money {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--brass-bright, #ecc578);
+}
+.solo-score-money.negative { color: #e2795c; }
+.solo-score-sub { color: var(--text-dim, #a89a86); font-size: 0.95rem; }
+
+.solo-next-hint {
+  text-align: center;
+  color: var(--text-dim, #a89a86);
+  font-size: 0.9rem;
+  margin: -4px 0 12px;
+}
+
+.solo-best-callout {
+  text-align: center;
+  color: var(--brass, #d8a85a);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: -6px 0 14px;
+  animation: fadeSlideIn 0.5s ease both;
+}
 
 .btn-mode {
   flex: 1;
@@ -1623,6 +1663,7 @@ input { font-family: var(--font-ui); }
    ============================================================ */
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeSlideIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes riseIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes popIn { from { opacity: 0; transform: scale(0.82); } to { opacity: 1; transform: scale(1); } }
 

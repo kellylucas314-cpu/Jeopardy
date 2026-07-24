@@ -188,6 +188,7 @@ function renderSetup() {
   const playerCount = prefs.playerCount || 2;
   const gameMode = prefs.gameMode || 'turns';
   const gameLength = prefs.gameLength || 'full';
+  const pack = prefs.pack === 'archive' ? 'archive' : 'fresh';
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
   prevLeader = null;
   prevScores = [];
@@ -224,6 +225,17 @@ function renderSetup() {
           </button>
           <button class="btn-player-count btn-length ${gameLength === 'full' ? 'selected' : ''}" data-length="full">
             Full &middot; ~45 min
+          </button>
+        </div>
+        <h2 class="mode-title">Questions</h2>
+        <div class="mode-buttons pack-buttons">
+          <button class="btn-mode btn-pack ${pack === 'fresh' ? 'selected' : ''}" data-pack="fresh">
+            <span class="mode-name">&#x2728; Fresh Pack</span>
+            <span class="mode-desc">1,500+ original clues written for Ring In</span>
+          </button>
+          <button class="btn-mode btn-pack ${pack === 'archive' ? 'selected' : ''}" data-pack="archive">
+            <span class="mode-name">&#x1F4FC; Deep Archive</span>
+            <span class="mode-desc">460,000+ classic clues from trivia history</span>
           </button>
         </div>
         <div id="mode-section">
@@ -274,10 +286,19 @@ function renderSetup() {
   });
 
   // Mode buttons
-  document.querySelectorAll('.btn-mode').forEach(btn => {
+  document.querySelectorAll('.btn-mode:not(.btn-pack)').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-mode').forEach(b => b.classList.remove('selected'));
+      document.querySelectorAll('.btn-mode:not(.btn-pack)').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
+    });
+  });
+
+  // Question pack buttons
+  document.querySelectorAll('.btn-pack').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.btn-pack').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      savePrefs({ pack: btn.dataset.pack });
     });
   });
 
@@ -297,9 +318,10 @@ function renderSetup() {
       input.value.trim() || `Player ${i + 1}`
     );
     const avatars = Array.from(document.querySelectorAll('.avatar-btn')).map(b => b.textContent.trim());
-    const mode = document.querySelector('.btn-mode.selected')?.dataset.mode || 'turns';
+    const mode = document.querySelector('.btn-mode.selected:not(.btn-pack)')?.dataset.mode || 'turns';
     const length = document.querySelector('.btn-length.selected')?.dataset.length || 'full';
-    savePrefs({ names, avatars, playerCount: names.length, gameMode: mode, gameLength: length, sound: sounds.isEnabled() });
+    const packSel = document.querySelector('.btn-pack.selected')?.dataset.pack || 'fresh';
+    savePrefs({ names, avatars, playerCount: names.length, gameMode: mode, gameLength: length, pack: packSel, sound: sounds.isEnabled() });
     sounds.playSelect();
     startGame(names, mode, avatars, length);
   });
@@ -486,6 +508,8 @@ function showHowTo() {
         <li><strong>Buzz In! mode:</strong> race to ring in with your key (or tap) once the clue is read. Buzz too early and you're locked out briefly.</li>
         <li><strong>Daily Doubles</strong> let you wager. Then it's <strong>Final</strong> — one clue, secret wagers, winner takes the night.</li>
         <li>The table is the judge: hit <strong>"We'll accept it"</strong> if a close answer got marked wrong.</li>
+        <li><strong>Playing solo?</strong> Chase a Rank — S is Grand Champion — and beat your personal best.</li>
+        <li><strong>Question packs:</strong> the Fresh Pack is written for Ring In; the Deep Archive holds 460k+ classic clues.</li>
       </ul>
       <div class="modal-actions">
         <button class="btn-cta modal-cancel">Got it</button>
@@ -1343,14 +1367,46 @@ function renderFinalAnswer() {
 
 let recordedThisGame = false;
 
+/** Solo report card: rank letter, title, and emoji from accuracy + volume. */
+const SOLO_TIERS = [
+  { letter: 'S', title: 'Grand Champion', emoji: '🏆', acc: 0.9, full: 22, quick: 12 },
+  { letter: 'A', title: 'Tournament Ready', emoji: '🌟', acc: 0.8, full: 17, quick: 9 },
+  { letter: 'B', title: 'Sharp Contender', emoji: '💪', acc: 0.65, full: 12, quick: 6 },
+  { letter: 'C', title: 'Warming Up', emoji: '📚', acc: 0.5, full: 8, quick: 4 },
+  { letter: 'D', title: 'Rookie Round', emoji: '🌱', acc: 0, full: 0, quick: 0 },
+];
+
+function soloRank(p, gameLength) {
+  const attempts = p.correct + p.wrong;
+  const acc = attempts ? p.correct / attempts : 0;
+  const len = gameLength === 'full' ? 'full' : 'quick';
+  for (let i = 0; i < SOLO_TIERS.length; i++) {
+    const t = SOLO_TIERS[i];
+    const lastTier = i === SOLO_TIERS.length - 1;
+    // C is a soft tier: either decent accuracy or enough correct answers gets you in.
+    const qualifies = t.letter === 'C'
+      ? (acc >= t.acc || p.correct >= t[len])
+      : (acc >= t.acc && p.correct >= t[len]);
+    if (qualifies || lastTier) {
+      const next = i > 0 ? SOLO_TIERS[i - 1] : null;
+      return { ...t, next: next ? `Rank ${next.letter} needs ${next[len]}+ correct at ${Math.round(next.acc * 100)}% accuracy` : null };
+    }
+  }
+}
+
 function renderResults() {
-  const { players } = getState();
+  const { players, gameLength } = getState();
+  const rec = loadRecords();
+  const prevBest = rec.best ? rec.best.score : null;
   if (!recordedThisGame) { recordGame(players); recordedThisGame = true; }
   const ranked = players
     .map((p, originalIndex) => ({ ...p, originalIndex }))
     .sort((a, b) => b.score - a.score);
   const winner = ranked[0];
   const isTie = ranked.length > 1 && ranked[0].score === ranked[1].score;
+  const solo = players.length === 1;
+  const rank = solo ? soloRank(winner, gameLength) : null;
+  const newBest = solo && winner.score > 0 && (prevBest === null || winner.score > prevBest);
 
   // Podium display order: 2nd, 1st, 3rd (1st in the middle, tallest)
   const podiumOrder = ranked.length === 3 ? [ranked[1], ranked[0], ranked[2]]
@@ -1360,20 +1416,32 @@ function renderResults() {
 
   app.innerHTML = `
     <div class="results-screen">
-      <div class="results-title">${isTie ? "It's a Tie!" : `${escapeHtml(winner.name)} Wins!`}</div>
+      <div class="results-title">${solo
+        ? `${rank.emoji} Rank ${rank.letter} — ${rank.title}`
+        : isTie ? "It's a Tie!" : `${escapeHtml(winner.name)} Wins!`}</div>
+      ${newBest ? '<div class="solo-best-callout">🎉 New personal best!</div>' : ''}
+      ${solo && rank.next ? `<div class="solo-next-hint">${rank.next}</div>` : ''}
+      ${solo ? `
+      <div class="solo-scorecard" style="--pc: ${PLAYER_COLORS[0]}">
+        <div class="podium-avatar">${winner.avatar || '🎲'}</div>
+        <div class="solo-score-money ${winner.score < 0 ? 'negative' : ''}">${money(winner.score)}</div>
+        <div class="solo-score-sub">${escapeHtml(winner.name)}'s winnings</div>
+      </div>
+      ` : `
       <div class="podium">
         ${podiumOrder.map(p => {
-          const rank = ranked.indexOf(p) + 1;
+          const place = ranked.indexOf(p) + 1;
           return `
-            <div class="podium-col rank-${rank}" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">
+            <div class="podium-col rank-${place}" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">
               <div class="podium-avatar">${p.avatar || '🎲'}</div>
               <div class="podium-name">${escapeHtml(p.name)}</div>
               <div class="podium-money ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
-              <div class="podium-block">${medal[rank - 1]}</div>
+              <div class="podium-block">${medal[place - 1]}</div>
             </div>
           `;
         }).join('')}
       </div>
+      `}
       <div class="results-stats-list">
         ${ranked.map(p => {
           const attempts = p.correct + p.wrong;
@@ -1415,8 +1483,11 @@ function renderResults() {
 /** Copy a shareable summary of the game to the clipboard. */
 function shareResult(ranked, isTie) {
   const medals = ['🥇', '🥈', '🥉'];
+  const solo = ranked.length === 1;
   const lines = ranked.map((p, i) => `${medals[i] || '•'} ${p.name} — ${money(p.score)}`);
-  const header = isTie ? "It's a tie on Ring In! 🔔" : `${ranked[0].name} won Ring In! 🔔`;
+  const rank = solo ? soloRank(ranked[0], getState().gameLength) : null;
+  const header = solo ? `${ranked[0].name} hit Rank ${rank.letter} (${rank.title}) on Ring In! ${rank.emoji}`
+    : isTie ? "It's a tie on Ring In! 🔔" : `${ranked[0].name} won Ring In! 🔔`;
   const text = `${header}\n${lines.join('\n')}\n\nPlay: https://kellylucas314-cpu.github.io/Jeopardy/`;
   const done = () => showToast('📋 Result copied — go brag!', 'var(--brass)');
   if (navigator.clipboard?.writeText) {

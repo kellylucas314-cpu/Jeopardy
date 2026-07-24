@@ -8,7 +8,13 @@ Share that link with friends and play on any device.
 
 ## Features
 
-- **~530,000 real Jeopardy clues** from the actual show — every game is a fresh board
+- **Two question packs:**
+  - ✨ **Fresh Pack** (default) — 1,500+ original clues written for Ring In: same smart, doable
+    difficulty curve, zero copyright worries, safe to share anywhere
+  - 📼 **Deep Archive** — ~460,000 classic clues from trivia history for marathon replay value
+    (unofficial archive of televised material; kept for personal game nights)
+- **Solo mode with Ranks** — play alone and chase a report card from D to S (Grand Champion),
+  with streak bonuses and a personal-best tracker
 - **Two game modes:**
   - 🔔 **Buzz In!** — race to the buzzer like the real show (`Q` / `P` / `B` keys, or tap), with early-buzz lockouts, steals after wrong answers, and haptic buzz feedback on phones
   - 🔁 **Take Turns** — pass the keyboard, answer one at a time
