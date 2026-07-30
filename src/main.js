@@ -259,6 +259,7 @@ function renderSetup() {
           <span>Sound Effects</span>
         </label>
         <button class="link-btn" id="btn-how-to">How to play</button>
+        <a class="link-btn" href="./army.html">🐷 The Army</a>
       </div>
     </div>
   `;

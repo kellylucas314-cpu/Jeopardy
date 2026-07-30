@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#87c5dd">
+  <title>The Army of Lawnmower Vacuums &amp; Flying Pigs</title>
+  <meta name="description" content="A living recruitment poster for the Combined Turf & Aerial Forces: an army of lawnmower vacuums on the ground and flying pigs in the sky.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2387c5dd'/><text x='50' y='72' font-size='58' text-anchor='middle'>🐷</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Special+Elite&display=swap">
+  <style>
+    /* ============================================================
+       THE ARMY OF LAWNMOWER VACUUMS & FLYING PIGS
+       Creative North Star: a WWII recruitment poster that came to
+       life. Flat sun-washed poster color, slab-serif proclamation
+       type over typewriter dispatches, olive-drab robot mowers
+       holding the turf, goggled pigs holding the airspace.
+       ============================================================ */
+
+    :root {
+      --sky-hi: #7fc2dd;
+      --sky-lo: #cfeaef;
+      --paper: #f6eed9;
+      --ink: #2c3140;
+      --ink-soft: #4c5361;
+      --red: #c8402e;
+      --red-deep: #a33122;
+      --grass-a: #57a24b;
+      --grass-b: #4b9040;
+      --grass-dark: #3c7a35;
+      --pink: #f2a9ba;
+      --pink-deep: #d4808f;
+      --olive: #7d8752;
+      --olive-deep: #5d673c;
+      --cloud: rgba(252, 250, 240, 0.92);
+
+      --font-poster: 'Alfa Slab One', 'Rockwell', Georgia, serif;
+      --font-wire: 'Special Elite', 'Courier New', monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* clip (not hidden): forbids even programmatic scrolling, so off-screen
+       units and word pops can never shove the viewport around */
+    html, body { height: 100%; overflow: hidden; overflow: clip; }
+
+    body {
+      font-family: var(--font-wire);
+      color: var(--ink);
+      background: var(--sky-lo);
+    }
+
+    .theater {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .theater.charging { animation: rumble 0.28s linear infinite; }
+    @keyframes rumble {
+      0%   { transform: translate(0, 0); }
+      25%  { transform: translate(1.5px, -1px); }
+      50%  { transform: translate(-1px, 1.5px); }
+      75%  { transform: translate(1px, 1px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    /* ——— Sky ——— */
+    .sky {
+      position: relative;
+      flex: 0 0 58%;
+      background: linear-gradient(var(--sky-hi), var(--sky-lo));
+      transition: filter 0.8s;
+    }
+    .charging .sky { filter: saturate(1.25) hue-rotate(-10deg) brightness(1.04); }
+
+    .sun {
+      position: absolute;
+      top: 4%;
+      left: 5%;
+      width: clamp(90px, 14vw, 170px);
+      height: auto;
+      animation: sunspin 70s linear infinite;
+      transform-origin: 50% 50%;
+    }
+    @keyframes sunspin { to { transform: rotate(360deg); } }
+
+    .cloud {
+      position: absolute;
+      width: var(--w);
+      top: var(--lane);
+      left: 0;
+      opacity: var(--fade);
+      animation: drift var(--dur) linear infinite;
+      animation-delay: var(--delay);
+    }
+    @keyframes drift {
+      from { transform: translateX(-30vw); }
+      to   { transform: translateX(110vw); }
+    }
+
+    /* ——— Lawn ——— */
+    .lawn {
+      position: relative;
+      flex: 1 1 auto;
+      background:
+        radial-gradient(circle 3px at 12% 30%, #ffd94f 0 2px, transparent 3px),
+        radial-gradient(circle 3px at 38% 68%, #ff8f6b 0 2px, transparent 3px),
+        radial-gradient(circle 3px at 63% 42%, #ffd94f 0 2px, transparent 3px),
+        radial-gradient(circle 3px at 87% 74%, #ff8f6b 0 2px, transparent 3px),
+        repeating-linear-gradient(180deg,
+          var(--grass-a) 0 34px,
+          var(--grass-b) 34px 68px);
+      border-top: 6px solid var(--grass-dark);
+      transition: filter 0.8s;
+    }
+    .charging .lawn { filter: saturate(1.2) brightness(1.03); }
+
+    /* ——— Units ——— */
+    .unit {
+      position: absolute;
+      top: var(--lane);
+      left: 0;
+      width: var(--w);
+      animation: advance var(--dur) linear infinite;
+      animation-delay: var(--delay);
+      cursor: pointer;
+      transform: translateX(var(--rest-x, 40vw));
+      z-index: var(--z, 1);
+    }
+    @keyframes advance {
+      from { transform: translateX(-18vw); }
+      to   { transform: translateX(112vw); }
+    }
+
+    .unit .body {
+      transform: scale(var(--scale, 1));
+      transform-origin: 50% 100%;
+    }
+    .unit svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+    /* Pig flight: bob + flap */
+    .pig .body { animation: bob var(--bob, 2.4s) ease-in-out infinite alternate; }
+    @keyframes bob {
+      from { transform: scale(var(--scale, 1)) translateY(-10px); }
+      to   { transform: scale(var(--scale, 1)) translateY(10px); }
+    }
+    .pig .wing-near,
+    .pig .wing-far { animation: flap 0.4s ease-in-out infinite alternate; }
+    .pig .wing-near { transform-origin: 62px 36px; }
+    .pig .wing-far  { transform-origin: 54px 34px; animation-delay: 0.12s; }
+    @keyframes flap {
+      from { transform: rotate(-24deg); }
+      to   { transform: rotate(16deg); }
+    }
+    .charging .pig .wing-near,
+    .charging .pig .wing-far { animation-duration: 0.16s; }
+
+    /* Mower ground game: rumble, wheels, brush, clippings */
+    .mower .body { animation: trundle 0.22s steps(2) infinite; }
+    @keyframes trundle {
+      from { transform: scale(var(--scale, 1)) translateY(0); }
+      to   { transform: scale(var(--scale, 1)) translateY(-1.6px); }
+    }
+    .mower .wheel { animation: roll 0.9s linear infinite; }
+    .mower .wheel-front { transform-origin: 100px 74px; }
+    .mower .wheel-rear  { transform-origin: 48px 74px; }
+    @keyframes roll { to { transform: rotate(360deg); } }
+    .mower .brush {
+      transform-origin: 133px 82px;
+      animation: whisk 0.5s linear infinite;
+    }
+    @keyframes whisk { to { transform: rotate(-360deg); } }
+    .charging .mower .wheel { animation-duration: 0.3s; }
+    .charging .mower .brush { animation-duration: 0.18s; }
+
+    .clips {
+      position: absolute;
+      left: 6%;
+      bottom: 18%;
+      pointer-events: none;
+    }
+    .clips i {
+      position: absolute;
+      width: 8px;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--grass-dark);
+      animation: clipfly var(--d, 0.8s) linear infinite;
+      animation-delay: var(--dl, 0s);
+      opacity: 0;
+    }
+    @keyframes clipfly {
+      0%   { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+      12%  { opacity: 1; }
+      55%  { transform: translate(-26px, -24px) rotate(160deg); opacity: 1; }
+      100% { transform: translate(-44px, 6px) rotate(340deg); opacity: 0; }
+    }
+
+    /* Click reactions */
+    .unit.stunt .body { animation: stunt 0.7s ease-in-out 1; }
+    @keyframes stunt {
+      0%   { transform: scale(var(--scale, 1)) rotate(0); }
+      50%  { transform: scale(var(--scale, 1)) translateY(-26px) rotate(190deg); }
+      100% { transform: scale(var(--scale, 1)) rotate(360deg); }
+    }
+
+    .wordpop {
+      position: fixed;
+      z-index: 200;
+      font-family: var(--font-poster);
+      font-size: clamp(0.9rem, 2.2vw, 1.5rem);
+      color: var(--paper);
+      -webkit-text-stroke: 1px var(--ink);
+      text-shadow: 2px 2px 0 var(--ink);
+      pointer-events: none;
+      animation: popfloat 0.9s ease-out forwards;
+      white-space: nowrap;
+    }
+    @keyframes popfloat {
+      0%   { transform: translateY(0) scale(0.4) rotate(-8deg); opacity: 0; }
+      20%  { transform: translateY(-12px) scale(1.15) rotate(3deg); opacity: 1; }
+      100% { transform: translateY(-52px) scale(1) rotate(-3deg); opacity: 0; }
+    }
+
+    .chargecry {
+      position: fixed;
+      top: 34%;
+      left: 50%;
+      z-index: 60;
+      font-family: var(--font-poster);
+      font-size: clamp(2.4rem, 9vw, 6.5rem);
+      color: var(--red);
+      -webkit-text-stroke: 2px var(--ink);
+      text-shadow: 0.05em 0.05em 0 var(--ink);
+      z-index: 300;
+      pointer-events: none;
+      animation: crygrow 2.4s ease-out forwards;
+      white-space: nowrap;
+    }
+    @keyframes crygrow {
+      0%   { transform: translate(-50%, -50%) scale(0.2) rotate(-10deg); opacity: 0; }
+      12%  { transform: translate(-50%, -50%) scale(1.2) rotate(2deg); opacity: 1; }
+      70%  { transform: translate(-50%, -50%) scale(1.05) rotate(-1deg); opacity: 1; }
+      100% { transform: translate(-50%, -50%) scale(1.6) rotate(1deg); opacity: 0; }
+    }
+
+    /* ——— Poster type ——— */
+    .poster {
+      position: absolute;
+      top: clamp(10px, 3.5vh, 40px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(94vw, 980px);
+      text-align: center;
+      z-index: 30;
+      pointer-events: none;
+    }
+    .kicker {
+      display: inline-block;
+      font-family: var(--font-wire);
+      font-size: clamp(0.8rem, 1.7vw, 1.1rem);
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--red-deep);
+      background: var(--paper);
+      border: 2px solid var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      padding: 5px 16px 3px 20px;
+      transform: rotate(-1.2deg);
+      margin-bottom: clamp(8px, 1.6vh, 18px);
+    }
+    h1 {
+      font-family: var(--font-poster);
+      font-weight: 400;
+      font-size: clamp(1.65rem, 5.6vw, 4.4rem);
+      line-height: 1.02;
+      text-transform: uppercase;
+      color: var(--paper);
+      -webkit-text-stroke: 2px var(--ink);
+      text-shadow:
+        0.045em 0.045em 0 var(--ink),
+        0.1em 0.1em 0 rgba(200, 64, 46, 0.85);
+    }
+    h1 .amp { color: var(--red); -webkit-text-stroke: 2px var(--ink); }
+    .sub {
+      margin-top: clamp(8px, 1.6vh, 16px);
+      font-size: clamp(0.85rem, 1.9vw, 1.2rem);
+      color: var(--ink);
+      background: rgba(246, 238, 217, 0.85);
+      display: inline-block;
+      padding: 3px 14px;
+      border-radius: 3px;
+      transform: rotate(0.6deg);
+    }
+    .stamp {
+      position: absolute;
+      right: 90px;
+      top: 8px;
+      font-family: var(--font-wire);
+      font-size: clamp(0.6rem, 1.3vw, 0.95rem);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      border: 3px double var(--red);
+      border-radius: 6px;
+      padding: 7px 12px;
+      transform: rotate(9deg);
+      opacity: 0.9;
+      background: rgba(246, 238, 217, 0.55);
+    }
+
+    /* ——— Command console ——— */
+    .console {
+      position: absolute;
+      bottom: clamp(48px, 8vh, 64px);
+      left: 50%;
+      transform: translateX(-50%) rotate(-0.8deg);
+      z-index: 100; /* above every unit, so the fleet marches behind HQ and can't steal button clicks */
+      background: var(--paper);
+      border: 3px solid var(--ink);
+      box-shadow: 6px 6px 0 rgba(44, 49, 64, 0.55);
+      border-radius: 10px;
+      padding: clamp(10px, 1.6vh, 16px) clamp(12px, 2vw, 22px);
+      text-align: center;
+      max-width: min(94vw, 640px);
+    }
+    .console .readout {
+      font-size: clamp(0.72rem, 1.6vw, 0.95rem);
+      letter-spacing: 0.06em;
+      margin-bottom: clamp(8px, 1.4vh, 12px);
+      color: var(--ink-soft);
+    }
+    .console .readout strong { color: var(--ink); font-weight: 700; }
+    .console .readout .stat { white-space: nowrap; }
+    .btnrow {
+      display: flex;
+      gap: clamp(8px, 1.4vw, 14px);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      font-family: var(--font-poster);
+      font-size: clamp(0.72rem, 1.7vw, 1rem);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      background: var(--paper);
+      border: 3px solid var(--ink);
+      border-radius: 8px;
+      box-shadow: 0 4px 0 var(--ink);
+      padding: 9px 14px 7px;
+      cursor: pointer;
+      transition: transform 0.08s, box-shadow 0.08s, background 0.15s;
+    }
+    .btn:hover { background: #fff7e2; }
+    .btn:active { transform: translateY(4px); box-shadow: 0 0 0 var(--ink); }
+    .btn-charge { background: var(--red); color: var(--paper); }
+    .btn-charge:hover { background: #d9503d; }
+    .btn-charge[disabled] { opacity: 0.55; cursor: wait; transform: none; }
+
+    /* ——— Dispatch ticker ——— */
+    .ticker {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 105;
+      background: var(--ink);
+      color: var(--paper);
+      overflow: hidden;
+      border-top: 3px solid var(--red);
+      height: clamp(30px, 4.6vh, 38px);
+      display: flex;
+      align-items: center;
+    }
+    .ticker-track {
+      display: inline-flex;
+      gap: 4em;
+      white-space: nowrap;
+      padding-left: 2em;
+      font-size: clamp(0.72rem, 1.5vw, 0.92rem);
+      letter-spacing: 0.04em;
+      animation: wire 60s linear infinite;
+    }
+    @keyframes wire { to { transform: translateX(-50%); } }
+    .ticker-track b { color: #ffd94f; font-weight: 400; }
+
+    /* ——— Back to HQ ——— */
+    .back {
+      position: absolute;
+      top: clamp(10px, 2vh, 18px);
+      right: clamp(10px, 2vw, 18px);
+      z-index: 110;
+      font-family: var(--font-wire);
+      font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+      color: var(--ink);
+      background: var(--paper);
+      border: 2px solid var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      border-radius: 6px;
+      padding: 6px 12px 4px;
+      text-decoration: none;
+      transition: transform 0.08s, box-shadow 0.08s;
+    }
+    .back:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--ink); }
+
+    .defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+    noscript {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 99;
+      background: var(--paper);
+      border: 3px solid var(--ink);
+      padding: 18px 24px;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 1100px) {
+      .stamp { display: none; }
+    }
+    @media (max-width: 640px) {
+      .poster { top: 52px; } /* clear the Ring In HQ chip */
+      .console { bottom: 44px; width: 94vw; }
+      h1 { -webkit-text-stroke-width: 1.2px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .theater *, .theater { animation: none !important; }
+      .unit { transform: translateX(var(--rest-x, 40vw)); }
+      .cloud { transform: translateX(var(--rest-x, 30vw)); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Shared sprite sheet: one pig, one mower, one cloud, drawn once. -->
+  <svg class="defs" aria-hidden="true">
+    <defs>
+      <g id="spr-cloud">
+        <path d="M12 46 a14 14 0 0 1 6 -27 a20 20 0 0 1 38 -7 a16 16 0 0 1 26 12 a12 12 0 0 1 -4 22 z"
+              fill="rgba(252,250,240,0.92)" stroke="rgba(44,49,64,0.14)" stroke-width="3"/>
+      </g>
+
+      <g id="spr-pig" stroke="#2c3140" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <g class="wing-far">
+          <path d="M54 34 C 42 10, 20 8, 15 19 C 27 20 29 26 24 29 C 34 29 38 33 36 37 C 44 40 51 38 54 34 z"
+                fill="#e4dbc6"/>
+        </g>
+        <path d="M24 52 c -11 -7 -17 3 -8 9 c 6 4 11 -2 4 -7" fill="none"/>
+        <ellipse cx="58" cy="58" rx="34" ry="26" fill="#f2a9ba"/>
+        <rect x="38" y="72" width="10" height="16" rx="5" fill="#d4808f" transform="rotate(16 43 80)"/>
+        <rect x="55" y="76" width="10" height="15" rx="5" fill="#f2a9ba"/>
+        <rect x="72" y="73" width="10" height="16" rx="5" fill="#d4808f" transform="rotate(-13 77 81)"/>
+        <circle cx="92" cy="46" r="21" fill="#f2a9ba"/>
+        <path d="M80 30 l -7 -13 l 14 4 z" fill="#d4808f"/>
+        <path d="M98 27 l 3 -15 l 10 11 z" fill="#d4808f"/>
+        <path d="M83 40 H 64" fill="none"/>
+        <circle cx="88" cy="42" r="7.5" fill="#cfe8f2"/>
+        <circle cx="90" cy="42" r="2.2" fill="#2c3140" stroke="none"/>
+        <ellipse cx="104" cy="51" rx="9.5" ry="7.5" fill="#d4808f"/>
+        <ellipse cx="101.5" cy="51" rx="1.6" ry="2.6" fill="#2c3140" stroke="none"/>
+        <ellipse cx="107.5" cy="51" rx="1.6" ry="2.6" fill="#2c3140" stroke="none"/>
+        <ellipse cx="84" cy="55" rx="4.5" ry="3" fill="#eb8ba1" stroke="none"/>
+        <g class="wing-near">
+          <path d="M62 36 C 48 6, 20 4, 14 17 C 28 19 31 26 25 30 C 37 30 41 34 39 39 C 49 43 58 41 62 36 z"
+                fill="#fcfaf0"/>
+        </g>
+      </g>
+
+      <g id="spr-mower" stroke="#2c3140" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M4 42 h 18 M2 54 h 16 M6 66 h 14" stroke="rgba(44,49,64,0.35)"/>
+        <ellipse cx="76" cy="91" rx="48" ry="5" fill="rgba(44,49,64,0.18)" stroke="none"/>
+        <path d="M108 34 V 12" fill="none"/>
+        <path d="M108 12 l 17 5 l -17 5 z" fill="#c8402e"/>
+        <rect x="22" y="34" width="104" height="38" rx="19" fill="#7d8752"/>
+        <path d="M24 58 h 100 v 2 a 12 12 0 0 1 -12 12 h -76 a 12 12 0 0 1 -12 -12 z" fill="#5d673c" stroke="none"/>
+        <path d="M52 41 l 3.4 7 l 7.7 1.1 l -5.6 5.4 l 1.4 7.6 l -6.9 -3.6 l -6.9 3.6 l 1.4 -7.6 l -5.6 -5.4 l 7.7 -1.1 z"
+              fill="#fcfaf0" stroke-width="2"/>
+        <path d="M74 34 a 13 13 0 0 1 26 0 z" fill="#9fc4c9"/>
+        <circle cx="93" cy="26" r="2.6" fill="#c8402e" stroke="none"/>
+        <rect x="118" y="36" width="11" height="34" rx="5.5" fill="#4c5433"/>
+        <g class="wheel wheel-rear">
+          <circle cx="48" cy="74" r="13" fill="#333a46"/>
+          <circle cx="48" cy="74" r="5.5" fill="#e4dbc6"/>
+          <path d="M48 69 v 10 M43 74 h 10" stroke-width="2"/>
+        </g>
+        <g class="wheel wheel-front">
+          <circle cx="100" cy="74" r="13" fill="#333a46"/>
+          <circle cx="100" cy="74" r="5.5" fill="#e4dbc6"/>
+          <path d="M100 69 v 10 M95 74 h 10" stroke-width="2"/>
+        </g>
+        <g class="brush" stroke-width="2.5">
+          <path d="M133 82 l 9 -5 M133 82 l 10 3 M133 82 l 2 10 M133 82 l -7 8 M133 82 l -4 -9" stroke="#c9b98a"/>
+          <circle cx="133" cy="82" r="3" fill="#4c5433"/>
+        </g>
+      </g>
+    </defs>
+  </svg>
+
+  <main class="theater" id="theater">
+    <div class="sky" id="sky" aria-hidden="true">
+      <svg class="sun" viewBox="0 0 100 100">
+        <g stroke="#f4c94f" stroke-width="5" stroke-linecap="round">
+          <path d="M50 2 v 12 M50 86 v 12 M2 50 h 12 M86 50 h 12 M16 16 l 8.5 8.5 M75.5 75.5 l 8.5 8.5 M84 16 l -8.5 8.5 M24.5 75.5 L 16 84"/>
+        </g>
+        <circle cx="50" cy="50" r="26" fill="#ffd94f" stroke="#e8b73a" stroke-width="4"/>
+      </svg>
+    </div>
+    <div class="lawn" id="lawn" aria-hidden="true"></div>
+
+    <header class="poster">
+      <div class="kicker">★ Now Recruiting ★</div>
+      <h1>The Army of<br>Lawnmower Vacuums <span class="amp">&amp;</span> Flying Pigs</h1>
+      <p class="sub">Defending your lawn from tall grass — and gravity — since never.</p>
+      <div class="stamp">Est. when<br>pigs fly</div>
+    </header>
+
+    <section class="console" aria-label="Command console">
+      <p class="readout">
+        <span class="stat">🤖 Mowers: <strong id="count-mowers">0</strong></span> ·
+        <span class="stat">🐷 Pigs: <strong id="count-pigs">0</strong></span> ·
+        <span class="stat">Blades of grass spared: <strong>0</strong></span>
+      </p>
+      <div class="btnrow">
+        <button class="btn" id="btn-mower">Deploy Mower</button>
+        <button class="btn" id="btn-pig">Scramble a Pig</button>
+        <button class="btn btn-charge" id="btn-charge">Sound the Charge 📯</button>
+      </div>
+    </section>
+
+    <a class="back" href="./index.html">← Ring In HQ</a>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="ticker-track"></div>
+    </div>
+  </main>
+
+  <noscript>The army requires JavaScript to mobilize. The lawn remains unmowed. The pigs remain grounded.</noscript>
+
+  <script>
+    (() => {
+      const theater = document.getElementById('theater');
+      const sky = document.getElementById('sky');
+      const lawn = document.getElementById('lawn');
+      const countMowers = document.getElementById('count-mowers');
+      const countPigs = document.getElementById('count-pigs');
+
+      const MAX = { pig: 26, mower: 22 };
+      const fleet = { pig: [], mower: [] };
+      const rand = (lo, hi) => lo + Math.random() * (hi - lo);
+
+      const DISPATCHES = [
+        '<b>0600 HOURS</b> — 3rd Mowing Brigade reports the lawn is "basically carpet now."',
+        '<b>AIR COMMAND</b> — Squadron Oinkbird Nine achieves record altitude of eleven feet.',
+        '<b>SUPPLY</b> — Requisition for 400 acorns approved. Reason listed: morale.',
+        '<b>INTEL</b> — Local garden gnome believed to be spying. Situation monitored.',
+        '<b>WEATHER</b> — Clear skies. 100% chance of clippings.',
+        '<b>VALOR</b> — Mower Unit LM-07 decorated for bravery against a garden hose.',
+        '<b>HQ MEMO</b> — Wings are for flying, not for fanning the sergeant.',
+        '<b>RECON</b> — The hedge is not hiding anything. Probably.',
+        '<b>MESS HALL</b> — Tonight: mulch. Again.',
+      ];
+
+      // ——— Ticker: double the reel so the 50% translate loops seamlessly ———
+      const reel = DISPATCHES.map(d => `<span>${d}</span>`).join('');
+      document.getElementById('ticker-track').innerHTML = reel + reel;
+
+      // ——— Clouds ———
+      for (let i = 0; i < 6; i++) {
+        const c = document.createElement('div');
+        c.className = 'cloud';
+        const depth = Math.random();
+        c.style.setProperty('--w', `${Math.round(rand(70, 200))}px`);
+        c.style.setProperty('--lane', `${Math.round(rand(2, 62))}%`);
+        c.style.setProperty('--dur', `${Math.round(rand(55, 110))}s`);
+        c.style.setProperty('--delay', `${(-rand(0, 110)).toFixed(1)}s`);
+        c.style.setProperty('--fade', (0.4 + depth * 0.55).toFixed(2));
+        c.style.setProperty('--rest-x', `${Math.round(rand(2, 85))}vw`);
+        c.innerHTML = '<svg viewBox="0 0 90 50"><use href="#spr-cloud"/></svg>';
+        sky.appendChild(c);
+      }
+
+      // ——— Units ———
+      function deploy(kind, opts = {}) {
+        const roster = fleet[kind];
+        if (roster.length >= MAX[kind]) roster.shift().remove();
+
+        const u = document.createElement('div');
+        const lane = rand(4, kind === 'pig' ? 70 : 74);       // % from top of its band
+        const depth = lane / 100;                              // deeper lane = closer = bigger
+        const scale = (0.5 + depth * 0.65).toFixed(2);
+        const dur = opts.fast ? rand(5, 9) : rand(16, 34);
+
+        u.className = `unit ${kind}`;
+        u.style.setProperty('--lane', `${lane.toFixed(1)}%`);
+        u.style.setProperty('--w', kind === 'pig' ? 'clamp(52px, 8vw, 110px)' : 'clamp(64px, 10vw, 132px)');
+        u.style.setProperty('--dur', `${dur.toFixed(1)}s`);
+        u.style.setProperty('--delay', `${(opts.fresh ? 0 : -rand(0, dur)).toFixed(1)}s`);
+        u.style.setProperty('--scale', scale);
+        u.style.setProperty('--bob', `${rand(1.8, 3.2).toFixed(1)}s`);
+        u.style.setProperty('--z', String(Math.round(lane)));
+        u.style.setProperty('--rest-x', `${Math.round(rand(4, 88))}vw`);
+
+        if (kind === 'pig') {
+          u.innerHTML = '<div class="body"><svg viewBox="0 0 130 100"><use href="#spr-pig"/></svg></div>';
+          sky.appendChild(u);
+        } else {
+          const clips = [0, 1, 2, 3].map(i =>
+            `<i style="--d:${rand(0.6, 1.1).toFixed(2)}s; --dl:${(i * 0.22).toFixed(2)}s; left:${i * 4}px"></i>`
+          ).join('');
+          u.innerHTML = `<div class="body"><svg viewBox="0 0 150 100"><use href="#spr-mower"/></svg><span class="clips">${clips}</span></div>`;
+          lawn.appendChild(u);
+        }
+
+        u.addEventListener('click', () => salute(u, kind));
+        roster.push(u);
+        muster();
+        return u;
+      }
+
+      function muster() {
+        countMowers.textContent = fleet.mower.length;
+        countPigs.textContent = fleet.pig.length;
+      }
+
+      // ——— Click a soldier: barrel roll + battle cry ———
+      const CRIES = { pig: ['OINK!', 'WHEE!', 'SQUEE!', 'TALLY-HO!'], mower: ['VRRRM!', 'BRRRT!', 'MULCH!', 'BEEP.'] };
+      function salute(u, kind) {
+        u.classList.remove('stunt');
+        void u.offsetWidth; // restart animation
+        u.classList.add('stunt');
+        const r = u.getBoundingClientRect();
+        wordpop(CRIES[kind][Math.floor(Math.random() * CRIES[kind].length)], r.left + r.width / 2, r.top - 8);
+      }
+
+      function wordpop(text, x, y) {
+        const w = document.createElement('span');
+        w.className = 'wordpop';
+        w.textContent = text;
+        w.style.left = `${x}px`;
+        w.style.top = `${y}px`;
+        document.body.appendChild(w);
+        w.addEventListener('animationend', () => w.remove());
+      }
+
+      // ——— The Charge: reinforcements pour in fast, scene rumbles ———
+      const btnCharge = document.getElementById('btn-charge');
+      function soundTheCharge() {
+        btnCharge.disabled = true;
+        theater.classList.add('charging');
+
+        const cry = document.createElement('div');
+        cry.className = 'chargecry';
+        cry.textContent = 'CHAAARGE!';
+        document.body.appendChild(cry);
+        cry.addEventListener('animationend', () => cry.remove());
+
+        let wave = 0;
+        const drum = setInterval(() => {
+          deploy('mower', { fast: true, fresh: true });
+          deploy('pig', { fast: true, fresh: true });
+          if (++wave >= 7) clearInterval(drum);
+        }, 380);
+
+        setTimeout(() => {
+          theater.classList.remove('charging');
+          btnCharge.disabled = false;
+        }, 8000);
+      }
+
+      document.getElementById('btn-mower').addEventListener('click', () => deploy('mower', { fresh: true }));
+      document.getElementById('btn-pig').addEventListener('click', () => deploy('pig', { fresh: true }));
+      btnCharge.addEventListener('click', soundTheCharge);
+
+      // ——— Opening formation: screen is mid-battle on arrival ———
+      for (let i = 0; i < 9; i++) deploy('mower');
+      for (let i = 0; i < 8; i++) deploy('pig');
+    })();
+  </script>
+</body>
+</html>
