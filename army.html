@@ -1001,7 +1001,7 @@
         speed = 430 * k;
         runTime = 0;
         score = 0;
-        spawnIn = 1.4;               // grace period before the first obstacle
+        spawnIn = 1.8;               // grace period before the first obstacle
         hudBest.textContent = `BEST ${String(best).padStart(4, '0')}`;
         hudScore.textContent = 'SCORE 0000';
 
@@ -1028,7 +1028,9 @@
         obstacles.push({ el, x: window.innerWidth + 60 + xOffset, y: 0, w, h, mult: 1, type: 'mower', cleared: false });
       }
 
-      function spawnSwoop(xOffset = 0, mult = 1.18) {
+      // Pigs fly at convoy pace (mult 1) on purpose: a faster pig closing on a
+      // mower compresses the jump-then-land window below human reaction time.
+      function spawnSwoop(xOffset = 0, mult = 1.0) {
         const w = 104 * k, h = w * (100 / 130);
         const el = makeGob('pig swoop', `<div class="body" style="--scale:1; --bob:${rand(0.9, 1.4).toFixed(2)}s"><div class="flip">${PIG_SVG}</div></div>`, w, h);
         const alt = rand(135, 195) * k;  // above a standing recruit, square in the jump arc
@@ -1040,8 +1042,8 @@
         if (runTime > 14 && speed > 560 * k && roll < 0.18) {
           spawnMower(); spawnMower(128 * k * 1.55);          // tight pair — long jump
         } else if (runTime > 9 && roll < 0.42) {
-          spawnMower();                                            // jump...
-          pending.push({ t: 0.62, fn: () => spawnSwoop(0, 1.0) }); // ...then stay down (convoy pace: the gap stays honest)
+          spawnMower();                                       // jump...
+          pending.push({ t: 0.62, fn: () => spawnSwoop() });  // ...then stay down
         } else if (roll < 0.68) {
           spawnMower();
         } else {
