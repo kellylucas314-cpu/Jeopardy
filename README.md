@@ -8,11 +8,15 @@ Share that link with friends and play on any device.
 
 ## Features
 
-- **Two question packs:**
-  - ✨ **Fresh Pack** (default) — 1,500+ original clues written for Ring In: same smart, doable
+- **Three question packs:**
+  - ✨ **Fresh Pack** (default) — original clues written for Ring In: smart, doable
     difficulty curve, zero copyright worries, safe to share anywhere
+  - 🌷 **Easy Breezy** — gentler original questions built around classics and nostalgia,
+    perfect for casual players and grandparents
   - 📼 **Deep Archive** — ~460,000 classic clues from trivia history for marathon replay value
-    (unofficial archive of televised material; kept for personal game nights)
+    (unofficial archive of televised material; kept for personal game nights — the tough one)
+- **No repeat categories** — the game remembers every category you've played (per pack, on your
+  device) and won't serve it again until you've cycled the whole pack
 - **Solo mode with Ranks** — play alone and chase a report card from D to S (Grand Champion),
   with streak bonuses and a personal-best tracker
 - **Two game modes:**

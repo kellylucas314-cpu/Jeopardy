@@ -188,7 +188,7 @@ function renderSetup() {
   const playerCount = prefs.playerCount || 2;
   const gameMode = prefs.gameMode || 'turns';
   const gameLength = prefs.gameLength || 'full';
-  const pack = prefs.pack === 'archive' ? 'archive' : 'fresh';
+  const pack = ['archive', 'easy'].includes(prefs.pack) ? prefs.pack : 'fresh';
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
   prevLeader = null;
   prevScores = [];
@@ -231,11 +231,15 @@ function renderSetup() {
         <div class="mode-buttons pack-buttons">
           <button class="btn-mode btn-pack ${pack === 'fresh' ? 'selected' : ''}" data-pack="fresh">
             <span class="mode-name">&#x2728; Fresh Pack</span>
-            <span class="mode-desc">1,500+ original clues written for Ring In</span>
+            <span class="mode-desc">2,400+ original clues written for Ring In</span>
+          </button>
+          <button class="btn-mode btn-pack ${pack === 'easy' ? 'selected' : ''}" data-pack="easy">
+            <span class="mode-name">&#x1F337; Easy Breezy</span>
+            <span class="mode-desc">Gentler questions, classics &amp; nostalgia</span>
           </button>
           <button class="btn-mode btn-pack ${pack === 'archive' ? 'selected' : ''}" data-pack="archive">
             <span class="mode-name">&#x1F4FC; Deep Archive</span>
-            <span class="mode-desc">460,000+ classic clues from trivia history</span>
+            <span class="mode-desc">460,000+ clues &middot; tough &amp; twisty</span>
           </button>
         </div>
         <div id="mode-section">
@@ -510,7 +514,7 @@ function showHowTo() {
         <li><strong>Daily Doubles</strong> let you wager. Then it's <strong>Final</strong> — one clue, secret wagers, winner takes the night.</li>
         <li>The table is the judge: hit <strong>"We'll accept it"</strong> if a close answer got marked wrong.</li>
         <li><strong>Playing solo?</strong> Chase a Rank — S is Grand Champion — and beat your personal best.</li>
-        <li><strong>Question packs:</strong> the Fresh Pack is written for Ring In; the Deep Archive holds 460k+ classic clues.</li>
+        <li><strong>Question packs:</strong> Fresh Pack is written for Ring In, Easy Breezy is gentler for casual and older players, and the Deep Archive holds 460k+ tough classics. The game remembers what you've played — no repeat categories until you've seen a whole pack.</li>
       </ul>
       <div class="modal-actions">
         <button class="btn-cta modal-cancel">Got it</button>
