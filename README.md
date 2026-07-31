@@ -27,9 +27,11 @@ Share that link with friends and play on any device.
 - **Smart answer judging** — fuzzy matching forgives typos and phrasing, plus a "We'll accept it ✓" override so the table is always the final judge
 - **Player avatars & colors**, podium finale with per-player stats, accuracy, and confetti
 - 1–3 players, remembers your names & settings, sound effects, mobile friendly
-- 🐷🤖 **The Army** — a living recruitment poster for the Army of Lawnmower Vacuums & Flying
-  Pigs at [/army.html](https://kellylucas314-cpu.github.io/Jeopardy/army.html): deploy mowers,
-  scramble pigs, and sound the charge (also linked from the setup screen)
+- 🐷🤖 **Boot Camp** — the Army of Lawnmower Vacuums & Flying Pigs at
+  [/army.html](https://kellylucas314-cpu.github.io/Jeopardy/army.html): a one-button
+  side-scroller where a little alien recruit jumps the mowers and dodges swooping pigs,
+  with ranks, a saved best score, and the recruitment-poster parade as its title screen
+  (also linked from the setup screen)
 
 ## Development
 
