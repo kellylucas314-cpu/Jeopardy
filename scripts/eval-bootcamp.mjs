@@ -26,7 +26,7 @@ import { dirname, resolve } from 'node:path';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const URL = 'file://' + resolve(root, 'dist/army.html');
-const CAP_MS = 40000;
+const CAP_MS = 60000;
 
 const RANKS = [
   [0, 'Lawn Private'], [250, 'Corporal of Clippings'], [700, 'Turf Sergeant'],
@@ -79,9 +79,10 @@ const runPersona = async ({ name, capMs }) => {
           const pair = ms_[1] && ms_[1].dx - m.dx < 280 * k;
           const trail = s.obs.find(o => o.t === 'pig' && o.dx > m.dx);
           const tight = !pair && trail && (trail.dx - m.dx) / s.speed < 0.65;
-          // pairs demand a LATE takeoff, measured box-to-box (dx - 56k), not sprite-to-sprite
+          // pairs demand a LATE takeoff, measured box-to-box (dx - 56k), not sprite-to-sprite;
+          // slower worlds stretch transit time, so single takeoffs are later too (0.13)
           const go = pair ? m.dx - 56 * k < s.speed * 0.11
-            : m.dx - 88 * k < s.speed * (tight ? 0.24 : 0.17);
+            : m.dx - 88 * k < s.speed * (tight ? 0.24 : 0.13);
           if (go) { jump(pair ? 400 : 320); jumps++; }
         }
       }
@@ -95,10 +96,10 @@ const runPersona = async ({ name, capMs }) => {
           const pair = ms_[1] && ms_[1].dx - m.dx < 280 * k;
           const trail = s.obs.find(o => o.t === 'pig' && o.dx > m.dx);
           const tight = !pair && trail && (trail.dx - m.dx) / s.speed < 0.65;
-          // short hops have a narrower valid window — take off later (0.09)
+          // post-easing, an early full jump beats a short hop even on tight rolls
           const go = pair ? m.dx - 56 * k < s.speed * 0.11
-            : m.dx - 88 * k < s.speed * (tight ? 0.09 : 0.17);
-          if (go) { jump(pair ? 400 : tight ? 160 : 330); jumps++; }
+            : m.dx - 88 * k < s.speed * (tight ? 0.24 : 0.13);
+          if (go) { jump(pair ? 400 : 330); jumps++; }
         }
       }
     }

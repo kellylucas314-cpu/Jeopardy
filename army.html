@@ -951,6 +951,7 @@
       let obstacles = [];            // {el, x, y, w, h, mult, type, cleared}
       let speed, runTime, score, spawnIn, pending;
       let lastT = 0, rafId = 0, paused = false, diedAt = 0;
+      let jumpBufferedAt = -1;
 
       function metrics() {
         k = Math.min(1.3, Math.max(0.65, window.innerHeight / 900));
@@ -998,10 +999,11 @@
         py = 0; vy = 0; airborne = false; holding = false;
         place(player, playerX, groundY - ph);
 
-        speed = 430 * k;
+        speed = 380 * k;
         runTime = 0;
         score = 0;
-        spawnIn = 1.8;               // grace period before the first obstacle
+        jumpBufferedAt = -1;
+        spawnIn = 2.2;               // grace period before the first obstacle
         hudBest.textContent = `BEST ${String(best).padStart(4, '0')}`;
         hudScore.textContent = 'SCORE 0000';
 
@@ -1039,25 +1041,25 @@
 
       function pickPattern() {
         const roll = Math.random();
-        if (runTime > 14 && speed > 560 * k && roll < 0.18) {
+        if (runTime > 24 && speed > 560 * k && roll < 0.18) {
           // 1.15 widths keeps the pair one committed long jump: at the unlock
           // speed a wider pair leaves less takeoff window than the jump's own
           // rise time — i.e. no window at all
           spawnMower(); spawnMower(128 * k * 1.15);
-        } else if (runTime > 9 && roll < 0.42) {
+        } else if (runTime > 16 && roll < 0.42) {
           spawnMower();                                       // jump, then stay down —
-          pending.push({ t: rand(0.45, 0.78), fn: () => spawnSwoop() }); // tight rolls demand a short hop
+          pending.push({ t: rand(0.5, 0.85), fn: () => spawnSwoop() }); // tightest rolls still reward a quick hop
         } else if (roll < 0.68) {
           spawnMower();
         } else {
           spawnSwoop();
         }
-        spawnIn = Math.max(0.66, rand(1.0, 1.6) * (540 * k) / speed);
+        spawnIn = Math.max(0.78, rand(1.05, 1.7) * (560 * k) / speed);
       }
 
       /* ——— Physics + loop ——— */
       function jump() {
-        if (airborne) return;
+        if (airborne) { jumpBufferedAt = performance.now(); return; } // buffer a slightly-early press
         airborne = true;
         holding = true;
         vy = JUMP_V();
@@ -1078,6 +1080,7 @@
         puff.style.top = `${groundY - 8}px`;
         theater.appendChild(puff);
         puff.addEventListener('animationend', () => puff.remove());
+        if (performance.now() - jumpBufferedAt < 120) { jumpBufferedAt = -1; jump(); }
       }
 
       function hitbox(o) {
@@ -1093,7 +1096,7 @@
         lastT = now;
 
         runTime += dt;
-        speed = Math.min(950 * k, 430 * k + 6.5 * k * runTime);
+        speed = Math.min(820 * k, 380 * k + 4.5 * k * runTime);
         score += dt * speed * 0.022;
 
         // player physics
