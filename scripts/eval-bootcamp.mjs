@@ -124,7 +124,13 @@ await page.waitForTimeout(1800);
 
 async function freshRun() {
   const st = await page.evaluate(() => window.__bootcamp.state);
-  if (st === 'dead') { await page.waitForTimeout(900); await page.click('#btn-again'); }
+  if (st === 'playing') {
+    // previous run hit the cap and its game is still live — hard-reset so
+    // runs can never bleed into each other
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.click('#btn-enlist');
+  } else if (st === 'dead') { await page.waitForTimeout(900); await page.click('#btn-again'); }
   else if (st === 'title') await page.click('#btn-enlist');
   await page.waitForTimeout(1100);
 }
@@ -198,7 +204,7 @@ const checks = [
   ['DEPTH      spam no better than doing nothing', med.masher <= med.statue * 2],
   ['SKILL      informed > uninformed, mastery > competence', med.novice > Math.max(med.statue, med.masher) * 3 && med.veteran > med.novice * 1.2 && med.ace >= med.veteran * 0.9],
   ['RANKS      tiers land different ranks', new Set([rankFor(med.masher), rankFor(med.novice), rankFor(med.veteran), rankFor(med.ace)]).size >= 3],
-  ['PERF       p95 frame <= 20ms', perf.p95 <= 20],
+  ['PERF       p95 frame <= 20ms', perf.frames > 100 && perf.p95 <= 20],
   ['LEAKS      effect residue < 10, obstacles bounded', perf.residue < 10 && perf.obstacles <= 10],
   ['ROBUST     no errors after chaos input+resize', errors.length === 0 && (chaosState === 'playing' || chaosState === 'dead')],
 ];
@@ -211,8 +217,12 @@ for (const [name] of PLAN) {
 }
 console.log(`veteran death spread: ${Math.min(...vetTimes).toFixed(1)}s – ${Math.max(...vetTimes).toFixed(1)}s` +
   ` | masher pig-death share: ${(masherPigShare * 100).toFixed(0)}%`);
-console.log(`frame mean ${perf.mean.toFixed(2)}ms p95 ${perf.p95.toFixed(1)} p99 ${perf.p99.toFixed(1)} max ${perf.max.toFixed(0)}` +
-  (perf.heapMB !== null ? ` | heap +${perf.heapMB.toFixed(1)}MB/30s` : '') + ` | residue ${perf.residue} | obstacles ${perf.obstacles}`);
+if (perf.frames > 100) {
+  console.log(`frame mean ${perf.mean.toFixed(2)}ms p95 ${perf.p95.toFixed(1)} p99 ${perf.p99.toFixed(1)} max ${perf.max.toFixed(0)}` +
+    (perf.heapMB !== null ? ` | heap +${perf.heapMB.toFixed(1)}MB/30s` : '') + ` | residue ${perf.residue} | obstacles ${perf.obstacles}`);
+} else {
+  console.log(`perf probe invalid: only ${perf.frames} frames captured`);
+}
 console.log('');
 let pass = 0;
 for (const [label, ok] of checks) { console.log(`${ok ? 'PASS' : 'FAIL'}  ${label}`); if (ok) pass++; }
