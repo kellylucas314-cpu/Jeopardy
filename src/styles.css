@@ -255,7 +255,11 @@ input { font-family: var(--font-ui); }
 .length-buttons { margin-bottom: 4px; }
 
 .mode-buttons { display: flex; gap: 10px; margin-bottom: 4px; }
-.pack-buttons { margin-bottom: 12px; }
+.pack-buttons { margin-bottom: 12px; flex-wrap: wrap; }
+.pack-buttons .btn-pack { flex: 1 1 30%; min-width: 140px; }
+@media (max-width: 520px) {
+  .pack-buttons .btn-pack { flex-basis: 100%; }
+}
 
 .solo-scorecard {
   display: flex;

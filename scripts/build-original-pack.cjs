@@ -12,17 +12,30 @@ const fs = require('fs');
 const path = require('path');
 
 const SRC = process.argv[2];
-if (!SRC) { console.error('usage: node build-original-pack.cjs <source-dir>'); process.exit(1); }
+const PACK = process.argv[3] || 'fresh';
+if (!SRC) { console.error('usage: node build-original-pack.cjs <source-dir> [fresh|easy]'); process.exit(1); }
 
-const OUT = path.join(__dirname, '..', 'public', 'data', 'original');
+// File-name prefixes per pack: fresh boards were authored as r1-*/n1-* (round 1)
+// and r2-*/n2-* (round 2) with finals in final-*/nf-*; the easy pack uses e1-/e2-/ef-.
+const PACKS = {
+  fresh: { outDir: 'original', manifestKey: 'original', r1: ['r1-', 'n1-'], r2: ['r2-', 'n2-'], finals: ['final-', 'nf-'] },
+  easy: { outDir: 'easy', manifestKey: 'easy', r1: ['e1-'], r2: ['e2-'], finals: ['ef-'] },
+};
+const cfg = PACKS[PACK];
+if (!cfg) { console.error(`unknown pack "${PACK}"`); process.exit(1); }
+
+const OUT = path.join(__dirname, '..', 'public', 'data', cfg.outDir);
 const CHUNK_SIZE = 12;
 const MEDIA_RE = /\b(seen here|shown here|heard here|pictured|depicted|audio clue|video clue)\b/i;
-const VALUES = { r1: [200, 400, 600, 800, 1000], r2: [400, 800, 1200, 1600, 2000] };
+const ROUND1_VALUES = [200, 400, 600, 800, 1000];
+const ROUND2_VALUES = [400, 800, 1200, 1600, 2000];
 
 const problems = [];
 
-function loadRound(prefix) {
-  const files = fs.readdirSync(SRC).filter(f => f.startsWith(prefix) && f.endsWith('.json')).sort();
+function loadRound(prefixes, expected) {
+  const files = fs.readdirSync(SRC)
+    .filter(f => prefixes.some(p => f.startsWith(p)) && f.endsWith('.json') && !f.startsWith('fixes-'))
+    .sort();
   const cats = [];
   const seenNames = new Set();
   for (const f of files) {
@@ -42,7 +55,6 @@ function loadRound(prefix) {
       if (!Array.isArray(cat.clues) || cat.clues.length !== 5) {
         problems.push(`${f}: "${name}" has ${cat.clues?.length ?? 0} clues, need 5`); continue;
       }
-      const expected = VALUES[prefix.slice(0, 2)];
       let ok = true;
       const cleaned = [];
       for (let i = 0; i < 5; i++) {
@@ -62,8 +74,10 @@ function loadRound(prefix) {
   return cats;
 }
 
-function loadFinals() {
-  const files = fs.readdirSync(SRC).filter(f => f.startsWith('final') && f.endsWith('.json')).sort();
+function loadFinals(prefixes) {
+  const files = fs.readdirSync(SRC)
+    .filter(f => prefixes.some(p => f.startsWith(p)) && f.endsWith('.json') && !f.startsWith('fixes-'))
+    .sort();
   const finals = [];
   const seen = new Set();
   for (const f of files) {
@@ -105,9 +119,9 @@ function shuffle(arr) {
   return arr;
 }
 
-const r1 = shuffle(loadRound('r1'));
-const r2 = shuffle(loadRound('r2'));
-const finals = shuffle(loadFinals());
+const r1 = shuffle(loadRound(cfg.r1, ROUND1_VALUES));
+const r2 = shuffle(loadRound(cfg.r2, ROUND2_VALUES));
+const finals = shuffle(loadFinals(cfg.finals));
 
 const counts = {
   jeopardy: writeChunks('jeopardy', r1, CHUNK_SIZE),
@@ -117,7 +131,7 @@ const counts = {
 
 const manifestPath = path.join(__dirname, '..', 'public', 'data', 'manifest.json');
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-manifest.original = counts;
+manifest[cfg.manifestKey] = counts;
 fs.writeFileSync(manifestPath, JSON.stringify(manifest));
 
 console.log(`Round 1: ${r1.length} categories → ${counts.jeopardy} chunks`);
