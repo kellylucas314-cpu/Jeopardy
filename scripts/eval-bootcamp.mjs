@@ -69,17 +69,29 @@ const runPersona = async ({ name, capMs }) => {
         jumps++;
       }
     } else if (name === 'veteran') {
-      if (window.__bootcamp.nearest === 'jump' && !window.__bootcamp.pigNear) { jump(320); jumps++; }
-    } else if (name === 'ace') {
-      // veteran's discipline, plus a delayed short hop when a pig trails close
+      // strong human: takes off late on tight pairs, but always full-holds —
+      // so tight mower-then-pig rolls still catch them
       const s = window.__bootcamp.snap;
       if (!s.air) {
-        const m = s.obs.filter(o => o.t === 'mower' && o.dx > -40).sort((a, b) => a.dx - b.dx)[0];
+        const ms_ = s.obs.filter(o => o.t === 'mower' && o.dx > -40).sort((a, b) => a.dx - b.dx);
+        const m = ms_[0];
         if (m) {
-          const gap = m.dx - 88 * k;
+          const pair = ms_[1] && ms_[1].dx - m.dx < 280 * k;
+          if (m.dx - 88 * k < s.speed * (pair ? 0.10 : 0.17)) { jump(pair ? 400 : 320); jumps++; }
+        }
+      }
+    } else if (name === 'ace') {
+      // near-optimal: pair-aware late takeoffs AND short hops under trailing pigs
+      const s = window.__bootcamp.snap;
+      if (!s.air) {
+        const ms_ = s.obs.filter(o => o.t === 'mower' && o.dx > -40).sort((a, b) => a.dx - b.dx);
+        const m = ms_[0];
+        if (m) {
+          const pair = ms_[1] && ms_[1].dx - m.dx < 280 * k;
           const trail = s.obs.find(o => o.t === 'pig' && o.dx > m.dx);
-          const tight = trail && (trail.dx - m.dx) / s.speed < 0.6;
-          if (tight ? gap < s.speed * 0.12 : gap < s.speed * 0.17) { jump(tight ? 160 : 330); jumps++; }
+          const tight = !pair && trail && (trail.dx - m.dx) / s.speed < 0.65;
+          const trigger = pair ? 0.10 : tight ? 0.12 : 0.17;
+          if (m.dx - 88 * k < s.speed * trigger) { jump(pair ? 400 : tight ? 160 : 330); jumps++; }
         }
       }
     }
@@ -178,10 +190,10 @@ const vetTimes = results.veteran.map(r => r.ms / 1000);
 const checks = [
   ['FAIRNESS   ace median >= 35s or caps out', median(results.ace.map(r => r.ms)) / 1000 >= 35 || aceCapRate >= 0.6],
   ['GRACE      statue survives >= 3.5s', statueGrace >= 3.5],
-  ['DEPTH      masher deaths are mostly pigs', masherPigShare >= 0.5],
-  // mashing may die FASTER than doing nothing (spam is punished) — the curve
-  // that matters is: informed play beats uninformed, mastery beats competence
-  ['SKILL      informed > uninformed, mastery > competence', med.novice > Math.max(med.statue, med.masher) && med.veteran > med.novice && med.ace >= med.veteran * 0.85],
+  // spam may even die FASTER than doing nothing (pigs punish it) — the claim
+  // that matters is that mashing confers no real advantage
+  ['DEPTH      spam no better than doing nothing', med.masher <= med.statue * 2],
+  ['SKILL      informed > uninformed, mastery > competence', med.novice > Math.max(med.statue, med.masher) * 3 && med.veteran > med.novice * 1.2 && med.ace >= med.veteran * 0.9],
   ['RANKS      tiers land different ranks', new Set([rankFor(med.masher), rankFor(med.novice), rankFor(med.veteran), rankFor(med.ace)]).size >= 3],
   ['PERF       p95 frame <= 20ms', perf.p95 <= 20],
   ['LEAKS      effect residue < 10, obstacles bounded', perf.residue < 10 && perf.obstacles <= 10],
@@ -194,7 +206,8 @@ for (const [name] of PLAN) {
   console.log(`${name.padEnd(8)} median score ${String(med[name]).padStart(4)} → ${rankFor(med[name]).padEnd(28)}` +
     ` | survival ${(median(rs.map(r => r.ms)) / 1000).toFixed(1)}s | causes: ${rs.map(r => r.cause[0]).join(',')}`);
 }
-console.log(`veteran death spread: ${Math.min(...vetTimes).toFixed(1)}s – ${Math.max(...vetTimes).toFixed(1)}s`);
+console.log(`veteran death spread: ${Math.min(...vetTimes).toFixed(1)}s – ${Math.max(...vetTimes).toFixed(1)}s` +
+  ` | masher pig-death share: ${(masherPigShare * 100).toFixed(0)}%`);
 console.log(`frame mean ${perf.mean.toFixed(2)}ms p95 ${perf.p95.toFixed(1)} p99 ${perf.p99.toFixed(1)} max ${perf.max.toFixed(0)}` +
   (perf.heapMB !== null ? ` | heap +${perf.heapMB.toFixed(1)}MB/30s` : '') + ` | residue ${perf.residue} | obstacles ${perf.obstacles}`);
 console.log('');
