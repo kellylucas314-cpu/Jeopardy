@@ -69,16 +69,19 @@ const runPersona = async ({ name, capMs }) => {
         jumps++;
       }
     } else if (name === 'veteran') {
-      // strong human: takes off late on tight pairs, but always full-holds —
-      // so tight mower-then-pig rolls still catch them
+      // strong human: pair-aware late takeoffs; under a trailing pig, jumps
+      // EARLY so a full hold still lands before the pig — never short-hops
       const s = window.__bootcamp.snap;
       if (!s.air) {
         const ms_ = s.obs.filter(o => o.t === 'mower' && o.dx > -40).sort((a, b) => a.dx - b.dx);
         const m = ms_[0];
         if (m) {
           const pair = ms_[1] && ms_[1].dx - m.dx < 280 * k;
+          const trail = s.obs.find(o => o.t === 'pig' && o.dx > m.dx);
+          const tight = !pair && trail && (trail.dx - m.dx) / s.speed < 0.65;
           // pairs demand a LATE takeoff, measured box-to-box (dx - 56k), not sprite-to-sprite
-          const go = pair ? m.dx - 56 * k < s.speed * 0.11 : m.dx - 88 * k < s.speed * 0.17;
+          const go = pair ? m.dx - 56 * k < s.speed * 0.11
+            : m.dx - 88 * k < s.speed * (tight ? 0.24 : 0.17);
           if (go) { jump(pair ? 400 : 320); jumps++; }
         }
       }
@@ -92,8 +95,9 @@ const runPersona = async ({ name, capMs }) => {
           const pair = ms_[1] && ms_[1].dx - m.dx < 280 * k;
           const trail = s.obs.find(o => o.t === 'pig' && o.dx > m.dx);
           const tight = !pair && trail && (trail.dx - m.dx) / s.speed < 0.65;
+          // short hops have a narrower valid window — take off later (0.09)
           const go = pair ? m.dx - 56 * k < s.speed * 0.11
-            : m.dx - 88 * k < s.speed * (tight ? 0.12 : 0.17);
+            : m.dx - 88 * k < s.speed * (tight ? 0.09 : 0.17);
           if (go) { jump(pair ? 400 : tight ? 160 : 330); jumps++; }
         }
       }
@@ -135,7 +139,8 @@ async function freshRun() {
   await page.waitForTimeout(1100);
 }
 
-const PLAN = [['statue', 3], ['masher', 4], ['novice', 5], ['veteran', 5], ['ace', 5]];
+// top personas straddle survive-or-die gates, so their medians need more runs
+const PLAN = [['statue', 3], ['masher', 4], ['novice', 5], ['veteran', 6], ['ace', 6]];
 const results = {};
 for (const [name, runs] of PLAN) {
   results[name] = [];
