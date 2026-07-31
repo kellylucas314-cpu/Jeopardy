@@ -1040,7 +1040,10 @@
       function pickPattern() {
         const roll = Math.random();
         if (runTime > 14 && speed > 560 * k && roll < 0.18) {
-          spawnMower(); spawnMower(128 * k * 1.55);          // tight pair — long jump
+          // 1.15 widths keeps the pair one committed long jump: at the unlock
+          // speed a wider pair leaves less takeoff window than the jump's own
+          // rise time — i.e. no window at all
+          spawnMower(); spawnMower(128 * k * 1.15);
         } else if (runTime > 9 && roll < 0.42) {
           spawnMower();                                       // jump, then stay down —
           pending.push({ t: rand(0.45, 0.78), fn: () => spawnSwoop() }); // tight rolls demand a short hop

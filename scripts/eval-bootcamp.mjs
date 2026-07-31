@@ -77,7 +77,9 @@ const runPersona = async ({ name, capMs }) => {
         const m = ms_[0];
         if (m) {
           const pair = ms_[1] && ms_[1].dx - m.dx < 280 * k;
-          if (m.dx - 88 * k < s.speed * (pair ? 0.10 : 0.17)) { jump(pair ? 400 : 320); jumps++; }
+          // pairs demand a LATE takeoff, measured box-to-box (dx - 56k), not sprite-to-sprite
+          const go = pair ? m.dx - 56 * k < s.speed * 0.11 : m.dx - 88 * k < s.speed * 0.17;
+          if (go) { jump(pair ? 400 : 320); jumps++; }
         }
       }
     } else if (name === 'ace') {
@@ -90,8 +92,9 @@ const runPersona = async ({ name, capMs }) => {
           const pair = ms_[1] && ms_[1].dx - m.dx < 280 * k;
           const trail = s.obs.find(o => o.t === 'pig' && o.dx > m.dx);
           const tight = !pair && trail && (trail.dx - m.dx) / s.speed < 0.65;
-          const trigger = pair ? 0.10 : tight ? 0.12 : 0.17;
-          if (m.dx - 88 * k < s.speed * trigger) { jump(pair ? 400 : tight ? 160 : 330); jumps++; }
+          const go = pair ? m.dx - 56 * k < s.speed * 0.11
+            : m.dx - 88 * k < s.speed * (tight ? 0.12 : 0.17);
+          if (go) { jump(pair ? 400 : tight ? 160 : 330); jumps++; }
         }
       }
     }
