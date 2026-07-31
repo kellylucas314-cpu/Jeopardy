@@ -231,7 +231,7 @@ function renderSetup() {
         <div class="mode-buttons pack-buttons">
           <button class="btn-mode btn-pack ${pack === 'fresh' ? 'selected' : ''}" data-pack="fresh">
             <span class="mode-name">&#x2728; Fresh Pack</span>
-            <span class="mode-desc">Original clues written for Ring In</span>
+            <span class="mode-desc">2,400+ original clues written for Ring In</span>
           </button>
           <button class="btn-mode btn-pack ${pack === 'easy' ? 'selected' : ''}" data-pack="easy">
             <span class="mode-name">&#x1F337; Easy Breezy</span>
