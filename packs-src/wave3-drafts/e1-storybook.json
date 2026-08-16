@@ -1,0 +1,122 @@
+[
+  {
+    "name": "TALES AS OLD AS TIME",
+    "clues": [
+      { "clue": "A huffing, puffing wolf blows down houses of straw and sticks in this tale", "response": "the Three Little Pigs", "value": 200 },
+      { "clue": "This curly-haired trespasser samples porridge and beds while the bears are out", "response": "Goldilocks", "value": 400 },
+      { "clue": "Shut in a tower, this maiden lets down her long braid so the prince can climb up", "response": "Rapunzel", "value": 600 },
+      { "clue": "In this Andersen tale, two swindlers sell a vain ruler a suit only the wise can see", "response": "The Emperor's New Clothes", "value": 800 },
+      { "clue": "Born in a tulip, this tiny Andersen girl sleeps in a walnut shell and is stolen by a toad", "response": "Thumbelina", "value": 1000 }
+    ]
+  },
+  {
+    "name": "ENCHANTED THINGS",
+    "clues": [
+      { "clue": "The wicked queen asks this wall-hung object who is the fairest of them all", "response": "a mirror", "value": 200 },
+      { "clue": "Jack swaps the family cow for a handful of these, and a huge vine sprouts overnight", "response": "magic beans", "value": 400 },
+      { "clue": "At the stroke of midnight Cinderella's coach turns back into this garden gourd", "response": "a pumpkin", "value": 600 },
+      { "clue": "Hansel marks the path home with a trail of these, but the birds eat every one", "response": "breadcrumbs", "value": 800 },
+      { "clue": "Piled under twenty mattresses, this tiny green vegetable keeps a real princess awake", "response": "a pea", "value": 1000 }
+    ]
+  },
+  {
+    "name": "WHO'S WHO IN THE NURSERY",
+    "clues": [
+      { "clue": "All the king's horses and men couldn't put this egg-shaped fellow back together", "response": "Humpty Dumpty", "value": 200 },
+      { "clue": "This young shepherdess lost her sheep, who'd come home wagging their tails behind them", "response": "Little Bo-Peep", "value": 400 },
+      { "clue": "A spider sat down beside this curds-and-whey eater and frightened her off her tuffet", "response": "Little Miss Muffet", "value": 600 },
+      { "clue": "This merry old soul called for his pipe, his bowl and his fiddlers three", "response": "Old King Cole", "value": 800 },
+      { "clue": "In his nightgown, this fellow rapped at windows to see if children were in bed by eight", "response": "Wee Willie Winkie", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE REST OF THE RHYME",
+    "clues": [
+      { "clue": "Up the hill went Jack and Jill to fetch a pail of this", "response": "water", "value": 200 },
+      { "clue": "Mary's little lamb tagged along to this place one day, against the rule", "response": "school", "value": 400 },
+      { "clue": "In 'Hickory Dickory Dock,' the mouse runs up this household timepiece", "response": "the clock", "value": 600 },
+      { "clue": "Four and twenty of these were baked in a pie in 'Sing a Song of Sixpence'", "response": "blackbirds", "value": 800 },
+      { "clue": "In 'Rub-a-Dub-Dub,' the butcher and the baker share a tub with this third tradesman", "response": "the candlestick maker", "value": 1000 }
+    ]
+  },
+  {
+    "name": "TUCKED IN WITH A BOOK",
+    "clues": [
+      { "clue": "This honey-loving bear of very little brain lives in the Hundred Acre Wood", "response": "Winnie-the-Pooh", "value": 200 },
+      { "clue": "This girl tumbles down a rabbit hole to a tea party and a bad-tempered queen's croquet", "response": "Alice", "value": 400 },
+      { "clue": "This naughty Beatrix Potter bunny sneaks into Mr. McGregor's garden and loses his jacket", "response": "Peter Rabbit", "value": 600 },
+      { "clue": "A small blue locomotive believes she can haul toys over the mountain in this 1930 book", "response": "The Little Engine That Could", "value": 800 },
+      { "clue": "This 1911 novel has orphan Mary Lennox unlocking a walled plot at Misselthwaite Manor", "response": "The Secret Garden", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE MAP OF MAKE-BELIEVE",
+    "clues": [
+      { "clue": "Peter Pan, Tinker Bell and Captain Hook all call this island home", "response": "Neverland", "value": 200 },
+      { "clue": "The yellow brick road leads Dorothy to this glittering green capital of Oz", "response": "the Emerald City", "value": 400 },
+      { "clue": "Four English children step through a wardrobe into this snowy land of a White Witch", "response": "Narnia", "value": 600 },
+      { "clue": "Robin Hood and his Merry Men hide out in this English greenwood", "response": "Sherwood Forest", "value": 800 },
+      { "clue": "Shipwrecked Gulliver wakes up tied down by the tiny people of this island", "response": "Lilliput", "value": 1000 }
+    ]
+  },
+  {
+    "name": "TALES FROM THE GOOD BOOK",
+    "clues": [
+      { "clue": "Two of every kind of animal boarded this man's ark before the flood", "response": "Noah", "value": 200 },
+      { "clue": "A young shepherd's stone from a sling brought down this Philistine giant", "response": "Goliath", "value": 400 },
+      { "clue": "A haircut arranged by Delilah robbed this Israelite judge of his mighty strength", "response": "Samson", "value": 600 },
+      { "clue": "Jealous brothers sold this dreamer in the coat of many colors into Egyptian slavery", "response": "Joseph", "value": 800 },
+      { "clue": "Priests blew rams' horns and the walls of this city came tumbling down", "response": "Jericho", "value": 1000 }
+    ]
+  },
+  {
+    "name": "STORIES JESUS TOLD",
+    "clues": [
+      { "clue": "A priest and a Levite pass by the beaten traveler; this merciful stranger stops to help", "response": "the Good Samaritan", "value": 200 },
+      { "clue": "A father kills the fatted calf to welcome home this wayward boy who squandered his share", "response": "the Prodigal Son", "value": 400 },
+      { "clue": "One parable's shepherd leaves ninety-nine behind to hunt for this single stray", "response": "the lost sheep", "value": 600 },
+      { "clue": "The foolish builder of the parable put his house on this shifting stuff, and it fell", "response": "sand", "value": 800 },
+      { "clue": "Jesus likened heaven's kingdom to this tiny speck that grows into a tree where birds nest", "response": "a mustard seed", "value": 1000 }
+    ]
+  },
+  {
+    "name": "STRAIGHT FROM AESOP",
+    "clues": [
+      { "clue": "A greedy owner kills this bird and finds no golden eggs inside after all", "response": "the goose", "value": 200 },
+      { "clue": "This busy insect stores up food all summer while the grasshopper sings the days away", "response": "the ant", "value": 400 },
+      { "clue": "This little creature gnaws the net to free the lion who once spared its life", "response": "a mouse", "value": 600 },
+      { "clue": "Flattered into opening its beak, this black bird drops the cheese to a sly fox", "response": "the crow", "value": 800 },
+      { "clue": "In a contest with the wind, this warm rival gets the traveler to shed his cloak", "response": "the sun", "value": 1000 }
+    ]
+  },
+  {
+    "name": "RECITATION DAY",
+    "clues": [
+      { "clue": "In the beloved Christmas Eve poem, eight tiny ones of these pull St. Nick's sleigh", "response": "reindeer", "value": 200 },
+      { "clue": "There is no joy in this town after mighty Casey strikes out in Thayer's poem", "response": "Mudville", "value": 400 },
+      { "clue": "Frost's traveler stops by the woods on the darkest evening, watching them fill with this", "response": "snow", "value": 600 },
+      { "clue": "A spreading chestnut tree shades the smithy in this Longfellow poem", "response": "The Village Blacksmith", "value": 800 },
+      { "clue": "Wynken, Blynken and Nod sail off in this footwear-shaped craft in Eugene Field's lullaby", "response": "a wooden shoe", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE LITTLE RED SCHOOLHOUSE",
+    "clues": [
+      { "clue": "Before paper was cheap, pupils did their sums on a small framed board of this rock", "response": "a slate", "value": 200 },
+      { "clue": "The three R's are reading, writing and this one, which really starts with an A", "response": "arithmetic", "value": 400 },
+      { "clue": "The Palmer Method drilled schoolchildren in this joined-up style of handwriting", "response": "cursive", "value": 600 },
+      { "clue": "A misbehaving child sat in the corner in a cone-shaped cap labeled with this word", "response": "dunce", "value": 800 },
+      { "clue": "Millions of American children learned to read from this Ohio schoolman's graded Readers", "response": "McGuffey", "value": 1000 }
+    ]
+  },
+  {
+    "name": "TRICKS FOR REMEMBERING",
+    "clues": [
+      { "clue": "The old spelling rule says put I before E except after this letter", "response": "C", "value": 200 },
+      { "clue": "Schoolchildren still chant that in this year 'Columbus sailed the ocean blue'", "response": "1492", "value": 400 },
+      { "clue": "'Thirty days hath September, April, June and' this month, the rhyme reminds us", "response": "November", "value": 600 },
+      { "clue": "The memory phrase 'My Very Educated Mother' starts you at Mercury in listing these", "response": "the planets", "value": 800 },
+      { "clue": "The word HOMES recalls the five Great Lakes; its S stands for this biggest one", "response": "Superior", "value": 1000 }
+    ]
+  }
+]

@@ -2,7 +2,7 @@
   { "name": "THE COUNTER REVOLUTION", "clues": [
     { "clue": "This German physicist counted alpha particles for Rutherford, then lent his name to a clicking radiation detector.", "response": "Geiger", "value": 400 },
     { "clue": "In 1851 this Frenchman hung a heavy bob from the Pantheon's dome and let Paris watch the Earth rotate beneath it.", "response": "Leon Foucault", "value": 800 },
-    { "clue": "A pupil of Galileo, he tipped a mercury-filled glass tube into a dish in 1643 and left behind the first barometer.", "response": "Torricelli", "value": 1200 },
+    { "clue": "Galileo's assistant in his final months, this Italian upended a mercury-filled tube in a dish in 1643 and left us the barometer.", "response": "Torricelli", "value": 1200 },
     { "clue": "This Scot's silvered vacuum flask held liquefied gases; he never patented it, and the Thermos company got rich.", "response": "James Dewar", "value": 1600 },
     { "clue": "This Englishman patented the concertina, yet his name survives on a four-armed circuit that measures resistance.", "response": "Wheatstone", "value": 2000 }
   ]},
@@ -12,7 +12,7 @@
     { "clue": "Talc at 1, diamond at 10: this German mineralogist's ranking of hardness is scratched into every geology class.", "response": "Mohs", "value": 800 },
     { "clue": "A pharmacist's 1912 test rated chili heat by how much sugar water it took to drown the burn; his name stuck.", "response": "Scoville", "value": 1200 },
     { "clue": "In 1952 this anesthesiologist devised the 0-to-10 rating a newborn earns one minute after delivery.", "response": "Apgar", "value": 1600 },
-    { "clue": "Nicknamed Mr. Tornado, this Japanese-born meteorologist graded twisters by the wreckage they left behind.", "response": "Fujita", "value": 2000 }
+    { "clue": "This Irish-born Royal Navy officer's 1805 wind scale climbs from 0, dead calm, to 12, full hurricane.", "response": "Beaufort", "value": 2000 }
   ]},
 
   { "name": "PIGMENT OF THE IMAGINATION", "clues": [
@@ -76,7 +76,7 @@
     { "clue": "As deputy postmaster general, Benjamin Franklin charted this warm current so mail packets could ride it to England.", "response": "the Gulf Stream", "value": 800 },
     { "clue": "Submarines like to lurk under this layer, where temperature plunges so sharply that sonar pings bend away.", "response": "the thermocline", "value": 1200 },
     { "clue": "This American geologist's hand-drawn maps of the Atlantic floor exposed the mid-ocean ridge and its rift valley.", "response": "Marie Tharp", "value": 1600 },
-    { "clue": "In 1960 Jacques Piccard and Don Walsh rode this bathyscaphe nearly seven miles down to the deepest sea floor.", "response": "the Trieste", "value": 2000 }
+    { "clue": "Harry Hess's wartime echo soundings turned up these flat-topped undersea volcanoes, named for a Swiss-born Princeton geographer.", "response": "guyots", "value": 2000 }
   ]},
 
   { "name": "CULTURE CLUB", "clues": [

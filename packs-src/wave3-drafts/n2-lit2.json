@@ -52,7 +52,7 @@
   {
     "name": "BOUND TO BE BAD",
     "clues": [
-      { "clue": "In a 1956 Dodie Smith novel this fur-mad villainess plots to turn stolen Dalmatian puppies into a coat", "response": "Cruella de Vil", "value": 400 },
+      { "clue": "This pirate lost a hand to a crocodile that swallowed a clock too, so he always hears it coming in J.M. Barrie's Neverland", "response": "Captain Hook", "value": 400 },
       { "clue": "This cannibal psychiatrist first appears in Thomas Harris's 1981 thriller 'Red Dragon'", "response": "Hannibal Lecter", "value": 800 },
       { "clue": "Patricia Highsmith's charming killer murders Dickie Greenleaf and steals his identity in Italy", "response": "Tom Ripley", "value": 1200 },
       { "clue": "This cruel Louisiana planter orders the beating that kills the title slave of Harriet Beecher Stowe's novel", "response": "Simon Legree", "value": 1600 },

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "THAT LOOKS FAMILIAR",
+    "clues": [
+      { "clue": "Built to keep out northern invaders, this winding barrier of stone and brick runs for thousands of miles across China", "response": "the Great Wall", "value": 200 },
+      { "clue": "Michelangelo spent four years painting God reaching out to Adam on the ceiling of this Vatican landmark", "response": "the Sistine Chapel", "value": 400 },
+      { "clue": "Napoleon ordered this Paris arch built to honor his armies; France's unknown soldier rests beneath it", "response": "the Arc de Triomphe", "value": 600 },
+      { "clue": "A 1954 movie tossed three coins into this Roman marvel, where a toss is said to guarantee your return", "response": "the Trevi Fountain", "value": 800 },
+      { "clue": "Almost 900 giant stone faces stare out from this remote Pacific spot, named for the Sunday a Dutch captain found it", "response": "Easter Island", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE VACATION SLIDESHOW",
+    "clues": [
+      { "clue": "Every president since John Adams has lived at 1600 Pennsylvania Avenue in this famous residence", "response": "the White House", "value": 200 },
+      { "clue": "King Kong swatted at biplanes from the top of this 1931 New York skyscraper", "response": "the Empire State Building", "value": 400 },
+      { "clue": "Cracked and silent, this Philadelphia symbol of freedom once hung in Independence Hall", "response": "the Liberty Bell", "value": 600 },
+      { "clue": "'Remember' this old San Antonio mission where Davy Crockett and Jim Bowie fell in 1836", "response": "the Alamo", "value": 800 },
+      { "clue": "Built for Seattle's 1962 world's fair, this 605-foot tower wears a flying-saucer top", "response": "the Space Needle", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE PRIDE OF THE STATE",
+    "clues": [
+      { "clue": "Longhorn cattle, oil gushers and a taste for bigness belong to this Lone Star State", "response": "Texas", "value": 200 },
+      { "clue": "Orange groves, alligators and Miami Beach draw visitors to this Sunshine State", "response": "Florida", "value": 400 },
+      { "clue": "On the first Saturday in May, this state's Churchill Downs hosts the run for the roses", "response": "Kentucky", "value": 600 },
+      { "clue": "Amish buggies roll through Lancaster County and chocolate flows in Hershey in this state", "response": "Pennsylvania", "value": 800 },
+      { "clue": "The Wright brothers made the first airplane flight on the dunes near Kitty Hawk in this state", "response": "North Carolina", "value": 1000 }
+    ]
+  },
+  {
+    "name": "NICKNAME THAT STATE",
+    "clues": [
+      { "clue": "The gold rush of 1849 left this Pacific coast state with a shiny nickname", "response": "California", "value": 200 },
+      { "clue": "Abe Lincoln's years as a Springfield lawyer made this state the Land of Lincoln", "response": "Illinois", "value": 400 },
+      { "clue": "Nuts from a native tree give this Midwestern state its Buckeye nickname", "response": "Ohio", "value": 600 },
+      { "clue": "Endless blue overhead earns this northern neighbor of Wyoming the name Big Sky Country", "response": "Montana", "value": 800 },
+      { "clue": "A busy hive standing for pioneer industry gives this Western state its Beehive nickname", "response": "Utah", "value": 1000 }
+    ]
+  },
+  {
+    "name": "CAPITALS OF THE OLD WORLD",
+    "clues": [
+      { "clue": "The marble Parthenon looks down from the Acropolis over this Greek capital", "response": "Athens", "value": 200 },
+      { "clue": "Since 1791 the Brandenburg Gate has stood watch in this German capital", "response": "Berlin", "value": 400 },
+      { "clue": "Masterpieces by Goya and Velazquez fill the Prado museum in this Spanish capital", "response": "Madrid", "value": 600 },
+      { "clue": "James Joyce set 'Ulysses' during a single June day in this capital on the River Liffey", "response": "Dublin", "value": 800 },
+      { "clue": "A small bronze mermaid sits on a rock in the harbor of this Danish capital", "response": "Copenhagen", "value": 1000 }
+    ]
+  },
+  {
+    "name": "CAPITALS FAR FROM HOME",
+    "clues": [
+      { "clue": "The pyramids of Giza rise just outside this sprawling Egyptian capital", "response": "Cairo", "value": 200 },
+      { "clue": "Red Square and the onion domes of St. Basil's sit at the heart of this Russian capital", "response": "Moscow", "value": 400 },
+      { "clue": "Emperors ruled from the Forbidden City for centuries in this Chinese capital", "response": "Beijing", "value": 600 },
+      { "clue": "Vintage 1950s American cars still rumble along the seaside Malecon in this Cuban capital", "response": "Havana", "value": 800 },
+      { "clue": "Golden temples and floating markets fill this capital of Thailand", "response": "Bangkok", "value": 1000 }
+    ]
+  },
+  {
+    "name": "WATER, WATER EVERYWHERE",
+    "clues": [
+      { "clue": "The Pilgrims crossed this ocean aboard the Mayflower to reach Plymouth", "response": "the Atlantic", "value": 200 },
+      { "clue": "A 1975 gale sank the freighter Edmund Fitzgerald on this biggest body of fresh water in North America", "response": "Lake Superior", "value": 400 },
+      { "clue": "In the book of Exodus, Moses parted these waters so the Israelites could escape Egypt on dry ground", "response": "the Red Sea", "value": 600 },
+      { "clue": "This river forms the entire Texas-Mexico border on its way to the Gulf", "response": "the Rio Grande", "value": 800 },
+      { "clue": "Opened in 1869, this Egyptian shortcut spared ships the long voyage around Africa", "response": "the Suez Canal", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE HILLS ARE ALIVE",
+    "clues": [
+      { "clue": "This great chain of peaks runs from New Mexico north into Canada", "response": "the Rocky Mountains", "value": 200 },
+      { "clue": "Heidi, edelweiss and the St. Bernard rescue dog all belong to this European range", "response": "the Alps", "value": 400 },
+      { "clue": "Africa's tallest peak, this snowcapped Tanzanian giant gave Hemingway a story title", "response": "Kilimanjaro", "value": 600 },
+      { "clue": "In 1959 Disneyland opened a bobsled ride inside a model of this pointed Swiss-Italian peak", "response": "the Matterhorn", "value": 800 },
+      { "clue": "This Russian range is the traditional dividing line between Europe and Asia", "response": "the Ural Mountains", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE COUNTRY IT COMES FROM",
+    "clues": [
+      { "clue": "Olive oil, Parmesan cheese and a thousand shapes of pasta come from this boot-shaped country", "response": "Italy", "value": 200 },
+      { "clue": "For centuries this land guarded the secret of making silk from worm cocoons", "response": "China", "value": 400 },
+      { "clue": "Assam and Darjeeling are celebrated tea-growing regions of this country", "response": "India", "value": 600 },
+      { "clue": "Since the 1800s this South American giant has grown more coffee than anyone else", "response": "Brazil", "value": 800 },
+      { "clue": "Sheep have long outnumbered people many times over in this Pacific home of lamb and wool", "response": "New Zealand", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE SOUVENIR SHELF",
+    "clues": [
+      { "clue": "A wide-brimmed sombrero and a pair of maracas say you have been to this neighbor to the south", "response": "Mexico", "value": 200 },
+      { "clue": "A tartan kilt and a bagpipe record are classic mementos of this part of Britain", "response": "Scotland", "value": 400 },
+      { "clue": "Wooden shoes, windmill figurines and tulip bulbs crowd the gift shops of this country", "response": "the Netherlands", "value": 600 },
+      { "clue": "Painted wooden dolls that nest one inside another are keepsakes from this country", "response": "Russia", "value": 800 },
+      { "clue": "Hand-cut Waterford crystal and warm Aran sweaters come home from this green island", "response": "Ireland", "value": 1000 }
+    ]
+  },
+  {
+    "name": "WONDERFUL, WONDERFUL",
+    "clues": [
+      { "clue": "The only ancient wonder still standing, this royal tomb has towered over the sands of Giza for 4,500 years", "response": "the Great Pyramid", "value": 200 },
+      { "clue": "Legend says a Babylonian king raised these leafy terraces to cheer up his homesick queen", "response": "the Hanging Gardens", "value": 400 },
+      { "clue": "An earthquake toppled this giant bronze sun god that guarded a Greek island's harbor", "response": "the Colossus of Rhodes", "value": 600 },
+      { "clue": "Built on the isle of Pharos, this towering beacon guided ships into Egypt's greatest port", "response": "the Lighthouse of Alexandria", "value": 800 },
+      { "clue": "In 356 B.C. a glory-seeking arsonist burned this marble wonder at Ephesus honoring the Greek goddess of the hunt", "response": "the Temple of Artemis", "value": 1000 }
+    ]
+  },
+  {
+    "name": "KNOW IT BY ITS FLAG",
+    "clues": [
+      { "clue": "A single red circle for the rising sun sits on the white flag of this country", "response": "Japan", "value": 200 },
+      { "clue": "Two blue bars and a six-pointed Star of David make up the flag of this Middle Eastern nation", "response": "Israel", "value": 400 },
+      { "clue": "Nine blue and white stripes with a white cross fly over this Mediterranean country", "response": "Greece", "value": 600 },
+      { "clue": "A white crescent moon and star on a red field mark the flag of this country in both Europe and Asia", "response": "Turkey", "value": 800 },
+      { "clue": "A red-and-blue circle with four sets of black bars centers the flag of this Asian country", "response": "South Korea", "value": 1000 }
+    ]
+  }
+]

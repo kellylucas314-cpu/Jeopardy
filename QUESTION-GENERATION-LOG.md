@@ -127,3 +127,18 @@ preview; spot-read the F1/UNC categories for family fit.
   geography II, wordplay II, science II, history II, music II, plus 24 new finals.
 - Still to come: screen II, literature II, food II, six Easy Breezy II lanes,
   12 easy finals, then grading, compile, and verification toward the 3,300 stop.
+
+## 2026-08-16 ~20:00 UTC — Wave 4 checkpoint: 2,746 accepted
+
+- **2,746 accepted clues** (536 categories + 66 finals), 67 revisions, zero rejections.
+- Graded this round: mythology ×2, animals ×2, screen II, history II, literature II,
+  music II, wordplay II, science II, and 24 new Fresh finals — 144 categories + 24 finals,
+  all cleared at 45+.
+- Grader catches worth noting: a factual error on the code talkers (they used an encoded
+  vocabulary built on Navajo, not plain Navajo), a wrong date range on the Rebecca Riots
+  (1839–43), a Meteor Crater measurement, a Torricelli/Galileo relationship overstatement,
+  and several clues that had independently duplicated each other across files
+  (Cruella de Vil, Waterloo, Socrates' hemlock, the stratosphere, clownfish, Canada geese).
+- All 62 authored files sit in `packs-src/wave3-drafts/`; grades in `packs-src/wave3-grades/`.
+- Remaining: grading for food II and the six Easy Breezy II lanes + 12 easy finals,
+  then compile, verification suite, and the final milestone push.

@@ -1,0 +1,14 @@
+[
+  { "name": "DOUBLE-O HEAVEN", "score": 48, "verdict": "revised", "notes": "OO holds in all 5 (balloon, igloo, Waterloo, voodoo, bassoon); rewrote the Waterloo clue, which nearly word-for-word repeated n1-hist's 'Napoleon met his final defeat' clue." },
+  { "name": "CATCHING SOME ZZ'S", "score": 49, "verdict": "accepted", "notes": "ZZ verified in pizza/blizzard/grizzly/Jacuzzi/paparazzi; Jacuzzi brothers' propeller past and Fellini's Paparazzo both check out." },
+  { "name": "\"CAT\" GOT YOUR TONGUE?", "score": 47, "verdict": "accepted", "notes": "Hidden CAT confirmed letter-by-letter (vaCATion, eduCATion, deliCATe, stacCATo, YuCATan); Horace Mann and Chicxulub facts sound." },
+  { "name": "SMELLING A \"RAT\"", "score": 46, "verdict": "revised", "notes": "RAT holds in all 5; fixed Meteor Crater width (0.74 mi, not 'nearly a mile') and rewrote the Socrates and stratosphere clues, which duplicated n2-mix and n1-sci clues." },
+  { "name": "IDIOMS OFF THE LEASH", "score": 46, "verdict": "revised", "notes": "Swapped rows 3/4 so cold turkey precedes the harder white elephant, and reworded the china-shop clue to drop a 'fine porcelain' echo from another category in this file." },
+  { "name": "COSTS AN ARM & A LEG", "score": 46, "verdict": "revised", "notes": "Body-part idioms all verified (Job 19:20, KJV 'gird up thy loins'); made the elbow-grease clue a full sentence instead of a colon fragment." },
+  { "name": "MISSING LINKS", "score": 45, "verdict": "accepted", "notes": "All five bridges check (rainbow/bow tie, campfire/fireworks, newspaper/paperback, padlock/locksmith, jaywalk/walkabout); ladder is flat and it doubles the compound-word gimmick used by ONE WORD LEADS TO ANOTHER." },
+  { "name": "ONE WORD LEADS TO ANOTHER", "score": 46, "verdict": "accepted", "notes": "Every listed compound is real; row 5 offers only two examples where earlier rows give three, and the gimmick overlaps MISSING LINKS." },
+  { "name": "A MAN, A PLAN, A CATEGORY", "score": 48, "verdict": "revised", "notes": "Dropped the articles from 'a kayak'/'a rotor' so every response is literally a palindrome; noon, kayak, rotor, Otto, Malayalam all read the same backwards." },
+  { "name": "-OLOGY MAJORS", "score": 48, "verdict": "accepted", "notes": "Meteorology/entomology/phrenology/campanology all correctly defined; campana=bell verified, and the entomology-etymology tease is a fair hook." },
+  { "name": "A HERD OF HOMOPHONES", "score": 46, "verdict": "revised", "notes": "bare/bear, dear/deer, hoarse/horse, foul/fowl, new/gnu are genuine homophones; swapped 'grizzly' out of row 1 since it is another category's answer in this same file." },
+  { "name": "HOMOPHONE IT IN", "score": 47, "verdict": "accepted", "notes": "serial/cereal, flour/flower, mussel/muscle, kernel/colonel, guerrilla/gorilla all sound-identical; 'little war' etymology correct, though it is the file's second homophone category." }
+]

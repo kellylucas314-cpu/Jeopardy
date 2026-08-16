@@ -1,0 +1,122 @@
+[
+  {
+    "name": "PLAY BALL!",
+    "clues": [
+      { "clue": "A batter who sends the ball over the outfield fence has hit one of these", "response": "a home run", "value": 200 },
+      { "clue": "Baseball's championship, a best-of-seven played each fall, has this two-word name", "response": "the World Series", "value": 400 },
+      { "clue": "The rubber sits 60 feet 6 inches from home plate atop this raised circle of dirt", "response": "the mound", "value": 600 },
+      { "clue": "Waiting their turn, relief pitchers warm up in this fenced-off corner of the park", "response": "the bullpen", "value": 800 },
+      { "clue": "This upstate New York village is home to baseball's Hall of Fame", "response": "Cooperstown", "value": 1000 }
+    ]
+  },
+  {
+    "name": "BOYS OF SUMMER",
+    "clues": [
+      { "clue": "In 1974 this Braves slugger passed Babe Ruth's career home run record", "response": "Hank Aaron", "value": 200 },
+      { "clue": "This Giants center fielder, the Say Hey Kid, made a famous catch in the 1954 Series", "response": "Willie Mays", "value": 400 },
+      { "clue": "This Yankees catcher gave us \"It ain't over till it's over\"", "response": "Yogi Berra", "value": 600 },
+      { "clue": "The Splendid Splinter, this Red Sox slugger batted .406 back in 1941", "response": "Ted Williams", "value": 800 },
+      { "clue": "This Negro Leagues pitching great finally reached the majors in 1948, at age 42", "response": "Satchel Paige", "value": 1000 }
+    ]
+  },
+  {
+    "name": "IN THIS CORNER",
+    "clues": [
+      { "clue": "Sylvester Stallone played this Philadelphia boxer who ran up the museum steps", "response": "Rocky", "value": 200 },
+      { "clue": "Nicknamed the Brown Bomber, this heavyweight held the title from 1937 to 1949", "response": "Joe Louis", "value": 400 },
+      { "clue": "Ali and Frazier's brutal 1975 bout in the Philippines got this rhyming name", "response": "the Thrilla in Manila", "value": 600 },
+      { "clue": "Born Walker Smith Jr., this 1940s and '50s champ is often called the best ever", "response": "Sugar Ray Robinson", "value": 800 },
+      { "clue": "This Manassa Mauler lost his heavyweight crown to Gene Tunney back in 1926", "response": "Jack Dempsey", "value": 1000 }
+    ]
+  },
+  {
+    "name": "GOING FOR THE GOLD",
+    "clues": [
+      { "clue": "Carried by relay all the way from Greece, this handheld item lights the cauldron", "response": "the torch", "value": 200 },
+      { "clue": "This American swimmer won seven gold medals at the 1972 Munich Games", "response": "Mark Spitz", "value": 400 },
+      { "clue": "The U.S. hockey team's 1980 upset of the Soviets goes by this three-word name", "response": "the Miracle on Ice", "value": 600 },
+      { "clue": "This 16-year-old gymnast stuck a perfect vault to win the 1984 all-around gold", "response": "Mary Lou Retton", "value": 800 },
+      { "clue": "This skater's wedge haircut swept the country after her 1976 Olympic gold", "response": "Dorothy Hamill", "value": 1000 }
+    ]
+  },
+  {
+    "name": "PICK A CARD, ANY CARD",
+    "clues": [
+      { "clue": "Not counting the jokers, a standard deck of playing cards holds this many", "response": "52", "value": 200 },
+      { "clue": "In America jacks, queens and kings go by this two-word term, each worth 10 in blackjack", "response": "face cards", "value": 400 },
+      { "clue": "In this children's game, you don't want to be left holding the unmatched lady", "response": "Old Maid", "value": 600 },
+      { "clue": "Two players draw and discard in this card game; its first word is a juniper liquor", "response": "gin rummy", "value": 800 },
+      { "clue": "Ten through ace, all in the same suit, make this unbeatable poker hand", "response": "a royal flush", "value": 1000 }
+    ]
+  },
+  {
+    "name": "BACKYARD CHAMPIONS",
+    "clues": [
+      { "clue": "You toss these U-shaped iron pieces at a stake, hoping to hear a ringer clang", "response": "horseshoes", "value": 200 },
+      { "clue": "Wooden balls, mallets and wire wickets are the gear for this lawn game", "response": "croquet", "value": 400 },
+      { "clue": "Players swat a feathered shuttlecock over a high net in this racket sport", "response": "badminton", "value": 600 },
+      { "clue": "Cat's eyes, aggies and shooters are the little glass pieces in this dirt-ring game", "response": "marbles", "value": 800 },
+      { "clue": "Bounce a little rubber ball, scoop up the metal pieces: onesies, twosies, threesies", "response": "jacks", "value": 1000 }
+    ]
+  },
+  {
+    "name": "GONE FISHIN'",
+    "clues": [
+      { "clue": "This red-and-white float ducks under the water when a fish takes the bait", "response": "a bobber", "value": 200 },
+      { "clue": "The line winds onto this cranking device mounted on the rod", "response": "a reel", "value": 400 },
+      { "clue": "Rainbow and brook are the best-known types of this speckled cold-water fish", "response": "trout", "value": 600 },
+      { "clue": "Anglers drill a hole and wait in a little shanty during this frozen-lake pastime", "response": "ice fishing", "value": 800 },
+      { "clue": "Spelled the same, a deep singing voice and a popular game fish share this name", "response": "bass", "value": 1000 }
+    ]
+  },
+  {
+    "name": "HAPPY CAMPERS",
+    "clues": [
+      { "clue": "Drive the stakes, raise the poles and pitch this canvas shelter", "response": "a tent", "value": 200 },
+      { "clue": "Campers toast these soft white puffs on a stick over the fire", "response": "marshmallows", "value": 400 },
+      { "clue": "This pocket instrument has a magnetized needle that swings around to point north", "response": "a compass", "value": 600 },
+      { "clue": "\"Leaves of three, let it be\" is the old warning about this itchy woodland vine", "response": "poison ivy", "value": 800 },
+      { "clue": "Scouts sew these round cloth awards onto a sash after mastering a skill", "response": "a merit badge", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SWING YOUR PARTNER",
+    "clues": [
+      { "clue": "Four couples form a set and follow a caller's commands in this folk dance", "response": "square dancing", "value": 200 },
+      { "clue": "Couples glide in three-quarter time to this dance; the Viennese kind is fastest", "response": "the waltz", "value": 400 },
+      { "clue": "A rose in the teeth and a dramatic dip are the clichés of this Argentine dance", "response": "the tango", "value": 600 },
+      { "clue": "Two long lines of dancers face off in this old country dance named for a state", "response": "the Virginia reel", "value": 800 },
+      { "clue": "This dance-studio founder taught America to fox-trot using numbered footprints", "response": "Arthur Murray", "value": 1000 }
+    ]
+  },
+  {
+    "name": "RIGHT UP YOUR ALLEY",
+    "clues": [
+      { "clue": "Knocking down all ten pins with your first ball earns this mark, an X", "response": "a strike", "value": 200 },
+      { "clue": "Clearing the leftover pins with your second ball earns this, marked with a slash", "response": "a spare", "value": 400 },
+      { "clue": "A perfect game of twelve strikes in a row adds up to this score", "response": "300", "value": 600 },
+      { "clue": "This curving ball path lets a right-hander come into the pocket at a sharper angle", "response": "a hook", "value": 800 },
+      { "clue": "In bowling's most dreaded finish, only these two numbered corner pins are left", "response": "the 7-10 split", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE HOBBY SHOP",
+    "clues": [
+      { "clue": "Collectors soak these off old envelopes and mount them in albums", "response": "stamps", "value": 200 },
+      { "clue": "A birdwatcher raises these to bring a distant warbler up close", "response": "binoculars", "value": 400 },
+      { "clue": "A wartime copper shortage in 1943 meant this small coin was struck in steel", "response": "the penny", "value": 600 },
+      { "clue": "Lionel and American Flyer were the big names in this basement hobby", "response": "model trains", "value": 800 },
+      { "clue": "Stamp collecting goes by this fancier name, built from Greek roots", "response": "philately", "value": 1000 }
+    ]
+  },
+  {
+    "name": "RACK 'EM UP",
+    "clues": [
+      { "clue": "Before shooting, players rub blue chalk on the tip of this long stick", "response": "a cue", "value": 200 },
+      { "clue": "Pool's most popular game is named for this black sphere, pocketed last to win", "response": "the eight ball", "value": 400 },
+      { "clue": "The opening shot that scatters the tight triangle of fifteen balls is called this", "response": "the break", "value": 600 },
+      { "clue": "Accidentally sinking the white ball is this foul, and it hands over your turn", "response": "a scratch", "value": 800 },
+      { "clue": "This British cousin of pool is played with 15 reds and six colored balls", "response": "snooker", "value": 1000 }
+    ]
+  }
+]

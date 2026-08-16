@@ -66,7 +66,7 @@
       { "clue": "Mike Myers and Dana Carvey play these basement cable-access hosts in a 1992 'Saturday Night Live' spinoff", "response": "Wayne and Garth", "value": 400 },
       { "clue": "A cheese-loving inventor and his silent dog headline Nick Park's claymation shorts", "response": "Wallace and Gromit", "value": 600 },
       { "clue": "A van built out of marijuana rolls through 1978's 'Up in Smoke,' the first feature by this comedy duo", "response": "Cheech and Chong", "value": 800 },
-      { "clue": "A smooth crooner and a manic clown, this team broke up in 1956 after a decade of films and nightclubs", "response": "Martin and Lewis", "value": 1000 }
+      { "clue": "A smooth crooner and a manic clown, this nightclub-bred comedy team split up in 1956 after ten years together", "response": "Martin and Lewis", "value": 1000 }
     ]
   },
   {
@@ -105,7 +105,7 @@
       { "clue": "Bleached spiky hair and trips to Flavortown mark this host of 'Diners, Drive-Ins and Dives'", "response": "Guy Fieri", "value": 200 },
       { "clue": "This perky cook shortened extra virgin olive oil to EVOO on her show '30 Minute Meals'", "response": "Rachael Ray", "value": 400 },
       { "clue": "Food science lessons, oddball props and kitchen chemistry filled 'Good Eats,' hosted by this cook", "response": "Alton Brown", "value": 600 },
-      { "clue": "After writing nuclear energy budgets in Washington, this woman bought a Hamptons food shop called Barefoot Contessa", "response": "Ina Garten", "value": 800 },
+      { "clue": "After writing nuclear energy budgets in Washington, this self-taught cook bought a Hamptons food shop called Barefoot Contessa", "response": "Ina Garten", "value": 800 },
       { "clue": "In 1946 this cookbook author hosted NBC's 'I Love to Eat,' generally called TV's first cooking show", "response": "James Beard", "value": 1000 }
     ]
   },

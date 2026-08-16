@@ -1,0 +1,122 @@
+[
+  {
+    "name": "RISE & DINE",
+    "clues": [
+      { "clue": "Bakery legend links this flaky crescent to Vienna, but France turned it into the standard breakfast pastry.", "response": "croissant", "value": 200 },
+      { "clue": "Fried eggs on warm tortillas under a chunky tomato salsa make this Mexican breakfast, 'ranch style'.", "response": "huevos rancheros", "value": 400 },
+      { "clue": "Tunisia and Israel share this breakfast of eggs poached right in a skillet of spiced tomatoes and peppers.", "response": "shakshuka", "value": 600 },
+      { "clue": "Chinese breakfast tables ladle out this soupy rice porridge, topped with pickles, peanuts or pork floss.", "response": "congee", "value": 800 },
+      { "clue": "Sticky, stringy and pungent, this dish of fermented soybeans is the Japanese breakfast that dares a visitor.", "response": "natto", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE YOLK'S ON YOU",
+    "clues": [
+      { "clue": "A French chef's classic test of skill is this folded egg dish, ideally pale gold and never browned.", "response": "omelet", "value": 200 },
+      { "clue": "A poached egg and Canadian bacon ride an English muffin under a blanket of hollandaise in this brunch order.", "response": "eggs Benedict", "value": 400 },
+      { "clue": "Baked or broiled flat instead of folded, this Italian egg dish takes its name from the word for 'fried'.", "response": "frittata", "value": 600 },
+      { "clue": "London's Fortnum & Mason claims it created this picnic staple: a boiled egg wrapped in sausage, crumbed and fried.", "response": "Scotch egg", "value": 800 },
+      { "clue": "Cured for weeks in ash, salt and lime, this Chinese delicacy turns the white amber and the yolk dark green.", "response": "century egg", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SANDWICH BOARD",
+    "clues": [
+      { "clue": "Pat's and Geno's glare at each other across a South Philadelphia corner, both selling this sliced-ribeye sandwich.", "response": "cheesesteak", "value": 200 },
+      { "clue": "Ham, roast pork, Swiss and pickles get pressed flat between crusty bread in this specialty of Tampa and Miami.", "response": "Cuban sandwich", "value": 400 },
+      { "clue": "Corned beef, sauerkraut and Russian dressing meet melted Swiss on grilled rye in this deli order.", "response": "Reuben", "value": 600 },
+      { "clue": "Ham and Gruyere bake under bechamel in this Paris cafe staple; add a fried egg and it becomes a 'madame'.", "response": "croque monsieur", "value": 800 },
+      { "clue": "A New Orleans grocery claims it built the first of these round Sicilian loaves stuffed with cold cuts and olive salad.", "response": "muffuletta", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SUB PLOTS",
+    "clues": [
+      { "clue": "Three slices of toast, turkey, bacon and tomato stack up in this double-decker with a four-letter, members-only name.", "response": "club sandwich", "value": 200 },
+      { "clue": "This towering everything-in-the-icebox sandwich is named for the always-hungry husband in the comic strip 'Blondie'.", "response": "Dagwood", "value": 400 },
+      { "clue": "Dipped in batter, griddled and dusted with powdered sugar, this ham-and-cheese sandwich shares a name with a Dumas count.", "response": "Monte Cristo", "value": 600 },
+      { "clue": "Philippe's and Cole's, two old Los Angeles institutions, each claim they invented this roast beef sandwich served with jus.", "response": "French dip", "value": 800 },
+      { "clue": "A 1929 New Orleans streetcar strike gave this sandwich its name after a shop fed the strikers for free.", "response": "po'boy", "value": 1000 }
+    ]
+  },
+  {
+    "name": "CURD YOUR ENTHUSIASM",
+    "clues": [
+      { "clue": "Traditionally made from water buffalo milk, this soft white cheese melts across a Neapolitan pizza.", "response": "mozzarella", "value": 200 },
+      { "clue": "This English cheese is named for the Somerset gorge and village where it was once aged in caves.", "response": "cheddar", "value": 400 },
+      { "clue": "This Dutch cheese took the name of the market town where it was weighed and sold, not where it was made.", "response": "Gouda", "value": 600 },
+      { "clue": "A high melting point lets this Cypriot cheese hit the grill and come off with stripes instead of puddles.", "response": "halloumi", "value": 800 },
+      { "clue": "Protected-origin rules bar this English blue cheese from being made in the Cambridgeshire village it is named for.", "response": "Stilton", "value": 1000 }
+    ]
+  },
+  {
+    "name": "BAR EXAM",
+    "clues": [
+      { "clue": "Four wafer fingers snap apart in this bar from York, England, whose slogan urges you to take a break.", "response": "Kit Kat", "value": 200 },
+      { "clue": "A row of triangular peaks said to echo the Matterhorn gives this Swiss chocolate bar its unmistakable shape.", "response": "Toblerone", "value": 400 },
+      { "clue": "Carbon dioxide sealed under pressure makes this candy crackle and fizz the instant it hits your tongue.", "response": "Pop Rocks", "value": 600 },
+      { "clue": "Leo Hirschfield named this chewy penny candy of 1896 for his young daughter's nickname.", "response": "Tootsie Roll", "value": 800 },
+      { "clue": "Rodolphe Lindt's 1879 machine smooths gritty chocolate for hours; the process is named for its shell-shaped trough.", "response": "conching", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SEASONED PROFESSIONALS",
+    "clues": [
+      { "clue": "Hungarian cooks stir this red powder of dried ground peppers into goulash by the spoonful.", "response": "paprika", "value": 200 },
+      { "clue": "Each purple crocus yields just three crimson threads of this, the priciest spice by weight.", "response": "saffron", "value": 400 },
+      { "clue": "Americans call the fresh leaf cilantro; the dried seed of the very same plant is sold under this name.", "response": "coriander", "value": 600 },
+      { "clue": "The lacy red webbing wrapped around a nutmeg seed is dried and sold as this separate spice.", "response": "mace", "value": 800 },
+      { "clue": "Not a true pepper at all, this Chinese spice numbs and tingles the lips in fiery 'mala' cooking.", "response": "Sichuan peppercorn", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SIMMER DOWN NOW",
+    "clues": [
+      { "clue": "Beets turn this Eastern European soup deep red; a spoonful of sour cream swirls it pink.", "response": "borscht", "value": 200 },
+      { "clue": "Andalusia beats the summer heat with this chilled soup of tomatoes, cucumber, bread and olive oil.", "response": "gazpacho", "value": 400 },
+      { "clue": "Star anise and charred ginger perfume the beef broth of this Vietnamese noodle soup.", "response": "pho", "value": 600 },
+      { "clue": "Marseille fishermen turned the part of the catch they could not sell into this saffron-scented seafood soup.", "response": "bouillabaisse", "value": 800 },
+      { "clue": "British officers in India carried home this soup whose name comes from Tamil words for 'pepper water'.", "response": "mulligatawny", "value": 1000 }
+    ]
+  },
+  {
+    "name": "STEWPENDOUS",
+    "clues": [
+      { "clue": "A dark roux plus okra or file powder thickens this Louisiana pot, ladled over rice.", "response": "gumbo", "value": 200 },
+      { "clue": "This Burgundian braise of beef in red wine gets bacon, pearl onions and mushrooms folded in near the end.", "response": "boeuf bourguignon", "value": 400 },
+      { "clue": "Black beans and salted pork simmer into this Brazilian national dish, served with rice and orange slices.", "response": "feijoada", "value": 600 },
+      { "clue": "Named for the earthenware pot it bakes in, this dish of Languedoc layers white beans, sausage and duck confit.", "response": "cassoulet", "value": 800 },
+      { "clue": "Sumatran cooks simmer beef in coconut milk and spices for hours, until the sauce disappears into this dry dish.", "response": "rendang", "value": 1000 }
+    ]
+  },
+  {
+    "name": "GROUNDS FOR DISCUSSION",
+    "clues": [
+      { "clue": "In India, tea boiled up with milk, sugar and cardamom goes by this name, a word that simply means 'tea'.", "response": "chai", "value": 200 },
+      { "clue": "A bamboo whisk froths this powdered green tea into the centerpiece of the Japanese tea ceremony.", "response": "matcha", "value": 400 },
+      { "clue": "Partly oxidized, this Chinese tea sits between green and black, and its name means 'black dragon'.", "response": "oolong", "value": 600 },
+      { "clue": "Russian tea culture centers on this metal urn, which keeps water hot under a small pot of strong concentrate.", "response": "samovar", "value": 800 },
+      { "clue": "Beans that have passed through this Indonesian tree-climbing mammal become kopi luwak, a famously pricey brew.", "response": "the civet", "value": 1000 }
+    ]
+  },
+  {
+    "name": "STATE OF THE PLATE",
+    "clues": [
+      { "clue": "Deep-dish pizza and Italian beef sandwiches are hometown specialties of this Midwestern city.", "response": "Chicago", "value": 200 },
+      { "clue": "This New England state named the whoopie pie its official treat and the blueberry pie its official dessert.", "response": "Maine", "value": 400 },
+      { "clue": "Diners in this Southwestern state ask 'Red or green?', and the answer decides which chile sauce you get.", "response": "New Mexico", "value": 600 },
+      { "clue": "Rival bars in this Minnesota city both claim the Juicy Lucy, a burger with the cheese sealed inside the patty.", "response": "Minneapolis", "value": 800 },
+      { "clue": "In 1926 a hotel chef in this Kentucky city invented the Hot Brown, open-faced turkey under bubbling Mornay sauce.", "response": "Louisville", "value": 1000 }
+    ]
+  },
+  {
+    "name": "REGIONAL ACCENTS",
+    "clues": [
+      { "clue": "Southern breakfast plates pile this creamy ground-corn dish beside eggs, or under shrimp in the Lowcountry.", "response": "grits", "value": 200 },
+      { "clue": "The Anchor Bar says that in 1964 its cook deep-fried these, doused them in hot sauce and named them for her New York city.", "response": "Buffalo wings", "value": 400 },
+      { "clue": "Ordered 'three-way', this Ohio city's cinnamon-scented meat sauce arrives over spaghetti under shredded cheddar.", "response": "Cincinnati chili", "value": 600 },
+      { "clue": "Black-eyed peas and rice make this dish with a man's name, eaten on New Year's Day for luck in the South.", "response": "Hoppin' John", "value": 800 },
+      { "clue": "Hawaii's plate-lunch classic tops a scoop of rice with a hamburger patty, a fried egg and brown gravy.", "response": "loco moco", "value": 1000 }
+    ]
+  }
+]

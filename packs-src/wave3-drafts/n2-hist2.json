@@ -4,7 +4,7 @@
     { "clue": "Ships reaching plague-era Venice had to ride at anchor this many days; the Italian for it gave us 'quarantine'", "response": "40", "value": 800 },
     { "clue": "This Parthenon-building leader of Athens died in 429 B.C. of the plague Thucydides described in gruesome detail", "response": "Pericles", "value": 1200 },
     { "clue": "In 1894 this Swiss-French doctor isolated the plague bacillus in Hong Kong; the germ's genus now bears his name", "response": "Alexandre Yersin", "value": 1600 },
-    { "clue": "Plague reached this Derbyshire village in a 1665 bundle of London cloth, so its people sealed themselves off from the world", "response": "Eyam", "value": 2000 }
+    { "clue": "By tradition plague reached this Derbyshire village in a 1665 bundle of London cloth; its people then sealed themselves off", "response": "Eyam", "value": 2000 }
   ] },
   { "name": "BEDSIDE MANORS", "clues": [
     { "clue": "Doctor to the gladiators of Pergamon and later to Marcus Aurelius, this Greek ruled Western medicine for over a millennium", "response": "Galen", "value": 400 },
@@ -21,7 +21,7 @@
     { "clue": "Benjamin Tallmadge ran this coded spy network that fed George Washington reports from British-held New York", "response": "the Culper Ring", "value": 2000 }
   ] },
   { "name": "ENCRYPT KEEPER", "clues": [
-    { "clue": "Marines in the Pacific baffled Japanese eavesdroppers simply by radioing messages in this people's language", "response": "Navajo", "value": 400 },
+    { "clue": "Marines in the Pacific baffled Japanese eavesdroppers with a battlefield code built on this people's unwritten language", "response": "Navajo", "value": 400 },
     { "clue": "Britain's Room 40 cracked this 1917 German cable dangling U.S. territory in front of Mexico", "response": "the Zimmermann Telegram", "value": 800 },
     { "clue": "Enciphered letters from the 1586 Babington Plot, unpicked by Elizabeth I's codebreakers, doomed this rival queen", "response": "Mary, Queen of Scots", "value": 1200 },
     { "clue": "For the Coast Guard this cryptanalyst broke rum-runners' ciphers, then unraveled Nazi spy rings in South America", "response": "Elizebeth Friedman", "value": 1600 },
@@ -74,7 +74,7 @@
     { "clue": "Debt-ridden Massachusetts farmers shut down courthouses in this 1786 uprising that fueled calls for a stronger union", "response": "Shays' Rebellion", "value": 800 },
     { "clue": "Cavalry charged a Manchester reform rally in 1819 in this massacre mockingly named for Wellington's great victory", "response": "Peterloo", "value": 1200 },
     { "clue": "Wat Tyler led this 1381 English uprising set off by a hated poll tax; the tax was quietly dropped afterward", "response": "the Peasants' Revolt", "value": 1600 },
-    { "clue": "Farmers in women's clothing smashed Welsh tollgates in these 1840s riots, named for the Old Testament wife of Isaac", "response": "the Rebecca Riots", "value": 2000 }
+    { "clue": "Farmers in women's clothing smashed Welsh tollgates in these riots of 1839-43, whose name is usually traced to the Old Testament wife of Isaac", "response": "the Rebecca Riots", "value": 2000 }
   ] },
   { "name": "SAILS PITCH", "clues": [
     { "clue": "James Lind's 1747 shipboard trial of citrus fruit pointed to a cure for this deficiency disease of long voyages", "response": "scurvy", "value": 400 },

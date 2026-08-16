@@ -2,7 +2,7 @@
   { "name": "DOUBLE-O HEAVEN", "clues": [
     { "clue": "Like every response in this category, this poppable party inflatable packs a double O", "response": "a balloon", "value": 200 },
     { "clue": "Blocks of packed snow spiral upward into this dome-shaped Inuit shelter", "response": "an igloo", "value": 400 },
-    { "clue": "Napoleon met his final defeat in June 1815 at this site in modern-day Belgium", "response": "Waterloo", "value": 600 },
+    { "clue": "ABBA's 1974 Eurovision winner turned this Belgian battlefield into a byword for crushing defeat", "response": "Waterloo", "value": 600 },
     { "clue": "Hollywood pins needle-stuffed dolls on this Haitian religion whose spirits are called lwa", "response": "voodoo", "value": 800 },
     { "clue": "In Prokofiev's 'Peter and the Wolf,' this double-reed woodwind grumbles as the grandfather", "response": "a bassoon", "value": 1000 }
   ] },
@@ -23,22 +23,22 @@
   { "name": "SMELLING A \"RAT\"", "clues": [
     { "clue": "A 'rat' scurries through each answer, including this plank-walking, booty-burying sea robber", "response": "a pirate", "value": 200 },
     { "clue": "This Okinawan-born martial art's name translates as 'empty hand'", "response": "karate", "value": 400 },
-    { "clue": "Arizona's famous 'Meteor' one is nearly a mile wide — it's this bowl-shaped impact scar", "response": "a crater", "value": 600 },
-    { "clue": "Condemned for corrupting the youth of Athens, this philosopher drank hemlock in 399 B.C.", "response": "Socrates", "value": 800 },
-    { "clue": "Home to the ozone layer, this second layer of Earth's atmosphere sits just above the troposphere", "response": "the stratosphere", "value": 1000 }
+    { "clue": "Arizona's famous 'Meteor' one runs about three-quarters of a mile wide — it's this bowl-shaped impact scar", "response": "a crater", "value": 600 },
+    { "clue": "Plato's teacher, he needled Athens with the relentless question-and-answer method that now bears his name", "response": "Socrates", "value": 800 },
+    { "clue": "Temperature rises with altitude in this atmospheric layer, giving jets a smooth ride near its base", "response": "the stratosphere", "value": 1000 }
   ] },
   { "name": "IDIOMS OFF THE LEASH", "clues": [
-    { "clue": "A clumsy lug turned loose amid the fine porcelain is this animal 'in a china shop'", "response": "a bull", "value": 200 },
+    { "clue": "A clumsy lug loose among the teacups is this animal 'in a china shop'", "response": "a bull", "value": 200 },
     { "clue": "Phony, theatrical grief comes as the 'tears' of this snappy Nile reptile", "response": "a crocodile", "value": 400 },
-    { "clue": "Legend says Siamese kings ruined courtiers with gifts of this pale pachyderm, now any costly unwanted thing", "response": "a white elephant", "value": 600 },
-    { "clue": "Quit cigarettes all at once and you've gone 'cold' as this Thanksgiving bird", "response": "turkey", "value": 800 },
+    { "clue": "Quit cigarettes all at once and you've gone 'cold' as this Thanksgiving bird", "response": "turkey", "value": 600 },
+    { "clue": "Legend says Siamese kings ruined courtiers with gifts of this pale pachyderm, now any costly unwanted thing", "response": "a white elephant", "value": 800 },
     { "clue": "Coleridge's becalmed mariner wore this shot seabird around his neck, now any inescapable burden", "response": "an albatross", "value": 1000 }
   ] },
   { "name": "COSTS AN ARM & A LEG", "clues": [
     { "clue": "Jittery grooms are said to get these 'cold' right before the wedding", "response": "feet", "value": 200 },
     { "clue": "A stern governess ordering you to hush might tell you to 'hold' this", "response": "your tongue", "value": 400 },
     { "clue": "The Book of Job gave us escaping 'by the skin of' these", "response": "your teeth", "value": 600 },
-    { "clue": "Grandma's all-purpose cleaning product: 'grease' from this joint", "response": "the elbow", "value": 800 },
+    { "clue": "Grandma's all-purpose cleaning product was 'grease' from this arm joint", "response": "the elbow", "value": 800 },
     { "clue": "In the King James Bible, bracing for a mighty task means 'girding up' these", "response": "your loins", "value": 1000 }
   ] },
   { "name": "MISSING LINKS", "clues": [
@@ -57,8 +57,8 @@
   ] },
   { "name": "A MAN, A PLAN, A CATEGORY", "clues": [
     { "clue": "Each answer here reads the same in both directions, like this hour when the sun hits its daily peak", "response": "noon", "value": 200 },
-    { "clue": "Tip over in this slim Inuit-invented paddle craft and you'll be glad you learned to roll it", "response": "a kayak", "value": 400 },
-    { "clue": "This whirling helicopter part comes in 'main' and 'tail' varieties", "response": "a rotor", "value": 600 },
+    { "clue": "Tip over in this slim Inuit-invented paddle craft and you'll be glad you learned to roll it", "response": "kayak", "value": 400 },
+    { "clue": "This whirling helicopter part comes in 'main' and 'tail' varieties", "response": "rotor", "value": 600 },
     { "clue": "The palindromic first name of the 'Iron Chancellor' who unified Germany in 1871", "response": "Otto", "value": 800 },
     { "clue": "Spoken in India's Kerala state, this Dravidian language's 9-letter name is a palindrome", "response": "Malayalam", "value": 1000 }
   ] },
@@ -70,7 +70,7 @@
     { "clue": "From the Latin for 'bell,' it's the study & art beloved by church-tower change ringers", "response": "campanology", "value": 1000 }
   ] },
   { "name": "A HERD OF HOMOPHONES", "clues": [
-    { "clue": "Each answer is a sound-alike pair, like this grizzly who forgot his fur coat", "response": "a bare bear", "value": 200 },
+    { "clue": "Each answer is a sound-alike pair, like this ursine fellow caught without his fur coat", "response": "a bare bear", "value": 200 },
     { "clue": "A gentle woodland grazer the whole family adores, like Bambi", "response": "a dear deer", "value": 400 },
     { "clue": "A pony that's been cheering too loudly at the racetrack all afternoon", "response": "a hoarse horse", "value": 600 },
     { "clue": "A rooster guilty of unsportsmanlike conduct in the barnyard", "response": "a foul fowl", "value": 800 },
