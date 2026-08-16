@@ -142,3 +142,36 @@ preview; spot-read the F1/UNC categories for family fit.
 - All 62 authored files sit in `packs-src/wave3-drafts/`; grades in `packs-src/wave3-grades/`.
 - Remaining: grading for food II and the six Easy Breezy II lanes + 12 easy finals,
   then compile, verification suite, and the final milestone push.
+
+## 2026-08-16 ~22:00 UTC — WAVE 4 COMPLETE: 3,353 accepted clues
+
+**Final tally: 655 categories + 78 finals = 3,353 accepted clues.**
+101 clue-level revisions by independent graders; **1 category rejected**
+(ANTIQUES BOARD SHOW — four of its five answers duplicated a sibling file and no
+replacement could hold the category's promise). Every accepted category scored 45+/50.
+
+**Wave 4 added** (on top of wave 3's 2,122): mythology x2, animals x2, games & toys x2,
+geography II, wordplay II, science II, history II, music II, literature II, screen II,
+food II, 24 Fresh finals; Easy Breezy gained world x2, storybook x2, pastimes x2 and
+12 finals — the Easy pack's Round 2 was the lane that cycled soonest, so it got the
+most attention.
+
+**Compiled packs:** Fresh 487 R1 + 479 R2 + 140 finals; Easy Breezy 176 R1 + 147 R2 +
+62 finals. Fresh now runs ~79 full games before any category can repeat (was ~17 with
+the original bug, ~38 pre-wave-3, ~62 after wave 3).
+
+**A real regression caught by the suite, not by a human:** with Fresh R1 crossing 41
+chunks, the loader's 40-chunk scan cap meant a late-cycle board could never see the
+final chunk, so it declared the pack exhausted early and reset the memory while fresh
+categories remained. `src/data.js` now scans every chunk of an original pack and keeps
+the cap only for the archive (which holds hundreds of chunks and can never truly run
+dry, since its 3,000-name memory cap is smaller than 40 chunks' worth of categories).
+
+**Two clues rescued from the runtime filter:** the engine's media filter was blocking
+"in this picture book" (a rule meant for "in this picture") and a written reference
+using "this song". Both clues were reworded to house style rather than weakening a
+filter that legitimately protects against media-dependent archive content.
+
+**Verification:** checker sweep OK (66 files, 655 categories, 3,275 board clues,
+78 finals, zero problems); 115-game no-repeat simulation clean on both packs;
+`npm run build` green; Playwright smoke green on both packs.

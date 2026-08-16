@@ -166,11 +166,13 @@ export async function loadRoundCategories(round, seen = new Set()) {
   }
 
   const POOL_TARGET = 18;
-  // Keep scanning chunks until the pool fills — a late-cycle board may need to
-  // visit every chunk of an original pack before we can say it's exhausted.
-  // The archive is capped at 40 chunks, but it can never truly run dry: its
-  // memory cap holds fewer names than 40 chunks contain.
-  const MAX_CHUNKS = Math.min(total, 40);
+  // Scan every chunk of an original pack before declaring it exhausted: a
+  // late-cycle board may have its last unplayed categories sitting in the one
+  // chunk a capped scan would skip, and stopping early resets the memory while
+  // fresh categories remain. The archive keeps a cap — it holds hundreds of
+  // chunks and can never truly run dry, since its memory cap (3000 names) is
+  // smaller than what 40 chunks already contain.
+  const MAX_CHUNKS = pack === 'archive' ? Math.min(total, 40) : total;
   const pool = [];
   const fallback = []; // playable but already played — used only if the pack runs dry
   // Always sample at least 3 chunks — archive chunks group clues from the same

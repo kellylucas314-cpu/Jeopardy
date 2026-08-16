@@ -5,7 +5,7 @@
       { "clue": "Generations of children have sung that this famous crossing 'is falling down, falling down'", "response": "London Bridge", "value": 400 },
       { "clue": "A classic swindle involved selling this 1883 East River landmark to gullible newcomers", "response": "the Brooklyn Bridge", "value": 800 },
       { "clue": "In a 1957 Best Picture winner, Alec Guinness's prisoners of war build a railway bridge over this river", "response": "the River Kwai", "value": 1200 },
-      { "clue": "Convicts took a last look at Venice through the windows of this covered crossing, and their reaction named it", "response": "the Bridge of Sighs", "value": 1600 },
+      { "clue": "Legend says convicts took one last look at Venice through the windows of this covered crossing, and their reaction named it", "response": "the Bridge of Sighs", "value": 1600 },
       { "clue": "Nicknamed Big Mac, this five-mile suspension span joins Michigan's two peninsulas", "response": "the Mackinac Bridge", "value": 2000 }
     ]
   },
@@ -13,7 +13,7 @@
     "name": "BUILT TO IMPRESS",
     "clues": [
       { "clue": "Victor Hugo's hunchback rang the bells of this great Paris cathedral", "response": "Notre Dame", "value": 400 },
-      { "clue": "In 1963 Dr. King said 'I have a dream' on the steps of this marble tribute to the 16th president", "response": "the Lincoln Memorial", "value": 800 },
+      { "clue": "In 1963 Dr. King told a vast crowd about his dream from the steps of this marble tribute to the 16th president", "response": "the Lincoln Memorial", "value": 800 },
       { "clue": "Houston's 1965 ballpark, the world's first domed stadium, was billed as the eighth wonder of the world", "response": "the Astrodome", "value": 1200 },
       { "clue": "A newspaper tycoon filled this San Simeon hilltop mansion with art; 'Citizen Kane' turned it into Xanadu", "response": "Hearst Castle", "value": 1600 },
       { "clue": "Squeezed onto a triangular block, this 1902 New York skyscraper was named for a household pressing tool", "response": "the Flatiron Building", "value": 2000 }
@@ -23,10 +23,10 @@
     "name": "OUT ON THE BRINY",
     "clues": [
       { "clue": "Italy, Greece and Egypt all have shores on this sea whose name means 'middle of the earth'", "response": "the Mediterranean Sea", "value": 400 },
-      { "clue": "The Gospels say Jesus calmed a storm and walked on the water of this lake in northern Israel", "response": "the Sea of Galilee", "value": 800 },
+      { "clue": "The Gospels say Jesus calmed a storm and walked on the water of this sea in northern Israel", "response": "the Sea of Galilee", "value": 800 },
       { "clue": "Yalta, Odessa and the Crimean Peninsula all sit on this dark-sounding sea", "response": "the Black Sea", "value": 1200 },
       { "clue": "Since the 1970s oil rigs have pumped crude from beneath this sea between Britain and Norway", "response": "the North Sea", "value": 1600 },
-      { "clue": "A grieving king of Athens threw himself into this sea, which took his name, when he thought his son had died", "response": "the Aegean Sea", "value": 2000 }
+      { "clue": "In Greek myth a grieving king of Athens threw himself into this sea, which took his name, when he thought his son had died", "response": "the Aegean Sea", "value": 2000 }
     ]
   },
   {
@@ -43,7 +43,7 @@
     "name": "WEATHER OR NOT",
     "clues": [
       { "clue": "Sunlight bending through leftover raindrops paints this seven-colored arc across the sky", "response": "a rainbow", "value": 400 },
-      { "clue": "A spinning funnel of Kansas wind carried Dorothy's farmhouse off to Oz", "response": "a tornado", "value": 800 },
+      { "clue": "A summer thunderstorm can pelt the garden with this ice, sometimes in lumps the size of golf balls", "response": "hail", "value": 800 },
       { "clue": "In the Atlantic this kind of giant spinning storm gets a name from an official list; near Japan it's a typhoon", "response": "a hurricane", "value": 1200 },
       { "clue": "When the needle on this weather instrument drops, sailors and farmers expect a storm", "response": "a barometer", "value": 1600 },
       { "clue": "New England braces for this kind of winter storm, named for the direction its fiercest winds blow", "response": "a nor'easter", "value": 2000 }

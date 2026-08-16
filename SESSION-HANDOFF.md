@@ -33,8 +33,8 @@ Vite + vanilla JS, no framework. Entry `index.html` → `src/main.js`.
 
 Three packs, selectable on the setup screen, pref key `pack` = `fresh` (default) | `easy` | `archive`:
 
-1. **✨ Fresh Pack** — `public/data/original/` — **799 categories + 116 finals (~4,100 clues), 100% original**, written by Claude agents for this game (copyright-safe, default). Wave 3 (2026-08-16) added 344 categories + 30 finals via the question factory: see `QUESTION-FACTORY.md`, `QUESTION-QUALITY.md`, `QUESTION-GENERATION-LOG.md`; rich sources + grades live in `packs-src/` (in-repo, durable).
-2. **🌷 Easy Breezy** — `public/data/easy/` — **251 gentle categories + 50 easy finals (~1,300 clues)**, made for older casual players: classic Hollywood, crooners/Motown, classic TV, home & garden, proverbs, 20th-century memories. Added because the archive was too hard for older family members.
+1. **✨ Fresh Pack** — `public/data/original/` — **966 categories + 140 finals (~4,970 clues), 100% original**, written by Claude agents for this game (copyright-safe, default). Wave 3 (2026-08-16) added 344 categories + 30 finals via the question factory: see `QUESTION-FACTORY.md`, `QUESTION-QUALITY.md`, `QUESTION-GENERATION-LOG.md`; rich sources + grades live in `packs-src/` (in-repo, durable).
+2. **🌷 Easy Breezy** — `public/data/easy/` — **323 gentle categories + 62 easy finals (~1,680 clues)**, made for older casual players: classic Hollywood, crooners/Motown, classic TV, home & garden, proverbs, 20th-century memories. Added because the archive was too hard for older family members.
 3. **📼 Deep Archive** — `public/data/{jeopardy,double,final}/` — ~460k real televised clues (scraped archive, copyrighted content → kept opt-in for personal play only; NOT for redistribution). Loader strips baked-in `\"` escape artifacts (~20% of rows) and filters media-dependent ("seen here") and stale ("currently…") clues at load time.
 
 Data format: chunk files `chunk-NNN.json`; round dirs `jeopardy` (R1, $200–1000), `double` (R2, $400–2000), `final` (no values). `public/data/manifest.json` holds chunk counts: `{jeopardy, double, final, original:{…}, easy:{…}}`.
