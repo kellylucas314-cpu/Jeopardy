@@ -1,0 +1,122 @@
+[
+  {
+    "name": "\"ISM\" ON THE PRIZE",
+    "clues": [
+      { "clue": "A critic mocking Monet's hazy 1872 harbor view 'Impression, Sunrise' accidentally named this movement", "response": "Impressionism", "value": 400 },
+      { "clue": "Melting clocks & men in bowler hats: Dalí & Magritte painted dream logic in this movement", "response": "Surrealism", "value": 800 },
+      { "clue": "Matisse & his blazing-color crew were dubbed 'wild beasts' — a jab that gave this movement its name", "response": "Fauvism", "value": 1200 },
+      { "clue": "Marinetti's 1909 manifesto launched this Italian movement that worshipped speed & the machine age", "response": "Futurism", "value": 1600 },
+      { "clue": "Kazimir Malevich's stark 'Black Square' anchored this Russian movement of pure geometric abstraction", "response": "Suprematism", "value": 2000 }
+    ]
+  },
+  {
+    "name": "CANVAS THE AREA",
+    "clues": [
+      { "clue": "A hairless figure clutches its face beneath a swirling blood-orange sky in this Edvard Munch icon", "response": "The Scream", "value": 400 },
+      { "clue": "Grant Wood posed his sister & his dentist as the stern farm pair of this 1930 painting, pitchfork & all", "response": "American Gothic", "value": 800 },
+      { "clue": "Vermeer's turbaned subject glances over her shoulder in this portrait dubbed the 'Mona Lisa of the North'", "response": "Girl with a Pearl Earring", "value": 1200 },
+      { "clue": "Castaways from an 1816 French frigate wreck signal a distant ship in this monumental Géricault canvas", "response": "The Raft of the Medusa", "value": 1600 },
+      { "clue": "Velázquez painted himself at his easel beside the Infanta Margarita in this 1656 royal group portrait", "response": "Las Meninas", "value": 2000 }
+    ]
+  },
+  {
+    "name": "NORSE CODE",
+    "clues": [
+      { "clue": "Whenever this thunder god hurls his hammer Mjolnir, it always returns to his hand", "response": "Thor", "value": 400 },
+      { "clue": "This Allfather pawned an eye at Mimir's well for wisdom & sends ravens Huginn & Muninn to scout", "response": "Odin", "value": 800 },
+      { "clue": "The nine worlds hang in the branches & roots of this cosmic ash tree", "response": "Yggdrasil", "value": 1200 },
+      { "clue": "The gods bound this monstrous wolf with a slender magic ribbon; the god Tyr's hand paid the price", "response": "Fenrir", "value": 1600 },
+      { "clue": "Loki, in mare form, gave birth to this eight-legged steed that carries Odin", "response": "Sleipnir", "value": 2000 }
+    ]
+  },
+  {
+    "name": "TOMB IT MAY CONCERN",
+    "clues": [
+      { "clue": "This jackal-headed god oversaw embalming & escorted souls to their final judgment", "response": "Anubis", "value": 400 },
+      { "clue": "Carved up by his brother Set & pieced back together by Isis, he became lord of the afterlife", "response": "Osiris", "value": 800 },
+      { "clue": "This ibis-headed scribe god jotted down the verdict when a heart was weighed against a feather", "response": "Thoth", "value": 1200 },
+      { "clue": "Part crocodile, part lion, part hippo, this 'Devourer' gobbled hearts that flunked the final test", "response": "Ammit", "value": 1600 },
+      { "clue": "Each night the sun god's barque battled this giant serpent of chaos lurking in the underworld", "response": "Apophis", "value": 2000 }
+    ]
+  },
+  {
+    "name": "BENCH PRESS",
+    "clues": [
+      { "clue": "This unanimous 1954 ruling declared segregated public schools unconstitutional", "response": "Brown v. Board of Education", "value": 400 },
+      { "clue": "Thanks to this 1966 decision, police must inform suspects of their rights before interrogation", "response": "Miranda v. Arizona", "value": 800 },
+      { "clue": "This 1896 case about a Louisiana railcar enshrined 'separate but equal' until 1954", "response": "Plessy v. Ferguson", "value": 1200 },
+      { "clue": "A Florida drifter's penciled prison petition won this 1963 case guaranteeing poor defendants a lawyer", "response": "Gideon v. Wainwright", "value": 1600 },
+      { "clue": "Oliver Wendell Holmes unveiled the 'clear & present danger' test in this 1919 Espionage Act case", "response": "Schenck v. United States", "value": 2000 }
+    ]
+  },
+  {
+    "name": "AMEND YOUR WAYS",
+    "clues": [
+      { "clue": "Ratified in 1920 after a single-vote squeaker in Tennessee, it guaranteed women the ballot", "response": "the 19th Amendment", "value": 400 },
+      { "clue": "Cheers! Ratified in 1933, it holds the distinction of being the only one that repeals another", "response": "the 21st Amendment", "value": 800 },
+      { "clue": "Adopted in 1951 in the wake of FDR's four wins, it limits presidents to two elected terms", "response": "the 22nd Amendment", "value": 1200 },
+      { "clue": "Gerald Ford became vice president under this 1967 addition covering White House vacancies & disability", "response": "the 25th Amendment", "value": 1600 },
+      { "clue": "James Madison proposed this curb on congressional pay raises in 1789; ratification came in 1992", "response": "the 27th Amendment", "value": 2000 }
+    ]
+  },
+  {
+    "name": "BEAST IN SHOW",
+    "clues": [
+      { "clue": "Outweighing any dinosaur we know of, this marine mammal is the largest animal ever to live", "response": "the blue whale", "value": 400 },
+      { "clue": "In a hunting dive called a stoop, this raptor tops 200 mph — no animal moves faster", "response": "the peregrine falcon", "value": 800 },
+      { "clue": "At up to 10 feet long, this Indonesian island giant is the world's largest lizard", "response": "the Komodo dragon", "value": 1200 },
+      { "clue": "This slender seabird's pole-to-pole round trip is the longest migration in the animal kingdom", "response": "the Arctic tern", "value": 1600 },
+      { "clue": "Scientists aged one female at roughly 400 years, making this Arctic fish the longest-lived vertebrate", "response": "the Greenland shark", "value": 2000 }
+    ]
+  },
+  {
+    "name": "A MURDER, SHE WROTE",
+    "clues": [
+      { "clue": "A group of these cawing black birds is famously known as a 'murder'", "response": "crows", "value": 400 },
+      { "clue": "Fittingly for such wise-looking birds, a gathering of these night hunters is a 'parliament'", "response": "owls", "value": 800 },
+      { "clue": "Stick your neck out & call a group of these long-legged African browsers a 'tower'", "response": "giraffes", "value": 1200 },
+      { "clue": "James Lipton titled his classic book on collective nouns 'An Exaltation of' these songbirds", "response": "larks", "value": 1600 },
+      { "clue": "Ouch — a swarm of these stinging, tentacled sea drifters is called a 'smack'", "response": "jellyfish", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE EXAMINED LIFE",
+    "clues": [
+      { "clue": "Condemned to drink hemlock in 399 B.C., he insisted the unexamined life is not worth living", "response": "Socrates", "value": 400 },
+      { "clue": "This Frenchman doubted away everything until only 'I think, therefore I am' was left standing", "response": "Descartes", "value": 800 },
+      { "clue": "This German proclaimed 'God is dead' & sent Zarathustra down the mountain preaching the Übermensch", "response": "Nietzsche", "value": 1200 },
+      { "clue": "This Königsberg philosopher of the categorical imperative kept walks so punctual, neighbors could set their clocks", "response": "Kant", "value": 1600 },
+      { "clue": "This Danish 'father of existentialism' pondered 'Either/Or' & championed the leap of faith", "response": "Kierkegaard", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SOCIAL CONTRACTORS",
+    "clues": [
+      { "clue": "In 'The Prince,' this Florentine advised that it is far safer for a ruler to be feared than loved", "response": "Machiavelli", "value": 400 },
+      { "clue": "'Leviathan' by this Englishman calls life in the state of nature 'nasty, brutish, and short'", "response": "Thomas Hobbes", "value": 800 },
+      { "clue": "Jefferson borrowed from this philosopher's natural rights — life, liberty & property — for the Declaration", "response": "John Locke", "value": 1200 },
+      { "clue": "'Man is born free, and everywhere he is in chains' opens this Genevan's 1762 'The Social Contract'", "response": "Rousseau", "value": 1600 },
+      { "clue": "Her 1792 'A Vindication of the Rights of Woman' made this Englishwoman a founding voice of feminism", "response": "Mary Wollstonecraft", "value": 2000 }
+    ]
+  },
+  {
+    "name": "CAMPAIGN CRITTERS",
+    "clues": [
+      { "clue": "Claiming to feel as fit as one, Teddy Roosevelt lent this animal's name to his 1912 Progressive Party", "response": "the bull moose", "value": 400 },
+      { "clue": "This Harper's Weekly cartoonist popularized both the Democratic donkey & the Republican elephant", "response": "Thomas Nast", "value": 800 },
+      { "clue": "Emerging from the pack at the 1844 Democratic convention, this Tennessean was the first 'dark horse' nominee", "response": "James K. Polk", "value": 1200 },
+      { "clue": "An 1812 cartoon mashed Gov. Elbridge Gerry's contorted district with this amphibian, coining a political verb", "response": "a salamander", "value": 1600 },
+      { "clue": "Louisiana's 'Kingfish,' this governor-turned-senator promised 'Every Man a King' before his 1935 assassination", "response": "Huey Long", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GODS IN DISGUISE",
+    "clues": [
+      { "clue": "Isis hides in this 13-day 1962 standoff that took JFK & Khrushchev to the nuclear brink", "response": "the Cuban Missile Crisis", "value": 400 },
+      { "clue": "Pan monkeys around in this great ape, our closest living relative alongside the bonobo", "response": "the chimpanzee", "value": 800 },
+      { "clue": "Thor thunders in the surname of the transcendentalist who spent 2 years in a cabin at Walden Pond", "response": "Thoreau", "value": 1200 },
+      { "clue": "Odin lurks in this French sculptor of 'The Thinker' & 'The Gates of Hell'", "response": "Rodin", "value": 1600 },
+      { "clue": "Ares blazes in this red supergiant of Scorpius whose very name means 'rival of' the war god", "response": "Antares", "value": 2000 }
+    ]
+  }
+]

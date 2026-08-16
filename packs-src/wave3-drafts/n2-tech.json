@@ -1,0 +1,62 @@
+[
+  {
+    "name": "BINARY STARS",
+    "clues": [
+      { "clue": "Lord Byron's daughter, she's celebrated as the first computer programmer for her Analytical Engine notes", "response": "Ada Lovelace", "value": 400 },
+      { "clue": "A U.S. Navy rear admiral, she wrote a pioneering compiler and helped create the business language COBOL", "response": "Grace Hopper", "value": 800 },
+      { "clue": "At 1968's 'Mother of All Demos', this engineer showed off a wooden-shelled gadget he invented: the computer mouse", "response": "Douglas Engelbart", "value": 1200 },
+      { "clue": "His 1948 paper 'A Mathematical Theory of Communication' earned him the title 'father of information theory'", "response": "Claude Shannon", "value": 1600 },
+      { "clue": "This Hungarian-born polymath's 1945 EDVAC report laid out the stored-program design that bears his name", "response": "John von Neumann", "value": 2000 }
+    ]
+  },
+  {
+    "name": "HELLO, WORLD!",
+    "clues": [
+      { "clue": "First called 'Oak', this Sun Microsystems programming language got a caffeinated rename in 1995", "response": "Java", "value": 400 },
+      { "clue": "Guido van Rossum named this programming language for a British comedy troupe, not a constrictor", "response": "Python", "value": 800 },
+      { "clue": "Dartmouth's Kemeny and Kurtz designed this aptly named beginner's language in 1964", "response": "BASIC", "value": 1200 },
+      { "clue": "John Backus led the IBM team behind this 1950s language whose name compresses 'formula translation'", "response": "FORTRAN", "value": 1600 },
+      { "clue": "John McCarthy conceived this list-processing language in 1958; it became the lingua franca of early AI labs", "response": "LISP", "value": 2000 }
+    ]
+  },
+  {
+    "name": "CARTRIDGE FAMILY",
+    "clues": [
+      { "clue": "Founded in Kyoto in 1889, this future console giant started out making hanafuda playing cards", "response": "Nintendo", "value": 400 },
+      { "clue": "Jilted in a CD-ROM partnership, Sony struck back with this gray console, launched in Japan in 1994", "response": "the PlayStation", "value": 800 },
+      { "clue": "Legend claims this 1978 Taito arcade smash caused a shortage of 100-yen coins in Japan", "response": "Space Invaders", "value": 1200 },
+      { "clue": "This Sega console hit North America on 9/9/99 with a built-in modem for online play", "response": "the Dreamcast", "value": 1600 },
+      { "clue": "Steve Russell and MIT friends wrote this pioneering 1962 space-duel game on a PDP-1", "response": "Spacewar!", "value": 2000 }
+    ]
+  },
+  {
+    "name": "ARPANET & CHILL",
+    "clues": [
+      { "clue": "Ray Tomlinson plucked this symbol from the keyboard to separate user from machine in early email addresses", "response": "the @ sign", "value": 400 },
+      { "clue": "This Briton's 1989 CERN proposal, deemed 'vague but exciting' by his boss, grew into the World Wide Web", "response": "Tim Berners-Lee", "value": 800 },
+      { "clue": "The first ARPANET message left this L.A. campus in 1969; the system crashed 2 letters into 'LOGIN'", "response": "UCLA", "value": 1200 },
+      { "clue": "With Bob Kahn, this 'Father of the Internet' designed the TCP/IP protocols in the 1970s", "response": "Vint Cerf", "value": 1600 },
+      { "clue": "Paul Baran and Donald Davies independently devised this data-chopping technique at the heart of the internet", "response": "packet switching", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GROUND CONTROL TO MAJOR TECH",
+    "clues": [
+      { "clue": "The beeps of this beach-ball-sized Soviet satellite kicked off the Space Race in October 1957", "response": "Sputnik", "value": 400 },
+      { "clue": "Launched with a flawed mirror in 1990, this space telescope received corrective optics from astronauts in 1993", "response": "Hubble", "value": 800 },
+      { "clue": "NASA myth aside, Swiss engineer George de Mestral invented this fastener after studying burrs on his dog", "response": "Velcro", "value": 1200 },
+      { "clue": "This 1962 Bell System satellite relayed live TV across the Atlantic and inspired a chart-topping instrumental", "response": "Telstar", "value": 1600 },
+      { "clue": "The first rover to drive on Mars, it landed with Pathfinder in 1997 bearing an abolitionist's name", "response": "Sojourner", "value": 2000 }
+    ]
+  },
+  {
+    "name": "BE KIND, REWIND",
+    "clues": [
+      { "clue": "JVC's videotape format outlasted Sony's Betamax in the great format war of the late 1970s and '80s", "response": "VHS", "value": 400 },
+      { "clue": "Learjet creator Bill Lear developed this looping tape cartridge format that boomed in 1970s car stereos", "response": "the 8-track", "value": 800 },
+      { "clue": "Sony launched this portable CD player line with 1984's D-50; later models touted anti-skip buffers", "response": "the Discman", "value": 1200 },
+      { "clue": "Cinephiles loved these LP-sized silver movie platters, though films often required a mid-movie side flip", "response": "LaserDiscs", "value": 1600 },
+      { "clue": "Introduced in 1906 with its horn tucked inside a cabinet, this phonograph brand became generic for record players", "response": "the Victrola", "value": 2000 }
+    ]
+  }
+]

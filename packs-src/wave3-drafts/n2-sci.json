@@ -1,0 +1,122 @@
+[
+  {
+    "name": "TABLE FOR 118",
+    "clues": [
+      { "clue": "The 'lead' in a pencil is actually graphite, a soft form of this element", "response": "carbon", "value": 400 },
+      { "clue": "Marie Curie named this radioactive element for her homeland, which was then under Russian rule", "response": "polonium", "value": 800 },
+      { "clue": "This element, symbol W, has the highest melting point of any metal, which made it ideal for light bulb filaments", "response": "tungsten", "value": 1200 },
+      { "clue": "Mendeleev predicted 'eka-aluminum'; a French chemist found the real thing in 1875 and named it for his homeland", "response": "gallium", "value": 1600 },
+      { "clue": "Element 43, first created in a cyclotron in 1937, takes its name from the Greek for 'artificial'", "response": "technetium", "value": 2000 }
+    ]
+  },
+  {
+    "name": "NOBLE INTENTIONS",
+    "clues": [
+      { "clue": "Glowing red-orange in signs, this noble gas takes its name from the Greek for 'new'", "response": "neon", "value": 400 },
+      { "clue": "Spotted in the sun's spectrum in 1868 before being found on Earth, this gas lifts blimps and party balloons", "response": "helium", "value": 800 },
+      { "clue": "Nearly 1% of the air you breathe is this noble gas whose Greek name means 'lazy' or 'inactive'", "response": "argon", "value": 1200 },
+      { "clue": "Seeping from soil into basements, this radioactive noble gas is the second leading cause of lung cancer in the U.S.", "response": "radon", "value": 1600 },
+      { "clue": "The heaviest noble gas with stable isotopes, its name means 'stranger'; ion engines and arc headlights use it", "response": "xenon", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SPOOKY ACTION",
+    "clues": [
+      { "clue": "Einstein dismissed this quantum link between far-apart particles as 'spooky action at a distance'", "response": "entanglement", "value": 400 },
+      { "clue": "In this Austrian's 1935 thought experiment, a cat in a box is both alive and dead until you look", "response": "Schrödinger", "value": 800 },
+      { "clue": "Wolfgang Pauli's principle of this name forbids two electrons in an atom from occupying the same quantum state", "response": "exclusion", "value": 1200 },
+      { "clue": "Antimatter was on paper before it was in a lab: this Englishman's 1928 equation predicted the positron", "response": "Dirac", "value": 1600 },
+      { "clue": "Predicting the meson that binds the atomic nucleus made this physicist Japan's first Nobel laureate in 1949", "response": "Yukawa", "value": 2000 }
+    ]
+  },
+  {
+    "name": "OHM SWEET OHM",
+    "clues": [
+      { "clue": "This Serbian-American champion of alternating current gave his name to the unit of magnetic flux density", "response": "Tesla", "value": 400 },
+      { "clue": "The unit of capacitance honors this Englishman who discovered electromagnetic induction in 1831", "response": "Faraday", "value": 800 },
+      { "clue": "In the 1860s this Scot's four equations revealed light itself as an electromagnetic wave", "response": "Maxwell", "value": 1200 },
+      { "clue": "The force on a charge moving through a magnetic field is named for this Dutch physicist, a 1902 Nobel winner", "response": "Lorentz", "value": 1600 },
+      { "clue": "During an 1820 lecture, this Dane saw a compass needle jump near a live wire, uniting electricity and magnetism", "response": "Oersted", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GERM OF AN IDEA",
+    "clues": [
+      { "clue": "Gentle heating that keeps milk safe is named for this Frenchman, who also developed a rabies vaccine", "response": "Pasteur", "value": 400 },
+      { "clue": "This British surgeon slashed operating-room deaths with carbolic-acid antisepsis; a mouthwash borrows his name", "response": "Lister", "value": 800 },
+      { "clue": "In 1796 this English doctor inoculated a boy with cowpox to protect him from smallpox", "response": "Jenner", "value": 1200 },
+      { "clue": "Mocked for telling doctors to wash their hands between autopsies and deliveries, this Hungarian died in an asylum in 1865", "response": "Semmelweis", "value": 1600 },
+      { "clue": "His namesake postulates link a specific germ to a specific disease; this German identified the TB bacillus in 1882", "response": "Koch", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GREATEST HEALS",
+    "clues": [
+      { "clue": "Bayer trademarked this pain reliever in 1899; its active ingredient descends from willow bark remedies", "response": "aspirin", "value": 400 },
+      { "clue": "Jonas Salk's vaccine, given a massive 1954 field trial, took aim at this paralyzing childhood disease", "response": "polio", "value": 800 },
+      { "clue": "Diabetes stopped being a death sentence after Banting and Best isolated this hormone in 1921", "response": "insulin", "value": 1200 },
+      { "clue": "In 1967 at Cape Town's Groote Schuur Hospital, this surgeon performed the first human heart transplant", "response": "Christiaan Barnard", "value": 1600 },
+      { "clue": "Galen's errors met their match in 1543 when this Flemish anatomist published 'On the Fabric of the Human Body'", "response": "Vesalius", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GOING OUT WITH A BANG",
+    "clues": [
+      { "clue": "Nothing, not even light, escapes once it crosses the event horizon of this collapsed object", "response": "a black hole", "value": 400 },
+      { "clue": "This blast of a dying star, capable of briefly outshining an entire galaxy, gets its name from the Latin for 'new'", "response": "a supernova", "value": 800 },
+      { "clue": "Most stars, our sun included, will end as this dense Earth-sized remnant that slowly cools for eons", "response": "a white dwarf", "value": 1200 },
+      { "clue": "A teaspoon of this city-sized collapsed stellar core would weigh billions of tons", "response": "a neutron star", "value": 1600 },
+      { "clue": "Jocelyn Bell Burnell found the first of these clocklike radio beacons in 1967; the source was waggishly labeled LGM-1", "response": "a pulsar", "value": 2000 }
+    ]
+  },
+  {
+    "name": "DEEP SKY DIVING",
+    "clues": [
+      { "clue": "Named for a chained princess, this nearest large spiral galaxy is on a slow collision course with the Milky Way", "response": "Andromeda", "value": 400 },
+      { "clue": "Latin for 'cloud', this word labels the Crab, the Orion and other glowing regions of gas and dust", "response": "a nebula", "value": 800 },
+      { "clue": "Short for 'quasi-stellar' objects, these blazing galactic cores can outshine a trillion suns", "response": "quasars", "value": 1200 },
+      { "clue": "This American proved the 'spiral nebulae' are galaxies beyond our own, then showed the universe is expanding", "response": "Edwin Hubble", "value": 1600 },
+      { "clue": "This Dutch astronomer's namesake cloud, a far-flung shell of icy bodies, is the source of long-period comets", "response": "Oort", "value": 2000 }
+    ]
+  },
+  {
+    "name": "DOUBLE HELIX FEATURE",
+    "clues": [
+      { "clue": "Rosalind Franklin's X-ray images helped Watson and Crick untwist the structure of this molecule in 1953", "response": "DNA", "value": 400 },
+      { "clue": "Genetics began in a monastery garden: this friar crossbred pea plants in the 1860s", "response": "Mendel", "value": 800 },
+      { "clue": "Adenine's partner in DNA, this base sits out in RNA, where uracil subs in", "response": "thymine", "value": 1200 },
+      { "clue": "Down syndrome results from an extra copy of the human chromosome with this number", "response": "21", "value": 1600 },
+      { "clue": "Barbara McClintock's Nobel-winning 'jumping genes' in corn are formally known by this name", "response": "transposons", "value": 2000 }
+    ]
+  },
+  {
+    "name": "MICROBE MANAGEMENT",
+    "clues": [
+      { "clue": "Bread rises and beer brews thanks to this budding single-celled fungus", "response": "yeast", "value": 400 },
+      { "clue": "This Dutch cloth merchant turned handmade lenses on pond water and found 'animalcules'", "response": "van Leeuwenhoek", "value": 800 },
+      { "clue": "The 'coli' in E. coli refers to this section of the human gut the bacterium usually calls home", "response": "the colon", "value": 1200 },
+      { "clue": "This Danish doctor's namesake stain still sorts bacteria into 'positive' and 'negative'", "response": "Gram", "value": 1600 },
+      { "clue": "Fond of boiling springs and briny lakes, these microbes look like bacteria but form a separate domain of life", "response": "archaea", "value": 2000 }
+    ]
+  },
+  {
+    "name": "IRRATIONAL BEHAVIOR",
+    "clues": [
+      { "clue": "Circumference divided by diameter gives you this constant, feted every March 14", "response": "pi", "value": 400 },
+      { "clue": "The base of natural logarithms, roughly 2.718, goes by this letter honoring Leonhard Euler", "response": "e", "value": 800 },
+      { "clue": "Cut a line so whole-to-longer matches longer-to-shorter and you land on this 'divine proportion', about 1.618", "response": "the golden ratio", "value": 1200 },
+      { "clue": "Legend says Pythagoreans drowned Hippasus for proving this number, the hypotenuse of a right triangle with legs 1 and 1, is irrational", "response": "the square root of 2", "value": 1600 },
+      { "clue": "In 1882 Lindemann proved pi is this type of number, the root of no integer-coefficient polynomial, dooming circle-squarers", "response": "transcendental", "value": 2000 }
+    ]
+  },
+  {
+    "name": "MEASURE FOR MEASURE",
+    "clues": [
+      { "clue": "Despite the name, this unit of about 5.9 trillion miles measures distance, not time", "response": "a light-year", "value": 400 },
+      { "clue": "Sailors sound off depth in this 6-foot unit, from an Old English word for outstretched arms", "response": "a fathom", "value": 800 },
+      { "clue": "Zero on this scale, named for a British lord, is absolute zero; its steps match Celsius degrees", "response": "Kelvin", "value": 1200 },
+      { "clue": "The SI unit of pressure honors this Frenchman who built a gear-driven calculator as a teenager", "response": "Pascal", "value": 1600 },
+      { "clue": "Atoms and light waves are sized in this tenth-of-a-nanometer unit named for a Swedish physicist", "response": "the angstrom", "value": 2000 }
+    ]
+  }
+]

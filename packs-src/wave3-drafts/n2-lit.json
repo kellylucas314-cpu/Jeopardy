@@ -1,0 +1,86 @@
+[
+  { "name": "PROSE WITHOUT BORDERS", "clues": [
+    { "clue": "The addled knight-errant of this 1605 Spanish novel charges at windmills he takes for giants", "response": "Don Quixote", "value": 400 },
+    { "clue": "A pilot stranded in the Sahara meets this French novella's golden-haired visitor from Asteroid B-612", "response": "The Little Prince", "value": 800 },
+    { "clue": "This Japanese author of '1Q84' and 'Kafka on the Shore' titled an earlier novel after the Beatles' 'Norwegian Wood'", "response": "Haruki Murakami", "value": 1200 },
+    { "clue": "Franciscan sleuth William of Baskerville probes a string of monastery deaths in this Umberto Eco bestseller", "response": "The Name of the Rose", "value": 1600 },
+    { "clue": "Oskar Matzerath, willing himself to stop growing at age 3, drums through this German Nobelist's 'The Tin Drum'", "response": "Günter Grass", "value": 2000 }
+  ] },
+  { "name": "FROM RUSSIA WITH LIT", "clues": [
+    { "clue": "The Rostovs and Bolkonskys endure Napoleon's invasion in this count's 'War and Peace'", "response": "Leo Tolstoy", "value": 400 },
+    { "clue": "This novelist, reprieved before a firing squad in 1849, went on to write 'The Idiot' and 'The Brothers Karamazov'", "response": "Fyodor Dostoevsky", "value": 800 },
+    { "clue": "This poet, Russia's national bard, was fatally wounded in an 1837 duel at 37, leaving the verse novel 'Eugene Onegin'", "response": "Alexander Pushkin", "value": 1200 },
+    { "clue": "The Devil visits Stalin-era Moscow with a giant talking black cat in this author's 'The Master and Margarita'", "response": "Mikhail Bulgakov", "value": 1600 },
+    { "clue": "Grigory Pechorin, the jaded antihero of 'A Hero of Our Time,' was created by this Romantic poet-novelist", "response": "Mikhail Lermontov", "value": 2000 }
+  ] },
+  { "name": "PRIZE FIGHTERS", "clues": [
+    { "clue": "A year after 'The Old Man and the Sea' took the Pulitzer, this American landed the 1954 Nobel", "response": "Ernest Hemingway", "value": 400 },
+    { "clue": "The saga of Macondo in 'One Hundred Years of Solitude' helped this Colombian win the 1982 Nobel", "response": "Gabriel García Márquez", "value": 800 },
+    { "clue": "Born in Nagasaki, this British novelist of 'The Remains of the Day' claimed the 2017 Nobel", "response": "Kazuo Ishiguro", "value": 1200 },
+    { "clue": "This existentialist author of 'Nausea' flatly turned down the 1964 Nobel, wary of becoming 'an institution'", "response": "Jean-Paul Sartre", "value": 1600 },
+    { "clue": "For the poems of 'Gitanjali,' this Bengali polymath in 1913 became the first non-European literature laureate", "response": "Rabindranath Tagore", "value": 2000 }
+  ] },
+  { "name": "BOOKER'S DOZEN", "clues": [
+    { "clue": "Yann Martel's Booker winner casts an Indian teen adrift at sea with a Bengal tiger named Richard Parker", "response": "Life of Pi", "value": 400 },
+    { "clue": "In 2019 she shared the Booker for 'The Testaments,' her sequel to 1985's 'The Handmaid's Tale'", "response": "Margaret Atwood", "value": 800 },
+    { "clue": "Michael Ondaatje's novel of a burned man in a Tuscan villa was voted the 'Golden Man Booker' for the prize's 50th year", "response": "The English Patient", "value": 1200 },
+    { "clue": "Two Bookers came her way for 'Wolf Hall' and 'Bring Up the Bodies,' the first legs of her Cromwell trilogy", "response": "Hilary Mantel", "value": 1600 },
+    { "clue": "Saleem Sinai, born at the instant of India's 1947 independence, narrates this winner of the 'Booker of Bookers'", "response": "Midnight's Children", "value": 2000 }
+  ] },
+  { "name": "AVANT-GARDE PARTY", "clues": [
+    { "clue": "Jack Kerouac's 'On the Road' and Allen Ginsberg's 'Howl' are gospels of this 1950s literary movement", "response": "the Beat Generation", "value": 400 },
+    { "clue": "André Breton's 1924 manifesto launched this movement bent on freeing the dream-logic of the unconscious", "response": "Surrealism", "value": 800 },
+    { "clue": "Hatched at Zurich's Cabaret Voltaire in 1916, this anti-art movement bears a name that's French for 'hobbyhorse'", "response": "Dada", "value": 1200 },
+    { "clue": "Ezra Pound's 2-line 'In a Station of the Metro' epitomizes this movement of spare, precise poetry", "response": "Imagism", "value": 1600 },
+    { "clue": "Georges Perec wrote a novel without the letter E under the constraints of this French 'workshop of potential literature'", "response": "Oulipo", "value": 2000 }
+  ] },
+  { "name": "ROMANTIC GESTURES", "clues": [
+    { "clue": "At 18, she conceived 'Frankenstein' during a ghost-story contest at Lord Byron's Lake Geneva villa", "response": "Mary Shelley", "value": 400 },
+    { "clue": "A crowd of golden daffodils moved this 'Lyrical Ballads' co-author to wander lonely as a cloud", "response": "William Wordsworth", "value": 800 },
+    { "clue": "This poet said an opium dream yielded 'Kubla Khan' — and blamed a 'person from Porlock' for its unfinished state", "response": "Samuel Taylor Coleridge", "value": 1200 },
+    { "clue": "Dead of tuberculosis at 25, this Romantic got his wish for an epitaph: 'Here lies one whose name was writ in water'", "response": "John Keats", "value": 1600 },
+    { "clue": "The 'blue flower' of Romantic longing first bloomed in 'Heinrich von Ofterdingen' by this German poet", "response": "Novalis", "value": 2000 }
+  ] },
+  { "name": "OF EPIC PROPORTIONS", "clues": [
+    { "clue": "Dodging a Cyclops, Sirens and a sorceress, its hero takes 10 years to sail home to Ithaca", "response": "the Odyssey", "value": 400 },
+    { "clue": "Virgil's epic carries a Trojan refugee to Italy to plant the seed of Rome", "response": "the Aeneid", "value": 800 },
+    { "clue": "Milton's blank-verse epic set out to 'justify the ways of God to men' — and gave Satan the best lines", "response": "Paradise Lost", "value": 1200 },
+    { "clue": "Tablets from Nineveh preserve this epic of a king of Uruk who seeks immortality after his friend Enkidu dies", "response": "Gilgamesh", "value": 1600 },
+    { "clue": "Camões made Vasco da Gama's voyage to India the heart of this Portuguese national epic", "response": "The Lusiads", "value": 2000 }
+  ] },
+  { "name": "PAPYRUS TRAIL", "clues": [
+    { "clue": "A plodding tortoise upsets a napping hare in a fable credited to this ancient Greek", "response": "Aesop", "value": 400 },
+    { "clue": "Only fragments survive from this lyric poet of Lesbos, hailed in antiquity as the 'tenth Muse'", "response": "Sappho", "value": 800 },
+    { "clue": "Augustus banished this poet to the Black Sea coast; his 'Metamorphoses' spins some 250 myths of transformation", "response": "Ovid", "value": 1200 },
+    { "clue": "This Athenian comic playwright mocked Socrates in 'The Clouds' and staged a sex strike in 'Lysistrata'", "response": "Aristophanes", "value": 1600 },
+    { "clue": "'Odi et amo' — 'I hate and I love' — this Roman poet agonized over his beloved, faithless Lesbia", "response": "Catullus", "value": 2000 }
+  ] },
+  { "name": "DYSTOPIA NEXT DOOR", "clues": [
+    { "clue": "Big Brother, Newspeak and the Thought Police were all born in this novel published in 1949", "response": "1984", "value": 400 },
+    { "clue": "Fireman Guy Montag torches books in this 1953 novel titled for 'the temperature at which book-paper catches fire'", "response": "Fahrenheit 451", "value": 800 },
+    { "clue": "Bokanovsky Process clones and a bliss-drug called soma keep order in this 1932 Aldous Huxley novel", "response": "Brave New World", "value": 1200 },
+    { "clue": "This Zamyatin novel of a glass-walled One State, a key influence on Orwell, is titled with a 2-letter pronoun", "response": "We", "value": 1600 },
+    { "clue": "Teen prophet Lauren Olamina sows the Earthseed faith in 'Parable of the Sower' by this SF visionary", "response": "Octavia Butler", "value": 2000 }
+  ] },
+  { "name": "MARTIAN CHRONICLERS", "clues": [
+    { "clue": "This Frenchman logged 20,000 leagues with Captain Nemo and 80 days with Phileas Fogg", "response": "Jules Verne", "value": 400 },
+    { "clue": "Heat rays from Mars scorch Victorian England in this author's 'The War of the Worlds'", "response": "H.G. Wells", "value": 800 },
+    { "clue": "Rockets ferry settlers to a dying red planet in 'The Martian Chronicles' by this Illinois-born fantasist", "response": "Ray Bradbury", "value": 1200 },
+    { "clue": "Her 'The Left Hand of Darkness' visits Gethen, an icy world whose people have no fixed sex", "response": "Ursula K. Le Guin", "value": 1600 },
+    { "clue": "Both Tarkovsky and Soderbergh filmed 'Solaris,' this Polish author's tale of a sentient ocean planet", "response": "Stanisław Lem", "value": 2000 }
+  ] },
+  { "name": "BEYOND THE BARD", "clues": [
+    { "clue": "A baby misplaced in a handbag powers 'The Importance of Being Earnest' by this Irish wit", "response": "Oscar Wilde", "value": 400 },
+    { "clue": "Nora Helmer's door-slamming exit from 'A Doll's House' scandalized this Norwegian's 1879 audiences", "response": "Henrik Ibsen", "value": 800 },
+    { "clue": "The axes bite into a beloved orchard as this Russian doctor-playwright's final play ends", "response": "Anton Chekhov", "value": 1200 },
+    { "clue": "In this Irishman's play, written first in French, tramps Vladimir and Estragon wait for a man who never shows", "response": "Samuel Beckett", "value": 1600 },
+    { "clue": "Six unfinished characters interrupt a rehearsal in this Italian's 1921 play that scandalized its Rome premiere", "response": "Luigi Pirandello", "value": 2000 }
+  ] },
+  { "name": "STAGE-SPANGLED BANNER", "clues": [
+    { "clue": "Willy Loman chases a hollow dream in 'Death of a Salesman' by this playwright who later wed Marilyn Monroe", "response": "Arthur Miller", "value": 400 },
+    { "clue": "Blanche DuBois relies on 'the kindness of strangers' in this Mississippi native's 'A Streetcar Named Desire'", "response": "Tennessee Williams", "value": 800 },
+    { "clue": "'A Raisin in the Sun' made her the first Black woman with a play on Broadway; the title nods to Langston Hughes", "response": "Lorraine Hansberry", "value": 1200 },
+    { "clue": "In 1936 this author of 'Long Day's Journey Into Night' became the first U.S. playwright to win the Nobel", "response": "Eugene O'Neill", "value": 1600 },
+    { "clue": "His 10-play Pittsburgh Cycle, including 'Fences' and 'The Piano Lesson,' covers Black life decade by decade", "response": "August Wilson", "value": 2000 }
+  ] }
+]

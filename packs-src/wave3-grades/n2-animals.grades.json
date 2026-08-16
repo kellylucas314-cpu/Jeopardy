@@ -1,0 +1,14 @@
+[
+  { "name": "FREQUENT FLYWAYS", "score": 46, "verdict": "revised", "notes": "Was 41: the $400 Canada goose row was a near-verbatim twin of n1-animals' FREQUENT FLYERS $200 and far too easy for R2; replaced with the monarch's multi-generation relay. Hummingbird answer still echoes e1-home (different pack, different angle)." },
+  { "name": "COMMUTING WITH NATURE", "score": 46, "verdict": "accepted", "notes": "Serengeti wildebeest, gray whale round trip, Christmas Island red crabs, Porcupine caribou herd, zooplankton vertical migration all verified." },
+  { "name": "PALEO DIET", "score": 46, "verdict": "accepted", "notes": "Permafrost mammoths, La Brea Smilodon, megalodon teeth, trilobites' 250M+ year run to the Great Dying, Dimetrodon as a synapsid — all correct." },
+  { "name": "THE LATE GREATS", "score": 46, "verdict": "revised", "notes": "Was 42: the $400 dodo row duplicated n1-animals' FLIGHT RISKS anchor; cut it, shifted thylacine/pigeon/auk/sea cow down a rung and added the quagga (Amsterdam, 1883) at $2000." },
+  { "name": "STRANGE BEDFELLOWS", "score": 47, "verdict": "accepted", "notes": "Clownfish kept here as the canonical symbiosis (its n1 twin was removed); oxpecker, honeyguide, goby/pistol shrimp and fig wasp all accurate." },
+  { "name": "YOU SCRATCH MY BACK", "score": 45, "verdict": "accepted", "notes": "Remora, lichen, ant-tended aphids, cleaner wrasse, mycorrhizae all correct; loses repeat points as the file's second symbiosis category." },
+  { "name": "ANIMAL ESP", "score": 47, "verdict": "accepted", "notes": "Echolocation, pit-organ infrared, ampullae of Lorenzini, magnetoreception (properly hedged with 'perhaps'), star-nosed mole's 22 rays — all verified." },
+  { "name": "THE BETTER TO SEE YOU WITH", "score": 46, "verdict": "revised", "notes": "Was 42: the $400 owl row made 'owl' the third such answer in the Fresh pack and collided with n2-mix in the same round; replaced with the dragonfly's 30,000-lens compound eyes." },
+  { "name": "BIOME, SWEET BIOME", "score": 45, "verdict": "accepted", "notes": "Tundra, savanna, taiga as largest land biome, chaparral, cloud forest all correct; the 'chaps' etymology hands the $1600 answer, but it is a deliberate word-origin hint." },
+  { "name": "LIQUID ASSETS", "score": 46, "verdict": "accepted", "notes": "Reef polyps, mangrove prop roots, Chesapeake as largest U.S. estuary, kelp's 2-feet-a-day growth, hydrothermal vent chemosynthesis — all sound." },
+  { "name": "PET PROJECTS", "score": 47, "verdict": "accepted", "notes": "Dolly (udder cell, 1996, named for Parton), Ham's Jan 1961 flight, Koko and All Ball, Alex's 'none', Clever Hans — all verified." },
+  { "name": "CLAWS CÉLÈBRES", "score": 47, "verdict": "accepted", "notes": "Punxsutawney Phil, Barnum's Jumbo (1882), Hachiko, Cher Ami and the Lost Battalion, Wojtek at Monte Cassino — all accurate; strong closing ramp." }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "SUNDAY MORNING COMICS",
+    "clues": [
+      { "clue": "Charlie Brown's beagle types his novel on the roof of his doghouse", "response": "Snoopy", "value": 400 },
+      { "clue": "Jim Davis drew this fat orange cat who loves lasagna and hates Mondays", "response": "Garfield", "value": 800 },
+      { "clue": "Dagwood Bumstead's wife gives this comic strip, begun in 1930, its title", "response": "Blondie", "value": 1200 },
+      { "clue": "Chester Gould's square-jawed detective wore a yellow hat and a two-way wrist radio", "response": "Dick Tracy", "value": 1600 },
+      { "clue": "Mort Walker's lazy private has spent decades dodging Sarge and every chore at Camp Swampy", "response": "Beetle Bailey", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE FUNNY PAGES",
+    "clues": [
+      { "clue": "A can of spinach turns this squinting, pipe-smoking sailor into a powerhouse", "response": "Popeye", "value": 400 },
+      { "clue": "A blond pest in overalls, he has plagued his neighbor Mr. Wilson since 1951", "response": "Dennis the Menace", "value": 800 },
+      { "clue": "Al Capp's hillbilly strip about the folks of Dogpatch gave America Sadie Hawkins Day", "response": "Li'l Abner", "value": 1200 },
+      { "clue": "Bill Watterson's boy and his stuffed tiger romped through this strip for ten years", "response": "Calvin and Hobbes", "value": 1600 },
+      { "clue": "One round panel a day follows Billy, Dolly, Jeffy and PJ in this gentle strip", "response": "The Family Circus", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE STORYBOOK MENAGERIE",
+    "clues": [
+      { "clue": "Norman Bridwell's oversized red dog belongs to a girl named Emily Elizabeth", "response": "Clifford", "value": 400 },
+      { "clue": "This barn spider spins words of praise to save a pig named Wilbur", "response": "Charlotte", "value": 800 },
+      { "clue": "E.B. White wrote about this mouse-sized son of a New York family", "response": "Stuart Little", "value": 1200 },
+      { "clue": "This young elephant comes home from the city in a green suit and is crowned king", "response": "Babar", "value": 1600 },
+      { "clue": "Munro Leaf's peaceable bull would rather sit and smell the flowers", "response": "Ferdinand", "value": 2000 }
+    ]
+  },
+  {
+    "name": "WHAT KIND OF ANIMAL?",
+    "clues": [
+      { "clue": "Paddington, who loves marmalade and hails from darkest Peru, is one of these", "response": "a bear", "value": 400 },
+      { "clue": "Bambi, the wide-eyed pal of Thumper and Flower, is this woodland animal", "response": "a deer", "value": 800 },
+      { "clue": "Anna Sewell's Black Beauty tells his own life story as this hardworking animal", "response": "a horse", "value": 1200 },
+      { "clue": "Mrs. Tiggy-Winkle, the little washerwoman of an English storybook, is this prickly animal", "response": "a hedgehog", "value": 1600 },
+      { "clue": "Rikki-Tikki-Tavi, who fights the cobra Nag in a Kipling tale, is one of these", "response": "a mongoose", "value": 2000 }
+    ]
+  },
+  {
+    "name": "DRAWN BY HAND",
+    "clues": [
+      { "clue": "He drew the tall red-and-white striped hat on a mischievous cat who calls on a rainy day", "response": "Dr. Seuss", "value": 400 },
+      { "clue": "This Englishwoman painted the watercolors for her own small tales of Tom Kitten", "response": "Beatrix Potter", "value": 800 },
+      { "clue": "He cut and pasted painted tissue paper to build a very hungry caterpillar", "response": "Eric Carle", "value": 1200 },
+      { "clue": "Max sails off to where the wild things are in this artist's 1963 picture book", "response": "Maurice Sendak", "value": 1600 },
+      { "clue": "His crowded books of trucks, workers and Lowly Worm took kids all over Busytown", "response": "Richard Scarry", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THAT CAME FROM A BOOK",
+    "clues": [
+      { "clue": "Stevenson's tale gave us the phrase 'Dr. Jekyll and Mr.' this", "response": "Hyde", "value": 400 },
+      { "clue": "A holiday killjoy gets called this, after a green grump who tried to steal Christmas in a 1957 book", "response": "a Grinch", "value": 800 },
+      { "clue": "A creation that turns on its maker is a monster of this name, from an 1818 novel", "response": "Frankenstein", "value": 1200 },
+      { "clue": "Orwell's '1984' gave us this two-word name for a government that watches everything", "response": "Big Brother", "value": 1600 },
+      { "clue": "Joseph Heller's 1961 novel title became our term for a no-win rule", "response": "Catch-22", "value": 2000 }
+    ]
+  },
+  {
+    "name": "STORYTELLERS WE GREW UP WITH",
+    "clues": [
+      { "clue": "This Missouri humorist sent Tom Sawyer to whitewash a fence and Huck Finn down the Mississippi", "response": "Mark Twain", "value": 400 },
+      { "clue": "This American gave us sleepy Rip Van Winkle and the Headless Horseman", "response": "Washington Irving", "value": 800 },
+      { "clue": "He sent James off inside a giant peach and gave Matilda her powers", "response": "Roald Dahl", "value": 1200 },
+      { "clue": "This bearded poet wrote and drew 'The Giving Tree' and 'Where the Sidewalk Ends'", "response": "Shel Silverstein", "value": 1600 },
+      { "clue": "This Scottish-born banker wrote of Mole, Ratty and Toad in 'The Wind in the Willows'", "response": "Kenneth Grahame", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE SCHOOL LIBRARY SHELF",
+    "clues": [
+      { "clue": "Carolyn Keene's teenage sleuth of River Heights got around in a snappy blue roadster", "response": "Nancy Drew", "value": 400 },
+      { "clue": "Frank and Joe crack mysteries around Bayport in this brotherly series", "response": "the Hardy Boys", "value": 800 },
+      { "clue": "Fred Gipson's stray dog guards a frontier Texas family and breaks every heart", "response": "Old Yeller", "value": 1200 },
+      { "clue": "Beverly Cleary's pesty little sister stirs up trouble on Klickitat Street", "response": "Ramona", "value": 1600 },
+      { "clue": "For 25 cents a day, this boy detective of Idaville solved his town's cases", "response": "Encyclopedia Brown", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE PULL-DOWN MAP",
+    "clues": [
+      { "clue": "Halfway between the poles, this imaginary circle rings the earth's middle", "response": "the equator", "value": 400 },
+      { "clue": "Geography class taught that this is the smallest continent, and a country besides", "response": "Australia", "value": 800 },
+      { "clue": "A set of giant locks lifts ships across Central America on this waterway of 1914", "response": "the Panama Canal", "value": 1200 },
+      { "clue": "Rain falling west of this ridge along the Rockies heads for the Pacific", "response": "the Continental Divide", "value": 1600 },
+      { "clue": "Crossing this imaginary marker in the mid-Pacific moves the calendar a whole day", "response": "the International Date Line", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE HISTORY LESSON",
+    "clues": [
+      { "clue": "Legend says this Philadelphia seamstress stitched the first Stars and Stripes", "response": "Betsy Ross", "value": 400 },
+      { "clue": "Colonists disguised as Mohawks dumped 342 chests of tea into the harbor at this 1773 protest", "response": "the Boston Tea Party", "value": 800 },
+      { "clue": "Young riders on horseback rushed the mail west in ten days for this 1860 outfit", "response": "the Pony Express", "value": 1200 },
+      { "clue": "Washington's ragged army shivered through the winter of 1777 at this Pennsylvania camp", "response": "Valley Forge", "value": 1600 },
+      { "clue": "In an old song a mule named Sal plods the towpath of this 1825 New York waterway", "response": "the Erie Canal", "value": 2000 }
+    ]
+  },
+  {
+    "name": "IN YOUR BEST HANDWRITING",
+    "clues": [
+      { "clue": "Old wooden school desks had a round hole in the corner to hold one of these", "response": "an inkwell", "value": 400 },
+      { "clue": "Before steel points, writers trimmed a goose feather into this kind of pen", "response": "a quill", "value": 800 },
+      { "clue": "This patriot signed the Declaration so boldly his name became slang for a signature", "response": "John Hancock", "value": 1200 },
+      { "clue": "Pressed onto wet ink, this pad of soft paper kept the page from smearing", "response": "a blotter", "value": 1600 },
+      { "clue": "The metal writing point of a fountain pen goes by this short name", "response": "a nib", "value": 2000 }
+    ]
+  },
+  {
+    "name": "MIND YOUR GRAMMAR",
+    "clues": [
+      { "clue": "Person, place or thing: that is the schoolbook definition of this part of speech", "response": "a noun", "value": 400 },
+      { "clue": "A sentence that asks something ends with this curl-and-dot bit of punctuation", "response": "a question mark", "value": 800 },
+      { "clue": "'And,' 'but' and 'or' are joining words of this sort, saluted by a Schoolhouse Rock cartoon", "response": "a conjunction", "value": 1200 },
+      { "clue": "Teachers once scolded pupils for ending a sentence with one of these little words, like 'of' or 'with'", "response": "a preposition", "value": 1600 },
+      { "clue": "Looking like a period perched on a comma, this mark can link two sentences that could stand alone", "response": "a semicolon", "value": 2000 }
+    ]
+  }
+]

@@ -17,16 +17,27 @@ let boardRevealDone = false;
 
 // Player identity
 const PLAYER_COLORS = ['var(--p0)', 'var(--p1)', 'var(--p2)'];
-const AVATARS = ['🦊', '🐙', '🦉', '🐸', '🦄', '🐯', '🐼', '👾', '🤖', '🍕', '🌟', '🐳'];
+const ROMAN = ['I', 'II', 'III'];
+
+/** A player's mark is their initial, struck like a monogram on a seal. */
+function monogram(name, i = 0) {
+  const trimmed = (name || '').trim();
+  // Unnamed players get a numeral rather than a row of identical "P"s
+  if (!trimmed || /^Player\s*\d*$/i.test(trimmed)) return ROMAN[i] || String(i + 1);
+  const ch = trimmed.match(/[\p{L}\p{N}]/u);
+  return ch ? ch[0].toUpperCase() : ROMAN[i] || String(i + 1);
+}
 let prevScores = []; // for score-bump animation on the board
 let prevLeader = null; // for lead-change announcements
 
 // Personality — the game reacts like a host, not a spreadsheet
-const CORRECT_LINES = ['Nailed it!', 'Big brain energy!', 'Money in the bank!', 'Too easy for you!', "That's the one!", 'Scholar alert!', 'Certified genius!'];
-const WRONG_LINES = ['Not this time!', 'Ooh, so close!', 'The judges say no!', 'Swing and a miss!', "That's gonna sting!", 'Bold... but no.'];
-const TIMEOUT_LINES = ["Time's up!", 'The clock got you!', 'Frozen at the buzzer!'];
-const NOBUZZ_LINES = ['No takers!', 'Crickets...', 'Tough crowd!', "Nobody's biting!"];
-const STEAL_LINES = ['It can be stolen!', 'Free money on the table!', 'Who wants it?'];
+// The Emperor's table talk — witty, dry, confident, lightly theatrical.
+const CORRECT_LINES = ['The Emperor accepts this answer.', 'A triumph worthy of the Grande Armée.', 'Précisément. Take the spoils.', 'History favors the prepared.', 'A conquest, cleanly executed.', 'The Emperor is… impressed.', 'Vive la victoire!'];
+const WRONG_LINES = ['A tactical retreat.', 'The Emperor regrets to decline.', 'Not even my cavalry could save that one.', 'Bold. Doomed, but bold.', 'We shall not speak of this again.', 'Every campaign has its setbacks.'];
+const TIMEOUT_LINES = ['Time waits for no emperor.', 'The clock has outflanked you.', 'Hesitation — the one enemy I never forgave.'];
+const NOBUZZ_LINES = ['No volunteers? Cowardice.', 'The salon falls silent…', 'Even my old guard would not charge at this one.', 'Very well. The board keeps its secret.'];
+const STEAL_LINES = ['The spoils lie unclaimed!', 'An open flank — who will take it?', 'Seize it, or regret it.'];
+const BOARD_LINES = ['Choose your battlefield.', 'The board awaits your command.', 'Pick your ground — history is watching.', 'Retreat is unavailable. Pick a category.', 'Every square hides a small war.'];
 
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -171,7 +182,7 @@ function handleTimeExpired() {
 
   showFeedback(`
     <div class="feedback-wrong">
-      <div class="feedback-icon">&#x23F0;</div>
+      <div class="feedback-icon">&mdash;</div>
       <div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
@@ -197,15 +208,16 @@ function renderSetup() {
   const records = loadRecords();
   const hof = records.lastWinner ? `
     <div class="hall-of-fame">
-      <span class="hof-item">👑 Last win: <strong>${escapeHtml(records.lastWinner.name)}</strong> · ${money(records.lastWinner.score)}</span>
-      ${records.best ? `<span class="hof-item">🏆 Best: <strong>${escapeHtml(records.best.name)}</strong> · ${money(records.best.score)}</span>` : ''}
+      <span class="hof-item">Last win: <strong>${escapeHtml(records.lastWinner.name)}</strong> · ${money(records.lastWinner.score)}</span>
+      ${records.best ? `<span class="hof-item">Best: <strong>${escapeHtml(records.best.name)}</strong> · ${money(records.best.score)}</span>` : ''}
     </div>` : '';
 
   app.innerHTML = `
     <div class="setup-screen">
       <div class="logo-container">
-        <h1 class="logo">RING IN</h1>
-        <div class="logo-subtitle">Trivia Night</div>
+        <img class="host-portrait" src="./assets/napoleon-bust.webp" alt="Napoleon Bonaparte, your host">
+        <h1 class="logo">Clue d&rsquo;&Eacute;tat</h1>
+        <div class="logo-subtitle">A trivia coup hosted by Napoleon</div>
       </div>
       ${hof}
       <div class="setup-card">
@@ -230,15 +242,15 @@ function renderSetup() {
         <h2 class="mode-title">Questions</h2>
         <div class="mode-buttons pack-buttons">
           <button class="btn-mode btn-pack ${pack === 'fresh' ? 'selected' : ''}" data-pack="fresh">
-            <span class="mode-name">&#x2728; Fresh Pack</span>
-            <span class="mode-desc">2,400+ original clues written for Ring In</span>
+            <span class="mode-name">Fresh Pack</span>
+            <span class="mode-desc">4,100+ original clues written for this game</span>
           </button>
           <button class="btn-mode btn-pack ${pack === 'easy' ? 'selected' : ''}" data-pack="easy">
-            <span class="mode-name">&#x1F337; Easy Breezy</span>
+            <span class="mode-name">Easy Breezy</span>
             <span class="mode-desc">Gentler questions, classics &amp; nostalgia</span>
           </button>
           <button class="btn-mode btn-pack ${pack === 'archive' ? 'selected' : ''}" data-pack="archive">
-            <span class="mode-name">&#x1F4FC; Deep Archive</span>
+            <span class="mode-name">Deep Archive</span>
             <span class="mode-desc">460,000+ clues &middot; tough &amp; twisty</span>
           </button>
         </div>
@@ -250,12 +262,12 @@ function renderSetup() {
               <span class="mode-desc">Pass the keyboard, answer one at a time</span>
             </button>
             <button class="btn-mode ${gameMode === 'buzz' ? 'selected' : ''}" data-mode="buzz">
-              <span class="mode-name">&#x1F514; Buzz In!</span>
-              <span class="mode-desc">Race to the buzzer like the real show</span>
+              <span class="mode-name">Buzz In!</span>
+              <span class="mode-desc">Race to the buzzer, salon-style</span>
             </button>
           </div>
         </div>
-        <button class="btn-start" id="btn-start-game">Start Game</button>
+        <button class="btn-start" id="btn-start-game">Begin the Campaign</button>
       </div>
       <div class="setup-footer">
         <label class="sound-toggle">
@@ -263,7 +275,7 @@ function renderSetup() {
           <span>Sound Effects</span>
         </label>
         <button class="link-btn" id="btn-how-to">How to play</button>
-        <a class="link-btn" href="https://kellylucas.dev/army.html">🐷 The Army</a>
+        <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
       </div>
     </div>
   `;
@@ -322,7 +334,7 @@ function renderSetup() {
     const names = Array.from(inputs).map((input, i) =>
       input.value.trim() || `Player ${i + 1}`
     );
-    const avatars = Array.from(document.querySelectorAll('.avatar-btn')).map(b => b.textContent.trim());
+    const avatars = names.map((n, i) => monogram(n, i));
     const mode = document.querySelector('.btn-mode.selected:not(.btn-pack)')?.dataset.mode || 'turns';
     const length = document.querySelector('.btn-length.selected')?.dataset.length || 'full';
     const packSel = document.querySelector('.btn-pack.selected')?.dataset.pack || 'fresh';
@@ -342,10 +354,10 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
   let html = '';
   for (let i = 0; i < count; i++) {
     const value = savedNames[i] || `Player ${i + 1}`;
-    const avatar = savedAvatars[i] || AVATARS[i];
     html += `
       <div class="name-input-group">
-        <button class="avatar-btn" data-index="${i}" title="Tap to change avatar" type="button">${avatar}</button>
+        <span class="player-seal" data-index="${i}" style="--pc: ${PLAYER_COLORS[i]}"
+              aria-hidden="true">${escapeHtml(monogram(value, i))}</span>
         <label>Player ${i + 1}</label>
         <input type="text" class="player-name-input" placeholder="Enter name"
                value="${escapeHtml(value)}" data-index="${i}"
@@ -355,12 +367,12 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
   }
   container.innerHTML = html;
 
-  // Tap an avatar to cycle through the set
-  container.querySelectorAll('.avatar-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const current = AVATARS.indexOf(btn.textContent.trim());
-      btn.textContent = AVATARS[(current + 1) % AVATARS.length];
-      sounds.playSelect();
+  // The seal restrikes itself as the name is typed
+  container.querySelectorAll('.player-name-input').forEach(input => {
+    input.addEventListener('input', () => {
+      const i = Number(input.dataset.index);
+      const seal = container.querySelector(`.player-seal[data-index="${i}"]`);
+      if (seal) seal.textContent = monogram(input.value, i);
     });
   });
 }
@@ -398,7 +410,7 @@ function renderError() {
 
 function renderBoard() {
   const { categories, players, activePlayer, round, cluesAnswered, totalClues, gameMode } = getState();
-  const roundName = round === 1 ? 'Round 1' : 'Round 2 · Doubled';
+  const roundName = round === 1 ? 'Campaign I' : 'Campaign II · Doubled';
   const progress = Math.round((cluesAnswered / totalClues) * 100);
 
   app.innerHTML = `
@@ -408,14 +420,13 @@ function renderBoard() {
         <div class="round-meta">
           <div class="round-name">${roundName}</div>
           <div class="round-progress"><div class="round-progress-fill" style="width:${progress}%"></div></div>
-          ${players.length > 1 ? `<div class="picks-cue" style="--pc: ${PLAYER_COLORS[activePlayer]}">🎯 ${escapeHtml(players[activePlayer].name)} picks</div>` : ''}
         </div>
         <div class="scoreboard">
           ${players.map((p, i) => `
             <div class="player-score ${i === activePlayer ? 'active' : ''}" style="--pc: ${PLAYER_COLORS[i]}">
-              <div class="player-avatar">${p.avatar || '🎲'}</div>
+              <div class="player-avatar">${escapeHtml(p.avatar || monogram(p.name))}</div>
               <div class="player-meta">
-                <div class="player-name">${escapeHtml(p.name)}${p.streak >= 2 ? ` <span class="streak">&#x1F525;${p.streak}</span>` : ''}</div>
+                <div class="player-name">${escapeHtml(p.name)}${p.streak >= 2 ? ` <span class="streak">&times;${p.streak}</span>` : ''}</div>
                 <div class="player-amount ${p.score < 0 ? 'negative' : ''}" data-index="${i}">$${formatMoney(p.score)}</div>
               </div>
             </div>
@@ -436,10 +447,18 @@ function renderBoard() {
         `).join('')}
       </div>
       <div class="board-footer">
-        ${cluesAnswered === 0 ? '<button class="link-btn reroll-btn" id="btn-reroll">🎲 New categories</button>' : ''}
-        <div class="clues-remaining">
-          ${totalClues - cluesAnswered} clues left
-          ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
+        <div class="host-dock">
+          <img class="host-medallion" src="./assets/napoleon-bust.webp" alt="Napoleon, your host">
+          <div class="host-plaque" aria-live="polite">${players.length > 1
+            ? `<strong style="color: ${PLAYER_COLORS[activePlayer]}">${escapeHtml(players[activePlayer].name)}</strong>, choose your battlefield.`
+            : pick(BOARD_LINES)}</div>
+        </div>
+        <div class="board-footer-info">
+          ${cluesAnswered === 0 ? '<button class="link-btn reroll-btn" id="btn-reroll">Redraw the map</button>' : ''}
+          <div class="clues-remaining">
+            ${totalClues - cluesAnswered} clues left
+            ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
+          </div>
         </div>
       </div>
     </div>
@@ -468,7 +487,7 @@ function renderBoard() {
     const leaders = players.map((p, i) => i).filter(i => players[i].score === top);
     const leader = leaders.length === 1 ? leaders[0] : null;
     if (leader !== null && prevLeader !== null && leader !== prevLeader) {
-      showToast(`👑 ${escapeHtml(players[leader].name)} takes the lead!`, PLAYER_COLORS[leader]);
+      showToast(`${escapeHtml(players[leader].name)} seizes the lead!`, PLAYER_COLORS[leader]);
       sounds.playLeadChange();
     }
     if (leader !== null) prevLeader = leader;
@@ -509,12 +528,12 @@ function showHowTo() {
       <ul class="how-to-list">
         <li><strong>Pick a clue</strong> from the board — higher rows are worth more.</li>
         <li><strong>Answer</strong> in plain words. Spelling and phrasing are forgiven, and you don't need "What is…".</li>
-        <li><strong>Right</strong> adds the value; <strong>wrong</strong> subtracts it. Get 3 right in a row for a 🔥 streak bonus.</li>
+        <li><strong>Right</strong> adds the value; <strong>wrong</strong> subtracts it. Get 3 right in a row for <strong>Campaign Momentum</strong> — a growing bonus.</li>
         <li><strong>Buzz In! mode:</strong> race to ring in with your key (or tap) once the clue is read. Buzz too early and you're locked out briefly.</li>
-        <li><strong>Daily Doubles</strong> let you wager. Then it's <strong>Final</strong> — one clue, secret wagers, winner takes the night.</li>
-        <li>The table is the judge: hit <strong>"We'll accept it"</strong> if a close answer got marked wrong.</li>
+        <li><strong>Waterloo Wagers</strong> hide on the board and let you bet your winnings. Then it's <strong>Waterloo</strong> — one clue, secret wagers, winner takes the night.</li>
+        <li>The table is the judge: hit <strong>"The Emperor accepts it"</strong> if a close answer got marked wrong.</li>
         <li><strong>Playing solo?</strong> Chase a Rank — S is Grand Champion — and beat your personal best.</li>
-        <li><strong>Question packs:</strong> Fresh Pack is written for Ring In, Easy Breezy is gentler for casual and older players, and the Deep Archive holds 460k+ tough classics. The game remembers what you've played — no repeat categories until you've seen a whole pack.</li>
+        <li><strong>Question packs:</strong> Fresh Pack is written just for this game, Easy Breezy is gentler for casual and older players, and the Deep Archive holds 460k+ tough classics. The game remembers what you've played — no repeat categories until you've seen a whole pack.</li>
       </ul>
       <div class="modal-actions">
         <button class="btn-cta modal-cancel">Got it</button>
@@ -642,7 +661,7 @@ function playCategoryIntro(categories) {
   const overlay = document.createElement('div');
   overlay.className = 'category-intro';
   overlay.innerHTML = `
-    <div class="ci-label">The categories are...</div>
+    <div class="ci-label">Tonight&rsquo;s battlefields&hellip;</div>
     <div class="ci-name" id="ci-name"></div>
     <div class="ci-skip">tap to skip</div>
   `;
@@ -726,10 +745,10 @@ function flashScreen(kind) {
   setTimeout(() => el.remove(), 550);
 }
 
-/** "🔥 3 in a row" bonus callout when a streak pays extra. */
+/** Campaign Momentum callout when a streak pays extra. */
 function bonusHtml(result) {
   if (!result.bonus) return '';
-  return `<div class="streak-callout">&#x1F525; ${result.streak} in a row &middot; +$${formatMoney(result.bonus)} streak bonus</div>`;
+  return `<div class="streak-callout">Campaign Momentum &middot; ${result.streak} in a row &middot; +$${formatMoney(result.bonus)}</div>`;
 }
 
 // — Turns mode (and daily doubles in any mode) —
@@ -739,7 +758,7 @@ function renderTurnsClue() {
 
   app.innerHTML = clueShell(`
     <div class="clue-player">
-      ${players.length > 1 ? `<span>${escapeHtml(players[answeringPlayer].name)}'s ${currentClue.isDailyDouble && gameMode === 'buzz' ? 'Daily Double' : 'turn'}</span>` : ''}
+      ${players.length > 1 ? `<span>${escapeHtml(players[answeringPlayer].name)}'s ${currentClue.isDailyDouble && gameMode === 'buzz' ? 'Waterloo Wager' : 'turn'}</span>` : ''}
     </div>
     <div class="clue-answer-area">
       <input type="text" id="answer-input" class="answer-input"
@@ -796,7 +815,7 @@ function handleSubmitAnswer() {
         <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
         <div class="feedback-actions">
           <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
-          <button class="btn-feedback-accept" id="btn-fb-accept">We'll accept it &#x2713;</button>
+          <button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it &#x2713;</button>
         </div>
       </div>
     `);
@@ -875,7 +894,7 @@ function renderBuzzerRow() {
   row.innerHTML = players.map((p, i) => `
     <button class="btn-buzzer ${buzzAttempted[i] ? 'out' : ''}" data-player="${i}"
             style="--pc: ${PLAYER_COLORS[i]}" ${buzzAttempted[i] ? 'disabled' : ''}>
-      <span class="buzzer-name">${p.avatar || ''} ${escapeHtml(p.name)}</span>
+      <span class="buzzer-name">${escapeHtml(p.name)}</span>
       <span class="buzzer-key">${buzzAttempted[i] ? '&#x2717;' : BUZZ_KEYS[i].toUpperCase()}</span>
     </button>
   `).join('');
@@ -910,7 +929,7 @@ function openBuzzers() {
 
   const status = document.getElementById('buzz-status');
   if (status) {
-    status.innerHTML = '&#x1F514; BUZZ IN!';
+    status.innerHTML = 'BUZZ IN!';
     status.classList.add('open');
   }
   sounds.playBuzzersOpen();
@@ -956,7 +975,7 @@ function tryBuzz(playerIndex) {
   const area = document.getElementById('answer-area');
   area.style.display = '';
   document.getElementById('answering-name').innerHTML =
-    `<span class="buzzed-flash" style="--pc: ${PLAYER_COLORS[playerIndex]}">${players[playerIndex].avatar || ''} ${escapeHtml(players[playerIndex].name)} buzzed in!</span>`;
+    `<span class="buzzed-flash" style="--pc: ${PLAYER_COLORS[playerIndex]}">${escapeHtml(players[playerIndex].name)} buzzed in!</span>`;
 
   const input = document.getElementById('answer-input');
   setTimeout(() => input.focus(), 50);
@@ -1004,7 +1023,7 @@ function resolveBuzzAnswer(answer, timedOut) {
 
   // Wrong (or silent) — maybe others can still steal it
   const header = timedOut
-    ? `<div class="feedback-icon">&#x23F0;</div><div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>`
+    ? `<div class="feedback-icon">&mdash;</div><div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>`
     : `<div class="feedback-icon">&#x2717;</div><div>${pick(WRONG_LINES)} -$${formatMoney(result.value)}</div>`;
 
   if (result.canRebuzz) {
@@ -1013,8 +1032,8 @@ function resolveBuzzAnswer(answer, timedOut) {
         ${header}
         <div class="correct-response">${pick(STEAL_LINES)} ${result.remaining} player${result.remaining > 1 ? 's' : ''} can buzz.</div>
         <div class="feedback-actions">
-          <button class="btn-feedback-continue" id="btn-fb-continue">Open Buzzers &#x1F514;</button>
-          ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">We'll accept it &#x2713;</button>`}
+          <button class="btn-feedback-continue" id="btn-fb-continue">Open Buzzers</button>
+          ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it &#x2713;</button>`}
         </div>
       </div>
     `);
@@ -1029,7 +1048,7 @@ function resolveBuzzAnswer(answer, timedOut) {
         <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
         <div class="feedback-actions">
           <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
-          ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">We'll accept it &#x2713;</button>`}
+          ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it &#x2713;</button>`}
         </div>
       </div>
     `);
@@ -1087,7 +1106,8 @@ function renderDailyDouble() {
   app.innerHTML = `
     <div class="daily-double-screen">
       <div class="dd-flash">
-        <div class="dd-title">DAILY<br>DOUBLE!</div>
+        <div class="dd-title">WATERLOO<br>WAGER</div>
+        <div class="host-line">A bold wager. I approve of nothing less.<span class="host-attrib">The Emperor</span></div>
       </div>
       <div class="dd-content">
         <div class="dd-category">${escapeHtml(currentClue.categoryName)}</div>
@@ -1147,18 +1167,18 @@ function renderRoundTransition() {
   app.innerHTML = `
     <div class="transition-screen">
       <div class="transition-scores">
-        <h3>End of Round 1</h3>
+        <h3>End of Campaign I</h3>
         ${players.map(p => `
           <div class="transition-player">
-            <span>${p.avatar || ''} ${escapeHtml(p.name)}</span>
+            <span>${escapeHtml(p.name)}</span>
             <span class="${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</span>
           </div>
         `).join('')}
       </div>
-      <div class="transition-title">Round 2</div>
+      <div class="transition-title">Campaign II</div>
       <div class="transition-subtitle">All values are doubled!</div>
-      ${players.length > 1 ? `<div class="transition-note">${players[lowest].avatar || ''} <strong>${escapeHtml(players[lowest].name)}</strong> is trailing and gets first pick</div>` : ''}
-      <button class="btn-continue" id="btn-continue">Continue</button>
+      ${players.length > 1 ? `<div class="transition-note"><strong>${escapeHtml(players[lowest].name)}</strong> is trailing and gets first pick</div>` : ''}
+      <button class="btn-continue" id="btn-continue">March On</button>
     </div>
   `;
 
@@ -1177,7 +1197,7 @@ function renderFinalCategory() {
 
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">The Final</div>
+      <div class="final-header">Waterloo</div>
       <div class="final-scores">
         ${players.map(p => `
           <div class="transition-player">
@@ -1187,8 +1207,9 @@ function renderFinalCategory() {
         `).join('')}
       </div>
       <div class="final-category-reveal">
-        <div class="final-category-label">The category is:</div>
+        <div class="final-category-label">The final battlefield:</div>
         <div class="final-category-name">${escapeHtml(finalClue.name)}</div>
+        <div class="host-line">Waterloo. Where everything is decided.<span class="host-attrib">The Emperor</span></div>
       </div>
       <button class="btn-continue" id="btn-final-wager">Place Wagers</button>
     </div>
@@ -1206,9 +1227,9 @@ function passCover(playerIdx, sub, onReady) {
   const p = getState().players[playerIdx];
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">The Final</div>
+      <div class="final-header">Waterloo</div>
       <div class="pass-card">
-        <div class="pass-avatar" style="--pc: ${PLAYER_COLORS[playerIdx]}">${p.avatar || '🎲'}</div>
+        <div class="pass-avatar" style="--pc: ${PLAYER_COLORS[playerIdx]}">${escapeHtml(p.avatar || monogram(p.name))}</div>
         <div class="pass-name">Pass the device to ${escapeHtml(p.name)}</div>
         <div class="pass-sub">${sub}</div>
         <button class="btn-cta pass-go" id="pass-go">I'm ${escapeHtml(p.name)} — Ready</button>
@@ -1241,8 +1262,8 @@ function renderFinalWager() {
     const maxW = Math.max(0, p.score);
     app.innerHTML = `
       <div class="final-screen">
-        <div class="final-header">The Final</div>
-        <div class="final-subtitle" style="--pc:${PLAYER_COLORS[idx]}">${p.avatar || ''} ${escapeHtml(p.name)} — you have $${formatMoney(p.score)}</div>
+        <div class="final-header">Waterloo</div>
+        <div class="final-subtitle" style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)} — you have $${formatMoney(p.score)}</div>
         <div class="dd-wager-area" style="max-width:380px;width:100%">
           <label>Your secret wager</label>
           <div class="wager-input-row">
@@ -1285,7 +1306,7 @@ function renderFinalClue() {
   // Everyone reads the clue together, think music playing.
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">The Final</div>
+      <div class="final-header">Waterloo</div>
       <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
       <div class="final-clue-text">${escapeHtml(finalClue.clue)}</div>
       <div class="think-music-note">&#9835; Think music playing…</div>
@@ -1308,12 +1329,12 @@ function renderFinalClue() {
       const p = players[idx];
       app.innerHTML = `
         <div class="final-screen">
-          <div class="final-header">The Final</div>
+          <div class="final-header">Waterloo</div>
           <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
           <div class="final-clue-text" style="font-size:1.3rem">${escapeHtml(finalClue.clue)}</div>
           <div class="final-answer-form">
             <div class="final-answer-player">
-              <label style="--pc:${PLAYER_COLORS[idx]}">${p.avatar || ''} ${escapeHtml(p.name)} — your response</label>
+              <label style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)} — your response</label>
               <input type="text" id="final-answer-input" class="answer-input" placeholder="What is…" autocomplete="off">
             </div>
             <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock In &amp; Pass' : 'Reveal Answers'}</button>
@@ -1335,7 +1356,7 @@ function renderFinalAnswer() {
 
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">The Final</div>
+      <div class="final-header">Waterloo</div>
       <div class="final-correct-response">
         <div class="label">Correct response:</div>
         <div class="response">${escapeHtml(finalClue.response)}</div>
@@ -1349,7 +1370,7 @@ function renderFinalAnswer() {
             <div class="frp-total">$${formatMoney(p.score)}</div>
             ${finalWagers[i] > 0 || finalAnswers[i].answer ? `
               <button class="btn-final-override" data-player="${i}">
-                ${finalAnswers[i].correct ? 'Mark wrong &#x2717;' : "We'll accept it &#x2713;"}
+                ${finalAnswers[i].correct ? 'Mark wrong &#x2717;' : "The Emperor accepts it &#x2713;"}
               </button>
             ` : ''}
           </div>
@@ -1374,11 +1395,11 @@ let recordedThisGame = false;
 
 /** Solo report card: rank letter, title, and emoji from accuracy + volume. */
 const SOLO_TIERS = [
-  { letter: 'S', title: 'Grand Champion', emoji: '🏆', acc: 0.9, full: 22, quick: 12 },
-  { letter: 'A', title: 'Tournament Ready', emoji: '🌟', acc: 0.8, full: 17, quick: 9 },
-  { letter: 'B', title: 'Sharp Contender', emoji: '💪', acc: 0.65, full: 12, quick: 6 },
-  { letter: 'C', title: 'Warming Up', emoji: '📚', acc: 0.5, full: 8, quick: 4 },
-  { letter: 'D', title: 'Rookie Round', emoji: '🌱', acc: 0, full: 0, quick: 0 },
+  { letter: 'S', title: 'Grand Champion', acc: 0.9, full: 22, quick: 12 },
+  { letter: 'A', title: 'Tournament Ready', acc: 0.8, full: 17, quick: 9 },
+  { letter: 'B', title: 'Sharp Contender', acc: 0.65, full: 12, quick: 6 },
+  { letter: 'C', title: 'Warming Up', acc: 0.5, full: 8, quick: 4 },
+  { letter: 'D', title: 'Rookie Round', acc: 0, full: 0, quick: 0 },
 ];
 
 function soloRank(p, gameLength) {
@@ -1417,18 +1438,19 @@ function renderResults() {
   const podiumOrder = ranked.length === 3 ? [ranked[1], ranked[0], ranked[2]]
     : ranked.length === 2 ? [ranked[1], ranked[0]]
     : [ranked[0]];
-  const medal = ['&#x1F947;', '&#x1F948;', '&#x1F949;'];
+  const medal = ['I', 'II', 'III'];
 
   app.innerHTML = `
     <div class="results-screen">
       <div class="results-title">${solo
-        ? `${rank.emoji} Rank ${rank.letter} — ${rank.title}`
+        ? `Rank ${rank.letter} — ${rank.title}`
         : isTie ? "It's a Tie!" : `${escapeHtml(winner.name)} Wins!`}</div>
-      ${newBest ? '<div class="solo-best-callout">🎉 New personal best!</div>' : ''}
+      ${newBest ? '<div class="solo-best-callout">New personal best!</div>' : ''}
       ${solo && rank.next ? `<div class="solo-next-hint">${rank.next}</div>` : ''}
+      ${!solo && !isTie ? `<div class="host-line">Not since Austerlitz have I seen such form.<span class="host-attrib">The Emperor</span></div>` : ''}
       ${solo ? `
       <div class="solo-scorecard" style="--pc: ${PLAYER_COLORS[0]}">
-        <div class="podium-avatar">${winner.avatar || '🎲'}</div>
+        <div class="podium-avatar">${escapeHtml(winner.avatar || monogram(winner.name))}</div>
         <div class="solo-score-money ${winner.score < 0 ? 'negative' : ''}">${money(winner.score)}</div>
         <div class="solo-score-sub">${escapeHtml(winner.name)}'s winnings</div>
       </div>
@@ -1438,7 +1460,7 @@ function renderResults() {
           const place = ranked.indexOf(p) + 1;
           return `
             <div class="podium-col rank-${place}" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">
-              <div class="podium-avatar">${p.avatar || '🎲'}</div>
+              <div class="podium-avatar">${escapeHtml(p.avatar || monogram(p.name))}</div>
               <div class="podium-name">${escapeHtml(p.name)}</div>
               <div class="podium-money ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
               <div class="podium-block">${medal[place - 1]}</div>
@@ -1453,12 +1475,12 @@ function renderResults() {
           const accuracy = attempts > 0 ? Math.round((p.correct / attempts) * 100) : 0;
           return `
             <div class="result-stats-row">
-              <span class="rsr-name" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">${p.avatar || ''} ${escapeHtml(p.name)}</span>
+              <span class="rsr-name" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">${escapeHtml(p.name)}</span>
               <span class="rsr-stats">
                 <span class="stat-good">&#x2713; ${p.correct}</span>
                 <span class="stat-bad">&#x2717; ${p.wrong}</span>
                 <span>${accuracy}%</span>
-                ${p.bestStreak >= 2 ? `<span>&#x1F525;${p.bestStreak}</span>` : ''}
+                ${p.bestStreak >= 2 ? `<span>best run &times;${p.bestStreak}</span>` : ''}
               </span>
             </div>
           `;
@@ -1487,14 +1509,14 @@ function renderResults() {
 
 /** Copy a shareable summary of the game to the clipboard. */
 function shareResult(ranked, isTie) {
-  const medals = ['🥇', '🥈', '🥉'];
+  const medals = ['I', 'II', 'III'];
   const solo = ranked.length === 1;
   const lines = ranked.map((p, i) => `${medals[i] || '•'} ${p.name} — ${money(p.score)}`);
   const rank = solo ? soloRank(ranked[0], getState().gameLength) : null;
-  const header = solo ? `${ranked[0].name} hit Rank ${rank.letter} (${rank.title}) on Ring In! ${rank.emoji}`
-    : isTie ? "It's a tie on Ring In! 🔔" : `${ranked[0].name} won Ring In! 🔔`;
+  const header = solo ? `${ranked[0].name} hit Rank ${rank.letter} (${rank.title}) on Clue d'État!`
+    : isTie ? "It's a tie on Clue d'État!" : `${ranked[0].name} won Clue d'État!`;
   const text = `${header}\n${lines.join('\n')}\n\nPlay: https://kellylucas314-cpu.github.io/Jeopardy/`;
-  const done = () => showToast('📋 Result copied — go brag!', 'var(--brass)');
+  const done = () => showToast('Result copied — go brag!', 'var(--brass)');
   if (navigator.clipboard?.writeText) {
     navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
   } else {
@@ -1514,7 +1536,7 @@ function fallbackCopy(text, done) {
 }
 
 function spawnConfetti() {
-  const colors = ['#d8a85a', '#ecc578', '#34b88a', '#f3ead8', '#e2795c', '#5bb0b8'];
+  const colors = ['#a07430', '#c8a15c', '#c96f52', '#41684e', '#7e2d21', '#2e7078'];
   const container = document.createElement('div');
   container.className = 'confetti-container';
 

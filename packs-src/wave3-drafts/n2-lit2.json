@@ -1,0 +1,122 @@
+[
+  {
+    "name": "COLD OPENS",
+    "clues": [
+      { "clue": "Boys evacuated by air are marooned on an island, and Ralph blows a conch to gather them in this 1954 William Golding novel", "response": "Lord of the Flies", "value": 400 },
+      { "clue": "Two migrant workers, one huge and slow-witted, camp by the Salinas River before reporting to a ranch in this Steinbeck novella", "response": "Of Mice and Men", "value": 800 },
+      { "clue": "A telegram tells an Algiers clerk that his mother has died; the funeral heat bothers him more than grief in this Camus novel", "response": "The Stranger", "value": 1200 },
+      { "clue": "A young engineer plans a three-week visit to his cousin at a Davos sanatorium and stays seven years in this Thomas Mann epic", "response": "The Magic Mountain", "value": 1600 },
+      { "clue": "A drunken hay-trusser auctions his wife and baby to a sailor for five guineas at a country fair in this Thomas Hardy novel", "response": "The Mayor of Casterbridge", "value": 2000 }
+    ]
+  },
+  {
+    "name": "CHAPTER ONE-DERS",
+    "clues": [
+      { "clue": "A young solicitor's journal records his coach trip to a Carpathian castle at the start of this 1897 Bram Stoker novel", "response": "Dracula", "value": 400 },
+      { "clue": "Buck, a pampered ranch dog in California, is stolen and shipped north to haul sleds in this Jack London tale", "response": "The Call of the Wild", "value": 800 },
+      { "clue": "Esther Greenwood starts a New York magazine job the summer the Rosenbergs are executed in this Sylvia Plath novel", "response": "The Bell Jar", "value": 1200 },
+      { "clue": "Janie Crawford walks home to her Florida town at sundown in muddy overalls as the porch sitters gossip in this Hurston novel", "response": "Their Eyes Were Watching God", "value": 1600 },
+      { "clue": "A man with a child's mind watches golfers through a fence, hearing his lost sister's name in their shouts, in this Faulkner novel", "response": "The Sound and the Fury", "value": 2000 }
+    ]
+  },
+  {
+    "name": "INK-OGNITO",
+    "clues": [
+      { "clue": "Oxford math lecturer Charles Lutwidge Dodgson latinized his first two names, flipped them and got this byline", "response": "Lewis Carroll", "value": 400 },
+      { "clue": "Mary Ann Evans took a man's name so critics would take her seriously; 'Middlemarch' still carries it", "response": "George Eliot", "value": 800 },
+      { "clue": "Imprisoned in Ohio for embezzling from a Texas bank, William Sydney Porter emerged with this twist-ending byline", "response": "O. Henry", "value": 1200 },
+      { "clue": "Danish baroness Karen Blixen wrote 'Out of Africa' under this pen name whose first word means 'the one who laughs'", "response": "Isak Dinesen", "value": 1600 },
+      { "clue": "Charlotte Brontë published 'Jane Eyre' under this alias; her sisters used the same surname with different first names", "response": "Currer Bell", "value": 2000 }
+    ]
+  },
+  {
+    "name": "PLUME & CIRCUMSTANCE",
+    "clues": [
+      { "clue": "The detective novels of Robert Galbraith are really the work of this creator of a scarred boy wizard", "response": "J.K. Rowling", "value": 400 },
+      { "clue": "'Thinner' and 'The Running Man' first appeared under the invented byline Richard Bachman, a cover for this Maine novelist", "response": "Stephen King", "value": 800 },
+      { "clue": "Lemony Snicket, chronicler of the doomed Baudelaire orphans, is the alter ego of this accordion-playing American novelist", "response": "Daniel Handler", "value": 1200 },
+      { "clue": "Years before her March sisters made her famous, this New England author sold lurid thrillers as A.M. Barnard", "response": "Louisa May Alcott", "value": 1600 },
+      { "clue": "Writing as Isaac Bickerstaff, this Dubliner predicted an almanac-maker's death, then insisted the protesting man had died on schedule", "response": "Jonathan Swift", "value": 2000 }
+    ]
+  },
+  {
+    "name": "ROGUES' GALLEY",
+    "clues": [
+      { "clue": "Jim Hawkins, hidden in an apple barrel, overhears this one-legged ship's cook plotting mutiny", "response": "Long John Silver", "value": 400 },
+      { "clue": "This obsessive police inspector hunts Jean Valjean for decades, then drowns himself in the Seine", "response": "Javert", "value": 800 },
+      { "clue": "This vengeful doctor torments Arthur Dimmesdale while hiding the fact that he is Hester Prynne's husband", "response": "Roger Chillingworth", "value": 1200 },
+      { "clue": "Branded with a fleur-de-lis, this agent of Cardinal Richelieu poisons Constance in 'The Three Musketeers'", "response": "Milady de Winter", "value": 1600 },
+      { "clue": "Enormous, hairless and horribly erudite, this member of the Glanton gang in 'Blood Meridian' proclaims that war is god", "response": "Judge Holden", "value": 2000 }
+    ]
+  },
+  {
+    "name": "BOUND TO BE BAD",
+    "clues": [
+      { "clue": "This pirate lost a hand to a crocodile that swallowed a clock too, so he always hears it coming in J.M. Barrie's Neverland", "response": "Captain Hook", "value": 400 },
+      { "clue": "This cannibal psychiatrist first appears in Thomas Harris's 1981 thriller 'Red Dragon'", "response": "Hannibal Lecter", "value": 800 },
+      { "clue": "Patricia Highsmith's charming killer murders Dickie Greenleaf and steals his identity in Italy", "response": "Tom Ripley", "value": 1200 },
+      { "clue": "This cruel Louisiana planter orders the beating that kills the title slave of Harriet Beecher Stowe's novel", "response": "Simon Legree", "value": 1600 },
+      { "clue": "Fat, oily-mannered and fond of his pet white mice, this Italian nobleman conspires with Sir Percival Glyde in 'The Woman in White'", "response": "Count Fosco", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SHELF-REFERENTIAL",
+    "clues": [
+      { "clue": "An electronic guidebook with 'Don't Panic' on the cover gave this English humorist the title of his comic saga", "response": "Douglas Adams", "value": 400 },
+      { "clue": "This Providence-born horror writer invented the Necronomicon, a forbidden volume credited to the 'mad Arab' Abdul Alhazred", "response": "H.P. Lovecraft", "value": 800 },
+      { "clue": "This Russian-born author built a novel out of a 999-line poem and a deranged editor's footnotes: 'Pale Fire'", "response": "Vladimir Nabokov", "value": 1200 },
+      { "clue": "In his alternate-history novel an outlawed book called 'The Grasshopper Lies Heavy' imagines the Allies winning the war", "response": "Philip K. Dick", "value": 1600 },
+      { "clue": "This Argentine reviewed books that never existed, one of them a word-for-word rewrite of 'Don Quixote' by a Frenchman", "response": "Jorge Luis Borges", "value": 2000 }
+    ]
+  },
+  {
+    "name": "RUSSIAN NESTING NOVELS",
+    "clues": [
+      { "clue": "William Goldman presented his fairy tale as a 'good parts' abridgment of a classic by S. Morgenstern", "response": "The Princess Bride", "value": 400 },
+      { "clue": "Ten young Florentines flee the plague to a country villa and pass ten days telling a hundred tales", "response": "The Decameron", "value": 800 },
+      { "clue": "Aboard a yawl anchored on the Thames, Marlow tells his shipmates how he steamed upriver to find Kurtz", "response": "Heart of Darkness", "value": 1200 },
+      { "clue": "A Christmas Eve houseparty hears a dead governess's manuscript read aloud in this Henry James ghost story", "response": "The Turn of the Screw", "value": 1600 },
+      { "clue": "Six narratives nest inside one another, each broken off midway and finished in reverse, in this David Mitchell novel", "response": "Cloud Atlas", "value": 2000 }
+    ]
+  },
+  {
+    "name": "POET'S CORNER OFFICE",
+    "clues": [
+      { "clue": "Britain's laureate for 42 years, he wrote 'In Memoriam' and 'The Charge of the Light Brigade'", "response": "Tennyson", "value": 400 },
+      { "clue": "Illinois' poet laureate for over 30 years, this 'We Real Cool' writer was the first Black Pulitzer winner", "response": "Gwendolyn Brooks", "value": 800 },
+      { "clue": "Given the post in 1668, this 'Absalom and Achitophel' satirist was England's first official poet laureate", "response": "John Dryden", "value": 1200 },
+      { "clue": "In 2009 this Scottish-born author of 'The World's Wife' ended a 341-year male monopoly on Britain's laureateship", "response": "Carol Ann Duffy", "value": 1600 },
+      { "clue": "A Muscogee Nation member and jazz saxophonist, she was named the first Native American U.S. poet laureate in 2019", "response": "Joy Harjo", "value": 2000 }
+    ]
+  },
+  {
+    "name": "FLAGS & STANZAS",
+    "clues": [
+      { "clue": "Scots toast the haggis every January 25 on the birthday of this national bard", "response": "Robert Burns", "value": 400 },
+      { "clue": "Poland's national poet began his epic 'Pan Tadeusz' by hailing Lithuania as his homeland", "response": "Adam Mickiewicz", "value": 800 },
+      { "clue": "Born a serf, Ukraine's national poet and painter collected his verse in the 1840 book 'Kobzar'", "response": "Taras Shevchenko", "value": 1200 },
+      { "clue": "Hungary's national poet vanished at 26 in an 1849 battle; his 'National Song' had helped spark the revolt", "response": "Sándor Petőfi", "value": 1600 },
+      { "clue": "Iran's national poet spent three decades on the 'Shahnameh', an epic of some 50,000 rhymed couplets", "response": "Ferdowsi", "value": 2000 }
+    ]
+  },
+  {
+    "name": "KIDS' TABLE OF CONTENTS",
+    "clues": [
+      { "clue": "The smallest of Ludwig Bemelmans' twelve Paris schoolgirls loses her appendix and shows off the scar", "response": "Madeline", "value": 400 },
+      { "clue": "Hans and Margret Rey fled Paris by bicycle in 1940 carrying a manuscript about this mischievous monkey", "response": "Curious George", "value": 800 },
+      { "clue": "Hazel, Fiver and Bigwig are rabbits who speak the invented language Lapine in this Richard Adams epic", "response": "Watership Down", "value": 1200 },
+      { "clue": "This Swedish author invented a red-braided girl strong enough to lift her own horse", "response": "Astrid Lindgren", "value": 1600 },
+      { "clue": "This Finnish artist wrote and drew the adventures of the roundish white Moomins of Moominvalley", "response": "Tove Jansson", "value": 2000 }
+    ]
+  },
+  {
+    "name": "FRENEMIES OF LETTERS",
+    "clues": [
+      { "clue": "Harper Lee modeled Dill on this childhood neighbor, whom she later helped research 'In Cold Blood'", "response": "Truman Capote", "value": 400 },
+      { "clue": "T.S. Eliot handed 'The Waste Land' to this friend, whose deep cuts earned him the dedication 'il miglior fabbro'", "response": "Ezra Pound", "value": 800 },
+      { "clue": "A fight over their co-written play 'Mule Bone' ended Zora Neale Hurston's friendship with this 'Weary Blues' poet", "response": "Langston Hughes", "value": 1200 },
+      { "clue": "At a 1977 party Norman Mailer threw a drink at this rival, who drawled that words had failed Mailer again", "response": "Gore Vidal", "value": 1600 },
+      { "clue": "Mary McCarthy said on TV that every word this 'Little Foxes' playwright wrote was a lie, including 'and' and 'the'", "response": "Lillian Hellman", "value": 2000 }
+    ]
+  }
+]

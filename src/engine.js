@@ -28,7 +28,7 @@ export function streakBonus(streak) {
 export async function startGame(playerNames, gameMode = 'turns', avatars = [], gameLength = 'full') {
   seenCategories = new Set();
   setState({
-    players: playerNames.map((name, i) => newPlayer(name, avatars[i] || '🎲')),
+    players: playerNames.map((name, i) => newPlayer(name, avatars[i] || String(i + 1))),
     gameMode: playerNames.length > 1 ? gameMode : 'turns',
     gameLength,
     activePlayer: 0,

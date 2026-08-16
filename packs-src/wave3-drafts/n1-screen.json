@@ -1,0 +1,86 @@
+[
+  { "name": "OPENING WEEKEND WARRIORS", "clues": [
+    { "clue": "A mechanical shark nicknamed Bruce menaced the beach town of Amity in this 1975 Steven Spielberg thriller", "response": "Jaws", "value": 200 },
+    { "clue": "Jack and Rose's doomed shipboard romance made this 1997 James Cameron epic the first film to gross $1 billion", "response": "Titanic", "value": 400 },
+    { "clue": "Cloned dinosaurs run amok on Isla Nublar in this 1993 blockbuster based on a Michael Crichton novel", "response": "Jurassic Park", "value": 600 },
+    { "clue": "Berlin's \"Take My Breath Away\" won the Best Original Song Oscar for this 1986 naval aviation blockbuster", "response": "Top Gun", "value": 800 },
+    { "clue": "This 1973 film about the demonic possession of 12-year-old Regan was the first horror movie nominated for Best Picture", "response": "The Exorcist", "value": 1000 }
+  ] },
+  { "name": "SEQUEL OPPORTUNITIES", "clues": [
+    { "clue": "Darth Vader stuns Luke Skywalker with a paternity bombshell in this 1980 'Star Wars' sequel", "response": "The Empire Strikes Back", "value": 200 },
+    { "clue": "Arnold Schwarzenegger's cyborg returns reprogrammed to protect young John Connor in this 1991 sequel", "response": "Terminator 2: Judgment Day", "value": 400 },
+    { "clue": "Heath Ledger won a posthumous Oscar as the Joker in this 2008 Batman sequel", "response": "The Dark Knight", "value": 600 },
+    { "clue": "Robert De Niro played the young Vito Corleone in this 1974 film, the first sequel to win Best Picture", "response": "The Godfather Part II", "value": 800 },
+    { "clue": "Ricardo Montalban reprised his 1967 TV villain to bedevil Admiral Kirk in this 1982 'Star Trek' sequel", "response": "The Wrath of Khan", "value": 1000 }
+  ] },
+  { "name": "STATUETTE OF LIMITATIONS", "clues": [
+    { "clue": "Tom Hanks won Best Actor as a slow-talking Southerner recounting his life from a bus bench in this 1994 film", "response": "Forrest Gump", "value": 200 },
+    { "clue": "Vivien Leigh won an Oscar for playing Scarlett O'Hara in this 1939 Civil War epic", "response": "Gone with the Wind", "value": 400 },
+    { "clue": "Anthony Hopkins won Best Actor as a cannibal psychiatrist aiding FBI trainee Clarice Starling in this 1991 thriller", "response": "The Silence of the Lambs", "value": 600 },
+    { "clue": "Katharine Hepburn won her fourth Best Actress Oscar opposite Henry Fonda in this 1981 lakeside drama", "response": "On Golden Pond", "value": 800 },
+    { "clue": "This 1934 Frank Capra comedy with Gable and Colbert was the first film to sweep the \"Big Five\" Oscars", "response": "It Happened One Night", "value": 1000 }
+  ] },
+  { "name": "PICTURE THIS: BEST PICTURE", "clues": [
+    { "clue": "Maria teaches the von Trapp children to sing in this 1965 Best Picture winner set in Austria", "response": "The Sound of Music", "value": 200 },
+    { "clue": "The One Ring melts in Mount Doom in this 2003 trilogy finale that went 11-for-11 at the Oscars", "response": "The Return of the King", "value": 400 },
+    { "clue": "Humphrey Bogart's Rick rekindles an old flame at his Moroccan cafe in this Best Picture-winning 1942 classic", "response": "Casablanca", "value": 600 },
+    { "clue": "Court composer Salieri seethes over the giggling genius Mozart in this 1984 Best Picture winner", "response": "Amadeus", "value": 800 },
+    { "clue": "This 1969 drama about hustler Joe Buck and ailing Ratso Rizzo is the only X-rated film to win Best Picture", "response": "Midnight Cowboy", "value": 1000 }
+  ] },
+  { "name": "MUST-LAUGH TV", "clues": [
+    { "clue": "Jerry, George, Elaine and Kramer obsessed over life's minutiae on this New York sitcom about nothing", "response": "Seinfeld", "value": 200 },
+    { "clue": "Lucille Ball stomped grapes and gobbled chocolates off a speeding conveyor belt on this 1950s sitcom", "response": "I Love Lucy", "value": 400 },
+    { "clue": "Ex-relief pitcher Sam Malone poured the drinks at a Boston bar where everybody knew your name on this sitcom", "response": "Cheers", "value": 600 },
+    { "clue": "Hawkeye and the 4077th patched up Korean War wounded on this series whose 1983 finale drew over 100 million viewers", "response": "M*A*S*H", "value": 800 },
+    { "clue": "Suzanne Pleshette reprised Emily Hartley in the 1990 dream-twist finale of this sitcom set at a Vermont inn", "response": "Newhart", "value": 1000 }
+  ] },
+  { "name": "LAUGHING ON THE JOB", "clues": [
+    { "clue": "Michael Scott mismanaged Dunder Mifflin's Scranton branch on this U.S. remake of a British sitcom", "response": "The Office", "value": 200 },
+    { "clue": "Amy Poehler's Leslie Knope tirelessly served Pawnee, Indiana on this mockumentary sitcom about local government", "response": "Parks and Recreation", "value": 400 },
+    { "clue": "This 1970s sitcom opened with a single Minneapolis TV news producer joyfully tossing her tam skyward", "response": "The Mary Tyler Moore Show", "value": 600 },
+    { "clue": "Tina Fey's Liz Lemon wrangled star Tracy Jordan and boss Jack Donaghy at NBC on this Emmy-winning sitcom", "response": "30 Rock", "value": 800 },
+    { "clue": "Les Nessman covered a disastrous Thanksgiving turkey drop on this sitcom about a struggling Ohio radio station", "response": "WKRP in Cincinnati", "value": 1000 }
+  ] },
+  { "name": "DRAWN TO STARDOM", "clues": [
+    { "clue": "Cowboy Woody feels upstaged by Buzz Lightyear in this 1995 Pixar film, the first fully computer-animated feature", "response": "Toy Story", "value": 200 },
+    { "clue": "Simba flees the Pride Lands after his father's death in this 1994 Disney film with a no-worries motto", "response": "The Lion King", "value": 400 },
+    { "clue": "This 2001 tale of a swamp ogre and Princess Fiona won the first-ever Oscar for Best Animated Feature", "response": "Shrek", "value": 600 },
+    { "clue": "This 1937 film, Disney's first animated feature, earned Walt an honorary Oscar plus 7 miniature statuettes", "response": "Snow White and the Seven Dwarfs", "value": 800 },
+    { "clue": "Young Chihiro toils in a bathhouse for spirits in this Oscar-winning film by Japan's Hayao Miyazaki", "response": "Spirited Away", "value": 1000 }
+  ] },
+  { "name": "PRIME-TIME TOONS", "clues": [
+    { "clue": "Homer's \"D'oh!\" rings through the Springfield Nuclear Power Plant on this long-running animated series", "response": "The Simpsons", "value": 200 },
+    { "clue": "Fred and Barney bowled in Bedrock on this 1960 debut, the first animated sitcom on prime-time TV", "response": "The Flintstones", "value": 400 },
+    { "clue": "Scheming baby Stewie and martini-sipping dog Brian live in Quahog, Rhode Island on this Seth MacFarlane series", "response": "Family Guy", "value": 600 },
+    { "clue": "Propane salesman Hank of Arlen, Texas extols \"propane and propane accessories\" on this Mike Judge series", "response": "King of the Hill", "value": 800 },
+    { "clue": "Pizza boy Fry is frozen on New Year's Eve 1999 and thawed 1,000 years later on this Matt Groening series", "response": "Futurama", "value": 1000 }
+  ] },
+  { "name": "ROLE WITH IT", "clues": [
+    { "clue": "Sean Connery introduced this suave secret agent, code number 007, in 1962's 'Dr. No'", "response": "James Bond", "value": 200 },
+    { "clue": "Julie Andrews drifted in by umbrella as this \"practically perfect\" London nanny in a 1964 Disney film", "response": "Mary Poppins", "value": 400 },
+    { "clue": "Harrison Ford donned a fedora and bullwhip as this archaeologist hero introduced in 1981", "response": "Indiana Jones", "value": 600 },
+    { "clue": "Anthony Perkins played this mother-obsessed motel keeper in Alfred Hitchcock's 'Psycho'", "response": "Norman Bates", "value": 800 },
+    { "clue": "Peter Sellers bumbled through 'Pink Panther' cases as this accident-prone French police detective", "response": "Inspector Clouseau", "value": 1000 }
+  ] },
+  { "name": "CO-STAR-CROSSED", "clues": [
+    { "clue": "Fred Astaire's partner in 10 movie musicals, she famously did it all backwards and in high heels", "response": "Ginger Rogers", "value": 200 },
+    { "clue": "This skinny-and-stout comedy duo hauled a piano up a towering staircase in an Oscar-winning 1932 short", "response": "Laurel & Hardy", "value": 400 },
+    { "clue": "Walter Matthau's slobby Oscar bunked with this actor's neat-freak Felix in 1968's 'The Odd Couple'", "response": "Jack Lemmon", "value": 600 },
+    { "clue": "Bob Hope hit the road to Singapore, Morocco and Rio with this crooner in seven buddy comedies", "response": "Bing Crosby", "value": 800 },
+    { "clue": "This actress traded quips and cocktails as Nora Charles opposite William Powell in the 'Thin Man' films", "response": "Myrna Loy", "value": 1000 }
+  ] },
+  { "name": "LOVELY PARTING FACTS", "clues": [
+    { "clue": "Vanna White began turning letters on this puzzle-solving game show in 1982", "response": "Wheel of Fortune", "value": 200 },
+    { "clue": "Bob Barker reminded viewers to spay and neuter their pets as he signed off this pricing game for 35 years", "response": "The Price Is Right", "value": 400 },
+    { "clue": "Art Fleming first hosted this answer-and-question quiz show; Alex Trebek took the podium in 1984", "response": "Jeopardy!", "value": 600 },
+    { "clue": "Groucho Marx quizzed contestants as a duck dropped down bearing a secret word on this 1950s show", "response": "You Bet Your Life", "value": 800 },
+    { "clue": "Charles Van Doren's rigged streak on this NBC quiz show inspired Robert Redford's 1994 film 'Quiz Show'", "response": "Twenty-One", "value": 1000 }
+  ] },
+  { "name": "THE RABBIT-EAR YEARS", "clues": [
+    { "clue": "An estimated 600 million TV viewers watched this astronaut take one small step in July 1969", "response": "Neil Armstrong", "value": 200 },
+    { "clue": "Some 73 million viewers watched this band's first live U.S. TV appearance on Ed Sullivan's stage in 1964", "response": "The Beatles", "value": 400 },
+    { "clue": "A cool, tanned showing against Richard Nixon in TV's first presidential debate boosted this 1960 candidate", "response": "John F. Kennedy", "value": 600 },
+    { "clue": "Called \"the most trusted man in America\", this CBS anchor signed off with \"And that's the way it is\"", "response": "Walter Cronkite", "value": 800 },
+    { "clue": "This Utah-born inventor transmitted his first electronic television image in 1927, at age 21", "response": "Philo Farnsworth", "value": 1000 }
+  ] }
+]

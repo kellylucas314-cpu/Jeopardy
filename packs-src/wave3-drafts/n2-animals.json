@@ -1,0 +1,86 @@
+[
+  { "name": "FREQUENT FLYWAYS", "clues": [
+    { "clue": "These orange-and-black insects funnel into a few Mexican fir groves each fall — great-grandchildren returning to trees they never saw", "response": "monarch butterflies", "value": 400 },
+    { "clue": "Legend has these birds returning to California's Mission San Juan Capistrano every March 19", "response": "the swallows", "value": 800 },
+    { "clue": "The ruby-throated species of this tiny nectar-drinker crosses the Gulf of Mexico in one nonstop flight", "response": "the hummingbird", "value": 1200 },
+    { "clue": "Satellite tags have tracked this shorebird flying more than 7,000 miles from Alaska to New Zealand without a rest", "response": "the bar-tailed godwit", "value": 1600 },
+    { "clue": "This small Siberian-breeding raptor crosses some 2,000 miles of open Indian Ocean en route to winter in southern Africa", "response": "the Amur falcon", "value": 2000 }
+  ] },
+  { "name": "COMMUTING WITH NATURE", "clues": [
+    { "clue": "Over a million of these bearded, horned grazers chase the rains in a great circuit of the Serengeti", "response": "the wildebeest", "value": 400 },
+    { "clue": "Barnacle-crusted and bottom-feeding, this cetacean logs a round trip of some 10,000 miles between Baja lagoons and Arctic seas", "response": "the gray whale", "value": 800 },
+    { "clue": "When the wet season's first rains hit Australia's Christmas Island, millions of these scarlet crustaceans march to the sea", "response": "red crabs", "value": 1200 },
+    { "clue": "Alaska's Porcupine herd of these Arctic deer makes one of the longest overland treks of any land mammal", "response": "caribou", "value": 1600 },
+    { "clue": "Each night these tiny drifters rise from the depths to feed in what is often called Earth's biggest migration", "response": "zooplankton", "value": 2000 }
+  ] },
+  { "name": "PALEO DIET", "clues": [
+    { "clue": "Whole specimens of this shaggy, curve-tusked Ice Age giant have thawed out of Siberian permafrost", "response": "the woolly mammoth", "value": 400 },
+    { "clue": "La Brea's tar has yielded thousands of fossils of Smilodon, this fanged Ice Age predator", "response": "the saber-toothed cat", "value": 800 },
+    { "clue": "Hand-sized fossil teeth are the main remains of this school-bus-length shark of prehistoric seas", "response": "megalodon", "value": 1200 },
+    { "clue": "This segmented seafloor arthropod thrived for over 250 million years until the Great Dying ended the Permian", "response": "the trilobite", "value": 1600 },
+    { "clue": "A staple of dinosaur toy sets, this sail-backed Permian predator was actually closer kin to mammals", "response": "Dimetrodon", "value": 2000 }
+  ] },
+  { "name": "THE LATE GREATS", "clues": [
+    { "clue": "The last of these striped marsupial carnivores died in a Hobart zoo in 1936", "response": "the Tasmanian tiger", "value": 400 },
+    { "clue": "Its flocks once darkened U.S. skies for days, but this bird went from billions to extinct by 1914", "response": "the passenger pigeon", "value": 800 },
+    { "clue": "Sailors named penguins for their resemblance to this flightless North Atlantic bird, gone by the mid-1840s", "response": "the great auk", "value": 1200 },
+    { "clue": "Described on Vitus Bering's 1741 voyage, this giant seaweed-grazing kin of the manatee was wiped out within 27 years", "response": "Steller's sea cow", "value": 1600 },
+    { "clue": "Striped up front and plain brown behind, this southern African grazer was hunted out; the last one died in Amsterdam in 1883", "response": "the quagga", "value": 2000 }
+  ] },
+  { "name": "STRANGE BEDFELLOWS", "clues": [
+    { "clue": "Slick with protective mucus, this orange reef fish of Pixar fame shelters among an anemone's stinging tentacles", "response": "the clownfish", "value": 400 },
+    { "clue": "Perched on rhinos and buffalo, this African bird picks off ticks — and isn't above sipping from open wounds", "response": "the oxpecker", "value": 800 },
+    { "clue": "Chattering from tree to tree, this African bird leads human honey hunters to hives, then feasts on the leftover wax", "response": "the honeyguide", "value": 1200 },
+    { "clue": "This little fish plays lookout at the burrow entrance while its roommate, a nearly blind pistol shrimp, digs", "response": "the goby", "value": 1600 },
+    { "clue": "This gnat-sized insect squeezes inside a 'fruit' that is really an inside-out flower cluster, pollinating as it lays eggs", "response": "the fig wasp", "value": 2000 }
+  ] },
+  { "name": "YOU SCRATCH MY BACK", "clues": [
+    { "clue": "A suction disc atop its head lets this 'sharksucker' hitch rides on big predators and skim their scraps", "response": "the remora", "value": 400 },
+    { "clue": "Crusting bare rock and old tombstones, this two-in-one organism is a fungus and an alga living as partners", "response": "a lichen", "value": 800 },
+    { "clue": "Ants herd these sap-sucking insects like dairy cattle, 'milking' them for a sweet fluid called honeydew", "response": "aphids", "value": 1200 },
+    { "clue": "Big predators line up at this small striped fish's reef station and open wide so it can pluck parasites from teeth and gills", "response": "the cleaner wrasse", "value": 1600 },
+    { "clue": "From the Greek for 'fungus root,' these plant-fungus unions form the 'wood wide web,' trading soil minerals for sugars", "response": "mycorrhizae", "value": 2000 }
+  ] },
+  { "name": "ANIMAL ESP", "clues": [
+    { "clue": "Bats snatch moths in total darkness with this sense, sending out ultrasonic squeaks and judging the returns", "response": "echolocation", "value": 400 },
+    { "clue": "Heat-sensing facial pits let rattlesnakes strike in the dark by detecting this radiation just beyond red light", "response": "infrared", "value": 800 },
+    { "clue": "With jelly-filled pores called the ampullae of Lorenzini, sharks locate buried prey by sensing this, given off by every muscle twitch", "response": "electricity", "value": 1200 },
+    { "clue": "Loggerhead hatchlings and homing pigeons steer by this invisible planetary feature, perhaps sensed by proteins in the eye", "response": "Earth's magnetic field", "value": 1600 },
+    { "clue": "The 22 fleshy rays ringing this nearly blind tunneler's snout are touch organs that find and ID prey in a fraction of a second", "response": "the star-nosed mole", "value": 2000 }
+  ] },
+  { "name": "THE BETTER TO SEE YOU WITH", "clues": [
+    { "clue": "Some 30,000 lenses pack each bulging compound eye of this darting insect, among the deadliest aerial hunters going", "response": "the dragonfly", "value": 400 },
+    { "clue": "Each cone-shaped turret eye of this color-changing lizard aims independently, watching two ways at once", "response": "the chameleon", "value": 800 },
+    { "clue": "Horizontal, letterbox-shaped pupils give this bearded barnyard browser a near-panoramic watch for predators", "response": "the goat", "value": 1200 },
+    { "clue": "Latin for roughly 'bright tapestry,' this mirror-like layer behind the retina gives cats their nighttime eyeshine", "response": "the tapetum lucidum", "value": 1600 },
+    { "clue": "Up to 200 tiny eyes peer from this swimming bivalve's mantle, each one focusing light with a mirror rather than a lens", "response": "the scallop", "value": 2000 }
+  ] },
+  { "name": "BIOME, SWEET BIOME", "clues": [
+    { "clue": "Mosses, lichens, and dwarf shrubs carpet this treeless Arctic biome atop permanently frozen ground", "response": "the tundra", "value": 400 },
+    { "clue": "Flat-topped acacia trees dot this tropical grassland biome, grazing land for East Africa's great herds", "response": "the savanna", "value": 800 },
+    { "clue": "Also called the boreal forest, this belt of spruce and fir across Canada and Siberia is Earth's largest land biome", "response": "the taiga", "value": 1200 },
+    { "clue": "Cowboys' protective 'chaps' get their name from this scrubby, fire-adapted biome of California's Mediterranean climate", "response": "chaparral", "value": 1600 },
+    { "clue": "Near-constant mist waters the orchids, ferns, and quetzals of this high-elevation tropical habitat, like Costa Rica's Monteverde", "response": "a cloud forest", "value": 2000 }
+  ] },
+  { "name": "LIQUID ASSETS", "clues": [
+    { "clue": "Nicknamed 'rainforests of the sea,' these limestone ecosystems are built by colonies of tiny stinging polyps", "response": "coral reefs", "value": 400 },
+    { "clue": "Standing in tropical shallows on arching prop roots, these salt-tolerant trees are nurseries for young fish", "response": "mangroves", "value": 800 },
+    { "clue": "Chesapeake Bay is the largest U.S. example of this ecosystem where river freshwater mixes with salty tides", "response": "an estuary", "value": 1200 },
+    { "clue": "Anchored by holdfasts and growing up to 2 feet a day, this giant brown seaweed builds undersea forests off California", "response": "kelp", "value": 1600 },
+    { "clue": "Giant tube worms and eyeless shrimp crowd these deep-sea chimneys, where microbes make food from the chemical-rich water", "response": "hydrothermal vents", "value": 2000 }
+  ] },
+  { "name": "PET PROJECTS", "clues": [
+    { "clue": "Cloned from an udder cell in 1996, this Scottish sheep took her name from a big-haired country superstar", "response": "Dolly", "value": 400 },
+    { "clue": "In January 1961 this chimpanzee rode a Mercury capsule into space, clearing the way for Alan Shepard's flight", "response": "Ham", "value": 800 },
+    { "clue": "Communicating with over 1,000 hand signs, this gorilla asked for a pet and cared for a kitten she named All Ball", "response": "Koko", "value": 1200 },
+    { "clue": "Irene Pepperberg's studies showed this African grey parrot could label colors, count, and grasp the idea of 'none'", "response": "Alex", "value": 1600 },
+    { "clue": "This early-1900s German horse seemed to do arithmetic but was really reading tiny, unwitting cues from his questioners", "response": "Clever Hans", "value": 2000 }
+  ] },
+  { "name": "CLAWS CÉLÈBRES", "clues": [
+    { "clue": "This weather-predicting Pennsylvania groundhog has been issuing February 2 forecasts from Gobbler's Knob since the 1880s", "response": "Punxsutawney Phil", "value": 400 },
+    { "clue": "P.T. Barnum bought this African elephant from the London Zoo in 1882; his name became a byword for 'enormous'", "response": "Jumbo", "value": 800 },
+    { "clue": "A bronze statue at Tokyo's Shibuya Station honors this loyal Akita, who met his late master's train for nearly a decade", "response": "Hachiko", "value": 1200 },
+    { "clue": "Despite grave wounds, this U.S. Army carrier pigeon delivered the 1918 message credited with saving the Lost Battalion", "response": "Cher Ami", "value": 1600 },
+    { "clue": "Formally enlisted in the Polish II Corps, this Syrian brown bear lugged crates of artillery shells at Monte Cassino", "response": "Wojtek", "value": 2000 }
+  ] }
+]

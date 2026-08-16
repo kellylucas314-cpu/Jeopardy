@@ -1,0 +1,14 @@
+[
+  { "name": "PLATE EXPECTATIONS", "score": 47, "verdict": "revised", "notes": "$600 clue leaked the answer ('Pad Thai' -> Thailand); replaced with an original tom yum clue, no leak; other four rows accurate (Valencia paella, Hungarian goulash, Moroccan tagine); re-scored 47." },
+  { "name": "PASTA LA VISTA", "score": 47, "verdict": "accepted", "notes": "Pesto/pestare, no-cream carbonara, farfalle 'butterflies', cacio e pepe all correct; two Roman dishes stay unambiguous." },
+  { "name": "JUST DESSERTS", "score": 48, "verdict": "accepted", "notes": "Creme brulee 'burnt cream', tiramisu 'pick-me-up', Pavlova tour, Sachertorte 1832 apprentice (web-verified canonical account) all check out." },
+  { "name": "SUGAR RUSH", "score": 48, "verdict": "accepted", "notes": "Snickers-named-for-Mars-family-horse web-verified; Kisses 1907, PEZ/Pfefferminz, Haribo acronym correct; fun ladder." },
+  { "name": "HIGH SPIRITS", "score": 48, "verdict": "accepted", "notes": "Rob Roy = Scotch Manhattan and Sazerac as New Orleans' official cocktail both accurate; clean climb from margarita." },
+  { "name": "BREWED AWAKENING", "score": 48, "verdict": "accepted", "notes": "Capuchin friars, latte = 'milk', Earl Grey PM, Kaldi/Ethiopia legend (framed as legend), pine-smoked lapsang souchong all correct." },
+  { "name": "SELL-EBRITIES", "score": 47, "verdict": "accepted", "notes": "Poppin' Fresh, 1916 Mr. Peanut contest, Bibendum 1898, Nipper/'His Master's Voice' all verified; name covers non-food mascots." },
+  { "name": "FOUNDERS KEEPERS", "score": 47, "verdict": "accepted", "notes": "Kroc/San Bernardino, Pemberton 1886, Moby-Dick Starbuck, 'leg godt', IKEA acronym all accurate; etymology hooks are fair." },
+  { "name": "LETTUCE ENTERTAIN YOU", "score": 48, "verdict": "accepted", "notes": "Beta-carotene, onion sulfur compound, asparagus urine, Castroville artichokes, kohlrabi 'cabbage turnip' all correct." },
+  { "name": "TOP BANANA", "score": 47, "verdict": "accepted", "notes": "Chinese gooseberry rebrand, pineapple hospitality, Singapore durian ban, trademarked ugli tangelo all check out; kiwi hint is deliberate." },
+  { "name": "BRAISE THE ROOF", "score": 47, "verdict": "accepted", "notes": "Sauter 'to jump', sous vide 'under vacuum', confit 'preserved' etymologies correct; blanching-plus-ice-bath phrasing is standard usage." },
+  { "name": "COUNTER INTELLIGENCE", "score": 47, "verdict": "accepted", "notes": "Percy Spencer chocolate-bar story and chinois 'Chinese' etymology correct; mise en place is three words as claimed." }
+]

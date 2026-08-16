@@ -1,0 +1,97 @@
+[
+  { "name": "THE COUNTER REVOLUTION", "clues": [
+    { "clue": "This German physicist counted alpha particles for Rutherford, then lent his name to a clicking radiation detector.", "response": "Geiger", "value": 400 },
+    { "clue": "In 1851 this Frenchman hung a heavy bob from the Pantheon's dome and let Paris watch the Earth rotate beneath it.", "response": "Leon Foucault", "value": 800 },
+    { "clue": "Galileo's assistant in his final months, this Italian upended a mercury-filled tube in a dish in 1643 and left us the barometer.", "response": "Torricelli", "value": 1200 },
+    { "clue": "This Scot's silvered vacuum flask held liquefied gases; he never patented it, and the Thermos company got rich.", "response": "James Dewar", "value": 1600 },
+    { "clue": "This Englishman patented the concertina, yet his name survives on a four-armed circuit that measures resistance.", "response": "Wheatstone", "value": 2000 }
+  ]},
+
+  { "name": "RATE EXPECTATIONS", "clues": [
+    { "clue": "This Caltech seismologist's 1935 magnitude scale gave every earthquake headline a number to shout.", "response": "Richter", "value": 400 },
+    { "clue": "Talc at 1, diamond at 10: this German mineralogist's ranking of hardness is scratched into every geology class.", "response": "Mohs", "value": 800 },
+    { "clue": "A pharmacist's 1912 test rated chili heat by how much sugar water it took to drown the burn; his name stuck.", "response": "Scoville", "value": 1200 },
+    { "clue": "In 1952 this anesthesiologist devised the 0-to-10 rating a newborn earns one minute after delivery.", "response": "Apgar", "value": 1600 },
+    { "clue": "This Irish-born Royal Navy officer's 1805 wind scale climbs from 0, dead calm, to 12, full hurricane.", "response": "Beaufort", "value": 2000 }
+  ]},
+
+  { "name": "PIGMENT OF THE IMAGINATION", "clues": [
+    { "clue": "Millions of hues come from just three types of these color-sensing cells packed into the retina.", "response": "cones", "value": 400 },
+    { "clue": "Splitting sunlight with a prism, Newton insisted on seven colors, wedging this one between blue and violet.", "response": "indigo", "value": 800 },
+    { "clue": "Blue skies and red sunsets both come from air scattering short wavelengths hardest, an effect named for this British lord.", "response": "Rayleigh", "value": 1200 },
+    { "clue": "In the printing shorthand CMYK, the K stands not for black but for this term for the plate carrying the fine detail.", "response": "key", "value": 1600 },
+    { "clue": "Two fabrics that match under store lighting but clash in daylight are a textbook case of this color-matching quirk.", "response": "metamerism", "value": 2000 }
+  ]},
+
+  { "name": "PRISM BREAK", "clues": [
+    { "clue": "A straw looks snapped at the waterline and a desert mirage shimmers, both thanks to this bending of light.", "response": "refraction", "value": 400 },
+    { "clue": "In a secondary rainbow the color order flips, so this hue sits on the outside where red normally goes.", "response": "violet", "value": 800 },
+    { "clue": "Light races down a glass fiber for miles without leaking out, held in by this three-word effect at the boundary.", "response": "total internal reflection", "value": 1200 },
+    { "clue": "The eerie blue glow in a reactor's cooling pool comes from particles outrunning light in water, and bears this Soviet's name.", "response": "Cherenkov", "value": 1600 },
+    { "clue": "These dark gaps in the solar spectrum, catalogued by a Bavarian lens grinder, betray which elements the Sun contains.", "response": "Fraunhofer lines", "value": 2000 }
+  ]},
+
+  { "name": "FACET THE FACTS", "clues": [
+    { "clue": "Australia's national gemstone flashes color because it is stacked with microscopic spheres of hydrated silica.", "response": "opal", "value": 400 },
+    { "clue": "Ruby and sapphire are one mineral in two moods: this aluminum oxide that rates a 9 for hardness.", "response": "corundum", "value": 800 },
+    { "clue": "Emerald and aquamarine are simply the green and blue faces of this single mineral.", "response": "beryl", "value": 1200 },
+    { "clue": "Gently bake a purple amethyst and it turns golden; jewelers then sell it as this November birthstone.", "response": "citrine", "value": 1600 },
+    { "clue": "Silicon carbide, first found in an Arizona meteor crater, carries its French discoverer's name as this diamond stand-in.", "response": "moissanite", "value": 2000 }
+  ]},
+
+  { "name": "IGNEOUS IS BLISS", "clues": [
+    { "clue": "Heat and pressure recrystallize limestone into this stone, quarried at Carrara for Michelangelo.", "response": "marble", "value": 400 },
+    { "clue": "Lava chilled too fast to grow any crystals becomes this black volcanic glass, flaked by early toolmakers into blades.", "response": "obsidian", "value": 800 },
+    { "clue": "A thin clay layer loaded with this rare metal convinced the Alvarezes that an asteroid finished off the dinosaurs.", "response": "iridium", "value": 1200 },
+    { "clue": "Puzzling over the tilted, mismatched strata at Siccar Point, this 18th-century Scot became the father of modern geology.", "response": "James Hutton", "value": 1600 },
+    { "clue": "Seismic waves speed up abruptly at this crust-mantle boundary, nicknamed for the Croatian who spotted it in 1909.", "response": "the Moho", "value": 2000 }
+  ]},
+
+  { "name": "WHISK ASSESSMENT", "clues": [
+    { "clue": "Lecithin from egg yolk lets oil and water cohabit in mayonnaise, acting as this kind of culinary go-between.", "response": "an emulsifier", "value": 400 },
+    { "clue": "Red cabbage juice goes pink in vinegar and blue-green in baking soda, making it a kitchen gauge of this.", "response": "pH", "value": 800 },
+    { "clue": "Lime juice cooks ceviche without any heat by triggering this unraveling of proteins that a hot pan also causes.", "response": "denaturation", "value": 1200 },
+    { "clue": "Simmering corn in an alkaline lime bath softens the hulls and unlocks its niacin, a process with this Nahuatl-rooted name.", "response": "nixtamalization", "value": 1600 },
+    { "clue": "Cream of tartar, the meringue maker's ally, is this acid salt scraped from the inside of wine barrels.", "response": "potassium bitartrate", "value": 2000 }
+  ]},
+
+  { "name": "REPEATABLE OFFENSES", "clues": [
+    { "clue": "Around 240 B.C. this Greek compared noon shadows in two Egyptian cities and sized up the whole Earth.", "response": "Eratosthenes", "value": 400 },
+    { "clue": "In 1919 Arthur Eddington sailed to Principe for one of these events and photographed starlight bending past the Sun.", "response": "a solar eclipse", "value": 800 },
+    { "clue": "This American physicist floated charged oil droplets against gravity to pin down the charge carried by one electron.", "response": "Millikan", "value": 1200 },
+    { "clue": "The 1887 Michelson-Morley interferometer is famous for failing to detect this invisible medium supposedly filling space.", "response": "the ether", "value": 1600 },
+    { "clue": "In 1798 this Englishman twisted lead spheres on a thin wire in a shed and effectively weighed the Earth.", "response": "Cavendish", "value": 2000 }
+  ]},
+
+  { "name": "TEST SUBJECTS", "clues": [
+    { "clue": "This Russian physiologist conditioned his dogs to drool at a signal that dinner was on the way.", "response": "Pavlov", "value": 400 },
+    { "clue": "Walter Mischel offered preschoolers a deal: sit 15 minutes alone with this pillowy treat and earn a second one.", "response": "a marshmallow", "value": 800 },
+    { "clue": "Stanley Miller zapped a flask of gases and water with sparks and cooked up these building blocks of protein.", "response": "amino acids", "value": 1200 },
+    { "clue": "Hershey and Chase whirled radioactive viruses in this ordinary kitchen appliance to learn what really carries heredity.", "response": "a blender", "value": 1600 },
+    { "clue": "Redi's gauze-covered jars of meat and Spallanzani's boiled broths chipped away at this theory of life arising from nonlife.", "response": "spontaneous generation", "value": 2000 }
+  ]},
+
+  { "name": "SOUNDING OFF", "clues": [
+    { "clue": "This lowest known point on the ocean floor takes its name from the British survey ship that sounded it in 1875.", "response": "Challenger Deep", "value": 400 },
+    { "clue": "As deputy postmaster general, Benjamin Franklin charted this warm current so mail packets could ride it to England.", "response": "the Gulf Stream", "value": 800 },
+    { "clue": "Submarines like to lurk under this layer, where temperature plunges so sharply that sonar pings bend away.", "response": "the thermocline", "value": 1200 },
+    { "clue": "This American geologist's hand-drawn maps of the Atlantic floor exposed the mid-ocean ridge and its rift valley.", "response": "Marie Tharp", "value": 1600 },
+    { "clue": "Harry Hess's wartime echo soundings turned up these flat-topped undersea volcanoes, named for a Swiss-born Princeton geographer.", "response": "guyots", "value": 2000 }
+  ]},
+
+  { "name": "CULTURE CLUB", "clues": [
+    { "clue": "Yogurt gets its tang from acid-making bacteria of this genus, whose Latin name points straight at milk.", "response": "Lactobacillus", "value": 400 },
+    { "clue": "Roquefort and Stilton get their blue veins from a mold in this genus, whose most famous member became a medicine.", "response": "Penicillium", "value": 800 },
+    { "clue": "A microbe scooped from a Yellowstone hot spring yields Taq, the heat-proof enzyme that makes this copying technique work.", "response": "PCR", "value": 1200 },
+    { "clue": "In 1984 Barry Marshall drank a beaker of this corkscrew-shaped stomach bacterium and promptly gave himself gastritis.", "response": "H. pylori", "value": 1600 },
+    { "clue": "Soy sauce, miso and sake all begin with koji, a mold of this genus grown on steamed grain.", "response": "Aspergillus", "value": 2000 }
+  ]},
+
+  { "name": "THE FRAUD SQUAD", "clues": [
+    { "clue": "Unmasked in 1953, this English gravel-pit missing link turned out to be a human skull wedded to an orangutan jaw.", "response": "Piltdown Man", "value": 400 },
+    { "clue": "Fleischmann and Pons stunned the world in 1989 with a tabletop reaction in heavy water that no lab could repeat.", "response": "cold fusion", "value": 800 },
+    { "clue": "In 1869 a 10-foot gypsum petrified man dug up on an upstate New York farm drew paying crowds under this name.", "response": "the Cardiff Giant", "value": 1200 },
+    { "clue": "In 1835 this penny paper ran six installments about bat-winged people living on the Moon, and circulation soared.", "response": "the New York Sun", "value": 1600 },
+    { "clue": "This radiation, announced by Rene Blondlot in 1903 and named for his city of Nancy, evaporated when a skeptic pocketed a prism.", "response": "N-rays", "value": 2000 }
+  ]}
+]

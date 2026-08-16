@@ -1,0 +1,362 @@
+[
+ {
+  "name": "HOLLYWOOD & VINYL",
+  "clues": [
+   {
+    "clue": "The Bee Gees' falsettos drove this 1977 John Travolta disco drama's soundtrack to 24 straight weeks atop the album chart",
+    "response": "Saturday Night Fever",
+    "value": 400
+   },
+   {
+    "clue": "Simon & Garfunkel's 'The Sound of Silence' plays over the opening of this 1967 film in which Dustin Hoffman drifts into an affair",
+    "response": "The Graduate",
+    "value": 800
+   },
+   {
+    "clue": "A wah-wah guitar and Isaac Hayes' baritone introduced this 1971 private eye and won the Best Original Song Oscar",
+    "response": "Shaft",
+    "value": 1200
+   },
+   {
+    "clue": "The soundtrack of this Depression-era Coen odyssey, thick with bluegrass and old-time gospel, won the 2002 Album of the Year Grammy",
+    "response": "O Brother, Where Art Thou?",
+    "value": 1600
+   },
+   {
+    "clue": "Jimmy Cliff played an outlaw singer in this 1972 Jamaican film whose soundtrack carried reggae around the world",
+    "response": "The Harder They Come",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ANTHEMOLOGY",
+  "clues": [
+   {
+    "clue": "Written overnight in Strasbourg in 1792 as a war march for the Army of the Rhine, this anthem was renamed for volunteers from a southern port",
+    "response": "La Marseillaise",
+    "value": 400
+   },
+   {
+    "clue": "This nation's 1997 anthem opens with 'Nkosi Sikelel' iAfrika' and runs through five of its official languages, from isiXhosa to English",
+    "response": "South Africa",
+    "value": 800
+   },
+   {
+    "clue": "This country's 'Kimigayo,' among the world's shortest anthems, takes its words from a waka poem more than a thousand years old",
+    "response": "Japan",
+    "value": 1200
+   },
+   {
+    "clue": "The 15 verses of the 'Wilhelmus' form an acrostic on a prince's name; the anthem was born in this nation's revolt against Spain",
+    "response": "the Netherlands",
+    "value": 1600
+   },
+   {
+    "clue": "This island republic sings the same anthem as Greece, a 'Hymn to Liberty' drawn from a 158-stanza poem by Dionysios Solomos",
+    "response": "Cyprus",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SEA TO SHINING C",
+  "clues": [
+   {
+    "clue": "An 1893 trip up Pikes Peak moved Wellesley professor Katharine Lee Bates to write the words of this patriotic hymn",
+    "response": "America the Beautiful",
+    "value": 400
+   },
+   {
+    "clue": "Woody Guthrie wrote this 1940 folk standard as a tart answer to Irving Berlin's 'God Bless America'",
+    "response": "This Land Is Your Land",
+    "value": 800
+   },
+   {
+    "clue": "After visiting Union camps in 1861, Julia Ward Howe fitted fresh verses to the tune of 'John Brown's Body,' creating this marching standard",
+    "response": "The Battle Hymn of the Republic",
+    "value": 1200
+   },
+   {
+    "clue": "An act of Congress in 1987 made this Sousa march the official National March of the United States",
+    "response": "The Stars and Stripes Forever",
+    "value": 1600
+   },
+   {
+    "clue": "Set to music by his brother, James Weldon Johnson's 1900 poem became this hymn, long known as the Black National Anthem",
+    "response": "Lift Every Voice and Sing",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "GREAT HALLS OF FIRE",
+  "clues": [
+   {
+    "clue": "Tchaikovsky sailed from Europe to conduct at the 1891 opening of this New York venue paid for by a steel magnate",
+    "response": "Carnegie Hall",
+    "value": 400
+   },
+   {
+    "clue": "Ella Fitzgerald won Amateur Night at this Harlem showplace in 1934; performers still rub a lucky tree stump backstage there",
+    "response": "the Apollo",
+    "value": 800
+   },
+   {
+    "clue": "A riverboat captain built this Nashville hall as a gospel tabernacle in 1892; it became the Mother Church of Country Music",
+    "response": "the Ryman Auditorium",
+    "value": 1200
+   },
+   {
+    "clue": "Its name promised country, bluegrass and blues, but this Bowery club instead gave the Ramones and Blondie a home",
+    "response": "CBGB",
+    "value": 1600
+   },
+   {
+    "clue": "Wagner had this Bavarian festival theater built, with a hooded orchestra pit, for the 1876 premiere of his 'Ring' cycle",
+    "response": "Bayreuth Festspielhaus",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "MUD, SWEAT & CHEERS",
+  "clues": [
+   {
+    "clue": "Billed as three days of peace and music, this 1969 festival swamped Max Yasgur's dairy farm near Bethel, New York",
+    "response": "Woodstock",
+    "value": 400
+   },
+   {
+    "clue": "Bob Geldof's 1985 famine-relief marathon linked London's Wembley Stadium and Philadelphia's JFK Stadium in a single day",
+    "response": "Live Aid",
+    "value": 800
+   },
+   {
+    "clue": "Folk purists booed when Dylan strapped on an electric guitar at this Rhode Island festival in 1965",
+    "response": "Newport",
+    "value": 1200
+   },
+   {
+    "clue": "A fan was stabbed to death by a Hells Angel during the Rolling Stones' set at this California speedway in December 1969",
+    "response": "Altamont",
+    "value": 1600
+   },
+   {
+    "clue": "Conductor Henry Wood led the first of these London concerts in 1895; their Last Night is a flag-waving singalong",
+    "response": "the Proms",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FRETS ABOUT NOTHING",
+  "clues": [
+   {
+    "clue": "Gourd-bodied lutes brought to America by enslaved West Africans evolved into this five-string mainstay of bluegrass",
+    "response": "the banjo",
+    "value": 400
+   },
+   {
+    "clue": "Portuguese immigrants' little four-string guitars became this Hawaiian favorite whose name is often read as 'jumping flea'",
+    "response": "the ukulele",
+    "value": 800
+   },
+   {
+    "clue": "You can spot this three-string Russian folk instrument instantly: its sound box is a flat triangle",
+    "response": "the balalaika",
+    "value": 1200
+   },
+   {
+    "clue": "European languages got the word 'lute' from the Arabic name of this fretless, pear-shaped Middle Eastern instrument",
+    "response": "the oud",
+    "value": 1600
+   },
+   {
+    "clue": "The jangling backbone of Greek rebetiko music, this long-necked, metal-strung instrument was taken up by Irish folk bands in the 1960s",
+    "response": "the bouzouki",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "KEYBOARD WARRIORS",
+  "clues": [
+   {
+    "clue": "Patented in 1829 Vienna, this bellows-driven squeezebox drives polka bands and zydeco dance floors alike",
+    "response": "the accordion",
+    "value": 400
+   },
+   {
+    "clue": "Wendy Carlos ran Bach through this analog synthesizer, named for the engineer who unveiled it in 1964",
+    "response": "the Moog",
+    "value": 800
+   },
+   {
+    "clue": "Tchaikovsky secretly ordered this chiming French keyboard from Paris to give the Sugar Plum Fairy her glassy sound",
+    "response": "the celesta",
+    "value": 1200
+   },
+   {
+    "clue": "A clock manufacturer's tonewheel invention of the 1930s, its B-3 model and swirling Leslie speaker define gospel and soul",
+    "response": "the Hammond organ",
+    "value": 1600
+   },
+   {
+    "clue": "Around 1700 this keeper of the Medici instrument collection built a harpsichord that could play soft and loud",
+    "response": "Cristofori",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "TREBLE WITH THE LAW",
+  "clues": [
+   {
+    "clue": "Senate hearings pushed by Tipper Gore's PMRC led record labels in 1985 to adopt this two-word warning for explicit albums",
+    "response": "Parental Advisory",
+    "value": 400
+   },
+   {
+    "clue": "Disc jockey Alan Freed's career collapsed in the scandal over this practice of taking cash to put a record on the air",
+    "response": "payola",
+    "value": 800
+   },
+   {
+    "clue": "The FBI studied the Kingsmen's slurred 1963 hit for months and concluded the lyrics were simply unintelligible",
+    "response": "Louie Louie",
+    "value": 1200
+   },
+   {
+    "clue": "A judge ruled that George Harrison had subconsciously lifted the Chiffons' 'He's So Fine' for this 1970 chart-topper",
+    "response": "My Sweet Lord",
+    "value": 1600
+   },
+   {
+    "clue": "The Supreme Court's 1994 ruling that parody can be fair use grew out of this Miami rap group's take on 'Oh, Pretty Woman'",
+    "response": "2 Live Crew",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "AGITPOP",
+  "clues": [
+   {
+    "clue": "Pete Seeger helped turn an old gospel hymn into this civil rights anthem whose title LBJ borrowed in a 1965 speech to Congress",
+    "response": "We Shall Overcome",
+    "value": 400
+   },
+   {
+    "clue": "Days after the 1970 Kent State shootings this Canadian rocker wrote 'Ohio,' and CSNY had it on the radio within weeks",
+    "response": "Neil Young",
+    "value": 800
+   },
+   {
+    "clue": "A Bronx schoolteacher wrote this haunting protest against lynching; Billie Holiday made it her closing number in 1939",
+    "response": "Strange Fruit",
+    "value": 1200
+   },
+   {
+    "clue": "'Mississippi Goddam' poured out of this High Priestess of Soul after Medgar Evers' murder and the Birmingham church bombing",
+    "response": "Nina Simone",
+    "value": 1600
+   },
+   {
+    "clue": "A banned Zeca Afonso folk tune aired on Lisbon radio after midnight told the troops to move in this flower-named 1974 coup",
+    "response": "the Carnation Revolution",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "TRACKED HOUSING",
+  "clues": [
+   {
+    "clue": "Carl Perkins, Johnny Cash and Roy Orbison all made their first hits for Sam Phillips at this Memphis label",
+    "response": "Sun Records",
+    "value": 400
+   },
+   {
+    "clue": "Aretha Franklin cut 'I Never Loved a Man' at FAME Studios in this small Alabama town on the Tennessee River",
+    "response": "Muscle Shoals",
+    "value": 800
+   },
+   {
+    "clue": "Otis Redding and Booker T. & the M.G.'s worked out of a converted movie theater for this label billed as Soulsville U.S.A.",
+    "response": "Stax",
+    "value": 1200
+   },
+   {
+    "clue": "Jimi Hendrix opened this Greenwich Village studio weeks before his death in 1970; Patti Smith cut 'Horses' there in 1975",
+    "response": "Electric Lady Studios",
+    "value": 1600
+   },
+   {
+    "clue": "David Bowie made 'Heroes' and U2 made 'Achtung Baby' at this Berlin studio nicknamed the Hall by the Wall",
+    "response": "Hansa",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "PRODUCER'S SURPLUS",
+  "clues": [
+   {
+    "clue": "This producer arranged Michael Jackson's 'Thriller' and conducted the all-star 'We Are the World' session",
+    "response": "Quincy Jones",
+    "value": 400
+   },
+   {
+    "clue": "The Ronettes' 'Be My Baby' came out of this producer's dense, echo-soaked Wall of Sound",
+    "response": "Phil Spector",
+    "value": 800
+   },
+   {
+    "clue": "This ex-Roxy Music synth player pioneered ambient music, then co-produced U2's 'The Joshua Tree'",
+    "response": "Brian Eno",
+    "value": 1200
+   },
+   {
+    "clue": "Donna Summer's pulsing 1977 track 'I Feel Love' let this Italian producer draw the blueprint for electronic dance music",
+    "response": "Giorgio Moroder",
+    "value": 1600
+   },
+   {
+    "clue": "This Atlantic producer of Wilson Pickett had earlier, as a Billboard writer, swapped the term 'race records' for 'rhythm and blues'",
+    "response": "Jerry Wexler",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "JARGON BELLS",
+  "clues": [
+   {
+    "clue": "A roaring crowd demands this extra number whose name is French for 'again'; French audiences actually shout 'bis'",
+    "response": "an encore",
+    "value": 400
+   },
+   {
+    "clue": "Opera and film composers tag a character or an idea with this kind of recurring theme; the German term means 'leading motive'",
+    "response": "a leitmotif",
+    "value": 800
+   },
+   {
+    "clue": "Ragtime and funk get their bounce from this device of stressing the beats a listener least expects",
+    "response": "syncopation",
+    "value": 1200
+   },
+   {
+    "clue": "Gospel and R&B singers stretch one syllable across a ripple of many notes in this Greek-named technique",
+    "response": "melisma",
+    "value": 1600
+   },
+   {
+    "clue": "Musicians nicknamed this dissonant interval, exactly half an octave, 'diabolus in musica' — the devil in music",
+    "response": "the tritone",
+    "value": 2000
+   }
+  ]
+ }
+]

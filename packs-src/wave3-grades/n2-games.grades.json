@@ -1,0 +1,14 @@
+[
+  { "name": "PLAY IT AGAIN, SUMER", "score": 46, "verdict": "accepted", "notes": "Kept intact as the wave's ancient-games home; Tut's senet boxes, astragali and the Royal Game of Ur all check out." },
+  { "name": "A CHECKERED PAST", "score": 46, "verdict": "accepted", "notes": "Shah mat, chaturanga, shogi drops, the 1831 Lewis hoard and Franklin/Napoleon losing to the Turk are all correct." },
+  { "name": "GAME CHANGERS", "score": 46, "verdict": "revised", "notes": "Row 400 Scrabble duplicated n1-games; swapped for Jenga (Leslie Scott, Swahili kujenga), verified." },
+  { "name": "THINKING OUTSIDE THE BOX", "score": 46, "verdict": "revised", "notes": "Rows 400 and 800 duplicated n1-games (Trivial Pursuit, Uno); replaced with Operation ($500 Illinois student prototype) and Simon (Ralph Baer, Atari's Touch Me), both verified." },
+  { "name": "TOY-COONS", "score": 47, "verdict": "accepted", "notes": "Mattel/Matson-Handler, Lazarus, Hassenfeld Brothers, East Aurora and pole-vaulter A.C. Gilbert all confirmed." },
+  { "name": "PLAYING FOR KEEPS", "score": 45, "verdict": "revised", "notes": "Four rows compromised: teddy bear mirrored n1-mix's Roosevelt clue and Silly Putty/Frisbee/Cabbage Patch duplicated n1-games; rebuilt with View-Master, Crayola, Radio Flyer and Sea-Monkeys, all fact-checked." },
+  { "name": "GAME OF TOMES", "score": 46, "verdict": "accepted", "notes": "Reform Club whist wager, Alice as a pawn to the eighth rank and Zweig's mailed 'Royal Game' are accurate." },
+  { "name": "PLAYING TO THE GALLERY", "score": 47, "verdict": "accepted", "notes": "Coolidge's 1903 Brown & Bigelow cigar commission verified; Cezanne sale hedged with 'reportedly'; Duchamp's chess career correct." },
+  { "name": "THE HOUSE ALWAYS WINS", "score": 46, "verdict": "accepted", "notes": "Flamingo 1946, Fey's Liberty Bell, Charles III's tax repeal, the hedged Pascal legend and the 1638 Ridotto all hold." },
+  { "name": "ODDS & ENDINGS", "score": 46, "verdict": "accepted", "notes": "Lowe's beano-to-bingo, hazard-to-craps, Hoyle's 1742 whist treatise, El Gordo and Dostoevsky's 26-day dictation all correct." },
+  { "name": "WORLD TOUR-NAMENT", "score": 47, "verdict": "accepted", "notes": "Sparrow etymology and Stern-Halma both properly hedged; dreidel acronym and petanque 'feet planted' are right." },
+  { "name": "GAMES WITHOUT BORDERS", "score": 46, "verdict": "accepted", "notes": "Moksha Patam karma origin, Loteria cards, Titania's 'nine men's morris' line and Akbar's human pachisi pieces all verified." }
+]

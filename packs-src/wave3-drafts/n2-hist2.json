@@ -1,0 +1,86 @@
+[
+  { "name": "THE PLOT SICKENS", "clues": [
+    { "clue": "An Irish-born cook who never felt sick infected dozens in the New York households she cooked for, earning her this nickname", "response": "Typhoid Mary", "value": 400 },
+    { "clue": "Ships reaching plague-era Venice had to ride at anchor this many days; the Italian for it gave us 'quarantine'", "response": "40", "value": 800 },
+    { "clue": "This Parthenon-building leader of Athens died in 429 B.C. of the plague Thucydides described in gruesome detail", "response": "Pericles", "value": 1200 },
+    { "clue": "In 1894 this Swiss-French doctor isolated the plague bacillus in Hong Kong; the germ's genus now bears his name", "response": "Alexandre Yersin", "value": 1600 },
+    { "clue": "By tradition plague reached this Derbyshire village in a 1665 bundle of London cloth; its people then sealed themselves off", "response": "Eyam", "value": 2000 }
+  ] },
+  { "name": "BEDSIDE MANORS", "clues": [
+    { "clue": "Doctor to the gladiators of Pergamon and later to Marcus Aurelius, this Greek ruled Western medicine for over a millennium", "response": "Galen", "value": 400 },
+    { "clue": "Medicine's proper emblem is the single-snake staff of this Greek god of healing, not Hermes' two-snake caduceus", "response": "Asclepius", "value": 800 },
+    { "clue": "Finished around 1025, this Persian polymath's 'Canon of Medicine' was Europe's leading medical textbook for centuries", "response": "Avicenna", "value": 1200 },
+    { "clue": "Turned down by Britain's War Office, this Jamaican-born nurse paid her own way to Crimea and ran the British Hotel there", "response": "Mary Seacole", "value": 1600 },
+    { "clue": "This 16th-century French barber-surgeon treated gunshot wounds with salve, not boiling oil: 'I dressed him, God healed him'", "response": "Ambroise Paré", "value": 2000 }
+  ] },
+  { "name": "MOLE PATROL", "clues": [
+    { "clue": "Born Margaretha Zelle, this Dutch exotic dancer faced a French firing squad in 1917 as an accused German agent", "response": "Mata Hari", "value": 400 },
+    { "clue": "'Wild Bill' Donovan ran this World War II American spy outfit, the direct ancestor of the CIA", "response": "the OSS", "value": 800 },
+    { "clue": "Once head of British intelligence's anti-Soviet section, this Cambridge-educated mole fled Beirut for Moscow in 1963", "response": "Kim Philby", "value": 1200 },
+    { "clue": "Nicknamed 'the limping lady' for her wooden leg, this American agent built resistance networks across occupied France", "response": "Virginia Hall", "value": 1600 },
+    { "clue": "Benjamin Tallmadge ran this coded spy network that fed George Washington reports from British-held New York", "response": "the Culper Ring", "value": 2000 }
+  ] },
+  { "name": "ENCRYPT KEEPER", "clues": [
+    { "clue": "Marines in the Pacific baffled Japanese eavesdroppers with a battlefield code built on this people's unwritten language", "response": "Navajo", "value": 400 },
+    { "clue": "Britain's Room 40 cracked this 1917 German cable dangling U.S. territory in front of Mexico", "response": "the Zimmermann Telegram", "value": 800 },
+    { "clue": "Enciphered letters from the 1586 Babington Plot, unpicked by Elizabeth I's codebreakers, doomed this rival queen", "response": "Mary, Queen of Scots", "value": 1200 },
+    { "clue": "For the Coast Guard this cryptanalyst broke rum-runners' ciphers, then unraveled Nazi spy rings in South America", "response": "Elizebeth Friedman", "value": 1600 },
+    { "clue": "In 1932 this Polish mathematician used permutation theory to reconstruct the wiring inside Germany's Enigma machine", "response": "Marian Rejewski", "value": 2000 }
+  ] },
+  { "name": "THE REGINA MONOLOGUES", "clues": [
+    { "clue": "Ferdinand's co-ruler, this Castilian queen bankrolled Columbus in the same year Granada fell", "response": "Isabella", "value": 400 },
+    { "clue": "Mother of Marie Antoinette, this Habsburg ruler of Austria spent years fighting Frederick the Great over Silesia", "response": "Maria Theresa", "value": 800 },
+    { "clue": "Rising from concubine to the throne, this woman declared her own Zhou dynasty in 690 as China's only female emperor", "response": "Wu Zetian", "value": 1200 },
+    { "clue": "For decades this 17th-century warrior queen of Ndongo and Matamba fought Portuguese slavers in what is now Angola", "response": "Nzinga", "value": 1600 },
+    { "clue": "In 1397 this Danish queen bound Denmark, Norway and Sweden together in the Kalmar Union", "response": "Margaret I", "value": 2000 }
+  ] },
+  { "name": "THE REGENT ERA", "clues": [
+    { "clue": "Wife of two kings and mother of two more, this queen governed England while Richard the Lionheart crusaded", "response": "Eleanor of Aquitaine", "value": 400 },
+    { "clue": "A bear keeper's daughter, this empress stiffened Justinian's spine when the Nika revolt nearly toppled him in 532", "response": "Theodora", "value": 800 },
+    { "clue": "Three of her sons wore the French crown while this Florentine-born queen mother steered the Wars of Religion", "response": "Catherine de' Medici", "value": 1200 },
+    { "clue": "For nearly half a century this Qing empress dowager ruled China from behind a silk screen", "response": "Cixi", "value": 1600 },
+    { "clue": "Coins were struck in this Mughal empress's own name as she governed for her ailing husband Jahangir", "response": "Nur Jahan", "value": 2000 }
+  ] },
+  { "name": "SMALL THINGS CONSIDERED", "clues": [
+    { "clue": "Ben Franklin is credited with these split-lens spectacles that spared him swapping between two pairs", "response": "bifocals", "value": 400 },
+    { "clue": "Hungarian journalist Laszlo Biro gave both his name and Britain's nickname to this quick-drying pen", "response": "the ballpoint pen", "value": 800 },
+    { "clue": "Joseph Priestley gave this bouncy material its English name after noticing what it did to pencil marks", "response": "rubber", "value": 1200 },
+    { "clue": "In 1849 Walter Hunt twisted a length of wire into this clasping fastener to pay off a debt, then sold the patent", "response": "the safety pin", "value": 1600 },
+    { "clue": "Oklahoma grocer Sylvan Goldman rolled out this wheeled helper in 1937 and hired shills to coax shy shoppers into using it", "response": "the shopping cart", "value": 2000 }
+  ] },
+  { "name": "SECOND-HAND HISTORY", "clues": [
+    { "clue": "Soldiers in the trenches of World War I strapped their watches to their arms, making this timepiece the standard", "response": "the wristwatch", "value": 400 },
+    { "clue": "Christiaan Huygens designed the first clock regulated by this steadily swinging weight in 1656", "response": "the pendulum", "value": 800 },
+    { "clue": "Athenian courts kept lawyers brief with this timer whose Greek name means 'water thief'", "response": "a clepsydra", "value": 1200 },
+    { "clue": "American railroads imposed these on a chaotic country on November 18, 1883, a date dubbed the Day of Two Noons", "response": "time zones", "value": 1600 },
+    { "clue": "This Yorkshire carpenter turned clockmaker built sea clocks precise enough to crack the longitude problem", "response": "John Harrison", "value": 2000 }
+  ] },
+  { "name": "MILESTONE AGE", "clues": [
+    { "clue": "Begun in 312 B.C., this 'queen of the long roads' eventually carried Roman legions from the capital down to Brindisi", "response": "the Appian Way", "value": 400 },
+    { "clue": "Wagon ruts are still visible along this 2,000-mile route that carried settlers from Missouri to the Willamette Valley", "response": "the Oregon Trail", "value": 800 },
+    { "clue": "Herodotus marveled at the relay couriers of this Persian highway running from Sardis to Susa, improved under Darius", "response": "the Royal Road", "value": 1200 },
+    { "clue": "Relay runners called chasquis sprinted messages along some 25,000 miles of road built by this Andean empire", "response": "the Inca Empire", "value": 1600 },
+    { "clue": "Layers of small crushed stone made this Scottish surveyor's roads smooth and self-draining; his name survives in 'tarmac'", "response": "John McAdam", "value": 2000 }
+  ] },
+  { "name": "CARGO CULTURE", "clues": [
+    { "clue": "Camel caravans hauling gold and salt across the Sahara made this Mali city a byword for the ends of the earth", "response": "Timbuktu", "value": 400 },
+    { "clue": "Led by the port of Lubeck, this merchant league of German towns dominated Baltic and North Sea trade for centuries", "response": "the Hanseatic League", "value": 800 },
+    { "clue": "Chartered in 1602 and run from Amsterdam, this spice-trading giant was the first company to sell shares to the general public", "response": "the Dutch East India Company", "value": 1200 },
+    { "clue": "For 250 years these Spanish ships carried Mexican silver west across the Pacific to buy Chinese silk and porcelain", "response": "the Manila galleons", "value": 1600 },
+    { "clue": "By the 1667 Treaty of Breda the Dutch kept the tiny island of Run and its trees bearing this spice; England kept Manhattan", "response": "nutmeg", "value": 2000 }
+  ] },
+  { "name": "RABBLE WITHOUT A CAUSE", "clues": [
+    { "clue": "Patrons fought back against a police raid on this Greenwich Village bar in the early hours of June 28, 1969", "response": "the Stonewall Inn", "value": 400 },
+    { "clue": "Debt-ridden Massachusetts farmers shut down courthouses in this 1786 uprising that fueled calls for a stronger union", "response": "Shays' Rebellion", "value": 800 },
+    { "clue": "Cavalry charged a Manchester reform rally in 1819 in this massacre mockingly named for Wellington's great victory", "response": "Peterloo", "value": 1200 },
+    { "clue": "Wat Tyler led this 1381 English uprising set off by a hated poll tax; the tax was quietly dropped afterward", "response": "the Peasants' Revolt", "value": 1600 },
+    { "clue": "Farmers in women's clothing smashed Welsh tollgates in these riots of 1839-43, whose name is usually traced to the Old Testament wife of Isaac", "response": "the Rebecca Riots", "value": 2000 }
+  ] },
+  { "name": "SAILS PITCH", "clues": [
+    { "clue": "James Lind's 1747 shipboard trial of citrus fruit pointed to a cure for this deficiency disease of long voyages", "response": "scurvy", "value": 400 },
+    { "clue": "Set adrift in 1789 by Fletcher Christian's mutineers, Captain Bligh sailed 3,600 miles in an open boat from this ship", "response": "the Bounty", "value": 800 },
+    { "clue": "In 1740 Admiral Edward Vernon watered down the rum ration; sailors named this weakened drink for his own nickname", "response": "grog", "value": 1200 },
+    { "clue": "Royal Navy press gangs crewed His Majesty's ships through this forced service, a grievance behind the War of 1812", "response": "impressment", "value": 1600 },
+    { "clue": "An 1876 British law required this circle-and-bar marking on hulls to show how deep a ship could safely be loaded", "response": "the Plimsoll line", "value": 2000 }
+  ] }
+]

@@ -1,0 +1,14 @@
+[
+  { "name": "ZIGGURAT WHAT IT TAKES", "score": 48, "verdict": "accepted", "notes": "Ishtar Gate/1987 flop, Marduk vs Tiamat, Shamash on the Hammurabi stele with rod and ring, Pazuzu amulets and The Exorcist — all accurate, excellent ramp." },
+  { "name": "OM IS WHERE THE HEART IS", "score": 47, "verdict": "accepted", "notes": "Ganesha, Nataraja on the dwarf of ignorance, Kali halting on Shiva, Saraswati's veena, Indra slaying Vritra — all standard and correct." },
+  { "name": "URUK & ROLL", "score": 46, "verdict": "accepted", "notes": "Enkidu, Nineveh/Ashurbanipal, Utnapishtim, Humbaba, Siduri all verified; deep but the ladder genuinely climbs and every row is from the epic itself." },
+  { "name": "RAMA KNOWS BEST", "score": 47, "verdict": "accepted", "notes": "Hanuman, Ravana, Valmiki ('tradition credits' properly hedged), Ayodhya, Kaikeyi's two boons — all correct; no leaks into n1-myth after that file's fix." },
+  { "name": "MYTHTERPIECE THEATER", "score": 48, "verdict": "accepted", "notes": "Botticelli, Bernini's Borghese Daphne, Goya's Saturn, Titian's cheetah-drawn Bacchus for the Duke of Ferrara, Velazquez's Las Hilanderas — all check out." },
+  { "name": "WRITTEN IN THE STARS", "score": 46, "verdict": "revised", "notes": "Was 43: Ursa Major sat at $1600 above the harder Cassiopeia and 'large constellation' translated the answer; swapped rows 3/4 and dropped 'large'." },
+  { "name": "UNDERWORLD WIDE WEB", "score": 46, "verdict": "accepted", "notes": "Tartarus, Duat, Yomi, Mictlan, Tuonela all accurate; loses a repeat point for sitting beside a second afterlife category in the same file." },
+  { "name": "AFTERLIFE OF THE PARTY", "score": 45, "verdict": "accepted", "notes": "Charon, Cerberus' honey cake, Yama, Baron Samedi, Ereshkigal/Nergal verified; thematic twin of UNDERWORLD WIDE WEB but answers are disjoint." },
+  { "name": "TRICKSTER TREAT", "score": 46, "verdict": "revised", "notes": "Was 43: the standard Ashanti telling prices the stories at four captures (Mmoatia included), so 'bought them with hornets, a python and a leopard' overstated; hedged to 'a price that included'." },
+  { "name": "PRANKS FOR THE MEMORIES", "score": 45, "verdict": "accepted", "notes": "Br'er Rabbit, Coyote, infant Hermes, Reynard displacing 'goupil', Till Eulenspiegel/Strauss all correct; second trickster category in the file costs a repeat point." },
+  { "name": "HALO, IT'S ME", "score": 47, "verdict": "accepted", "notes": "Patrick, Nicholas of Myra, George, Jerome's lion, Denis the cephalophore — all legends correctly flagged as legend; clean climb." },
+  { "name": "LEGEND HAS IT", "score": 47, "verdict": "accepted", "notes": "Godiva, Tell, Pied Piper 1284, El Cid's corpse ride ('legend straps'), Prester John — hedging is right and the ladder is honest." }
+]

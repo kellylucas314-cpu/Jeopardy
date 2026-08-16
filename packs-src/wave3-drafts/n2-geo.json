@@ -1,0 +1,122 @@
+[
+  {
+    "name": "DELTA FORCE",
+    "clues": [
+      { "clue": "Ancient Greeks named this African river's triangular mouth after their fourth letter, coining a landform term", "response": "the Nile", "value": 400 },
+      { "clue": "Levees strain to contain this river whose 'bird's foot' delta juts from Louisiana into the Gulf of Mexico", "response": "the Mississippi", "value": 800 },
+      { "clue": "Swimming tigers prowl the Sundarbans, the mangrove delta this sacred river shares with the Brahmaputra", "response": "the Ganges", "value": 1200 },
+      { "clue": "Vietnamese call this river's delta Cuu Long, 'nine dragons,' for its many mouths south of Ho Chi Minh City", "response": "the Mekong", "value": 1600 },
+      { "clue": "Its waters never reach the sea, fanning out instead into a wildlife-rich inland delta in Botswana's Kalahari", "response": "the Okavango", "value": 2000 }
+    ]
+  },
+  {
+    "name": "MOUTH TO SOURCE",
+    "clues": [
+      { "clue": "Personified as 'Old Father,' this river flows past Oxford and Windsor before threading London", "response": "the Thames", "value": 400 },
+      { "clue": "Rising in Germany's Black Forest, this river touches four national capitals en route to the Black Sea", "response": "the Danube", "value": 800 },
+      { "clue": "Europe's longest river, it flows past Kazan and Nizhny Novgorod before emptying into the Caspian", "response": "the Volga", "value": 1200 },
+      { "clue": "Victoria Falls interrupts this river's roughly 1,600-mile run from Zambia's highlands to the Indian Ocean", "response": "the Zambezi", "value": 1600 },
+      { "clue": "Russia's mightiest river by discharge, it divides the West Siberian Plain from the Central Siberian Plateau", "response": "the Yenisei", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SAND TRAPS",
+    "clues": [
+      { "clue": "Salt caravans from Timbuktu once crossed this desert, the largest hot one on Earth", "response": "the Sahara", "value": 400 },
+      { "clue": "1920s expeditions found celebrated dinosaur eggs in this cold Asian desert roamed by Bactrian camels", "response": "the Gobi", "value": 800 },
+      { "clue": "Weather stations in parts of this Chilean desert have never recorded rainfall; scientists test Mars gear there", "response": "the Atacama", "value": 1200 },
+      { "clue": "Fog off the cold Benguela Current sustains beetles and welwitschia plants in this African coastal desert", "response": "the Namib", "value": 1600 },
+      { "clue": "Its name is Arabic for 'the empty quarter': this sand sea of southern Arabia is Earth's largest erg", "response": "the Rub' al Khali", "value": 2000 }
+    ]
+  },
+  {
+    "name": "RANGE ROVERS",
+    "clues": [
+      { "clue": "The world's longest continental mountain range, it's crowned by the peak of Aconcagua", "response": "the Andes", "value": 400 },
+      { "clue": "Barbary macaques scamper through this North African range that shares its name with a book of maps", "response": "the Atlas Mountains", "value": 800 },
+      { "clue": "Bram Stoker parked Dracula's castle in this arc of peaks curving through Romania, Slovakia and Ukraine", "response": "the Carpathians", "value": 1200 },
+      { "clue": "Aoraki, also called Mount Cook, crowns this New Zealand range named for a European counterpart", "response": "the Southern Alps", "value": 1600 },
+      { "clue": "Its name means 'celestial mountains'; this Central Asian range looms over Kyrgyzstan and China's Xinjiang", "response": "the Tian Shan", "value": 2000 }
+    ]
+  },
+  {
+    "name": "DIRE STRAITS",
+    "clues": [
+      { "clue": "The Pillars of Hercules flank this passage where the Atlantic meets the Mediterranean, between Spain and Morocco", "response": "the Strait of Gibraltar", "value": 400 },
+      { "clue": "Ferries shuttle between Europe and Asia across this waterway bisecting Turkey's largest city", "response": "the Bosporus", "value": 800 },
+      { "clue": "Tankers exiting the Persian Gulf squeeze through this chokepoint between Iran and the Arabian Peninsula", "response": "the Strait of Hormuz", "value": 1200 },
+      { "clue": "Pirates long haunted this narrow shipping lane between Sumatra and the Malay Peninsula", "response": "the Strait of Malacca", "value": 1600 },
+      { "clue": "Arabic for 'gate of tears,' this pinch point between Djibouti and Yemen guards the Red Sea's southern exit", "response": "Bab-el-Mandeb", "value": 2000 }
+    ]
+  },
+  {
+    "name": "CAPE FEAR",
+    "clues": [
+      { "clue": "Dias rounded Africa's 'Cape of Storms' in 1488; tradition credits Portugal's king with its sunnier renaming", "response": "the Cape of Good Hope", "value": 400 },
+      { "clue": "By nautical tradition, sailors who rounded this southernmost South American headland wore a gold hoop earring", "response": "Cape Horn", "value": 800 },
+      { "clue": "John Glenn lifted off from this Florida launch site, which bore the name Kennedy from 1963 to 1973", "response": "Cape Canaveral", "value": 1200 },
+      { "clue": "Not Good Hope: Africa's true southernmost tip is this promontory where the Indian and Atlantic officially meet", "response": "Cape Agulhas", "value": 1600 },
+      { "clue": "Named for a 17th century Cossack explorer, this easternmost point of the Eurasian mainland faces Alaska", "response": "Cape Dezhnev", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SMALL CAPS",
+    "clues": [
+      { "clue": "Geothermal water heats this bay-side capital, the world's northernmost, home to Iceland's parliament", "response": "Reykjavik", "value": 400 },
+      { "clue": "In 1865 this famously windy harbor city took over from Auckland as New Zealand's capital", "response": "Wellington", "value": 800 },
+      { "clue": "A princely castle overlooks this capital of the microstate wedged between Switzerland and Austria", "response": "Vaduz", "value": 1200 },
+      { "clue": "The giant Buddha Dordenma statue gazes over this Himalayan capital, seat of Bhutan's Dragon Kings", "response": "Thimphu", "value": 1600 },
+      { "clue": "Tuvalu's seat of government occupies this coral atoll, whose airstrip doubles as an evening gathering spot", "response": "Funafuti", "value": 2000 }
+    ]
+  },
+  {
+    "name": "CAPITAL RELOCATION SERVICES",
+    "clues": [
+      { "clue": "In 1800 the U.S. government packed up in Philadelphia and moved to this new city on the Potomac", "response": "Washington, D.C.", "value": 400 },
+      { "clue": "Oscar Niemeyer's curving concrete defines this planned capital, inaugurated in 1960 deep in Brazil's interior", "response": "Brasília", "value": 800 },
+      { "clue": "Sydney-Melbourne rivalry led Australia to plant its capital in this planned inland city, the 'Bush Capital'", "response": "Canberra", "value": 1200 },
+      { "clue": "Master-planned near the monolith of Aso Rock, this city replaced Lagos as Nigeria's capital in 1991", "response": "Abuja", "value": 1600 },
+      { "clue": "In 2005 Myanmar's generals abruptly shifted the capital from Yangon to this vast, sparsely peopled planned city", "response": "Naypyidaw", "value": 2000 }
+    ]
+  },
+  {
+    "name": "ENDS OF THE EARTH",
+    "clues": [
+      { "clue": "Home to the geographic South Pole, this continent is Earth's coldest and driest", "response": "Antarctica", "value": 400 },
+      { "clue": "Magellan's crew saw native fires on this archipelago at South America's tip, hence its fiery Spanish name", "response": "Tierra del Fuego", "value": 800 },
+      { "clue": "Antarctic cruises embark from this Argentine port on the Beagle Channel, billed as the world's southernmost city", "response": "Ushuaia", "value": 1200 },
+      { "clue": "No airstrip serves this South Atlantic island, famously the remotest inhabited one, reached by ship from Cape Town", "response": "Tristan da Cunha", "value": 1600 },
+      { "clue": "Its name is said to refer to a never-freezing spring, yet this Sakha Republic village is renowned as Earth's coldest settlement", "response": "Oymyakon", "value": 2000 }
+    ]
+  },
+  {
+    "name": "NATURE'S RECORD BOOK",
+    "clues": [
+      { "clue": "No river moves more water: this South American colossus out-discharges the next several rivers combined", "response": "the Amazon", "value": 400 },
+      { "clue": "Challenger Deep, the ocean's deepest known spot, lies at the southern end of this Pacific chasm near Guam", "response": "the Mariana Trench", "value": 800 },
+      { "clue": "Holding more water than all five Great Lakes combined, this Siberian rift is the world's deepest lake", "response": "Baikal", "value": 1200 },
+      { "clue": "Measured from its Pacific-floor base to its telescope-studded summit, this Hawaiian volcano tops Everest", "response": "Mauna Kea", "value": 1600 },
+      { "clue": "Both Amundsen and Scott trekked across this France-sized expanse, Earth's largest body of floating ice", "response": "the Ross Ice Shelf", "value": 2000 }
+    ]
+  },
+  {
+    "name": "FORMERLY KNOWN AS...",
+    "clues": [
+      { "clue": "First Byzantium, then Constantinople: this metropolis on two continents made its modern name official in 1930", "response": "Istanbul", "value": 400 },
+      { "clue": "Never a European colony, this kingdom dropped the name Siam in 1939 for one meaning 'land of the free'", "response": "Thailand", "value": 800 },
+      { "clue": "Upon becoming a republic in 1972, Ceylon took this name, often rendered as 'resplendent island'", "response": "Sri Lanka", "value": 1200 },
+      { "clue": "Revolutionary Thomas Sankara renamed Upper Volta as this 'land of upright people' in 1984", "response": "Burkina Faso", "value": 1600 },
+      { "clue": "In 1975 Dahomey adopted this name from an Atlantic bight, though the old bronze-famed kingdom lay in today's Nigeria", "response": "Benin", "value": 2000 }
+    ]
+  },
+  {
+    "name": "ATLAS SHRUGGED THEM OFF",
+    "clues": [
+      { "clue": "Marshal Tito held together this six-republic Balkan federation, which broke apart bloodily in the 1990s", "response": "Yugoslavia", "value": 400 },
+      { "clue": "The 'Velvet Divorce' of 1993 split this Central European state into two republics", "response": "Czechoslovakia", "value": 800 },
+      { "clue": "Frederick the Great's kingdom survived him by some 160 years, until the Allies formally abolished this state in 1947", "response": "Prussia", "value": 1200 },
+      { "clue": "By 1831 this dream republic of Bolívar's had split into Venezuela, Ecuador and a state ruled from Bogotá", "response": "Gran Colombia", "value": 1600 },
+      { "clue": "In 1964 this East African state merged with Zanzibar, their names blending into the new country's", "response": "Tanganyika", "value": 2000 }
+    ]
+  }
+]

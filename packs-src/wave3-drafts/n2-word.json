@@ -1,0 +1,122 @@
+[
+  {
+    "name": "WORDS WITH A PAST",
+    "clues": [
+      { "clue": "An allowance Roman soldiers received for buying salt evolved into this word for regular pay.", "response": "salary", "value": 400 },
+      { "clue": "Anatomists named this tissue from the Latin for 'little mouse' — one seems to scurry when you flex.", "response": "muscle", "value": 800 },
+      { "clue": "Plague-wary Venice made ships wait 40 days, a span whose Italian name gives us this isolation term.", "response": "quarantine", "value": 1200 },
+      { "clue": "Now a detective's lead, this word was once spelled 'clew' and meant a ball of thread like the one Theseus followed.", "response": "clue", "value": 1600 },
+      { "clue": "From Latin 'nescius,' meaning ignorant, this bland little compliment meant 'foolish' in the Middle Ages.", "response": "nice", "value": 2000 }
+    ]
+  },
+  {
+    "name": "TOPONYM OF THE WORLD, MA!",
+    "clues": [
+      { "clue": "A messenger's fabled run from a Greek battlefield to Athens gave this 26.2-mile race its name.", "response": "marathon", "value": 400 },
+      { "clue": "The name of this sturdy blue-jean twill contracts 'serge de Nimes,' after its French hometown.", "response": "denim", "value": 800 },
+      { "clue": "This formal dinner jacket owes its name to a tony 1880s club colony in New York's Ramapo Mountains.", "response": "tuxedo", "value": 1200 },
+      { "clue": "Louis Reard named this two-piece of 1946 for a Pacific atoll where the U.S. had just tested an atomic bomb.", "response": "bikini", "value": 1600 },
+      { "clue": "Mineral springs in a Belgian Ardennes town lent every steamy resort this 3-letter word.", "response": "spa", "value": 2000 }
+    ]
+  },
+  {
+    "name": "VENI, VIDI, VOCABULARY",
+    "clues": [
+      { "clue": "Robin Williams urges his 'Dead Poets Society' students to heed this 2-word Horace motto: 'seize the day.'", "response": "carpe diem", "value": 400 },
+      { "clue": "Latin for 'you shall have the body,' this writ forces the state to bring a prisoner before a judge.", "response": "habeas corpus", "value": 800 },
+      { "clue": "Latin for 'it does not follow,' this term tags a reply with no logical link to what came before.", "response": "non sequitur", "value": 1200 },
+      { "clue": "Literally 'without which not,' this 3-word phrase denotes an absolutely indispensable element.", "response": "sine qua non", "value": 1600 },
+      { "clue": "Cicero loved to pose this 2-word question, 'to whom is it a benefit?', to expose who profits from a crime.", "response": "cui bono", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE ROOT OF ALL GREEK",
+    "clues": [
+      { "clue": "Greek roots meaning 'love of wisdom' built this word for the discipline of Plato and Kant.", "response": "philosophy", "value": 400 },
+      { "clue": "Greek for 'river horse,' it's the barrel-shaped African mammal that spends its days submerged.", "response": "hippopotamus", "value": 800 },
+      { "clue": "From the Greek for 'flesh-eater,' this stone coffin's limestone was reputed to consume the corpse inside.", "response": "sarcophagus", "value": 1200 },
+      { "clue": "Moliere titled a comedy for this character type whose Greek name means 'hater of humankind.'", "response": "misanthrope", "value": 1600 },
+      { "clue": "Greek 'stone' plus the ichor of the gods: this 1964 coinage names the earthy scent of rain on dry soil.", "response": "petrichor", "value": 2000 }
+    ]
+  },
+  {
+    "name": "RHETORIC & ROLL",
+    "clues": [
+      { "clue": "'I've told you a billion times' commits this figure of wild, deliberate exaggeration.", "response": "hyperbole", "value": 400 },
+      { "clue": "Calling a firing a 'workforce adjustment' deploys this figure that trades blunt words for gentle ones.", "response": "euphemism", "value": 800 },
+      { "clue": "When 'the crown' means the monarchy and 'the press' means journalists, this substitution device is at work.", "response": "metonymy", "value": 1200 },
+      { "clue": "Churchill's 'we shall fight on the beaches' speech pounds away with this device of repeated openings.", "response": "anaphora", "value": 1600 },
+      { "clue": "Greek for 'yoking,' it's the device letting one verb pull double duty: 'she stole his heart and his wallet.'", "response": "zeugma", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GETTING TENSE",
+    "clues": [
+      { "clue": "This punctuation mark turns 'cannot' into 'can't' and hands the cat ownership of 'the cat's pajamas.'", "response": "apostrophe", "value": 400 },
+      { "clue": "'Seeing is believing' opens and closes with this -ing verb form that does a noun's job.", "response": "gerund", "value": 800 },
+      { "clue": "Star Trek's 'to boldly go' famously commits this grammatical sin by wedging an adverb mid-verb.", "response": "split infinitive", "value": 1200 },
+      { "clue": "'If I were a rich man' fiddles with this verb mood reserved for wishes and contrary-to-fact musings.", "response": "the subjunctive", "value": 1600 },
+      { "clue": "Latin for 'more than perfect,' it's the tense at work in 'she had already left.'", "response": "pluperfect", "value": 2000 }
+    ]
+  },
+  {
+    "name": "BLEND IT LIKE BECKHAM",
+    "clues": [
+      { "clue": "Born as British university slang in the 1890s, this portmanteau meal pairs midmorning eggs with mimosas.", "response": "brunch", "value": 400 },
+      { "clue": "Blending 'motor' and 'hotel,' this roadside lodging boomed along Route 66.", "response": "motel", "value": 800 },
+      { "clue": "Coined around 1905 for London's pea-soup air, this blend packs smoke and fog into one grimy syllable.", "response": "smog", "value": 1200 },
+      { "clue": "An 1812 cartoon spotted a salamander in a district drawn under Massachusetts Gov. Elbridge Gerry, hatching this political verb.", "response": "gerrymander", "value": 1600 },
+      { "clue": "In 'Through the Looking-Glass,' Lewis Carroll fused 'chuckle' and 'snort' into this gleeful verb.", "response": "chortle", "value": 2000 }
+    ]
+  },
+  {
+    "name": "COINED BY THE QUILL",
+    "clues": [
+      { "clue": "Thomas More minted this word for an ideal commonwealth from Greek meaning 'no place.'", "response": "utopia", "value": 400 },
+      { "clue": "Karel Capek's 1920 play 'R.U.R.' introduced this word for artificial workers, from the Czech for drudgery.", "response": "robot", "value": 800 },
+      { "clue": "Milton coined this name for the capital of Hell in 'Paradise Lost'; today it means sheer uproar.", "response": "pandemonium", "value": 1200 },
+      { "clue": "After a tale of three princes from old Sri Lanka, Horace Walpole coined this word for happy accidents in 1754.", "response": "serendipity", "value": 1600 },
+      { "clue": "This word for a studious square first appeared as a creature's name in Dr. Seuss' 1950 'If I Ran the Zoo.'", "response": "nerd", "value": 2000 }
+    ]
+  },
+  {
+    "name": "WHAT'S IN A SURNAME?",
+    "clues": [
+      { "clue": "County Mayo tenants ostracized their English land agent in 1880, turning his surname into this shunning tactic.", "response": "boycott", "value": 400 },
+      { "clue": "A skinflint French finance minister's surname stuck to this cheap shadow-profile style of portrait.", "response": "silhouette", "value": 800 },
+      { "clue": "Ballet dancers owe the name of this skin-tight one-piece to a French trapeze star of the 1860s.", "response": "leotard", "value": 1200 },
+      { "clue": "A German physician whose 'animal magnetism' seances entranced 1780s Paris left us this verb for captivating.", "response": "mesmerize", "value": 1600 },
+      { "clue": "A British officer's 1780s exploding case shot put his surname on this word for flying shell fragments.", "response": "shrapnel", "value": 2000 }
+    ]
+  },
+  {
+    "name": "CHARACTER REFERENCES",
+    "clues": [
+      { "clue": "Thanks to Dickens' 1843 miser, any tightwad risks being branded with this humbugging surname.", "response": "Scrooge", "value": 400 },
+      { "clue": "Cervantes' windmill-tilting knight lives on in this adjective for gallantly impractical idealism.", "response": "quixotic", "value": 800 },
+      { "clue": "An aunt in Sheridan's 'The Rivals' praises 'the very pineapple of politeness'; her name gives us this term for such slips.", "response": "malapropism", "value": 1200 },
+      { "clue": "Playing the 'glad game' through Eleanor H. Porter's 1913 novel, this heroine became a byword for sunny optimism.", "response": "Pollyanna", "value": 1600 },
+      { "clue": "The hypnotist who molds the singer Trilby in an 1894 novel became this term for a manipulative mastermind.", "response": "Svengali", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE UNTRANSLATABLES",
+    "clues": [
+      { "clue": "German handed English this word for the guilty thrill of watching a rival slip on a banana peel.", "response": "schadenfreude", "value": 400 },
+      { "clue": "Candles, wool socks & cocoa embody this Danish word for cozy contentment that fueled a 2010s lifestyle craze.", "response": "hygge", "value": 800 },
+      { "clue": "Fado singers steep in this Portuguese word for a bittersweet longing for what's lost or far away.", "response": "saudade", "value": 1200 },
+      { "clue": "This Japanese aesthetic term savors imperfection and impermanence, like a tea bowl mended with gold.", "response": "wabi-sabi", "value": 1600 },
+      { "clue": "Desmond Tutu championed this Nguni word, roughly 'I am because we are'; it also names a Linux system.", "response": "ubuntu", "value": 2000 }
+    ]
+  },
+  {
+    "name": "BORROWED, NEVER RETURNED",
+    "clues": [
+      { "clue": "Japanese for 'empty orchestra,' this bar-night pastime invites anyone to butcher a power ballad.", "response": "karaoke", "value": 400 },
+      { "clue": "In Swahili this word means any journey; English reserves it for expeditions after the Big Five.", "response": "safari", "value": 800 },
+      { "clue": "Yiddish for a clumsy oaf — literally a 'wooden block' — this word fits anyone who trips over air.", "response": "klutz", "value": 1200 },
+      { "clue": "A Hindu deity whose colossal temple chariot rolls through Puri, India gave us this word for an unstoppable force.", "response": "juggernaut", "value": 1600 },
+      { "clue": "American troops in the Philippines borrowed Tagalog's word for 'mountain' to name this remote back country.", "response": "the boondocks", "value": 2000 }
+    ]
+  }
+]

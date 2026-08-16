@@ -1,0 +1,14 @@
+[
+  { "name": "BOARD CERTIFIED", "score": 47, "verdict": "accepted", "notes": "Clean ladder Scrabble to Stratego; Trivial Pursuit 1979 Canadian-journalists and Stratego spy-fells-marshal facts check out." },
+  { "name": "ANTIQUES BOARD SHOW", "score": 43, "verdict": "rejected", "notes": "Deleted: 4 of 5 responses (dominoes, Go, mancala, senet) duplicate sibling n2-games with near-identical framings; replacement pool exhausted by other files in the wave." },
+  { "name": "SUIT YOURSELF", "score": 46, "verdict": "accepted", "notes": "Uno/solitaire/Go Fish/cribbage/euchre all verified; 'bowers' from German Bauer is a genuine $1000 hook." },
+  { "name": "DECKED OUT", "score": 46, "verdict": "revised", "notes": "Row 600 dead-man's-hand mirrored n2-sport's Hickok clue; replaced with the 1885 Cincinnati Bicycle brand, which also breaks up three straight suit answers." },
+  { "name": "RECESS APPOINTMENT", "score": 46, "verdict": "accepted", "notes": "Hide-and-seek to kabaddi is a real climb; the single-breath kabaddi chant is accurate." },
+  { "name": "DOLLED UP", "score": 46, "verdict": "accepted", "notes": "Gruelle 1915 patent, Chatty Cathy pull-ring and Rose O'Neill's Kewpie-to-mayonnaise arc all hold up." },
+  { "name": "SOLD SEPARATELY", "score": 46, "verdict": "accepted", "notes": "Kenner Early Bird IOU and corn-syrup-gel Stretch Armstrong verified; response length at 400 is the only nit." },
+  { "name": "FAD ABOUT YOU", "score": 47, "verdict": "accepted", "notes": "Pet Rock, 1999 NSA Furby ban and the POG passionfruit-orange-guava naming all confirmed." },
+  { "name": "TOYING WITH HISTORY", "score": 47, "verdict": "accepted", "notes": "Mr. Potato Head TV first, Silly Putty, Frisbee/Frisbie pie tins, Lonnie Johnson and Pedro Flores all sound; duplicates resolved on the n2 side." },
+  { "name": "GOING TO PIECES", "score": 47, "verdict": "accepted", "notes": "Spilsbury dissected maps and Loyd's $1,000 14-15 prize are correct; tangram piece count is right." },
+  { "name": "CROSS EXAMINATION", "score": 48, "verdict": "accepted", "notes": "Wynne 1913, NYT 1942, Shortz enigmatology, the 1944 Telegraph D-Day scare and the 1924 Simon & Schuster pencil book all verified." },
+  { "name": "PARLOR TRICKS", "score": 46, "verdict": "revised", "notes": "Row 400 Twister duplicated n2-games GAME CHANGERS down to the Carson/Gabor 1966 fact; replaced with Twenty Questions." }
+]

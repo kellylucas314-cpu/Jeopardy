@@ -1,0 +1,62 @@
+[
+  {
+    "name": "RUBY SLIPPERS",
+    "clue": "This teenage star followed the Yellow Brick Road as Dorothy and sang 'Over the Rainbow' in 1939",
+    "response": "Judy Garland"
+  },
+  {
+    "name": "TONIGHT'S THE NIGHT",
+    "clue": "With a hearty introduction from sidekick Ed McMahon, this Nebraska-raised host led NBC's 'Tonight Show' for 30 years",
+    "response": "Johnny Carson"
+  },
+  {
+    "name": "THE KING'S CASTLE",
+    "clue": "Fans still flock to Graceland, the Memphis mansion where this beloved singer lived until his death in 1977",
+    "response": "Elvis Presley"
+  },
+  {
+    "name": "GOLDEN OPPORTUNITY",
+    "clue": "Since 1937 the orange towers of the Golden Gate Bridge have greeted ships sailing into this city's bay",
+    "response": "San Francisco"
+  },
+  {
+    "name": "GATE EXPECTATIONS",
+    "clue": "At Berlin's Brandenburg Gate in 1987, this president demanded, 'Mr. Gorbachev, tear down this wall!'",
+    "response": "Ronald Reagan"
+  },
+  {
+    "name": "PINSTRIPE POWER",
+    "clue": "Called the 'Sultan of Swat,' this Yankees slugger hit 60 home runs in 1927, a record that stood 34 years",
+    "response": "Babe Ruth"
+  },
+  {
+    "name": "SAVOIR FARE",
+    "clue": "This 6-foot-2 TV chef taught Americans the joys of French cooking and signed off each show with 'Bon appétit!'",
+    "response": "Julia Child"
+  },
+  {
+    "name": "BAMBOOZLED",
+    "clue": "After President Nixon's 1972 trip to China, the National Zoo welcomed Ling-Ling and Hsing-Hsing, a pair of these bears",
+    "response": "giant pandas"
+  },
+  {
+    "name": "GOD BLESS US, EVERY ONE",
+    "clue": "Ebenezer Scrooge learns the true meaning of Christmas from 3 spirits in this author's beloved 1843 tale",
+    "response": "Charles Dickens"
+  },
+  {
+    "name": "THE EAGLE HAS LANDED",
+    "clue": "In July 1969 this astronaut climbed down the Eagle's ladder and took 'one small step' onto the Moon",
+    "response": "Neil Armstrong"
+  },
+  {
+    "name": "PITCHFORK PERFECT",
+    "clue": "In this 1930 painting, Grant Wood put his dentist, pitchfork in hand, and his sister before an Iowa farmhouse",
+    "response": "American Gothic"
+  },
+  {
+    "name": "SUNDAY BEST",
+    "clue": "John Newton, a slave-ship captain turned preacher, wrote this beloved hymn about a wretch who once was lost",
+    "response": "Amazing Grace"
+  }
+]

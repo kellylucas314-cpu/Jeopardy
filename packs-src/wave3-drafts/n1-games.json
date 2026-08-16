@@ -1,0 +1,79 @@
+[
+  { "name": "BOARD CERTIFIED", "clues": [
+    { "clue": "Rack up 7 letter tiles & hunt for a triple word score in this classic word game", "response": "Scrabble", "value": 200 },
+    { "clue": "Calling 'B-7' might sink a rival's hidden carrier in this coordinate-guessing naval game", "response": "Battleship", "value": 400 },
+    { "clue": "Spin the wheel & load a tiny plastic car with peg people in this Milton Bradley journey from college to retirement", "response": "The Game of Life", "value": 600 },
+    { "clue": "Two Canadian journalists cooked up this quiz game in 1979; winners fill a pie-like token with 6 wedges", "response": "Trivial Pursuit", "value": 800 },
+    { "clue": "A lowly spy can fell the marshal & bombs lie in wait among the hidden ranks of this capture-the-flag board game", "response": "Stratego", "value": 1000 }
+  ] },
+  { "name": "SUIT YOURSELF", "clues": [
+    { "clue": "Forget to shout this game's own name when you're down to one card & you'll pay with a penalty draw", "response": "Uno", "value": 200 },
+    { "clue": "Klondike is the classic form of this patient one-player pastime that came free with Windows", "response": "solitaire", "value": 400 },
+    { "clue": "Demand a rival's 3s in this kids' card game; if they have none, you're sent angling in the draw pile", "response": "Go Fish", "value": 600 },
+    { "clue": "Tradition credits poet Sir John Suckling with this card game scored by racing pegs along a holed board", "response": "cribbage", "value": 800 },
+    { "clue": "In this trump game beloved in the Midwest, jacks become 'bowers', from a German word for farmer", "response": "euchre", "value": 1000 }
+  ] },
+  { "name": "DECKED OUT", "clues": [
+    { "clue": "Often drawn as a capering jester, this extra card joined American decks in the 1860s", "response": "the joker", "value": 200 },
+    { "clue": "British tax rules made the ace of this black suit the deck's most ornate card", "response": "spades", "value": 400 },
+    { "clue": "Cincinnati printers rolled out this two-wheeled brand of playing cards in 1885; magicians still deal it", "response": "Bicycle", "value": 600 },
+    { "clue": "The 'suicide king', who seems to shove his sword into his own head, wears the crown of this suit", "response": "hearts", "value": 800 },
+    { "clue": "Tang dynasty 'money cards' make this country the playing card's likely birthplace", "response": "China", "value": 1000 }
+  ] },
+  { "name": "RECESS APPOINTMENT", "clues": [
+    { "clue": "'Ready or not, here I come!' warns the player who's 'it' in this schoolyard classic", "response": "hide-and-seek", "value": 200 },
+    { "clue": "Toss your marker into square 1, then bounce through the numbered chalk grid in this sidewalk game", "response": "hopscotch", "value": 400 },
+    { "clue": "A human chain defies rivals to 'send someone right over' in this colorfully named recess game", "response": "red rover", "value": 600 },
+    { "clue": "Jumpers weave between two ropes turning in opposite directions in this game whose name is also slang for gibberish", "response": "double Dutch", "value": 800 },
+    { "clue": "A raider must keep chanting this game's name in a single breath while tagging foes on South Asian playgrounds", "response": "kabaddi", "value": 1000 }
+  ] },
+  { "name": "DOLLED UP", "clues": [
+    { "clue": "Christmas 1983 shoppers came to blows over these soft-sculpture dolls, each 'adopted' with its own papers", "response": "Cabbage Patch Kids", "value": 200 },
+    { "clue": "Cartoonist Johnny Gruelle patented this red-yarn-haired rag doll in 1915; brother Andy joined her later", "response": "Raggedy Ann", "value": 400 },
+    { "clue": "Pull the ring on this alliteratively named Mattel talker & she might offer 'I love you'", "response": "Chatty Cathy", "value": 600 },
+    { "clue": "Pleasant Rowland launched this doll line in 1986 with historical heroines Kirsten, Samantha & Molly", "response": "American Girl", "value": 800 },
+    { "clue": "Rose O'Neill's cherubic magazine imps became these topknotted dolls — and, in Japan, a mayonnaise mascot", "response": "Kewpies", "value": 1000 }
+  ] },
+  { "name": "SOLD SEPARATELY", "clues": [
+    { "clue": "Optimus Prime leads these 'robots in disguise' that fold from trucks & jets into toy-box warriors", "response": "the Transformers", "value": 200 },
+    { "clue": "These four pizza-loving reptiles of the toy aisle are named for Renaissance artists", "response": "the Teenage Mutant Ninja Turtles", "value": 400 },
+    { "clue": "'By the power of Grayskull!' cries this Mattel muscleman, leader of the Masters of the Universe line", "response": "He-Man", "value": 600 },
+    { "clue": "Kenner's 1977 'Early Bird' box was just a Christmas IOU for this space saga's not-yet-made figures", "response": "Star Wars", "value": 800 },
+    { "clue": "Filled with gelled corn syrup, this blond 1976 Kenner strongman could be yanked to 4 feet & slowly snap back", "response": "Stretch Armstrong", "value": 1000 }
+  ] },
+  { "name": "FAD ABOUT YOU", "clues": [
+    { "clue": "Wham-O moved tens of millions of these waist-twirling plastic rings in 1958 alone", "response": "the hula hoop", "value": 200 },
+    { "clue": "Holiday 1996 stampedes erupted over this giggling red Sesame Street plush", "response": "Tickle Me Elmo", "value": 400 },
+    { "clue": "Ad man Gary Dahl struck it rich in 1975 with this boxed 'companion' that shipped with air holes & a care manual", "response": "the Pet Rock", "value": 600 },
+    { "clue": "Fears it might parrot overheard secrets got this owlish, gibberish-babbling 1998 toy banned from NSA offices", "response": "Furby", "value": 800 },
+    { "clue": "This '90s cap-slamming fad took its name from a Hawaiian passionfruit-orange-guava juice", "response": "pogs", "value": 1000 }
+  ] },
+  { "name": "TOYING WITH HISTORY", "clues": [
+    { "clue": "The first toy advertised on TV, this 1952 face-parts kit left kids to supply their own spud", "response": "Mr. Potato Head", "value": 200 },
+    { "clue": "A failed WWII stab at synthetic rubber became this bouncy, egg-packaged goo that famously lifted comic-strip ink", "response": "Silly Putty", "value": 400 },
+    { "clue": "Wham-O's Pluto Platter got a new name honoring a Connecticut pie company whose tins Yale students tossed", "response": "the Frisbee", "value": 600 },
+    { "clue": "Testing a heat pump at home, NASA engineer Lonnie Johnson blasted out the idea for this pressurized water gun", "response": "the Super Soaker", "value": 800 },
+    { "clue": "Filipino immigrant Pedro Flores sparked America's late-1920s craze for this spinning string toy; Duncan bought him out", "response": "the yo-yo", "value": 1000 }
+  ] },
+  { "name": "GOING TO PIECES", "clues": [
+    { "clue": "A Hungarian design professor's 6-sided twisty invention became the puzzle craze of the early 1980s", "response": "the Rubik's Cube", "value": 200 },
+    { "clue": "Despite the Japanese name, this fill-in-the-digits 9x9 grid craze began as Dell's 'Number Place'", "response": "sudoku", "value": 400 },
+    { "clue": "London mapmaker John Spilsbury cut the first of these as 'dissected maps' for 1760s geography lessons", "response": "jigsaw puzzles", "value": 600 },
+    { "clue": "Sam Loyd dangled $1,000 for an impossible swap of tiles 14 & 15 in this sliding-block craze of 1880", "response": "the 15 puzzle", "value": 800 },
+    { "clue": "Five triangles, a square & a parallelogram build endless silhouettes in this Chinese puzzle, a European craze by 1818", "response": "the tangram", "value": 1000 }
+  ] },
+  { "name": "CROSS EXAMINATION", "clues": [
+    { "clue": "Arthur Wynne's diamond-shaped 1913 'word-cross' grew into this black-&-white grid pastime", "response": "the crossword", "value": 200 },
+    { "clue": "Puzzle-averse for decades, this newspaper finally ran one in 1942, judging wartime readers needed a diversion", "response": "The New York Times", "value": 400 },
+    { "clue": "This NPR puzzlemaster, holder of a self-designed enigmatology degree, took charge of the Times grid in 1993", "response": "Will Shortz", "value": 600 },
+    { "clue": "MI5 came knocking in 1944 after Telegraph puzzle answers included MULBERRY, NEPTUNE & this invasion's code name", "response": "Operation Overlord", "value": 800 },
+    { "clue": "Its first-ever book, a 1924 puzzle collection with a pencil attached, launched this publishing house & a national craze", "response": "Simon & Schuster", "value": 1000 }
+  ] },
+  { "name": "PARLOR TRICKS", "clues": [
+    { "clue": "When the tune cuts out, scramble to sit — there's always one seat too few in this party staple", "response": "musical chairs", "value": 200 },
+    { "clue": "'Animal, vegetable or mineral?' is the classic opening query in this guessing game with a numeric name", "response": "Twenty Questions", "value": 400 },
+    { "clue": "Tugging an earlobe for 'sounds like' is legal; speaking is not, in this act-it-out parlor game", "response": "charades", "value": 600 },
+    { "clue": "Seattle waiter Rob Angel turned sketch-&-guess into this 1985 board game phenomenon", "response": "Pictionary", "value": 800 },
+    { "clue": "A seeker with covered eyes gropes after dodging players in this parlor game, a hit at Tudor courts & Victorian Christmases", "response": "blind man's buff", "value": 1000 }
+  ] }
+]

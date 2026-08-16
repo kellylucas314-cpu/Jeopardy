@@ -1,56 +1,72 @@
 /* ============================================================
-   GAME NIGHT — "Late-Night Supper Club"
-   Creative North Star: a warm art-deco game-show lounge.
-   Tinted warm-black, brass for money, one jade accent, ivory
-   ink, a characterful display serif over a clean grotesque.
-   No glassmorphism, no rainbow gradients, no bounce.
+   CLUE D'ÉTAT — "The Emperor's Trivia Salon"
+   Creative North Star: a parlor-game evening in a Napoleonic
+   townhouse. Parchment and ivory, deep sepia ink, terracotta
+   category banners, brass strictly for money, oxblood for
+   drama, one imperial-green accent. Airbnb-level clarity with
+   warm parlor drama. No neon, no casino clutter, no bounce.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
+/* Bodoni Moda — a Didone, the letterform of the French Empire era, for display
+   and money. Cinzel — Roman inscriptional capitals, for engraved plaques.
+   Jost — a clean European geometric for interface text. */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..700&family=Cinzel:wght@400..900&family=Jost:ital,wght@0,300..700;1,300..600&display=swap');
 
 :root {
-  /* Warm ink surfaces — tinted, never pure black */
-  --ink: #16110d;
-  --surface-1: #1f1812;
-  --surface-2: #29201a;
-  --surface-3: #332820;
-  --line: rgba(238, 222, 198, 0.11);
-  --line-strong: rgba(238, 222, 198, 0.2);
+  /* Parchment surfaces — warm paper, never sterile white
+     (base sampled from the salon mockups) */
+  --ink: #e9dcc9;            /* page parchment (legacy name, kept for compatibility) */
+  --surface-1: #f4ecdd;      /* card ivory */
+  --surface-2: #efe5d2;      /* raised ivory */
+  --surface-3: #e0d2ba;      /* pressed parchment */
+  --line: rgba(62, 46, 30, 0.16);
+  --line-strong: rgba(62, 46, 30, 0.3);
 
-  /* Ivory text — warm, never pure white or pure gray */
-  --cream: #f3ead8;
-  --cream-dim: #bcab93;
-  --cream-faint: #8a7a64;
+  /* Sepia ink text — warm, never pure black (legacy names kept) */
+  --cream: #2c2115;
+  --cream-dim: #6d5b47;
+  --cream-faint: #97846b;
+  --text-dim: #6d5b47;
 
-  /* One disciplined accent — jade */
-  --jade: #34b88a;
-  --jade-bright: #46d29e;
-  --jade-deep: #1c7a5a;
+  /* One disciplined accent — imperial green */
+  --jade: #41684e;
+  --jade-bright: #527f61;
+  --jade-deep: #2d4b37;
 
   /* Brass — reserved for money and a few earned highlights */
-  --brass: #d8a85a;
-  --brass-bright: #ecc578;
+  --brass: #a07430;
+  --brass-bright: #8a6122;
+  --money: #a07430;
+
+  /* Salon drama */
+  --terracotta: #c96f52;      /* category banners (from the mockup) */
+  --terracotta-deep: #ad573c;
+  --oxblood: #7e2d21;         /* Waterloo Wager, danger, theatrics */
 
   /* Verdicts */
-  --correct: #4ec78f;
-  --wrong: #db6a48;
+  --correct: #3c7a54;
+  --wrong: #a63d29;
 
   /* Player identities — warm, distinct, never the accent */
-  --p0: #e2795c;
-  --p1: #5bb0b8;
-  --p2: #d6a648;
+  --p0: #b65535;
+  --p1: #2e7078;
+  --p2: #8f6a23;
 
-  --shadow: 0 24px 60px -22px rgba(0, 0, 0, 0.75);
-  --shadow-sm: 0 8px 24px -14px rgba(0, 0, 0, 0.7);
+  --shadow: 0 22px 48px -20px rgba(74, 52, 28, 0.38);
+  --shadow-sm: 0 10px 22px -12px rgba(74, 52, 28, 0.32);
+  --tile-shadow: inset 0 1px 0 rgba(255, 253, 245, 0.65),
+                 0 2px 4px -1px rgba(74, 52, 28, 0.16),
+                 0 9px 18px -10px rgba(74, 52, 28, 0.24);
 
   --r-sm: 8px;
-  --r-md: 14px;
-  --r-lg: 20px;
+  --r-md: 10px;
+  --r-lg: 14px;
 
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1); /* confident ease-out, no overshoot */
 
-  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
-  --font-ui: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-display: 'Bodoni Moda', Didot, 'Bodoni MT', Georgia, serif;
+  --font-ui: 'Jost', system-ui, -apple-system, sans-serif;
+  --font-board: 'Cinzel', Georgia, 'Times New Roman', serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -61,10 +77,11 @@ body {
   font-family: var(--font-ui);
   color: var(--cream);
   background-color: var(--ink);
-  /* A single warm spotlight from above — flat, not an aurora */
+  /* Warm daylight from above, a whisper of paper grain, soft edge vignette */
   background-image:
-    radial-gradient(120% 80% at 50% -10%, rgba(216, 168, 90, 0.07), transparent 55%),
-    radial-gradient(90% 70% at 50% 120%, rgba(52, 184, 138, 0.05), transparent 55%);
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.29 0 0 0 0 0.22 0 0 0 0 0.13 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23g)'/%3E%3C/svg%3E"),
+    radial-gradient(120% 85% at 50% -12%, rgba(255, 250, 238, 0.75), transparent 58%),
+    radial-gradient(130% 110% at 50% 55%, transparent 62%, rgba(122, 88, 48, 0.14) 100%);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -116,14 +133,15 @@ button:focus-visible, input:focus-visible {
 
 input { font-family: var(--font-ui); }
 
-/* Primary action — solid jade, flat, confident */
+/* Primary action — solid ink, flat, confident */
 .btn-start, .btn-submit, .btn-continue, .btn-play-again, .btn-feedback-continue, .btn-wager-submit {
-  background: var(--jade);
-  color: #08251b;
+  background: var(--cream);
+  color: var(--surface-1);
   font-weight: 700;
+  box-shadow: var(--shadow-sm);
 }
 .btn-start:hover, .btn-submit:hover, .btn-continue:hover, .btn-play-again:hover,
-.btn-feedback-continue:hover, .btn-wager-submit:hover { background: var(--jade-bright); }
+.btn-feedback-continue:hover, .btn-wager-submit:hover { background: #46372a; }
 
 /* ——— Logo / marquee ——— */
 
@@ -131,21 +149,35 @@ input { font-family: var(--font-ui); }
   font-family: var(--font-display);
   font-weight: 900;
   font-optical-sizing: auto;
-  font-size: 3.6rem;
+  font-size: 4.4rem;
   line-height: 1;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   text-align: center;
   color: var(--cream);
+  text-shadow: 0 2px 0 rgba(255, 253, 245, 0.7);
 }
 
 .logo-subtitle {
-  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.68rem;
   font-weight: 700;
   color: var(--brass);
-  letter-spacing: 0.42em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  margin-top: 14px;
+  white-space: nowrap;
+  margin-top: 16px;
   text-align: center;
+}
+/* brass rules flanking the subtitle — a title screen, not a form header */
+.logo-subtitle::before, .logo-subtitle::after {
+  content: '';
+  width: 28px;
+  height: 1px;
+  flex-shrink: 0;
+  background: rgba(160, 116, 48, 0.5);
 }
 
 /* ============================================================
@@ -167,49 +199,60 @@ input { font-family: var(--font-ui); }
 
 .setup-card {
   background: var(--surface-1);
-  border: 1px solid var(--line);
-  border-radius: var(--r-lg);
-  padding: 30px;
+  border: none;
+  border-radius: 16px;
+  padding: 34px 32px;
   width: 100%;
-  box-shadow: var(--shadow);
+  box-shadow: inset 0 1px 0 rgba(255, 253, 245, 0.8), var(--shadow);
 }
 
 .setup-card h2 {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  display: flex;
+  align-items: center;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--cream-faint);
+  color: var(--cream-dim);
   margin-bottom: 14px;
+}
+/* brass hairline carries each section label across the card */
+.setup-card h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  margin-left: 12px;
+  background: rgba(160, 116, 48, 0.3);
 }
 
 /* Segmented control */
 .player-count-buttons {
   display: flex;
   gap: 4px;
-  padding: 4px;
-  background: var(--ink);
-  border: 1px solid var(--line);
+  padding: 5px;
+  background: rgba(62, 46, 30, 0.07);
+  border: none;
   border-radius: 12px;
   margin-bottom: 24px;
 }
 
 .btn-player-count {
   flex: 1;
-  padding: 11px;
-  font-size: 0.9rem;
+  padding: 12px;
+  font-size: 0.92rem;
   font-weight: 600;
   background: transparent;
   color: var(--cream-dim);
-  border-radius: 9px;
+  border-radius: 8px;
 }
 
 .btn-player-count:hover { color: var(--cream); }
 
 .btn-player-count.selected {
-  background: var(--surface-3);
-  color: var(--cream);
-  box-shadow: inset 0 0 0 1px var(--line-strong);
+  background: var(--cream);
+  color: var(--surface-1);
+  font-weight: 700;
+  box-shadow: 0 3px 8px -2px rgba(44, 33, 21, 0.4);
 }
 
 /* Player rows */
@@ -222,17 +265,25 @@ input { font-family: var(--font-ui); }
 
 .name-input-group label { display: none; }
 
-.avatar-btn {
+/* Monogram seal — the player's initial struck in Didone caps, no emoji */
+.player-seal {
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--pc, var(--cream));
   background: var(--surface-2);
-  border: 1px solid var(--line-strong);
-  border-radius: 13px;
+  border: 2px solid var(--pc, var(--line-strong));
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px var(--surface-1);
+  user-select: none;
 }
-
-.avatar-btn:hover { border-color: var(--pc, var(--jade)); }
 
 .name-input-group input {
   flex: 1;
@@ -268,10 +319,11 @@ input { font-family: var(--font-ui); }
   gap: 6px;
   margin: 28px auto 24px;
   padding: 26px 48px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(216, 168, 90, 0.25);
-  border-radius: 18px;
+  background: var(--surface-1);
+  border: 1px solid rgba(160, 116, 48, 0.4);
+  border-radius: var(--r-lg);
   width: fit-content;
+  box-shadow: var(--tile-shadow);
   animation: popIn 0.5s ease both;
 }
 .solo-scorecard .podium-avatar { font-size: 3rem; }
@@ -281,7 +333,7 @@ input { font-family: var(--font-ui); }
   font-weight: 700;
   color: var(--brass-bright, #ecc578);
 }
-.solo-score-money.negative { color: #e2795c; }
+.solo-score-money.negative { color: var(--wrong); }
 .solo-score-sub { color: var(--text-dim, #a89a86); font-size: 0.95rem; }
 
 .solo-next-hint {
@@ -306,10 +358,10 @@ input { font-family: var(--font-ui); }
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
-  padding: 15px;
-  background: var(--ink);
+  padding: 16px;
+  background: rgba(62, 46, 30, 0.05);
   color: var(--cream);
-  border: 1px solid var(--line);
+  border: 1.5px solid transparent;
   border-radius: var(--r-md);
   text-align: left;
 }
@@ -317,14 +369,15 @@ input { font-family: var(--font-ui); }
 .btn-mode:hover { border-color: var(--line-strong); }
 
 .btn-mode.selected {
-  border-color: var(--jade);
-  background: var(--surface-2);
+  border-color: var(--cream);
+  background: #faf4e6;
+  box-shadow: 0 4px 10px -4px rgba(44, 33, 21, 0.3);
 }
 
-.mode-name { font-size: 0.98rem; font-weight: 700; }
-.btn-mode.selected .mode-name { color: var(--jade-bright); }
+.mode-name { font-size: 1rem; font-weight: 700; }
+.btn-mode.selected .mode-name { color: var(--terracotta-deep); }
 
-.mode-desc { font-size: 0.72rem; font-weight: 400; color: var(--cream-faint); line-height: 1.45; }
+.mode-desc { font-size: 0.76rem; font-weight: 500; color: var(--cream-dim); line-height: 1.45; }
 
 .btn-start {
   width: 100%;
@@ -422,7 +475,9 @@ input { font-family: var(--font-ui); }
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  padding: 0 2px 14px;
+  padding: 0 2px 13px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(160, 116, 48, 0.4);
   flex-shrink: 0;
 }
 
@@ -430,7 +485,7 @@ input { font-family: var(--font-ui); }
 
 .round-name {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   font-weight: 800;
   letter-spacing: -0.01em;
   color: var(--cream);
@@ -484,9 +539,13 @@ input { font-family: var(--font-ui); }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--pc, var(--cream));
   background: var(--surface-3);
-  border: 1px solid var(--pc, var(--line-strong));
+  border: 1.5px solid var(--pc, var(--line-strong));
   flex-shrink: 0;
 }
 
@@ -504,13 +563,19 @@ input { font-family: var(--font-ui); }
 
 .streak { font-size: 0.66rem; color: var(--wrong); font-weight: 700; }
 
-/* The grid */
+/* The grid — an inset panel, a real object on the table */
 .game-board {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 7px;
+  gap: 9px;
   flex: 1;
   min-height: 0;
+  padding: 12px;
+  background: rgba(62, 46, 30, 0.065);
+  border: 1px solid rgba(62, 46, 30, 0.12);
+  border-radius: 12px;
+  box-shadow: inset 0 2px 10px rgba(74, 52, 28, 0.12),
+              inset 0 -1px 0 rgba(255, 253, 245, 0.5);
 }
 
 .game-board.revealing .board-category { animation: revealCategory 0.5s var(--ease) backwards; }
@@ -529,24 +594,29 @@ input { font-family: var(--font-ui); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Engraved campaign banners, not plain labels */
 .category-header {
-  background: var(--surface-3);
+  background: linear-gradient(180deg, #d17e60 0%, #c46749 55%, #b45a3f 100%);
+  border: 1px solid rgba(122, 48, 28, 0.45);
   border-radius: var(--r-sm);
   padding: 10px 8px;
   text-align: center;
-  font-family: var(--font-display);
+  font-family: var(--font-board);
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: var(--cream);
+  letter-spacing: 0.06em;
+  color: #faf1df;
+  text-shadow: 0 1px 1px rgba(90, 35, 18, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
-  line-height: 1.2;
+  min-height: 60px;
+  line-height: 1.25;
   flex-shrink: 0;
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 235, 220, 0.35),
+              inset 0 -2px 0 rgba(122, 48, 28, 0.4),
+              0 5px 12px -6px rgba(122, 48, 28, 0.55);
 }
 
 .board-clue {
@@ -559,25 +629,47 @@ input { font-family: var(--font-ui); }
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 1.55rem;
+  font-size: clamp(1.55rem, 2.5vw, 2.35rem);
   font-weight: 700;
+  letter-spacing: 0.01em;
   font-variant-numeric: tabular-nums;
-  color: var(--brass);
+  color: var(--cream);
   cursor: pointer;
   user-select: none;
-  transition: background 0.16s var(--ease), color 0.16s var(--ease), transform 0.16s var(--ease);
+  box-shadow: var(--tile-shadow);
+  transition: background 0.16s var(--ease), color 0.16s var(--ease),
+              transform 0.16s var(--ease), box-shadow 0.16s var(--ease);
+}
+
+.board-clue:active:not(.answered) {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(74, 52, 28, 0.18);
 }
 
 .board-clue:hover:not(.answered) {
-  background: var(--surface-3);
-  color: var(--brass-bright);
+  background: #faf3e4;
+  color: var(--terracotta-deep);
   transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255, 253, 245, 0.65),
+              0 4px 7px -2px rgba(74, 52, 28, 0.2),
+              0 14px 24px -12px rgba(74, 52, 28, 0.3);
 }
 
+/* Claimed tiles read as pressed impressions left in the felt */
 .board-clue.answered {
-  background: transparent;
-  border-color: rgba(238, 222, 198, 0.05);
+  background: rgba(62, 46, 30, 0.05);
+  border: 1px dashed rgba(62, 46, 30, 0.2);
+  box-shadow: inset 0 2px 6px rgba(74, 52, 28, 0.1);
   cursor: default;
+}
+/* A small brass lozenge, drawn in CSS, stamps conquered ground */
+.board-clue.answered::after {
+  content: '';
+  width: 9px;
+  height: 9px;
+  transform: rotate(45deg);
+  border: 1px solid rgba(160, 116, 48, 0.45);
+  background: rgba(160, 116, 48, 0.14);
 }
 
 .board-footer {
@@ -635,8 +727,8 @@ input { font-family: var(--font-ui); }
   padding: 36px;
   animation: clueIn 0.35s var(--ease);
   background:
-    radial-gradient(90% 60% at 50% 20%, rgba(216, 168, 90, 0.06), transparent 60%),
-    var(--surface-1);
+    radial-gradient(90% 60% at 50% 20%, rgba(255, 250, 238, 0.8), transparent 60%),
+    var(--surface-2);
 }
 
 @keyframes clueIn {
@@ -693,10 +785,10 @@ input { font-family: var(--font-ui); }
   background: var(--brass);
   border-radius: 2px;
   transition: width 1s linear;
-  box-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+  box-shadow: 0 0 8px rgba(160, 116, 48, 0.4);
 }
 
-.timer-bar.urgent { background: var(--wrong); box-shadow: 0 0 10px rgba(219, 106, 72, 0.5); }
+.timer-bar.urgent { background: var(--wrong); box-shadow: 0 0 8px rgba(166, 61, 41, 0.45); }
 
 .timer-text {
   font-family: var(--font-display);
@@ -712,11 +804,13 @@ input { font-family: var(--font-ui); }
 .timer-text.urgent { color: var(--wrong); }
 
 .clue-text {
-  font-size: 2.1rem;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
   font-weight: 500;
+  font-optical-sizing: auto;
   text-align: center;
   max-width: 880px;
-  line-height: 1.4;
+  line-height: 1.42;
   text-wrap: balance;
   margin-bottom: 30px;
   flex-shrink: 0;
@@ -798,8 +892,8 @@ input { font-family: var(--font-ui); }
   font-size: 1.5rem;
 }
 
-.feedback-correct .feedback-icon { background: rgba(78, 199, 143, 0.13); border: 1px solid var(--correct); }
-.feedback-wrong .feedback-icon { background: rgba(219, 106, 72, 0.13); border: 1px solid var(--wrong); }
+.feedback-correct .feedback-icon { background: rgba(60, 122, 84, 0.12); border: 1px solid var(--correct); }
+.feedback-wrong .feedback-icon { background: rgba(166, 61, 41, 0.1); border: 1px solid var(--wrong); }
 
 .correct-response { font-size: 0.95rem; margin-top: 8px; color: var(--cream-dim); font-weight: 400; }
 .correct-response strong { color: var(--cream); font-weight: 700; }
@@ -837,7 +931,7 @@ input { font-family: var(--font-ui); }
   border: 1px solid var(--correct);
   border-radius: var(--r-md);
 }
-.btn-feedback-accept:hover { background: rgba(78, 199, 143, 0.1); }
+.btn-feedback-accept:hover { background: rgba(60, 122, 84, 0.09); }
 
 .streak-callout {
   margin-top: 10px;
@@ -847,8 +941,8 @@ input { font-family: var(--font-ui); }
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--brass-bright);
-  background: rgba(216, 168, 90, 0.1);
-  border: 1px solid rgba(216, 168, 90, 0.4);
+  background: rgba(160, 116, 48, 0.12);
+  border: 1px solid rgba(160, 116, 48, 0.45);
   animation: popIn 0.4s var(--ease);
 }
 
@@ -946,8 +1040,8 @@ input { font-family: var(--font-ui); }
   padding: 32px;
   animation: fadeIn 0.3s ease;
   background:
-    radial-gradient(80% 55% at 50% 30%, rgba(216, 168, 90, 0.1), transparent 62%),
-    var(--surface-1);
+    radial-gradient(80% 55% at 50% 30%, rgba(126, 45, 33, 0.12), transparent 62%),
+    var(--surface-2);
   overflow-y: auto;
 }
 
@@ -966,7 +1060,8 @@ input { font-family: var(--font-ui); }
   text-align: center;
   line-height: 1.02;
   letter-spacing: -0.01em;
-  color: var(--brass);
+  color: var(--oxblood);
+  text-shadow: 0 1px 0 rgba(255, 250, 238, 0.6);
 }
 
 .dd-content {
@@ -1016,7 +1111,7 @@ input { font-family: var(--font-ui); }
   background: var(--ink);
   border: 1px solid var(--line-strong);
   border-radius: var(--r-md);
-  color: var(--brass);
+  color: var(--cream);
   outline: none;
   text-align: center;
 }
@@ -1035,9 +1130,7 @@ input { font-family: var(--font-ui); }
   border: 1px solid var(--line);
   border-radius: 9px;
 }
-.btn-preset:hover { color: var(--brass); border-color: rgba(216, 168, 90, 0.4); }
-
-.btn-preset:hover { border-color: var(--money); color: var(--money); }
+.btn-preset:hover { color: var(--brass); border-color: rgba(160, 116, 48, 0.45); }
 
 .btn-wager-submit {
   width: 100%;
@@ -1047,10 +1140,11 @@ input { font-family: var(--font-ui); }
   border-radius: var(--r-md);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  background: var(--brass);
-  color: #2a1c06;
+  background: var(--oxblood);
+  color: #f7ead8;
+  box-shadow: var(--shadow-sm);
 }
-.btn-wager-submit:hover { background: var(--brass-bright); }
+.btn-wager-submit:hover { background: #94382a; }
 
 /* ============================================================
    ROUND TRANSITION
@@ -1143,8 +1237,8 @@ input { font-family: var(--font-ui); }
   animation: fadeIn 0.5s ease;
   overflow-y: auto;
   background:
-    radial-gradient(80% 50% at 50% 14%, rgba(52, 184, 138, 0.07), transparent 62%),
-    var(--surface-1);
+    radial-gradient(80% 50% at 50% 14%, rgba(45, 75, 55, 0.1), transparent 62%),
+    var(--surface-2);
 }
 
 .final-header {
@@ -1235,9 +1329,12 @@ input { font-family: var(--font-ui); }
   width: 68px; height: 68px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 2rem;
+  font-family: var(--font-display);
+  font-size: 2rem; font-weight: 700; line-height: 1;
+  color: var(--pc, var(--cream));
   background: var(--surface-3);
-  border: 2px solid var(--pc, var(--jade));
+  border: 2px solid var(--pc, var(--brass));
+  box-shadow: inset 0 0 0 2px var(--surface-1);
 }
 .pass-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; }
 .pass-sub { font-size: 0.9rem; color: var(--cream-dim); margin-bottom: 6px; }
@@ -1295,7 +1392,7 @@ input { font-family: var(--font-ui); }
   border: 1px solid var(--line);
   border-radius: 8px;
 }
-.final-result-player.wrong .btn-final-override { color: var(--correct); border-color: rgba(78, 199, 143, 0.4); }
+.final-result-player.wrong .btn-final-override { color: var(--correct); border-color: rgba(60, 122, 84, 0.45); }
 
 /* ============================================================
    RESULTS — PODIUM
@@ -1343,9 +1440,14 @@ input { font-family: var(--font-ui); }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--pc, var(--cream));
   background: var(--surface-3);
-  border: 1.5px solid var(--pc, var(--jade));
+  border: 2px solid var(--pc, var(--brass));
+  box-shadow: inset 0 0 0 2px var(--surface-1);
 }
 
 .podium-col.rank-1 .podium-avatar { width: 72px; height: 72px; font-size: 2.2rem; }
@@ -1374,9 +1476,9 @@ input { font-family: var(--font-ui); }
 
 .podium-col.rank-1 .podium-block {
   height: 128px;
-  background: var(--surface-3);
-  border-color: rgba(216, 168, 90, 0.4);
-  box-shadow: inset 0 2px 0 var(--brass);
+  background: var(--surface-1);
+  border-color: rgba(160, 116, 48, 0.5);
+  box-shadow: inset 0 2px 0 var(--brass), var(--shadow-sm);
 }
 .podium-col.rank-2 .podium-block { height: 90px; }
 .podium-col.rank-3 .podium-block { height: 62px; }
@@ -1442,7 +1544,7 @@ input { font-family: var(--font-ui); }
   justify-content: center;
   gap: 26px;
   background:
-    radial-gradient(60% 45% at 50% 45%, rgba(216, 168, 90, 0.08), transparent 65%),
+    radial-gradient(60% 45% at 50% 45%, rgba(255, 250, 238, 0.85), transparent 65%),
     var(--ink);
   cursor: pointer;
   animation: fadeIn 0.3s ease;
@@ -1454,7 +1556,7 @@ input { font-family: var(--font-ui); }
 .ci-label {
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--brass);
+  color: var(--terracotta-deep);
   text-transform: uppercase;
   letter-spacing: 0.32em;
 }
@@ -1515,7 +1617,7 @@ input { font-family: var(--font-ui); }
 
 .btn-cta {
   background: var(--jade);
-  color: #08251b;
+  color: #eef3ea;
   font-weight: 700;
 }
 .btn-cta:hover { background: var(--jade-bright); }
@@ -1528,11 +1630,11 @@ input { font-family: var(--font-ui); }
 .btn-quiet:hover { color: var(--cream); }
 
 .btn-danger {
-  background: var(--wrong);
-  color: #2a0f08;
+  background: var(--oxblood);
+  color: #f7ead8;
   font-weight: 700;
 }
-.btn-danger:hover { filter: brightness(1.08); }
+.btn-danger:hover { filter: brightness(1.12); }
 
 .modal-overlay {
   position: fixed;
@@ -1542,7 +1644,7 @@ input { font-family: var(--font-ui); }
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: rgba(10, 8, 5, 0.72);
+  background: rgba(44, 30, 16, 0.45);
   animation: fadeIn 0.2s ease;
 }
 
@@ -1632,8 +1734,8 @@ input { font-family: var(--font-ui); }
   pointer-events: none;
   animation: screenFlash 0.55s var(--ease) forwards;
 }
-.screen-flash.correct { background: radial-gradient(60% 50% at 50% 50%, rgba(78, 199, 143, 0.28), transparent 75%); }
-.screen-flash.wrong { background: radial-gradient(60% 50% at 50% 50%, rgba(219, 106, 72, 0.26), transparent 75%); }
+.screen-flash.correct { background: radial-gradient(60% 50% at 50% 50%, rgba(60, 122, 84, 0.22), transparent 75%); }
+.screen-flash.wrong { background: radial-gradient(60% 50% at 50% 50%, rgba(166, 61, 41, 0.2), transparent 75%); }
 
 @keyframes screenFlash {
   0% { opacity: 0; }
@@ -1732,7 +1834,7 @@ input { font-family: var(--font-ui); }
   .setup-card { padding: 22px; }
   .category-header { font-size: 0.5rem; min-height: 36px; }
   .board-clue { font-size: 0.8rem; }
-  .avatar-btn { width: 44px; height: 44px; font-size: 1.3rem; }
+  .player-seal { width: 42px; height: 42px; font-size: 1.2rem; }
 }
 
 /* ——— Reduced motion ——— */
@@ -1757,3 +1859,120 @@ input { font-family: var(--font-ui); }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 3px; }
+
+/* ============================================================
+   THE HOST — Napoleon, tastefully present
+   ============================================================ */
+
+/* The host's dock — a fixed post beside the board, never a floating sticker */
+.host-dock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  text-align: left;
+  animation: fadeSlideIn 0.5s var(--ease) 0.3s backwards;
+}
+
+.host-medallion {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2.5px solid var(--brass);
+  box-shadow: 0 0 0 2px var(--surface-1), var(--shadow-sm);
+  background: #e9dbc4;
+}
+
+.host-plaque {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--cream-dim);
+  background: var(--surface-1);
+  border: 1px solid rgba(160, 116, 48, 0.45);
+  border-radius: var(--r-md);
+  padding: 10px 16px;
+  box-shadow: var(--tile-shadow);
+  min-width: 0;
+}
+.host-plaque strong { font-style: normal; font-weight: 700; }
+
+/* Medallion portrait on the title screen */
+.host-portrait {
+  width: 132px;
+  height: 132px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 4px solid var(--brass);
+  box-shadow: 0 0 0 4px var(--surface-1), 0 0 0 5px rgba(160, 116, 48, 0.45), var(--shadow-sm);
+  background: #e9dbc4;
+  display: block;
+  margin: 0 auto 18px;
+}
+
+/* A dry remark from the Emperor — small, never a full-screen interruption */
+.host-line {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: var(--cream-dim);
+  text-align: center;
+  max-width: 440px;
+  margin: 14px auto 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(160, 116, 48, 0.4);
+  animation: fadeSlideIn 0.45s var(--ease) 0.15s backwards;
+}
+.host-line::before { content: '— '; color: var(--brass); }
+.host-line::after { content: ' —'; color: var(--brass); }
+
+.host-attrib {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-ui);
+  font-style: normal;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+}
+
+/* Board footer carries the host dock left, table info right */
+.board-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  padding: 12px 4px 0;
+}
+.board-footer-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .host-portrait { width: 100px; height: 100px; border-width: 3px; }
+  .logo { font-size: 2.9rem; }
+  .logo-subtitle { letter-spacing: 0.26em; }
+  .host-medallion { width: 40px; height: 40px; border-width: 2px; }
+  .host-plaque { font-size: 0.85rem; padding: 7px 12px; }
+  .board-footer { flex-wrap: wrap; justify-content: center; gap: 8px 14px; }
+  .category-header { font-size: 0.66rem; letter-spacing: 0.05em; min-height: 46px; font-weight: 600; }
+  .board-clue { font-size: 1.15rem; }
+  .game-board { padding: 7px; gap: 6px; }
+}
+@media (max-width: 480px) {
+  .host-plaque { display: none; } /* the medallion alone hosts a phone table */
+  .category-header { font-size: 0.58rem; min-height: 40px; }
+  .board-clue { font-size: 0.98rem; }
+}

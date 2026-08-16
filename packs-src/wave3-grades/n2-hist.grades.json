@@ -1,0 +1,14 @@
+[
+  { "name": "HEIR TODAY, GONE TOMORROW", "score": 49, "verdict": "accepted", "notes": "All five dynasty endings verified (Romanov/Qing/Hanover/Spanish Habsburg/Achaemenid); clean ladder, no leaks." },
+  { "name": "SULTANS OF SWING", "score": 48, "verdict": "accepted", "notes": "Facts solid (1453, Kanuni, 1826 Janissaries, Lepanto); slight row 3/4 wobble since 'Habsburg capital' makes Vienna derivable, still fair." },
+  { "name": "COUP ARE YOU?", "score": 48, "verdict": "accepted", "notes": "Verified incl. Fort de Joux for Louverture and Pushkin's Decembrist friends; name stretches from coups to revolutions but reads as 'overthrows'." },
+  { "name": "UP IN ARMS", "score": 48, "verdict": "revised", "notes": "$400 had no 'this X' referent; recast as '...in this 1773 protest' (still avoids tea/party leak). Other four rows verified as written." },
+  { "name": "IRON CURTAIN CALLS", "score": 49, "verdict": "accepted", "notes": "Fulton MO, Nagy hanged, 35 Helsinki signatories all check; $1200 smartly hides Cuba behind 'Caribbean island'." },
+  { "name": "HINDSIGHT IS 20TH CENTURY", "score": 49, "verdict": "accepted", "notes": "Pearl Harbor/Sarajevo/Dandi/Spanish-flu-press/Gapon all verified; varied response types, real ladder." },
+  { "name": "SIGNED, SEALED, DELIVERED", "score": 48, "verdict": "revised", "notes": "$800 lacked a referent; recast as 'With this document of January 1, 1863...'. Seal-not-sign on Magna Carta is a nice accuracy touch." },
+  { "name": "PEACE OF PAPER", "score": 47, "verdict": "accepted", "notes": "All treaty facts verified (Versailles, $15M, Guadalupe Hidalgo, Tordesillas, Westphalia); interest a notch below the file's best." },
+  { "name": "CAN YOU DIG IT?", "score": 49, "verdict": "accepted", "notes": "Rosetta 1799, Carter quote, 1974 well diggers, Hisarlik, Sutton Hoo 1939 all check; excellent hooks throughout." },
+  { "name": "LOST & PROFOUND", "score": 48, "verdict": "accepted", "notes": "Pompeii casts, Bingham 1911, Siq, Angkor (properly hedged 'may have been'), Great Zimbabwe all verified." },
+  { "name": "SAIL OF THE CENTURY", "score": 47, "verdict": "accepted", "notes": "Mactan 1521, Calicut 1498, Cook 1779, Amundsen Dec 1911, Ibn Battuta ~75k miles all check; Amundsen row stretches the 'sail' pun slightly." },
+  { "name": "SCIENCE NON-FICTION", "score": 47, "verdict": "revised", "notes": "Pre-score 43: 4/5 clues re-trod wave material (Fleming mold in n1-sci+finals, X-rays in n1-sci, Jenner and Barnard in n2-sci). Rebuilt as smallpox/Laennec stethoscope/Copernicus/anesthesia/Lavoisier." }
+]

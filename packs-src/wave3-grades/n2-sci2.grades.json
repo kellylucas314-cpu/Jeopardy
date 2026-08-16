@@ -1,0 +1,14 @@
+[
+  { "name": "THE COUNTER REVOLUTION", "score": 47, "verdict": "revised", "notes": "Wheatstone row correctly hedges (Christie devised the bridge) and Dewar/Thermos checks out; softened 'a pupil of Galileo' to 'Galileo's assistant in his final months', which is what Torricelli actually was." },
+  { "name": "RATE EXPECTATIONS", "score": 47, "verdict": "revised", "notes": "Richter/Mohs/Scoville/Apgar attributions verified; replaced the Fujita row with Beaufort (Irish-born, 1805, 0-12) because n1-sci names the Fujita scale outright in a clue." },
+  { "name": "PIGMENT OF THE IMAGINATION", "score": 47, "verdict": "accepted", "notes": "Rayleigh, Newton's indigo, CMYK 'key plate' and metamerism all verified; shares spectrum territory with PRISM BREAK in the same file." },
+  { "name": "PRISM BREAK", "score": 47, "verdict": "accepted", "notes": "Secondary-rainbow reversal, Cherenkov glow and Fraunhofer (Bavarian optician who catalogued the lines) are all accurate." },
+  { "name": "FACET THE FACTS", "score": 48, "verdict": "accepted", "notes": "Opal, corundum, beryl, heat-treated citrine and Moissan's Arizona silicon carbide all check out; clean ladder and strong hooks." },
+  { "name": "IGNEOUS IS BLISS", "score": 46, "verdict": "accepted", "notes": "Every fact holds (Siccar Point, Alvarez iridium, Mohorovicic 1909), but the name promises igneous and only obsidian delivers — marble is metamorphic by the clue's own wording." },
+  { "name": "WHISK ASSESSMENT", "score": 48, "verdict": "accepted", "notes": "Lecithin, cabbage indicator, ceviche denaturation, Nahuatl-rooted nixtamalization and cream of tartar from wine barrels are all correct." },
+  { "name": "REPEATABLE OFFENSES", "score": 48, "verdict": "accepted", "notes": "Eratosthenes, Eddington at Principe, Millikan, Michelson-Morley and Cavendish's 1798 torsion balance verified; textbook ladder." },
+  { "name": "TEST SUBJECTS", "score": 47, "verdict": "accepted", "notes": "Pavlov, Mischel, Miller, Hershey-Chase blender and Redi/Spallanzani all accurate; second famous-experiments category in one file is a mild repeat." },
+  { "name": "SOUNDING OFF", "score": 46, "verdict": "revised", "notes": "Replaced the Trieste row — n1-people's clue names 'the bathyscaphe Trieste' — with Hess's echo-sounded guyots, named for Arnold Guyot; other rows (Franklin, thermocline, Tharp) verified." },
+  { "name": "CULTURE CLUB", "score": 48, "verdict": "accepted", "notes": "Lactobacillus, Penicillium roqueforti, Taq from Yellowstone, Marshall's 1984 self-infection and koji Aspergillus all verified." },
+  { "name": "THE FRAUD SQUAD", "score": 48, "verdict": "accepted", "notes": "Piltdown orangutan jaw, 1989 cold fusion, 1869 Cardiff Giant, the Sun's 1835 moon hoax and Blondlot's N-rays are all accurate and well hedged." }
+]

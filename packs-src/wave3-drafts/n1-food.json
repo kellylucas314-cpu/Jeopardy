@@ -1,0 +1,86 @@
+[
+  { "name": "PLATE EXPECTATIONS", "clues": [
+    { "clue": "Sushi, tempura & miso soup are hallmarks of this island nation's cuisine", "response": "Japan", "value": 200 },
+    { "clue": "Saffron-tinted paella was born in the Valencia region of this European country", "response": "Spain", "value": 400 },
+    { "clue": "Tom yum, a hot and sour shrimp soup fragrant with lemongrass and lime, simmers in this Southeast Asian kingdom", "response": "Thailand", "value": 600 },
+    { "clue": "Paprika-rich goulash simmers as the national dish of this landlocked Central European country", "response": "Hungary", "value": 800 },
+    { "clue": "The tagine, a stew named for its cone-lidded pot, is a staple of this North African kingdom", "response": "Morocco", "value": 1000 }
+  ] },
+  { "name": "PASTA LA VISTA", "clues": [
+    { "clue": "This baked classic layers wide pasta sheets with ragu, cheese & bechamel or ricotta", "response": "lasagna", "value": 200 },
+    { "clue": "This Genoese basil sauce takes its name from the Italian for 'to pound'", "response": "pesto", "value": 400 },
+    { "clue": "Eggs, pecorino, guanciale & black pepper sauce this Roman pasta dish--no cream required", "response": "carbonara", "value": 600 },
+    { "clue": "Italian for 'butterflies', this pasta is better known to Americans as bow ties", "response": "farfalle", "value": 800 },
+    { "clue": "The name of this minimalist Roman pasta dish translates as 'cheese and pepper'", "response": "cacio e pepe", "value": 1000 }
+  ] },
+  { "name": "JUST DESSERTS", "clues": [
+    { "clue": "A graham cracker crust and a rich filling of sweetened soft cheese define this dessert", "response": "cheesecake", "value": 200 },
+    { "clue": "French for 'burnt cream', this custard hides under a crackly torched-sugar crust", "response": "creme brulee", "value": 400 },
+    { "clue": "Espresso-soaked ladyfingers and mascarpone build this Italian 'pick-me-up'", "response": "tiramisu", "value": 600 },
+    { "clue": "This billowy meringue dessert honors a Russian ballerina who toured Australia & New Zealand", "response": "pavlova", "value": 800 },
+    { "clue": "In 1832 a Viennese apprentice created this chocolate torte, layered with apricot jam, that bears his name", "response": "Sachertorte", "value": 1000 }
+  ] },
+  { "name": "SUGAR RUSH", "clues": [
+    { "clue": "The slogan says these button-shaped chocolates 'melt in your mouth, not in your hand'", "response": "M&M's", "value": 200 },
+    { "clue": "Since 1907, these flat-bottomed, foil-wrapped chocolates have puckered up for Hershey", "response": "Kisses", "value": 400 },
+    { "clue": "Mars launched this nougat, caramel & peanut bar in 1930, naming it for a family horse", "response": "Snickers", "value": 600 },
+    { "clue": "This Austrian candy brand squeezed its name from 'Pfefferminz', German for peppermint", "response": "PEZ", "value": 800 },
+    { "clue": "Hans Riegel of Bonn packed his name and city into this gummy bear pioneer's brand", "response": "Haribo", "value": 1000 }
+  ] },
+  { "name": "HIGH SPIRITS", "clues": [
+    { "clue": "Tequila, orange liqueur & lime juice shake up this cocktail, often served with a salted rim", "response": "margarita", "value": 200 },
+    { "clue": "James Bond takes this gin-or-vodka & vermouth cocktail 'shaken, not stirred'", "response": "martini", "value": 400 },
+    { "clue": "Havana bartenders muddle mint & lime with rum, sugar & soda for this refreshing highball", "response": "mojito", "value": 600 },
+    { "clue": "Swap Scotch into a Manhattan and you get this cocktail sharing its name with a Scottish outlaw hero", "response": "Rob Roy", "value": 800 },
+    { "clue": "Rye, sugar, Peychaud's bitters & an absinthe rinse make this official cocktail of New Orleans", "response": "Sazerac", "value": 1000 }
+  ] },
+  { "name": "BREWED AWAKENING", "clues": [
+    { "clue": "This espresso-and-foam drink's name nods to the brown-robed Capuchin friars", "response": "cappuccino", "value": 200 },
+    { "clue": "Stateside it's espresso with steamed milk, but this drink's name is simply Italian for 'milk'", "response": "latte", "value": 400 },
+    { "clue": "This bergamot-scented black tea blend honors a 19th-century British prime minister", "response": "Earl Grey", "value": 600 },
+    { "clue": "Legend says goatherd Kaldi noticed his frisky goats and discovered coffee in this African nation", "response": "Ethiopia", "value": 800 },
+    { "clue": "Pinewood smoke gives this Chinese black tea from the Wuyi Mountains its campfire aroma", "response": "lapsang souchong", "value": 1000 }
+  ] },
+  { "name": "SELL-EBRITIES", "clues": [
+    { "clue": "This Kellogg's mascot has growled that Frosted Flakes are 'Gr-r-reat!' since the 1950s", "response": "Tony the Tiger", "value": 200 },
+    { "clue": "Poke this giggling mascot of a baking-goods brand in the tummy; his proper name is Poppin' Fresh", "response": "the Pillsbury Doughboy", "value": 400 },
+    { "clue": "Created for a 1916 contest, this Planters mascot sports a top hat, monocle & cane", "response": "Mr. Peanut", "value": 600 },
+    { "clue": "Known to insiders as Bibendum, this plump white mascot has sold tires since 1898", "response": "the Michelin Man", "value": 800 },
+    { "clue": "This terrier cocking an ear at a gramophone horn became RCA Victor's 'His Master's Voice' trademark", "response": "Nipper", "value": 1000 }
+  ] },
+  { "name": "FOUNDERS KEEPERS", "clues": [
+    { "clue": "Ray Kroc built this golden-arched empire from a San Bernardino burger stand run by two brothers", "response": "McDonald's", "value": 200 },
+    { "clue": "Atlanta pharmacist John Pemberton first mixed this soft drink in 1886", "response": "Coca-Cola", "value": 400 },
+    { "clue": "This Seattle coffee giant, founded in 1971, is named for the first mate in 'Moby-Dick'", "response": "Starbucks", "value": 600 },
+    { "clue": "This Danish toymaker's name squeezes together 'leg godt', meaning 'play well'", "response": "LEGO", "value": 800 },
+    { "clue": "Founder Ingvar Kamprad folded his initials, family farm & home village into this acronym", "response": "IKEA", "value": 1000 }
+  ] },
+  { "name": "LETTUCE ENTERTAIN YOU", "clues": [
+    { "clue": "Bugs Bunny's go-to snack, this root vegetable owes its orange hue to beta-carotene", "response": "carrot", "value": 200 },
+    { "clue": "Slicing this bulb releases a sulfur compound that brings tears to a cook's eyes", "response": "onion", "value": 400 },
+    { "clue": "Eating this green spring stalk can lend a strange scent to some people's urine", "response": "asparagus", "value": 600 },
+    { "clue": "This thistle's flower bud is eaten leaf by leaf; Castroville, California crowns itself its capital", "response": "artichoke", "value": 800 },
+    { "clue": "The German name of this swollen-stemmed brassica translates as 'cabbage turnip'", "response": "kohlrabi", "value": 1000 }
+  ] },
+  { "name": "TOP BANANA", "clues": [
+    { "clue": "Proverbially, one of these fruits a day keeps the doctor away", "response": "apple", "value": 200 },
+    { "clue": "Once dubbed the Chinese gooseberry, this fuzzy fruit was rebranded after New Zealand's national bird", "response": "kiwifruit", "value": 400 },
+    { "clue": "Colonial hosts showed off this spiky-topped tropical fruit as a symbol of hospitality", "response": "pineapple", "value": 600 },
+    { "clue": "The stink of this spiky Southeast Asian fruit gets it banned from Singapore's subways and hotels", "response": "durian", "value": 800 },
+    { "clue": "This trademarked name for a homely Jamaican tangelo leans into its wrinkled, baggy rind", "response": "ugli fruit", "value": 1000 }
+  ] },
+  { "name": "BRAISE THE ROOF", "clues": [
+    { "clue": "Low, slow smoke and saucy regional rivalries define this outdoor cooking style", "response": "barbecue", "value": 200 },
+    { "clue": "From the French for 'to jump', this method tosses food quickly in a hot, oiled pan", "response": "sauteing", "value": 400 },
+    { "clue": "This technique boils vegetables briefly, then plunges them into ice water to lock in color", "response": "blanching", "value": 600 },
+    { "clue": "French for 'under vacuum', this method cooks bagged food in a precisely heated water bath", "response": "sous vide", "value": 800 },
+    { "clue": "From the French for 'preserved', this technique slowly cooks duck legs submerged in their own fat", "response": "confit", "value": 1000 }
+  ] },
+  { "name": "COUNTER INTELLIGENCE", "clues": [
+    { "clue": "Percy Spencer invented this oven after a radar magnetron melted the chocolate bar in his pocket", "response": "the microwave", "value": 200 },
+    { "clue": "This perforated bowl gets a workout every pasta night, draining noodles in the sink", "response": "colander", "value": 400 },
+    { "clue": "Grinding spices the old way takes this two-piece set: a sturdy bowl and a blunt crusher", "response": "mortar and pestle", "value": 600 },
+    { "clue": "Before the first order, chefs chop, measure & arrange everything per this 3-word French phrase", "response": "mise en place", "value": 800 },
+    { "clue": "This cone-shaped fine-mesh sieve for silky sauces takes its name from the French for 'Chinese'", "response": "chinois", "value": 1000 }
+  ] }
+]

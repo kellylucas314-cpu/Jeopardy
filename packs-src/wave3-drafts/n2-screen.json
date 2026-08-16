@@ -1,0 +1,122 @@
+[
+  {
+    "name": "AUTEUR LIMITS",
+    "clues": [
+      { "clue": "A malfunctioning mechanical shark forced this director to keep the monster of 'Jaws' mostly offscreen", "response": "Steven Spielberg", "value": 400 },
+      { "clue": "This exacting director shot 'Barry Lyndon' interiors by candlelight using ultra-fast lenses built for NASA", "response": "Stanley Kubrick", "value": 800 },
+      { "clue": "Overlapping chatter and sprawling ensembles marked this director of 'Nashville' and 'M*A*S*H'", "response": "Robert Altman", "value": 1200 },
+      { "clue": "This famously private director waited 20 years between 'Days of Heaven' and 'The Thin Red Line'", "response": "Terrence Malick", "value": 1600 },
+      { "clue": "Often called the father of American independent film, he directed 'Shadows' and 'A Woman Under the Influence'", "response": "John Cassavetes", "value": 2000 }
+    ]
+  },
+  {
+    "name": "HITCH, PLEASE",
+    "clues": [
+      { "clue": "Marion Crane checks into the Bates Motel and never checks out in this 1960 Hitchcock shocker", "response": "Psycho", "value": 400 },
+      { "clue": "A photographer laid up with a broken leg suspects a neighbor of murder in this 1954 thriller", "response": "Rear Window", "value": 800 },
+      { "clue": "An acrophobic ex-detective remakes Kim Novak in the image of a lost love in this 1958 film", "response": "Vertigo", "value": 1200 },
+      { "clue": "Hitchcock's only Best Picture winner, this 1940 gothic tale opens with a dream of Manderley", "response": "Rebecca", "value": 1600 },
+      { "clue": "In this 1943 thriller, young Charlie suspects her visiting uncle is the 'Merry Widow' strangler", "response": "Shadow of a Doubt", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE CLASS OF 1939",
+    "clues": [
+      { "clue": "Judy Garland followed the yellow brick road in this Technicolor jewel of Hollywood's greatest year", "response": "The Wizard of Oz", "value": 400 },
+      { "clue": "Jimmy Stewart's idealistic young senator filibusters himself hoarse in this Frank Capra classic", "response": "Mr. Smith Goes to Washington", "value": 800 },
+      { "clue": "John Ford first framed Monument Valley in this western that lifted John Wayne to stardom", "response": "Stagecoach", "value": 1200 },
+      { "clue": "'Garbo laughs!' promised the posters for this Ernst Lubitsch comedy about a thawing Soviet envoy", "response": "Ninotchka", "value": 1600 },
+      { "clue": "Robert Donat's gentle schoolmaster took the Best Actor Oscar over Clark Gable's Rhett Butler for this film", "response": "Goodbye, Mr. Chips", "value": 2000 }
+    ]
+  },
+  {
+    "name": "MARQUEE VALUES",
+    "clues": [
+      { "clue": "As Rick Blaine, he assured Ingrid Bergman 'We'll always have Paris'", "response": "Humphrey Bogart", "value": 400 },
+      { "clue": "Her four Best Actress Oscars stretch from 1933's 'Morning Glory' to 'On Golden Pond'", "response": "Katharine Hepburn", "value": 800 },
+      { "clue": "Born Archibald Leach in Bristol, he suavely starred in 'The Philadelphia Story' and 'North by Northwest'", "response": "Cary Grant", "value": 1200 },
+      { "clue": "She played anklet-wearing schemer Phyllis Dietrichson in 'Double Indemnity' and conned Henry Fonda in 'The Lady Eve'", "response": "Barbara Stanwyck", "value": 1600 },
+      { "clue": "Hollywood's first Chinese American star, she held the screen opposite Dietrich in 'Shanghai Express'", "response": "Anna May Wong", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SUBTITLE BOUT",
+    "clues": [
+      { "clue": "A scheming poor family burrows into the wealthy Park household in this first non-English Best Picture winner", "response": "Parasite", "value": 400 },
+      { "clue": "Warriors duel atop swaying bamboo in this Mandarin-language Ang Lee martial arts hit of 2000", "response": "Crouching Tiger, Hidden Dragon", "value": 800 },
+      { "clue": "A medieval knight plays chess with Death in this 1957 Ingmar Bergman classic", "response": "The Seventh Seal", "value": 1200 },
+      { "clue": "In this Italian neorealist landmark, a poster-hanger and his son scour Rome for his stolen ride", "response": "Bicycle Thieves", "value": 1600 },
+      { "clue": "Young truant Antoine Doinel runs to the sea for a freeze-frame finale in this French New Wave debut", "response": "The 400 Blows", "value": 2000 }
+    ]
+  },
+  {
+    "name": "INDIE-PENDENCE DAY",
+    "clues": [
+      { "clue": "Robert Redford's Park City festival, a launchpad for American indies, takes its name from his outlaw role", "response": "Sundance", "value": 400 },
+      { "clue": "Three student filmmakers hike into the Maryland woods and never return in this 1999 found-footage smash", "response": "The Blair Witch Project", "value": 800 },
+      { "clue": "Kevin Smith maxed out credit cards to film this black-and-white 1994 comedy at the counter of a Quick Stop", "response": "Clerks", "value": 1200 },
+      { "clue": "James Spader's camcorder confessions drive this Steven Soderbergh debut that won the 1989 Palme d'Or", "response": "sex, lies, and videotape", "value": 1600 },
+      { "clue": "Robert Rodriguez bankrolled this $7,000 guitar-case shoot-'em-up partly by joining paid drug trials", "response": "El Mariachi", "value": 2000 }
+    ]
+  },
+  {
+    "name": "IT'S NOT TV",
+    "clues": [
+      { "clue": "A panic-prone New Jersey mob boss confides in psychiatrist Dr. Melfi on this landmark HBO drama", "response": "The Sopranos", "value": 400 },
+      { "clue": "Each season of this Baltimore epic dissects another institution, from the port to the press", "response": "The Wire", "value": 800 },
+      { "clue": "The Fisher family tends the departed at their Los Angeles funeral home in this Alan Ball series", "response": "Six Feet Under", "value": 1200 },
+      { "clue": "Ian McShane's saloon boss Al Swearengen profanely rules this Dakota Territory gold-camp western", "response": "Deadwood", "value": 1600 },
+      { "clue": "HBO's first hourlong drama series, it unfolded in a prison unit nicknamed 'Emerald City'", "response": "Oz", "value": 2000 }
+    ]
+  },
+  {
+    "name": "MORALLY GRAY'S ANATOMY",
+    "clues": [
+      { "clue": "'I am the one who knocks,' this Albuquerque chemistry teacher turned meth kingpin warned his wife", "response": "Walter White", "value": 400 },
+      { "clue": "This Madison Avenue ad man was born Dick Whitman, an identity he shed during the Korean War", "response": "Don Draper", "value": 800 },
+      { "clue": "This Miami blood-spatter analyst satisfies his 'Dark Passenger' by hunting fellow killers", "response": "Dexter Morgan", "value": 1200 },
+      { "clue": "Michael Chiklis won an Emmy as this corrupt strike-team leader of 'The Shield'", "response": "Vic Mackey", "value": 1600 },
+      { "clue": "Steve Buscemi played this county treasurer running Atlantic City's rackets on 'Boardwalk Empire'", "response": "Nucky Thompson", "value": 2000 }
+    ]
+  },
+  {
+    "name": "CRAFT SERVICES",
+    "clues": [
+      { "clue": "These comic-strip-style panels map out a film's shots before the cameras roll", "response": "storyboards", "value": 400 },
+      { "clue": "Hitchcock's name for a plot-driving object, like a briefcase, whose contents hardly matter", "response": "a MacGuffin", "value": 800 },
+      { "clue": "Named for a sound-effects pioneer, it's the art of performing footsteps and rustles in a studio", "response": "Foley", "value": 1200 },
+      { "clue": "Francois Truffaut titled a 1973 film for this technique of faking nocturnal scenes while the sun is up", "response": "day for night", "value": 1600 },
+      { "clue": "A Soviet montage experiment pairing one actor's blank face with soup or a coffin named this effect", "response": "the Kuleshov effect", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SCORE KEEPERS",
+    "clues": [
+      { "clue": "His scores gave a two-note dread to 'Jaws' and a blazing fanfare to 'Star Wars'", "response": "John Williams", "value": 400 },
+      { "clue": "This German composer built 'Inception's' wall of brass and won an Oscar for 'The Lion King'", "response": "Hans Zimmer", "value": 800 },
+      { "clue": "This Italian's whistles and coyote howls scored 'The Good, the Bad and the Ugly'", "response": "Ennio Morricone", "value": 1200 },
+      { "clue": "His slashing strings stabbed through 'Psycho'; he also scored 'Citizen Kane' and 'Taxi Driver'", "response": "Bernard Herrmann", "value": 1600 },
+      { "clue": "This Viennese 'father of film music' scored 1933's 'King Kong' and 'Gone with the Wind'", "response": "Max Steiner", "value": 2000 }
+    ]
+  },
+  {
+    "name": "ADAPT OR PERISH",
+    "clues": [
+      { "clue": "Marlon Brando's raspy don anchored the 1972 film of this Mario Puzo bestseller", "response": "The Godfather", "value": 400 },
+      { "clue": "An off-season caretaker descends into madness at the Overlook Hotel in the 1980 film of this novel", "response": "The Shining", "value": 800 },
+      { "clue": "Philip K. Dick's 'Do Androids Dream of Electric Sheep?' became this rain-soaked 1982 Ridley Scott film", "response": "Blade Runner", "value": 1200 },
+      { "clue": "Coppola dragged Conrad's 'Heart of Darkness' upriver from the Congo to Vietnam for this 1979 epic", "response": "Apocalypse Now", "value": 1600 },
+      { "clue": "Alfonso Cuaron filmed P.D. James' novel of a world without births as this long-take 2006 thriller", "response": "Children of Men", "value": 2000 }
+    ]
+  },
+  {
+    "name": "BINGE READING",
+    "clues": [
+      { "clue": "George R.R. Martin's 'A Song of Ice and Fire' saga became this dragon-filled HBO phenomenon", "response": "Game of Thrones", "value": 400 },
+      { "clue": "Margaret Atwood's dystopia of red cloaks and white bonnets in Gilead became this Hulu series", "response": "The Handmaid's Tale", "value": 800 },
+      { "clue": "Liane Moriarty's novel of school-gate secrets became this Monterey-set HBO series with Kidman and Witherspoon", "response": "Big Little Lies", "value": 1200 },
+      { "clue": "Walter Tevis' 1983 novel about orphaned chess prodigy Beth Harmon became this Netflix hit", "response": "The Queen's Gambit", "value": 1600 },
+      { "clue": "Elmore Leonard's story 'Fire in the Hole' spawned this FX drama about lawman Raylan Givens", "response": "Justified", "value": 2000 }
+    ]
+  }
+]

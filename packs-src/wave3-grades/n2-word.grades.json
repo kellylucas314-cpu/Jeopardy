@@ -1,0 +1,14 @@
+[
+  { "name": "WORDS WITH A PAST", "score": 48, "verdict": "accepted", "notes": "All five etymologies are dictionary-endorsed (salarium salt-allowance per OED, musculus, quarantena, clew, nescius); no folk etymologies." },
+  { "name": "TOPONYM OF THE WORLD, MA!", "score": 48, "verdict": "accepted", "notes": "Marathon ('fabled' hedge), serge de Nimes, Tuxedo Park 1886, Reard/Bikini Atoll 1946, Spa Belgium all standard and correct." },
+  { "name": "VENI, VIDI, VOCABULARY", "score": 47, "verdict": "accepted", "notes": "All Latin glosses accurate; cui bono correctly tied to Cicero's courtroom use; clean carpe-diem-to-cui-bono ramp." },
+  { "name": "THE ROOT OF ALL GREEK", "score": 48, "verdict": "accepted", "notes": "Philosophy, hippopotamus, sarcophagus ('reputed' hedge on flesh-eating limestone), Moliere's Misanthrope, petrichor 1964 all verified." },
+  { "name": "RHETORIC & ROLL", "score": 48, "verdict": "accepted", "notes": "Every device correctly defined with an apt example; zeugma 'yoking' etymology correct; textbook ladder." },
+  { "name": "GETTING TENSE", "score": 46, "verdict": "accepted", "notes": "All grammar facts correct (pluperfect = 'more than perfect'); name promises tense but 3 rows are punctuation/parts-of-speech — pun stretches, doesn't break." },
+  { "name": "BLEND IT LIKE BECKHAM", "score": 46, "verdict": "accepted", "notes": "Component-naming (motor+hotel, Gerry+salamander, chuckle+snort) is the category's consistent deliberate hint style, not a leak; brunch-as-1890s-university-slang web-verified." },
+  { "name": "COINED BY THE QUILL", "score": 48, "verdict": "accepted", "notes": "Careful phrasing throughout — R.U.R. 'introduced' robot (dodges Josef Capek credit), Seuss 1950 nerd, Walpole 1754 serendipity all correct." },
+  { "name": "WHAT'S IN A SURNAME?", "score": 48, "verdict": "accepted", "notes": "Boycott 1880 Mayo, Silhouette, Leotard, Mesmer, Shrapnel 1780s case shot all correct; every clue withholds the eponym's name — no leaks." },
+  { "name": "CHARACTER REFERENCES", "score": 48, "verdict": "accepted", "notes": "Sheridan's 'very pine-apple of politeness' quote real; Porter 1913, du Maurier 1894 Trilby/Svengali correct; nice noun/adjective response variety." },
+  { "name": "THE UNTRANSLATABLES", "score": 47, "verdict": "accepted", "notes": "All five glosses fair; ubuntu's dual Tutu+Linux hints make $2000 generous but gettable-by-design; 'also names a Linux system' is stable fact." },
+  { "name": "BORROWED, NEVER RETURNED", "score": 47, "verdict": "accepted", "notes": "Karaoke 'empty orchestra,' Swahili safari, Yiddish klots, Jagannath's Puri chariot, Tagalog bundok all dictionary-backed; strong closer row." }
+]

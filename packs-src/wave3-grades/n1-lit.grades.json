@@ -1,0 +1,14 @@
+[
+  { "name": "WHERE THE WILD BOOKS ARE", "score": 48, "verdict": "accepted", "notes": "Charming children's-lit ladder; Terabithia rope swing and Dictionopolis verified; response types nicely varied." },
+  { "name": "GRIMM PROSPECTS", "score": 47, "verdict": "revised", "notes": "Rewrote $800: 'glass slippers' made Cinderella a $200-level gimme breaking the ladder; new Aschenputtel/doves clue restores the climb." },
+  { "name": "DOG-EARED DARLINGS", "score": 49, "verdict": "accepted", "notes": "Flawless classics ladder; Bronte's-only-novel and 1967 Marquez facts verified." },
+  { "name": "THE PLOT THICKENS", "score": 48, "verdict": "accepted", "notes": "Flaubert's 1857 obscenity trial is a strong $1000 hook; all plot details check out." },
+  { "name": "WRITE OF PASSAGE", "score": 48, "verdict": "revised", "notes": "Fixed $600 precision error: Hemingway was wounded delivering canteen supplies, not while driving; reworded to 'ambulance driver wounded'." },
+  { "name": "INK-CREDIBLE LIVES", "score": 48, "verdict": "accepted", "notes": "Blacking factory, Chekhov's medicine, Kafka's insurance job all verified; note: 2nd author-bio category in this file." },
+  { "name": "VERSE CASE SCENARIO", "score": 49, "verdict": "accepted", "notes": "Quotes verified (Pallas/Nevermore, 'Season of mists'); Keats-dead-at-25 is a fair, gettable $1000." },
+  { "name": "METER READERS", "score": 48, "verdict": "accepted", "notes": "Dunbar's 'Sympathy' as Angelou's source verified - excellent $1000; note: 2nd poetry category in this file." },
+  { "name": "BARD TO THE BONE", "score": 48, "verdict": "accepted", "notes": "Clean play-identification ladder; Twelfth Night twins at $1000 is right; no quote misattributions." },
+  { "name": "WHEREFORE ART THOU?", "score": 47, "verdict": "accepted", "notes": "Character ladder climbs well to Falstaff; note: 2nd Shakespeare category, and Juliet echoes sibling's R&J response." },
+  { "name": "PRIVATE EYE EXAM", "score": 48, "verdict": "accepted", "notes": "Detective canon accurate (grey cells, Big Sleep, Chesterton); Father Brown a fair hard row." },
+  { "name": "X MARKS THE PLOT", "score": 48, "verdict": "accepted", "notes": "Adventure theme honored by all 5; Chateau d'If and 1885 Haggard date verified; '80' response is a fun variety beat." }
+]

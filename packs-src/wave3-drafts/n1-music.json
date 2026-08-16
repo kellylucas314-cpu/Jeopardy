@@ -1,0 +1,86 @@
+[
+  { "name": "AXES TO GRIND", "clues": [
+    { "clue": "This left-handed rock legend set his guitar ablaze onstage at the 1967 Monterey Pop Festival", "response": "Jimi Hendrix", "value": 200 },
+    { "clue": "London graffiti of the 1960s proclaimed that this 'Slowhand' guitarist was God", "response": "Eric Clapton", "value": 400 },
+    { "clue": "This rock 'n' roll pioneer duck-walked across stages while picking 'Johnny B. Goode'", "response": "Chuck Berry", "value": 600 },
+    { "clue": "This blues giant gave the name Lucille to every one of his beloved Gibson guitars", "response": "B.B. King", "value": 800 },
+    { "clue": "Despite a fire-scarred fretting hand, this Belgian-born guitarist co-founded Paris' Quintette du Hot Club de France", "response": "Django Reinhardt", "value": 1000 }
+  ] },
+  { "name": "FRONT & CENTER", "clues": [
+    { "clue": "This mustachioed Queen frontman had Wembley Stadium clapping along at Live Aid in 1985", "response": "Freddie Mercury", "value": 200 },
+    { "clue": "This London School of Economics dropout became the Rolling Stones' strutting frontman in 1962", "response": "Mick Jagger", "value": 400 },
+    { "clue": "This golden-curled Led Zeppelin singer wailed the climax of 'Stairway to Heaven'", "response": "Robert Plant", "value": 600 },
+    { "clue": "Famed for twirling his microphone by its cord like a lasso, he fronted The Who", "response": "Roger Daltrey", "value": 800 },
+    { "clue": "Nicknamed the 'Godfather of Punk', this shirtless Stooges frontman pioneered the stage dive", "response": "Iggy Pop", "value": 1000 }
+  ] },
+  { "name": "POP STARS ALIGN", "clues": [
+    { "clue": "This 'Thriller' superstar unveiled his moonwalk on the Motown 25 TV special in 1983", "response": "Michael Jackson", "value": 200 },
+    { "clue": "Born in Bay City, Michigan, this 'Like a Virgin' singer became pop's Material Girl", "response": "Madonna", "value": 400 },
+    { "clue": "Her take on Dolly Parton's 'I Will Always Love You' anchored 'The Bodyguard' soundtrack", "response": "Whitney Houston", "value": 600 },
+    { "clue": "In 1993 this Minneapolis funk-pop icon swapped his name for an unpronounceable symbol", "response": "Prince", "value": 800 },
+    { "clue": "With Dave Stewart, this close-cropped Scottish singer made Eurythmics a synth-pop force", "response": "Annie Lennox", "value": 1000 }
+  ] },
+  { "name": "DIVA LAS VEGAS", "clues": [
+    { "clue": "Before ruling as a solo 'Single Ladies' superstar, she fronted Destiny's Child", "response": "Beyoncé", "value": 200 },
+    { "clue": "This former Mickey Mouse Club kid launched a pop empire with 1998's '...Baby One More Time'", "response": "Britney Spears", "value": 400 },
+    { "clue": "This Quebec-born powerhouse sang 'My Heart Will Go On', the theme from 'Titanic'", "response": "Celine Dion", "value": 600 },
+    { "clue": "Renowned for whistle-register high notes, she hit No. 1 in 1990 with her debut single 'Vision of Love'", "response": "Mariah Carey", "value": 800 },
+    { "clue": "At 19, this British art-pop original topped the UK chart with her self-penned 'Wuthering Heights'", "response": "Kate Bush", "value": 1000 }
+  ] },
+  { "name": "SOUL PROPRIETORS", "clues": [
+    { "clue": "Blind since infancy, this Motown prodigy signed with the label at age 11", "response": "Stevie Wonder", "value": 200 },
+    { "clue": "Her fiery 1967 rework of an Otis Redding tune crowned this Detroit-raised Queen of Soul", "response": "Aretha Franklin", "value": 400 },
+    { "clue": "His landmark 1971 album 'What's Going On' confronted war, poverty and pollution", "response": "Marvin Gaye", "value": 600 },
+    { "clue": "This velvet-voiced Miracles frontman penned Motown gems like 'My Girl' and 'The Tracks of My Tears'", "response": "Smokey Robinson", "value": 800 },
+    { "clue": "This ex-boxer turned an $800 family loan into Motown Records in 1959", "response": "Berry Gordy", "value": 1000 }
+  ] },
+  { "name": "GROUP DYNAMICS", "clues": [
+    { "clue": "Diana Ross led this Motown trio to a dozen No. 1 hits in the 1960s", "response": "the Supremes", "value": 200 },
+    { "clue": "Known for razor-sharp choreography, this Motown quintet cut 'Papa Was a Rollin' Stone'", "response": "the Temptations", "value": 400 },
+    { "clue": "Gravel-voiced Levi Stubbs powered this Motown quartet's 'Reach Out I'll Be There'", "response": "the Four Tops", "value": 600 },
+    { "clue": "Backed by the Pips, she rode a 'Midnight Train to Georgia' to No. 1 in 1973", "response": "Gladys Knight", "value": 800 },
+    { "clue": "'Standing in the Shadows of Motown' honored this nickname of the label's unsung studio band", "response": "the Funk Brothers", "value": 1000 }
+  ] },
+  { "name": "IT'S INSTRUMENTAL", "clues": [
+    { "clue": "With 88 keys, this instrument anchors both concert halls and cocktail lounges", "response": "the piano", "value": 200 },
+    { "clue": "Stradivarius made the most coveted examples of this smallest member of the orchestral string family", "response": "the violin", "value": 400 },
+    { "clue": "Belgian Adolphe Sax patented this jazz-friendly woodwind with a brass body in 1846", "response": "the saxophone", "value": 600 },
+    { "clue": "George Harrison learned this long-necked Indian instrument from virtuoso Ravi Shankar", "response": "the sitar", "value": 800 },
+    { "clue": "Waving your hands near its two antennas plays this electronic instrument, an eerie voice of 1950s sci-fi", "response": "the theremin", "value": 1000 }
+  ] },
+  { "name": "BRASS TACKS", "clues": [
+    { "clue": "Louis Armstrong and Miles Davis both blew this highest-pitched standard brass instrument", "response": "the trumpet", "value": 200 },
+    { "clue": "The deepest voice of the brass family, it supplies the oompah in a polka band", "response": "the tuba", "value": 400 },
+    { "clue": "Its name means 'big trumpet' in Italian, and its slide offers players seven positions", "response": "the trombone", "value": 600 },
+    { "clue": "Players rest a hand inside the bell of this coiled brass instrument whose name suggests Gallic roots", "response": "the French horn", "value": 800 },
+    { "clue": "Designed in the 1890s to the exacting specs of the 'March King' himself, this big brass horn wraps around a marching player's body", "response": "the sousaphone", "value": 1000 }
+  ] },
+  { "name": "ON WITH THE SHOW", "clues": [
+    { "clue": "A masked composer haunts the catacombs beneath a Paris theater in this Andrew Lloyd Webber hit", "response": "The Phantom of the Opera", "value": 200 },
+    { "clue": "Leonard Bernstein reset Romeo and Juliet among rival New York street gangs in this 1957 musical", "response": "West Side Story", "value": 400 },
+    { "clue": "Tevye the dairyman weighs tradition against change in this musical set in the village of Anatevka", "response": "Fiddler on the Roof", "value": 600 },
+    { "clue": "Seventeen dancers lay bare their lives at a Broadway audition in this 1975 Michael Bennett hit", "response": "A Chorus Line", "value": 800 },
+    { "clue": "Ethel Merman originated ferocious stage mother Rose in this 1959 backstage musical", "response": "Gypsy", "value": 1000 }
+  ] },
+  { "name": "SETTLING THE SCORE", "clues": [
+    { "clue": "The team of Richard and Oscar behind 'Oklahoma!', 'Carousel' and 'The Sound of Music'", "response": "Rodgers & Hammerstein", "value": 200 },
+    { "clue": "Before 'Hamilton', this composer-lyricist won a Tony for the score of 'In the Heights'", "response": "Lin-Manuel Miranda", "value": 400 },
+    { "clue": "This Indiana-born sophisticate supplied words and music for 'Anything Goes' and 'Kiss Me, Kate'", "response": "Cole Porter", "value": 600 },
+    { "clue": "He gave Broadway 'Company', 'Sweeney Todd' and the Pulitzer-winning 'Sunday in the Park with George'", "response": "Stephen Sondheim", "value": 800 },
+    { "clue": "This John-and-Fred songwriting duo scored both 'Cabaret' and 'Chicago'", "response": "Kander & Ebb", "value": 1000 }
+  ] },
+  { "name": "ONE & DONE", "clues": [
+    { "clue": "Los del Río's lone U.S. smash, this 1996 dance craze spent 14 weeks at No. 1", "response": "the Macarena", "value": 200 },
+    { "clue": "Dexys Midnight Runners wore overalls in the video for this fiddle-driven chart-topper of 1982", "response": "Come On Eileen", "value": 400 },
+    { "clue": "A pencil-sketch animated video helped this Norwegian trio's 'Take On Me' hit No. 1 in 1985", "response": "a-ha", "value": 600 },
+    { "clue": "MTV launched its broadcast in 1981 with this British duo's 'Video Killed the Radio Star'", "response": "the Buggles", "value": 800 },
+    { "clue": "This fuzz-guitar gospel-rock ride toward the afterlife was Norman Greenbaum's only major hit", "response": "Spirit in the Sky", "value": 1000 }
+  ] },
+  { "name": "HITS & GIGGLES", "clues": [
+    { "clue": "Bobby 'Boris' Pickett voiced a mad scientist in this 1962 Halloween novelty chart-topper", "response": "Monster Mash", "value": 200 },
+    { "clue": "This accordion-toting parodist turned 'Beat It' into 'Eat It' and 'Bad' into 'Fat'", "response": "Weird Al Yankovic", "value": 400 },
+    { "clue": "Ross Bagdasarian sped up vocal tapes to create this rodent trio with a 1958 Christmas No. 1", "response": "the Chipmunks", "value": 600 },
+    { "clue": "Sheb Wooley's 1958 chart-topper about a horned alien with a taste for violet-hued humans", "response": "The Purple People Eater", "value": 800 },
+    { "clue": "Allan Sherman set this 1963 letter home from Camp Granada to Ponchielli's 'Dance of the Hours'", "response": "Hello Muddah, Hello Fadduh", "value": 1000 }
+  ] }
+]

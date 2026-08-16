@@ -1,0 +1,44 @@
+[
+  { "name": "SPOILER ALERT!", "clues": [
+    { "clue": "Beheading honorable Ned Stark in its first season, this HBO fantasy epic proved no character was safe", "response": "Game of Thrones", "value": 400 },
+    { "clue": "Eleven, a psychokinetic girl with a buzz cut, battled the Demogorgon in this Netflix hit set in 1980s Indiana", "response": "Stranger Things", "value": 800 },
+    { "clue": "Maggie Smith's Dowager Countess wondered 'What is a weekend?' on this British drama of the Crawley family", "response": "Downton Abbey", "value": 1200 },
+    { "clue": "Phoebe Waller-Bridge broke the fourth wall and fell for a 'hot priest' in this Emmy-winning British comedy", "response": "Fleabag", "value": 1600 },
+    { "clue": "Soviet spies Philip and Elizabeth posed as a suburban travel-agent couple in this FX drama that ended in 2018", "response": "The Americans", "value": 2000 }
+  ] },
+  { "name": "STREAMING HOT SINGLES", "clues": [
+    { "clue": "'We could have had it all,' Adele thundered on this 2011 chart-topper from her album '21'", "response": "Rolling in the Deep", "value": 400 },
+    { "clue": "Lil Nas X's country-trap smash, remixed with Billy Ray Cyrus, logged a record-breaking 19 weeks at No. 1 in 2019", "response": "Old Town Road", "value": 800 },
+    { "clue": "A teenage Lorde shrugged off 'gold teeth, Grey Goose' opulence in this spare 2013 No. 1", "response": "Royals", "value": 1200 },
+    { "clue": "Pharrell Williams and Nile Rodgers powered this 2013 Daft Punk hit to the Record of the Year Grammy", "response": "Get Lucky", "value": 1600 },
+    { "clue": "Irish singer Hozier cast a lover's devotion as worship in this brooding 2014 breakthrough hit", "response": "Take Me to Church", "value": 2000 }
+  ] },
+  { "name": "APP-SOLUTELY FABULOUS", "clues": [
+    { "clue": "Kevin Systrom co-founded this filter-happy photo app in 2010; Facebook paid about $1 billion for it in 2012", "response": "Instagram", "value": 400 },
+    { "clue": "A ghost mascot and self-deleting photos defined this app, a teen must-have after its 2011 debut", "response": "Snapchat", "value": 800 },
+    { "clue": "Twitter shut down this app of six-second looping videos in 2017, orphaning a generation of comedy stars", "response": "Vine", "value": 1200 },
+    { "clue": "A Russian 17-year-old built this 2009 website that paired random strangers by webcam, with predictable results", "response": "Chatroulette", "value": 1600 },
+    { "clue": "Founded in 2002, this social networking pioneer, its name a nod to Napster, was buried by MySpace", "response": "Friendster", "value": 2000 }
+  ] },
+  { "name": "RIPPED FROM THE HEADLINES", "clues": [
+    { "clue": "The September 2008 collapse of this 158-year-old investment bank turned a credit crunch into a global panic", "response": "Lehman Brothers", "value": 400 },
+    { "clue": "In 2010 the world watched 33 miners hoisted to safety after 69 days trapped underground in this country", "response": "Chile", "value": 800 },
+    { "clue": "In July 2012 CERN announced it had found this long-sought particle, nicknamed 'the God particle'", "response": "the Higgs boson", "value": 1200 },
+    { "clue": "Street vendor Mohamed Bouazizi's 2010 self-immolation in this nation lit the fuse of the Arab Spring", "response": "Tunisia", "value": 1600 },
+    { "clue": "Newscasters stumbled over this Icelandic volcano whose April 2010 ash cloud closed Europe's skies for days", "response": "Eyjafjallajökull", "value": 2000 }
+  ] },
+  { "name": "NEW WORD ORDER", "clues": [
+    { "clue": "Oxford Dictionaries' 2013 Word of the Year, it's snapped at arm's length or with a telescoping stick", "response": "selfie", "value": 400 },
+    { "clue": "In 2006 Merriam-Webster and the OED both added this brand name as a verb for searching the web", "response": "to google", "value": 800 },
+    { "clue": "Collins' 2015 Word of the Year, this hyphenated verb means devouring a whole season in one sitting", "response": "binge-watch", "value": 1200 },
+    { "clue": "This recession-era portmanteau for a holiday spent at home entered Merriam-Webster in 2009", "response": "staycation", "value": 1600 },
+    { "clue": "On the 2005 premiere of his Comedy Central show, Stephen Colbert coined this term for gut-felt certainty", "response": "truthiness", "value": 2000 }
+  ] },
+  { "name": "OVERTIME STORIES", "clues": [
+    { "clue": "This American gymnast vaulted to 4 golds at the 2016 Rio Games, including the individual all-around", "response": "Simone Biles", "value": 400 },
+    { "clue": "In February 2010, years after Katrina battered the Superdome, this NFL team claimed its first Super Bowl title", "response": "the New Orleans Saints", "value": 800 },
+    { "clue": "This French captain was sent off for headbutting Marco Materazzi in the 2006 World Cup final, his last match", "response": "Zinedine Zidane", "value": 1200 },
+    { "clue": "At the 2010 Vancouver Games she became the first American woman to win Olympic downhill gold", "response": "Lindsey Vonn", "value": 1600 },
+    { "clue": "His 70-68 fifth set over Nicolas Mahut at 2010 Wimbledon capped an 11-hour match spread across 3 days", "response": "John Isner", "value": 2000 }
+  ] }
+]

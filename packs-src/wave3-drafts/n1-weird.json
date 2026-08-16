@@ -1,0 +1,62 @@
+[
+  {
+    "name": "LAW & DISORDER",
+    "clues": [
+      { "clue": "From 1920 to 1933, the 18th Amendment made manufacturing and selling this type of beverage a federal offense", "response": "alcohol", "value": 200 },
+      { "clue": "In 1992 this famously tidy Asian city-state banned the import and sale of chewing gum", "response": "Singapore", "value": 400 },
+      { "clue": "In the late 1800s, Vermont and New Hampshire passed laws requiring this butter substitute to be dyed an unappetizing pink", "response": "margarine", "value": 600 },
+      { "clue": "Full-strength beer was illegal in this Nordic island nation from 1915 all the way until March 1, 1989", "response": "Iceland", "value": 800 },
+      { "clue": "A 1986 British fisheries law makes it an offense to 'handle' this prized pink-fleshed fish 'in suspicious circumstances'", "response": "salmon", "value": 1000 }
+    ]
+  },
+  {
+    "name": "CREATURE DISCOMFORTS",
+    "clues": [
+      { "clue": "This eight-armed sea creature pumps blue blood with its three hearts", "response": "an octopus", "value": 200 },
+      { "clue": "Born with gray feathers, this wading bird turns pink from pigments in the brine shrimp and algae it eats", "response": "a flamingo", "value": 400 },
+      { "clue": "The only animal known to produce cube-shaped droppings, this burrowing Australian marsupial stacks them to mark territory", "response": "a wombat", "value": 600 },
+      { "clue": "To prevent 'hardware disease,' farmers have these barnyard grazers swallow magnets that trap stray nails and wire", "response": "cows", "value": 800 },
+      { "clue": "This reef crustacean's hammer-like club accelerates like a bullet when it strikes, and it has cracked aquarium glass", "response": "a mantis shrimp", "value": 1000 }
+    ]
+  },
+  {
+    "name": "WHERE ON EARTH?",
+    "clues": [
+      { "clue": "Its Aleutian Islands cross the 180th meridian, so this state boasts both the westernmost and easternmost points in the U.S.", "response": "Alaska", "value": 200 },
+      { "clue": "The equator and the prime meridian both cross this continent, giving it land in all four hemispheres", "response": "Africa", "value": 400 },
+      { "clue": "Thanks to Africa's northwestern bulge, the closest point in the 50 states to that continent juts from this New England state", "response": "Maine", "value": 600 },
+      { "clue": "Because Earth bulges at the equator, the summit of this country's Chimborazo — not Everest — is farthest from the planet's center", "response": "Ecuador", "value": 800 },
+      { "clue": "The nearest humans to this South Pacific 'pole of inaccessibility,' named for a Jules Verne captain, are often astronauts overhead", "response": "Point Nemo", "value": 1000 }
+    ]
+  },
+  {
+    "name": "OOPS, ALL INVENTIONS",
+    "clues": [
+      { "clue": "A 3M glue too weak to stick permanently found its calling on these repositionable yellow office squares", "response": "Post-it Notes", "value": 200 },
+      { "clue": "In 1905, 11-year-old Frank Epperson left soda powder, water and a stirring stick out on a cold night — this frozen treat was born", "response": "the Popsicle", "value": 400 },
+      { "clue": "In 1938 DuPont chemist Roy Plunkett cut open a failed refrigerant canister and found a waxy, slippery solid: this nonstick coating", "response": "Teflon", "value": 600 },
+      { "clue": "Deemed too sticky for the WWII gun sights Harry Coover was developing, cyanoacrylate hit stores in 1958 as this mend-anything adhesive", "response": "Super Glue", "value": 800 },
+      { "clue": "William Cubitt devised a man-powered wheel in 1818 to keep English convicts toiling; it evolved into this gym cardio machine", "response": "the treadmill", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THAT ACTUALLY HAPPENED",
+    "clues": [
+      { "clue": "In 1938 some radio listeners mistook Orson Welles' fake news bulletins for a real invasion by these red-planet aliens", "response": "Martians", "value": 200 },
+      { "clue": "In 1919 a burst storage tank sent a giant wave of molasses through this city's North End, killing 21 people", "response": "Boston", "value": 400 },
+      { "clue": "In July 1518 residents of Strasbourg began dancing uncontrollably for days on end; that city is in this modern country", "response": "France", "value": 600 },
+      { "clue": "During the Dutch mania that popped in 1637, rare bulbs of this flower traded for more than a craftsman earned in years", "response": "tulips", "value": 800 },
+      { "clue": "Under cover of a friend's yacht cruise in 1893, this president secretly had a cancerous growth cut from the roof of his mouth", "response": "Grover Cleveland", "value": 1000 }
+    ]
+  },
+  {
+    "name": "WEIRD SCIENCE",
+    "clues": [
+      { "clue": "A bolt of this can briefly heat the surrounding air to roughly five times the temperature of the sun's surface", "response": "lightning", "value": 200 },
+      { "clue": "Kept sealed and dry, this golden bee product essentially never spoils — its low moisture and acidity starve microbes", "response": "honey", "value": 400 },
+      { "clue": "The potassium-40 in this yellow fruit makes it mildly radioactive, inspiring a tongue-in-cheek radiation unit named for it", "response": "a banana", "value": 600 },
+      { "clue": "Chilled to near absolute zero, this second-lightest element becomes a superfluid that can creep up and out of its container", "response": "helium", "value": 800 },
+      { "clue": "At exactly 0.01°C and very low pressure, water sits at this spot on a phase diagram, boiling and freezing at the same time", "response": "the triple point", "value": 1000 }
+    ]
+  }
+]

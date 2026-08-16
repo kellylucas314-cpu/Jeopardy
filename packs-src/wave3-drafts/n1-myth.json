@@ -1,0 +1,86 @@
+[
+  { "name": "MINOR LEAGUE OLYMPIANS", "clues": [
+    { "clue": "Known to the Romans as Cupid, this winged Greek god of love shoots desire-tipped arrows", "response": "Eros", "value": 200 },
+    { "clue": "Sudden dread in the wild was blamed on this goat-legged shepherd god — hence the word 'panic'", "response": "Pan", "value": 400 },
+    { "clue": "This messenger goddess personified the rainbow; her name lives on in a flower and part of the eye", "response": "Iris", "value": 600 },
+    { "clue": "Punisher of hubris, this Greek goddess of retribution gave English a word for an archenemy", "response": "Nemesis", "value": 800 },
+    { "clue": "This goddess of witchcraft and crossroads scolds the three witches in Shakespeare's 'Macbeth'", "response": "Hecate", "value": 1000 }
+  ] },
+  { "name": "KEEPING UP WITH THE OLYMPIANS", "clues": [
+    { "clue": "When the brothers divvied up creation, Zeus took the sky and this god drew the gloomy underworld", "response": "Hades", "value": 200 },
+    { "clue": "In full armor, this goddess of wisdom sprang from Zeus's split skull", "response": "Athena", "value": 400 },
+    { "clue": "Each year this grain goddess lets the crops die while her daughter Persephone serves her season in the underworld", "response": "Demeter", "value": 600 },
+    { "clue": "Tipped off that a child would dethrone him, this Titan gulped down his newborns; a swaddled stone saved Zeus", "response": "Cronus", "value": 800 },
+    { "clue": "First swallowed and last coughed up by Cronus, this virgin goddess kept the hearth fire of Olympus", "response": "Hestia", "value": 1000 }
+  ] },
+  { "name": "GREEKS BEARING QUESTS", "clues": [
+    { "clue": "This wily king of Ithaca dreamed up the hollow wooden horse that finally cracked Troy", "response": "Odysseus", "value": 200 },
+    { "clue": "Ariadne's ball of thread led this Athenian hero back out of the Labyrinth after he slew its bull-headed beast", "response": "Theseus", "value": 400 },
+    { "clue": "This musician's lyre won his bride back from the dead — until he broke one rule with a backward glance", "response": "Orpheus", "value": 600 },
+    { "clue": "Answering 'man' to the Sphinx's riddle made this hero king of Thebes — wed, alas, to his own mother", "response": "Oedipus", "value": 800 },
+    { "clue": "First to wound the Calydonian Boar, this swift huntress lost her famous footrace only to three golden apples", "response": "Atalanta", "value": 1000 }
+  ] },
+  { "name": "QUEST WISHES", "clues": [
+    { "clue": "From Sherwood Forest, this outlaw and his Merry Men took from the rich to give to the poor", "response": "Robin Hood", "value": 200 },
+    { "clue": "In an old Chinese ballad, this maiden dons armor and serves in the army in her aging father's place", "response": "Mulan", "value": 400 },
+    { "clue": "This Geatish hero tears off the monster Grendel's arm, then dies decades later slaying a dragon", "response": "Beowulf", "value": 600 },
+    { "clue": "In a Sanskrit epic, this exiled prince — Vishnu made flesh — crosses to Lanka with an army of monkeys to win back his wife Sita", "response": "Rama", "value": 800 },
+    { "clue": "Griots sing how this founder of the Mali Empire, unable to walk as a boy, rose to be its 'Lion King'", "response": "Sundiata", "value": 1000 }
+  ] },
+  { "name": "GREECE'S NEXT TOP MONSTER", "clues": [
+    { "clue": "Athens shipped youths and maidens to Crete as tribute for this bull-headed dweller of the Labyrinth", "response": "the Minotaur", "value": 200 },
+    { "clue": "Homer's Polyphemus, blinded by a sharpened stake, was one of these one-eyed giants", "response": "a Cyclops", "value": 400 },
+    { "clue": "Each head cut from this Lernaean serpent grew back double till Heracles' nephew seared the necks with fire", "response": "the Hydra", "value": 600 },
+    { "clue": "Dodging the whirlpool Charybdis steered sailors into the six snapping jaws of this cliffside horror", "response": "Scylla", "value": 800 },
+    { "clue": "Medea's magic drained the single vein of this bronze giant who patrolled Crete, hurling boulders at intruders' ships", "response": "Talos", "value": 1000 }
+  ] },
+  { "name": "BEAST PRACTICES", "clues": [
+    { "clue": "Sonar sweeps of a deep Scottish Highlands lake keep hunting this long-necked legend, big news since 1933", "response": "the Loch Ness Monster", "value": 200 },
+    { "clue": "Trekkers in the Himalayas still swap tales of this shaggy 'Abominable Snowman' with a Sherpa name", "response": "the yeti", "value": 400 },
+    { "clue": "Norwegian sailors blamed vanished ships on this many-armed sea monster, likely inspired by giant squid", "response": "the kraken", "value": 600 },
+    { "clue": "First reported in 1990s Puerto Rico, this livestock-draining cryptid's Spanish name means 'goat sucker'", "response": "the chupacabra", "value": 800 },
+    { "clue": "Aboriginal Australian lore warns that this bellowing lurker haunts billabongs, ready to snatch waders", "response": "the bunyip", "value": 1000 }
+  ] },
+  { "name": "KAMI AND GET IT", "clues": [
+    { "clue": "Japanese legend grants a wish to anyone who folds 1,000 paper versions of this graceful bird", "response": "a crane", "value": 200 },
+    { "clue": "This shape-shifting fox spirit of Japanese folklore sprouts new tails with age; nine means full power", "response": "the kitsune", "value": 400 },
+    { "clue": "Spill the water from the dish atop this cucumber-loving river imp's head and it goes limp", "response": "the kappa", "value": 600 },
+    { "clue": "The world went dark when this Shinto sun goddess hid in a cave; a mirror and a rowdy dance lured her out", "response": "Amaterasu", "value": 800 },
+    { "clue": "This Shinto storm god carved up the eight-headed serpent Orochi and found the sword Kusanagi in a tail", "response": "Susanoo", "value": 1000 }
+  ] },
+  { "name": "WITCH HUT IS IT ANYWAY?", "clues": [
+    { "clue": "This witch of Slavic tales rides a flying mortar and lives in a hut that struts around on chicken legs", "response": "Baba Yaga", "value": 200 },
+    { "clue": "A single feather from this radiant bird of Russian folklore can light a room; Stravinsky made it a 1910 ballet", "response": "the Firebird", "value": 400 },
+    { "clue": "Dvořák built an opera around this Slavic water nymph, in folklore often the restless spirit of a drowned girl", "response": "a rusalka", "value": 600 },
+    { "clue": "This skeletal Slavic villain 'the Deathless' hid his death in a needle, inside an egg, inside a duck", "response": "Koschei", "value": 800 },
+    { "clue": "Slavic families left porridge for this bristly guardian spirit dwelling behind the household stove", "response": "a domovoi", "value": 1000 }
+  ] },
+  { "name": "UNREAL ESTATE", "clues": [
+    { "clue": "Plato wrote that this island empire sank into the sea 'in a single day and night of misfortune'", "response": "Atlantis", "value": 200 },
+    { "clue": "Legend ties Ponce de León's 1513 Florida landing to a hunt for this rejuvenating spring", "response": "the Fountain of Youth", "value": 400 },
+    { "clue": "James Hilton's 'Lost Horizon' invented this Himalayan utopia, the original name of FDR's presidential retreat", "response": "Shangri-La", "value": 600 },
+    { "clue": "Coronado trudged the Southwest in 1540 chasing this legendary realm of seven cities of gold", "response": "Cibola", "value": 800 },
+    { "clue": "Oisín rode a fairy horse to this Irish 'Land of the Young'; back home, one touch of soil aged him centuries", "response": "Tír na nÓg", "value": 1000 }
+  ] },
+  { "name": "AFTERLIFE GOALS", "clues": [
+    { "clue": "A Chicago arena-rock band of the 1970s took its name from this gloomy river of the Greek underworld", "response": "the Styx", "value": 200 },
+    { "clue": "Valkyries deliver battle-slain warriors to feast in this hall of Odin until Ragnarok's final muster", "response": "Valhalla", "value": 400 },
+    { "clue": "Paris' famous Champs-Élysées avenue is named for this blissful Greek resting place of heroes", "response": "the Elysian Fields", "value": 600 },
+    { "clue": "Norsemen dead of sickness or age, not battle, went to this cold realm ruled by Loki's half-dead daughter", "response": "Hel", "value": 800 },
+    { "clue": "The Popol Vuh's Hero Twins outwitted the death lords of this Maya underworld, whose name means 'place of fear'", "response": "Xibalba", "value": 1000 }
+  ] },
+  { "name": "ONCE & FUTURE TRIVIA", "clues": [
+    { "clue": "The Lady of the Lake raised an arm from the water to hand King Arthur this peerless sword", "response": "Excalibur", "value": 200 },
+    { "clue": "This wizard and prophet counseled Uther Pendragon, then steered young Arthur to the throne", "response": "Merlin", "value": 400 },
+    { "clue": "Julie Andrews originated the role of this queen of Arthur's court in the 1960 Broadway musical 'Camelot'", "response": "Guinevere", "value": 600 },
+    { "clue": "Mortally wounded, Arthur was ferried to this 'isle of apples' to heal — and, legend says, return one day", "response": "Avalon", "value": 800 },
+    { "clue": "Arthur's nephew — or incestuous son in later tellings — this traitor fell with the king at Camlann", "response": "Mordred", "value": 1000 }
+  ] },
+  { "name": "COURT IN THE ACT", "clues": [
+    { "clue": "Monty Python's knights clip-clopped coconut shells in quest of this sacred cup of the Last Supper", "response": "the Holy Grail", "value": 200 },
+    { "clue": "Raised by the Lady of the Lake, this foremost of Arthur's knights loved the queen too well", "response": "Lancelot", "value": 400 },
+    { "clue": "No seat outranked another at this Camelot furnishing; a painted medieval 'replica' hangs at Winchester", "response": "the Round Table", "value": 600 },
+    { "clue": "This purest knight, Lancelot's son, filled the Siege Perilous and achieved the Grail", "response": "Galahad", "value": 800 },
+    { "clue": "A 14th century poem follows this pentangle-shielded knight to a beheading rematch with the Green Knight", "response": "Gawain", "value": 1000 }
+  ] }
+]

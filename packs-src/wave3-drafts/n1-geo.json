@@ -1,0 +1,122 @@
+[
+  {
+    "name": "CAPITAL GAINS",
+    "clues": [
+      { "clue": "The Louvre & Notre-Dame Cathedral stand along the Seine in this French capital", "response": "Paris", "value": 200 },
+      { "clue": "Buckingham Palace & Trafalgar Square are landmarks of this capital on the Thames", "response": "London", "value": 400 },
+      { "clue": "Its name means 'eastern capital'; this city replaced Kyoto as Japan's seat of power", "response": "Tokyo", "value": 600 },
+      { "clue": "Called Christiania for some 300 years, this Norwegian capital reclaimed its old name in 1925", "response": "Oslo", "value": 800 },
+      { "clue": "At some 9,300 feet up in the Andes, this capital of Ecuador sits almost on the equator", "response": "Quito", "value": 1000 }
+    ]
+  },
+  {
+    "name": "STATE OF CONFUSION",
+    "clues": [
+      { "clue": "Its license plates brag of 10,000 lakes, but this Midwestern state actually has over 11,000", "response": "Minnesota", "value": 200 },
+      { "clue": "The Mackinac Bridge links the Upper & Lower Peninsulas of this Great Lakes state", "response": "Michigan", "value": 400 },
+      { "clue": "Check a map: Reno, in this Silver State, lies farther west than Los Angeles", "response": "Nevada", "value": 600 },
+      { "clue": "It's the only state that borders exactly one other state, its neighbor New Hampshire", "response": "Maine", "value": 800 },
+      { "clue": "Before 1890 this state's future panhandle was a lawless strip dubbed 'No Man's Land'", "response": "Oklahoma", "value": 1000 }
+    ]
+  },
+  {
+    "name": "ISLE BE SEEING YOU",
+    "clues": [
+      { "clue": "Oahu, Maui, Kauai & the Big Island all belong to this Pacific island state", "response": "Hawaii", "value": 200 },
+      { "clue": "Palermo is the capital of this Mediterranean island just off the toe of Italy's boot", "response": "Sicily", "value": 400 },
+      { "clue": "Erik the Red gave this enormous Arctic island its misleadingly lush name", "response": "Greenland", "value": 600 },
+      { "clue": "The Bass Strait separates this island state from the Australian mainland", "response": "Tasmania", "value": 800 },
+      { "clue": "Malaysia, Indonesia & tiny Brunei all share this huge island, Earth's third largest", "response": "Borneo", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SEA WHAT I DID THERE",
+    "clues": [
+      { "clue": "Magellan gave this largest of Earth's oceans a name that means 'peaceful'", "response": "the Pacific", "value": 200 },
+      { "clue": "Bathers bob like corks in this hypersaline lake bordered by Israel & Jordan", "response": "the Dead Sea", "value": 400 },
+      { "clue": "The name of this sea between Europe & Africa comes from Latin for 'middle of the land'", "response": "the Mediterranean", "value": 600 },
+      { "clue": "Sea by name but lake by nature, this world's largest inland body of water laps Iran & Russia", "response": "the Caspian Sea", "value": 800 },
+      { "clue": "Bounded by swirling currents instead of coastlines, this Atlantic sea is named for its floating seaweed", "response": "the Sargasso Sea", "value": 1000 }
+    ]
+  },
+  {
+    "name": "MONUMENTAL ACHIEVEMENTS",
+    "clues": [
+      { "clue": "France's copper-clad gift to America has lifted her torch over New York Harbor since 1886", "response": "the Statue of Liberty", "value": 200 },
+      { "clue": "Shah Jahan built this white marble mausoleum in Agra as a tomb for his beloved wife", "response": "the Taj Mahal", "value": 400 },
+      { "clue": "The 60-foot faces of four U.S. presidents gaze from this granite memorial in South Dakota's Black Hills", "response": "Mount Rushmore", "value": 600 },
+      { "clue": "Completed in 1931 atop Corcovado, this Art Deco statue spreads its arms over Rio de Janeiro", "response": "Christ the Redeemer", "value": 800 },
+      { "clue": "This sprawling 12th century temple complex appears front & center on Cambodia's flag", "response": "Angkor Wat", "value": 1000 }
+    ]
+  },
+  {
+    "name": "A WALK IN THE PARK",
+    "clues": [
+      { "clue": "Established in 1872, this home of Old Faithful was the world's first national park", "response": "Yellowstone", "value": 200 },
+      { "clue": "Over millions of years the Colorado River gouged this mile-deep Arizona icon", "response": "the Grand Canyon", "value": 400 },
+      { "clue": "Climbers tackle El Capitan & Half Dome in this Sierra Nevada park in California", "response": "Yosemite", "value": 600 },
+      { "clue": "More than 2,000 natural sandstone spans crowd this red-rock Utah park just outside Moab", "response": "Arches", "value": 800 },
+      { "clue": "North America's highest mountain rises within this vast Alaska national park", "response": "Denali", "value": 1000 }
+    ]
+  },
+  {
+    "name": "CAPITAL OFFENSES",
+    "clues": [
+      { "clue": "New York City was an early U.S. capital, but this city on the Potomac took over in 1800", "response": "Washington, D.C.", "value": 200 },
+      { "clue": "Rivals Sydney & Melbourne both lost out when Australia built this compromise capital", "response": "Canberra", "value": 400 },
+      { "clue": "In 1857 Queen Victoria picked this city on the Rideau Canal to be Canada's capital", "response": "Ottawa", "value": 600 },
+      { "clue": "In 1923 Atatürk moved Turkey's capital from Istanbul to this city on the Anatolian plateau", "response": "Ankara", "value": 800 },
+      { "clue": "In 1991 Nigeria moved its capital from coastal Lagos to this planned city near the country's center", "response": "Abuja", "value": 1000 }
+    ]
+  },
+  {
+    "name": "CITY SLICKERS",
+    "clues": [
+      { "clue": "Beignets, jazz & Mardi Gras beads fill the French Quarter of this Louisiana city", "response": "New Orleans", "value": 200 },
+      { "clue": "An official elevation of exactly one mile gives this Colorado capital its lofty nickname", "response": "Denver", "value": 400 },
+      { "clue": "The 630-foot Gateway Arch, a monument to westward expansion, gleams in this Missouri city", "response": "St. Louis", "value": 600 },
+      { "clue": "In this Steel City, the Allegheny & Monongahela rivers meet to form the Ohio", "response": "Pittsburgh", "value": 800 },
+      { "clue": "Founded by Spain in 1565, this Florida city is the continental U.S.'s oldest continuously occupied European settlement", "response": "St. Augustine", "value": 1000 }
+    ]
+  },
+  {
+    "name": "ISLANDS IN THE STREAM",
+    "clues": [
+      { "clue": "Havana is the capital of this island nation, the largest island in the Caribbean", "response": "Cuba", "value": 200 },
+      { "clue": "The word 'geyser' comes from a spouting hot spring in this North Atlantic island nation", "response": "Iceland", "value": 400 },
+      { "clue": "Once known as Ceylon, this teardrop-shaped island nation dangles off India's southern tip", "response": "Sri Lanka", "value": 600 },
+      { "clue": "This archipelago of more than 7,000 islands was named in honor of Spain's King Philip II", "response": "the Philippines", "value": 800 },
+      { "clue": "Malé is the packed capital of this low-lying nation of coral atolls in the Indian Ocean", "response": "the Maldives", "value": 1000 }
+    ]
+  },
+  {
+    "name": "BAY WATCH",
+    "clues": [
+      { "clue": "The Golden Gate Bridge spans the entrance to this California bay", "response": "San Francisco Bay", "value": 200 },
+      { "clue": "Famed for its blue crabs, this largest estuary in the U.S. is shared by Maryland & Virginia", "response": "Chesapeake Bay", "value": 400 },
+      { "clue": "Oil tankers exit this body of water between Iran & the Arabian Peninsula via the Strait of Hormuz", "response": "the Persian Gulf", "value": 600 },
+      { "clue": "Mutineers set explorer Henry adrift in 1611 near this giant Canadian bay that bears his name", "response": "Hudson Bay", "value": 800 },
+      { "clue": "The world's highest tides surge in this bay between New Brunswick & Nova Scotia", "response": "the Bay of Fundy", "value": 1000 }
+    ]
+  },
+  {
+    "name": "TOWER OF POWER",
+    "clues": [
+      { "clue": "Completed for an 1889 World's Fair, this iron lattice landmark defines the Paris skyline", "response": "the Eiffel Tower", "value": 200 },
+      { "clue": "Soft soil set this Italian cathedral campanile tilting before its builders even finished", "response": "the Leaning Tower of Pisa", "value": 400 },
+      { "clue": "At its 2010 opening, this half-mile-high Dubai skyscraper became the tallest building ever erected", "response": "the Burj Khalifa", "value": 600 },
+      { "clue": "Legend warns the kingdom will fall if the resident ravens ever leave this Thames-side fortress", "response": "the Tower of London", "value": 800 },
+      { "clue": "Big Ben is only the bell; the Westminster clock structure it hangs in was renamed this in 2012", "response": "Elizabeth Tower", "value": 1000 }
+    ]
+  },
+  {
+    "name": "FORCES OF NATURE",
+    "clues": [
+      { "clue": "Daredevils in barrels have famously plunged over this waterfall on the New York-Ontario border", "response": "Niagara Falls", "value": 200 },
+      { "clue": "At more than 29,000 feet, this peak on the border of Nepal & Tibet is Earth's highest", "response": "Mount Everest", "value": 400 },
+      { "clue": "Snorkelers explore this world's largest coral formation, stretching 1,400 miles off Queensland", "response": "the Great Barrier Reef", "value": 600 },
+      { "clue": "Nicknamed 'the smoke that thunders,' this cascade on the Zambezi divides Zambia & Zimbabwe", "response": "Victoria Falls", "value": 800 },
+      { "clue": "Some 40,000 interlocking basalt columns form this natural wonder on Northern Ireland's coast", "response": "the Giant's Causeway", "value": 1000 }
+    ]
+  }
+]

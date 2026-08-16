@@ -1,0 +1,122 @@
+[
+  {
+    "name": "MEET ME ON THE BRIDGE",
+    "clues": [
+      { "clue": "Generations of children have sung that this famous crossing 'is falling down, falling down'", "response": "London Bridge", "value": 400 },
+      { "clue": "A classic swindle involved selling this 1883 East River landmark to gullible newcomers", "response": "the Brooklyn Bridge", "value": 800 },
+      { "clue": "In a 1957 Best Picture winner, Alec Guinness's prisoners of war build a railway bridge over this river", "response": "the River Kwai", "value": 1200 },
+      { "clue": "Legend says convicts took one last look at Venice through the windows of this covered crossing, and their reaction named it", "response": "the Bridge of Sighs", "value": 1600 },
+      { "clue": "Nicknamed Big Mac, this five-mile suspension span joins Michigan's two peninsulas", "response": "the Mackinac Bridge", "value": 2000 }
+    ]
+  },
+  {
+    "name": "BUILT TO IMPRESS",
+    "clues": [
+      { "clue": "Victor Hugo's hunchback rang the bells of this great Paris cathedral", "response": "Notre Dame", "value": 400 },
+      { "clue": "In 1963 Dr. King told a vast crowd about his dream from the steps of this marble tribute to the 16th president", "response": "the Lincoln Memorial", "value": 800 },
+      { "clue": "Houston's 1965 ballpark, the world's first domed stadium, was billed as the eighth wonder of the world", "response": "the Astrodome", "value": 1200 },
+      { "clue": "A newspaper tycoon filled this San Simeon hilltop mansion with art; 'Citizen Kane' turned it into Xanadu", "response": "Hearst Castle", "value": 1600 },
+      { "clue": "Squeezed onto a triangular block, this 1902 New York skyscraper was named for a household pressing tool", "response": "the Flatiron Building", "value": 2000 }
+    ]
+  },
+  {
+    "name": "OUT ON THE BRINY",
+    "clues": [
+      { "clue": "Italy, Greece and Egypt all have shores on this sea whose name means 'middle of the earth'", "response": "the Mediterranean Sea", "value": 400 },
+      { "clue": "The Gospels say Jesus calmed a storm and walked on the water of this sea in northern Israel", "response": "the Sea of Galilee", "value": 800 },
+      { "clue": "Yalta, Odessa and the Crimean Peninsula all sit on this dark-sounding sea", "response": "the Black Sea", "value": 1200 },
+      { "clue": "Since the 1970s oil rigs have pumped crude from beneath this sea between Britain and Norway", "response": "the North Sea", "value": 1600 },
+      { "clue": "In Greek myth a grieving king of Athens threw himself into this sea, which took his name, when he thought his son had died", "response": "the Aegean Sea", "value": 2000 }
+    ]
+  },
+  {
+    "name": "AT THE LAKE",
+    "clues": [
+      { "clue": "A much-published 1934 photograph claimed to show a monster in this long Scottish lake", "response": "Loch Ness", "value": 400 },
+      { "clue": "Chicago and Milwaukee sit on the shore of this Great Lake, the only one entirely inside the U.S.", "response": "Lake Michigan", "value": 800 },
+      { "clue": "Casinos, ski slopes and famously deep blue water ring this mountain lake on the California-Nevada line", "response": "Lake Tahoe", "value": 1200 },
+      { "clue": "Bathers bob like corks in this shallow Utah water that gave a nearby capital city its name", "response": "the Great Salt Lake", "value": 1600 },
+      { "clue": "The White Nile begins at this vast African lake, which a British explorer named for his queen", "response": "Lake Victoria", "value": 2000 }
+    ]
+  },
+  {
+    "name": "WEATHER OR NOT",
+    "clues": [
+      { "clue": "Sunlight bending through leftover raindrops paints this seven-colored arc across the sky", "response": "a rainbow", "value": 400 },
+      { "clue": "A summer thunderstorm can pelt the garden with this ice, sometimes in lumps the size of golf balls", "response": "hail", "value": 800 },
+      { "clue": "In the Atlantic this kind of giant spinning storm gets a name from an official list; near Japan it's a typhoon", "response": "a hurricane", "value": 1200 },
+      { "clue": "When the needle on this weather instrument drops, sailors and farmers expect a storm", "response": "a barometer", "value": 1600 },
+      { "clue": "New England braces for this kind of winter storm, named for the direction its fiercest winds blow", "response": "a nor'easter", "value": 2000 }
+    ]
+  },
+  {
+    "name": "TURN, TURN, TURN",
+    "clues": [
+      { "clue": "Americans say fall; the calendar and the British prefer this word for the season", "response": "autumn", "value": 400 },
+      { "clue": "Each February 2 a Pennsylvania rodent's shadow forecasts six more weeks of winter on this holiday", "response": "Groundhog Day", "value": 800 },
+      { "clue": "Around June 21 the Northern Hemisphere gets its longest day of the year, known by this two-word name", "response": "the summer solstice", "value": 1200 },
+      { "clue": "A warm, hazy spell arriving after the first frost of fall carries this old-fashioned name", "response": "Indian summer", "value": 1600 },
+      { "clue": "Farmers worked late bringing in the crops by the light of this full moon nearest the start of fall", "response": "the harvest moon", "value": 2000 }
+    ]
+  },
+  {
+    "name": "A SUNDAY STROLL",
+    "clues": [
+      { "clue": "Horse carriages, a zoo and Strawberry Fields fill this 843-acre rectangle in Manhattan", "response": "Central Park", "value": 400 },
+      { "clue": "Cows grazed until 1830 on this Beantown green, the oldest public park in America", "response": "Boston Common", "value": 800 },
+      { "clue": "Soapbox orators speak their minds at Speakers' Corner in this royal London green space", "response": "Hyde Park", "value": 1200 },
+      { "clue": "A great Victorian glass Palm House stands in this royal botanic garden west of London", "response": "Kew Gardens", "value": 1600 },
+      { "clue": "Monet painted water lilies and a Japanese footbridge in his garden at this Normandy village", "response": "Giverny", "value": 2000 }
+    ]
+  },
+  {
+    "name": "IRON HORSES",
+    "clues": [
+      { "clue": "Freight trains once ended with this little car where the crew rode and kept watch", "response": "a caboose", "value": 400 },
+      { "clue": "A golden spike driven at Promontory, Utah in 1869 completed this coast-to-coast rail line", "response": "the transcontinental railroad", "value": 800 },
+      { "clue": "A ballad made a hero of this engineer, who died at the throttle of the Cannonball Express in 1900", "response": "Casey Jones", "value": 1200 },
+      { "clue": "A 1941 Glenn Miller hit sends a traveler to track 29 to catch this Tennessee-bound train", "response": "the Chattanooga Choo Choo", "value": 1600 },
+      { "clue": "Overnight travelers slept in a berth in this kind of plush sleeping car named for its Illinois builder", "response": "a Pullman car", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE SHIP'S LOG",
+    "clues": [
+      { "clue": "Called unsinkable, this liner struck an iceberg on her maiden voyage in April 1912", "response": "the Titanic", "value": 400 },
+      { "clue": "Columbus's flagship ran aground off Hispaniola on Christmas Day 1492", "response": "the Santa Maria", "value": 800 },
+      { "clue": "Berthed in Boston, this 1797 frigate earned the nickname Old Ironsides", "response": "the USS Constitution", "value": 1200 },
+      { "clue": "Likened to a cheesebox on a raft, this Union ironclad fought the Merrimack in 1862", "response": "the Monitor", "value": 1600 },
+      { "clue": "Thor Heyerdahl and five crewmen crossed the Pacific in 1947 aboard this balsa raft", "response": "the Kon-Tiki", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE GRAND TOUR",
+    "clues": [
+      { "clue": "A striped-shirted boatman poles this narrow black craft along the canals of Venice", "response": "a gondola", "value": 400 },
+      { "clue": "Visitors lie on their backs to kiss this Irish castle stone said to grant the gift of gab", "response": "the Blarney Stone", "value": 800 },
+      { "clue": "Nobody is sure who raised this circle of giant stones on England's Salisbury Plain long ago", "response": "Stonehenge", "value": 1200 },
+      { "clue": "Each July daredevils sprint ahead of bulls through the narrow streets of this Spanish city", "response": "Pamplona", "value": 1600 },
+      { "clue": "Castles crown the cliffs above this German river where a legendary maiden lured boatmen onto the rocks", "response": "the Rhine", "value": 2000 }
+    ]
+  },
+  {
+    "name": "TRUE NORTH",
+    "clues": [
+      { "clue": "Two red bars on Canada's flag frame this red symbol taken from a native tree", "response": "the maple leaf", "value": 400 },
+      { "clue": "Red serge tunics and a famous Musical Ride belong to these Canadian federal police", "response": "the Mounties", "value": 800 },
+      { "clue": "The 1,815-foot CN Tower rises above this largest Canadian city", "response": "Toronto", "value": 1200 },
+      { "clue": "Anne of Green Gables grew up on this smallest Canadian province", "response": "Prince Edward Island", "value": 1600 },
+      { "clue": "Gold-seekers swarmed the Klondike in 1898 in this Canadian territory", "response": "the Yukon", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SOUTH OF THE BORDER",
+    "clues": [
+      { "clue": "The Aztec capital of Tenochtitlan lies buried beneath this sprawling modern metropolis", "response": "Mexico City", "value": 400 },
+      { "clue": "Cliff divers plunge from the rocks of La Quebrada in this Pacific resort city", "response": "Acapulco", "value": 800 },
+      { "clue": "Trumpets, violins and silver-studded charro suits mark this kind of strolling Mexican band", "response": "mariachi", "value": 1200 },
+      { "clue": "Marigolds, sugar skulls and graveside picnics mark this Mexican holiday on November 2", "response": "the Day of the Dead", "value": 1600 },
+      { "clue": "El Castillo, a stepped pyramid with 91 stairs on each side, towers over this Mayan ruin in the Yucatan", "response": "Chichen Itza", "value": 2000 }
+    ]
+  }
+]

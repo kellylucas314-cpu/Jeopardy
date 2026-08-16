@@ -1,0 +1,122 @@
+[
+  {
+    "name": "BASES LOADED",
+    "clues": [
+      { "clue": "In baseball, a runner scores by safely touching first, second, third & this final base", "response": "home plate", "value": 200 },
+      { "clue": "The Yankees & this Boston team wage baseball's most storied rivalry", "response": "the Red Sox", "value": 400 },
+      { "clue": "Abbreviated SS on a scorecard, this infielder patrols the gap between second & third base", "response": "shortstop", "value": 600 },
+      { "clue": "A pitcher who retires all 27 batters without one reaching base achieves this flawless feat", "response": "a perfect game", "value": 800 },
+      { "clue": "A hitter who leads his league in batting average, homers & RBIs claims this regal title", "response": "the Triple Crown", "value": 1000 }
+    ]
+  },
+  {
+    "name": "HOME PLATE SPECIAL",
+    "clues": [
+      { "clue": "'Take Me Out to the Ball Game' begs for peanuts & this caramel-coated popcorn snack", "response": "Cracker Jack", "value": 200 },
+      { "clue": "Fenway Park's 37-foot left-field wall goes by this colorful, creepy nickname", "response": "the Green Monster", "value": 400 },
+      { "clue": "Ivy blankets the outfield walls of Wrigley Field, home of this National League team", "response": "the Chicago Cubs", "value": 600 },
+      { "clue": "Nicknamed 'The House That Ruth Built', it opened in the Bronx in 1923", "response": "Yankee Stadium", "value": 800 },
+      { "clue": "Ebbets Field met the wrecking ball in 1960 after this borough's beloved 'Bums' fled to L.A.", "response": "Brooklyn", "value": 1000 }
+    ]
+  },
+  {
+    "name": "GRIDIRON & BEAR IT",
+    "clues": [
+      { "clue": "Cross the goal line with the football & you've scored this 6-point play", "response": "a touchdown", "value": 200 },
+      { "clue": "The Packers beat the Chiefs in January 1967 in the first edition of this NFL title game", "response": "the Super Bowl", "value": 400 },
+      { "clue": "A last-second desperation heave to the end zone is known as this prayerful pass", "response": "a Hail Mary", "value": 600 },
+      { "clue": "The championship trophy bears the name of this coach who won the first 2 Super Bowls with Green Bay", "response": "Vince Lombardi", "value": 800 },
+      { "clue": "This AFC East team capped an undefeated 1972 season by winning Super Bowl VII under Don Shula", "response": "the Miami Dolphins", "value": 1000 }
+    ]
+  },
+  {
+    "name": "NET WORTH",
+    "clues": [
+      { "clue": "Sink a shot from beyond the arc & the NBA awards you this many points", "response": "three", "value": 200 },
+      { "clue": "This Bulls superstar teamed up with Bugs Bunny in the 1996 film 'Space Jam'", "response": "Michael Jordan", "value": 400 },
+      { "clue": "The Lakers earned their name in this 'City of Lakes' before moving to Los Angeles in 1960", "response": "Minneapolis", "value": 600 },
+      { "clue": "On March 2, 1962, this Warriors center dropped 100 points on the Knicks in Hershey, Pennsylvania", "response": "Wilt Chamberlain", "value": 800 },
+      { "clue": "In 1891 Dr. James Naismith nailed up peach baskets in this Massachusetts city & invented the game", "response": "Springfield", "value": 1000 }
+    ]
+  },
+  {
+    "name": "FLAME & FORTUNE",
+    "clues": [
+      { "clue": "Olympic champions stand on the podium's top step to receive a medal of this precious metal", "response": "gold", "value": 200 },
+      { "clue": "This Jamaican sprinter struck his lightning pose after winning the 100 meters at 3 straight Olympics", "response": "Usain Bolt", "value": 400 },
+      { "clue": "This American sprinter won 4 gold medals at the 1936 Berlin Games, spoiling Hitler's showcase", "response": "Jesse Owens", "value": 600 },
+      { "clue": "At Montreal in 1976, this 14-year-old Romanian gymnast earned the Olympics' first perfect 10", "response": "Nadia Comaneci", "value": 800 },
+      { "clue": "This Ethiopian ran the 1960 Rome Olympic marathon entirely barefoot -- and won it", "response": "Abebe Bikila", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SNOW BUSINESS",
+    "clues": [
+      { "clue": "Triple axels & salchows score big points in this graceful Winter Olympic sport", "response": "figure skating", "value": 200 },
+      { "clue": "In 1980's 'Miracle on Ice', a U.S. squad of college kids stunned this superpower's hockey machine", "response": "the Soviet Union", "value": 400 },
+      { "clue": "Riders zip feet-first down an icy chute on this racing sled whose name is French for 'sled'", "response": "the luge", "value": 600 },
+      { "clue": "This island nation's unlikely bobsled team became the darlings of the 1988 Calgary Games", "response": "Jamaica", "value": 800 },
+      { "clue": "This Norwegian took figure skating gold in 1928, 1932 & 1936, then skated off to Hollywood stardom", "response": "Sonja Henie", "value": 1000 }
+    ]
+  },
+  {
+    "name": "DICE, DICE, BABY",
+    "clues": [
+      { "clue": "Pass 'Go', collect $200 & try to put hotels on Boardwalk in this real-estate game", "response": "Monopoly", "value": 200 },
+      { "clue": "Colonel Mustard & Professor Plum are murder suspects in this mansion mystery game", "response": "Clue", "value": 400 },
+      { "clue": "Five of a kind scores 50 points in this shake-&-roll dice game whose name doubles as a victory shout", "response": "Yahtzee", "value": 600 },
+      { "clue": "Armies clash over 42 territories in this Parker Brothers game of world conquest", "response": "Risk", "value": 800 },
+      { "clue": "Dice rolls send 15 checkers racing around 24 points in this ancient game, its stakes doubled by a special cube", "response": "backgammon", "value": 1000 }
+    ]
+  },
+  {
+    "name": "TOY MEETS WORLD",
+    "clues": [
+      { "clue": "Ruth Handler named this 1959 Mattel fashion doll after her daughter Barbara", "response": "Barbie", "value": 200 },
+      { "clue": "Twist 2 white knobs to draw on this red-framed toy, then shake it to erase", "response": "Etch A Sketch", "value": 400 },
+      { "clue": "Naval engineer Richard James invented this coiled metal toy that 'walks' down stairs", "response": "the Slinky", "value": 600 },
+      { "clue": "First sold as a wallpaper cleaner, this soft modeling compound became a preschool art staple", "response": "Play-Doh", "value": 800 },
+      { "clue": "Hasbro coined this 2-word term in 1964 so nobody would have to call G.I. Joe a doll", "response": "an action figure", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SAY MY (NICK)NAME",
+    "clues": [
+      { "clue": "'The Sultan of Swat' & 'the Great Bambino' both point to this legendary Yankees slugger", "response": "Babe Ruth", "value": 200 },
+      { "clue": "This heavyweight champion born Cassius Clay dubbed himself 'The Greatest'", "response": "Muhammad Ali", "value": 400 },
+      { "clue": "Earvin Johnson picked up this one-word nickname as a teenager for his dazzling passes", "response": "Magic", "value": 600 },
+      { "clue": "Willie Mays' cheerful habit of greeting everyone earned him this 3-word nickname", "response": "the Say Hey Kid", "value": 800 },
+      { "clue": "'The Galloping Ghost', this Illinois halfback drew huge crowds to the 1920s NFL with the Bears", "response": "Red Grange", "value": 1000 }
+    ]
+  },
+  {
+    "name": "A HERD OF G.O.A.T.S",
+    "clues": [
+      { "clue": "While pregnant, she won the 2017 Australian Open for her 23rd Grand Slam singles title", "response": "Serena Williams", "value": 200 },
+      { "clue": "In 1997, at age 21, this golfer ran away with his first Masters title by 12 strokes", "response": "Tiger Woods", "value": 400 },
+      { "clue": "This Brazilian forward was part of World Cup-winning squads in 1958, 1962 & 1970", "response": "Pele", "value": 600 },
+      { "clue": "The NHL retired his No. 99 for every team in the league after he hung up his skates in 1999", "response": "Wayne Gretzky", "value": 800 },
+      { "clue": "This Sac & Fox athlete won the 1912 Olympic decathlon, then played both pro football & pro baseball", "response": "Jim Thorpe", "value": 1000 }
+    ]
+  },
+  {
+    "name": "QUARTER MASTERS",
+    "clues": [
+      { "clue": "Ghosts named Blinky, Pinky, Inky & Clyde chase this dot-chomping yellow arcade hero", "response": "Pac-Man", "value": 200 },
+      { "clue": "Atari's 1972 arcade hit, it boiled tennis down to 2 paddles & a bouncing blip", "response": "Pong", "value": 400 },
+      { "clue": "A leaping carpenter dubbed Jumpman dodged this giant ape's barrels in a 1981 arcade smash", "response": "Donkey Kong", "value": 600 },
+      { "clue": "Rows of pixelated aliens descend ever faster in this 1978 Japanese shoot-'em-up", "response": "Space Invaders", "value": 800 },
+      { "clue": "This orange arcade hopper turns pyramid cubes new colors while cursing in comic-strip symbols", "response": "Q*bert", "value": 1000 }
+    ]
+  },
+  {
+    "name": "GAME OVER ACHIEVERS",
+    "clues": [
+      { "clue": "This mustachioed Nintendo plumber has stomped Goombas to rescue Princess Peach since 1985", "response": "Mario", "value": 200 },
+      { "clue": "This spiky blue Sega speedster zooms through loop-the-loops gobbling up golden rings", "response": "Sonic", "value": 400 },
+      { "clue": "Link, not the title princess, is the sword-swinging hero of this Nintendo adventure series", "response": "The Legend of Zelda", "value": 600 },
+      { "clue": "This pistol-packing British archaeologist made her debut in 1996's 'Tomb Raider'", "response": "Lara Croft", "value": 800 },
+      { "clue": "Players who finished 1986's 'Metroid' discovered this armored bounty hunter was a woman all along", "response": "Samus Aran", "value": 1000 }
+    ]
+  }
+]

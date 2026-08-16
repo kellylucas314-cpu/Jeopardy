@@ -1,0 +1,122 @@
+[
+  {
+    "name": "ANTAGONIST'S PARADISE",
+    "clues": [
+      { "clue": "This helmeted Sith lord breathes through a black mask and turns out to be Luke Skywalker's father", "response": "Darth Vader", "value": 200 },
+      { "clue": "This fur-mad socialite plots to turn a litter of Dalmatian puppies into a spotted coat", "response": "Cruella de Vil", "value": 400 },
+      { "clue": "This calm shipboard computer refuses to open the pod bay doors in '2001: A Space Odyssey'", "response": "HAL 9000", "value": 600 },
+      { "clue": "A police sketch and a cluttered bulletin board unmask this whispered-about crime lord of 'The Usual Suspects'", "response": "Keyser Söze", "value": 800 },
+      { "clue": "Orson Welles played this racketeer peddling watered-down penicillin in postwar Vienna in 'The Third Man'", "response": "Harry Lime", "value": 1000 }
+    ]
+  },
+  {
+    "name": "NIELSEN'S MOST WANTED",
+    "clues": [
+      { "clue": "Springfield's nuclear plant owner steeples his fingers and purrs 'Excellent' on 'The Simpsons'", "response": "Mr. Burns", "value": 200 },
+      { "clue": "A 1980 cliffhanger shooting of this scheming Texas oil baron turned 'Dallas' into a national guessing game", "response": "J.R. Ewing", "value": 400 },
+      { "clue": "This cruel teenage king of Westeros orders Ned Stark beheaded on 'Game of Thrones'", "response": "Joffrey Baratheon", "value": 600 },
+      { "clue": "This cybernetic collective assimilates whole civilizations on 'Star Trek: The Next Generation'", "response": "the Borg", "value": 800 },
+      { "clue": "A shadowy conspirator guarding the alien cover-up on 'The X-Files' is nicknamed for his nicotine habit", "response": "the Cigarette Smoking Man", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE FIGHT STUFF",
+    "clues": [
+      { "clue": "Mr. Miyagi teaches the wax-on, wax-off lesson and a crane kick to Daniel LaRusso in this 1984 film", "response": "The Karate Kid", "value": 200 },
+      { "clue": "Clint Eastwood directed and co-starred in this Best Picture winner about a waitress who becomes a boxer", "response": "Million Dollar Baby", "value": 400 },
+      { "clue": "Christian Bale won an Oscar as crack-addicted trainer Dicky Eklund in this 2010 Micky Ward biopic", "response": "The Fighter", "value": 600 },
+      { "clue": "Russell Crowe played Depression-era heavyweight James J. Braddock in this 2005 Ron Howard film", "response": "Cinderella Man", "value": 800 },
+      { "clue": "Denzel Washington earned an Oscar nod as boxer Rubin Carter in this 1999 film named for his nickname", "response": "The Hurricane", "value": 1000 }
+    ]
+  },
+  {
+    "name": "GAME FILM",
+    "clues": [
+      { "clue": "Neighborhood kids scheme to get a Babe Ruth-signed ball back from a fearsome dog in this 1993 baseball movie", "response": "The Sandlot", "value": 200 },
+      { "clue": "A greenskeeper's war with a gopher runs alongside the antics at Bushwood Country Club in this 1980 comedy", "response": "Caddyshack", "value": 400 },
+      { "clue": "Four Jamaicans and a disgraced coach push a bobsled down an Olympic track in this 1993 Disney comedy", "response": "Cool Runnings", "value": 600 },
+      { "clue": "Paul Newman player-coaches the goon-happy Charlestown Chiefs, Hanson brothers and all, in this 1977 hockey comedy", "response": "Slap Shot", "value": 800 },
+      { "clue": "An Indiana teen who idolizes Italian cyclists races the Little 500 in this 1979 coming-of-age film", "response": "Breaking Away", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE LEADING WOOF",
+    "clues": [
+      { "clue": "John Grogan's memoir and a 2008 Owen Wilson film call this unruly yellow Lab the world's worst dog", "response": "Marley", "value": 200 },
+      { "clue": "Stephen King made a rabid St. Bernard the title menace of this 1981 novel and 1983 film", "response": "Cujo", "value": 400 },
+      { "clue": "Tom Hanks reluctantly partners with this slobbering French mastiff, sole witness to a murder, in a 1989 comedy", "response": "Hooch", "value": 600 },
+      { "clue": "A shelter mutt named Higgins played this scruffy stray in a hit 1974 family film named for him", "response": "Benji", "value": 800 },
+      { "clue": "A dark ring around one eye marked this pit bull who romped with the Little Rascals", "response": "Petey", "value": 1000 }
+    ]
+  },
+  {
+    "name": "CRITTER-ACCLAIMED",
+    "clues": [
+      { "clue": "Oversized ears let this Disney circus elephant of 1941 take flight, with a feather for luck", "response": "Dumbo", "value": 200 },
+      { "clue": "Hagrid buys Harry Potter this snowy owl, who carries his mail to and from Hogwarts", "response": "Hedwig", "value": 400 },
+      { "clue": "A boy schemes to help this captive orca leap a sea wall back to the ocean in a 1993 family film", "response": "Willy", "value": 600 },
+      { "clue": "Sabrina the Teenage Witch lives with this wisecracking black cat, a warlock serving out a sentence", "response": "Salem", "value": 800 },
+      { "clue": "Joy Adamson raised this orphaned lioness, whose return to the wild inspired 'Born Free'", "response": "Elsa", "value": 1000 }
+    ]
+  },
+  {
+    "name": "TWO-SHOT WONDERS",
+    "clues": [
+      { "clue": "Warren Beatty and Faye Dunaway played this Depression-era robber couple in a hail of bullets in 1967", "response": "Bonnie and Clyde", "value": 200 },
+      { "clue": "Mike Myers and Dana Carvey play these basement cable-access hosts in a 1992 'Saturday Night Live' spinoff", "response": "Wayne and Garth", "value": 400 },
+      { "clue": "A cheese-loving inventor and his silent dog headline Nick Park's claymation shorts", "response": "Wallace and Gromit", "value": 600 },
+      { "clue": "A van built out of marijuana rolls through 1978's 'Up in Smoke,' the first feature by this comedy duo", "response": "Cheech and Chong", "value": 800 },
+      { "clue": "A smooth crooner and a manic clown, this nightclub-bred comedy team split up in 1956 after ten years together", "response": "Martin and Lewis", "value": 1000 }
+    ]
+  },
+  {
+    "name": "ENSEMBLE, ASSEMBLE",
+    "clues": [
+      { "clue": "Housekeeper Alice keeps order for a blended family of three girls and three boys on this 1969-74 sitcom", "response": "The Brady Bunch", "value": 200 },
+      { "clue": "Richie Cunningham and his pals hang out at Arnold's with a leather-jacketed Fonzie on this nostalgic sitcom", "response": "Happy Days", "value": 400 },
+      { "clue": "Louie barks from a cage-like dispatch booth at the Sunshine Cab Company on this 1978-83 sitcom", "response": "Taxi", "value": 600 },
+      { "clue": "Sergeant Esterhaus ends each roll call urging his officers to be careful out there on this 1980s cop drama", "response": "Hill Street Blues", "value": 800 },
+      { "clue": "A New York doctor works off his tuition among the eccentrics of Cicely, Alaska on this 1990s series", "response": "Northern Exposure", "value": 1000 }
+    ]
+  },
+  {
+    "name": "A TITLE IN ONE",
+    "clues": [
+      { "clue": "Keanu Reeves must keep a city bus above 50 miles an hour in this 1994 thriller with a one-word title", "response": "Speed", "value": 200 },
+      { "clue": "Sigourney Weaver's Ripley battles a chest-bursting stowaway aboard the Nostromo in this 1979 shocker", "response": "Alien", "value": 400 },
+      { "clue": "Dustin Hoffman poses as an actress named Dorothy Michaels to land a soap opera job in this 1982 comedy", "response": "Tootsie", "value": 600 },
+      { "clue": "Bram Stoker's widow sued to destroy this 1922 German vampire film that had renamed Dracula Count Orlok", "response": "Nosferatu", "value": 800 },
+      { "clue": "Kurosawa's 1950 film lent English a term for irreconcilable eyewitness accounts of one event", "response": "Rashomon", "value": 1000 }
+    ]
+  },
+  {
+    "name": "CINEMA A LA CARTE",
+    "clues": [
+      { "clue": "Gene Wilder's candy man leads five golden ticket winners through his secret sweets plant in this 1971 musical", "response": "Willy Wonka & the Chocolate Factory", "value": 200 },
+      { "clue": "Meg Ryan's noisy demonstration at Katz's Delicatessen prompts a famous order from a fellow diner in this 1989 comedy", "response": "When Harry Met Sally", "value": 400 },
+      { "clue": "Idgie and Ruth run the Whistle Stop Cafe in this 1991 film named for a Southern skillet dish", "response": "Fried Green Tomatoes", "value": 600 },
+      { "clue": "A jailed mobster shaves garlic with a razor so it melts into the sauce in this 1990 Scorsese film", "response": "Goodfellas", "value": 800 },
+      { "clue": "A French exile spends her lottery winnings on a turtle soup dinner for austere Danish villagers in this 1987 film", "response": "Babette's Feast", "value": 1000 }
+    ]
+  },
+  {
+    "name": "CHANNEL SURF & TURF",
+    "clues": [
+      { "clue": "Bleached spiky hair and trips to Flavortown mark this host of 'Diners, Drive-Ins and Dives'", "response": "Guy Fieri", "value": 200 },
+      { "clue": "This perky cook shortened extra virgin olive oil to EVOO on her show '30 Minute Meals'", "response": "Rachael Ray", "value": 400 },
+      { "clue": "Food science lessons, oddball props and kitchen chemistry filled 'Good Eats,' hosted by this cook", "response": "Alton Brown", "value": 600 },
+      { "clue": "After writing nuclear energy budgets in Washington, this self-taught cook bought a Hamptons food shop called Barefoot Contessa", "response": "Ina Garten", "value": 800 },
+      { "clue": "In 1946 this cookbook author hosted NBC's 'I Love to Eat,' generally called TV's first cooking show", "response": "James Beard", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE NON-TOON ZONE",
+    "clues": [
+      { "clue": "A zip-up cardigan, a change of sneakers and a little red trolley opened each episode of this PBS staple", "response": "Mister Rogers' Neighborhood", "value": 200 },
+      { "clue": "Bob Keeshan played the jangling-keys, big-pocketed host of this CBS children's show that ran nearly 30 years", "response": "Captain Kangaroo", "value": 400 },
+      { "clue": "Paul Reubens' gray-suited man-child hosted this 1980s Saturday show where a secret word triggered screams", "response": "Pee-wee's Playhouse", "value": 600 },
+      { "clue": "Morgan Freeman played Easy Reader on this 1971 PBS series that taught reading through sketches and songs", "response": "The Electric Company", "value": 800 },
+      { "clue": "Kids' segments and Ubbi Dubbi talk poured into Box 350, Boston, on this 1970s PBS series", "response": "Zoom", "value": 1000 }
+    ]
+  }
+]

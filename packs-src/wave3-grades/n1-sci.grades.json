@@ -1,0 +1,14 @@
+[
+  { "name": "SKELETON CREW", "score": 49, "verdict": "accepted", "notes": "All five bone facts verified; clean climbing ladder from ribs to hyoid with good etymology hooks." },
+  { "name": "GUT FEELINGS", "score": 48, "verdict": "accepted", "notes": "Digestion facts all check out (amylase, chyme, bile, peristalsis); real stair-step ramp." },
+  { "name": "FUR REAL", "score": 47, "verdict": "revised", "notes": "$1000 'scales' was self-describing ('overlapping keratin plates' hands it over); replaced with a monotremes clue that is genuinely $1000-hard." },
+  { "name": "WINGING IT", "score": 47, "verdict": "accepted", "notes": "Franklin eagle letter and Arctic tern verified; owl at $800 runs slightly easy but the ladder holds." },
+  { "name": "HAIL YES", "score": 48, "verdict": "accepted", "notes": "EF scale, Saffir-Simpson, and derecho etymology all correct; strong severe-weather ramp." },
+  { "name": "CLOUD NINE", "score": 47, "verdict": "accepted", "notes": "Rainbow and stratosphere stretch the cloud theme to 'sky' generally, but facts are solid and the ramp climbs." },
+  { "name": "SPACED OUT", "score": 48, "verdict": "accepted", "notes": "Planet facts verified (Saturn density, Herschel 1781); tidy ladder with varied hooks." },
+  { "name": "MOONLIGHTING", "score": 47, "verdict": "accepted", "notes": "$200 'the Moon' is a freebie inside a moon-named category — acceptable for row 1; Phobos and perigee land well." },
+  { "name": "ELEMENT-ARY SCHOOL", "score": 47, "verdict": "revised", "notes": "$600 leaked the answer via 'symbol N'; rewrote with a nitrogen-fixation hook so the row earns its value." },
+  { "name": "FIZZY BUSINESS", "score": 48, "verdict": "accepted", "notes": "Chemistry facts verified incl. Maillard (French chemist); good everyday-chemistry hooks and ramp." },
+  { "name": "EUREKA MOMENTS", "score": 48, "verdict": "accepted", "notes": "Newton, Archimedes, Fleming 1928, Rontgen first Physics Nobel, Rutherford nucleus — all verified; ladder works." },
+  { "name": "MINDS OVER MATTER", "score": 46, "verdict": "accepted", "notes": "All-household-name scientist ladder climbs only mildly (Mendel is a soft $1000), but every fact checks out." }
+]

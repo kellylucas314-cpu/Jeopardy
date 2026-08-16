@@ -1,0 +1,122 @@
+[
+  {
+    "name": "HEIR TODAY, GONE TOMORROW",
+    "clues": [
+      { "clue": "Nicholas II's abdication in March 1917 ended this dynasty's three centuries of rule over Russia", "response": "the Romanovs", "value": 400 },
+      { "clue": "Puyi, China's last emperor, was the final ruler of this dynasty founded by Manchu conquerors", "response": "the Qing", "value": 800 },
+      { "clue": "Victoria was the last British monarch of this German-rooted house; her son switched to Saxe-Coburg-Gotha", "response": "Hanover", "value": 1200 },
+      { "clue": "The 1700 death of the childless Charles II of Spain snuffed out this dynasty's Spanish line and sparked a war", "response": "the Habsburgs", "value": 1600 },
+      { "clue": "Founded by Cyrus the Great, this Persian dynasty ended when Alexander toppled Darius III", "response": "the Achaemenids", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SULTANS OF SWING",
+    "clues": [
+      { "clue": "After Mehmed II's cannons breached its walls in 1453, this city on the Bosporus became the Ottoman capital", "response": "Constantinople", "value": 400 },
+      { "clue": "Europeans called this 16th-century sultan 'the Magnificent'; his own subjects knew him as 'the Lawgiver'", "response": "Suleiman", "value": 800 },
+      { "clue": "Recruited as boys through the devshirme levy, these elite Ottoman infantrymen were wiped out in 1826", "response": "the Janissaries", "value": 1200 },
+      { "clue": "Ottoman armies besieged this Habsburg capital in 1529 and 1683 and failed to take it both times", "response": "Vienna", "value": 1600 },
+      { "clue": "A Holy League fleet shattered Ottoman naval power at this 1571 battle off the Greek coast", "response": "Lepanto", "value": 2000 }
+    ]
+  },
+  {
+    "name": "COUP ARE YOU?",
+    "clues": [
+      { "clue": "Fulgencio Batista fled this island nation on New Year's Day 1959 as Fidel Castro's rebels closed in", "response": "Cuba", "value": 400 },
+      { "clue": "In the 1799 Coup of 18 Brumaire, this general overthrew France's Directory and became First Consul", "response": "Napoleon", "value": 800 },
+      { "clue": "After the Shah fled in January 1979, this cleric flew home from exile near Paris to lead Iran's revolution", "response": "Ayatollah Khomeini", "value": 1200 },
+      { "clue": "This formerly enslaved general led Haiti's revolution but died in a French mountain prison in 1803", "response": "Toussaint Louverture", "value": 1600 },
+      { "clue": "Friends of Pushkin filled the ranks of these officers exiled to Siberia after an 1825 revolt in St. Petersburg", "response": "the Decembrists", "value": 2000 }
+    ]
+  },
+  {
+    "name": "UP IN ARMS",
+    "clues": [
+      { "clue": "Colonists disguised as Mohawks dumped 342 chests of East India Company cargo into the harbor in this 1773 protest", "response": "the Boston Tea Party", "value": 400 },
+      { "clue": "George Washington saddled up in 1794 to help crush this Pennsylvania revolt against a tax on distilled spirits", "response": "the Whiskey Rebellion", "value": 800 },
+      { "clue": "This Thracian gladiator's slave army defeated several Roman legions between 73 and 71 B.C.", "response": "Spartacus", "value": 1200 },
+      { "clue": "Rifle cartridges rumored to be greased with cow and pig fat helped ignite this 1857 revolt in India", "response": "the Sepoy Mutiny", "value": 1600 },
+      { "clue": "Hong Xiuquan, who claimed to be Jesus' younger brother, led this 1850s Chinese uprising that killed millions", "response": "the Taiping Rebellion", "value": 2000 }
+    ]
+  },
+  {
+    "name": "IRON CURTAIN CALLS",
+    "clues": [
+      { "clue": "East German guards stood aside on November 9, 1989 as crowds surged through this concrete barrier", "response": "the Berlin Wall", "value": 400 },
+      { "clue": "Churchill unveiled the phrase 'iron curtain' in a 1946 speech at Westminster College in this state", "response": "Missouri", "value": 800 },
+      { "clue": "U-2 photos of Soviet launch sites on a Caribbean island set off this 13-day standoff in October 1962", "response": "the Cuban Missile Crisis", "value": 1200 },
+      { "clue": "In 1956 Soviet tanks crushed this country's uprising, and its reformist premier Imre Nagy was later hanged", "response": "Hungary", "value": 1600 },
+      { "clue": "Thirty-five nations signed 1975 accords on borders and human rights in this Nordic capital", "response": "Helsinki", "value": 2000 }
+    ]
+  },
+  {
+    "name": "HINDSIGHT IS 20TH CENTURY",
+    "clues": [
+      { "clue": "Japan's December 7, 1941 carrier strike on this Hawaiian naval base pulled America into World War II", "response": "Pearl Harbor", "value": 400 },
+      { "clue": "Gavrilo Princip's pistol shots in this Bosnian city set Europe marching toward war in 1914", "response": "Sarajevo", "value": 800 },
+      { "clue": "Gandhi's 1930 march to the village of Dandi defied the British monopoly on this everyday seasoning", "response": "salt", "value": 1200 },
+      { "clue": "The 1918 flu pandemic wears this neutral nation's name only because its uncensored press reported it", "response": "Spain", "value": 1600 },
+      { "clue": "Troops fired on Father Gapon's peaceful 1905 marchers as they neared this St. Petersburg residence of the tsars", "response": "the Winter Palace", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SIGNED, SEALED, DELIVERED",
+    "clues": [
+      { "clue": "Rebel barons made King John affix his seal to this 'Great Charter' at Runnymede in 1215", "response": "Magna Carta", "value": 400 },
+      { "clue": "With this document of January 1, 1863, Lincoln declared slaves in Confederate-held territory free", "response": "the Emancipation Proclamation", "value": 800 },
+      { "clue": "Martin Luther's 95 Theses of 1517 blasted the church's sale of these pardons for sin", "response": "indulgences", "value": 1200 },
+      { "clue": "William the Conqueror's exhaustive 1086 land survey earned this nickname evoking the Last Judgment", "response": "the Domesday Book", "value": 1600 },
+      { "clue": "Emile Zola's 1898 front-page letter defending Alfred Dreyfus bears this accusatory French title", "response": "J'Accuse", "value": 2000 }
+    ]
+  },
+  {
+    "name": "PEACE OF PAPER",
+    "clues": [
+      { "clue": "Germany signed the 1919 treaty ending World War I in the Hall of Mirrors at this French palace", "response": "Versailles", "value": 400 },
+      { "clue": "Negotiated for about $15 million, this 1803 deal with France doubled the size of the United States", "response": "the Louisiana Purchase", "value": 800 },
+      { "clue": "The 1848 Treaty of Guadalupe Hidalgo transferred California and the Southwest from this country", "response": "Mexico", "value": 1200 },
+      { "clue": "The 1494 Treaty of Tordesillas drew a line that later gave Brazil to this European kingdom", "response": "Portugal", "value": 1600 },
+      { "clue": "The 1648 peace named for this German region ended the Thirty Years' War and reshaped sovereignty", "response": "Westphalia", "value": 2000 }
+    ]
+  },
+  {
+    "name": "CAN YOU DIG IT?",
+    "clues": [
+      { "clue": "Napoleon's soldiers in Egypt unearthed this slab bearing a single decree in three scripts in 1799", "response": "the Rosetta Stone", "value": 400 },
+      { "clue": "Peering into a tomb by candlelight in 1922, Howard Carter saw 'wonderful things' — the treasures of this pharaoh", "response": "Tutankhamun", "value": 800 },
+      { "clue": "Farmers digging a well in 1974 found this life-size clay legion guarding Qin Shi Huang's tomb", "response": "the Terracotta Army", "value": 1200 },
+      { "clue": "This German merchant-turned-digger excavated Hisarlik in Turkey and declared it Homer's Troy", "response": "Heinrich Schliemann", "value": 1600 },
+      { "clue": "The 1939 ship burial at Sutton Hoo yielded a famed helmet and treasures fit for a king of these people", "response": "the Anglo-Saxons", "value": 2000 }
+    ]
+  },
+  {
+    "name": "LOST & PROFOUND",
+    "clues": [
+      { "clue": "Plaster poured into hollows in the ash preserved the final poses of this Roman city's victims", "response": "Pompeii", "value": 400 },
+      { "clue": "A local farmer guided Hiram Bingham up to this Incan mountaintop citadel in Peru in 1911", "response": "Machu Picchu", "value": 800 },
+      { "clue": "Travelers reach this Nabataean caravan city in Jordan through a winding gorge called the Siq", "response": "Petra", "value": 1200 },
+      { "clue": "At its 12th-century peak, this Khmer imperial capital may have been the world's largest city", "response": "Angkor", "value": 1600 },
+      { "clue": "The granite ruins of this Shona trading capital gave a modern African nation its name", "response": "Great Zimbabwe", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SAIL OF THE CENTURY",
+    "clues": [
+      { "clue": "Killed in the Philippines in 1521, this explorer never finished the circumnavigation his fleet completed", "response": "Ferdinand Magellan", "value": 400 },
+      { "clue": "Rounding Africa in 1498, this Portuguese navigator opened a sea route to Calicut, India", "response": "Vasco da Gama", "value": 800 },
+      { "clue": "This British captain charted New Zealand and Australia's east coast before dying in Hawaii in 1779", "response": "James Cook", "value": 1200 },
+      { "clue": "This Norwegian's dogsled teams reached the South Pole in December 1911, weeks ahead of Robert Scott", "response": "Roald Amundsen", "value": 1600 },
+      { "clue": "This Tangier-born traveler logged some 75,000 miles across the 14th-century Muslim world, Mali to China", "response": "Ibn Battuta", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SCIENCE NON-FICTION",
+    "clues": [
+      { "clue": "The WHO declared this ancient scourge eradicated in 1980, a first for any human disease", "response": "smallpox", "value": 400 },
+      { "clue": "Too shy to press an ear to a female patient's chest in 1816, René Laennec rolled paper into a tube and invented this instrument", "response": "the stethoscope", "value": 800 },
+      { "clue": "This Polish astronomer's 1543 'On the Revolutions of the Celestial Spheres' yanked Earth from the center of the cosmos", "response": "Copernicus", "value": 1200 },
+      { "clue": "Dentist William Morton's 1846 Boston ether demonstration ushered surgery into the age of this induced loss of sensation", "response": "anesthesia", "value": 1600 },
+      { "clue": "France guillotined this founder of modern chemistry in 1794; Lagrange mourned that a century might not produce another such head", "response": "Lavoisier", "value": 2000 }
+    ]
+  }
+]

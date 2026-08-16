@@ -1,0 +1,86 @@
+[
+  { "name": "LOST IN MARINATION", "clues": [
+    { "clue": "Italian for 'twice-baked', these crunchy almond cookies are sliced from a loaf and returned to the oven", "response": "biscotti", "value": 400 },
+    { "clue": "The name of this pasta, thinner than spaghetti, is Italian for 'little worms'", "response": "vermicelli", "value": 800 },
+    { "clue": "This all-American condiment's name likely traces to a Hokkien Chinese term for fermented fish sauce", "response": "ketchup", "value": 1200 },
+    { "clue": "This fiery Goan pork curry takes its name from a Portuguese marinade of wine & garlic", "response": "vindaloo", "value": 1600 },
+    { "clue": "Ember-day fasts observed by Portuguese missionaries in Japan likely gave this batter-fried dish its name", "response": "tempura", "value": 2000 }
+  ] },
+  { "name": "FEAST IN THE PAST", "clues": [
+    { "clue": "Legend says an 18th-century English earl, loath to leave the gaming table, gave his title to this handheld meal", "response": "the sandwich", "value": 400 },
+    { "clue": "Aztec markets accepted the beans of this tree as currency; Moctezuma reportedly drank its frothy brew from golden cups", "response": "cacao", "value": 800 },
+    { "clue": "In 1889 Naples pizza maker Raffaele Esposito is said to have honored this visiting queen with a tomato, mozzarella & basil pie", "response": "Margherita", "value": 1200 },
+    { "clue": "Ice fishing with Inuit in Labrador taught this American the quick-freeze secret behind his frozen-food empire", "response": "Clarence Birdseye", "value": 1600 },
+    { "clue": "Factories from Iberia to the Black Sea supplied Roman tables with this pungent fermented fish sauce", "response": "garum", "value": 2000 }
+  ] },
+  { "name": "POUR DECISIONS", "clues": [
+    { "clue": "True bottles of this sparkling wine come only from grapes grown in its namesake region of northeastern France", "response": "Champagne", "value": 400 },
+    { "clue": "Once sold in straw-wrapped flasks called fiaschi, this Tuscan red got a sinister shout-out from Hannibal Lecter", "response": "Chianti", "value": 800 },
+    { "clue": "This fortified Spanish wine's English name is an anglicization of its hometown, Jerez de la Frontera", "response": "sherry", "value": 1200 },
+    { "clue": "'Noble rot' shriveling grapes on the vine concentrates the honeyed sweetness of this Bordeaux dessert wine", "response": "Sauternes", "value": 1600 },
+    { "clue": "European wine survived this sap-sucking vineyard scourge of the late 1800s only by grafting onto American rootstock", "response": "phylloxera", "value": 2000 }
+  ] },
+  { "name": "DISTILL MY HEART", "clues": [
+    { "clue": "This Mexican spirit distilled from blue agave shares its name with the Jalisco town at the heart of its production", "response": "tequila", "value": 400 },
+    { "clue": "By law this American whiskey requires a mash of at least 51% corn and aging in new charred oak barrels", "response": "bourbon", "value": 800 },
+    { "clue": "Distilled twice in copper pot stills, this brandy matures in oak in a delimited region north of Bordeaux", "response": "Cognac", "value": 1200 },
+    { "clue": "Whiskey makers use this heavenly two-word term for the spirit lost to evaporation as barrels age", "response": "the angel's share", "value": 1600 },
+    { "clue": "This plum brandy fuels toasts across the Balkans and holds pride of place as Serbia's national spirit", "response": "slivovitz", "value": 2000 }
+  ] },
+  { "name": "CHEF'S KISS", "clues": [
+    { "clue": "This co-author of 'Mastering the Art of French Cooking' charmed public TV as 'The French Chef'", "response": "Julia Child", "value": 400 },
+    { "clue": "Before berating contestants on 'Hell's Kitchen', this Scot earned three Michelin stars at his Chelsea flagship", "response": "Gordon Ramsay", "value": 800 },
+    { "clue": "'Kitchen Confidential' bared restaurant secrets before this chef roamed the world for 'Parts Unknown'", "response": "Anthony Bourdain", "value": 1200 },
+    { "clue": "This French 'king of chefs' organized kitchens into brigades and created Peach Melba for an Australian diva", "response": "Auguste Escoffier", "value": 1600 },
+    { "clue": "Culinary foams & spherified olives drew food pilgrims to this Catalan chef's elBulli until it closed in 2011", "response": "Ferran Adria", "value": 2000 }
+  ] },
+  { "name": "RESERVATIONS REQUIRED", "clues": [
+    { "clue": "Meg Ryan's most famous scene in 'When Harry Met Sally...' takes place at this Lower East Side pastrami mecca", "response": "Katz's Delicatessen", "value": 400 },
+    { "clue": "Thomas Keller kept the workaday name of this Yountville restaurant, whose stone building once housed a steam-cleaning shop", "response": "The French Laundry", "value": 800 },
+    { "clue": "Opened by Swiss brothers in 19th-century Manhattan, this fine-dining pioneer gave its name to a steak and popularized Baked Alaska", "response": "Delmonico's", "value": 1200 },
+    { "clue": "Rene Redzepi foraged sea buckthorn & wild herbs to make this Copenhagen restaurant the flagship of New Nordic cuisine", "response": "Noma", "value": 1600 },
+    { "clue": "Beginning in 1890, this Paris restaurant overlooking the Seine gave each pressed duck it served a numbered certificate", "response": "La Tour d'Argent", "value": 2000 }
+  ] },
+  { "name": "SEED MONEY", "clues": [
+    { "clue": "A $5 correspondence course in ice cream making led two childhood pals to open this brand's first scoop shop in a Burlington, Vermont gas station", "response": "Ben & Jerry's", "value": 400 },
+    { "clue": "The founder of this stout signed a 9,000-year lease at 45 pounds a year on Dublin's St. James's Gate brewery in 1759", "response": "Guinness", "value": 800 },
+    { "clue": "In 1898 a New Bern, North Carolina pharmacist renamed his 'Brad's Drink' as this cola, invoking a digestive enzyme", "response": "Pepsi", "value": 1200 },
+    { "clue": "Edmund McIlhenny first bottled this fiery pepper sauce in the 1860s on Avery Island, a Louisiana salt dome", "response": "Tabasco", "value": 1600 },
+    { "clue": "This rum dynasty took its bat emblem from the fruit bats roosting in its first Santiago de Cuba distillery, founded in 1862", "response": "Bacardi", "value": 2000 }
+  ] },
+  { "name": "THE BIG CHEESES", "clues": [
+    { "clue": "In his 60s, this goateed Kentuckian began franchising the fried chicken he'd perfected at his Corbin service station", "response": "Colonel Sanders", "value": 400 },
+    { "clue": "This Pennsylvanian sold his Lancaster Caramel Company for $1 million in 1900, then built a chocolate empire and its own town", "response": "Milton Hershey", "value": 800 },
+    { "clue": "This onetime KFC franchisee built a square-pattied burger chain bearing his daughter Melinda Lou's nickname", "response": "Dave Thomas", "value": 1200 },
+    { "clue": "A rail-car ad touting '21 styles of shoes' inspired this Pittsburgh condiment king's famous '57 Varieties'", "response": "H.J. Heinz", "value": 1600 },
+    { "clue": "This Chicago cheese wholesaler's 1916 patent on pasteurized processing put his surname on grocery shelves everywhere", "response": "James L. Kraft", "value": 2000 }
+  ] },
+  { "name": "SLOGAN'S RUN", "clues": [
+    { "clue": "This fast-food chain flame-broiled its way through decades of telling customers to 'Have It Your Way'", "response": "Burger King", "value": 400 },
+    { "clue": "'Betcha can't eat just one', this potato chip brand's long-running dare, was once delivered by Bert Lahr", "response": "Lay's", "value": 800 },
+    { "clue": "Legend credits Teddy Roosevelt with declaring this coffee 'Good to the last drop'", "response": "Maxwell House", "value": 1200 },
+    { "clue": "Ad copywriter Frances Gerety coined 'A Diamond Is Forever' in 1947 for this cartel founded at Kimberley, South Africa", "response": "De Beers", "value": 1600 },
+    { "clue": "An umbrella-toting girl debuted alongside 'When It Rains It Pours' on this brand's blue canister in 1914", "response": "Morton Salt", "value": 2000 }
+  ] },
+  { "name": "PITCH PERFECT", "clues": [
+    { "clue": "A peanut butter-mouthed history buff muffs an 'Aaron Burr' radio quiz in the 1993 ad that launched this dairy campaign", "response": "Got Milk?", "value": 400 },
+    { "clue": "In 1984 ads for Wendy's, octogenarian Clara Peller glared at an oversized bun and barked this 3-word question", "response": "Where's the beef?", "value": 800 },
+    { "clue": "'Plop, plop, fizz, fizz' preceded 'oh, what a relief it is' in jingles for this effervescent tablet", "response": "Alka-Seltzer", "value": 1200 },
+    { "clue": "This Swedish vodka's minimalist print ads began with a halo over the bottle and a two-word caption ending in 'Perfection'", "response": "Absolut", "value": 1600 },
+    { "clue": "DDB's self-deprecating 'Think Small' ads of 1959 made an unlikely U.S. hit of this German automaker's Beetle", "response": "Volkswagen", "value": 2000 }
+  ] },
+  { "name": "CURB YOUR APPETITE", "clues": [
+    { "clue": "From Madrid to Mexico City, these ridged batons of fried dough are dunked in thick hot chocolate", "response": "churros", "value": 400 },
+    { "clue": "Egyptians favor fava beans over chickpeas in their take on these deep-fried fritters tucked into pita", "response": "falafel", "value": 800 },
+    { "clue": "This Berlin street staple, invented by Herta Heuwer in 1949, smothers sliced sausage in ketchup spiked with its namesake spice", "response": "currywurst", "value": 1200 },
+    { "clue": "Venezuelans split these griddled corn cakes to stuff with fillings like the avocado-chicken 'reina pepiada'", "response": "arepas", "value": 1600 },
+    { "clue": "Bahian women in white sell this Brazilian fritter of black-eyed peas fried in palm oil, a legacy of Yoruba cooking", "response": "acaraje", "value": 2000 }
+  ] },
+  { "name": "WOK THIS WAY", "clues": [
+    { "clue": "Chewy tapioca 'pearls' lurk at the bottom of this Taiwanese tea drink that swept the globe", "response": "bubble tea", "value": 400 },
+    { "clue": "Grilled on bamboo skewers & doused in peanut sauce, this Indonesian-born snack sizzles across Southeast Asia", "response": "satay", "value": 800 },
+    { "clue": "French colonial baguettes met pate & pickled daikon in this Vietnamese sandwich", "response": "banh mi", "value": 1200 },
+    { "clue": "Osaka vendors use picks to flip these griddled batter balls, each hiding a morsel of octopus", "response": "takoyaki", "value": 1600 },
+    { "clue": "Manila streetsellers hawk this boiled fertilized duck egg after dark, a rite of passage for daring eaters", "response": "balut", "value": 2000 }
+  ] }
+]

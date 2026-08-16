@@ -75,10 +75,11 @@ async function packInfo(round) {
   return { pack: pack === 'archive' ? 'archive' : pack, base: '', dir, total: m[dir] };
 }
 
-// ——— Cross-game repeat memory (per pack, persisted) ———
+// ——— Cross-game repeat memory (per pack + round, persisted) ———
 
 const PLAYED_KEY = 'jeopardy-played';
 const PLAYED_CAP = 3000; // archive safety valve — oldest entries fall off
+const RESET_KEEP = 18;   // when a pack cycles, the last few boards stay excluded
 
 function loadPlayed() {
   try {
@@ -88,29 +89,59 @@ function loadPlayed() {
   }
 }
 
-function playedSet(pack) {
-  return new Set(loadPlayed()[pack] || []);
-}
-
-function rememberPlayed(pack, names) {
+function savePlayed(all) {
   try {
-    const all = loadPlayed();
-    const list = (all[pack] || []).concat(names);
-    all[pack] = list.slice(Math.max(0, list.length - PLAYED_CAP));
     localStorage.setItem(PLAYED_KEY, JSON.stringify(all));
   } catch {
     // localStorage unavailable — repeats across sessions become possible, nothing worse
   }
 }
 
-function forgetPlayed(pack) {
-  try {
-    const all = loadPlayed();
+// Memory used to be keyed by pack alone, which let round 2 running dry wipe
+// round 1's memory too. Split any legacy per-pack list into per-round keys.
+let migrated = false;
+function migrateLegacyMemory() {
+  if (migrated) return;
+  migrated = true;
+  const all = loadPlayed();
+  let changed = false;
+  for (const pack of ['fresh', 'easy', 'archive']) {
+    const legacy = all[pack];
+    if (!Array.isArray(legacy)) continue;
+    for (const dir of ['jeopardy', 'double']) {
+      const key = `${pack}:${dir}`;
+      if (!all[key]) { all[key] = legacy; changed = true; }
+    }
     delete all[pack];
-    localStorage.setItem(PLAYED_KEY, JSON.stringify(all));
-  } catch {
-    // ignore
+    changed = true;
   }
+  if (changed) savePlayed(all);
+}
+
+function playedList(key) {
+  migrateLegacyMemory();
+  return loadPlayed()[key] || [];
+}
+
+function playedSet(key) {
+  return new Set(playedList(key));
+}
+
+function rememberPlayed(key, names) {
+  migrateLegacyMemory();
+  const all = loadPlayed();
+  const list = (all[key] || []).concat(names);
+  all[key] = list.slice(Math.max(0, list.length - PLAYED_CAP));
+  savePlayed(all);
+}
+
+/** Start a fresh cycle for this key, keeping only the most recent entries. */
+function resetPlayed(key, keep) {
+  migrateLegacyMemory();
+  const all = loadPlayed();
+  const list = all[key] || [];
+  all[key] = keep > 0 ? list.slice(Math.max(0, list.length - keep)) : [];
+  savePlayed(all);
 }
 
 /**
@@ -120,7 +151,11 @@ function forgetPlayed(pack) {
  */
 export async function loadRoundCategories(round, seen = new Set()) {
   const { pack, base, dir, total } = await packInfo(round);
-  const played = playedSet(pack);
+  const memKey = `${pack}:${dir}`;
+  const played = playedSet(memKey);
+  // A few category names exist in both rounds' pools — a name played in either
+  // round recently shouldn't reappear from the other round's pool.
+  const playedOther = playedSet(`${pack}:${dir === 'jeopardy' ? 'double' : 'jeopardy'}`);
 
   // Visit chunks in random order, pooling unplayed categories from several
   // chunks so a board never mirrors one chunk's little neighborhood.
@@ -131,7 +166,13 @@ export async function loadRoundCategories(round, seen = new Set()) {
   }
 
   const POOL_TARGET = 18;
-  const MAX_CHUNKS = Math.min(total, 6);
+  // Scan every chunk of an original pack before declaring it exhausted: a
+  // late-cycle board may have its last unplayed categories sitting in the one
+  // chunk a capped scan would skip, and stopping early resets the memory while
+  // fresh categories remain. The archive keeps a cap — it holds hundreds of
+  // chunks and can never truly run dry, since its memory cap (3000 names) is
+  // smaller than what 40 chunks already contain.
+  const MAX_CHUNKS = pack === 'archive' ? Math.min(total, 40) : total;
   const pool = [];
   const fallback = []; // playable but already played — used only if the pack runs dry
   // Always sample at least 3 chunks — archive chunks group clues from the same
@@ -141,16 +182,26 @@ export async function loadRoundCategories(round, seen = new Set()) {
     for (const cat of categories) {
       if (!categoryIsPlayable(cat) || seen.has(cat.name)) continue;
       if (played.has(cat.name)) fallback.push(cat);
-      else pool.push(cat);
+      else if (!playedOther.has(cat.name)) pool.push(cat);
     }
   }
 
-  // Pack cycled through? Wipe its memory and start a fresh cycle.
+  // Every chunk in reach scanned and still under a boardful of new categories:
+  // the pack has genuinely cycled. Start a new cycle, but keep the most recent
+  // boards excluded so nothing repeats back-to-back.
   if (pool.length < 6) {
-    forgetPlayed(pack);
+    const recent = new Set(playedList(memKey).slice(-RESET_KEEP));
+    resetPlayed(memKey, RESET_KEEP);
     for (const cat of fallback) {
       if (pool.length >= POOL_TARGET) break;
-      pool.push(cat);
+      if (!recent.has(cat.name)) pool.push(cat);
+    }
+    // Tiny-pack edge case: better a recent repeat than no board at all.
+    if (pool.length < 6) {
+      for (const cat of fallback) {
+        if (pool.length >= 6) break;
+        if (recent.has(cat.name)) pool.push(cat);
+      }
     }
   }
 
@@ -161,7 +212,7 @@ export async function loadRoundCategories(round, seen = new Set()) {
   }
   const chosen = pool.slice(0, 6);
   for (const cat of chosen) seen.add(cat.name);
-  rememberPlayed(pack, chosen.map(c => c.name));
+  rememberPlayed(memKey, chosen.map(c => c.name));
 
   return chosen.map(cat => ({
     name: clean(cat.name),
@@ -195,10 +246,12 @@ export async function loadFinalClue(seen = new Set()) {
     }
   }
 
-  // Every final in reach has been played — reset this pack's final memory.
-  forgetPlayed(playedKey);
+  // Every final in reach has been played — start a new cycle, still steering
+  // clear of the handful of finals played most recently.
+  const recent = new Set(playedList(playedKey).slice(-8));
+  resetPlayed(playedKey, 8);
   const clues = await loadChunk(base, dir, randomInt(total));
-  const playable = clues.filter(c => isPlayable(c) && !seen.has(c.name));
+  const playable = clues.filter(c => isPlayable(c) && !seen.has(c.name) && !recent.has(c.name));
   const pick = (playable.length ? playable : clues)[randomInt(playable.length ? playable.length : clues.length)];
   seen.add(pick.name);
   rememberPlayed(playedKey, [pick.name]);

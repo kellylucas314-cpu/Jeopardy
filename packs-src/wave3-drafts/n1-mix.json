@@ -1,0 +1,122 @@
+[
+  {
+    "name": "STROKE OF GENIUS",
+    "clues": [
+      { "clue": "A 1911 theft only added to the fame of Leonardo's mysteriously smiling Louvre portrait", "response": "the Mona Lisa", "value": 200 },
+      { "clue": "A cypress rises like a dark flame into the swirling sky of this 1889 van Gogh view from Saint-Remy", "response": "The Starry Night", "value": 400 },
+      { "clue": "Under a blood-red sky, a hairless figure clutches its cheeks on a bridge in Edvard Munch's 1893 shocker", "response": "The Scream", "value": 600 },
+      { "clue": "Grant Wood recruited his sister and his dentist to pose for the stern pitchfork pair in this 1930 painting", "response": "American Gothic", "value": 800 },
+      { "clue": "Velazquez painted himself at his easel beside the Infanta Margarita in this 1656 masterpiece of the Spanish court", "response": "Las Meninas", "value": 1000 }
+    ]
+  },
+  {
+    "name": "PALETTE CLEANSERS",
+    "clues": [
+      { "clue": "This Renaissance man spent about four years frescoing the Sistine Chapel ceiling for Pope Julius II", "response": "Michelangelo", "value": 200 },
+      { "clue": "The waxed mustache of this Spanish surrealist pointed skyward; his painted clocks famously drooped", "response": "Salvador Dali", "value": 400 },
+      { "clue": "Injuries from a bus crash led this Mexican artist to paint from her bed; she wed muralist Diego Rivera twice", "response": "Frida Kahlo", "value": 600 },
+      { "clue": "Critics dubbed this abstract expressionist 'Jack the Dripper' for canvases he splattered on the floor", "response": "Jackson Pollock", "value": 800 },
+      { "clue": "Judith beheading Holofernes was a signature scene for this Italian Baroque painter, a rare woman follower of Caravaggio", "response": "Artemisia Gentileschi", "value": 1000 }
+    ]
+  },
+  {
+    "name": "MYTH DEMEANORS",
+    "clues": [
+      { "clue": "This king of the Greek gods ruled from Mount Olympus and hurled thunderbolts when crossed", "response": "Zeus", "value": 200 },
+      { "clue": "Greek sailors prayed to this trident-carrying god of the sea, who was also blamed for earthquakes", "response": "Poseidon", "value": 400 },
+      { "clue": "Born of sea foam near Cyprus, this goddess of love won the golden apple in the Judgment of Paris", "response": "Aphrodite", "value": 600 },
+      { "clue": "This lame blacksmith god forged wonders for Olympus at his fiery forge; the Romans called him Vulcan", "response": "Hephaestus", "value": 800 },
+      { "clue": "Pregnant by Zeus and hounded by Hera, this Titaness finally bore Apollo and Artemis on the isle of Delos", "response": "Leto", "value": 1000 }
+    ]
+  },
+  {
+    "name": "HERO WORSHIP",
+    "clues": [
+      { "clue": "Strangling the Nemean lion was the first of this Greek strongman's 12 labors", "response": "Hercules", "value": 200 },
+      { "clue": "A dip in the River Styx left this warrior of the 'Iliad' invulnerable everywhere but his heel", "response": "Achilles", "value": 400 },
+      { "clue": "Watching Medusa's reflection in a polished shield, this hero swung his blade and took her head", "response": "Perseus", "value": 600 },
+      { "clue": "This captain of the Argo sowed dragon's teeth and yoked bronze-hoofed bulls to win the Golden Fleece", "response": "Jason", "value": 800 },
+      { "clue": "Astride the winged horse Pegasus, this hero slew the fire-breathing Chimera", "response": "Bellerophon", "value": 1000 }
+    ]
+  },
+  {
+    "name": "COMMANDER IN BRIEF",
+    "clues": [
+      { "clue": "Both the quarter and the one-dollar bill carry the face of this first president", "response": "George Washington", "value": 200 },
+      { "clue": "A 1902 hunting trip on which he refused to shoot a captive bear gave the teddy bear this president's name", "response": "Theodore Roosevelt", "value": 400 },
+      { "clue": "The only 19th century president to serve nonconsecutive terms, he's counted as both the 22nd and 24th", "response": "Grover Cleveland", "value": 600 },
+      { "clue": "This Manifest Destiny president settled the Oregon boundary at the 49th parallel and won the Mexican-American War", "response": "James K. Polk", "value": 800 },
+      { "clue": "Elevated by Zachary Taylor's death, he signed the Compromise of 1850 as the last Whig president", "response": "Millard Fillmore", "value": 1000 }
+    ]
+  },
+  {
+    "name": "POTUS OPERANDI",
+    "clues": [
+      { "clue": "This 16th president stored papers in his famous stovepipe hat and stood a lanky 6-foot-4", "response": "Abraham Lincoln", "value": 200 },
+      { "clue": "His self-written epitaph cites the Declaration of Independence and the University of Virginia, not his presidency", "response": "Thomas Jefferson", "value": 400 },
+      { "clue": "'The Buck Stops Here' sat on the White House desk of this former Missouri haberdasher", "response": "Harry Truman", "value": 600 },
+      { "clue": "This 27th president got his true dream job in 1921: chief justice of the United States", "response": "William Howard Taft", "value": 800 },
+      { "clue": "Harding's death found this vice president in Vermont, where his notary father administered the oath by lamplight", "response": "Calvin Coolidge", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE CAT'S MEOW",
+    "clues": [
+      { "clue": "Garfield, Jim Davis' fat comic-strip cat, would do just about anything for this layered Italian pasta dish", "response": "lasagna", "value": 200 },
+      { "clue": "This blue-eyed colorpoint breed takes its name from the old kingdom now known as Thailand", "response": "Siamese", "value": 400 },
+      { "clue": "Folklore says Noah slammed the Ark's door on the tail of this naturally tailless breed from an Irish Sea isle", "response": "Manx", "value": 600 },
+      { "clue": "Egyptians mummified cats by the thousand at Bubastis, cult city of this feline-headed goddess", "response": "Bastet", "value": 800 },
+      { "clue": "A cat's whiskers go by this scientific name, from the Latin for 'to quiver'", "response": "vibrissae", "value": 1000 }
+    ]
+  },
+  {
+    "name": "PUP QUIZ",
+    "clues": [
+      { "clue": "Cruella de Vil coveted the spotted coats of this breed, named for a coastal region of Croatia", "response": "Dalmatian", "value": 200 },
+      { "clue": "The smallest of all dog breeds shares its name with Mexico's largest state", "response": "Chihuahua", "value": 400 },
+      { "clue": "Togo and Balto, canine heroes of the 1925 serum run to Nome, belonged to this Arctic sled-dog breed", "response": "Siberian husky", "value": 600 },
+      { "clue": "Known as the 'barkless dog,' this central African hunting breed yodels instead of woofing", "response": "basenji", "value": 800 },
+      { "clue": "In November 1957 this Moscow stray rode Sputnik 2 into orbit, the first animal to circle the Earth", "response": "Laika", "value": 1000 }
+    ]
+  },
+  {
+    "name": "FAITH ACCOMPLI",
+    "clues": [
+      { "clue": "Daily fasting from dawn to sunset marks this Islamic holy month", "response": "Ramadan", "value": 200 },
+      { "clue": "The menorah of this eight-night Jewish festival recalls one day's oil lasting eight in the rededicated Temple", "response": "Hanukkah", "value": 400 },
+      { "clue": "Enlightenment under a bodhi tree earned Siddhartha Gautama this title meaning 'awakened one'", "response": "the Buddha", "value": 600 },
+      { "clue": "Founded by Guru Nanak in Punjab, this faith reveres a scripture called the Guru Granth Sahib", "response": "Sikhism", "value": 800 },
+      { "clue": "Zarathustra founded this ancient Persian religion whose supreme deity is Ahura Mazda", "response": "Zoroastrianism", "value": 1000 }
+    ]
+  },
+  {
+    "name": "PROPHET MARGINS",
+    "clues": [
+      { "clue": "This prophet led the Exodus from Egypt and came down Mount Sinai with the Ten Commandments", "response": "Moses", "value": 200 },
+      { "clue": "Fleeing a mission to Nineveh, this reluctant prophet spent three days inside a great fish", "response": "Jonah", "value": 400 },
+      { "clue": "Islam teaches that the angel Gabriel first revealed the Quran to this prophet in a cave near Mecca", "response": "Muhammad", "value": 600 },
+      { "clue": "This interpreter of Nebuchadnezzar's dreams later survived a night in the lions' den", "response": "Daniel", "value": 800 },
+      { "clue": "After besting Baal's prophets on Mount Carmel, this prophet departed in a whirlwind with a chariot of fire", "response": "Elijah", "value": 1000 }
+    ]
+  },
+  {
+    "name": "PARTY ANIMALS",
+    "clues": [
+      { "clue": "Cartoonist Thomas Nast helped make this thick-skinned beast the Republican Party's mascot", "response": "the elephant", "value": 200 },
+      { "clue": "Since 1782 this raptor has clutched arrows and an olive branch on the Great Seal of the United States", "response": "the bald eagle", "value": 400 },
+      { "clue": "Andrew Jackson's foes called him a 'jackass,' helping saddle the Democrats with this mascot", "response": "the donkey", "value": 600 },
+      { "clue": "Winston Churchill's wartime nickname paired 'British' with this tenacious, jowly breed", "response": "the bulldog", "value": 800 },
+      { "clue": "A Latin pun — 'gallus' meant both a Gaul and this bird — gave France its crowing unofficial symbol", "response": "the rooster", "value": 1000 }
+    ]
+  },
+  {
+    "name": "GODS OF COMMERCE",
+    "clues": [
+      { "clue": "The Greek goddess of victory lends her name to this swoosh-branded sportswear giant", "response": "Nike", "value": 200 },
+      { "clue": "Jeff Bezos named his online bookseller for a South American river, itself named for mythical warrior women", "response": "Amazon", "value": 400 },
+      { "clue": "This foaming cleanser brand takes its name from a Greek warrior at Troy, second in might only to Achilles", "response": "Ajax", "value": 600 },
+      { "clue": "In myth she loosed the world's evils from a jar; in the mall she's a charm-bracelet jewelry brand", "response": "Pandora", "value": 800 },
+      { "clue": "Gianni founded this Milan fashion house whose golden emblem is the Gorgon Medusa's head", "response": "Versace", "value": 1000 }
+    ]
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "FORMULA WON",
+    "clues": [
+      {
+        "clue": "In 2020 this British driver equaled Michael Schumacher's tally of seven Formula 1 world championships",
+        "response": "Lewis Hamilton",
+        "value": 200
+      },
+      {
+        "clue": "This Brazilian icon won all three of his F1 titles with McLaren before a fatal crash at Imola in 1994",
+        "response": "Ayrton Senna",
+        "value": 400
+      },
+      {
+        "clue": "The 2013 film 'Rush' dramatized this British playboy's 1976 championship duel with Niki Lauda",
+        "response": "James Hunt",
+        "value": 600
+      },
+      {
+        "clue": "Nicknamed 'The Professor' for his calculating style, this Frenchman took four world titles",
+        "response": "Alain Prost",
+        "value": 800
+      },
+      {
+        "clue": "This Argentine 'maestro' of the 1950s won five world championships with four different teams",
+        "response": "Juan Manuel Fangio",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "CIRCUIT TRAINING",
+    "clues": [
+      {
+        "clue": "F1's most glamorous race threads the harborside streets of this tiny Mediterranean principality",
+        "response": "Monaco",
+        "value": 200
+      },
+      {
+        "clue": "Ferrari's tifosi pack this Italian 'Temple of Speed' near Milan for their home Grand Prix",
+        "response": "Monza",
+        "value": 400
+      },
+      {
+        "clue": "Spa-Francorchamps and its fearsome Eau Rouge corner sit in the Ardennes forest of this country",
+        "response": "Belgium",
+        "value": 600
+      },
+      {
+        "clue": "The first-ever world championship Grand Prix was run in 1950 at this British circuit, a former RAF airfield",
+        "response": "Silverstone",
+        "value": 800
+      },
+      {
+        "clue": "Honda built this Japanese circuit whose rare figure-8 layout crosses over itself",
+        "response": "Suzuka",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "HEELS OF FORTUNE",
+    "clues": [
+      {
+        "clue": "This Bulls legend first shone as a UNC freshman, sinking the winning jumper in the 1982 NCAA title game",
+        "response": "Michael Jordan",
+        "value": 200
+      },
+      {
+        "clue": "This coach's 879 wins over 36 seasons in Chapel Hill included national championships in 1982 and 1993",
+        "response": "Dean Smith",
+        "value": 400
+      },
+      {
+        "clue": "This coach came home from Kansas in 2003 and led the Tar Heels to NCAA titles in 2005, 2009 and 2017",
+        "response": "Roy Williams",
+        "value": 600
+      },
+      {
+        "clue": "The top overall pick of the 1982 NBA draft, this Gastonia-born forward starred in UNC's title-game win over Georgetown",
+        "response": "James Worthy",
+        "value": 800
+      },
+      {
+        "clue": "To cap a perfect 32-0 season in 1957, UNC beat this Kansas center's team in a triple-overtime national final",
+        "response": "Wilt Chamberlain",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "CAROLINA ON MY MIND",
+    "clues": [
+      {
+        "clue": "North Carolina's 'First in Flight' license plates honor this pair of bicycle mechanics for a 1903 feat at Kitty Hawk",
+        "response": "the Wright brothers",
+        "value": 200
+      },
+      {
+        "clue": "UNC's fiercest rivalry is with this private university a few miles down the road in Durham",
+        "response": "Duke",
+        "value": 400
+      },
+      {
+        "clue": "On the first day of classes, UNC students sip from this small domed landmark hoping for a 4.0",
+        "response": "the Old Well",
+        "value": 600
+      },
+      {
+        "clue": "This 'Fire and Rain' singer raised in Chapel Hill gave Tar Heels an anthem with 'Carolina in My Mind'",
+        "response": "James Taylor",
+        "value": 800
+      },
+      {
+        "clue": "Vernon Rudolph fired up his first doughnut shop in Winston-Salem in 1937, the start of this hot-glazed empire",
+        "response": "Krispy Kreme",
+        "value": 1000
+      }
+    ]
+  }
+]

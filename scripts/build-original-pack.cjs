@@ -123,6 +123,21 @@ const r1 = shuffle(loadRound(cfg.r1, ROUND1_VALUES));
 const r2 = shuffle(loadRound(cfg.r2, ROUND2_VALUES));
 const finals = shuffle(loadFinals(cfg.finals));
 
+// A category name must be unique across the whole pack — the game's repeat
+// memory tracks names, and a name living in two pools plays as a "repeat".
+const r1Names = new Set(r1.map(c => c.name.toUpperCase()));
+const r2Deduped = r2.filter(c => {
+  if (r1Names.has(c.name.toUpperCase())) { problems.push(`cross-round duplicate "${c.name}" dropped from round 2`); return false; }
+  return true;
+});
+r2.length = 0; r2.push(...r2Deduped);
+const boardNames = new Set([...r1, ...r2].map(c => c.name.toUpperCase()));
+const finalsDeduped = finals.filter(c => {
+  if (boardNames.has(c.name.toUpperCase())) { problems.push(`final "${c.name}" shares a board category's name — dropped`); return false; }
+  return true;
+});
+finals.length = 0; finals.push(...finalsDeduped);
+
 const counts = {
   jeopardy: writeChunks('jeopardy', r1, CHUNK_SIZE),
   double: writeChunks('double', r2, CHUNK_SIZE),
