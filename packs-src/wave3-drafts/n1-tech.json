@@ -63,8 +63,8 @@
   "name": ".COM AND GET IT",
   "clues": [
    {
-    "clue": "Its founders misspelled 'googol', the number 10 to the 100th power, when naming this search engine",
-    "response": "Google",
+    "clue": "Founded by ex-PayPal employees in 2005, this video site's first upload showed a co-founder at the San Diego Zoo",
+    "response": "YouTube",
     "value": 200
    },
    {
@@ -123,8 +123,8 @@
   "name": "HANDHELD HISTORY",
   "clues": [
    {
-    "clue": "Unveiled in 2007, this Apple device was billed as 'an iPod, a phone and an internet communicator' in one",
-    "response": "the iPhone",
+    "clue": "Pokémon Red and Blue first hit America in 1998 on this monochrome Nintendo portable",
+    "response": "the Game Boy",
     "value": 200
    },
    {
@@ -133,18 +133,18 @@
     "value": 400
    },
    {
-    "clue": "Edwin Land's company wowed 1948 shoppers with a camera that developed its own photos in about a minute",
-    "response": "Polaroid",
+    "clue": "Research In Motion's fruit-named handheld with a clicky thumb keyboard once ruled Wall Street",
+    "response": "the BlackBerry",
     "value": 600
    },
    {
-    "clue": "Research In Motion's fruit-named handheld with a clicky thumb keyboard once ruled Wall Street",
-    "response": "the BlackBerry",
+    "clue": "Edwin Land's company wowed 1948 shoppers with a camera that developed its own photos in about a minute",
+    "response": "Polaroid",
     "value": 800
    },
    {
-    "clue": "Code-named 'Ginger', Dean Kamen's self-balancing scooter got a massively hyped reveal in 2001",
-    "response": "the Segway",
+    "clue": "Graffiti, its single-stroke handwriting alphabet, let users scribble memos on this 1996 stylus-driven pocket organizer",
+    "response": "the PalmPilot",
     "value": 1000
    }
   ]

@@ -33,9 +33,9 @@
     "name": "OOPS, ALL INVENTIONS",
     "clues": [
       { "clue": "A 3M glue too weak to stick permanently found its calling on these repositionable yellow office squares", "response": "Post-it Notes", "value": 200 },
-      { "clue": "A chocolate bar melting near a radar magnetron tipped off Raytheon's Percy Spencer, leading to this rapid-cooking appliance", "response": "the microwave oven", "value": 400 },
-      { "clue": "Naval engineer Richard James watched a spring tumble off a shelf and 'walk,' inspiring this stair-descending toy", "response": "the Slinky", "value": 600 },
-      { "clue": "Sold in the 1930s as Kutol brand wallpaper cleaner, this squishy stuff was reborn in the '50s as a classroom modeling compound", "response": "Play-Doh", "value": 800 },
+      { "clue": "In 1905, 11-year-old Frank Epperson left soda powder, water and a stirring stick out on a cold night — this frozen treat was born", "response": "the Popsicle", "value": 400 },
+      { "clue": "In 1938 DuPont chemist Roy Plunkett cut open a failed refrigerant canister and found a waxy, slippery solid: this nonstick coating", "response": "Teflon", "value": 600 },
+      { "clue": "Deemed too sticky for the WWII gun sights Harry Coover was developing, cyanoacrylate hit stores in 1958 as this mend-anything adhesive", "response": "Super Glue", "value": 800 },
       { "clue": "William Cubitt devised a man-powered wheel in 1818 to keep English convicts toiling; it evolved into this gym cardio machine", "response": "the treadmill", "value": 1000 }
     ]
   },

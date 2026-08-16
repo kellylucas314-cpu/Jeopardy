@@ -42,7 +42,7 @@
   {
     "name": "A REALLY BIG SHOW",
     "clues": [
-      { "clue": "This stone-faced Sunday-night host introduced America to Elvis and the Beatles.", "response": "Ed Sullivan", "value": 400 },
+      { "clue": "Elvis and the Beatles drew record audiences on this stone-faced host's Sunday-night show.", "response": "Ed Sullivan", "value": 400 },
       { "clue": "This redheaded funny lady ended her variety hour by tugging her ear.", "response": "Carol Burnett", "value": 800 },
       { "clue": "Clem Kadiddlehopper and Freddie the Freeloader sprang from this gentle TV clown.", "response": "Red Skelton", "value": 1200 },
       { "clue": "This songbird sang 'See the U.S.A. in Your Chevrolet' and blew a goodnight kiss.", "response": "Dinah Shore", "value": 1600 },

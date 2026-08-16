@@ -1,0 +1,44 @@
+[
+  { "name": "PILGRIMS' PROGRESS", "clues": [
+    { "clue": "During the Hajj, millions of Muslim pilgrims circle the Kaaba in this Saudi city", "response": "Mecca", "value": 400 },
+    { "clue": "Chaucer's tale-telling pilgrims head for the shrine of Thomas Becket in this English cathedral city", "response": "Canterbury", "value": 800 },
+    { "clue": "Scallop-shell waymarks guide walkers across northern Spain on this route to a shrine of St. James", "response": "the Camino de Santiago", "value": 1200 },
+    { "clue": "This Jerusalem processional route, whose Latin name means 'sorrowful way,' traces Jesus' path to Calvary", "response": "the Via Dolorosa", "value": 1600 },
+    { "clue": "White-clad 'henro' pilgrims circle 88 Buddhist temples on this smallest of Japan's four main islands", "response": "Shikoku", "value": 2000 }
+  ] },
+  { "name": "FIESTA RESISTANCE", "clues": [
+    { "clue": "Samba schools parade through the Sambadrome during this Brazilian city's massive pre-Lenten Carnival", "response": "Rio de Janeiro", "value": 400 },
+    { "clue": "Despite its name, most of this Munich beer bash actually takes place in September", "response": "Oktoberfest", "value": 800 },
+    { "clue": "Hindus welcome spring by showering one another with vividly colored powders during this festival", "response": "Holi", "value": 1200 },
+    { "clue": "Thailand celebrates its traditional New Year each April with this festival's epic nationwide water fights", "response": "Songkran", "value": 1600 },
+    { "clue": "Torch-bearing 'guizers' burn a Viking longship at this January fire festival in Scotland's Shetland Islands", "response": "Up Helly Aa", "value": 2000 }
+  ] },
+  { "name": "LINER NOTES", "clues": [
+    { "clue": "A German U-boat's torpedo sank this British liner off Ireland in May 1915, pushing U.S. opinion toward war", "response": "the Lusitania", "value": 400 },
+    { "clue": "Named for George V's consort, this retired Cunard superliner has been moored at Long Beach, California since 1967", "response": "the Queen Mary", "value": 800 },
+    { "clue": "This Italian liner named for a Genoese admiral sank after colliding with the MS Stockholm in 1956", "response": "the Andrea Doria", "value": 1200 },
+    { "clue": "France's Art Deco flagship of 1935 caught fire & capsized at a Manhattan pier during troopship conversion", "response": "the Normandie", "value": 1600 },
+    { "clue": "A passenger flop, Isambard Kingdom Brunel's 1858 leviathan found glory laying the first lasting transatlantic cable", "response": "the Great Eastern", "value": 2000 }
+  ] },
+  { "name": "THE JET SET", "clues": [
+    { "clue": "This delta-winged Anglo-French airliner crossed the Atlantic at twice the speed of sound until 2003", "response": "the Concorde", "value": 400 },
+    { "clue": "The age of airship travel ended when this German passenger zeppelin burned at Lakehurst, New Jersey in 1937", "response": "the Hindenburg", "value": 800 },
+    { "clue": "A hump housing an upstairs lounge gave this original Boeing 'jumbo jet' of 1970 its distinctive profile", "response": "the 747", "value": 1200 },
+    { "clue": "In 1947 this test pilot broke the sound barrier flying the Bell X-1 he named 'Glamorous Glennis'", "response": "Chuck Yeager", "value": 1600 },
+    { "clue": "Metal fatigue doomed early models of this pioneering de Havilland craft of 1952, the world's first jet airliner", "response": "the Comet", "value": 2000 }
+  ] },
+  { "name": "A ROOM WITH A VIEW", "clues": [
+    { "clue": "This 'Pink Palace' on Sunset Boulevard glows at dusk on the cover of the Eagles' 'Hotel California'", "response": "the Beverly Hills Hotel", "value": 400 },
+    { "clue": "Dylan Thomas fell fatally ill while staying at this bohemian West 23rd Street landmark; Sid Vicious was arrested there in 1978", "response": "the Chelsea Hotel", "value": 800 },
+    { "clue": "The Canadian Pacific Railway built this baronial 'Castle of the Rockies' in Canada's oldest national park", "response": "the Banff Springs Hotel", "value": 1200 },
+    { "clue": "A 660-foot porch, billed as the world's longest, fronts this aptly named 1887 resort on Michigan's Mackinac Island", "response": "the Grand Hotel", "value": 1600 },
+    { "clue": "Agatha Christie set early scenes of 'Death on the Nile' at this Aswan grande dame named for the river's rocky rapids", "response": "the Old Cataract", "value": 2000 }
+  ] },
+  { "name": "ROUTE AWAKENING", "clues": [
+    { "clue": "Kraftwerk's 1974 electronic epic saluted this German expressway network, parts of which have no speed limit", "response": "the Autobahn", "value": 400 },
+    { "clue": "Camel caravans carried China's coveted fabric westward on this ancient trade network through Samarkand", "response": "the Silk Road", "value": 800 },
+    { "clue": "Only the roadless Darién Gap interrupts this hemisphere-spanning route from Alaska to southern South America", "response": "the Pan-American Highway", "value": 1200 },
+    { "clue": "Returned WWI servicemen carved this coastal drive past the Twelve Apostles sea stacks in Victoria, Australia", "response": "the Great Ocean Road", "value": 1600 },
+    { "clue": "Nicknamed the KKH, this high mountain route between Pakistan & China tops out near 15,400 feet at the Khunjerab Pass", "response": "the Karakoram Highway", "value": 2000 }
+  ] }
+]

@@ -1,0 +1,44 @@
+[
+  { "name": "TRAINING DAY", "clues": [
+    { "clue": "A scarlet steam engine leaves King's Cross platform 9¾ carrying young wizards aboard this train", "response": "the Hogwarts Express", "value": 200 },
+    { "clue": "Hercule Poirot solves a snowbound murder aboard this luxury train that once linked Paris & Istanbul", "response": "the Orient Express", "value": 400 },
+    { "clue": "The world's longest rail line stretches some 5,700 miles between Moscow & Vladivostok", "response": "the Trans-Siberian Railway", "value": 600 },
+    { "clue": "Meaning 'new trunk line,' this Japanese high-speed rail service debuted just before the 1964 Tokyo Olympics", "response": "the Shinkansen", "value": 800 },
+    { "clue": "Named for Afghan cameleers who once plied the Outback, this train runs between Adelaide & Darwin", "response": "the Ghan", "value": 1000 }
+  ] },
+  { "name": "CRUISE CONTROL", "clues": [
+    { "clue": "Cozumel, Nassau & St. Thomas are favorite ports of call on cruises of this sea", "response": "the Caribbean", "value": 200 },
+    { "clue": "In this classic deck game, cruise passengers use long cues to slide discs onto a numbered scoring triangle", "response": "shuffleboard", "value": 400 },
+    { "clue": "Captain Stubing welcomed guests aboard the Pacific Princess on this 1977-86 ABC series of shipboard romances", "response": "The Love Boat", "value": 600 },
+    { "clue": "Samuel, a Nova Scotia-born magnate, founded this British line famed for its 'Queen' ocean liners", "response": "Cunard", "value": 800 },
+    { "clue": "A cruise ship's pool deck often bears this name, borrowed from a beach resort island of Venice", "response": "the Lido", "value": 1000 }
+  ] },
+  { "name": "SUITE DREAMS", "clues": [
+    { "clue": "Kay Thompson's mischievous 6-year-old Eloise lives at this hotel at the corner of New York's Central Park", "response": "the Plaza", "value": 200 },
+    { "clue": "Oscar the maître d' mixed apples, celery & mayonnaise into the namesake salad of this New York hotel", "response": "the Waldorf-Astoria", "value": 400 },
+    { "clue": "This Swiss hotelier's opulent 1898 Place Vendôme palace made his surname a byword for fancy", "response": "(César) Ritz", "value": 600 },
+    { "clue": "The gin-based Singapore Sling was invented at this grand hotel named for Singapore's British founder", "response": "Raffles", "value": 800 },
+    { "clue": "Impresario Richard D'Oyly Carte used Gilbert & Sullivan profits to open this London hotel on the Strand in 1889", "response": "the Savoy", "value": 1000 }
+  ] },
+  { "name": "TERMINAL VELOCITY", "clues": [
+    { "clue": "The code ORD recalls the old Orchard Field name of this Chicago airport", "response": "O'Hare", "value": 200 },
+    { "clue": "Paris' main international airport honors this general who led the Free French in World War II", "response": "Charles de Gaulle", "value": 400 },
+    { "clue": "Fiorello, a New York mayor, gave his name to this airport that opened on Flushing Bay in 1939", "response": "LaGuardia", "value": 600 },
+    { "clue": "This vast airport west of London is named for a hamlet leveled during its 1940s construction", "response": "Heathrow", "value": 800 },
+    { "clue": "Lying below sea level on a drained lake bed, this Amsterdam hub may owe its name to a term for 'ship grave'", "response": "Schiphol", "value": 1000 }
+  ] },
+  { "name": "ROAD SCHOLARS", "clues": [
+    { "clue": "Steinbeck dubbed it 'the Mother Road'; this historic highway linked Chicago & Santa Monica", "response": "Route 66", "value": 200 },
+    { "clue": "The Bixby Creek Bridge & the cliffs of Big Sur star on this scenic drive along California's State Route 1", "response": "the Pacific Coast Highway", "value": 400 },
+    { "clue": "Called 'America's Favorite Drive,' this 469-mile route links Shenandoah & Great Smoky Mountains national parks", "response": "the Blue Ridge Parkway", "value": 600 },
+    { "clue": "U.S. 1 takes this grand name as it crosses 42 bridges through the Florida Keys to Key West", "response": "the Overseas Highway", "value": 800 },
+    { "clue": "This poetically named drive crests Logan Pass on its way across Montana's Glacier National Park", "response": "Going-to-the-Sun Road", "value": 1000 }
+  ] },
+  { "name": "WANDERLUST & FOUND", "clues": [
+    { "clue": "From the French for 'to remember,' it's the keepsake you bring home from a trip", "response": "a souvenir", "value": 200 },
+    { "clue": "Fly across a few time zones & this drowsy 2-word condition sets in until your body clock catches up", "response": "jet lag", "value": 400 },
+    { "clue": "Budget travelers bunk in shared dorms at this type of lodging; the first 'youth' one opened in Germany", "response": "a hostel", "value": 600 },
+    { "clue": "Airport boutiques carry this hyphenated designation because their perfume & liquor skip import taxes", "response": "duty-free", "value": 800 },
+    { "clue": "Karl, a 19th century German publisher, made his surname a synonym for a trusty travel guidebook", "response": "a Baedeker", "value": 1000 }
+  ] }
+]

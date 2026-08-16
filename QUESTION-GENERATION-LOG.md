@@ -61,3 +61,21 @@ Accepted running total: **120 clues** of the 2,000 target.
   decades+tech, weird+fan.
 
 Accepted running total: **870 clues** (168 categories + 30 finals) of the 2,000 target.
+
+## 2026-08-16 ~13:00 UTC — Full corpus graded, interim compile verified
+
+- **Grading complete for all 42 original wave files: 356 categories + 42 finals =
+  1,822 accepted clues. 32 clue-level revisions by graders; zero categories rejected.**
+  Notable grader catches: cross-file duplicate facts (Fleming's mold ×3, Percy Spencer,
+  Play-Doh, YouTube's first video), answer leaks the checker can't see (Pad Thai→Thailand,
+  sombra→sombrero), a two-answer ambiguity (lilac vs lavender), and a factual
+  overstatement (Sullivan "introduced" Elvis).
+- **Interim compile + full verification suite passed**: builder output Fresh 763 board
+  categories + 116 finals, Easy 227 + 50; 100-game no-repeat simulation clean (Fresh now
+  cycles after ~62 games, was ~38 pre-wave, ~17 with the old bug); `npm run build` green;
+  Playwright smoke test green on both packs (setup → board → 6 unique categories →
+  per-round memory keys → clue screen).
+- **Top-up batch in flight** to cross the 2,000 target: famous-people (written, grading),
+  money & business (written, grading), travel (writing). Easy century pair still grading.
+
+Accepted running total: **1,822 clues** of the 2,000 target.

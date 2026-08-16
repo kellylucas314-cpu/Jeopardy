@@ -1,0 +1,8 @@
+[
+  { "name": "BINARY STARS", "score": 49, "verdict": "accepted", "notes": "Lovelace, Hopper, Engelbart's wooden mouse, Shannon 1948, von Neumann EDVAC 1945 — all correct; perfect pun and ladder." },
+  { "name": "HELLO, WORLD!", "score": 48, "verdict": "accepted", "notes": "Oak-to-Java 1995, van Rossum/Monty Python, Dartmouth 1964, Backus FORTRAN, McCarthy LISP 1958 all verified-solid." },
+  { "name": "CARTRIDGE FAMILY", "score": 48, "verdict": "accepted", "notes": "Hanafuda 1889, PlayStation-from-jilted-partnership, 9/9/99 Dreamcast, Spacewar! on PDP-1 correct; coin-shortage story properly hedged as 'legend'." },
+  { "name": "ARPANET & CHILL", "score": 48, "verdict": "accepted", "notes": "Tomlinson @, 'vague but exciting', UCLA 'LO' crash 1969, Cerf/Kahn TCP-IP, Baran & Davies packet switching — airtight." },
+  { "name": "GROUND CONTROL TO MAJOR TECH", "score": 47, "verdict": "accepted", "notes": "Hubble 1993 fix, Telstar 1962 + instrumental, Sojourner/Pathfinder 1997 all correct; Velcro earns its spot via the debunked-NASA-myth angle." },
+  { "name": "BE KIND, REWIND", "score": 47, "verdict": "accepted", "notes": "VHS/Betamax, Bill Lear 8-track, D-50 1984 Discman, LaserDisc side flip, Victrola 1906 — all check; solid climb to a fun $2000." }
+]

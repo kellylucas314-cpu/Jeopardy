@@ -22,7 +22,7 @@
   {
     "name": "ODD DUCKS",
     "clues": [
-      { "clue": "Duck-billed and egg-laying, this Australian monotreme has another surprise: males wield venomous spurs on their hind legs", "response": "the platypus", "value": 400 },
+      { "clue": "The spiral 'unicorn horn' on this Arctic whale is actually a single overgrown tooth that can top nine feet", "response": "a narwhal", "value": 400 },
       { "clue": "Also known as the water bear or moss piglet, this eight-legged micro-animal has survived direct exposure to outer space", "response": "a tardigrade", "value": 800 },
       { "clue": "Able to revert from adult back to juvenile polyp, tiny Turritopsis dohrnii is called the 'immortal' one of these stinging drifters", "response": "a jellyfish", "value": 1200 },
       { "clue": "This Lake Xochimilco salamander keeps its feathery larval gills for life and can regrow limbs, tail, even bits of heart and brain", "response": "an axolotl", "value": 1600 },
@@ -52,8 +52,8 @@
   {
     "name": "RECORD SCRATCH",
     "clues": [
-      { "clue": "'Me at the Zoo,' a 2005 clip of cofounder Jawed Karim in front of elephants, was the first video ever uploaded to this site", "response": "YouTube", "value": 400 },
-      { "clue": "The first item auctioned on eBay in 1995 was a broken one of these red-beam gadgets — bought by a collector of broken ones", "response": "a laser pointer", "value": 800 },
+      { "clue": "Sent by an engineer to a Vodafone executive in December 1992, the very first text message read simply this two-word greeting", "response": "Merry Christmas", "value": 400 },
+      { "clue": "Al Jolson ad-libbed 'You ain't heard nothin' yet!' in this 1927 film, the first feature with synchronized spoken dialogue", "response": "The Jazz Singer", "value": 800 },
       { "clue": "The first retail product ever scanned by UPC barcode, at an Ohio supermarket in 1974, was a pack of this Wrigley's gum", "response": "Juicy Fruit", "value": 1200 },
       { "clue": "The first woman elected to Congress, this Montana pacifist voted against U.S. entry into both world wars", "response": "Jeannette Rankin", "value": 1600 },
       { "clue": "His namesake comet smacked into Jupiter in 1994; in 1999 a capsule of his ashes rode a NASA probe into the Moon, a funerary first", "response": "Eugene Shoemaker", "value": 2000 }

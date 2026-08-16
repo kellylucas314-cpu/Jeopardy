@@ -32,7 +32,7 @@
   {
     "name": "UP IN ARMS",
     "clues": [
-      { "clue": "In 1773 colonists disguised as Mohawks dumped 342 chests of East India Company cargo into a harbor", "response": "the Boston Tea Party", "value": 400 },
+      { "clue": "Colonists disguised as Mohawks dumped 342 chests of East India Company cargo into the harbor in this 1773 protest", "response": "the Boston Tea Party", "value": 400 },
       { "clue": "George Washington saddled up in 1794 to help crush this Pennsylvania revolt against a tax on distilled spirits", "response": "the Whiskey Rebellion", "value": 800 },
       { "clue": "This Thracian gladiator's slave army defeated several Roman legions between 73 and 71 B.C.", "response": "Spartacus", "value": 1200 },
       { "clue": "Rifle cartridges rumored to be greased with cow and pig fat helped ignite this 1857 revolt in India", "response": "the Sepoy Mutiny", "value": 1600 },
@@ -63,7 +63,7 @@
     "name": "SIGNED, SEALED, DELIVERED",
     "clues": [
       { "clue": "Rebel barons made King John affix his seal to this 'Great Charter' at Runnymede in 1215", "response": "Magna Carta", "value": 400 },
-      { "clue": "Lincoln's wartime edict of January 1, 1863 declared slaves in Confederate-held territory free", "response": "the Emancipation Proclamation", "value": 800 },
+      { "clue": "With this document of January 1, 1863, Lincoln declared slaves in Confederate-held territory free", "response": "the Emancipation Proclamation", "value": 800 },
       { "clue": "Martin Luther's 95 Theses of 1517 blasted the church's sale of these pardons for sin", "response": "indulgences", "value": 1200 },
       { "clue": "William the Conqueror's exhaustive 1086 land survey earned this nickname evoking the Last Judgment", "response": "the Domesday Book", "value": 1600 },
       { "clue": "Emile Zola's 1898 front-page letter defending Alfred Dreyfus bears this accusatory French title", "response": "J'Accuse", "value": 2000 }
@@ -112,11 +112,11 @@
   {
     "name": "SCIENCE NON-FICTION",
     "clues": [
-      { "clue": "Back from vacation in 1928, this Scot noticed a mold killing bacteria on a discarded culture plate", "response": "Alexander Fleming", "value": 400 },
-      { "clue": "Edward Jenner's 1796 cowpox experiment pioneered this practice, whose name comes from the Latin for cow", "response": "vaccination", "value": 800 },
-      { "clue": "In 1895 Wilhelm Roentgen imaged the bones of his wife's hand with radiation he named for the unknown", "response": "X-rays", "value": 1200 },
-      { "clue": "Christiaan Barnard performed the first successful human heart transplant in 1967 in this country", "response": "South Africa", "value": 1600 },
-      { "clue": "Dentist William Morton's 1846 ether demonstration in Boston brought surgery into the era of this", "response": "anesthesia", "value": 2000 }
+      { "clue": "The WHO declared this ancient scourge eradicated in 1980, a first for any human disease", "response": "smallpox", "value": 400 },
+      { "clue": "Too shy to press an ear to a female patient's chest in 1816, René Laennec rolled paper into a tube and invented this instrument", "response": "the stethoscope", "value": 800 },
+      { "clue": "This Polish astronomer's 1543 'On the Revolutions of the Celestial Spheres' yanked Earth from the center of the cosmos", "response": "Copernicus", "value": 1200 },
+      { "clue": "Dentist William Morton's 1846 Boston ether demonstration ushered surgery into the age of this induced loss of sensation", "response": "anesthesia", "value": 1600 },
+      { "clue": "France guillotined this founder of modern chemistry in 1794; Lagrange mourned that a century might not produce another such head", "response": "Lavoisier", "value": 2000 }
     ]
   }
 ]

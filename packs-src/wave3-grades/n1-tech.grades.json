@@ -1,0 +1,8 @@
+[
+  { "name": "CTRL + ALT + DELIGHT", "score": 48, "verdict": "accepted", "notes": "Albuquerque 1975, IBM 5150, ENIAC ~18,000 tubes, Turing 1950 imitation game — all solid; clean generalist ladder." },
+  { "name": "START ME UP", "score": 48, "verdict": "accepted", "notes": "Garage-origin facts verified (HP oscillators for Fantasia, Amazon Bellevue 1994, Sony rice-cooker flop); great hooks." },
+  { "name": ".COM AND GET IT", "score": 47, "verdict": "revised", "notes": "Replaced $200 Google/googol clue with YouTube 'Me at the zoo' fact — 'Google' anchored this file and n2-decades' 'to google'; rest verified." },
+  { "name": "1-UPMANSHIP", "score": 48, "verdict": "accepted", "notes": "Ghost names, Jumpman-the-carpenter, Pajitnov 1984 Moscow, Baer Brown Box/Odyssey 1972 all correct; textbook ramp." },
+  { "name": "HANDHELD HISTORY", "score": 46, "verdict": "revised", "notes": "Replaced $200 iPhone (verbatim dupe of n1-decades) with Game Boy/Pokemon 1998; replaced $1000 Segway (not handheld) with PalmPilot/Graffiti; swapped BlackBerry to $600, Polaroid to $800 for a truer ladder." },
+  { "name": "TALK NERDY TO ME", "score": 48, "verdict": "accepted", "notes": "Spam/Monty Python, 1947 moth logbook, Harald Bluetooth, Dawkins 1976, Capek robota — all etymologies check out." }
+]

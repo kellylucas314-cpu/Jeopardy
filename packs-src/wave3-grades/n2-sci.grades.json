@@ -1,0 +1,14 @@
+[
+  { "name": "TABLE FOR 118", "score": 48, "verdict": "accepted", "notes": "Graphite/polonium/tungsten-W/eka-aluminum-gallium/technetium all verified; 'homeland' phrasing repeats in rows 2 and 4 (minor); name could age if element 119 is ever confirmed." },
+  { "name": "NOBLE INTENTIONS", "score": 48, "verdict": "accepted", "notes": "Etymologies and facts check (neos, 1868 helium, ~0.9% argon, EPA radon stat, xenon stable isotopes); tidy ladder within one gas family." },
+  { "name": "SPOOKY ACTION", "score": 48, "verdict": "accepted", "notes": "Entanglement quote, 1935 cat, Pauli exclusion, Dirac 1928, Yukawa first Japanese laureate 1949 all verified; strong ramp." },
+  { "name": "OHM SWEET OHM", "score": 48, "verdict": "accepted", "notes": "Tesla=flux density, farad/1831 induction, Maxwell, Lorentz Nobel 1902, Oersted 1820 lecture all check; unit-vs-person angle keeps each row unambiguous." },
+  { "name": "GERM OF AN IDEA", "score": 48, "verdict": "revised", "notes": "Pre-score 44: $800 repeated the 1928 Fleming mold anecdote already used in n1-sci and nf-wave3; swapped in Lister/carbolic antisepsis with the mouthwash hook." },
+  { "name": "GREATEST HEALS", "score": 48, "verdict": "revised", "notes": "Pre-score 44: $400 duplicated n1-sci's Rontgen/X-rays first-Nobel clue; replaced with Bayer 1899 aspirin from willow bark. Salk/insulin/Barnard/Vesalius verified." },
+  { "name": "GOING OUT WITH A BANG", "score": 47, "verdict": "accepted", "notes": "Stellar-death facts all check incl. LGM-1; neutron star ($1600) and pulsar ($2000) sit close together but the clues disambiguate cleanly." },
+  { "name": "DEEP SKY DIVING", "score": 48, "verdict": "accepted", "notes": "Andromeda, nebula etymology, quasars, Hubble's two feats, Oort cloud all verified; good spread of response types." },
+  { "name": "DOUBLE HELIX FEATURE", "score": 48, "verdict": "accepted", "notes": "Franklin 1953, Mendel, thymine/uracil, trisomy 21, McClintock transposons all check; ladder climbs honestly." },
+  { "name": "MICROBE MANAGEMENT", "score": 48, "verdict": "accepted", "notes": "Yeast, Leeuwenhoek 'animalcules', coli/colon etymology (deliberate hint), Danish Gram, archaea domain all verified." },
+  { "name": "IRRATIONAL BEHAVIOR", "score": 47, "verdict": "revised", "notes": "Pre-score 43: Fibonacci row broke the irrational-number gimmick (integer sequence, person response). Moved golden ratio to $1200 and Hippasus/root 2 to $1600; new $2000 on Lindemann proving pi transcendental." },
+  { "name": "MEASURE FOR MEASURE", "score": 48, "verdict": "accepted", "notes": "Light-year ~5.9T miles, 6-ft fathom, Kelvin, pascal/Pascaline, angstrom all verified; only-answer-fits specificity in every row." }
+]

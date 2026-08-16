@@ -6,7 +6,7 @@
       { "clue": "Holland's spring fields blaze with rows of this cup-shaped flower grown from bulbs", "response": "the tulip", "value": 400 },
       { "clue": "This tall flower with a big golden head is grown for its snackable striped seeds", "response": "the sunflower", "value": 600 },
       { "clue": "\"He loves me, he loves me not\" is recited while plucking this flower's white petals", "response": "the daisy", "value": 800 },
-      { "clue": "These fragrant purple spring blossoms lend their name to a soft pale shade", "response": "lilacs", "value": 1000 }
+      { "clue": "New Hampshire's state flower, this fragrant purple spring shrub also names a pale shade", "response": "the lilac", "value": 1000 }
     ]
   },
   {
@@ -82,7 +82,7 @@
   {
     "name": "HANDMADE WITH LOVE",
     "clues": [
-      { "clue": "Patchwork squares, batting and a backing are stitched into this cozy bed cover", "response": "a quilt", "value": 200 },
+      { "clue": "Squares of saved fabric are stitched together into this cozy bed cover, often an heirloom", "response": "a quilt", "value": 200 },
       { "clue": "All you need for this yarn craft is a pair of long pointed needles", "response": "knitting", "value": 400 },
       { "clue": "This yarn craft named from the French for \"little hook\" uses a single hooked tool", "response": "crochet", "value": 600 },
       { "clue": "Fabric stretched in a round wooden hoop gets fancied up with this decorative needlework", "response": "embroidery", "value": 800 },

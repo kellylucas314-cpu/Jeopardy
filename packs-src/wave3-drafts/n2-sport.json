@@ -14,7 +14,7 @@
     { "clue": "In buzkashi, the national sport of this country, mounted horsemen tussle over a goat carcass", "response": "Afghanistan", "value": 2000 }
   ] },
   { "name": "FIVE-RING CIRCUS", "clues": [
-    { "clue": "The flame for each games is kindled by sunlight at this Greek sanctuary, home of the ancient Olympics", "response": "Olympia", "value": 400 },
+    { "clue": "The flame for each games is kindled by sunlight at this Greek sanctuary, host of the ancient games", "response": "Olympia", "value": 400 },
     { "clue": "Women competed at the modern Olympics for the first time in 1900 in this host city", "response": "Paris", "value": 800 },
     { "clue": "This American's back-first 'Flop' cleared high jump gold at the 1968 games and remade the event", "response": "Dick Fosbury", "value": 1200 },
     { "clue": "This 'Czech Locomotive' swept the 5,000 meters, 10,000 meters and marathon at the 1952 Helsinki Games", "response": "Emil Zátopek", "value": 1600 },

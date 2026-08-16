@@ -43,7 +43,7 @@
     "name": "GERM OF AN IDEA",
     "clues": [
       { "clue": "Gentle heating that keeps milk safe is named for this Frenchman, who also developed a rabies vaccine", "response": "Pasteur", "value": 400 },
-      { "clue": "In 1928 this Scot noticed mold killing bacteria on a culture plate and discovered penicillin", "response": "Fleming", "value": 800 },
+      { "clue": "This British surgeon slashed operating-room deaths with carbolic-acid antisepsis; a mouthwash borrows his name", "response": "Lister", "value": 800 },
       { "clue": "In 1796 this English doctor inoculated a boy with cowpox to protect him from smallpox", "response": "Jenner", "value": 1200 },
       { "clue": "Mocked for telling doctors to wash their hands between autopsies and deliveries, this Hungarian died in an asylum in 1865", "response": "Semmelweis", "value": 1600 },
       { "clue": "His namesake postulates link a specific germ to a specific disease; this German identified the TB bacillus in 1882", "response": "Koch", "value": 2000 }
@@ -52,7 +52,7 @@
   {
     "name": "GREATEST HEALS",
     "clues": [
-      { "clue": "Wilhelm Röntgen won the first Nobel Prize in Physics for discovering this radiation that bared his wife's hand bones", "response": "X-rays", "value": 400 },
+      { "clue": "Bayer trademarked this pain reliever in 1899; its active ingredient descends from willow bark remedies", "response": "aspirin", "value": 400 },
       { "clue": "Jonas Salk's vaccine, given a massive 1954 field trial, took aim at this paralyzing childhood disease", "response": "polio", "value": 800 },
       { "clue": "Diabetes stopped being a death sentence after Banting and Best isolated this hormone in 1921", "response": "insulin", "value": 1200 },
       { "clue": "In 1967 at Cape Town's Groote Schuur Hospital, this surgeon performed the first human heart transplant", "response": "Christiaan Barnard", "value": 1600 },
@@ -104,9 +104,9 @@
     "clues": [
       { "clue": "Circumference divided by diameter gives you this constant, feted every March 14", "response": "pi", "value": 400 },
       { "clue": "The base of natural logarithms, roughly 2.718, goes by this letter honoring Leonhard Euler", "response": "e", "value": 800 },
-      { "clue": "1, 1, 2, 3, 5, 8... this Pisan's namesake sequence began with a puzzle about breeding rabbits", "response": "Fibonacci", "value": 1200 },
-      { "clue": "Cut a line so whole-to-longer matches longer-to-shorter and you land on this 'divine proportion', about 1.618", "response": "the golden ratio", "value": 1600 },
-      { "clue": "Legend says Pythagoreans drowned Hippasus for proving this number, the hypotenuse of a right triangle with legs 1 and 1, is irrational", "response": "the square root of 2", "value": 2000 }
+      { "clue": "Cut a line so whole-to-longer matches longer-to-shorter and you land on this 'divine proportion', about 1.618", "response": "the golden ratio", "value": 1200 },
+      { "clue": "Legend says Pythagoreans drowned Hippasus for proving this number, the hypotenuse of a right triangle with legs 1 and 1, is irrational", "response": "the square root of 2", "value": 1600 },
+      { "clue": "In 1882 Lindemann proved pi is this type of number, the root of no integer-coefficient polynomial, dooming circle-squarers", "response": "transcendental", "value": 2000 }
     ]
   },
   {

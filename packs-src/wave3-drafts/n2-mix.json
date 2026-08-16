@@ -13,7 +13,7 @@
     "name": "CANVAS THE AREA",
     "clues": [
       { "clue": "A hairless figure clutches its face beneath a swirling blood-orange sky in this Edvard Munch icon", "response": "The Scream", "value": 400 },
-      { "clue": "Grant Wood posed his sister & his dentist as the stern farm pair of this 1930 canvas, pitchfork & all", "response": "American Gothic", "value": 800 },
+      { "clue": "Grant Wood posed his sister & his dentist as the stern farm pair of this 1930 painting, pitchfork & all", "response": "American Gothic", "value": 800 },
       { "clue": "Vermeer's turbaned subject glances over her shoulder in this portrait dubbed the 'Mona Lisa of the North'", "response": "Girl with a Pearl Earring", "value": 1200 },
       { "clue": "Castaways from an 1816 French frigate wreck signal a distant ship in this monumental Géricault canvas", "response": "The Raft of the Medusa", "value": 1600 },
       { "clue": "Velázquez painted himself at his easel beside the Infanta Margarita in this 1656 royal group portrait", "response": "Las Meninas", "value": 2000 }

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "LIVES UNDER THE MICROSCOPE",
+    "clues": [
+      { "clue": "Diagnosed with ALS at age 21, this physicist went on to write the bestseller 'A Brief History of Time'.", "response": "Stephen Hawking", "value": 200 },
+      { "clue": "A mold spore that drifted into this Scot's untidy London lab in 1928 pointed the way to penicillin.", "response": "Alexander Fleming", "value": 400 },
+      { "clue": "This Russian chemist left gaps in his 1869 table for elements like gallium, later found just as he predicted.", "response": "Dmitri Mendeleev", "value": 600 },
+      { "clue": "This Danish astronomer lost part of his nose in a 1566 duel and wore a metal replacement.", "response": "Tycho Brahe", "value": 800 },
+      { "clue": "A 1913 letter packed with theorems to G.H. Hardy carried this self-taught Indian mathematician to Cambridge.", "response": "Srinivasa Ramanujan", "value": 1000 }
+    ]
+  },
+  {
+    "name": "PATENTLY OBVIOUS",
+    "clues": [
+      { "clue": "This automaker's moving assembly line sent the price of his Model T plummeting after 1913.", "response": "Henry Ford", "value": 200 },
+      { "clue": "In 1793 this Yale grad invented the cotton gin, transforming the economy of the American South.", "response": "Eli Whitney", "value": 400 },
+      { "clue": "This portrait painter turned inventor telegraphed 'What hath God wrought' from Washington in 1844.", "response": "Samuel Morse", "value": 600 },
+      { "clue": "This Black inventor from Cleveland patented a lifesaving safety hood and a three-position traffic signal.", "response": "Garrett Morgan", "value": 800 },
+      { "clue": "Burrs stuck to this Swiss engineer's dog on a hunt, inspiring the hook-and-loop fastener he named Velcro.", "response": "George de Mestral", "value": 1000 }
+    ]
+  },
+  {
+    "name": "REFORM SCHOOL",
+    "clues": [
+      { "clue": "This leader's 1930 Salt March defied a British monopoly on an everyday seasoning.", "response": "Mahatma Gandhi", "value": 200 },
+      { "clue": "Fined $100 for voting in the 1872 presidential election, this suffragist never paid a cent.", "response": "Susan B. Anthony", "value": 400 },
+      { "clue": "With Dolores Huerta, this labor leader co-founded the farmworkers' union behind a national grape boycott.", "response": "Cesar Chavez", "value": 600 },
+      { "clue": "Chicago's Hull House made this social reformer the first American woman to win the Nobel Peace Prize.", "response": "Jane Addams", "value": 800 },
+      { "clue": "Parliament ended the British slave trade in 1807 after this evangelical MP's 20-year crusade.", "response": "William Wilberforce", "value": 1000 }
+    ]
+  },
+  {
+    "name": "COMPASS AND CIRCUMSTANCE",
+    "clues": [
+      { "clue": "Legend ties this Spanish explorer of Florida to a search for the Fountain of Youth.", "response": "Ponce de León", "value": 200 },
+      { "clue": "This Norse sailor reached a land he called Vinland around 1000 A.D., centuries before Columbus.", "response": "Leif Erikson", "value": 400 },
+      { "clue": "Aboard the Golden Hind, this Elizabethan sea dog completed a circumnavigation of the globe in 1580.", "response": "Francis Drake", "value": 600 },
+      { "clue": "This Ming dynasty admiral led seven treasure-fleet voyages, sailing as far as East Africa.", "response": "Zheng He", "value": 800 },
+      { "clue": "This Prussian naturalist's five-year American trek left his name on a current, a penguin and many peaks.", "response": "Alexander von Humboldt", "value": 1000 }
+    ]
+  },
+  {
+    "name": "ADVENTURE CAPITALISTS",
+    "clues": [
+      { "clue": "In 1932 this aviator became the first woman to fly solo across the Atlantic.", "response": "Amelia Earhart", "value": 200 },
+      { "clue": "This French ocean explorer co-invented the Aqua-Lung and sailed the research ship Calypso.", "response": "Jacques Cousteau", "value": 400 },
+      { "clue": "This Sherpa mountaineer stood atop Everest with Edmund Hillary on May 29, 1953.", "response": "Tenzing Norgay", "value": 600 },
+      { "clue": "In 1947 this Norwegian sailed the balsa raft Kon-Tiki some 4,300 miles from Peru to Polynesia.", "response": "Thor Heyerdahl", "value": 800 },
+      { "clue": "With Don Walsh, this Swiss oceanographer took the bathyscaphe Trieste to the Mariana Trench floor in 1960.", "response": "Jacques Piccard", "value": 1000 }
+    ]
+  },
+  {
+    "name": "MOONLIGHTING MONARCHS",
+    "clues": [
+      { "clue": "This British monarch's white gown at her 1840 wedding to Prince Albert set a bridal trend for the ages.", "response": "Queen Victoria", "value": 200 },
+      { "clue": "Traveling incognito in 1697, this Russian tsar swung a hammer in Dutch shipyards to master shipbuilding.", "response": "Peter the Great", "value": 400 },
+      { "clue": "Between campaigns on the Danube, this Roman emperor jotted the Stoic notes we call 'Meditations'.", "response": "Marcus Aurelius", "value": 600 },
+      { "clue": "This 15th century Korean king oversaw the creation of Hangul, an alphabet in daily use ever since.", "response": "Sejong the Great", "value": 800 },
+      { "clue": "This Swedish queen shocked Europe by abdicating in 1654, converting to Catholicism and settling in Rome.", "response": "Christina", "value": 1000 }
+    ]
+  },
+  {
+    "name": "GRUDGE MATCHES",
+    "clues": [
+      { "clue": "This sitting vice president fatally wounded Alexander Hamilton in an 1804 duel at Weehawken.", "response": "Aaron Burr", "value": 200 },
+      { "clue": "This Celtics legend's rivalry with Magic Johnson began in the 1979 NCAA championship game.", "response": "Larry Bird", "value": 400 },
+      { "clue": "The play and film 'Amadeus' cast this Italian court composer as Mozart's jealous rival.", "response": "Antonio Salieri", "value": 600 },
+      { "clue": "Isaac Newton feuded bitterly with this German polymath over who invented calculus first.", "response": "Gottfried Leibniz", "value": 800 },
+      { "clue": "Edward Drinker Cope's fossil feud with this Yale paleontologist came to be called the Bone Wars.", "response": "Othniel Charles Marsh", "value": 1000 }
+    ]
+  },
+  {
+    "name": "MUTUAL ADMIRATION SOCIETY",
+    "clues": [
+      { "clue": "This actor shared a screenwriting Oscar with childhood pal Matt Damon for 1997's 'Good Will Hunting'.", "response": "Ben Affleck", "value": 200 },
+      { "clue": "This 'Lord of the Rings' author swapped drafts with C.S. Lewis in an Oxford circle called the Inklings.", "response": "J.R.R. Tolkien", "value": 400 },
+      { "clue": "Vincent van Gogh shared the Yellow House at Arles with this painter until their friendship imploded.", "response": "Paul Gauguin", "value": 600 },
+      { "clue": "Henry David Thoreau built his Walden Pond cabin on land owned by this essayist, his friend and mentor.", "response": "Ralph Waldo Emerson", "value": 800 },
+      { "clue": "Franz Kafka told this loyal friend to burn his manuscripts; instead he published 'The Trial'.", "response": "Max Brod", "value": 1000 }
+    ]
+  },
+  {
+    "name": "GIVE HER SOME CREDIT",
+    "clues": [
+      { "clue": "This Shoshone teenager crossed the West with Lewis and Clark, interpreting with her baby son in tow.", "response": "Sacagawea", "value": 200 },
+      { "clue": "This NASA mathematician of 'Hidden Figures' fame double-checked the orbital math for John Glenn's 1962 flight.", "response": "Katherine Johnson", "value": 400 },
+      { "clue": "This reporter feigned insanity to expose an asylum, then circled the globe in 72 days for the New York World.", "response": "Nellie Bly", "value": 600 },
+      { "clue": "This British chemist's X-ray image of DNA, the famed Photo 51, guided Watson and Crick to the double helix.", "response": "Rosalind Franklin", "value": 800 },
+      { "clue": "Element 109 honors this physicist, who explained nuclear fission with her nephew yet never won a Nobel.", "response": "Lise Meitner", "value": 1000 }
+    ]
+  },
+  {
+    "name": "ON A FIRST-NAME BASIS",
+    "clues": [
+      { "clue": "This British singer titled her albums '19', '21', '25' and '30' after milestones of her own age.", "response": "Adele", "value": 200 },
+      { "clue": "Born François-Marie Arouet, this French wit skewered rosy optimism in 'Candide'.", "response": "Voltaire", "value": 400 },
+      { "clue": "This Dutch master of 'The Night Watch' also painted dozens of self-portraits over four decades.", "response": "Rembrandt", "value": 600 },
+      { "clue": "This 16th century French seer published the cryptic quatrains of 'Les Prophéties' in 1555.", "response": "Nostradamus", "value": 800 },
+      { "clue": "A mob killed this woman philosopher and mathematician of ancient Alexandria in 415 A.D.", "response": "Hypatia", "value": 1000 }
+    ]
+  },
+  {
+    "name": "LAST CALL",
+    "clues": [
+      { "clue": "A Milan convent wall bears 'The Last Supper', this Renaissance master's mural of a final meal.", "response": "Leonardo da Vinci", "value": 200 },
+      { "clue": "This last emperor of China, subject of a 1987 Best Picture winner, later tended a Beijing botanical garden.", "response": "Puyi", "value": 400 },
+      { "clue": "This Apollo 17 commander was the final astronaut of the Apollo program to walk on the Moon.", "response": "Eugene Cernan", "value": 600 },
+      { "clue": "This Marylander, the last surviving signer of the Declaration of Independence, died in 1832.", "response": "Charles Carroll", "value": 800 },
+      { "clue": "Moments before a sharpshooter's bullet struck, this Union general scoffed that the enemy 'couldn't hit an elephant at this distance'.", "response": "John Sedgwick", "value": 1000 }
+    ]
+  },
+  {
+    "name": "AND NOW FOR MY NEXT ACT",
+    "clues": [
+      { "clue": "This Austrian-born bodybuilding champ became 'The Terminator', then governor of California in 2003.", "response": "Arnold Schwarzenegger", "value": 200 },
+      { "clue": "This preacher and grill pitchman reclaimed boxing's heavyweight crown in 1994 at age 45.", "response": "George Foreman", "value": 400 },
+      { "clue": "This designer spent 17 years at Vogue and two at Ralph Lauren before opening her bridal salon in 1990.", "response": "Vera Wang", "value": 600 },
+      { "clue": "Arthritis turned this upstate New York farm wife from embroidery to folk painting in her late 70s.", "response": "Grandma Moses", "value": 800 },
+      { "clue": "This French poet gave up verse by about age 21 to trade coffee and firearms in the Horn of Africa.", "response": "Arthur Rimbaud", "value": 1000 }
+    ]
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "FOREIGN EXCHANGE STUDENTS",
+    "clues": [
+      { "clue": "Introduced in 1871, Japan's currency takes its name from a word meaning 'round object'", "response": "the yen", "value": 400 },
+      { "clue": "From the Sanskrit for 'wrought silver', it's the currency of India, Pakistan, Nepal & Sri Lanka", "response": "the rupee", "value": 800 },
+      { "clue": "South Africa's currency, introduced in 1961, is named for the gold-bearing ridge beneath Johannesburg", "response": "the rand", "value": 1200 },
+      { "clue": "In 1946 Hungary tamed history's worst hyperinflation by trading the pengo for this currency named after Florence's gold coin", "response": "the forint", "value": 1600 },
+      { "clue": "Adopted in 1925, Guatemala's currency is named for a resplendent national bird whose prized tail feathers the Maya traded as money", "response": "the quetzal", "value": 2000 }
+    ]
+  },
+  {
+    "name": "PAST TENDER",
+    "clues": [
+      { "clue": "Italy priced espresso in the thousands in this currency before 2002; its name comes from the Latin for 'pound'", "response": "the lira", "value": 400 },
+      { "clue": "Greece gave up this coinage with some 2,600 years of history when euro cash arrived in 2002", "response": "the drachma", "value": 800 },
+      { "clue": "West Germany launched this sturdy currency in 1948; reunified Germany retired it for the euro", "response": "the deutsche mark", "value": 1200 },
+      { "clue": "The Netherlands' pre-euro currency took its name from a Dutch word meaning 'golden'", "response": "the guilder", "value": 1600 },
+      { "clue": "In 2000 Ecuador swapped this currency honoring a South American liberator for the U.S. dollar", "response": "the sucre", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE DISMAL SCIENCE FAIR",
+    "clues": [
+      { "clue": "Economists describe it as too much money chasing too few goods, and it eats away at your paycheck", "response": "inflation", "value": 400 },
+      { "clue": "Ursine nickname for a sustained slump of 20% or more in stock prices", "response": "a bear market", "value": 800 },
+      { "clue": "Adam Smith's metaphor for the unseen force that turns a merchant's self-interest into public benefit", "response": "the invisible hand", "value": 1200 },
+      { "clue": "Coined by a British politician in 1965, this portmanteau captures the 1970s combo of stalled growth and soaring prices", "response": "stagflation", "value": 1600 },
+      { "clue": "An Elizabethan financier's name graces this law of economics: bad money drives out good", "response": "Gresham's law", "value": 2000 }
+    ]
+  },
+  {
+    "name": "WORD ON THE STREET",
+    "clues": [
+      { "clue": "This 2-word label for dependable stocks like Coca-Cola comes from poker's priciest token color", "response": "blue chip", "value": 400 },
+      { "clue": "A 1920s Boston con man lent his name to this fraud that pays early investors with later arrivals' money", "response": "a Ponzi scheme", "value": 800 },
+      { "clue": "Grimly feline term for a brief, deceptive rally in the middle of a long market slide", "response": "a dead cat bounce", "value": 1200 },
+      { "clue": "From the French for 'judgment', it's the art of profiting when one asset has two prices in two markets", "response": "arbitrage", "value": 1600 },
+      { "clue": "Mystery writers love this investment pact in which the last member left alive collects everything", "response": "a tontine", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE PHILANTHROPIST'S STONE",
+    "clues": [
+      { "clue": "Profits from dynamite funded the five prizes this Swedish chemist established in his 1895 will", "response": "Alfred Nobel", "value": 400 },
+      { "clue": "This steel magnate who declared that dying rich means dying disgraced funded over 2,500 libraries", "response": "Andrew Carnegie", "value": 800 },
+      { "clue": "A Baltimore Quaker's $7 million bequest, then America's largest, founded this namesake university & hospital", "response": "Johns Hopkins", "value": 1200 },
+      { "clue": "Cited as America's first self-made female millionaire, this hair-care pioneer bankrolled the NAACP's anti-lynching fight", "response": "Madam C.J. Walker", "value": 1600 },
+      { "clue": "Hailed as the father of modern philanthropy, this banker funded London workers' housing and museums at Harvard & Yale", "response": "George Peabody", "value": 2000 }
+    ]
+  },
+  {
+    "name": "FORTUNE 500 B.C.",
+    "clues": [
+      { "clue": "Legend says this Phrygian king's golden touch turned even his dinner into inedible treasure", "response": "Midas", "value": 400 },
+      { "clue": "Europe's mightiest bank made this Florentine family patrons to Botticelli, Michelangelo and Galileo", "response": "the Medici", "value": 800 },
+      { "clue": "Proverbially rich, this last king of Lydia is credited with striking the first pure gold and silver coins", "response": "Croesus", "value": 1200 },
+      { "clue": "This 14th century emperor of Mali spent so much gold in Cairo en route to Mecca that prices sagged for years", "response": "Mansa Musa", "value": 1600 },
+      { "clue": "Nicknamed 'the Rich', this Augsburg banker bought Charles V the votes to become Holy Roman Emperor", "response": "Jakob Fugger", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THIS TOO SHALL POP",
+    "clues": [
+      { "clue": "The 1929 Wall Street crash helped tip the world into this decade-long economic catastrophe", "response": "the Great Depression", "value": 400 },
+      { "clue": "A sock-puppet pitchman for Pets.com became a mascot of this internet-stock mania that popped in 2000", "response": "the dot-com bubble", "value": 800 },
+      { "clue": "Speculators paid thousands for Princess the Bear during the 1990s craze for these Ty Inc. plush toys", "response": "Beanie Babies", "value": 1200 },
+      { "clue": "Isaac Newton lost 20,000 pounds in this 1720 London stock craze over trade with Spanish America", "response": "the South Sea Bubble", "value": 1600 },
+      { "clue": "John Law's Company of the West pumped up this 1720 Parisian frenzy named for a North American river", "response": "the Mississippi Bubble", "value": 2000 }
+    ]
+  },
+  {
+    "name": "CHAPTER 11 & VERSE",
+    "clues": [
+      { "clue": "'Ask Why' was the fitting slogan of this Houston energy giant that collapsed in a 2001 accounting scandal", "response": "Enron", "value": 400 },
+      { "clue": "This video rental colossus passed on buying Netflix for $50 million; it went bankrupt in 2010", "response": "Blockbuster", "value": 800 },
+      { "clue": "Famed for flying-boat 'Clippers' and a blue globe on its tail, this pioneering airline shut down in 1991", "response": "Pan Am", "value": 1200 },
+      { "clue": "Bankrupt in 1982, this gull-winged carmaker's stainless steel coupe hit 88 mph to fame three years later", "response": "DeLorean", "value": 1600 },
+      { "clue": "This five-and-dime pioneer, once owner of the world's tallest building, shut its last U.S. dime stores in 1997", "response": "Woolworth", "value": 2000 }
+    ]
+  },
+  {
+    "name": "WHERE CREDIT IS DUE",
+    "clues": [
+      { "clue": "Italian moneylenders whose benches were smashed gave us 'banca rotta', and this word for flat broke", "response": "bankrupt", "value": 400 },
+      { "clue": "Romans struck coins at the temple of Juno Moneta, giving us 'money' and this word for a coin factory", "response": "a mint", "value": 800 },
+      { "clue": "Britain's treasury gets this name from the checkered counting cloth medieval clerks tallied on", "response": "the Exchequer", "value": 1200 },
+      { "clue": "From the Latin for 'cattle', an ancient measure of wealth, comes this adjective meaning money-related", "response": "pecuniary", "value": 1600 },
+      { "clue": "From the Latin for 'purse', it's the word for a stock exchange in Paris or Brussels", "response": "the bourse", "value": 2000 }
+    ]
+  },
+  {
+    "name": "COUNTER CULTURE",
+    "clues": [
+      { "clue": "This Knightsbridge emporium adopted the motto 'Omnia Omnibus Ubique': all things for all people, everywhere", "response": "Harrods", "value": 400 },
+      { "clue": "In 1909 this American showman opened his namesake Oxford Street store, selling shopping as theater", "response": "Selfridge", "value": 800 },
+      { "clue": "'Give the lady what she wants' was the credo of this merchant prince of Chicago's State Street", "response": "Marshall Field", "value": 1200 },
+      { "clue": "This Philadelphian pioneered price tags and money-back returns at his Grand Depot store", "response": "John Wanamaker", "value": 1600 },
+      { "clue": "Zola set a novel inside a thinly veiled version of this Paris store, often called the first true department store", "response": "Le Bon Marche", "value": 2000 }
+    ]
+  },
+  {
+    "name": "BUY THE BOOK",
+    "clues": [
+      { "clue": "A railroad agent who started out selling watches built this Chicago giant whose 'Big Book' even offered kit houses", "response": "Sears", "value": 400 },
+      { "clue": "In 1872 this Chicago retailer mailed America's first general-merchandise catalog: a single price sheet for Grange farmers", "response": "Montgomery Ward", "value": 800 },
+      { "clue": "After 90 of his first 100 hunting boots fell apart, this Maine outfitter refunded everyone and built a catalog empire", "response": "L.L. Bean", "value": 1200 },
+      { "clue": "First issued in 1845, the 'Blue Book' catalog of this New York jeweler's grandest gems pioneered American mail order", "response": "Tiffany & Co.", "value": 1600 },
+      { "clue": "Rural catalog shopping boomed once this U.S. Mail package service debuted on New Year's Day 1913", "response": "Parcel Post", "value": 2000 }
+    ]
+  },
+  {
+    "name": "DOUBLOON OR NOTHING",
+    "clues": [
+      { "clue": "Since 1937 the U.S. has stored billions in gold bullion at a depository on this Kentucky Army post", "response": "Fort Knox", "value": 400 },
+      { "clue": "An 1896 strike on a creek renamed Bonanza set off a stampede of 100,000 toward this Canadian region", "response": "the Klondike", "value": 800 },
+      { "clue": "Tales of a Muisca chief dusted in gold grew into this legend of a golden city that lured conquistadors", "response": "El Dorado", "value": 1200 },
+      { "clue": "Mel Fisher hunted 16 years for this Spanish galleon, sunk in 1622 off the Florida Keys with tons of silver", "response": "the Atocha", "value": 1600 },
+      { "clue": "Looted by the Nazis from Catherine Palace near Leningrad, this glowing resin-paneled chamber vanished in 1945", "response": "the Amber Room", "value": 2000 }
+    ]
+  }
+]

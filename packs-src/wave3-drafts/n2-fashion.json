@@ -16,12 +16,12 @@
   { "name": "GEM SESSION", "clues": [
     { "clue": "King Edward VII dubbed this Paris firm with a panther emblem 'the jeweler of kings'", "response": "Cartier", "value": 400 },
     { "clue": "Its Persian name means 'mountain of light'; Britain took this diamond from India in 1849", "response": "the Koh-i-Noor", "value": 800 },
-    { "clue": "At 3,106 carats, this rough gem found near Pretoria in 1905 yielded the royal scepter's Great Star of Africa", "response": "the Cullinan diamond", "value": 1200 },
-    { "clue": "Sharing its name with a slender French loaf, this long rectangular step cut often flanks a center stone", "response": "the baguette", "value": 1600 },
+    { "clue": "Sharing its name with a slender French loaf, this long rectangular step cut often flanks a center stone", "response": "the baguette", "value": 1200 },
+    { "clue": "At 3,106 carats, this rough gem found near Pretoria in 1905 yielded the royal scepter's Great Star of Africa", "response": "the Cullinan diamond", "value": 1600 },
     { "clue": "In 1893 this Japanese entrepreneur cultured his first pearls; his surname became a luxury brand", "response": "Mikimoto", "value": 2000 }
   ] },
   { "name": "HAT TRICKS", "clues": [
-    { "clue": "This broad-brimmed Mexican hat takes its name from 'sombra,' the Spanish word for shade", "response": "a sombrero", "value": 400 },
+    { "clue": "Handy in the Mexican sun, this broad-brimmed hat takes its name from the Spanish word for shade", "response": "a sombrero", "value": 400 },
     { "clue": "This soft felt hat with a pinched crown is named for an 1882 play starring Sarah Bernhardt as a princess", "response": "a fedora", "value": 800 },
     { "clue": "Woven from toquilla straw, this hat is misnamed: it originated in Ecuador, not the country in its name", "response": "a Panama hat", "value": 1200 },
     { "clue": "Lock & Co. of London calls it the Coke; Americans know this hard felt hat with a rounded crown as a derby", "response": "a bowler", "value": 1600 },

@@ -75,7 +75,7 @@
       { "clue": "'...this I know, for the Bible tells me so' completes the opening of this children's hymn", "response": "\"Jesus Loves Me\"", "value": 400 },
       { "clue": "Its opening line asks the title refuge, 'cleft for me,' to 'let me hide myself in thee'", "response": "\"Rock of Ages\"", "value": 800 },
       { "clue": "'Then sings my soul, my Savior God, to thee' swells the refrain of this hymn", "response": "\"How Great Thou Art\"", "value": 1200 },
-      { "clue": "'On a hill far away' stood the 'emblem of suffering and shame' in this 1913 hymn", "response": "\"The Old Rugged Cross\"", "value": 1600 },
+      { "clue": "'On a hill far away' stood the 'emblem of suffering and shame' in this hymn completed in 1913", "response": "\"The Old Rugged Cross\"", "value": 1600 },
       { "clue": "'And He walks with me, and He talks with me' in this hymn that begins among the roses", "response": "\"In the Garden\"", "value": 2000 }
     ]
   },
