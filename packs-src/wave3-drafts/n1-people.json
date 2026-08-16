@@ -116,7 +116,7 @@
       { "clue": "This preacher and grill pitchman reclaimed boxing's heavyweight crown in 1994 at age 45.", "response": "George Foreman", "value": 400 },
       { "clue": "This designer spent 17 years at Vogue and two at Ralph Lauren before opening her bridal salon in 1990.", "response": "Vera Wang", "value": 600 },
       { "clue": "Arthritis turned this upstate New York farm wife from embroidery to folk painting in her late 70s.", "response": "Grandma Moses", "value": 800 },
-      { "clue": "This French poet gave up verse by about age 21 to trade coffee and firearms in the Horn of Africa.", "response": "Arthur Rimbaud", "value": 1000 }
+      { "clue": "This French poet gave up verse by about age 21 and later traded coffee and firearms in the Horn of Africa.", "response": "Arthur Rimbaud", "value": 1000 }
     ]
   }
 ]

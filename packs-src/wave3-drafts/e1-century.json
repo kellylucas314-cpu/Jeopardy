@@ -92,7 +92,7 @@
   {
     "name": "RACE FOR THE MOON",
     "clues": [
-      { "clue": "President Kennedy vowed America would land a man here before the 1960s were out", "response": "the Moon", "value": 200 },
+      { "clue": "The U.S. answered the Soviets by creating this space agency in 1958", "response": "NASA", "value": 200 },
       { "clue": "The beep-beep of this Soviet satellite in 1957 told America the race was on", "response": "Sputnik", "value": 400 },
       { "clue": "In 1962 this Marine and future senator became the first American to orbit the Earth", "response": "John Glenn", "value": 600 },
       { "clue": "Armstrong, Aldrin & Collins made history aboard this numbered 1969 mission", "response": "Apollo 11", "value": 800 },

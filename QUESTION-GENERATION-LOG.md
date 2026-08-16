@@ -79,3 +79,36 @@ Accepted running total: **870 clues** (168 categories + 30 finals) of the 2,000 
   money & business (written, grading), travel (writing). Easy century pair still grading.
 
 Accepted running total: **1,822 clues** of the 2,000 target.
+
+## 2026-08-16 ~14:30 UTC — RUN COMPLETE: 2,122 accepted clues ✅
+
+**Final tally: 416 categories + 42 finals = 2,122 accepted clues** (target was 2,000).
+38 clue-level revisions by independent graders; **zero categories rejected**; every
+category scored 45+/50, most 47–49, range 46–50.
+
+New content by slice (categories, R1+R2): geography 24, history 24, science 24,
+literature 24, movies/TV 24, music 24, sports/games 24, food/brands 24, wordplay 24,
+art/myth/politics/animals 24, 2000s/2010s 12, internet/tech 12, weird facts 12,
+fashion/design 12, Before & After mash-ups 12, Formula 1 + UNC 8, famous people 12,
+money/business 12, travel 12 — plus 30 Fresh finals; Easy Breezy: golden-age 24,
+home & hearth 24, 20th-century memories 24, plus 12 easy finals.
+Difficulty distribution is uniform by construction: every category is a 5-row ladder,
+so each dollar tier holds exactly 416 new clues.
+
+**Compiled packs (deployed schema):** Fresh 404 R1 + 395 R2 + 116 finals;
+Easy Breezy 140 R1 + 111 R2 + 50 finals. Fresh now supports ~65 full games
+before any category can repeat (was ~38 pre-wave, ~17 with the old bug).
+
+**Verification:** checker sweep OK (44 files, zero problems); 100-game no-repeat
+simulation clean on both packs; `npm run build` green; Playwright smoke green
+(both packs: setup → board → 6 unique categories → per-round memory → clue screen).
+
+**How to run:** `npm install && npm run build`, `npx vite preview --port 4173`, open
+http://localhost:4173/. Checker: `node scripts/check-questions.cjs` (defaults to
+packs-src/). Sources of record: `packs-src/wave3-drafts/` (rich sources),
+`packs-src/wave3-grades/` (scores), compiled chunks in `public/data/`.
+
+**Suggested next batch focus:** more Easy Breezy (its Round 2 still cycles soonest,
+~18 games); a mythology/legends dedicated slice; more Before & After; daily-challenge
+seed boards. Test first: play a Fresh full game and an Easy quick game on the PR
+preview; spot-read the F1/UNC categories for family fit.

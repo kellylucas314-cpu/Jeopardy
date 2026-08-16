@@ -64,7 +64,7 @@
     "clues": [
       { "clue": "The 1929 Wall Street crash helped tip the world into this decade-long economic catastrophe", "response": "the Great Depression", "value": 400 },
       { "clue": "A sock-puppet pitchman for Pets.com became a mascot of this internet-stock mania that popped in 2000", "response": "the dot-com bubble", "value": 800 },
-      { "clue": "Speculators paid thousands for Princess the Bear during the 1990s craze for these Ty Inc. plush toys", "response": "Beanie Babies", "value": 1200 },
+      { "clue": "A 1997 bear honoring Princess Diana became the holy grail of the speculative '90s craze for these Ty Inc. plush toys", "response": "Beanie Babies", "value": 1200 },
       { "clue": "Isaac Newton lost 20,000 pounds in this 1720 London stock craze over trade with Spanish America", "response": "the South Sea Bubble", "value": 1600 },
       { "clue": "John Law's Company of the West pumped up this 1720 Parisian frenzy named for a North American river", "response": "the Mississippi Bubble", "value": 2000 }
     ]

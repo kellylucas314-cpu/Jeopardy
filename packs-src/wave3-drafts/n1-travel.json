@@ -38,7 +38,7 @@
     { "clue": "From the French for 'to remember,' it's the keepsake you bring home from a trip", "response": "a souvenir", "value": 200 },
     { "clue": "Fly across a few time zones & this drowsy 2-word condition sets in until your body clock catches up", "response": "jet lag", "value": 400 },
     { "clue": "Budget travelers bunk in shared dorms at this type of lodging; the first 'youth' one opened in Germany", "response": "a hostel", "value": 600 },
-    { "clue": "Airport boutiques carry this hyphenated designation because their perfume & liquor skip import taxes", "response": "duty-free", "value": 800 },
+    { "clue": "Young 18th century English gentlemen capped their education with this cultural circuit of the Continent", "response": "the Grand Tour", "value": 800 },
     { "clue": "Karl, a 19th century German publisher, made his surname a synonym for a trusty travel guidebook", "response": "a Baedeker", "value": 1000 }
   ] }
 ]

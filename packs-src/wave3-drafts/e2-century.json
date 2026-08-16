@@ -13,7 +13,7 @@
     "name": "TAILFINS & WHITEWALLS",
     "clues": [
       { "clue": "Ford, General Motors, and Chrysler earned this Michigan city its 'Motor City' nickname", "response": "Detroit", "value": 400 },
-      { "clue": "Echoing fighter planes and rockets, 1950s cars sprouted these soaring rear fender features", "response": "tailfins", "value": 800 },
+      { "clue": "Ford's sporty two-seater of 1955 was named for this mythical bird of Southwest Indian legend", "response": "the Thunderbird", "value": 800 },
       { "clue": "Dinah Shore invited TV viewers to 'See the U.S.A.' in this make of car", "response": "Chevrolet", "value": 1200 },
       { "clue": "This luxury make, a byword for 'the best of anything,' honors the French founder of Detroit", "response": "Cadillac", "value": 1600 },
       { "clue": "Before making classic cars, this South Bend, Indiana firm built covered wagons for pioneers", "response": "Studebaker", "value": 2000 }
@@ -66,7 +66,7 @@
       { "clue": "Sweet Vidalia onions and even sweeter peaches are the pride of this Southern state", "response": "Georgia", "value": 800 },
       { "clue": "Sugarhouses across this Green Mountain State boil maple sap into its celebrated syrup", "response": "Vermont", "value": 1200 },
       { "clue": "The McIlhenny family has aged this famous hot sauce on Louisiana's Avery Island since the 1860s", "response": "Tabasco", "value": 1600 },
-      { "clue": "This amber Kentucky corn whiskey shares a name with a long line of French kings", "response": "bourbon", "value": 2000 }
+      { "clue": "This amber Kentucky whiskey, made mostly from corn, shares a name with a long line of French kings", "response": "bourbon", "value": 2000 }
     ]
   },
   {
