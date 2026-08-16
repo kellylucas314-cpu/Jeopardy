@@ -1,0 +1,44 @@
+[
+  { "name": "TIVO OR NOT TIVO", "clues": [
+    { "clue": "Kelly Clarkson won the 2002 first season of this Fox singing competition judged by Simon Cowell", "response": "American Idol", "value": 200 },
+    { "clue": "Chemistry teacher Walter White cooked blue meth as 'Heisenberg' in this AMC drama that ended in 2013", "response": "Breaking Bad", "value": 400 },
+    { "clue": "This ABC drama began in 2004 with Oceanic Flight 815 crashing onto a mysterious island", "response": "Lost", "value": 600 },
+    { "clue": "This HBO mob drama's 2007 finale cut to black mid-scene as Tony ordered onion rings to \"Don't Stop Believin'\"", "response": "The Sopranos", "value": 800 },
+    { "clue": "Whistling stick-up man Omar Little robbed Baltimore drug crews in this gritty drama that ended its five-season run in 2008", "response": "The Wire", "value": 1000 }
+  ] },
+  { "name": "AUGHT TO BE A HIT", "clues": [
+    { "clue": "In this 2008 Beyoncé chart-topper, 'if you liked it, then you shoulda put a ring on it'", "response": "Single Ladies", "value": 200 },
+    { "clue": "OutKast urged fans to 'shake it like a Polaroid picture' in this exuberant 2003 No. 1", "response": "Hey Ya!", "value": 400 },
+    { "clue": "Usher's crunk anthem with Lil Jon and Ludacris spent 12 weeks atop the Hot 100 in 2004", "response": "Yeah!", "value": 600 },
+    { "clue": "Shakira teamed with Wyclef Jean on this 2006 smash, her first No. 1 on the Hot 100", "response": "Hips Don't Lie", "value": 800 },
+    { "clue": "M.I.A. layered gunshots and a cash register over a Clash sample in this 2008 hit", "response": "Paper Planes", "value": 1000 }
+  ] },
+  { "name": "GADGET INSPECTOR", "clues": [
+    { "clue": "Apple's 2001 pocket music player promised '1,000 songs in your pocket'", "response": "the iPod", "value": 200 },
+    { "clue": "Steve Jobs unveiled this 2007 device as 'an iPod, a phone and an internet communicator' all in one", "response": "the iPhone", "value": 400 },
+    { "clue": "Grandma could bowl in the living room with this motion-sensing Nintendo console of 2006", "response": "the Wii", "value": 600 },
+    { "clue": "Sold out within hours, Amazon's 2007 e-reader took this name from a verb meaning to set something alight", "response": "the Kindle", "value": 800 },
+    { "clue": "Microsoft's 2006 iPod rival, offered in an infamous shade of brown, became a punch line for tech flops", "response": "the Zune", "value": 1000 }
+  ] },
+  { "name": "FAD LIBS", "clues": [
+    { "clue": "Millions filmed themselves being doused with freezing water for this 2014 craze that raised over $100 million for ALS research", "response": "the Ice Bucket Challenge", "value": 200 },
+    { "clue": "Marketed as a focus aid for restless hands, this three-pronged whirling toy overran classrooms in 2017", "response": "the fidget spinner", "value": 400 },
+    { "clue": "Posting photos of yourself lying stiff and facedown in odd public spots defined this 2011 internet fad", "response": "planking", "value": 600 },
+    { "clue": "Nike and Lance Armstrong's cancer foundation sold tens of millions of these yellow silicone bands starting in 2004", "response": "Livestrong bracelets", "value": 800 },
+    { "clue": "Mall security's mid-2000s nemesis was this brand of sneakers with a wheel built into each heel", "response": "Heelys", "value": 1000 }
+  ] },
+  { "name": "SPORTS CENTER OF ATTENTION", "clues": [
+    { "clue": "Breaking Mark Spitz's single-Games record, this swimmer collected 8 golds at the 2008 Beijing Olympics", "response": "Michael Phelps", "value": 200 },
+    { "clue": "A brief Game 7 rain delay only added drama as this team ended its 108-year World Series drought in 2016", "response": "the Chicago Cubs", "value": 400 },
+    { "clue": "David Tyree pinned a pass to his helmet as this team ruined the Patriots' perfect season in Super Bowl XLII", "response": "the New York Giants", "value": 600 },
+    { "clue": "Down 3 games to none against the Yankees in the 2004 ALCS, this team won 8 straight for its first title since 1918", "response": "the Boston Red Sox", "value": 800 },
+    { "clue": "Defying preseason odds of 5,000 to 1, this club nicknamed the Foxes won the 2015-16 Premier League", "response": "Leicester City", "value": 1000 }
+  ] },
+  { "name": "DANK MEMORIES", "clues": [
+    { "clue": "Baiting someone with a link that opens Rick Astley's 'Never Gonna Give You Up' is this classic internet prank", "response": "rickrolling", "value": 200 },
+    { "clue": "PSY's giddy-up dance made this 2012 K-pop video the first to reach one billion views on YouTube", "response": "Gangnam Style", "value": 400 },
+    { "clue": "A perpetually scowling feline named Tardar Sauce earned this meme name, plus a Lifetime movie deal", "response": "Grumpy Cat", "value": 600 },
+    { "clue": "'Wow' and 'such' captions in rainbow Comic Sans surround the Shiba Inu of this 2013 meme, later a crypto namesake", "response": "Doge", "value": 800 },
+    { "clue": "Flubbing the choreography beside Katy Perry at the 2015 Super Bowl halftime show made this costumed dancer a meme", "response": "Left Shark", "value": 1000 }
+  ] }
+]

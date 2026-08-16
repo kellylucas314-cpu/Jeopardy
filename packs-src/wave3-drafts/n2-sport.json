@@ -1,0 +1,86 @@
+[
+  { "name": "CUP RUNNETH OVER", "clues": [
+    { "clue": "Pelé won his three World Cups — in 1958, 1962 and 1970 — all with this soccer powerhouse", "response": "Brazil", "value": 400 },
+    { "clue": "Diego Maradona punched in his infamous 'Hand of God' goal against this country in 1986", "response": "England", "value": 800 },
+    { "clue": "In the 1954 'Miracle of Bern,' this nation stunned Hungary's fabled Golden Team in the final", "response": "West Germany", "value": 1200 },
+    { "clue": "Striker Just Fontaine bagged an astonishing 13 goals at the 1958 World Cup for this European nation", "response": "France", "value": 1600 },
+    { "clue": "This country's shocking 1950 win over host Brazil at the Maracanã is still mourned as the 'Maracanazo'", "response": "Uruguay", "value": 2000 }
+  ] },
+  { "name": "PASSPORT TO PLAY", "clues": [
+    { "clue": "Each July this three-week bicycle race rolls toward its customary finish on the Champs-Élysées", "response": "the Tour de France", "value": 400 },
+    { "clue": "Cricket's Ashes rivalry, born from a mock obituary in 1882, pits England against this nation", "response": "Australia", "value": 800 },
+    { "clue": "Before rugby matches, this country's All Blacks issue a Maori challenge called the haka", "response": "New Zealand", "value": 1200 },
+    { "clue": "Jai alai, whose ball rockets off a curved cesta at highway speeds, arose in this region straddling Spain and France", "response": "the Basque Country", "value": 1600 },
+    { "clue": "In buzkashi, the national sport of this country, mounted horsemen tussle over a goat carcass", "response": "Afghanistan", "value": 2000 }
+  ] },
+  { "name": "FIVE-RING CIRCUS", "clues": [
+    { "clue": "The flame for each games is kindled by sunlight at this Greek sanctuary, home of the ancient Olympics", "response": "Olympia", "value": 400 },
+    { "clue": "Women competed at the modern Olympics for the first time in 1900 in this host city", "response": "Paris", "value": 800 },
+    { "clue": "This American's back-first 'Flop' cleared high jump gold at the 1968 games and remade the event", "response": "Dick Fosbury", "value": 1200 },
+    { "clue": "This 'Czech Locomotive' swept the 5,000 meters, 10,000 meters and marathon at the 1952 Helsinki Games", "response": "Emil Zátopek", "value": 1600 },
+    { "clue": "In 1896 this Greek water carrier won the first modern Olympic marathon and became a national hero", "response": "Spyridon Louis", "value": 2000 }
+  ] },
+  { "name": "COLD MEDALISTS", "clues": [
+    { "clue": "The 1980 'Miracle on Ice' hockey upset unfolded at the Winter Games in this New York village", "response": "Lake Placid", "value": 400 },
+    { "clue": "British ski jumper Michael Edwards finished last at Calgary 1988 yet won fans worldwide under this avian nickname", "response": "Eddie the Eagle", "value": 800 },
+    { "clue": "The first Winter Olympics were held in 1924 in this French town at the foot of Mont Blanc", "response": "Chamonix", "value": 1200 },
+    { "clue": "Marrying cross-country skiing to rifle marksmanship, this event joined the Winter Olympics in 1960 at Squaw Valley", "response": "biathlon", "value": 1600 },
+    { "clue": "Skeleton sledding appeared at just two early Winter Games, 1928 and 1948, both hosted by this Swiss resort", "response": "St. Moritz", "value": 2000 }
+  ] },
+  { "name": "PAWN STARS", "clues": [
+    { "clue": "Late-1400s rule changes transformed this chess piece from a feeble adviser into the board's most powerful force", "response": "the queen", "value": 400 },
+    { "clue": "In 1972 this brash American dethroned Boris Spassky in Reykjavik's 'Match of the Century'", "response": "Bobby Fischer", "value": 800 },
+    { "clue": "In a 1997 rematch, this world champion fell to the IBM computer Deep Blue", "response": "Garry Kasparov", "value": 1200 },
+    { "clue": "In this checkmate pattern, a lone knight fells a king hemmed in by his own courtiers", "response": "a smothered mate", "value": 1600 },
+    { "clue": "This Cuban 'Chess Machine' held the world title from 1921 until Alexander Alekhine took it in 1927", "response": "Capablanca", "value": 2000 }
+  ] },
+  { "name": "FULL HOUSE RULES", "clues": [
+    { "clue": "In this casino card game, taking one 'hit' too many past 21 means you've gone bust", "response": "blackjack", "value": 400 },
+    { "clue": "Shot from behind in Deadwood in 1876, this gunfighter reputedly held the 'dead man's hand' of aces and eights", "response": "Wild Bill Hickok", "value": 800 },
+    { "clue": "The World Series of Poker's marquee event uses this variant of two hole cards plus five community cards", "response": "Texas hold 'em", "value": 1200 },
+    { "clue": "Descended from whist, this four-player partnership game deals in auctions, contracts and a face-up 'dummy'", "response": "bridge", "value": 1600 },
+    { "clue": "Devised in Uruguay around 1940, this melding cousin of rummy takes its name from the Spanish for 'basket'", "response": "canasta", "value": 2000 }
+  ] },
+  { "name": "STREAK PREVIEWS", "clues": [
+    { "clue": "This Yankees 'Iron Horse' took himself out of the lineup in 1939, ending his streak of 2,130 straight games", "response": "Lou Gehrig", "value": 400 },
+    { "clue": "In the summer of 1941, this 'Yankee Clipper' hit safely in 56 consecutive games", "response": "Joe DiMaggio", "value": 800 },
+    { "clue": "On September 6, 1995, Cal Ripken Jr. played consecutive game number 2,131 for this team, breaking a 56-year-old mark", "response": "the Baltimore Orioles", "value": 1200 },
+    { "clue": "With Bill Russell guarding the paint, this NBA franchise ran off eight straight titles from 1959 to 1966", "response": "the Boston Celtics", "value": 1600 },
+    { "clue": "Between 1977 and 1987, this American won 122 consecutive races in the 400-meter hurdles", "response": "Edwin Moses", "value": 2000 }
+  ] },
+  { "name": "FEATS DON'T FAIL ME NOW", "clues": [
+    { "clue": "On an Oxford track in 1954, this British medical student became the first man to run a mile in under 4 minutes", "response": "Roger Bannister", "value": 400 },
+    { "clue": "In Mexico City's thin air in 1968, this American soared past 29 feet in the long jump, adding nearly 2 feet to the world record", "response": "Bob Beamon", "value": 800 },
+    { "clue": "This Yankee retired all 27 Dodgers he faced in Game 5 of the 1956 World Series, the first perfect game in Series history", "response": "Don Larsen", "value": 1200 },
+    { "clue": "A childhood polio survivor, this Tennessee State sprinter blazed to three gold medals at the 1960 Rome Olympics", "response": "Wilma Rudolph", "value": 1600 },
+    { "clue": "In June 1938, this team's Johnny Vander Meer threw no-hitters in back-to-back starts", "response": "the Cincinnati Reds", "value": 2000 }
+  ] },
+  { "name": "IF YOU BUILD IT", "clues": [
+    { "clue": "'The Frozen Tundra' of Lambeau Field is the home turf of this Wisconsin NFL team", "response": "the Green Bay Packers", "value": 400 },
+    { "clue": "This Boston ballpark opened in April 1912, the same week the Titanic went down", "response": "Fenway Park", "value": 800 },
+    { "clue": "Twin spires crown Churchill Downs, the Kentucky Derby's home in this city", "response": "Louisville", "value": 1200 },
+    { "clue": "Estadio Azteca, which staged the World Cup finals of 1970 and 1986, towers over this capital", "response": "Mexico City", "value": 1600 },
+    { "clue": "College football's 'bowl games' owe their name to a bowl-shaped stadium opened in 1914 at this Ivy League school", "response": "Yale", "value": 2000 }
+  ] },
+  { "name": "VENUE, VIDI, VICI", "clues": [
+    { "clue": "Madison Square Garden, the self-styled 'World's Most Famous Arena,' sits atop Penn Station in this city", "response": "New York", "value": 400 },
+    { "clue": "The 1974 'Rumble in the Jungle' rocked Kinshasa, capital of this nation later renamed the Democratic Republic of the Congo", "response": "Zaire", "value": 800 },
+    { "clue": "Crowned by a 133-meter arch since its 2007 rebuild, this London venue hosts England's showpiece soccer finals", "response": "Wembley", "value": 1200 },
+    { "clue": "Rome's Circus Maximus, with room for roughly 150,000 spectators, was purpose-built for this thrilling sport", "response": "chariot racing", "value": 1600 },
+    { "clue": "Twice each summer, the bareback Palio horse race turns this Tuscan city's Piazza del Campo into a racetrack", "response": "Siena", "value": 2000 }
+  ] },
+  { "name": "OUT OF LEFT FIELD", "clues": [
+    { "clue": "Eight players on this Chicago team were banned for life for throwing the 1919 World Series", "response": "the White Sox", "value": 400 },
+    { "clue": "In a 1997 heavyweight title fight, this boxer was disqualified for biting Evander Holyfield's ear", "response": "Mike Tyson", "value": 800 },
+    { "clue": "The 1904 Olympic marathon winner staggered home on strychnine and brandy in this Midwestern host city", "response": "St. Louis", "value": 1200 },
+    { "clue": "At 3-foot-7, this pinch-hitter wearing number 1/8 walked in his lone 1951 at-bat, a Bill Veeck publicity stunt", "response": "Eddie Gaedel", "value": 1600 },
+    { "clue": "In 1968 NBC cut from a Jets game to a children's movie, so viewers missed this team's two touchdowns in the final minute", "response": "the Oakland Raiders", "value": 2000 }
+  ] },
+  { "name": "AGAINST ALL ODDITIES", "clues": [
+    { "clue": "Basketball began in 1891 when James Naismith nailed up baskets originally made to hold this fruit", "response": "peaches", "value": 400 },
+    { "clue": "The marathon's odd 26.2-mile length traces to this city's 1908 Olympics, when the start was moved to Windsor Castle", "response": "London", "value": 800 },
+    { "clue": "This rope-pulling contest was a full Olympic medal event from 1900 to 1920", "response": "tug-of-war", "value": 1200 },
+    { "clue": "This polyglot big-league catcher swapped his mask for espionage, spying for the OSS during World War II", "response": "Moe Berg", "value": 1600 },
+    { "clue": "George Plimpton's 1985 April Fools' hoax in Sports Illustrated conjured this Mets prospect with a 168-mph fastball", "response": "Sidd Finch", "value": 2000 }
+  ] }
+]

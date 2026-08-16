@@ -1,0 +1,182 @@
+[
+ {
+  "name": "CTRL + ALT + DELIGHT",
+  "clues": [
+   {
+    "clue": "Harvard dropout Bill Gates founded this software company with Paul Allen in Albuquerque in 1975",
+    "response": "Microsoft",
+    "value": 200
+   },
+   {
+    "clue": "Nicknamed 'Big Blue', this tech titan's 1981 Personal Computer, the 5150, set the desktop standard",
+    "response": "IBM",
+    "value": 400
+   },
+   {
+    "clue": "Its 3½-inch version lives on as the 'save' icon; this bendable storage medium once came 8 inches wide",
+    "response": "the floppy disk",
+    "value": 600
+   },
+   {
+    "clue": "Unveiled at the University of Pennsylvania in 1946, this pioneering computer used nearly 18,000 vacuum tubes",
+    "response": "ENIAC",
+    "value": 800
+   },
+   {
+    "clue": "This Bletchley Park codebreaker's 1950 paper proposed the 'imitation game' behind his namesake test",
+    "response": "Alan Turing",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "START ME UP",
+  "clues": [
+   {
+    "clue": "Steve Jobs' family garage in Los Altos is celebrated as the 1976 birthplace of this computer company",
+    "response": "Apple",
+    "value": 200
+   },
+   {
+    "clue": "Founded in a Bellevue, Washington garage in 1994, this company first billed itself 'Earth's Biggest Bookstore'",
+    "response": "Amazon",
+    "value": 400
+   },
+   {
+    "clue": "Mark Zuckerberg launched this social network, originally sporting a 'The' in its name, from a Harvard dorm in 2004",
+    "response": "Facebook",
+    "value": 600
+   },
+   {
+    "clue": "Founded in a Palo Alto garage in 1939, this company sold early audio oscillators to Disney for 'Fantasia'",
+    "response": "Hewlett-Packard",
+    "value": 800
+   },
+   {
+    "clue": "Ibuka and Morita founded this Tokyo electronics giant in 1946; an early product, an electric rice cooker, flopped",
+    "response": "Sony",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": ".COM AND GET IT",
+  "clues": [
+   {
+    "clue": "Its founders misspelled 'googol', the number 10 to the 100th power, when naming this search engine",
+    "response": "Google",
+    "value": 200
+   },
+   {
+    "clue": "The first item sold on this auction site in 1995 was a broken laser pointer — the buyer collected them",
+    "response": "eBay",
+    "value": 400
+   },
+   {
+    "clue": "Launched in 2001, this volunteer-written encyclopedia takes part of its name from the Hawaiian for 'quick'",
+    "response": "Wikipedia",
+    "value": 600
+   },
+   {
+    "clue": "Marc Andreessen co-founded this company whose Navigator browser lost the '90s browser war to Internet Explorer",
+    "response": "Netscape",
+    "value": 800
+   },
+   {
+    "clue": "Developed at the University of Illinois' NCSA, this 1993 browser put a friendly graphical face on the web",
+    "response": "Mosaic",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "1-UPMANSHIP",
+  "clues": [
+   {
+    "clue": "Ghosts named Blinky, Pinky, Inky and Clyde chase this dot-munching arcade star of 1980",
+    "response": "Pac-Man",
+    "value": 200
+   },
+   {
+    "clue": "This Nintendo mascot debuted as 'Jumpman', a carpenter dodging barrels in 1981's Donkey Kong",
+    "response": "Mario",
+    "value": 400
+   },
+   {
+    "clue": "Sega's blue blur debuted in 1991, grabbing gold rings and outrunning Dr. Robotnik on the Genesis",
+    "response": "Sonic the Hedgehog",
+    "value": 600
+   },
+   {
+    "clue": "Soviet programmer Alexey Pajitnov devised this block-stacking puzzle in Moscow in 1984",
+    "response": "Tetris",
+    "value": 800
+   },
+   {
+    "clue": "Ralph Baer's 'Brown Box' prototype became this 1972 Magnavox machine, the first home video game console",
+    "response": "the Odyssey",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HANDHELD HISTORY",
+  "clues": [
+   {
+    "clue": "Unveiled in 2007, this Apple device was billed as 'an iPod, a phone and an internet communicator' in one",
+    "response": "the iPhone",
+    "value": 200
+   },
+   {
+    "clue": "Sony's blue-and-silver TPS-L2 of 1979 was the first of this iconic line of portable cassette players",
+    "response": "the Walkman",
+    "value": 400
+   },
+   {
+    "clue": "Edwin Land's company wowed 1948 shoppers with a camera that developed its own photos in about a minute",
+    "response": "Polaroid",
+    "value": 600
+   },
+   {
+    "clue": "Research In Motion's fruit-named handheld with a clicky thumb keyboard once ruled Wall Street",
+    "response": "the BlackBerry",
+    "value": 800
+   },
+   {
+    "clue": "Code-named 'Ginger', Dean Kamen's self-balancing scooter got a massively hyped reveal in 2001",
+    "response": "the Segway",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "TALK NERDY TO ME",
+  "clues": [
+   {
+    "clue": "Junk email takes this name from a Monty Python sketch about a menu heavy on canned meat",
+    "response": "spam",
+    "value": 200
+   },
+   {
+    "clue": "In 1947 Harvard engineers taped a moth into a logbook, noting the 'first actual case' of this being found",
+    "response": "a bug",
+    "value": 400
+   },
+   {
+    "clue": "Harald, a 10th century Danish king, lent his colorful nickname to this short-range wireless standard",
+    "response": "Bluetooth",
+    "value": 600
+   },
+   {
+    "clue": "Richard Dawkins coined this word for a unit of cultural transmission in 1976, long before image macros",
+    "response": "a meme",
+    "value": 800
+   },
+   {
+    "clue": "English owes this word to Karel Čapek's play 'R.U.R.', from a Czech term for forced labor",
+    "response": "robot",
+    "value": 1000
+   }
+  ]
+ }
+]

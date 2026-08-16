@@ -1,0 +1,122 @@
+[
+  {
+    "name": "WIND TUNNEL VISION",
+    "clues": [
+      {
+        "clue": "A prancing horse badge and 'rosso corsa' red paint mark this Formula 1 team from Maranello, Italy",
+        "response": "Ferrari",
+        "value": 400
+      },
+      {
+        "clue": "Colin Chapman founded this British team that pioneered the monocoque chassis and ground-effect aero",
+        "response": "Lotus",
+        "value": 800
+      },
+      {
+        "clue": "Legend says this German team created the 'Silver Arrows' in 1934 by scraping white paint off its cars to save weight",
+        "response": "Mercedes",
+        "value": 1200
+      },
+      {
+        "clue": "This team's 1978 'fan car,' the BT46B, won the Swedish Grand Prix and then never raced again",
+        "response": "Brabham",
+        "value": 1600
+      },
+      {
+        "clue": "This three-letter Cosworth V8 won on its 1967 debut in Jim Clark's Lotus 49 and powered champions into the 1980s",
+        "response": "the DFV",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "CHICANE REACTION",
+    "clues": [
+      {
+        "clue": "Jackie Stewart nicknamed this daunting 14-mile German circuit 'The Green Hell'",
+        "response": "the Nürburgring",
+        "value": 400
+      },
+      {
+        "clue": "Oddly, this American Memorial Day classic counted toward the F1 world championship from 1950 to 1960",
+        "response": "the Indianapolis 500",
+        "value": 800
+      },
+      {
+        "clue": "'Red 5' at last: this mustachioed Briton clinched the 1992 title in the dominant Williams FW14B",
+        "response": "Nigel Mansell",
+        "value": 1200
+      },
+      {
+        "clue": "Driving an Alfa Romeo 158, this Italian became Formula 1's first world champion in 1950",
+        "response": "Giuseppe Farina",
+        "value": 1600
+      },
+      {
+        "clue": "This Adriatic-coast circuit, host of a 1957 Grand Prix, was at 16 miles the longest ever to hold a championship race",
+        "response": "Pescara",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "DEAN'S LIST",
+    "clues": [
+      {
+        "clue": "'Psycho T,' the 2008 national player of the year, bulldozed UNC to the 2009 NCAA championship",
+        "response": "Tyler Hansbrough",
+        "value": 400
+      },
+      {
+        "clue": "This Dean Smith delay offense was so good at milking the clock, it helped bring the shot clock to college hoops",
+        "response": "the Four Corners",
+        "value": 800
+      },
+      {
+        "clue": "In 1966 this future ABA and NBA All-Star broke barriers as UNC's first Black scholarship athlete",
+        "response": "Charlie Scott",
+        "value": 1200
+      },
+      {
+        "clue": "This coach built UNC's unbeaten 1957 champions with New York City recruits dubbed his 'Underground Railroad'",
+        "response": "Frank McGuire",
+        "value": 1600
+      },
+      {
+        "clue": "This 1940s Tar Heel tailback nicknamed 'Choo Choo' was twice the Heisman Trophy runner-up",
+        "response": "Charlie Justice",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "ODD NORTH STATE",
+    "clues": [
+      {
+        "clue": "Darwin called it 'one of the most wonderful in the world': this snap-jawed carnivorous plant grows wild only near Wilmington, N.C.",
+        "response": "the Venus flytrap",
+        "value": 400
+      },
+      {
+        "clue": "This pirate ran the Queen Anne's Revenge aground near Beaufort and lost his head at Ocracoke in 1718",
+        "response": "Blackbeard",
+        "value": 800
+      },
+      {
+        "clue": "George Vanderbilt's 250-room French-style chateau in Asheville ranks as America's largest privately owned home",
+        "response": "Biltmore",
+        "value": 1200
+      },
+      {
+        "clue": "Chartered in 1789, this Chapel Hill school opened in 1795 as the first U.S. public university to hold classes",
+        "response": "UNC",
+        "value": 1600
+      },
+      {
+        "clue": "This girl, the first English child born in the Americas, arrived on Roanoke Island in 1587 and vanished with the Lost Colony",
+        "response": "Virginia Dare",
+        "value": 2000
+      }
+    ]
+  }
+]

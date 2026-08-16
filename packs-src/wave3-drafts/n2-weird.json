@@ -1,0 +1,62 @@
+[
+  {
+    "name": "ALL'S FAIR IN WEIRD WAR",
+    "clues": [
+      { "clue": "In 1932 Australian soldiers turned machine guns on these big flightless birds in a 'war' — and the birds won", "response": "emus", "value": 400 },
+      { "clue": "In 1896 Britain needed well under an hour to defeat this East African island sultanate in what's called history's shortest war", "response": "Zanzibar", "value": 800 },
+      { "clue": "One pig was the only casualty of the 1859 'Pig War,' a U.S.–British standoff on San Juan Island in this future state", "response": "Washington", "value": 1200 },
+      { "clue": "Riots at 1969 World Cup qualifying matches preceded the brief 'Football War' between Honduras and this smaller neighbor", "response": "El Salvador", "value": 1600 },
+      { "clue": "In 1986 the Netherlands formally declared peace with these islands off Cornwall, ending a bloodless '335 Years' War'", "response": "the Isles of Scilly", "value": 2000 }
+    ]
+  },
+  {
+    "name": "BORDERLINE BIZARRE",
+    "clues": [
+      { "clue": "Tourists sprawl across this aptly named monument to touch Utah, Colorado, New Mexico and Arizona all at once", "response": "Four Corners", "value": 400 },
+      { "clue": "Russia's Big Diomede and Alaska's Little Diomede sit just 2.4 miles apart in this waterway, yet straddle the date line, nearly a day apart on the clock", "response": "the Bering Strait", "value": 800 },
+      { "clue": "The town of Baarle is a jigsaw of enclaves where a cafe table can sit in both the Netherlands and this neighboring country", "response": "Belgium", "value": 1200 },
+      { "clue": "The Haskell Free Library's front door is in Derby Line, Vermont, but most of its books shelve across the border in this province", "response": "Quebec", "value": 1600 },
+      { "clue": "A relic of clashing 1899 and 1902 colonial boundary lines, this desert trapezoid between Egypt and Sudan is claimed by neither", "response": "Bir Tawil", "value": 2000 }
+    ]
+  },
+  {
+    "name": "ODD DUCKS",
+    "clues": [
+      { "clue": "Duck-billed and egg-laying, this Australian monotreme has another surprise: males wield venomous spurs on their hind legs", "response": "the platypus", "value": 400 },
+      { "clue": "Also known as the water bear or moss piglet, this eight-legged micro-animal has survived direct exposure to outer space", "response": "a tardigrade", "value": 800 },
+      { "clue": "Able to revert from adult back to juvenile polyp, tiny Turritopsis dohrnii is called the 'immortal' one of these stinging drifters", "response": "a jellyfish", "value": 1200 },
+      { "clue": "This Lake Xochimilco salamander keeps its feathery larval gills for life and can regrow limbs, tail, even bits of heart and brain", "response": "an axolotl", "value": 1600 },
+      { "clue": "Chicks of this Amazonian 'stinkbird' hatch with working claws on their wings, a trait straight out of the dinosaur era", "response": "the hoatzin", "value": 2000 }
+    ]
+  },
+  {
+    "name": "WORKING 9 TO 1500",
+    "clues": [
+      { "clue": "Before cheap alarm clocks, British 'knocker-uppers' roused workers by tapping long poles against these glass panes", "response": "windows", "value": 400 },
+      { "clue": "19th century collectors waded bare-legged into ponds so these medicinal bloodsuckers would latch on for easy harvesting", "response": "leeches", "value": 800 },
+      { "clue": "This intimate Tudor court office, held by high-born gentlemen, put its holder in charge of the king's portable toilet", "response": "the Groom of the Stool", "value": 1200 },
+      { "clue": "This two-word job title belonged to Tudor tradesmen permitted to work only at night, shoveling out London's cesspits", "response": "gong farmer", "value": 1600 },
+      { "clue": "For a fee and some bread passed over a coffin, this folk practitioner of the Welsh borders absorbed the dead's misdeeds", "response": "a sin-eater", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GOING TO GREAT LENGTHS",
+    "clues": [
+      { "clue": "Equine height is traditionally reckoned in this unit of four inches, about the width of a clenched fist", "response": "a hand", "value": 400 },
+      { "clue": "James Watt pegged this unit at 33,000 foot-pounds per minute, flattering the draft animals his steam engines replaced", "response": "horsepower", "value": 800 },
+      { "clue": "In a 1958 MIT prank, the Harvard Bridge measured 364.4 of these units, give or take an ear — each one a fraternity pledge long", "response": "a smoot", "value": 1200 },
+      { "clue": "In nuclear physics, this unit of 10 nanoseconds takes its name from something a lamb proverbially does twice with its tail", "response": "a shake", "value": 1600 },
+      { "clue": "Cross-sections in nuclear physics come in this rustic unit, coined in the 1940s when a uranium nucleus struck scientists as 'as big as' one", "response": "a barn", "value": 2000 }
+    ]
+  },
+  {
+    "name": "RECORD SCRATCH",
+    "clues": [
+      { "clue": "'Me at the Zoo,' a 2005 clip of cofounder Jawed Karim in front of elephants, was the first video ever uploaded to this site", "response": "YouTube", "value": 400 },
+      { "clue": "The first item auctioned on eBay in 1995 was a broken one of these red-beam gadgets — bought by a collector of broken ones", "response": "a laser pointer", "value": 800 },
+      { "clue": "The first retail product ever scanned by UPC barcode, at an Ohio supermarket in 1974, was a pack of this Wrigley's gum", "response": "Juicy Fruit", "value": 1200 },
+      { "clue": "The first woman elected to Congress, this Montana pacifist voted against U.S. entry into both world wars", "response": "Jeannette Rankin", "value": 1600 },
+      { "clue": "His namesake comet smacked into Jupiter in 1994; in 1999 a capsule of his ashes rode a NASA probe into the Moon, a funerary first", "response": "Eugene Shoemaker", "value": 2000 }
+    ]
+  }
+]

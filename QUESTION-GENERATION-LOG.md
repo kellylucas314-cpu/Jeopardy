@@ -26,3 +26,25 @@ Running tally of the question-factory effort (see `QUESTION-FACTORY.md` for the 
   — drafted, pending independent grading. Not yet accepted; not yet counted.
 
 Accepted this run so far: **0** (nothing enters a pack before grading).
+
+## 2026-08-16 09:15 UTC — Overnight checkpoint after session-limit interruption
+
+- **Drafted: 37 files · 344 categories · 1,720 board clues · 42 finals**, all validator-
+  and cross-file-sweep clean. Snapshot committed to `packs-src/wave3-drafts/`.
+- Writers complete: all 10 Fresh R1 slices, all 10 Fresh R2 slices, 30 Fresh finals,
+  decades/tech/weird/fashion/mash-up/fan specialty slices, easy `e1-home` + 12 easy finals.
+- Writers to relaunch (killed by the session limit): `e1-golden`, `e2-golden`,
+  `e2-home`, `e1-century`, `e2-century`.
+- **Graded & accepted so far: 24 categories = 120 clues** (`n2-music` 12, `n2-geo` 12 —
+  scores 46–49, all accepted; grades in `packs-src/wave3-grades/`). All other graders
+  were killed mid-work and will be relaunched.
+- Fixed a validator design flaw the interruption exposed: the exclusion list used to
+  absorb newly authored names, so re-validating a finished file collided with itself
+  (dying graders were "removing self-registrations"). The validator now checks the
+  frozen deployed-names baseline plus sibling files, which cannot self-collide.
+- Cross-file name collisions all resolved (GADGET INSPECTOR → HANDHELD HISTORY in tech,
+  MEASURE FOR MEASURE → GOING TO GREAT LENGTHS in weird, ROMANTIC GESTURES →
+  ROMANTIC PERIOD PIECES in music).
+- Concurrency policy per Kelly: moderate batches of 5–8 agents from here on.
+
+Accepted running total: **120 clues** of the 2,000 target.

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "GATHER 'ROUND THE RADIO",
+    "clues": [
+      { "clue": "Sponsored by detergent makers, daytime radio serials earned this sudsy nickname", "response": "soap operas", "value": 400 },
+      { "clue": "Radio audiences howled at this comedy duo's baseball routine, 'Who's on First?'", "response": "Abbott and Costello", "value": 800 },
+      { "clue": "Broadcast from Nashville since 1925, this Saturday night country show is radio's longest-running", "response": "the Grand Ole Opry", "value": 1200 },
+      { "clue": "Kids saved up Ovaltine labels for secret decoder pins from this plucky redhead's show", "response": "Little Orphan Annie", "value": 1600 },
+      { "clue": "Marshal Matt Dillon kept the peace in Dodge City on radio in this western, later a TV classic", "response": "Gunsmoke", "value": 2000 }
+    ]
+  },
+  {
+    "name": "TAILFINS & WHITEWALLS",
+    "clues": [
+      { "clue": "Ford, General Motors, and Chrysler earned this Michigan city its 'Motor City' nickname", "response": "Detroit", "value": 400 },
+      { "clue": "Echoing fighter planes and rockets, 1950s cars sprouted these soaring rear fender features", "response": "tailfins", "value": 800 },
+      { "clue": "Dinah Shore invited TV viewers to 'See the U.S.A.' in this make of car", "response": "Chevrolet", "value": 1200 },
+      { "clue": "This luxury make, a byword for 'the best of anything,' honors the French founder of Detroit", "response": "Cadillac", "value": 1600 },
+      { "clue": "Before making classic cars, this South Bend, Indiana firm built covered wagons for pioneers", "response": "Studebaker", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE STATION WAGON YEARS",
+    "clues": [
+      { "clue": "Gas stations once handed out these folding paper guides free to any driver who asked", "response": "road maps", "value": 400 },
+      { "clue": "Bright orange roofs and 28 flavors of ice cream marked this roadside restaurant chain", "response": "Howard Johnson's", "value": 800 },
+      { "clue": "This word for a roadside lodging, coined in 1920s California, blends 'motor' and 'hotel'", "response": "a motel", "value": 1200 },
+      { "clue": "Impressed by Germany's autobahns, this president signed the 1956 act that built the Interstates", "response": "Dwight D. Eisenhower", "value": 1600 },
+      { "clue": "Founder Kemmons Wilson's motel chain took its cheery name from a 1942 Bing Crosby movie", "response": "Holiday Inn", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE WHOLE COUNTRY TUNED IN",
+    "clues": [
+      { "clue": "In 1960, John F. Kennedy faced this rival in the first televised presidential debates", "response": "Richard Nixon", "value": 400 },
+      { "clue": "In 1953, TV cameras in Westminster Abbey showed the world this young monarch's coronation", "response": "Elizabeth II", "value": 800 },
+      { "clue": "Green Bay beat Kansas City in January 1967 in the first of these big championship games", "response": "the Super Bowl", "value": 1200 },
+      { "clue": "Some 750 million viewers watched this shy 20-year-old bride marry Prince Charles in 1981", "response": "Princess Diana", "value": 1600 },
+      { "clue": "TV's very first commercial, a 1941 spot for this watch brand, cost about nine dollars", "response": "Bulova", "value": 2000 }
+    ]
+  },
+  {
+    "name": "KNOBS & ANTENNAS",
+    "clues": [
+      { "clue": "Swanson's frozen turkey meal in a sectioned tray was made for eating in front of the set", "response": "a TV dinner", "value": 400 },
+      { "clue": "This long-eared nickname belonged to the V-shaped indoor antenna perched atop the console", "response": "rabbit ears", "value": 800 },
+      { "clue": "NBC fanned out this colorful bird's tail feathers to boast its shows were 'in living color'", "response": "the peacock", "value": 1200 },
+      { "clue": "After sign-off, this geometric image with its famous Indian-head design filled the screen", "response": "a test pattern", "value": 1600 },
+      { "clue": "Channels 14 and up sat on this 'ultra' three-letter band, tuned with the set's second dial", "response": "UHF", "value": 2000 }
+    ]
+  },
+  {
+    "name": "STATE FAIR SEASON",
+    "clues": [
+      { "clue": "Kids meet lambs, calves, and goats at this hands-on fairground attraction", "response": "a petting zoo", "value": 400 },
+      { "clue": "Grandstand crowds roar as old cars smash away until just one still runs in this event", "response": "a demolition derby", "value": 800 },
+      { "clue": "The finest steer or hog in the livestock barn takes home this lofty two-word title", "response": "grand champion", "value": 1200 },
+      { "clue": "Souped-up farm machines drag a weighted sled down a dirt track in this deafening contest", "response": "a tractor pull", "value": 1600 },
+      { "clue": "America's first state fair was held in 1841 in Syracuse, in this state", "response": "New York", "value": 2000 }
+    ]
+  },
+  {
+    "name": "LOCAL BRAGGING RIGHTS",
+    "clues": [
+      { "clue": "Green Bay Packers fans wear big foam wedges of this Wisconsin specialty on their heads", "response": "cheese", "value": 400 },
+      { "clue": "Sweet Vidalia onions and even sweeter peaches are the pride of this Southern state", "response": "Georgia", "value": 800 },
+      { "clue": "Sugarhouses across this Green Mountain State boil maple sap into its celebrated syrup", "response": "Vermont", "value": 1200 },
+      { "clue": "The McIlhenny family has aged this famous hot sauce on Louisiana's Avery Island since the 1860s", "response": "Tabasco", "value": 1600 },
+      { "clue": "This amber Kentucky corn whiskey shares a name with a long line of French kings", "response": "bourbon", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GREETINGS FROM THE CAPITAL",
+    "clues": [
+      { "clue": "Sunbathers flock to Waikiki Beach in this island state capital", "response": "Honolulu", "value": 400 },
+      { "clue": "Arizona's desert capital is named for a mythical bird that rises from its own ashes", "response": "Phoenix", "value": 800 },
+      { "clue": "Founded by the Spanish around 1610, this New Mexico city is the oldest state capital in America", "response": "Santa Fe", "value": 1200 },
+      { "clue": "No highway reaches this Alaska capital; visitors arrive by boat or by plane", "response": "Juneau", "value": 1600 },
+      { "clue": "This North Dakota capital took a German chancellor's name, hoping to attract German settlers", "response": "Bismarck", "value": 2000 }
+    ]
+  },
+  {
+    "name": "FIFTY NIFTY UNITED STATES",
+    "clues": [
+      { "clue": "The only state made up entirely of islands, it joined the Union in 1959", "response": "Hawaii", "value": 400 },
+      { "clue": "Providence is the capital of this smallest of the fifty states", "response": "Rhode Island", "value": 800 },
+      { "clue": "The first to ratify the Constitution, this small state is nicknamed 'The First State'", "response": "Delaware", "value": 1200 },
+      { "clue": "Oklahoma's long, skinny northwestern strip goes by this 'cookware' nickname", "response": "the Panhandle", "value": 1600 },
+      { "clue": "Surveyed in the 1760s, the Mason-Dixon Line divided Pennsylvania from this neighbor to the south", "response": "Maryland", "value": 2000 }
+    ]
+  },
+  {
+    "name": "DOWN THE LAZY RIVER",
+    "clues": [
+      { "clue": "West Point and Manhattan's west side both look out on this New York river", "response": "the Hudson", "value": 400 },
+      { "clue": "Washington, D.C.'s beloved cherry trees blossom along this river every spring", "response": "the Potomac", "value": 800 },
+      { "clue": "Grand Coulee Dam harnesses this mighty river of the Pacific Northwest", "response": "the Columbia", "value": 1200 },
+      { "clue": "A New Deal 'Authority' built dams along this Southern waterway to light up its valley", "response": "the Tennessee River", "value": 1600 },
+      { "clue": "A legendary railroad 'Cannonball' and Indiana's state song both take this river's name", "response": "the Wabash", "value": 2000 }
+    ]
+  },
+  {
+    "name": "FRIENDLY FACES ON THE SHELF",
+    "clues": [
+      { "clue": "This big striped cat has called Kellogg's Frosted Flakes 'Gr-r-reat!' since the 1950s", "response": "Tony the Tiger", "value": 400 },
+      { "clue": "With a booming 'Ho, ho, ho,' this towering fellow dressed in leaves guards his vegetable valley", "response": "the Jolly Green Giant", "value": 800 },
+      { "clue": "Poppin' Fresh is the proper name of this giggling mascot everyone pokes in the tummy", "response": "the Pillsbury Doughboy", "value": 1200 },
+      { "clue": "Her cartoon husband Elmer lent his name to a famous glue; she sold milk as Borden's gentle cow", "response": "Elsie", "value": 1600 },
+      { "clue": "In the Victor trademark 'His Master's Voice,' this little dog cocks an ear at a phonograph", "response": "Nipper", "value": 2000 }
+    ]
+  },
+  {
+    "name": "ON EVERY SHOPPING LIST",
+    "clues": [
+      { "clue": "Since the 1920s, Johnson & Johnson's sticky strips have covered generations of scraped knees", "response": "Band-Aids", "value": 400 },
+      { "clue": "Legend says Teddy Roosevelt himself declared this brand's coffee 'Good to the last drop'", "response": "Maxwell House", "value": 800 },
+      { "clue": "Procter & Gamble's floating soap famously claimed to be 99 and 44/100 percent pure", "response": "Ivory", "value": 1200 },
+      { "clue": "The little umbrella girl and 'When it rains, it pours' have long graced this brand's salt", "response": "Morton", "value": 1600 },
+      { "clue": "Folksy ads insisted that with this jelly maker's name, 'it has to be good'", "response": "Smucker's", "value": 2000 }
+    ]
+  }
+]

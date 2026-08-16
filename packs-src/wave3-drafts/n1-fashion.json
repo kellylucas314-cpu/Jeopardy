@@ -1,0 +1,44 @@
+[
+  { "name": "HOUSE RULES", "clues": [
+    { "clue": "The No. 5 perfume and the little black dress are signatures of this French designer born Gabrielle", "response": "Coco Chanel", "value": 200 },
+    { "clue": "A Medusa head is the emblem of this Milan fashion house founded by Gianni in 1978", "response": "Versace", "value": 400 },
+    { "clue": "His 1947 'New Look' of cinched waists and full skirts revived postwar Paris fashion", "response": "Christian Dior", "value": 600 },
+    { "clue": "In 1966 this French designer put women in 'Le Smoking,' a tuxedo tailored for evening wear", "response": "Yves Saint Laurent", "value": 800 },
+    { "clue": "This Italian-born surrealist teamed with Salvador Dalí on a 1937 lobster dress and made 'shocking' pink her own", "response": "Elsa Schiaparelli", "value": 1000 }
+  ] },
+  { "name": "CLOTHES ENCOUNTERS", "clues": [
+    { "clue": "In 1873 Levi Strauss and Jacob Davis patented riveted work pants made of this sturdy blue fabric", "response": "denim", "value": 200 },
+    { "clue": "Clans display their tartans on this pleated knee-length garment of the Scottish Highlands", "response": "a kilt", "value": 400 },
+    { "clue": "Burberry outfitted World War I officers with this belted raincoat named for where the fighting happened", "response": "a trench coat", "value": 600 },
+    { "clue": "Riots named for this flamboyant, broad-shouldered, high-waisted outfit broke out in 1943 Los Angeles", "response": "a zoot suit", "value": 800 },
+    { "clue": "Flared at the hip and snug below the knee, these riding pants take their name from a city in Rajasthan", "response": "jodhpurs", "value": 1000 }
+  ] },
+  { "name": "CARAT & STICK", "clues": [
+    { "clue": "April's birthstone, this gem is the hardest natural substance known", "response": "a diamond", "value": 200 },
+    { "clue": "An oyster builds this gem by coating an irritant with layer after layer of nacre", "response": "a pearl", "value": 400 },
+    { "clue": "Peter Carl of this family firm crafted jeweled Easter eggs for the last two Russian tsars", "response": "Fabergé", "value": 600 },
+    { "clue": "A 'curse' legend trails this 45-carat blue gem that jeweler Harry Winston gave the Smithsonian in 1958", "response": "the Hope Diamond", "value": 800 },
+    { "clue": "Also called the navette, this pointed-oval diamond cut allegedly honors the smile of Madame de Pompadour", "response": "the marquise cut", "value": 1000 }
+  ] },
+  { "name": "SOLE SEARCHING", "clues": [
+    { "clue": "Phil Knight and Bill Bowerman built this Oregon shoe giant named for the Greek goddess of victory", "response": "Nike", "value": 200 },
+    { "clue": "Semipro hoopster Chuck Taylor put his signature on this brand's canvas All Star sneaker", "response": "Converse", "value": 400 },
+    { "clue": "Nike launched this signature line for a Bulls rookie in 1985; ads bragged the NBA had 'banned' its colors", "response": "Air Jordan", "value": 600 },
+    { "clue": "After splitting with brother Adi, Rudolf Dassler launched this big-cat sportswear brand in Herzogenaurach", "response": "Puma", "value": 800 },
+    { "clue": "James Jebbia opened this skate shop on Lafayette Street in 1994; its red box label ignited resale mania", "response": "Supreme", "value": 1000 }
+  ] },
+  { "name": "ICON, THEREFORE I AM", "clues": [
+    { "clue": "Givenchy dressed this gamine actress in the black sheath she wears in 'Breakfast at Tiffany's'", "response": "Audrey Hepburn", "value": 200 },
+    { "clue": "White gloves and Oleg Cassini's clean-lined gowns shaped this first lady's Camelot-era style", "response": "Jackie Kennedy", "value": 400 },
+    { "clue": "A red windbreaker, white tee and blue jeans made this 'Rebel Without a Cause' star a fifties style template", "response": "James Dean", "value": 600 },
+    { "clue": "This German-born screen siren scandalized 1930s Hollywood by stepping out in tuxedos and men's suits", "response": "Marlene Dietrich", "value": 800 },
+    { "clue": "This Regency dandy, a chum of the future George IV, made crisp cravats and somber tailoring the rule", "response": "Beau Brummell", "value": 1000 }
+  ] },
+  { "name": "DESIGNS ON YOU", "clues": [
+    { "clue": "Built from some 18,000 iron parts, this Paris landmark was the world's tallest structure at the 1889 fair", "response": "the Eiffel Tower", "value": 200 },
+    { "clue": "This American architect perched Fallingwater over a waterfall at Bear Run, Pennsylvania", "response": "Frank Lloyd Wright", "value": 400 },
+    { "clue": "Danish architect Jørn Utzon designed this Australian landmark whose roof suggests billowing sails", "response": "the Sydney Opera House", "value": 600 },
+    { "clue": "Walter Gropius founded this German design school in 1919; Nazi pressure closed it in 1933", "response": "the Bauhaus", "value": 800 },
+    { "clue": "This husband-and-wife team's molded plywood and leather lounge chair became a mid-century status symbol", "response": "Charles and Ray Eames", "value": 1000 }
+  ] }
+]

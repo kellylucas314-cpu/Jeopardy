@@ -1,0 +1,122 @@
+[
+  {
+    "name": "IN FULL BLOOM",
+    "clues": [
+      { "clue": "A dozen of these red flowers is the classic romantic Valentine's Day bouquet", "response": "roses", "value": 200 },
+      { "clue": "Holland's spring fields blaze with rows of this cup-shaped flower grown from bulbs", "response": "the tulip", "value": 400 },
+      { "clue": "This tall flower with a big golden head is grown for its snackable striped seeds", "response": "the sunflower", "value": 600 },
+      { "clue": "\"He loves me, he loves me not\" is recited while plucking this flower's white petals", "response": "the daisy", "value": 800 },
+      { "clue": "These fragrant purple spring blossoms lend their name to a soft pale shade", "response": "lilacs", "value": 1000 }
+    ]
+  },
+  {
+    "name": "HOMEGROWN",
+    "clues": [
+      { "clue": "This juicy red staple of the backyard garden is botanically a fruit, not a vegetable", "response": "the tomato", "value": 200 },
+      { "clue": "Bugs Bunny's favorite crunchy orange root is said to be good for your eyesight", "response": "the carrot", "value": 400 },
+      { "clue": "Gardeners with too much of this long green summer squash leave it on neighbors' porches", "response": "zucchini", "value": 600 },
+      { "clue": "Its tart red stalks meet strawberries in a favorite pie, but never eat its leaves", "response": "rhubarb", "value": 800 },
+      { "clue": "Garden wisdom says to wait a few years before cutting this perennial's tender spears", "response": "asparagus", "value": 1000 }
+    ]
+  },
+  {
+    "name": "BACKYARD BIRDS",
+    "clues": [
+      { "clue": "Seeing this red-breasted worm-puller hopping on the lawn is a classic sign of spring", "response": "the robin", "value": 200 },
+      { "clue": "Fill a feeder with sugar water for this tiny bird that hovers on whirring wings", "response": "the hummingbird", "value": 400 },
+      { "clue": "Bright red with a jaunty crest, the male of this bird is the state bird of 7 states", "response": "the cardinal", "value": 600 },
+      { "clue": "This bold, crested peanut lover shares its name with Toronto's baseball team", "response": "the blue jay", "value": 800 },
+      { "clue": "Listen for this little black-capped bird to call out its own name at the feeder", "response": "the chickadee", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SUPPER'S READY",
+    "clues": [
+      { "clue": "Glazed with ketchup and served in slices, this baked ground-beef classic feeds the family", "response": "meatloaf", "value": 200 },
+      { "clue": "Elbow pasta smothered in creamy cheddar sauce makes this gooey childhood favorite", "response": "macaroni and cheese", "value": 400 },
+      { "clue": "Simmered low and slow with carrots and potatoes, this Sunday beef supper falls apart", "response": "pot roast", "value": 600 },
+      { "clue": "Pillowy dough balls float atop stewed poultry in this old-fashioned Southern comfort dish", "response": "chicken and dumplings", "value": 800 },
+      { "clue": "This supper from the British Isles tucks lamb and vegetables under a mashed-potato roof", "response": "shepherd's pie", "value": 1000 }
+    ]
+  },
+  {
+    "name": "BAKING DAY",
+    "clues": [
+      { "clue": "Semi-sweet morsels dot America's best-loved cookie, first baked at the Toll House Inn", "response": "chocolate chip cookies", "value": 200 },
+      { "clue": "Flour your counter, then flatten the pie dough with this handled wooden cylinder", "response": "a rolling pin", "value": 400 },
+      { "clue": "Bread dough rises thanks to this living single-celled ingredient feeding on sugar", "response": "yeast", "value": 600 },
+      { "clue": "Overripe fruit going brown on the counter means it's time to bake this moist sweet loaf", "response": "banana bread", "value": 800 },
+      { "clue": "Egg whites whipped stiff with sugar bake into this fluffy topping on a lemon pie", "response": "meringue", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SO THE SAYING GOES",
+    "clues": [
+      { "clue": "Proverbially, it's the wriggly prize that the early bird catches", "response": "the worm", "value": 200 },
+      { "clue": "You're warned not to count these barnyard birds before they hatch", "response": "chickens", "value": 400 },
+      { "clue": "Folks who live in glass houses shouldn't throw these, the proverb warns", "response": "stones", "value": 600 },
+      { "clue": "A watched pot never does this, according to impatient kitchen wisdom", "response": "boil", "value": 800 },
+      { "clue": "As the old saying has it, necessity is the mother of this", "response": "invention", "value": 1000 }
+    ]
+  },
+  {
+    "name": "COUNTRY WISDOM",
+    "clues": [
+      { "clue": "Each February 2 this burrowing critter supposedly checks for its shadow", "response": "the groundhog", "value": 200 },
+      { "clue": "The cheery old rhyme promises that April showers will bring these", "response": "May flowers", "value": 400 },
+      { "clue": "Old-timers insist this bolt from the sky never strikes the same place twice", "response": "lightning", "value": 600 },
+      { "clue": "\"Red sky at morning\" tells these seafaring folks to take warning", "response": "sailors", "value": 800 },
+      { "clue": "When the cows all lie down in the pasture, folklore says this is on its way", "response": "rain", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE SEWING BASKET",
+    "clues": [
+      { "clue": "Cap a fingertip with this little metal cup to push the needle without a poke", "response": "a thimble", "value": 200 },
+      { "clue": "This soft holder for your pins is classically shaped like a plump red tomato", "response": "a pincushion", "value": 400 },
+      { "clue": "Sew this folded-under bottom edge so pants and skirts hang at the proper length", "response": "the hem", "value": 600 },
+      { "clue": "Isaac's last name, found on millions of sewing machines, also means a vocalist", "response": "Singer", "value": 800 },
+      { "clue": "Slip a wooden \"egg\" inside a worn sock before doing this old-fashioned mending", "response": "darning", "value": 1000 }
+    ]
+  },
+  {
+    "name": "HANDMADE WITH LOVE",
+    "clues": [
+      { "clue": "Patchwork squares, batting and a backing are stitched into this cozy bed cover", "response": "a quilt", "value": 200 },
+      { "clue": "All you need for this yarn craft is a pair of long pointed needles", "response": "knitting", "value": 400 },
+      { "clue": "This yarn craft named from the French for \"little hook\" uses a single hooked tool", "response": "crochet", "value": 600 },
+      { "clue": "Fabric stretched in a round wooden hoop gets fancied up with this decorative needlework", "response": "embroidery", "value": 800 },
+      { "clue": "Those knotted 1970s plant hangers were the handiwork of this cord-tying craft", "response": "macrame", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SUNDAY MORNING",
+    "clues": [
+      { "clue": "Up in the loft in matching robes, this singing group leads the congregation in hymns", "response": "the choir", "value": 200 },
+      { "clue": "In the children's hand rhyme, \"Here is the church\" and here is this pointed part", "response": "the steeple", "value": 400 },
+      { "clue": "Ushers pass this shallow dish along the pews to gather the Sunday offering", "response": "the collection plate", "value": 600 },
+      { "clue": "Casseroles and pies crowd the fellowship hall at this bring-a-dish church supper", "response": "a potluck", "value": 800 },
+      { "clue": "Ex-slave-ship captain John Newton wrote this hymn about a wretch who once was lost", "response": "\"Amazing Grace\"", "value": 1000 }
+    ]
+  },
+  {
+    "name": "BEING NEIGHBORLY",
+    "clues": [
+      { "clue": "A card table on the sidewalk and this sweet-tart drink make a kid's first business", "response": "lemonade", "value": 200 },
+      { "clue": "Welcome new neighbors by dropping off this baked one-dish dinner, still warm", "response": "a casserole", "value": 400 },
+      { "clue": "Brownies and pies raise money for the school or church at this homespun fundraiser", "response": "a bake sale", "value": 600 },
+      { "clue": "Amish communities gather for this one-day building bee that puts up a big farm structure", "response": "a barn raising", "value": 800 },
+      { "clue": "Since 1928 this friendly \"vehicle\" of a greeting service has called on newcomers in town", "response": "the Welcome Wagon", "value": 1000 }
+    ]
+  },
+  {
+    "name": "HOUSEHOLD HINTS",
+    "clues": [
+      { "clue": "Keep an open box of this white powder in the fridge to soak up funny food smells", "response": "baking soda", "value": 200 },
+      { "clue": "Mix this sour pantry liquid with water to wash windows without streaks", "response": "vinegar", "value": 400 },
+      { "clue": "Silence a squeaky hinge with a spritz of this spray oil in the blue-and-yellow can", "response": "WD-40", "value": 600 },
+      { "clue": "Tuck these pungent little spheres among wool sweaters to guard against hungry larvae", "response": "mothballs", "value": 800 },
+      { "clue": "No cleaner beats this two-word \"ingredient,\" old slang for plain hard scrubbing", "response": "elbow grease", "value": 1000 }
+    ]
+  }
+]

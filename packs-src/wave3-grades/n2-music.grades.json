@@ -1,0 +1,74 @@
+[
+ {
+  "name": "BAROQUE & ROLL",
+  "score": 49,
+  "verdict": "accepted",
+  "notes": "All five facts verified (incl. Bach's 250-mile Lubeck walk to Buxtehude); clean Vivaldi-to-Buxtehude ladder."
+ },
+ {
+  "name": "ROMANTIC PERIOD PIECES",
+  "score": 49,
+  "verdict": "accepted",
+  "notes": "Chopin's heart, Brahms at 43, Bruckner's Ninth dedication all check out; strong hooks throughout."
+ },
+ {
+  "name": "HIGH C'S ADVENTURE",
+  "score": 48,
+  "verdict": "accepted",
+  "notes": "Accurate opera facts; Wagner-as-composer row adds response variety without ambiguity."
+ },
+ {
+  "name": "VERDI INTERESTING",
+  "score": 48,
+  "verdict": "accepted",
+  "notes": "Verdi-in-name gimmick is deliberate; Falstaff-at-79 and Nabucco 1842 verified; real climb."
+ },
+ {
+  "name": "JAZZ HANDS",
+  "score": 48,
+  "verdict": "accepted",
+  "notes": "All nicknames and credits accurate; Django's 1928 fire injury correctly described as fretting fingers."
+ },
+ {
+  "name": "SCAT'S ENTERTAINMENT",
+  "score": 47,
+  "verdict": "accepted",
+  "notes": "Facts solid (Mona Lisa Oscar, Torme 1945); name promises scat but Holiday/Cole are croon-adjacent — minor fit stretch."
+ },
+ {
+  "name": "SPIN DOCTORS",
+  "score": 47,
+  "verdict": "accepted",
+  "notes": "Album facts accurate; Blue vs Pet Sounds row order debatable but defensible."
+ },
+ {
+  "name": "GROOVE IS IN THE ART",
+  "score": 49,
+  "verdict": "accepted",
+  "notes": "Cover-art angle distinct from SPIN DOCTORS; Klarwein/Bitches Brew and London Calling Elvis typography verified."
+ },
+ {
+  "name": "BLUES CLUES",
+  "score": 48,
+  "verdict": "accepted",
+  "notes": "Lucille fire (1949 Twist, AR), Morganfield, Downhearted Blues 1923, Handy 1914 all check out."
+ },
+ {
+  "name": "TWANG THEORY",
+  "score": 48,
+  "verdict": "accepted",
+  "notes": "Hank at 29, Crazy 1961, Rodgers in 1961 inaugural CMHOF class all verified; clean ladder."
+ },
+ {
+  "name": "THE FAST & THE FURIOSO",
+  "score": 46,
+  "verdict": "accepted",
+  "notes": "All Italian terms accurate; $400 crescendo clue is the file's most definition-like — weakest interestingness but passes."
+ },
+ {
+  "name": "DIDGERI-DOS & DON'TS",
+  "score": 49,
+  "verdict": "accepted",
+  "notes": "Theremin 1928 patent, Franklin's armonica with Mozart repertoire verified; every clue has a hook."
+ }
+]

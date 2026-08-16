@@ -1,0 +1,44 @@
+[
+  { "name": "WEAVE GOT THIS", "clues": [
+    { "clue": "Chinese legend says Empress Leizu discovered this fiber when a cocoon dropped into her hot tea", "response": "silk", "value": 400 },
+    { "clue": "Islanders in Scotland's Outer Hebrides hand-weave the famous 'Harris' variety of this woolen cloth", "response": "tweed", "value": 800 },
+    { "clue": "The name of this puckered summer fabric comes from a Persian phrase meaning 'milk and sugar'", "response": "seersucker", "value": 1200 },
+    { "clue": "Punched cards ran this Lyon weaver's 1804 loom and inspired early computing; ornate woven fabric bears his name", "response": "jacquard", "value": 1600 },
+    { "clue": "Once reserved for Inca royalty, the fleece of this wild Andean cousin of the llama outprices cashmere", "response": "the vicuña", "value": 2000 }
+  ] },
+  { "name": "HAUTE PROPERTY", "clues": [
+    { "clue": "Born with the surname Lifshitz, this Bronx designer built a preppy empire around a polo pony", "response": "Ralph Lauren", "value": 400 },
+    { "clue": "'Bumster' trousers and skull-print scarves were signatures of this Briton who took over at Givenchy at age 27", "response": "Alexander McQueen", "value": 800 },
+    { "clue": "He made Jackie Kennedy's inaugural pillbox hat; by the disco era this one-named designer ruled Studio 54", "response": "Halston", "value": 1200 },
+    { "clue": "Called the father of haute couture, this Englishman sewed his label into gowns for Empress Eugénie in Paris", "response": "Charles Frederick Worth", "value": 1600 },
+    { "clue": "This French couturière of the 1920s and '30s pioneered the bias cut, draping crepe on the diagonal", "response": "Madeleine Vionnet", "value": 2000 }
+  ] },
+  { "name": "GEM SESSION", "clues": [
+    { "clue": "King Edward VII dubbed this Paris firm with a panther emblem 'the jeweler of kings'", "response": "Cartier", "value": 400 },
+    { "clue": "Its Persian name means 'mountain of light'; Britain took this diamond from India in 1849", "response": "the Koh-i-Noor", "value": 800 },
+    { "clue": "At 3,106 carats, this rough gem found near Pretoria in 1905 yielded the royal scepter's Great Star of Africa", "response": "the Cullinan diamond", "value": 1200 },
+    { "clue": "Sharing its name with a slender French loaf, this long rectangular step cut often flanks a center stone", "response": "the baguette", "value": 1600 },
+    { "clue": "In 1893 this Japanese entrepreneur cultured his first pearls; his surname became a luxury brand", "response": "Mikimoto", "value": 2000 }
+  ] },
+  { "name": "HAT TRICKS", "clues": [
+    { "clue": "This broad-brimmed Mexican hat takes its name from 'sombra,' the Spanish word for shade", "response": "a sombrero", "value": 400 },
+    { "clue": "This soft felt hat with a pinched crown is named for an 1882 play starring Sarah Bernhardt as a princess", "response": "a fedora", "value": 800 },
+    { "clue": "Woven from toquilla straw, this hat is misnamed: it originated in Ecuador, not the country in its name", "response": "a Panama hat", "value": 1200 },
+    { "clue": "Lock & Co. of London calls it the Coke; Americans know this hard felt hat with a rounded crown as a derby", "response": "a bowler", "value": 1600 },
+    { "clue": "French for 'bell,' this snug, deep-crowned hat topped the bobbed haircuts of 1920s flappers", "response": "a cloche", "value": 2000 }
+  ] },
+  { "name": "ARCH RIVALS", "clues": [
+    { "clue": "Begun in 1882 and unfinished at his death in 1926, the Sagrada Família consumed this Catalan architect", "response": "Antoni Gaudí", "value": 400 },
+    { "clue": "This architect's titanium-clad Guggenheim branch turned Bilbao, Spain into a pilgrimage site in 1997", "response": "Frank Gehry", "value": 800 },
+    { "clue": "In 2004 this Baghdad-born 'Queen of the Curve' became the first woman awarded the Pritzker Prize", "response": "Zaha Hadid", "value": 1200 },
+    { "clue": "'Less is more,' declared this modernist behind the Barcelona Pavilion and New York's Seagram Building", "response": "Mies van der Rohe", "value": 1600 },
+    { "clue": "This Finnish-American designed both the soaring Gateway Arch and the winglike TWA Flight Center", "response": "Eero Saarinen", "value": 2000 }
+  ] },
+  { "name": "WEAR DID THAT COME FROM?", "clues": [
+    { "clue": "Louis Réard named this two-piece swimsuit of 1946 for a Pacific atoll used in atomic bomb tests", "response": "the bikini", "value": 400 },
+    { "clue": "A French trapeze artist who dazzled 1860s Paris gave his name to this snug one-piece garment", "response": "the leotard", "value": 800 },
+    { "clue": "This raincoat honors a Scottish chemist who patented rubberized waterproof cloth in 1823", "response": "the mackintosh", "value": 1200 },
+    { "clue": "A temperance journal editor named Amelia lent her name to these baggy Victorian trousers for women", "response": "bloomers", "value": 1600 },
+    { "clue": "Cut in one diagonal piece running up to the collar, this sleeve is named for a British lord who lost an arm at Waterloo", "response": "the raglan", "value": 2000 }
+  ] }
+]

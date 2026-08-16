@@ -1,0 +1,362 @@
+[
+ {
+  "name": "BAROQUE & ROLL",
+  "clues": [
+   {
+    "clue": "Nicknamed 'the Red Priest,' this Venetian packed birdsong and thunderstorms into 'The Four Seasons' violin concertos",
+    "response": "Vivaldi",
+    "value": 400
+   },
+   {
+    "clue": "Six concertos this German dedicated to the Margrave of Brandenburg in 1721 now bear the nobleman's title",
+    "response": "Bach",
+    "value": 800
+   },
+   {
+    "clue": "This composer became a British subject in 1727; 15 years later his 'Messiah' premiered in Dublin",
+    "response": "Handel",
+    "value": 1200
+   },
+   {
+    "clue": "'Dido and Aeneas,' with its dying queen's haunting lament, is the operatic gem of this English Baroque master",
+    "response": "Purcell",
+    "value": 1600
+   },
+   {
+    "clue": "In 1705 a 20-year-old Bach walked some 250 miles to Lübeck just to hear this celebrated organist play",
+    "response": "Buxtehude",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ROMANTIC PERIOD PIECES",
+  "clues": [
+   {
+    "clue": "Cannon fire punctuates the 1812 Overture by this Russian also famed for 'Swan Lake' and 'The Nutcracker'",
+    "response": "Tchaikovsky",
+    "value": 400
+   },
+   {
+    "clue": "Nearly all this Pole's works involve the piano; after his 1849 death in Paris, his heart went home to a Warsaw church",
+    "response": "Chopin",
+    "value": 800
+   },
+   {
+    "clue": "In his 40s, this composer finally unveiled a First Symphony so Beethoven-indebted it was dubbed 'Beethoven's Tenth'",
+    "response": "Brahms",
+    "value": 1200
+   },
+   {
+    "clue": "An artist's opium dreams of his unattainable beloved drive this Frenchman's 1830 'Symphonie fantastique'",
+    "response": "Berlioz",
+    "value": 1600
+   },
+   {
+    "clue": "This devout Austrian symphonist, once the organist at St. Florian abbey, dedicated his unfinished Ninth to God",
+    "response": "Bruckner",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "HIGH C'S ADVENTURE",
+  "clues": [
+   {
+    "clue": "A cigarette-factory worker in Seville seduces the soldier Don José in this 1875 Bizet opera",
+    "response": "Carmen",
+    "value": 400
+   },
+   {
+    "clue": "Mimì, a seamstress with a telltale cough, charms a poet in this Puccini opera set in Paris' Latin Quarter",
+    "response": "La Bohème",
+    "value": 800
+   },
+   {
+    "clue": "This composer built a festival theater at Bayreuth expressly to stage his four-opera 'Ring' cycle",
+    "response": "Wagner",
+    "value": 1200
+   },
+   {
+    "clue": "A Scottish bride stabs her bridegroom and descends into a famous mad scene in this Donizetti opera from a Walter Scott tale",
+    "response": "Lucia di Lammermoor",
+    "value": 1600
+   },
+   {
+    "clue": "An outcast fisherman battles a Suffolk village's suspicion in this 1945 Benjamin Britten opera",
+    "response": "Peter Grimes",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "VERDI INTERESTING",
+  "clues": [
+   {
+    "clue": "An enslaved Ethiopian princess loves an Egyptian commander in this Verdi opera with a famed triumphal march",
+    "response": "Aida",
+    "value": 400
+   },
+   {
+    "clue": "A hunchbacked court jester fails to shield his daughter Gilda from his master, the licentious Duke of Mantua, in this opera",
+    "response": "Rigoletto",
+    "value": 800
+   },
+   {
+    "clue": "The courtesan Violetta gives up her true love and fades from consumption in this opera based on a Dumas fils novel",
+    "response": "La traviata",
+    "value": 1200
+   },
+   {
+    "clue": "Its chorus of homesick Hebrew slaves became an Italian favorite; this 1842 breakthrough concerns a Babylonian king",
+    "response": "Nabucco",
+    "value": 1600
+   },
+   {
+    "clue": "Premiered when Verdi was 79, this comic opera sends Shakespeare's fat knight off to woo two merry wives at once",
+    "response": "Falstaff",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "JAZZ HANDS",
+  "clues": [
+   {
+    "clue": "Nicknamed Satchmo, this New Orleans trumpeter growled his way through 'What a Wonderful World' in 1967",
+    "response": "Louis Armstrong",
+    "value": 400
+   },
+   {
+    "clue": "This bandleader-pianist held court at Harlem's Cotton Club; Billy Strayhorn penned his theme, 'Take the A Train'",
+    "response": "Duke Ellington",
+    "value": 800
+   },
+   {
+    "clue": "Bird was the nickname of this alto saxophonist who forged bebop alongside Dizzy Gillespie",
+    "response": "Charlie Parker",
+    "value": 1200
+   },
+   {
+    "clue": "Famed for offbeat hats and an angular style, this bebop pianist co-wrote the much-covered standard ''Round Midnight'",
+    "response": "Thelonious Monk",
+    "value": 1600
+   },
+   {
+    "clue": "After a 1928 caravan fire crippled two of his fretting fingers, this Romani guitarist still pioneered Gypsy jazz in Paris",
+    "response": "Django Reinhardt",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SCAT'S ENTERTAINMENT",
+  "clues": [
+   {
+    "clue": "Dubbed the First Lady of Song, this scat virtuoso devoted whole songbook albums to Porter, Gershwin & more",
+    "response": "Ella Fitzgerald",
+    "value": 400
+   },
+   {
+    "clue": "Nicknamed Lady Day by Lester Young, this singer recorded the chilling anti-lynching ballad 'Strange Fruit' in 1939",
+    "response": "Billie Holiday",
+    "value": 800
+   },
+   {
+    "clue": "This jazz trio pianist turned velvet crooner topped charts with 'Nature Boy' and the Oscar-winning 'Mona Lisa'",
+    "response": "Nat King Cole",
+    "value": 1200
+   },
+   {
+    "clue": "Nicknamed 'Sassy' and 'The Divine One,' this Newark-born singer wielded an operatic multi-octave range",
+    "response": "Sarah Vaughan",
+    "value": 1600
+   },
+   {
+    "clue": "Called the Velvet Fog, this crooner and drummer co-wrote 1945's 'The Christmas Song' on a sweltering summer day",
+    "response": "Mel Tormé",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SPIN DOCTORS",
+  "clues": [
+   {
+    "clue": "Four bandmates stride a zebra crossing on the cover of this 1969 Beatles LP named for a London street",
+    "response": "Abbey Road",
+    "value": 400
+   },
+   {
+    "clue": "Romantic breakups inside Fleetwood Mac fueled this 1977 blockbuster with 'Go Your Own Way' and 'Dreams'",
+    "response": "Rumours",
+    "value": 800
+   },
+   {
+    "clue": "Determined to top 'Rubber Soul,' Brian Wilson crafted this lush 1966 Beach Boys studio masterwork",
+    "response": "Pet Sounds",
+    "value": 1200
+   },
+   {
+    "clue": "Joni Mitchell laid heartbreak bare on this color-titled 1971 album that holds 'A Case of You' and 'River'",
+    "response": "Blue",
+    "value": 1600
+   },
+   {
+    "clue": "Van Morrison improvised with jazz session players over a few 1968 dates to make this mystical eight-part cycle",
+    "response": "Astral Weeks",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "GROOVE IS IN THE ART",
+  "clues": [
+   {
+    "clue": "A prism splits a beam of light into a rainbow on the black cover of this 1973 Pink Floyd landmark",
+    "response": "Dark Side of the Moon",
+    "value": 400
+   },
+   {
+    "clue": "A naked baby paddles toward a dollar bill on a fishhook on the cover of this 1991 Nirvana breakthrough",
+    "response": "Nevermind",
+    "value": 800
+   },
+   {
+    "clue": "This pop art icon's printed signature sits by the peel-away banana on the Velvet Underground's 1967 debut",
+    "response": "Andy Warhol",
+    "value": 1200
+   },
+   {
+    "clue": "Paul Simonon smashes his bass on the cover of this 1979 Clash album, its pink-and-green type echoing an Elvis LP",
+    "response": "London Calling",
+    "value": 1600
+   },
+   {
+    "clue": "Mati Klarwein painted the surreal gatefold of this 1970 double album, the big bang of Miles Davis' jazz-rock fusion",
+    "response": "Bitches Brew",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "BLUES CLUES",
+  "clues": [
+   {
+    "clue": "This Mississippi-born bluesman named each of his beloved guitars Lucille after a 1949 dance-hall fire",
+    "response": "B.B. King",
+    "value": 400
+   },
+   {
+    "clue": "Born McKinley Morganfield, this bluesman electrified the Delta sound in postwar Chicago",
+    "response": "Muddy Waters",
+    "value": 800
+   },
+   {
+    "clue": "Legend claims this Delta guitarist, dead at 27 in 1938, traded his soul at a crossroads for his talent",
+    "response": "Robert Johnson",
+    "value": 1200
+   },
+   {
+    "clue": "Known as the Empress of the Blues, this 1920s superstar cut her smash debut record 'Downhearted Blues' in 1923",
+    "response": "Bessie Smith",
+    "value": 1600
+   },
+   {
+    "clue": "This bandleader, the self-styled 'Father of the Blues,' published 'St. Louis Blues' in 1914",
+    "response": "W.C. Handy",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "TWANG THEORY",
+  "clues": [
+   {
+    "clue": "This 'Man in Black' cut roaring live albums behind the walls of Folsom and San Quentin prisons",
+    "response": "Johnny Cash",
+    "value": 400
+   },
+   {
+    "clue": "This Alabama honky-tonk legend died at 29 in the back seat of a Cadillac on the way to a 1953 New Year's show",
+    "response": "Hank Williams",
+    "value": 800
+   },
+   {
+    "clue": "Willie Nelson wrote 'Crazy,' the signature 1961 ballad of this contralto lost in a 1963 plane crash",
+    "response": "Patsy Cline",
+    "value": 1200
+   },
+   {
+    "clue": "This mandolin master dubbed the Father of Bluegrass gave the genre its name via his band, the Blue Grass Boys",
+    "response": "Bill Monroe",
+    "value": 1600
+   },
+   {
+    "clue": "'The Singing Brakeman,' this blue-yodeling Mississippian entered the Country Music Hall of Fame in its first 1961 class",
+    "response": "Jimmie Rodgers",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "THE FAST & THE FURIOSO",
+  "clues": [
+   {
+    "clue": "From the Italian for 'growing,' it's a gradual swell in volume",
+    "response": "crescendo",
+    "value": 400
+   },
+   {
+    "clue": "Choral music without instruments is performed this way, Italian for 'in the chapel style'",
+    "response": "a cappella",
+    "value": 800
+   },
+   {
+    "clue": "String players pluck rather than bow when the score calls for this Italian direction",
+    "response": "pizzicato",
+    "value": 1200
+   },
+   {
+    "clue": "Italian for 'robbed,' this term lets a soloist bend the tempo, stealing time from some beats to repay others",
+    "response": "rubato",
+    "value": 1600
+   },
+   {
+    "clue": "Violinists strike the strings with the stick of the bow in this technique, Italian for 'with the wood'",
+    "response": "col legno",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "DIDGERI-DOS & DON'TS",
+  "clues": [
+   {
+    "clue": "Air squeezed from a sack feeds the chanter and drones of this Highland staple",
+    "response": "bagpipes",
+    "value": 400
+   },
+   {
+    "clue": "Ravi Shankar taught George Harrison this long-necked, movable-fret Indian string instrument",
+    "response": "sitar",
+    "value": 800
+   },
+   {
+    "clue": "Hands hovering near two antennas, never touching, control this electronic instrument a Russian patented in 1928",
+    "response": "theremin",
+    "value": 1200
+   },
+   {
+    "clue": "A hand crank spins a rosined wheel that sounds the strings of this droning medieval instrument",
+    "response": "hurdy-gurdy",
+    "value": 1600
+   },
+   {
+    "clue": "Ben Franklin invented this instrument of nested spinning bowls stroked with wet fingers; Mozart composed for it",
+    "response": "glass armonica",
+    "value": 2000
+   }
+  ]
+ }
+]

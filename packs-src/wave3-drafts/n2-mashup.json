@@ -1,0 +1,182 @@
+[
+  {
+    "name": "HISTORY IN A BLENDER",
+    "clues": [
+      {
+        "clue": "The Ides of March assassination victim gets tossed with romaine, croutons and shaved Parmesan.",
+        "response": "Julius Caesar Salad",
+        "value": 400
+      },
+      {
+        "clue": "The Maid of Orléans marches up the Champs-Élysées to the arch Napoleon commissioned for his Grande Armée.",
+        "response": "Joan of Arc de Triomphe",
+        "value": 800
+      },
+      {
+        "clue": "The Macedonian conqueror tutored by Aristotle crashes Jay's lavish West Egg parties.",
+        "response": "Alexander the Great Gatsby",
+        "value": 1200
+      },
+      {
+        "clue": "The Venetian who chronicled Kublai Khan's court models for the preppy U.S. designer with the mallet-swinging horseman emblem.",
+        "response": "Marco Polo Ralph Lauren",
+        "value": 1600
+      },
+      {
+        "clue": "Russia's first crowned tsar throws a royal fit in the tantrum-heavy toddler phase parents dread.",
+        "response": "Ivan the Terrible Twos",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "HIP-HOP HYBRIDS",
+    "clues": [
+      {
+        "clue": "The 'Gold Digger' rapper rumbles with the Jets and the Sharks in the Bernstein-Sondheim musical.",
+        "response": "Kanye West Side Story",
+        "value": 400
+      },
+      {
+        "clue": "The blond '90s rapper who lifted the 'Under Pressure' bassline chills with the N.W.A alum who starred in 'Friday.'",
+        "response": "Vanilla Ice Cube",
+        "value": 800
+      },
+      {
+        "clue": "The parachute-pants rapper who couldn't be touched swings into the crossed tools on the Soviet flag.",
+        "response": "MC Hammer and Sickle",
+        "value": 1200
+      },
+      {
+        "clue": "The raspy Young Money founder behind 'Lollipop' skates off with hockey's 'Great One,' who wore number 99.",
+        "response": "Lil Wayne Gretzky",
+        "value": 1600
+      },
+      {
+        "clue": "The D.C. daily that broke Watergate with Woodward and Bernstein signs the face-tattooed 'Circles' hitmaker.",
+        "response": "Washington Post Malone",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "ONCE UPON A MASH-UP",
+    "clues": [
+      {
+        "clue": "The fairest apple-biter of them all, flanked by seven short roommates, moves into 1600 Pennsylvania Avenue.",
+        "response": "Snow White House",
+        "value": 400
+      },
+      {
+        "clue": "The pillow-side collector of baby molars bibbidi-bobbidi-boos Cinderella's ride to the ball.",
+        "response": "Tooth Fairy Godmother",
+        "value": 800
+      },
+      {
+        "clue": "Neverland's never-aging leader takes up the graduated reed pipes Gheorghe Zamfir made famous.",
+        "response": "Peter Pan Flute",
+        "value": 1200
+      },
+      {
+        "clue": "The princess who pricked her finger on a spindle wakes up wearing a sash at the swimsuit-and-talent contest.",
+        "response": "Sleeping Beauty Pageant",
+        "value": 1600
+      },
+      {
+        "clue": "The wolf-fooled girl toting a basket to Grandma's gleams as the chrome mascot on a luxury car's nose.",
+        "response": "Little Red Riding Hood Ornament",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "MAD SCIENCE MELDS",
+    "clues": [
+      {
+        "clue": "The collapsed star whose gravity traps even light aces a par 3 with a single stroke.",
+        "response": "Black Hole in One",
+        "value": 400
+      },
+      {
+        "clue": "Mendeleev's grid of the chemical elements rallies with the paddle sport nicknamed ping-pong.",
+        "response": "Periodic Table Tennis",
+        "value": 800
+      },
+      {
+        "clue": "Nitrous oxide, the giggle-inducing dental anesthetic, pulls up to the pumps for a fill-up and a slushie.",
+        "response": "Laughing Gas Station",
+        "value": 1200
+      },
+      {
+        "clue": "The chemistry-lab flame named for a German scientist dials out on a TV drug dealer's prepaid disposable.",
+        "response": "Bunsen Burner Phone",
+        "value": 1600
+      },
+      {
+        "clue": "The shallow lab plate where bacteria colonies bloom tunes in to the Colorado-based satellite-TV giant.",
+        "response": "Petri Dish Network",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "CELEBRITY MERGERS",
+    "clues": [
+      {
+        "clue": "The violet-eyed 'Cleopatra' star shakes it off with the singer who turned 'Love Story' into a country-pop smash.",
+        "response": "Elizabeth Taylor Swift",
+        "value": 400
+      },
+      {
+        "clue": "The 'Talented Mr. Ripley' heartthrob who played Dickie Greenleaf gets the 'dun-dun' treatment on Dick Wolf's procedural.",
+        "response": "Jude Law & Order",
+        "value": 800
+      },
+      {
+        "clue": "The spiced rum named for a Welsh privateer gets narrated in honeyed tones by the Oscar winner who drove Miss Daisy.",
+        "response": "Captain Morgan Freeman",
+        "value": 1200
+      },
+      {
+        "clue": "The 2000s reality-TV heiress of 'The Simple Life' checks into South Carolina's famed golf-resort isle.",
+        "response": "Paris Hilton Head Island",
+        "value": 1600
+      },
+      {
+        "clue": "The pratfalling original 'Weekend Update' anchor deposits his 'Fletch' royalties with David Rockefeller's onetime Wall Street giant.",
+        "response": "Chevy Chase Manhattan Bank",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "COMBO MEAL CROSSOVERS",
+    "clues": [
+      {
+        "clue": "The hollandaise-drenched brunch classic on an English muffin defects to the British with the Revolution's most notorious turncoat.",
+        "response": "Eggs Benedict Arnold",
+        "value": 400
+      },
+      {
+        "clue": "Autumn's cinnamon-nutmeg latte flavor tells you what it wants, what it really, really wants: the 'Wannabe' quintet.",
+        "response": "Pumpkin Spice Girls",
+        "value": 800
+      },
+      {
+        "clue": "The sweet-and-spicy Chinese-American takeout staple honoring a Qing dynasty commander squawks that the sky is falling.",
+        "response": "General Tso's Chicken Little",
+        "value": 1200
+      },
+      {
+        "clue": "The flame-browned meringue dessert with ice cream inside boards the Seattle-area carrier with a smiling Indigenous face on its tail.",
+        "response": "Baked Alaska Airlines",
+        "value": 1600
+      },
+      {
+        "clue": "Escoffier's raspberry-drizzled dessert honoring an Australian opera diva crisps into the brittle dried-bread cracker also named for her.",
+        "response": "Peach Melba Toast",
+        "value": 2000
+      }
+    ]
+  }
+]

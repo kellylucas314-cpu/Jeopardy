@@ -1,0 +1,86 @@
+[
+  { "name": "ETYMOLOGY, MY DEAR WATSON", "clues": [
+    { "clue": "The name of this morning meal literally announces that your overnight fast is over", "response": "breakfast", "value": 200 },
+    { "clue": "Your fixed pay from an employer takes its name from 'sal,' the Latin word for salt", "response": "salary", "value": 400 },
+    { "clue": "From the Italian for 40, the number of days ships suspected of plague once sat isolated off Venice", "response": "quarantine", "value": 600 },
+    { "clue": "This word for body tissue is from the Latin for 'little mouse'--picture a flexed bicep rippling", "response": "muscle", "value": 800 },
+    { "clue": "Fitting for this game: the word for trifling facts traces to 'trivium,' Latin for a spot where 3 roads meet", "response": "trivia", "value": 1000 }
+  ] },
+  { "name": "FRESHLY MINTED WORDS", "clues": [
+    { "clue": "Any miser can be called this, thanks to the 'Bah! Humbug!' grouch of Dickens' 'A Christmas Carol'", "response": "Scrooge", "value": 200 },
+    { "clue": "A creature called this in Dr. Seuss' 'If I Ran the Zoo' gave English a word for a bookish square", "response": "nerd", "value": 400 },
+    { "clue": "Karel Capek's 1920 play 'R.U.R.' introduced this word, built from the Czech for forced labor", "response": "robot", "value": 600 },
+    { "clue": "Thomas More coined this word for an ideal commonwealth from Greek parts meaning 'no place'", "response": "utopia", "value": 800 },
+    { "clue": "Horace Walpole coined this term for lucky discoveries after the tale of 'The Three Princes of Serendip'", "response": "serendipity", "value": 1000 }
+  ] },
+  { "name": "EAT YOUR WORDS", "clues": [
+    { "clue": "An absurdly easy task is said to be 'a piece of' this frosted dessert", "response": "cake", "value": 200 },
+    { "clue": "Blab a secret and you've 'spilled' these legumes all over the floor", "response": "beans", "value": 400 },
+    { "clue": "A person who stays perfectly calm under pressure is said to be as cool as this salad veggie", "response": "a cucumber", "value": 600 },
+    { "clue": "From an Aesop fable about a frustrated fox, this fruity 2-word phrase means scorning what you can't have", "response": "sour grapes", "value": 800 },
+    { "clue": "Admitting you were dead wrong means eating this dish, from 'umbles,' the innards of a deer", "response": "humble pie", "value": 1000 }
+  ] },
+  { "name": "IDIOM SAVANT", "clues": [
+    { "clue": "A torrential downpour is said to be raining these two quarreling household pets", "response": "cats and dogs", "value": 200 },
+    { "clue": "To get strangers chatting at a party, you 'break' this frozen barrier", "response": "the ice", "value": 400 },
+    { "clue": "A rare event happens 'once in' one of these -- the phrase pairs a color with Earth's satellite", "response": "a blue moon", "value": 600 },
+    { "clue": "Echoing a Native American peace custom, ending a feud means 'burying' this small axe", "response": "the hatchet", "value": 800 },
+    { "clue": "Passing a personal point of no return means crossing this river, as Caesar did in 49 B.C.", "response": "the Rubicon", "value": 1000 }
+  ] },
+  { "name": "RHYMES WITH \"CAT\"", "clues": [
+    { "clue": "The only mammal capable of true powered flight, it roosts hanging upside down", "response": "a bat", "value": 200 },
+    { "clue": "A Londoner's apartment goes by this 4-letter word that also means 'level'", "response": "a flat", "value": 400 },
+    { "clue": "This tiny 4-letter insect with a silent first letter swarms in annoying clouds", "response": "a gnat", "value": 600 },
+    { "clue": "This fancy term for a necktie derives from the 17th century Croatian mercenaries who wore them", "response": "a cravat", "value": 800 },
+    { "clue": "Genesis says Noah's Ark came to rest on the mountains of this region in modern Turkey", "response": "Ararat", "value": 1000 }
+  ] },
+  { "name": "IT TAKES TWO TO RHYME", "clues": [
+    { "clue": "It's the rhyming nickname for paper post that crawls along while email zips", "response": "snail mail", "value": 200 },
+    { "clue": "This rhyming 1960s hippie slogan answered war with blossoms", "response": "flower power", "value": 400 },
+    { "clue": "This rhyming phrase laments a nation's skilled workers emigrating en masse", "response": "brain drain", "value": 600 },
+    { "clue": "This rhyming term describes a voracious devourer of museums, theater & opera", "response": "culture vulture", "value": 800 },
+    { "clue": "This rhyming phrase for pell-mell disorder also names a British fairground spiral slide", "response": "helter-skelter", "value": 1000 }
+  ] },
+  { "name": "INITIAL REACTIONS", "clues": [
+    { "clue": "Fingerprint files & a 'Most Wanted' list are hallmarks of this 3-letter bureau long led by J. Edgar Hoover", "response": "the FBI", "value": 200 },
+    { "clue": "James Watson & Francis Crick unzipped the double-helix secret of this genetic molecule known by 3 initials", "response": "DNA", "value": 400 },
+    { "clue": "On an invitation, these 4 letters abbreviate the French for 'respond, if you please'", "response": "RSVP", "value": 600 },
+    { "clue": "This Morse distress call was picked for its simple dots & dashes; 'save our souls' came later", "response": "SOS", "value": 800 },
+    { "clue": "The 'ZIP' in ZIP code stands for this 3-word 'plan' the Post Office rolled out in 1963", "response": "Zone Improvement Plan", "value": 1000 }
+  ] },
+  { "name": "ALPHABET SOUPER", "clues": [
+    { "clue": "Divers owe this 5-letter word to 'self-contained underwater breathing apparatus'", "response": "scuba", "value": 200 },
+    { "clue": "This concentrated beam began as an acronym for 'light amplification by stimulated emission of radiation'", "response": "laser", "value": 400 },
+    { "clue": "Coined by the U.S. Navy around 1940, this palindromic acronym means 'radio detection and ranging'", "response": "radar", "value": 600 },
+    { "clue": "This 2-word term for a parcel of treats began with an aid group: the Cooperative for American Remittances to Europe", "response": "care package", "value": 800 },
+    { "clue": "Inventor Jack Cover named this stun device after a Tom Swift novel about an 'electric rifle'", "response": "Taser", "value": 1000 }
+  ] },
+  { "name": "PARDON MY FRENCH", "clues": [
+    { "clue": "French for 'already seen,' it's that eerie feeling you've lived this exact moment before", "response": "deja vu", "value": 200 },
+    { "clue": "Literally a 'false step,' it's a social blunder like calling the host by the wrong name", "response": "faux pas", "value": 400 },
+    { "clue": "Meaning 'I don't know what,' this 4-word phrase names a charm too elusive to define", "response": "je ne sais quoi", "value": 600 },
+    { "clue": "Literally 'let do,' this hyphenated French term describes a hands-off approach to the economy", "response": "laissez-faire", "value": 800 },
+    { "clue": "Literally 'spirit of the body,' it's the shared pride and morale that binds a military unit", "response": "esprit de corps", "value": 1000 }
+  ] },
+  { "name": "SPRECHEN SIE ENGLISH?", "clues": [
+    { "clue": "Friedrich Froebel coined this German word, literally a 'children's garden,' for his school for tots", "response": "kindergarten", "value": 200 },
+    { "clue": "Literally 'health,' it's the German blessing you may offer after a sneeze", "response": "gesundheit", "value": 400 },
+    { "clue": "German for 'noisy spirit,' it's the kind of ghost that hurls the crockery around", "response": "poltergeist", "value": 600 },
+    { "clue": "German for 'double-goer,' it's your uncanny walking, talking look-alike", "response": "doppelganger", "value": 800 },
+    { "clue": "This German compound, literally 'harm-joy,' is the sneaky pleasure taken in a rival's flop", "response": "schadenfreude", "value": 1000 }
+  ] },
+  { "name": "LEND ME YOUR NAME", "clues": [
+    { "clue": "Blind since childhood, Louis devised this raised-dot alphabet as a Paris schoolboy in the 1820s", "response": "braille", "value": 200 },
+    { "clue": "In 1846 a Belgian named Adolphe patented this reed instrument beloved by jazz players", "response": "the saxophone", "value": 400 },
+    { "clue": "In 1880 Irish tenants froze out a County Mayo land agent, turning his surname into this protest verb", "response": "boycott", "value": 600 },
+    { "clue": "A 19th century French trapeze star's surname became the name of this skintight one-piece", "response": "a leotard", "value": 800 },
+    { "clue": "A salamander-shaped 1812 Massachusetts district gave American politics this map-rigging verb", "response": "gerrymander", "value": 1000 }
+  ] },
+  { "name": "EPONYMOUS EATS", "clues": [
+    { "clue": "Legend claims the 4th Earl of this place asked for meat between bread so he wouldn't leave the gaming table", "response": "Sandwich", "value": 200 },
+    { "clue": "Romaine & croutons star in this dish created by Tijuana restaurateur Cardini, no Roman conqueror involved", "response": "Caesar salad", "value": 400 },
+    { "clue": "This tart green apple variety is named for the Australian woman who first cultivated it", "response": "Granny Smith", "value": 600 },
+    { "clue": "Australia & New Zealand feud over inventing this billowy meringue dessert named for a Russian ballerina", "response": "pavlova", "value": 800 },
+    { "clue": "Chef Auguste Escoffier crafted this fruit-and-ice-cream dessert to honor an Australian opera diva", "response": "peach Melba", "value": 1000 }
+  ] }
+]

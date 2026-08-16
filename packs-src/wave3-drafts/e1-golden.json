@@ -1,0 +1,122 @@
+[
+  {
+    "name": "LEADING MEN OF OLD HOLLYWOOD",
+    "clues": [
+      { "clue": "Nicknamed 'Duke,' this cowboy star won his Oscar for True Grit.", "response": "John Wayne", "value": 200 },
+      { "clue": "This lanky, drawling everyman befriended a giant invisible rabbit named Harvey.", "response": "James Stewart", "value": 400 },
+      { "clue": "This tough-guy star sleuthed as private eye Sam Spade in The Maltese Falcon.", "response": "Humphrey Bogart", "value": 600 },
+      { "clue": "Hollywood's 'King' played Rhett Butler and won an Oscar for It Happened One Night.", "response": "Clark Gable", "value": 800 },
+      { "clue": "Born Archibald Leach, this suave leading man dodged a crop duster in North by Northwest.", "response": "Cary Grant", "value": 1000 }
+    ]
+  },
+  {
+    "name": "AMERICA'S SWEETHEARTS",
+    "clues": [
+      { "clue": "Her white dress billowed over a subway grate in The Seven Year Itch.", "response": "Marilyn Monroe", "value": 200 },
+      { "clue": "She sang 'Over the Rainbow' as Dorothy and later dazzled at Carnegie Hall.", "response": "Judy Garland", "value": 400 },
+      { "clue": "This elegant gamine nibbled a pastry outside Tiffany's as Holly Golightly.", "response": "Audrey Hepburn", "value": 600 },
+      { "clue": "This violet-eyed beauty played Cleopatra and won an Oscar for Butterfield 8.", "response": "Elizabeth Taylor", "value": 800 },
+      { "clue": "She teamed with Spencer Tracy in nine films, including Adam's Rib.", "response": "Katharine Hepburn", "value": 1000 }
+    ]
+  },
+  {
+    "name": "A NIGHT AT THE PICTURES",
+    "clues": [
+      { "clue": "Scarlett O'Hara vows she'll never go hungry again in this 1939 Civil War epic.", "response": "Gone with the Wind", "value": 200 },
+      { "clue": "An angel named Clarence finally earns his wings in this beloved Christmas classic.", "response": "It's a Wonderful Life", "value": 400 },
+      { "clue": "Rick runs a cafe full of refugees in this wartime romance set in Morocco.", "response": "Casablanca", "value": 600 },
+      { "clue": "Charlton Heston drives a chariot in this 1959 epic that won 11 Oscars.", "response": "Ben-Hur", "value": 800 },
+      { "clue": "Bogart won his only Oscar as a riverboat captain opposite Hepburn in this 1951 film.", "response": "The African Queen", "value": 1000 }
+    ]
+  },
+  {
+    "name": "WE ALL LOVED LUCY",
+    "clues": [
+      { "clue": "Desi Arnaz played this conga-drumming bandleader, Lucy's TV husband.", "response": "Ricky Ricardo", "value": 200 },
+      { "clue": "Vivian Vance played this loyal gal pal and neighbor, married to Fred.", "response": "Ethel Mertz", "value": 400 },
+      { "clue": "Lucy stomped around barefoot in a vat of these at an Italian winery.", "response": "grapes", "value": 600 },
+      { "clue": "Some 44 million viewers tuned in when the Ricardos welcomed this baby boy in 1953.", "response": "Little Ricky", "value": 800 },
+      { "clue": "Lucy slowly got tipsy filming a commercial for this vitamin tonic.", "response": "Vitameatavegamin", "value": 1000 }
+    ]
+  },
+  {
+    "name": "GATHER 'ROUND THE TV SET",
+    "clues": [
+      { "clue": "Sheriff Andy Taylor and Deputy Barney Fife kept order in this friendly TV town.", "response": "Mayberry", "value": 200 },
+      { "clue": "The Clampetts struck oil and lounged by their mansion's 'cement pond' in this sitcom.", "response": "The Beverly Hillbillies", "value": 400 },
+      { "clue": "A three-hour tour went awry, stranding seven castaways in this sitcom.", "response": "Gilligan's Island", "value": 600 },
+      { "clue": "Ben Cartwright and sons Hoss and Little Joe ran the Ponderosa in this western.", "response": "Bonanza", "value": 800 },
+      { "clue": "Bus driver Ralph Kramden hollered 'To the moon, Alice!' in this Brooklyn classic.", "response": "The Honeymooners", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THEY SAID IT ON TV",
+    "clues": [
+      { "clue": "For 30 years, this jovial sidekick bellowed 'Heeere's Johnny!' on The Tonight Show.", "response": "Ed McMahon", "value": 200 },
+      { "clue": "'Sock it to me!' usually got somebody doused on this zany Rowan & Martin show.", "response": "Laugh-In", "value": 400 },
+      { "clue": "'Good night, John-Boy' closed many an episode of this Depression-era family drama.", "response": "The Waltons", "value": 600 },
+      { "clue": "Sgt. Joe Friday stuck to the facts, ma'am, on this deadpan L.A. police drama.", "response": "Dragnet", "value": 800 },
+      { "clue": "This cigar-waving funnyman told his wife, 'Say good night, Gracie.'", "response": "George Burns", "value": 1000 }
+    ]
+  },
+  {
+    "name": "CROONER'S CORNER",
+    "clues": [
+      { "clue": "Fans called this Hoboken crooner 'Ol' Blue Eyes' and 'The Chairman of the Board.'", "response": "Frank Sinatra", "value": 200 },
+      { "clue": "This easygoing Rat Pack charmer sang 'That's Amore' and 'Everybody Loves Somebody.'", "response": "Dean Martin", "value": 400 },
+      { "clue": "This velvet-voiced pianist sang 'Mona Lisa' and 'Unforgettable.'", "response": "Nat King Cole", "value": 600 },
+      { "clue": "A barber before fame, this cardigan-wearing crooner sang 'Catch a Falling Star.'", "response": "Perry Como", "value": 800 },
+      { "clue": "Born Anthony Benedetto, this crooner left his heart in San Francisco.", "response": "Tony Bennett", "value": 1000 }
+    ]
+  },
+  {
+    "name": "THE MOTOWN SOUND",
+    "clues": [
+      { "clue": "Diana Ross fronted this trio, who commanded 'Stop! In the Name of Love.'", "response": "The Supremes", "value": 200 },
+      { "clue": "'My Girl' gave sunshine on a cloudy day to this sharp-stepping Motown quintet.", "response": "The Temptations", "value": 400 },
+      { "clue": "Motown signed this harmonica prodigy at age 11; he later sang 'My Cherie Amour.'", "response": "Stevie Wonder", "value": 600 },
+      { "clue": "This Miracles frontman sang 'The Tracks of My Tears' and wrote 'My Guy.'", "response": "Smokey Robinson", "value": 800 },
+      { "clue": "With an $800 family loan, this former boxer built Motown Records in Detroit.", "response": "Berry Gordy", "value": 1000 }
+    ]
+  },
+  {
+    "name": "BIG BAND DAYS",
+    "clues": [
+      { "clue": "'In the Mood' and 'Moonlight Serenade' made this bandleader a wartime favorite.", "response": "Glenn Miller", "value": 200 },
+      { "clue": "With 'a-one an' a-two,' this bubbly maestro poured champagne music into TV homes.", "response": "Lawrence Welk", "value": 400 },
+      { "clue": "This 'King of Swing' brought his clarinet to Carnegie Hall in 1938.", "response": "Benny Goodman", "value": 600 },
+      { "clue": "This elegant composer-bandleader made 'Take the \"A\" Train' his theme.", "response": "Duke Ellington", "value": 800 },
+      { "clue": "'One O'Clock Jump' was the theme of this Kansas City bandleader at the piano.", "response": "Count Basie", "value": 1000 }
+    ]
+  },
+  {
+    "name": "MUSICALS AT THE MOVIES",
+    "clues": [
+      { "clue": "Julie Andrews twirled on an Alpine hilltop as governess to the von Trapps in this film.", "response": "The Sound of Music", "value": 200 },
+      { "clue": "Gene Kelly splashed through puddles with a 'glorious feeling' in this 1952 classic.", "response": "Singin' in the Rain", "value": 400 },
+      { "clue": "A practically perfect nanny floats in by umbrella in this 1964 Disney musical.", "response": "Mary Poppins", "value": 600 },
+      { "clue": "Eliza Doolittle masters 'the rain in Spain' in this 1964 Best Picture winner.", "response": "My Fair Lady", "value": 800 },
+      { "clue": "Tony loves Maria despite the Jets and the Sharks in this 1961 musical.", "response": "West Side Story", "value": 1000 }
+    ]
+  },
+  {
+    "name": "MOVIE LINES TO REMEMBER",
+    "clues": [
+      { "clue": "Dorothy taps her heels and repeats 'There's no place like home' in this 1939 film.", "response": "The Wizard of Oz", "value": 200 },
+      { "clue": "'I'm gonna make him an offer he can't refuse,' says Don Corleone in this 1972 film.", "response": "The Godfather", "value": 400 },
+      { "clue": "'You're gonna need a bigger boat' is sound advice in this 1975 shark thriller.", "response": "Jaws", "value": 600 },
+      { "clue": "'Rosebud,' the mysterious dying word in this 1941 classic, turns out to be a sled.", "response": "Citizen Kane", "value": 800 },
+      { "clue": "Marlon Brando's dockworker laments 'I coulda been a contender' in this 1954 drama.", "response": "On the Waterfront", "value": 1000 }
+    ]
+  },
+  {
+    "name": "AT THE RECORD HOP",
+    "clues": [
+      { "clue": "This swivel-hipped 'King of Rock and Roll' warned folks off his blue suede shoes.", "response": "Elvis Presley", "value": 200 },
+      { "clue": "This duck-walking guitarist told Beethoven to roll over in a 1956 rocker.", "response": "Chuck Berry", "value": 400 },
+      { "clue": "This bespectacled Texan from Lubbock sang 'Peggy Sue' and 'That'll Be the Day.'", "response": "Buddy Holly", "value": 600 },
+      { "clue": "'Tutti Frutti,' with its 'a-wop-bop-a-loo-bop,' announced this flamboyant Georgia showman.", "response": "Little Richard", "value": 800 },
+      { "clue": "Goodness gracious! This piano-pounding wild man scored with 'Great Balls of Fire.'", "response": "Jerry Lee Lewis", "value": 1000 }
+    ]
+  }
+]

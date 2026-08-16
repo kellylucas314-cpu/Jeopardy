@@ -1,0 +1,86 @@
+[
+  { "name": "WHERE THE WILD BOOKS ARE", "clues": [
+    { "clue": "Eric Carle's 'very hungry' one of these insects munches through the week before becoming a butterfly", "response": "a caterpillar", "value": 200 },
+    { "clue": "Wilbur the pig is saved by words like 'SOME PIG' woven into a web in this E.B. White classic", "response": "Charlotte's Web", "value": 400 },
+    { "clue": "This poor boy finds a Golden Ticket and tours Willy Wonka's chocolate factory", "response": "Charlie Bucket", "value": 600 },
+    { "clue": "In a Katherine Paterson novel, Jess and Leslie rule this imaginary kingdom reached by a rope swing", "response": "Terabithia", "value": 800 },
+    { "clue": "Bored Milo motors into the Lands Beyond and visits Dictionopolis in this Norton Juster fantasy", "response": "The Phantom Tollbooth", "value": 1000 }
+  ] },
+  { "name": "GRIMM PROSPECTS", "clues": [
+    { "clue": "A witch's gingerbread house tempts this brother-and-sister pair in a Grimm tale", "response": "Hansel and Gretel", "value": 200 },
+    { "clue": "'The Little Mermaid' and 'The Ugly Duckling' flowed from the pen of this Danish storyteller", "response": "Hans Christian Andersen", "value": 400 },
+    { "clue": "A queen must guess the name of this straw-spinning imp or lose her firstborn", "response": "Rumpelstiltskin", "value": 600 },
+    { "clue": "The Brothers Grimm called her Aschenputtel, but French tradition gave this heroine glass slippers", "response": "Cinderella", "value": 800 },
+    { "clue": "Puss in Boots and Sleeping Beauty appear in this Frenchman's 1697 collection 'Tales of Mother Goose'", "response": "Charles Perrault", "value": 1000 }
+  ] },
+  { "name": "DOG-EARED DARLINGS", "clues": [
+    { "clue": "Scout and Jem Finch come of age in Maycomb, Alabama in this Harper Lee novel", "response": "To Kill a Mockingbird", "value": 200 },
+    { "clue": "Elizabeth Bennet spars with haughty Mr. Darcy in this Jane Austen favorite", "response": "Pride and Prejudice", "value": 400 },
+    { "clue": "Meg, Jo, Beth & Amy March weather the Civil War years in this Louisa May Alcott novel", "response": "Little Women", "value": 600 },
+    { "clue": "Heathcliff and Cathy roam the Yorkshire moors in this novel, Emily Brontë's only one", "response": "Wuthering Heights", "value": 800 },
+    { "clue": "Gabriel García Márquez traced the Buendía family of Macondo in this 1967 masterpiece", "response": "One Hundred Years of Solitude", "value": 1000 }
+  ] },
+  { "name": "THE PLOT THICKENS", "clues": [
+    { "clue": "Captain Ahab obsessively hunts a white whale in this Herman Melville epic", "response": "Moby-Dick", "value": 200 },
+    { "clue": "A castaway survives 28 years on an island, aided by Friday, in this 1719 Daniel Defoe novel", "response": "Robinson Crusoe", "value": 400 },
+    { "clue": "Young Pip owes his fortune to a secret benefactor in this Charles Dickens novel", "response": "Great Expectations", "value": 600 },
+    { "clue": "Winston Smith rewrites old headlines at the Ministry of Truth in this George Orwell dystopia", "response": "1984", "value": 800 },
+    { "clue": "Flaubert stood trial for obscenity in 1857 over this novel of a doctor's restless wife", "response": "Madame Bovary", "value": 1000 }
+  ] },
+  { "name": "WRITE OF PASSAGE", "clues": [
+    { "clue": "Samuel Clemens borrowed this pen name from a Mississippi riverboat leadsman's cry", "response": "Mark Twain", "value": 200 },
+    { "clue": "In 1926 this queen of crime vanished for 11 days, sparking a massive manhunt across England", "response": "Agatha Christie", "value": 400 },
+    { "clue": "Wounded while driving ambulances in WWI Italy, he turned the experience into 'A Farewell to Arms'", "response": "Ernest Hemingway", "value": 600 },
+    { "clue": "This 'Slaughterhouse-Five' author survived the Dresden firebombing as a prisoner of war", "response": "Kurt Vonnegut", "value": 800 },
+    { "clue": "Reprieved from a firing squad at the last moment, this Russian went to Siberia and later wrote 'The Idiot'", "response": "Dostoevsky", "value": 1000 }
+  ] },
+  { "name": "INK-CREDIBLE LIVES", "clues": [
+    { "clue": "Theodor Geisel signed his rhyming classics with this doctorly pen name", "response": "Dr. Seuss", "value": 200 },
+    { "clue": "As a boy, this 'Oliver Twist' author pasted labels in a London blacking factory", "response": "Charles Dickens", "value": 400 },
+    { "clue": "This Russian playwright kept practicing medicine while writing 'The Seagull' and 'Uncle Vanya'", "response": "Anton Chekhov", "value": 600 },
+    { "clue": "This 'Leaves of Grass' poet tended wounded soldiers in Washington's Civil War hospitals", "response": "Walt Whitman", "value": 800 },
+    { "clue": "By day he handled claims at a Prague insurance institute; by night he wrote 'The Metamorphosis'", "response": "Franz Kafka", "value": 1000 }
+  ] },
+  { "name": "VERSE CASE SCENARIO", "clues": [
+    { "clue": "Frost's traveler chooses the path 'less traveled by' at a fork in a yellow wood in this poem", "response": "The Road Not Taken", "value": 200 },
+    { "clue": "In an 1845 Poe poem, this bird perches on a bust of Pallas, croaking 'Nevermore'", "response": "a raven", "value": 400 },
+    { "clue": "This reclusive Belle of Amherst wrote 'Because I could not stop for Death'", "response": "Emily Dickinson", "value": 600 },
+    { "clue": "This Welsh poet urged, 'Do not go gentle into that good night'", "response": "Dylan Thomas", "value": 800 },
+    { "clue": "'Season of mists and mellow fruitfulness' opens an ode to autumn by this Romantic, dead at 25", "response": "John Keats", "value": 1000 }
+  ] },
+  { "name": "METER READERS", "clues": [
+    { "clue": "Joyce Kilmer figured he'd never see 'a poem lovely as' this leafy subject", "response": "a tree", "value": 200 },
+    { "clue": "In a Longfellow poem, this silversmith rides to alarm 'every Middlesex village and farm'", "response": "Paul Revere", "value": 400 },
+    { "clue": "This comic five-line verse form shares its name with an Irish city", "response": "a limerick", "value": 600 },
+    { "clue": "He measured out his life with coffee spoons in 'Prufrock', then wrote 'The Waste Land'", "response": "T.S. Eliot", "value": 800 },
+    { "clue": "Maya Angelou took 'I Know Why the Caged Bird Sings' from 'Sympathy', a poem by this Black poet", "response": "Paul Laurence Dunbar", "value": 1000 }
+  ] },
+  { "name": "BARD TO THE BONE", "clues": [
+    { "clue": "Feuding Montagues and Capulets doom young love in this Verona tragedy", "response": "Romeo and Juliet", "value": 200 },
+    { "clue": "'Something is rotten in the state of Denmark' in this tragedy of a brooding prince", "response": "Hamlet", "value": 400 },
+    { "clue": "Three witches on a heath promise the Scottish throne to this title thane", "response": "Macbeth", "value": 600 },
+    { "clue": "The ensign Iago convinces this title Moor of Venice that Desdemona is untrue", "response": "Othello", "value": 800 },
+    { "clue": "A shipwreck separates twins Viola and Sebastian on Illyria's coast in this comedy", "response": "Twelfth Night", "value": 1000 }
+  ] },
+  { "name": "WHEREFORE ART THOU?", "clues": [
+    { "clue": "This Capulet daughter asks 'wherefore art thou Romeo?' in the famous balcony scene", "response": "Juliet", "value": 200 },
+    { "clue": "This moneylender of 'The Merchant of Venice' insists on his pound of flesh", "response": "Shylock", "value": 400 },
+    { "clue": "This ancient British monarch divides his realm between flattering daughters, spurning honest Cordelia", "response": "King Lear", "value": 600 },
+    { "clue": "Also called Robin Goodfellow, this sprite bungles a love potion in 'A Midsummer Night's Dream'", "response": "Puck", "value": 800 },
+    { "clue": "This fat, boastful knight carouses with Prince Hal in 'Henry IV' and returns in 'The Merry Wives of Windsor'", "response": "Falstaff", "value": 1000 }
+  ] },
+  { "name": "PRIVATE EYE EXAM", "clues": [
+    { "clue": "Dr. Watson chronicles the Baker Street cases of this pipe-smoking detective", "response": "Sherlock Holmes", "value": 200 },
+    { "clue": "This dapper Belgian of Agatha Christie's novels credits his 'little grey cells'", "response": "Hercule Poirot", "value": 400 },
+    { "clue": "Sam Spade chases a jewel-encrusted black bird in this Dashiell Hammett noir classic", "response": "The Maltese Falcon", "value": 600 },
+    { "clue": "Introduced in 'The Big Sleep', this wisecracking L.A. private eye was Raymond Chandler's creation", "response": "Philip Marlowe", "value": 800 },
+    { "clue": "This mild-mannered priest solved crimes in dozens of G.K. Chesterton stories", "response": "Father Brown", "value": 1000 }
+  ] },
+  { "name": "X MARKS THE PLOT", "clues": [
+    { "clue": "Young Jim Hawkins sails with Long John Silver in this Robert Louis Stevenson pirate tale", "response": "Treasure Island", "value": 200 },
+    { "clue": "Phileas Fogg wagers he can circle the globe in this many days in a Jules Verne adventure", "response": "80", "value": 400 },
+    { "clue": "Mowgli, Baloo and Bagheera roam the pages of this Rudyard Kipling collection", "response": "The Jungle Book", "value": 600 },
+    { "clue": "Escaped from the Château d'If, Edmond Dantès reinvents himself as this vengeful nobleman", "response": "the Count of Monte Cristo", "value": 800 },
+    { "clue": "Allan Quatermain treks to this legendary African trove in an 1885 H. Rider Haggard bestseller", "response": "King Solomon's Mines", "value": 1000 }
+  ] }
+]

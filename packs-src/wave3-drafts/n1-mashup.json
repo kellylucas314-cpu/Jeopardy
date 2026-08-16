@@ -1,0 +1,182 @@
+[
+  {
+    "name": "MUSIC MENU MASH-UPS",
+    "clues": [
+      {
+        "clue": "The 'Rumours' band that told you to go your own way stirs into the boxed pasta dinner kids beg for.",
+        "response": "Fleetwood Mac and Cheese",
+        "value": 200
+      },
+      {
+        "clue": "The '24K Magic' hitmaker snaps into the British caramel-and-nougat candy that shares its name with a planet.",
+        "response": "Bruno Mars Bar",
+        "value": 400
+      },
+      {
+        "clue": "The 'Bat Out of Hell' belter who'd do anything for love bakes into the sliced sandwich staple from the bakery aisle.",
+        "response": "Meat Loaf of Bread",
+        "value": 600
+      },
+      {
+        "clue": "The Michigan rap-rocker behind 'Cowboy' crystallizes into the sugar-on-a-stick treat grown from boiled syrup.",
+        "response": "Kid Rock Candy",
+        "value": 800
+      },
+      {
+        "clue": "The velvet-voiced 'You're the First, the Last, My Everything' crooner melts into the pale confection made of cocoa butter.",
+        "response": "Barry White Chocolate",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "DOUBLE FEATURE FUSIONS",
+    "clues": [
+      {
+        "clue": "Simba's Disney savanna saga crashes into the giant movie ape who scaled the Empire State Building.",
+        "response": "The Lion King Kong",
+        "value": 200
+      },
+      {
+        "clue": "Tony Stark's armored Marvel debut welds onto Henry Cavill's 2013 Superman reboot.",
+        "response": "Iron Man of Steel",
+        "value": 400
+      },
+      {
+        "clue": "The rose-petaled 1999 Best Picture about a suburban midlife crisis waltzes into Disney's tale as old as time.",
+        "response": "American Beauty and the Beast",
+        "value": 600
+      },
+      {
+        "clue": "Sidney Lumet's sweltering jury-room classic suits up with Will Smith's alien-policing agency.",
+        "response": "12 Angry Men in Black",
+        "value": 800
+      },
+      {
+        "clue": "Julie Andrews' Alpine governess climbs every mountain to River City, where a slick con artist promises 76 trombones.",
+        "response": "The Sound of Music Man",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "OVAL OFFICE PILE-UPS",
+    "clues": [
+      {
+        "clue": "The only president never elected president or vice president skids into Detroit's galloping pony car of 1964.",
+        "response": "Gerald Ford Mustang",
+        "value": 200
+      },
+      {
+        "clue": "The first president to serve two non-consecutive terms tackles the NFL's 'Dawg Pound' franchise on Lake Erie.",
+        "response": "Grover Cleveland Browns",
+        "value": 400
+      },
+      {
+        "clue": "The Great Society president merges with the New Jersey pharma giant that made Band-Aids a household name.",
+        "response": "Lyndon B. Johnson & Johnson",
+        "value": 600
+      },
+      {
+        "clue": "Old Hickory, the hero of the Battle of New Orleans, splatters onto the abstract expressionist famed for drip paintings.",
+        "response": "Andrew Jackson Pollock",
+        "value": 800
+      },
+      {
+        "clue": "The muttonchopped 21st president rallies with the tennis trailblazer who won Wimbledon in 1975.",
+        "response": "Chester A. Arthur Ashe",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "SPORTS PAGE SPLICES",
+    "clues": [
+      {
+        "clue": "The heavyweight champ who floated like a butterfly cries 'open sesame' with the folk hero who outwits 40 thieves.",
+        "response": "Muhammad Ali Baba",
+        "value": 200
+      },
+      {
+        "clue": "The six-championship Bulls high-flier dunks on the comedian who directed 'Get Out.'",
+        "response": "Michael Jordan Peele",
+        "value": 400
+      },
+      {
+        "clue": "The Sultan of Swat slugs his way onto the Supreme Court beside the dissent-collar justice appointed in 1993.",
+        "response": "Babe Ruth Bader Ginsburg",
+        "value": 600
+      },
+      {
+        "clue": "Baseball's 1947 color-barrier breaker gets shipwrecked with Daniel Defoe's island castaway.",
+        "response": "Jackie Robinson Crusoe",
+        "value": 800
+      },
+      {
+        "clue": "The Lakers' 'Black Mamba' posts up on the Midtown Manhattan lawn behind the New York Public Library.",
+        "response": "Kobe Bryant Park",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "SMALL SCREEN SMASH-UPS",
+    "clues": [
+      {
+        "clue": "The Tanner family sitcom with Uncle Jesse deals into Frank Underwood's ruthless D.C. drama.",
+        "response": "Full House of Cards",
+        "value": 200
+      },
+      {
+        "clue": "Big Bird's brownstone neighborhood throws down in the arcade game where Ryu fires hadoukens.",
+        "response": "Sesame Street Fighter",
+        "value": 400
+      },
+      {
+        "clue": "The Crawley family's aristocratic English estate strolls the zebra crossing on the last album the Beatles recorded.",
+        "response": "Downton Abbey Road",
+        "value": 600
+      },
+      {
+        "clue": "The 1950s sitcom wife who fumbled a chocolate conveyor belt teams with the 'Kill Bill' star who played O-Ren Ishii.",
+        "response": "I Love Lucy Liu",
+        "value": 800
+      },
+      {
+        "clue": "Netflix's Upside Down kids of Hawkins, Indiana bike into Chinua Achebe's landmark novel of colonial Nigeria.",
+        "response": "Stranger Things Fall Apart",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "BOOK CLUB COLLISIONS",
+    "clues": [
+      {
+        "clue": "Tolstoy's epic of Napoleon's invasion of Russia enlists in the volunteer service program JFK created in 1961.",
+        "response": "War and Peace Corps",
+        "value": 200
+      },
+      {
+        "clue": "Alice Walker's Pulitzer winner told in Celie's letters pours into Prince's 1984 title track.",
+        "response": "The Color Purple Rain",
+        "value": 400
+      },
+      {
+        "clue": "Orwell's barnyard allegory where some pigs are 'more equal' trots into the benefit concert Willie Nelson co-founded in 1985.",
+        "response": "Animal Farm Aid",
+        "value": 600
+      },
+      {
+        "clue": "Dickens' orphan who asks for more gruel works it on out with the Isley Brothers rave-up the Beatles covered.",
+        "response": "Oliver Twist and Shout",
+        "value": 800
+      },
+      {
+        "clue": "Milton's epic of Satan's rebellion checks into Sofia Coppola's Tokyo film starring Bill Murray as a jet-lagged movie star.",
+        "response": "Paradise Lost in Translation",
+        "value": 1000
+      }
+    ]
+  }
+]
