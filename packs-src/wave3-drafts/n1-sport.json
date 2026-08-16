@@ -64,9 +64,9 @@
     "clues": [
       { "clue": "Pass 'Go', collect $200 & try to put hotels on Boardwalk in this real-estate game", "response": "Monopoly", "value": 200 },
       { "clue": "Colonel Mustard & Professor Plum are murder suspects in this mansion mystery game", "response": "Clue", "value": 400 },
-      { "clue": "Landing your tiles on a triple word score racks up big points in this crossword-style game", "response": "Scrabble", "value": 600 },
+      { "clue": "Five of a kind scores 50 points in this shake-&-roll dice game whose name doubles as a victory shout", "response": "Yahtzee", "value": 600 },
       { "clue": "Armies clash over 42 territories in this Parker Brothers game of world conquest", "response": "Risk", "value": 800 },
-      { "clue": "Black & white stones battle for territory on a 19-by-19 grid in this ancient game with a 2-letter name", "response": "Go", "value": 1000 }
+      { "clue": "Dice rolls send 15 checkers racing around 24 points in this ancient game, its stakes doubled by a special cube", "response": "backgammon", "value": 1000 }
     ]
   },
   {

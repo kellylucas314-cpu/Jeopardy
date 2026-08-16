@@ -3,7 +3,7 @@
     { "clue": "A mechanical shark nicknamed Bruce menaced the beach town of Amity in this 1975 Steven Spielberg thriller", "response": "Jaws", "value": 200 },
     { "clue": "Jack and Rose's doomed shipboard romance made this 1997 James Cameron epic the first film to gross $1 billion", "response": "Titanic", "value": 400 },
     { "clue": "Cloned dinosaurs run amok on Isla Nublar in this 1993 blockbuster based on a Michael Crichton novel", "response": "Jurassic Park", "value": 600 },
-    { "clue": "Tom Cruise flew as hotshot Navy aviator Pete \"Maverick\" Mitchell in this 1986 blockbuster", "response": "Top Gun", "value": 800 },
+    { "clue": "Berlin's \"Take My Breath Away\" won the Best Original Song Oscar for this 1986 naval aviation blockbuster", "response": "Top Gun", "value": 800 },
     { "clue": "This 1973 film about the demonic possession of 12-year-old Regan was the first horror movie nominated for Best Picture", "response": "The Exorcist", "value": 1000 }
   ] },
   { "name": "SEQUEL OPPORTUNITIES", "clues": [

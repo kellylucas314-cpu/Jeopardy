@@ -2,7 +2,7 @@
   { "name": "PLATE EXPECTATIONS", "clues": [
     { "clue": "Sushi, tempura & miso soup are hallmarks of this island nation's cuisine", "response": "Japan", "value": 200 },
     { "clue": "Saffron-tinted paella was born in the Valencia region of this European country", "response": "Spain", "value": 400 },
-    { "clue": "Pad Thai, rice noodles stir-fried with tamarind & peanuts, is a signature of this Asian kingdom", "response": "Thailand", "value": 600 },
+    { "clue": "Tom yum, a hot and sour shrimp soup fragrant with lemongrass and lime, simmers in this Southeast Asian kingdom", "response": "Thailand", "value": 600 },
     { "clue": "Paprika-rich goulash simmers as the national dish of this landlocked Central European country", "response": "Hungary", "value": 800 },
     { "clue": "The tagine, a stew named for its cone-lidded pot, is a staple of this North African kingdom", "response": "Morocco", "value": 1000 }
   ] },

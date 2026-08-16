@@ -48,3 +48,16 @@ Accepted this run so far: **0** (nothing enters a pack before grading).
 - Concurrency policy per Kelly: moderate batches of 5–8 agents from here on.
 
 Accepted running total: **120 clues** of the 2,000 target.
+
+## 2026-08-16 ~11:00 UTC — Grading sweep milestone
+
+- Graders complete on 15 of 37 files: all wave-1 boards except word/mix, the 30 Fresh
+  finals, and Round-2 music/geo/screen/lit. **Zero categories rejected**; 12 clue-level
+  revisions applied by graders (giveaway leaks, difficulty-ladder breaks, one factual
+  precision fix on a Hemingway detail; every revision re-validated).
+- Easy Breezy rewrites landed for `e2-golden` and `e2-home` (writers cross-checked
+  siblings to avoid subject/answer overlap); only `e1-century` still writing.
+- In flight: graders for word/mix, hist/sci (R2), sport/word (R2), mix/food (R2),
+  decades+tech, weird+fan.
+
+Accepted running total: **870 clues** (168 categories + 30 finals) of the 2,000 target.

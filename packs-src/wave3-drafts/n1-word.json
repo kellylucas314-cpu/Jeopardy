@@ -4,7 +4,7 @@
     { "clue": "Your fixed pay from an employer takes its name from 'sal,' the Latin word for salt", "response": "salary", "value": 400 },
     { "clue": "From the Italian for 40, the number of days ships suspected of plague once sat isolated off Venice", "response": "quarantine", "value": 600 },
     { "clue": "This word for body tissue is from the Latin for 'little mouse'--picture a flexed bicep rippling", "response": "muscle", "value": 800 },
-    { "clue": "Fitting for this game: the word for trifling facts traces to 'trivium,' Latin for a spot where 3 roads meet", "response": "trivia", "value": 1000 }
+    { "clue": "Fitting for this game: this word for trifling facts comes from the Latin for a spot where 3 roads meet", "response": "trivia", "value": 1000 }
   ] },
   { "name": "FRESHLY MINTED WORDS", "clues": [
     { "clue": "Any miser can be called this, thanks to the 'Bah! Humbug!' grouch of Dickens' 'A Christmas Carol'", "response": "Scrooge", "value": 200 },

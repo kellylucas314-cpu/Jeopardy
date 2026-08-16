@@ -53,7 +53,7 @@
     { "clue": "The deepest voice of the brass family, it supplies the oompah in a polka band", "response": "the tuba", "value": 400 },
     { "clue": "Its name means 'big trumpet' in Italian, and its slide offers players seven positions", "response": "the trombone", "value": 600 },
     { "clue": "Players rest a hand inside the bell of this coiled brass instrument whose name suggests Gallic roots", "response": "the French horn", "value": 800 },
-    { "clue": "This circling marching-band tuba was developed to bandleader John Philip Sousa's specifications", "response": "the sousaphone", "value": 1000 }
+    { "clue": "Designed in the 1890s to the exacting specs of the 'March King' himself, this big brass horn wraps around a marching player's body", "response": "the sousaphone", "value": 1000 }
   ] },
   { "name": "ON WITH THE SHOW", "clues": [
     { "clue": "A masked composer haunts the catacombs beneath a Paris theater in this Andrew Lloyd Webber hit", "response": "The Phantom of the Opera", "value": 200 },

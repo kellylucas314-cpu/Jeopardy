@@ -1,0 +1,14 @@
+[
+  { "name": "ETYMOLOGY, MY DEAR WATSON", "score": 48, "verdict": "revised", "notes": "$1000 quoted 'trivium' while asking for trivia — a near-answer leak that made row 5 easier than the musculus row; rewrote so the player derives tri+via; all five etymologies genuine; re-scored 48." },
+  { "name": "FRESHLY MINTED WORDS", "score": 48, "verdict": "accepted", "notes": "Scrooge, Seuss 1950 nerd, R.U.R. robota, More's 'no place' utopia, Walpole/Serendip all verified real coinage stories; clean ladder." },
+  { "name": "EAT YOUR WORDS", "score": 47, "verdict": "accepted", "notes": "All five food idioms and origins check (Aesop sour grapes, umbles-to-humble-pie); rows 1-3 lean easy but the climb holds." },
+  { "name": "IDIOM SAVANT", "score": 47, "verdict": "accepted", "notes": "Hatchet-burying peace-custom origin and Caesar's 49 B.C. Rubicon accurate; general-idiom angle stays distinct from the food-idiom category." },
+  { "name": "RHYMES WITH \"CAT\"", "score": 48, "verdict": "accepted", "notes": "Gimmick honored — bat/flat/gnat/cravat/Ararat all rhyme; Croatian-mercenary cravat etymology and Genesis 'mountains of Ararat' wording both accurate." },
+  { "name": "IT TAKES TWO TO RHYME", "score": 46, "verdict": "accepted", "notes": "All pairs truly rhyme; helter-skelter as British fairground slide correct; 'email' brushing snail mail is a deliberate $200 gimme; cousin of the other rhyme category." },
+  { "name": "INITIAL REACTIONS", "score": 48, "verdict": "accepted", "notes": "SOS-chosen-for-simplicity (backronym later) and Zone Improvement Plan 1963 verified; quoting 'plan' at $1000 is a deliberate hint for a hard expansion." },
+  { "name": "ALPHABET SOUPER", "score": 47, "verdict": "accepted", "notes": "scuba/laser/radar expansions exact, CARE's original Remittances-to-Europe name and Taser/Tom Swift naming correct; lexicalized-acronym angle differs enough from INITIAL REACTIONS." },
+  { "name": "PARDON MY FRENCH", "score": 47, "verdict": "accepted", "notes": "All five literal translations correct (deja vu, faux pas, je ne sais quoi, laissez-faire, esprit de corps); steady ladder." },
+  { "name": "SPRECHEN SIE ENGLISH?", "score": 48, "verdict": "accepted", "notes": "Froebel's kindergarten, poltern/Geist, double-goer, harm-joy all real German compounds; good climb to schadenfreude." },
+  { "name": "LEND ME YOUR NAME", "score": 48, "verdict": "accepted", "notes": "Braille 1820s Paris, Sax 1846 patent, Boycott Mayo 1880, Leotard, 1812 salamander district all accurate; first-name-only hints are deliberate eponym style." },
+  { "name": "EPONYMOUS EATS", "score": 48, "verdict": "accepted", "notes": "Cardini in Tijuana, Maria Ann Smith, trans-Tasman pavlova feud, Escoffier's peach Melba all check; three Australia-linked answers run slightly samey but fair." }
+]

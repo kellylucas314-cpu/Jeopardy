@@ -52,7 +52,7 @@
     { "clue": "King John reluctantly sealed this 'Great Charter' at Runnymede in 1215", "response": "Magna Carta", "value": 200 },
     { "clue": "Arriving on trade ships in 1347, this plague pandemic killed perhaps a third of Europe", "response": "the Black Death", "value": 400 },
     { "clue": "Pope Leo III crowned this Frankish king emperor on Christmas Day in the year 800", "response": "Charlemagne", "value": 600 },
-    { "clue": "Bound to a lord's land, these unfree feudal peasants took their name from the Latin for 'slave'", "response": "serfs", "value": 800 },
+    { "clue": "The Norman Conquest of England unspools across some 230 feet of this embroidered cloth, named for the French town that keeps it", "response": "the Bayeux Tapestry", "value": 800 },
     { "clue": "William the Conqueror ordered this 1086 survey of England, named for the day of final judgment", "response": "the Domesday Book", "value": 1000 }
   ] },
   { "name": "SITES FOR SORE ARMIES", "clues": [

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "DECK THE HALLS",
+    "clues": [
+      { "clue": "Steal a holiday kiss under this green sprig hung in the doorway", "response": "mistletoe", "value": 400 },
+      { "clue": "'The Night Before Christmas' says these were hung by the chimney with care", "response": "stockings", "value": 800 },
+      { "clue": "Nutmeg tops this rich, creamy punch ladled out at Christmas parties", "response": "eggnog", "value": 1200 },
+      { "clue": "First sung in Austria in 1818, this carol promises 'all is calm, all is bright'", "response": "\"Silent Night\"", "value": 1600 },
+      { "clue": "This showy red Christmas plant is named for America's first minister to Mexico", "response": "the poinsettia", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GIVING THANKS",
+    "clues": [
+      { "clue": "Norman Rockwell's 'Freedom from Want' shows Grandma serving this roasted bird", "response": "the turkey", "value": 400 },
+      { "clue": "Two people snap this forked bone from the holiday bird, hoping for the bigger half", "response": "the wishbone", "value": 800 },
+      { "clue": "Jellied in the can, this tart red Thanksgiving side slides out ridges and all", "response": "cranberry sauce", "value": 1200 },
+      { "clue": "Giant balloons have floated in this New York department store's parade since the 1920s", "response": "Macy's", "value": 1600 },
+      { "clue": "This Detroit NFL team began hosting Thanksgiving games back in 1934", "response": "the Lions", "value": 2000 }
+    ]
+  },
+  {
+    "name": "EASY AS PIE",
+    "clues": [
+      { "clue": "An old Chevy jingle grouped baseball, hot dogs and this dessert with its cars", "response": "apple pie", "value": 400 },
+      { "clue": "Ask for your pie slice this French way and it arrives topped with vanilla ice cream", "response": "a la mode", "value": 800 },
+      { "clue": "Karo corn syrup binds the crunchy Southern nuts filling this gooey holiday pie", "response": "pecan pie", "value": 1200 },
+      { "clue": "Florida named this tangy dessert, made with a tiny citrus, its official state pie", "response": "key lime pie", "value": 1600 },
+      { "clue": "Its name orders off the pests drawn to this gooey Pennsylvania Dutch molasses pie", "response": "shoofly pie", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE SWEET SHOPPE",
+    "clues": [
+      { "clue": "White tip, orange middle, yellow base: this tricolor treat means Halloween", "response": "candy corn", "value": 400 },
+      { "clue": "This chocolate maker's Pennsylvania hometown has streetlights shaped like its Kisses", "response": "Hershey's", "value": 800 },
+      { "clue": "A hole in the middle gives these ring-shaped hard candies their nautical rescue name", "response": "Life Savers", "value": 1200 },
+      { "clue": "Legend credits an 1880s Atlantic City flood for this pulled boardwalk candy's briny name", "response": "saltwater taffy", "value": 1600 },
+      { "clue": "Initials of the New England Confectionery Company name these chalky pastel discs", "response": "Necco wafers", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SAVE ROOM FOR DESSERT",
+    "clues": [
+      { "clue": "A toasted marshmallow and chocolate between graham crackers make this campfire treat", "response": "s'mores", "value": 400 },
+      { "clue": "Caramelized fruit rings show up on top once this dessert is flipped out of the pan", "response": "pineapple upside-down cake", "value": 800 },
+      { "clue": "Whipped egg whites alone leaven this heavenly white sponge, baked in a tube pan", "response": "angel food cake", "value": 1200 },
+      { "clue": "Chewy pearls from the cassava plant thicken this old-fashioned creamy pudding", "response": "tapioca", "value": 1600 },
+      { "clue": "Cake and ice cream hide under toasted meringue in this dessert named for the 49th state", "response": "Baked Alaska", "value": 2000 }
+    ]
+  },
+  {
+    "name": "KNIT ONE, PURL TWO",
+    "clues": [
+      { "clue": "Shorn from sheep, this classic yarn fiber can feel a mite itchy next to the skin", "response": "wool", "value": 400 },
+      { "clue": "Three little kittens lost these knitted warmers that keep four fingers together", "response": "mittens", "value": 800 },
+      { "clue": "This crocheted couch blanket shares its name with a native of Kabul", "response": "an afghan", "value": 1200 },
+      { "clue": "Mister Rogers' sweater style honors the earl who led the Charge of the Light Brigade", "response": "the cardigan", "value": 1600 },
+      { "clue": "Sweater vests and golf socks sport this diamond pattern named for a Scottish county", "response": "argyle", "value": 2000 }
+    ]
+  },
+  {
+    "name": "PIECE BY PIECE",
+    "clues": [
+      { "clue": "Quilts sewn from odd fabric scraps get this name, now used for anything cobbled together", "response": "patchwork", "value": 400 },
+      { "clue": "No insects attend this old-time social where neighbors finish a quilt around one frame", "response": "a quilting bee", "value": 800 },
+      { "clue": "Strips 'built' around a center square form this quilt pattern named for a frontier home", "response": "the log cabin", "value": 1200 },
+      { "clue": "Quilters layer this fluffy filler between top and backing; sluggers take practice at it", "response": "batting", "value": 1600 },
+      { "clue": "Interlocking circles form this romantic quilt pattern, long a favorite gift for newlyweds", "response": "the double wedding ring", "value": 2000 }
+    ]
+  },
+  {
+    "name": "MAKE A JOYFUL NOISE",
+    "clues": [
+      { "clue": "'...this I know, for the Bible tells me so' completes the opening of this children's hymn", "response": "\"Jesus Loves Me\"", "value": 400 },
+      { "clue": "Its opening line asks the title refuge, 'cleft for me,' to 'let me hide myself in thee'", "response": "\"Rock of Ages\"", "value": 800 },
+      { "clue": "'Then sings my soul, my Savior God, to thee' swells the refrain of this hymn", "response": "\"How Great Thou Art\"", "value": 1200 },
+      { "clue": "'On a hill far away' stood the 'emblem of suffering and shame' in this 1913 hymn", "response": "\"The Old Rugged Cross\"", "value": 1600 },
+      { "clue": "'And He walks with me, and He talks with me' in this hymn that begins among the roses", "response": "\"In the Garden\"", "value": 2000 }
+    ]
+  },
+  {
+    "name": "LOAVES & CASSEROLES",
+    "clues": [
+      { "clue": "Crispy, golden and piled high, this picnic bird vanishes first from the buffet line", "response": "fried chicken", "value": 400 },
+      { "clue": "Mashed yolks with mustard and paprika go back into the whites for these 'wicked' halves", "response": "deviled eggs", "value": 800 },
+      { "clue": "Grandma suspended fruit cocktail in this jiggly brand-name gelatin for her famous mold", "response": "Jell-O", "value": 1200 },
+      { "clue": "Called 'the house wine of the South,' this sugary iced drink flows at church suppers", "response": "sweet tea", "value": 1600 },
+      { "clue": "Oranges, coconut and marshmallows make this Southern fruit salad fit for the Greek gods", "response": "ambrosia", "value": 2000 }
+    ]
+  },
+  {
+    "name": "FUN AT THE FAIR",
+    "clues": [
+      { "clue": "Spun sugar swirled onto a paper cone makes this melt-in-your-mouth fairground fluff", "response": "cotton candy", "value": 400 },
+      { "clue": "First turning at Chicago's 1893 World's Fair, this giant ride still rules the county fair", "response": "the Ferris wheel", "value": 800 },
+      { "clue": "Bake the best pie in the county and the judges will pin this top prize on your entry", "response": "a blue ribbon", "value": 1200 },
+      { "clue": "Barkers, ring tosses and rides line this aptly named strip through the fairgrounds' heart", "response": "the midway", "value": 1600 },
+      { "clue": "Farm kids pledge head, heart, hands and health in this four-leaf-clover-badged club", "response": "4-H", "value": 2000 }
+    ]
+  },
+  {
+    "name": "OUR NECK OF THE WOODS",
+    "clues": [
+      { "clue": "Courting couples rocked away summer evenings on this hanging bench by the front door", "response": "a porch swing", "value": 400 },
+      { "clue": "Red and white stripes twirl on this revolving sign outside the shave-and-a-haircut shop", "response": "a barber pole", "value": 800 },
+      { "clue": "On sweltering days, farm kids took a rope swing right into this shady creek-fed spot", "response": "the swimming hole", "value": 1200 },
+      { "clue": "Small-town telephone customers shared this hookup, so a nosy neighbor might be listening", "response": "a party line", "value": 1600 },
+      { "clue": "General store regulars swapped yarns around this fixture, now a restaurant chain's name", "response": "the cracker barrel", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GRANDMA'S CURE-ALLS",
+    "clues": [
+      { "clue": "Grandma ladles out this steaming remedy nicknamed 'Jewish penicillin'", "response": "chicken soup", "value": 400 },
+      { "clue": "Rubbed on a stuffy chest at bedtime, this mentholated salve comes in a cobalt blue jar", "response": "Vicks VapoRub", "value": 800 },
+      { "clue": "Chicken pox and poison ivy itches call for a dab of this chalky pink soother", "response": "calamine lotion", "value": 1200 },
+      { "clue": "Kids dreaded a daily spoonful of this thick laxative pressed from a bean", "response": "castor oil", "value": 1600 },
+      { "clue": "For a chest cold, Grandma spread this sharp yellow paste on flannel and applied it warm", "response": "a mustard plaster", "value": 2000 }
+    ]
+  }
+]

@@ -55,7 +55,7 @@
       { "clue": "Established in 1872, this home of Old Faithful was the world's first national park", "response": "Yellowstone", "value": 200 },
       { "clue": "Over millions of years the Colorado River gouged this mile-deep Arizona icon", "response": "the Grand Canyon", "value": 400 },
       { "clue": "Climbers tackle El Capitan & Half Dome in this Sierra Nevada park in California", "response": "Yosemite", "value": 600 },
-      { "clue": "Delicate Arch is just one of more than 2,000 natural stone spans in this Utah park", "response": "Arches", "value": 800 },
+      { "clue": "More than 2,000 natural sandstone spans crowd this red-rock Utah park just outside Moab", "response": "Arches", "value": 800 },
       { "clue": "North America's highest mountain rises within this vast Alaska national park", "response": "Denali", "value": 1000 }
     ]
   },

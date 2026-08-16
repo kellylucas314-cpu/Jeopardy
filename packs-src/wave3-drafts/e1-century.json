@@ -1,0 +1,122 @@
+[
+  {
+    "name": "THE FIVE & DIME",
+    "clues": [
+      { "clue": "Kids picked this sweet treat from the dime store's glass case, one piece for one cent", "response": "penny candy", "value": 200 },
+      { "clue": "Shoppers spun on stools and ordered a grilled cheese at this spot inside the dime store", "response": "the lunch counter", "value": 400 },
+      { "clue": "This little orange first pet of many a child got scooped from the dime store's tank", "response": "a goldfish", "value": 600 },
+      { "clue": "Sebastian Kresge's dime stores grew into this discount chain with the big red 'K'", "response": "Kmart", "value": 800 },
+      { "clue": "This five-and-dime chain took its name from a thrifty, kite-flying Founding Father", "response": "Ben Franklin", "value": 1000 }
+    ]
+  },
+  {
+    "name": "LIVING IN THE SPACE AGE",
+    "clues": [
+      { "clue": "Sipped by the astronauts, this powdered orange breakfast drink soared in popularity", "response": "Tang", "value": 200 },
+      { "clue": "'The Eagle has landed,' the astronauts radioed to Mission Control in this Texas city", "response": "Houston", "value": 400 },
+      { "clue": "Florida's famous launch site, it spent a decade renamed for President Kennedy", "response": "Cape Canaveral", "value": 600 },
+      { "clue": "Covering Apollo 11 for CBS, this most trusted of anchormen was almost at a loss for words", "response": "Walter Cronkite", "value": 800 },
+      { "clue": "This 1962 satellite beamed live TV across the Atlantic and named a #1 instrumental hit", "response": "Telstar", "value": 1000 }
+    ]
+  },
+  {
+    "name": "MOVIES UNDER THE STARS",
+    "clues": [
+      { "clue": "To hear the show at the drive-in, you hung this crackly metal box on your car window", "response": "a speaker", "value": 200 },
+      { "clue": "Seeing two full movies on a single ticket went by this two-word name", "response": "a double feature", "value": 400 },
+      { "clue": "'Let's all go to the lobby,' sang the dancing snacks during this break in the show", "response": "intermission", "value": 600 },
+      { "clue": "Teens dodged the ticket price by riding past the booth curled up in this part of the car", "response": "the trunk", "value": 800 },
+      { "clue": "The nation's first drive-in theater opened in 1933 in Camden, in this state", "response": "New Jersey", "value": 1000 }
+    ]
+  },
+  {
+    "name": "RIGHT TO YOUR DOOR",
+    "clues": [
+      { "clue": "Kids chased the jingling bells of this brand's white ice cream trucks all summer", "response": "Good Humor", "value": 200 },
+      { "clue": "'Ding dong!' This cosmetics company's friendly saleslady was famously 'calling'", "response": "Avon", "value": 400 },
+      { "clue": "Neither snow nor rain nor gloom of night kept this daily caller from his appointed rounds", "response": "the mailman", "value": 600 },
+      { "clue": "Before electric refrigerators, he hauled a frozen block to your kitchen with iron tongs", "response": "the iceman", "value": 800 },
+      { "clue": "Red Skelton starred in a 1948 comedy as this company's famous door-to-door 'Man'", "response": "Fuller Brush", "value": 1000 }
+    ]
+  },
+  {
+    "name": "FILL 'ER UP",
+    "clues": [
+      { "clue": "While the gas flowed, the attendant squeegeed this big front pane clean", "response": "the windshield", "value": 200 },
+      { "clue": "Rolling your tires over a rubber hose rang this inside the station", "response": "a bell", "value": 400 },
+      { "clue": "'You can trust your car to the man who wears' this pointy shape, sang the Texaco jingle", "response": "the star", "value": 600 },
+      { "clue": "'Put a tiger in your tank!' urged this gasoline brand, whose U.S. stations became Exxon", "response": "Esso", "value": 800 },
+      { "clue": "Asking for this ladylike name at the pump meant you wanted premium leaded gas", "response": "Ethyl", "value": 1000 }
+    ]
+  },
+  {
+    "name": "MR. PRESIDENT",
+    "clues": [
+      { "clue": "'Ask not what your country can do for you,' this young president urged in 1961", "response": "John F. Kennedy", "value": 200 },
+      { "clue": "His radio 'fireside chats' comforted America through the Depression and the war", "response": "Franklin D. Roosevelt", "value": 400 },
+      { "clue": "Sworn in aboard Air Force One in Dallas, this Texan later declared 'War on Poverty'", "response": "Lyndon B. Johnson", "value": 600 },
+      { "clue": "The famous sign on this plain-spoken Missourian's desk: 'The buck stops here'", "response": "Harry Truman", "value": 800 },
+      { "clue": "This Michigander took office in 1974, never elected president or vice president", "response": "Gerald Ford", "value": 1000 }
+    ]
+  },
+  {
+    "name": "FIRST LADIES OF THE LAND",
+    "clues": [
+      { "clue": "Her pillbox hats and televised White House tour charmed America in the early 1960s", "response": "Jackie Kennedy", "value": 200 },
+      { "clue": "FDR's tireless wife, she later helped shape the UN's Universal Declaration of Human Rights", "response": "Eleanor Roosevelt", "value": 400 },
+      { "clue": "Wildflowers along America's highways are the legacy of her 1960s beautification drive", "response": "Lady Bird Johnson", "value": 600 },
+      { "clue": "Her candor about her own struggles inspired this first lady's California treatment center", "response": "Betty Ford", "value": 800 },
+      { "clue": "From Plains, Georgia, she sat in on Cabinet meetings and championed mental health care", "response": "Rosalynn Carter", "value": 1000 }
+    ]
+  },
+  {
+    "name": "WISH YOU WERE HERE",
+    "clues": [
+      { "clue": "A gift from France, she has lifted her torch over New York Harbor since 1886", "response": "the Statue of Liberty", "value": 200 },
+      { "clue": "Four presidents' faces gaze from a granite cliff in South Dakota's Black Hills", "response": "Mount Rushmore", "value": 400 },
+      { "clue": "Painted 'international orange,' it has spanned the mouth of San Francisco Bay since 1937", "response": "the Golden Gate Bridge", "value": 600 },
+      { "clue": "This gleaming 630-foot St. Louis monument salutes the pioneers who headed west", "response": "the Gateway Arch", "value": 800 },
+      { "clue": "Once known as Boulder Dam, this Colorado River giant lit up the Depression-era Southwest", "response": "Hoover Dam", "value": 1000 }
+    ]
+  },
+  {
+    "name": "AMERICA THE BEAUTIFUL",
+    "clues": [
+      { "clue": "The Colorado River spent ages carving this mile-deep Arizona wonder", "response": "the Grand Canyon", "value": 200 },
+      { "clue": "Honeymooners have long flocked to this thundering cascade on the New York-Canada border", "response": "Niagara Falls", "value": 400 },
+      { "clue": "Yellowstone's most famous geyser earned this trusty name by erupting right on schedule", "response": "Old Faithful", "value": 600 },
+      { "clue": "The tallest trees on Earth, these California giants can top 350 feet", "response": "redwoods", "value": 800 },
+      { "clue": "Alligators and herons glide through this Florida 'river of grass'", "response": "the Everglades", "value": 1000 }
+    ]
+  },
+  {
+    "name": "RACE FOR THE MOON",
+    "clues": [
+      { "clue": "President Kennedy vowed America would land a man here before the 1960s were out", "response": "the Moon", "value": 200 },
+      { "clue": "The beep-beep of this Soviet satellite in 1957 told America the race was on", "response": "Sputnik", "value": 400 },
+      { "clue": "In 1962 this Marine and future senator became the first American to orbit the Earth", "response": "John Glenn", "value": 600 },
+      { "clue": "Armstrong, Aldrin & Collins made history aboard this numbered 1969 mission", "response": "Apollo 11", "value": 800 },
+      { "clue": "America's first man in space, he later swung a golf club on the lunar surface", "response": "Alan Shepard", "value": 1000 }
+    ]
+  },
+  {
+    "name": "FOUR-LEGGED FAVORITES",
+    "clues": [
+      { "clue": "Timmy's brave TV collie, she always saved the day by the end of the episode", "response": "Lassie", "value": 200 },
+      { "clue": "This ranger-hatted symbol warned that only YOU can prevent forest fires", "response": "Smokey Bear", "value": 400 },
+      { "clue": "'A horse is a horse, of course, of course' — unless he's this talking TV star", "response": "Mister Ed", "value": 600 },
+      { "clue": "Roy Rogers rode this golden palomino, billed as 'the smartest horse in the movies'", "response": "Trigger", "value": 800 },
+      { "clue": "'Big Red' to his fans, this colt took the 1973 Belmont Stakes by 31 lengths", "response": "Secretariat", "value": 1000 }
+    ]
+  },
+  {
+    "name": "WILD AMERICA",
+    "clues": [
+      { "clue": "With snowy head and yellow beak, this bird of prey is the national symbol of the U.S.", "response": "the bald eagle", "value": 200 },
+      { "clue": "Once nearly wiped off the plains, this shaggy beast graced the back of a nickel", "response": "the buffalo", "value": 400 },
+      { "clue": "North America's largest rodent, it gnaws down trees to build its dams and lodges", "response": "the beaver", "value": 600 },
+      { "clue": "This orange-and-black butterfly journeys thousands of miles to winter in Mexico", "response": "the monarch", "value": 800 },
+      { "clue": "North America's tallest bird, this endangered white wader is named for its loud call", "response": "the whooping crane", "value": 1000 }
+    ]
+  }
+]

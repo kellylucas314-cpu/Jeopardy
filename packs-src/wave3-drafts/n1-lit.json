@@ -10,7 +10,7 @@
     { "clue": "A witch's gingerbread house tempts this brother-and-sister pair in a Grimm tale", "response": "Hansel and Gretel", "value": 200 },
     { "clue": "'The Little Mermaid' and 'The Ugly Duckling' flowed from the pen of this Danish storyteller", "response": "Hans Christian Andersen", "value": 400 },
     { "clue": "A queen must guess the name of this straw-spinning imp or lose her firstborn", "response": "Rumpelstiltskin", "value": 600 },
-    { "clue": "The Brothers Grimm called her Aschenputtel, but French tradition gave this heroine glass slippers", "response": "Cinderella", "value": 800 },
+    { "clue": "The Grimms called this heroine Aschenputtel, and their version ends with doves pecking her stepsisters' eyes", "response": "Cinderella", "value": 800 },
     { "clue": "Puss in Boots and Sleeping Beauty appear in this Frenchman's 1697 collection 'Tales of Mother Goose'", "response": "Charles Perrault", "value": 1000 }
   ] },
   { "name": "DOG-EARED DARLINGS", "clues": [
@@ -30,7 +30,7 @@
   { "name": "WRITE OF PASSAGE", "clues": [
     { "clue": "Samuel Clemens borrowed this pen name from a Mississippi riverboat leadsman's cry", "response": "Mark Twain", "value": 200 },
     { "clue": "In 1926 this queen of crime vanished for 11 days, sparking a massive manhunt across England", "response": "Agatha Christie", "value": 400 },
-    { "clue": "Wounded while driving ambulances in WWI Italy, he turned the experience into 'A Farewell to Arms'", "response": "Ernest Hemingway", "value": 600 },
+    { "clue": "A Red Cross ambulance driver wounded in WWI Italy, he turned the experience into 'A Farewell to Arms'", "response": "Ernest Hemingway", "value": 600 },
     { "clue": "This 'Slaughterhouse-Five' author survived the Dresden firebombing as a prisoner of war", "response": "Kurt Vonnegut", "value": 800 },
     { "clue": "Reprieved from a firing squad at the last moment, this Russian went to Siberia and later wrote 'The Idiot'", "response": "Dostoevsky", "value": 1000 }
   ] },
