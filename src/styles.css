@@ -296,7 +296,6 @@ input { font-family: var(--font-ui); }
   color: var(--cream);
   outline: none;
   transition: border-color 0.18s var(--ease);
-  border-left: 2px solid var(--pc, var(--line));
 }
 
 .name-input-group input::placeholder { color: var(--cream-faint); }
@@ -501,9 +500,12 @@ input { font-family: var(--font-ui); }
 
 .round-progress-fill {
   height: 100%;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(var(--fill, 0));
   background: var(--brass);
   border-radius: 2px;
-  transition: width 0.5s var(--ease);
+  transition: transform 0.5s var(--ease);
 }
 
 .picks-cue {
@@ -782,9 +784,11 @@ input { font-family: var(--font-ui); }
 .timer-bar {
   height: 100%;
   width: 100%;
+  transform-origin: left center;
+  transform: scaleX(var(--fill, 1));
   background: var(--brass);
   border-radius: 2px;
-  transition: width 1s linear;
+  transition: transform 1s linear;
   box-shadow: 0 0 8px rgba(160, 116, 48, 0.4);
 }
 
@@ -1370,8 +1374,8 @@ input { font-family: var(--font-ui); }
   border: 1px solid var(--line);
 }
 
-.final-result-player.correct { border-left: 3px solid var(--correct); }
-.final-result-player.wrong { border-left: 3px solid var(--wrong); }
+.final-result-player.correct { border-color: rgba(60, 122, 84, 0.5); background: rgba(60, 122, 84, 0.07); }
+.final-result-player.wrong { border-color: rgba(166, 61, 41, 0.45); background: rgba(166, 61, 41, 0.06); }
 
 .frp-name { font-weight: 700; }
 .frp-wager { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
@@ -1976,3 +1980,20 @@ input { font-family: var(--font-ui); }
   .category-header { font-size: 0.58rem; min-height: 40px; }
   .board-clue { font-size: 0.98rem; }
 }
+
+/* ——— Authored icons ——— */
+.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.125em;
+  flex-shrink: 0;
+}
+.feedback-icon .icon { width: 1.35rem; height: 1.35rem; }
+.stat-good .icon, .stat-bad .icon { width: 0.9em; height: 0.9em; margin-right: 0.3em; }
+.buzzer-key .icon { width: 0.95em; height: 0.95em; vertical-align: -0.1em; }
+
+/* ——— Browser surfaces themed from the palette ——— */
+::selection { background: rgba(201, 111, 82, 0.28); color: var(--cream); }
+input { caret-color: var(--terracotta-deep); }
+:focus-visible { outline-color: var(--terracotta-deep); }
