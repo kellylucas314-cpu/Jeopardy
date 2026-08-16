@@ -34,7 +34,7 @@
     "clues": [
       { "clue": "A much-published 1934 photograph claimed to show a monster in this long Scottish lake", "response": "Loch Ness", "value": 400 },
       { "clue": "Chicago and Milwaukee sit on the shore of this Great Lake, the only one entirely inside the U.S.", "response": "Lake Michigan", "value": 800 },
-      { "clue": "Casinos, ski slopes and famously deep blue water ring this mountain jewel on the California-Nevada line", "response": "Lake Tahoe", "value": 1200 },
+      { "clue": "Casinos, ski slopes and famously deep blue water ring this mountain lake on the California-Nevada line", "response": "Lake Tahoe", "value": 1200 },
       { "clue": "Bathers bob like corks in this shallow Utah water that gave a nearby capital city its name", "response": "the Great Salt Lake", "value": 1600 },
       { "clue": "The White Nile begins at this vast African lake, which a British explorer named for his queen", "response": "Lake Victoria", "value": 2000 }
     ]
