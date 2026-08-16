@@ -263,7 +263,7 @@ function renderSetup() {
           <span>Sound Effects</span>
         </label>
         <button class="link-btn" id="btn-how-to">How to play</button>
-        <a class="link-btn" href="./army.html">🐷 The Army</a>
+        <a class="link-btn" href="https://kellylucas.dev/army.html">🐷 The Army</a>
       </div>
     </div>
   `;
