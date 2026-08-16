@@ -57,7 +57,7 @@ Data format: chunk files `chunk-NNN.json`; round dirs `jeopardy` (R1, $200–100
 - **1–3 players**, emoji avatars, per-player colors.
 - **Solo mode:** end-of-game report card **Rank D → S (Grand Champion)** from accuracy + correct count (tier table `SOLO_TIERS` in main.js), next-rank requirement hint, "New personal best!" callout, solo scorecard instead of podium, solo share text.
 - Streak bonuses with callouts, catch-up (trailing player picks first in R2), lead-change banners, host personality lines, Daily Doubles with wagering, category intro reveal, board reroll ("New categories" before first pick), keyboard board navigation, Escape/menu quit with confirm, "We'll accept it ✓" judge override (regular + Final), Final = pass-the-device private wagers/answers, podium + confetti + Share Result (clipboard), Hall of Fame on setup, error screen with retry, warm sound toggle, mobile responsive + haptics, a11y (aria-live, reduced motion, focus management).
-- **Boot Camp** (`army.html`): separate one-button side-scroller mini-game added by a parallel session; linked from setup ("🐷 The Army"). Don't touch unless asked.
+- **Boot Camp**: a separate one-button side-scroller mini-game built by a parallel session; it now lives at https://kellylucas.dev/army.html (this repo's `army.html` is just a redirect, and the setup screen's "🐷 The Army" link points there). Don't touch unless asked.
 
 ## Quality bar / history
 
