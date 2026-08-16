@@ -5,7 +5,7 @@
       { "clue": "This player takes the snap, calls the signals and throws most of the passes", "response": "the quarterback", "value": 400 },
       { "clue": "Boot the ball between the uprights and you've made this three-point play", "response": "a field goal", "value": 800 },
       { "clue": "A defender who drags down the passer behind the line of scrimmage gets one of these", "response": "a sack", "value": 1200 },
-      { "clue": "Pro football's Hall of Fame sits in this Ohio city, where the league was founded in 1920", "response": "Canton", "value": 1600 },
+      { "clue": "Pro football's Hall of Fame stands in this Ohio city, where the league got its start in 1920", "response": "Canton", "value": 1600 },
       { "clue": "Nicknamed Sweetness, this Chicago Bears runner retired as the NFL's career rushing leader", "response": "Walter Payton", "value": 2000 }
     ]
   },
@@ -16,7 +16,7 @@
       { "clue": "Sugar, Orange and Cotton are among college football's postseason matchups, known collectively as these", "response": "bowl games", "value": 800 },
       { "clue": "Played in Pasadena at New Year's, this game is nicknamed the Granddaddy of Them All", "response": "the Rose Bowl", "value": 1200 },
       { "clue": "Each season college football's finest player takes home this bronze stiff-arm award", "response": "the Heisman Trophy", "value": 1600 },
-      { "clue": "This Notre Dame coach won three national titles in the 1920s and said to win one for the Gipper", "response": "Knute Rockne", "value": 2000 }
+      { "clue": "This legendary Notre Dame coach urged his 1928 team to go out and win one for the Gipper", "response": "Knute Rockne", "value": 2000 }
     ]
   },
   {
@@ -45,7 +45,7 @@
       { "clue": "Golfers holler this one-word warning when a shot heads toward other players", "response": "\"Fore!\"", "value": 400 },
       { "clue": "Finish a hole one stroke under par and you've made one of these", "response": "a birdie", "value": 800 },
       { "clue": "The winner of this tournament in Augusta, Georgia slips on a green jacket", "response": "the Masters", "value": 1200 },
-      { "clue": "Nicknamed the Golden Bear, this golfer won a record 18 professional majors", "response": "Jack Nicklaus", "value": 1600 },
+      { "clue": "Nicknamed the Golden Bear, this Ohio-born golfer won the Masters six times", "response": "Jack Nicklaus", "value": 1600 },
       { "clue": "The rules let a golfer carry no more than this many clubs in the bag", "response": "14", "value": 2000 }
     ]
   },
@@ -92,7 +92,7 @@
   {
     "name": "THE FAMILY ALBUM",
     "clues": [
-      { "clue": "\"You press the button, we do the rest\" was the 1888 promise of this yellow-box film company", "response": "Kodak", "value": 400 },
+      { "clue": "\"You press the button, we do the rest\" was the old promise of this yellow-box film giant", "response": "Kodak", "value": 400 },
       { "clue": "Snap it and the photo slides right out to develop in your hand, thanks to this instant brand", "response": "Polaroid", "value": 800 },
       { "clue": "One quick pop of this glass bulb lit the shot, and then it was too hot to touch", "response": "a flashbulb", "value": 1200 },
       { "clue": "The strip of developed film where light and dark are reversed goes by this name", "response": "a negative", "value": 1600 },
@@ -103,10 +103,10 @@
     "name": "THE PET PARADE",
     "clues": [
       { "clue": "Topping every breed winner, one dog takes this three-word grand honor of the day", "response": "Best in Show", "value": 400 },
-      { "clue": "This white dog with black spots was the classic firehouse mascot", "response": "the Dalmatian", "value": 800 },
-      { "clue": "The wiener dog's proper name is this German breed, and it means badger dog", "response": "the dachshund", "value": 1200 },
+      { "clue": "The wiener dog's proper name is this German breed, and it means badger dog", "response": "the dachshund", "value": 800 },
+      { "clue": "Charles Schulz made this floppy-eared, short-legged hound famous as Snoopy", "response": "the beagle", "value": 1200 },
       { "clue": "For more than a century America's top dog show, the Westminster, filled this Manhattan arena", "response": "Madison Square Garden", "value": 1600 },
-      { "clue": "This tailless cat breed is named for an island in the Irish Sea", "response": "the Manx", "value": 2000 }
+      { "clue": "Almost always female, a cat with patches of orange, black and white is called this", "response": "a calico", "value": 2000 }
     ]
   },
   {
@@ -114,9 +114,9 @@
     "clues": [
       { "clue": "A full-size piano has 88 of these, in black and white", "response": "keys", "value": 400 },
       { "clue": "Cowboys and bluesmen alike carried this little reed instrument in a shirt pocket", "response": "a harmonica", "value": 800 },
-      { "clue": "A tuner strikes this two-pronged steel tool to sound one true note", "response": "a tuning fork", "value": 1200 },
+      { "clue": "Before the singing starts, someone strikes this two-pronged steel tool for a true pitch", "response": "a tuning fork", "value": 1200 },
       { "clue": "This parlor marvel performed all by itself from a roll of punched paper", "response": "a player piano", "value": 1600 },
-      { "clue": "Baldwin's great rival, this New York firm has built America's finest grand pianos since 1853", "response": "Steinway", "value": 2000 }
+      { "clue": "Founded in New York in 1853 by a German immigrant, this firm is the most famous name in pianos", "response": "Steinway", "value": 2000 }
     ]
   }
 ]
