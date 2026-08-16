@@ -22,7 +22,7 @@
   {
     "name": "GAME CHANGERS",
     "clues": [
-      { "clue": "Unemployed architect Alfred Butts counted letters in the New York Times to set this word game's tile values", "response": "Scrabble", "value": 400 },
+      { "clue": "Leslie Scott's family stacked sawmill offcuts in Ghana, inspiring this tower game she named from Swahili for 'to build'", "response": "Jenga", "value": 400 },
       { "clue": "First pitched as 'Pretzel', this floor-mat party game took off after Johnny Carson tangled with Eva Gabor in 1966", "response": "Twister", "value": 800 },
       { "clue": "Recovering from polio, schoolteacher Eleanor Abbott invented this sugary path-racing game for kids on her ward", "response": "Candy Land", "value": 1200 },
       { "clue": "As his beardless Lincoln prints tanked, this Springfield lithographer scored with 1860's 'Checkered Game of Life'", "response": "Milton Bradley", "value": 1600 },
@@ -32,8 +32,8 @@
   {
     "name": "THINKING OUTSIDE THE BOX",
     "clues": [
-      { "clue": "Canadian newsmen Scott Abbott and Chris Haney cooked up this wedge-collecting quiz game in 1979", "response": "Trivial Pursuit", "value": 400 },
-      { "clue": "Ohio barber Merle Robbins printed the first 5,000 decks of this shout-it-when-one-card-remains game", "response": "Uno", "value": 800 },
+      { "clue": "A University of Illinois design student got $500 and an empty job promise for the prototype of this buzzing tweezers game", "response": "Operation", "value": 400 },
+      { "clue": "Ralph Baer, a father of the home video game, reworked an Atari arcade flop into this 1978 light-and-sound memory toy", "response": "Simon", "value": 800 },
       { "clue": "Gary Gygax and Dave Arneson unleashed this 20-sided-die role-playing landmark from Lake Geneva, Wisconsin in 1974", "response": "Dungeons & Dragons", "value": 1200 },
       { "clue": "Patented in Baltimore in 1891, this 'talking board' supposedly picked its own odd name when asked", "response": "Ouija", "value": 1600 },
       { "clue": "German dental technician Klaus Teuber had players trading brick and wool on this hexagon-tiled island in 1995", "response": "Settlers of Catan", "value": 2000 }
@@ -52,10 +52,10 @@
   {
     "name": "PLAYING FOR KEEPS",
     "clues": [
-      { "clue": "President Roosevelt's mercy toward a roped bruin on a 1902 Mississippi hunt inspired this cuddly toy", "response": "the teddy bear", "value": 400 },
-      { "clue": "This egg-packaged stretchy goo, a failed wartime rubber substitute, orbited the moon with Apollo 8", "response": "Silly Putty", "value": 800 },
-      { "clue": "Wham-O's Pluto Platter took this new name from a Connecticut pie company whose tins Yale students flung", "response": "the Frisbee", "value": 1200 },
-      { "clue": "Shoppers rioted in 1983 over Xavier Roberts' pudgy-cheeked dolls, sold under this name with adoption papers", "response": "Cabbage Patch Kids", "value": 1600 },
+      { "clue": "Sold as a souvenir at the 1939 New York World's Fair, this Sawyer's gadget clicks through reels of 3-D photo pairs", "response": "the View-Master", "value": 400 },
+      { "clue": "Alice Binney fused the French word for chalk with one for oily to name these 1903 wax sticks", "response": "Crayola crayons", "value": 800 },
+      { "clue": "Antonio Pasin saluted two marvels, Marconi's airwaves and Lindbergh's flight, in naming this steel toy wagon", "response": "the Radio Flyer", "value": 1200 },
+      { "clue": "Harold von Braunhut hawked these 'instant life' pets in comic book ads; they were really brine shrimp", "response": "Sea-Monkeys", "value": 1600 },
       { "clue": "Frank Lloyd Wright's son John modeled these interlocking toy timbers on Tokyo's quake-resistant Imperial Hotel", "response": "Lincoln Logs", "value": 2000 }
     ]
   },

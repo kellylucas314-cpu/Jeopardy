@@ -7,7 +7,7 @@
     { "clue": "South Africans call this port beneath Table Mountain 'the Mother City'; it's their country's oldest", "response": "Cape Town", "value": 1000 }
   ] },
   { "name": "NICK OF TOWN", "clues": [
-    { "clue": "Windbag politicians, not lake breezes, may explain the blustery nickname of this Illinois metropolis", "response": "Chicago", "value": 200 },
+    { "clue": "Auto assembly lines gave this Michigan city both its 'Motor City' nickname & a famous record label's name", "response": "Detroit", "value": 200 },
     { "clue": "Home of the Grand Ole Opry & rows of recording studios, this Tennessee capital answers to 'Music City'", "response": "Nashville", "value": 400 },
     { "clue": "A downtown arch proclaims this Nevada casino town 'The Biggest Little City in the World'", "response": "Reno", "value": 600 },
     { "clue": "Coal smoke curling over its Old Town earned this Scottish capital the nickname 'Auld Reekie'", "response": "Edinburgh", "value": 800 },
@@ -28,7 +28,7 @@
     { "clue": "The stars of the U.S. flag fill this upper hoist-side quarter, whose name is also a Swiss state", "response": "the canton", "value": 1000 }
   ] },
   { "name": "MAGMA CUM LAUDE", "clues": [
-    { "clue": "Its eruption of 79 A.D. entombed Pompeii; this volcano still looms over the Bay of Naples", "response": "Vesuvius", "value": 200 },
+    { "clue": "Sicily's snow-capped giant, Europe's most active volcano, regularly dusts the city of Catania with ash", "response": "Mount Etna", "value": 200 },
     { "clue": "The May 1980 blast of this Washington State volcano flattened forests & lopped 1,300 feet off its summit", "response": "Mount St. Helens", "value": 400 },
     { "clue": "The goddess Pele is said to dwell at Halemaumau crater atop this highly active Big Island volcano", "response": "Kilauea", "value": 600 },
     { "clue": "Hollywood placed it 'East of Java,' but this Indonesian island volcano that blew apart in 1883 lies west", "response": "Krakatoa", "value": 800 },
@@ -46,10 +46,10 @@
     { "clue": "Never mind 'falling down': in 1968 an 1830s version of this span was sold for rebuilding in Arizona", "response": "London Bridge", "value": 400 },
     { "clue": "Goldsmiths' shops line this Arno crossing, the only Florence span the retreating Germans spared in 1944", "response": "the Ponte Vecchio", "value": 600 },
     { "clue": "Aussies dub this steel arch over Port Jackson 'the Coathanger'; New Year's fireworks cascade off it", "response": "the Sydney Harbour Bridge", "value": 800 },
-    { "clue": "Masts taller than the Eiffel Tower hold up this cable-stayed wonder of 2004 above France's Tarn Valley", "response": "the Millau Viaduct", "value": 1000 }
+    { "clue": "A mast rising higher than the Eiffel Tower tops this cable-stayed 2004 wonder above France's Tarn Valley", "response": "the Millau Viaduct", "value": 1000 }
   ] },
   { "name": "A BORING CATEGORY", "clues": [
-    { "clue": "Since 1994 Eurostar trains have shuttled between England & France via this 31-mile undersea rail link", "response": "the Channel Tunnel", "value": 200 },
+    { "clue": "Since 1994 Eurostar trains have run from England to France through this 31-mile link, 24 of those miles under the sea", "response": "the Channel Tunnel", "value": 200 },
     { "clue": "Chief engineer Clifford, not a European country, gave his surname to this 1927 Hudson River crossing", "response": "the Holland Tunnel", "value": 400 },
     { "clue": "Drivers zip from France to Italy beneath Western Europe's highest peak via this 7-mile bore", "response": "the Mont Blanc Tunnel", "value": 600 },
     { "clue": "Completed in 1988, this rail passage dips under the Tsugaru Strait to join Honshu with Hokkaido", "response": "the Seikan Tunnel", "value": 800 },
@@ -77,7 +77,7 @@
     { "clue": "Terraced vineyards demarcated back in 1756 make this Portuguese river's valley the one true home of port", "response": "the Douro", "value": 1000 }
   ] },
   { "name": "ISLE OF VIEW", "clues": [
-    { "clue": "Columbus made his first New World landfall in 1492 in this island nation whose capital is Nassau", "response": "the Bahamas", "value": 200 },
+    { "clue": "Some 700 islands & 2,400 cays just off Florida make up this nation, once a haven for the pirate Blackbeard", "response": "the Bahamas", "value": 200 },
     { "clue": "Suva is the capital of this South Pacific nation of some 300 islands & a famously pure bottled water", "response": "Fiji", "value": 400 },
     { "clue": "Knights of St. John held this Mediterranean island through a great 1565 Ottoman siege; it became a nation in 1964", "response": "Malta", "value": 600 },
     { "clue": "The coco de mer palm & its famously enormous double seeds are native to this Indian Ocean archipelago nation", "response": "the Seychelles", "value": 800 },

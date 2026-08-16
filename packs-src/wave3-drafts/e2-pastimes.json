@@ -1,0 +1,122 @@
+[
+  {
+    "name": "THE PIGSKIN PARADE",
+    "clues": [
+      { "clue": "This player takes the snap, calls the signals and throws most of the passes", "response": "the quarterback", "value": 400 },
+      { "clue": "Boot the ball between the uprights and you've made this three-point play", "response": "a field goal", "value": 800 },
+      { "clue": "A defender who drags down the passer behind the line of scrimmage gets one of these", "response": "a sack", "value": 1200 },
+      { "clue": "Pro football's Hall of Fame sits in this Ohio city, where the league was founded in 1920", "response": "Canton", "value": 1600 },
+      { "clue": "Nicknamed Sweetness, this Chicago Bears runner retired as the NFL's career rushing leader", "response": "Walter Payton", "value": 2000 }
+    ]
+  },
+  {
+    "name": "AUTUMN SATURDAYS",
+    "clues": [
+      { "clue": "Fans fire up grills in the campus parking lot for this pregame party", "response": "tailgating", "value": 400 },
+      { "clue": "Sugar, Orange and Cotton are among college football's postseason matchups, known collectively as these", "response": "bowl games", "value": 800 },
+      { "clue": "Played in Pasadena at New Year's, this game is nicknamed the Granddaddy of Them All", "response": "the Rose Bowl", "value": 1200 },
+      { "clue": "Each season college football's finest player takes home this bronze stiff-arm award", "response": "the Heisman Trophy", "value": 1600 },
+      { "clue": "This Notre Dame coach won three national titles in the 1920s and said to win one for the Gipper", "response": "Knute Rockne", "value": 2000 }
+    ]
+  },
+  {
+    "name": "DERBY DAY",
+    "clues": [
+      { "clue": "Derby Day crowds sip this bourbon cocktail, muddled with fresh leaves in a frosty silver cup", "response": "a mint julep", "value": 400 },
+      { "clue": "Derby Day fashion means a lady tops her outfit with the wildest of these", "response": "a hat", "value": 800 },
+      { "clue": "The Kentucky Derby is run at this Louisville track with the famous twin spires", "response": "Churchill Downs", "value": 1200 },
+      { "clue": "As the horses parade to the post, the crowd sings this Stephen Foster state song", "response": "\"My Old Kentucky Home\"", "value": 1600 },
+      { "clue": "Two weeks after the Derby, Baltimore's Pimlico track hosts this second Triple Crown race", "response": "the Preakness Stakes", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE SPORT OF KINGS",
+    "clues": [
+      { "clue": "Wearing bright silks, this small, light rider guides the horse around the track", "response": "a jockey", "value": 400 },
+      { "clue": "At the bell, the horses burst from these numbered metal stalls", "response": "the starting gate", "value": 800 },
+      { "clue": "This undersized 1930s champion beat mighty War Admiral in a famous match race", "response": "Seabiscuit", "value": 1200 },
+      { "clue": "Race distances are given in these units, each one equal to an eighth of a mile", "response": "a furlong", "value": 1600 },
+      { "clue": "This great chestnut colt of 1919 and 1920 lost only once, to a horse named Upset", "response": "Man o' War", "value": 2000 }
+    ]
+  },
+  {
+    "name": "TEE TIME",
+    "clues": [
+      { "clue": "Golfers holler this one-word warning when a shot heads toward other players", "response": "\"Fore!\"", "value": 400 },
+      { "clue": "Finish a hole one stroke under par and you've made one of these", "response": "a birdie", "value": 800 },
+      { "clue": "The winner of this tournament in Augusta, Georgia slips on a green jacket", "response": "the Masters", "value": 1200 },
+      { "clue": "Nicknamed the Golden Bear, this golfer won a record 18 professional majors", "response": "Jack Nicklaus", "value": 1600 },
+      { "clue": "The rules let a golfer carry no more than this many clubs in the bag", "response": "14", "value": 2000 }
+    ]
+  },
+  {
+    "name": "ANYONE FOR TENNIS?",
+    "clues": [
+      { "clue": "In tennis scoring, this four-letter word means a score of zero", "response": "love", "value": 400 },
+      { "clue": "A serve the other player cannot even touch is called this", "response": "an ace", "value": 800 },
+      { "clue": "The oldest of tennis's four majors is played on the grass courts of this London suburb", "response": "Wimbledon", "value": 1200 },
+      { "clue": "In 1975 this American became the first Black man to take the Wimbledon men's title", "response": "Arthur Ashe", "value": 1600 },
+      { "clue": "This Czech-born lefty won 18 major singles titles and ruled women's tennis in the 1980s", "response": "Martina Navratilova", "value": 2000 }
+    ]
+  },
+  {
+    "name": "SATURDAY MATINEE",
+    "clues": [
+      { "clue": "This snack, popped and buttered in the lobby, is the movie house's biggest seller", "response": "popcorn", "value": 400 },
+      { "clue": "Titles go up in big letters on this lighted sign above the theater entrance", "response": "the marquee", "value": 800 },
+      { "clue": "This flashlight-carrying employee walked latecomers down the dark aisle to a seat", "response": "an usher", "value": 1200 },
+      { "clue": "Before the feature came this short film of current events, often narrated in a booming voice", "response": "a newsreel", "value": 1600 },
+      { "clue": "The pipe organ that filled a silent-movie palace was nicknamed the Mighty this", "response": "Wurlitzer", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE GARDEN CLUB",
+    "clues": [
+      { "clue": "Someone with a knack for making every plant thrive is said to have this two-word gift", "response": "a green thumb", "value": 400 },
+      { "clue": "Gardeners spread this layer of bark or straw to lock in moisture and smother weeds", "response": "mulch", "value": 800 },
+      { "clue": "Daffodils and tulips grow from these fat underground starters, planted in the fall", "response": "bulbs", "value": 1200 },
+      { "clue": "A tiny indoor garden of moss and small plants sealed under glass is called this", "response": "a terrarium", "value": 1600 },
+      { "clue": "Snipping off faded blossoms to keep a plant flowering has this grim-sounding name", "response": "deadheading", "value": 2000 }
+    ]
+  },
+  {
+    "name": "PLEASE WRITE SOON",
+    "clues": [
+      { "clue": "An afterthought squeezed in below your signature is marked with these two letters", "response": "P.S.", "value": 400 },
+      { "clue": "A faraway stranger you swap friendly letters with, often assigned in school, is this", "response": "a pen pal", "value": 800 },
+      { "clue": "Before ballpoints, writers filled this pen's inner reservoir with ink from a bottle", "response": "a fountain pen", "value": 1200 },
+      { "clue": "\"Dear Sir\" or \"Dearest Mother\" — the opening greeting of a letter is properly called this", "response": "the salutation", "value": 1600 },
+      { "clue": "A letter was once closed with a blob of this melted red stuff, pressed with a signet ring", "response": "sealing wax", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE FAMILY ALBUM",
+    "clues": [
+      { "clue": "\"You press the button, we do the rest\" was the 1888 promise of this yellow-box film company", "response": "Kodak", "value": 400 },
+      { "clue": "Snap it and the photo slides right out to develop in your hand, thanks to this instant brand", "response": "Polaroid", "value": 800 },
+      { "clue": "One quick pop of this glass bulb lit the shot, and then it was too hot to touch", "response": "a flashbulb", "value": 1200 },
+      { "clue": "The strip of developed film where light and dark are reversed goes by this name", "response": "a negative", "value": 1600 },
+      { "clue": "This dollar box camera of 1900 put snapshots in everyone's hands; it shares its name with a fudgy square", "response": "the Brownie", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE PET PARADE",
+    "clues": [
+      { "clue": "Topping every breed winner, one dog takes this three-word grand honor of the day", "response": "Best in Show", "value": 400 },
+      { "clue": "This white dog with black spots was the classic firehouse mascot", "response": "the Dalmatian", "value": 800 },
+      { "clue": "The wiener dog's proper name is this German breed, and it means badger dog", "response": "the dachshund", "value": 1200 },
+      { "clue": "For more than a century America's top dog show, the Westminster, filled this Manhattan arena", "response": "Madison Square Garden", "value": 1600 },
+      { "clue": "This tailless cat breed is named for an island in the Irish Sea", "response": "the Manx", "value": 2000 }
+    ]
+  },
+  {
+    "name": "MUSIC IN THE PARLOR",
+    "clues": [
+      { "clue": "A full-size piano has 88 of these, in black and white", "response": "keys", "value": 400 },
+      { "clue": "Cowboys and bluesmen alike carried this little reed instrument in a shirt pocket", "response": "a harmonica", "value": 800 },
+      { "clue": "A tuner strikes this two-pronged steel tool to sound one true note", "response": "a tuning fork", "value": 1200 },
+      { "clue": "This parlor marvel performed all by itself from a roll of punched paper", "response": "a player piano", "value": 1600 },
+      { "clue": "Baldwin's great rival, this New York firm has built America's finest grand pianos since 1853", "response": "Steinway", "value": 2000 }
+    ]
+  }
+]

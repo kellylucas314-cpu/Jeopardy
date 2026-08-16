@@ -6,13 +6,6 @@
     { "clue": "Two Canadian journalists cooked up this quiz game in 1979; winners fill a pie-like token with 6 wedges", "response": "Trivial Pursuit", "value": 800 },
     { "clue": "A lowly spy can fell the marshal & bombs lie in wait among the hidden ranks of this capture-the-flag board game", "response": "Stratego", "value": 1000 }
   ] },
-  { "name": "ANTIQUES BOARD SHOW", "clues": [
-    { "clue": "Jump your rival's discs & crown a piece 'king' on the far row of this 64-square classic", "response": "checkers", "value": 200 },
-    { "clue": "Nicknamed 'bones', these spotted tiles are matched end to end, pips to pips", "response": "dominoes", "value": 400 },
-    { "clue": "Black & white stones vie to fence off territory in this ancient East Asian game with a 2-letter name", "response": "Go", "value": 600 },
-    { "clue": "In this family of African & Asian 'sowing' games, players scoop counters from pits & seed them around the board", "response": "mancala", "value": 800 },
-    { "clue": "Tutankhamun was entombed with boards for this 30-square Egyptian game tied to the soul's trip to the afterlife", "response": "senet", "value": 1000 }
-  ] },
   { "name": "SUIT YOURSELF", "clues": [
     { "clue": "Forget to shout this game's own name when you're down to one card & you'll pay with a penalty draw", "response": "Uno", "value": 200 },
     { "clue": "Klondike is the classic form of this patient one-player pastime that came free with Windows", "response": "solitaire", "value": 400 },
@@ -23,7 +16,7 @@
   { "name": "DECKED OUT", "clues": [
     { "clue": "Often drawn as a capering jester, this extra card joined American decks in the 1860s", "response": "the joker", "value": 200 },
     { "clue": "British tax rules made the ace of this black suit the deck's most ornate card", "response": "spades", "value": 400 },
-    { "clue": "Aces & eights, the poker cards Wild Bill Hickok held when he was shot in 1876, go by this grim nickname", "response": "the dead man's hand", "value": 600 },
+    { "clue": "Cincinnati printers rolled out this two-wheeled brand of playing cards in 1885; magicians still deal it", "response": "Bicycle", "value": 600 },
     { "clue": "The 'suicide king', who seems to shove his sword into his own head, wears the crown of this suit", "response": "hearts", "value": 800 },
     { "clue": "Tang dynasty 'money cards' make this country the playing card's likely birthplace", "response": "China", "value": 1000 }
   ] },
@@ -78,7 +71,7 @@
   ] },
   { "name": "PARLOR TRICKS", "clues": [
     { "clue": "When the tune cuts out, scramble to sit — there's always one seat too few in this party staple", "response": "musical chairs", "value": 200 },
-    { "clue": "Rivals sneered 'sex in a box', but Johnny Carson & Eva Gabor tangling on TV in 1966 made this mat game a smash", "response": "Twister", "value": 400 },
+    { "clue": "'Animal, vegetable or mineral?' is the classic opening query in this guessing game with a numeric name", "response": "Twenty Questions", "value": 400 },
     { "clue": "Tugging an earlobe for 'sounds like' is legal; speaking is not, in this act-it-out parlor game", "response": "charades", "value": 600 },
     { "clue": "Seattle waiter Rob Angel turned sketch-&-guess into this 1985 board game phenomenon", "response": "Pictionary", "value": 800 },
     { "clue": "A seeker with covered eyes gropes after dodging players in this parlor game, a hit at Tudor courts & Victorian Christmases", "response": "blind man's buff", "value": 1000 }
