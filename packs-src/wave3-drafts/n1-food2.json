@@ -54,9 +54,9 @@
     "clues": [
       { "clue": "Four wafer fingers snap apart in this bar from York, England, whose slogan urges you to take a break.", "response": "Kit Kat", "value": 200 },
       { "clue": "A row of triangular peaks said to echo the Matterhorn gives this Swiss chocolate bar its unmistakable shape.", "response": "Toblerone", "value": 400 },
-      { "clue": "Carbon dioxide sealed under pressure makes this candy crackle and fizz the instant it hits your tongue.", "response": "Pop Rocks", "value": 600 },
-      { "clue": "Leo Hirschfield named this chewy penny candy of 1896 for his young daughter's nickname.", "response": "Tootsie Roll", "value": 800 },
-      { "clue": "Rodolphe Lindt's 1879 machine smooths gritty chocolate for hours; the process is named for its shell-shaped trough.", "response": "conching", "value": 1000 }
+      { "clue": "A long-running jingle sold this coconut bar alongside Almond Joy; the punch line was that this one has no nuts.", "response": "Mounds", "value": 600 },
+      { "clue": "Sold in 1932 as three pieces in chocolate, vanilla and strawberry, this nougat bar got a swashbuckling name to match.", "response": "3 Musketeers", "value": 800 },
+      { "clue": "Curtiss Candy insisted it named this 1921 bar for a president's daughter, not for the Yankees slugger everyone assumed.", "response": "Baby Ruth", "value": 1000 }
     ]
   },
   {
@@ -94,7 +94,7 @@
     "clues": [
       { "clue": "In India, tea boiled up with milk, sugar and cardamom goes by this name, a word that simply means 'tea'.", "response": "chai", "value": 200 },
       { "clue": "A bamboo whisk froths this powdered green tea into the centerpiece of the Japanese tea ceremony.", "response": "matcha", "value": 400 },
-      { "clue": "Partly oxidized, this Chinese tea sits between green and black, and its name means 'black dragon'.", "response": "oolong", "value": 600 },
+      { "clue": "Boiled unfiltered in a long-handled pot, this brew leaves grounds in the cup that Istanbul fortune-tellers read.", "response": "Turkish coffee", "value": 600 },
       { "clue": "Russian tea culture centers on this metal urn, which keeps water hot under a small pot of strong concentrate.", "response": "samovar", "value": 800 },
       { "clue": "Beans that have passed through this Indonesian tree-climbing mammal become kopi luwak, a famously pricey brew.", "response": "the civet", "value": 1000 }
     ]

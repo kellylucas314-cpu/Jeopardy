@@ -56,7 +56,7 @@
       { "clue": "Wooden balls, mallets and wire wickets are the gear for this lawn game", "response": "croquet", "value": 400 },
       { "clue": "Players swat a feathered shuttlecock over a high net in this racket sport", "response": "badminton", "value": 600 },
       { "clue": "Cat's eyes, aggies and shooters are the little glass pieces in this dirt-ring game", "response": "marbles", "value": 800 },
-      { "clue": "Bounce a little rubber ball, scoop up the metal pieces: onesies, twosies, threesies", "response": "jacks", "value": 1000 }
+      { "clue": "Players roll heavy balls at a small target called the pallino in this Italian yard game", "response": "bocce", "value": 1000 }
     ]
   },
   {
@@ -104,9 +104,9 @@
     "clues": [
       { "clue": "Collectors soak these off old envelopes and mount them in albums", "response": "stamps", "value": 200 },
       { "clue": "A birdwatcher raises these to bring a distant warbler up close", "response": "binoculars", "value": 400 },
-      { "clue": "A wartime copper shortage in 1943 meant this small coin was struck in steel", "response": "the penny", "value": 600 },
+      { "clue": "Coin folders have a special slot for this small 1943 piece, struck in steel to save copper", "response": "the penny", "value": 600 },
       { "clue": "Lionel and American Flyer were the big names in this basement hobby", "response": "model trains", "value": 800 },
-      { "clue": "Stamp collecting goes by this fancier name, built from Greek roots", "response": "philately", "value": 1000 }
+      { "clue": "This pursuit of tracing the family line sends hobbyists digging through old census records", "response": "genealogy", "value": 1000 }
     ]
   },
   {

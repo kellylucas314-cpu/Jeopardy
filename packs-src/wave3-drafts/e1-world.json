@@ -2,11 +2,11 @@
   {
     "name": "THAT LOOKS FAMILIAR",
     "clues": [
-      { "clue": "Built to keep out northern invaders, this winding barrier of stone and brick runs for thousands of miles across China", "response": "the Great Wall", "value": 200 },
-      { "clue": "Michelangelo spent four years painting God reaching out to Adam on the ceiling of this Vatican landmark", "response": "the Sistine Chapel", "value": 400 },
-      { "clue": "Napoleon ordered this Paris arch built to honor his armies; France's unknown soldier rests beneath it", "response": "the Arc de Triomphe", "value": 600 },
-      { "clue": "A 1954 movie tossed three coins into this Roman marvel, where a toss is said to guarantee your return", "response": "the Trevi Fountain", "value": 800 },
-      { "clue": "Almost 900 giant stone faces stare out from this remote Pacific spot, named for the Sunday a Dutch captain found it", "response": "Easter Island", "value": 1000 }
+      { "clue": "Thousands of miles long, this winding stone barrier kept invaders out of northern China", "response": "the Great Wall", "value": 200 },
+      { "clue": "Michelangelo spent four years painting God reaching out to Adam on this Vatican ceiling", "response": "the Sistine Chapel", "value": 400 },
+      { "clue": "France's unknown soldier lies beneath this Paris arch Napoleon built to honor his armies", "response": "the Arc de Triomphe", "value": 600 },
+      { "clue": "A 1954 movie tossed three coins into this Roman marvel; a toss is said to bring you back", "response": "the Trevi Fountain", "value": 800 },
+      { "clue": "Almost 900 giant stone faces stare out from this remote Pacific spot named for a Sunday holiday", "response": "Easter Island", "value": 1000 }
     ]
   },
   {
@@ -22,8 +22,8 @@
   {
     "name": "THE PRIDE OF THE STATE",
     "clues": [
-      { "clue": "Longhorn cattle, oil gushers and a taste for bigness belong to this Lone Star State", "response": "Texas", "value": 200 },
-      { "clue": "Orange groves, alligators and Miami Beach draw visitors to this Sunshine State", "response": "Florida", "value": 400 },
+      { "clue": "Longhorn cattle, oil gushers and a love of bigness mark this largest of the lower 48 states", "response": "Texas", "value": 200 },
+      { "clue": "Orange groves, alligators and Miami Beach fill this southeastern peninsula state", "response": "Florida", "value": 400 },
       { "clue": "On the first Saturday in May, this state's Churchill Downs hosts the run for the roses", "response": "Kentucky", "value": 600 },
       { "clue": "Amish buggies roll through Lancaster County and chocolate flows in Hershey in this state", "response": "Pennsylvania", "value": 800 },
       { "clue": "The Wright brothers made the first airplane flight on the dunes near Kitty Hawk in this state", "response": "North Carolina", "value": 1000 }
@@ -86,7 +86,7 @@
       { "clue": "For centuries this land guarded the secret of making silk from worm cocoons", "response": "China", "value": 400 },
       { "clue": "Assam and Darjeeling are celebrated tea-growing regions of this country", "response": "India", "value": 600 },
       { "clue": "Since the 1800s this South American giant has grown more coffee than anyone else", "response": "Brazil", "value": 800 },
-      { "clue": "Sheep have long outnumbered people many times over in this Pacific home of lamb and wool", "response": "New Zealand", "value": 1000 }
+      { "clue": "Sheep have long outnumbered people many times over on this country's North and South Islands", "response": "New Zealand", "value": 1000 }
     ]
   },
   {
@@ -102,11 +102,11 @@
   {
     "name": "WONDERFUL, WONDERFUL",
     "clues": [
-      { "clue": "The only ancient wonder still standing, this royal tomb has towered over the sands of Giza for 4,500 years", "response": "the Great Pyramid", "value": 200 },
+      { "clue": "Only one ancient wonder still stands: this 4,500-year-old limestone giant at Giza", "response": "the Great Pyramid", "value": 200 },
       { "clue": "Legend says a Babylonian king raised these leafy terraces to cheer up his homesick queen", "response": "the Hanging Gardens", "value": 400 },
       { "clue": "An earthquake toppled this giant bronze sun god that guarded a Greek island's harbor", "response": "the Colossus of Rhodes", "value": 600 },
       { "clue": "Built on the isle of Pharos, this towering beacon guided ships into Egypt's greatest port", "response": "the Lighthouse of Alexandria", "value": 800 },
-      { "clue": "In 356 B.C. a glory-seeking arsonist burned this marble wonder at Ephesus honoring the Greek goddess of the hunt", "response": "the Temple of Artemis", "value": 1000 }
+      { "clue": "This wonder, a king's tomb at Halicarnassus, lent English its word for a grand stone tomb", "response": "the Mausoleum", "value": 1000 }
     ]
   },
   {

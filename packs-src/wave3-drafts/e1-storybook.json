@@ -82,10 +82,10 @@
   {
     "name": "STRAIGHT FROM AESOP",
     "clues": [
-      { "clue": "A greedy owner kills this bird and finds no golden eggs inside after all", "response": "the goose", "value": 200 },
+      { "clue": "A greedy owner kills this long-necked bird and finds no golden eggs inside after all", "response": "the goose", "value": 200 },
       { "clue": "This busy insect stores up food all summer while the grasshopper sings the days away", "response": "the ant", "value": 400 },
       { "clue": "This little creature gnaws the net to free the lion who once spared its life", "response": "a mouse", "value": 600 },
-      { "clue": "Flattered into opening its beak, this black bird drops the cheese to a sly fox", "response": "the crow", "value": 800 },
+      { "clue": "Praising a crow's fine singing voice, this sly flatterer catches the falling cheese", "response": "the fox", "value": 800 },
       { "clue": "In a contest with the wind, this warm rival gets the traveler to shed his cloak", "response": "the sun", "value": 1000 }
     ]
   },
