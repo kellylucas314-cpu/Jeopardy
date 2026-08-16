@@ -26,7 +26,7 @@
       { "clue": "Derby Day fashion means a lady tops her outfit with the wildest of these", "response": "a hat", "value": 800 },
       { "clue": "The Kentucky Derby is run at this Louisville track with the famous twin spires", "response": "Churchill Downs", "value": 1200 },
       { "clue": "As the horses parade to the post, the crowd sings this Stephen Foster state song", "response": "\"My Old Kentucky Home\"", "value": 1600 },
-      { "clue": "Two weeks after the Derby, Baltimore's Pimlico track hosts this second Triple Crown race", "response": "the Preakness Stakes", "value": 2000 }
+      { "clue": "Maryland's own Triple Crown race, first run in 1873, comes two weeks after the Derby", "response": "the Preakness Stakes", "value": 2000 }
     ]
   },
   {
@@ -102,11 +102,11 @@
   {
     "name": "THE PET PARADE",
     "clues": [
-      { "clue": "Topping every breed winner, one dog takes this three-word grand honor of the day", "response": "Best in Show", "value": 400 },
+      { "clue": "One dog beats every breed and group winner to claim this three-word title", "response": "Best in Show", "value": 400 },
       { "clue": "The wiener dog's proper name is this German breed, and it means badger dog", "response": "the dachshund", "value": 800 },
-      { "clue": "Charles Schulz made this floppy-eared, short-legged hound famous as Snoopy", "response": "the beagle", "value": 1200 },
+      { "clue": "Rescued as a pup from a bombed kennel in France, this German shepherd became a silent-film star", "response": "Rin Tin Tin", "value": 1200 },
       { "clue": "For more than a century America's top dog show, the Westminster, filled this Manhattan arena", "response": "Madison Square Garden", "value": 1600 },
-      { "clue": "Almost always female, a cat with patches of orange, black and white is called this", "response": "a calico", "value": 2000 }
+      { "clue": "Almost always female, a cat patched in orange, black and white shares its name with a cotton cloth", "response": "a calico", "value": 2000 }
     ]
   },
   {
