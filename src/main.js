@@ -28,6 +28,7 @@ const WRONG_LINES = ['A tactical retreat.', 'The Emperor regrets to decline.', '
 const TIMEOUT_LINES = ['Time waits for no emperor.', 'The clock has outflanked you.', 'Hesitation — the one enemy I never forgave.'];
 const NOBUZZ_LINES = ['No volunteers? Cowardice.', 'The salon falls silent…', 'Even my old guard would not charge at this one.', 'Very well. The board keeps its secret.'];
 const STEAL_LINES = ['The spoils lie unclaimed!', 'An open flank — who will take it?', 'Seize it, or regret it.'];
+const BOARD_LINES = ['Choose your battlefield.', 'The board awaits your command.', 'Pick your ground — history is watching.', 'Retreat is unavailable. Pick a category.', 'Every square hides a small war.'];
 
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -410,7 +411,6 @@ function renderBoard() {
         <div class="round-meta">
           <div class="round-name">${roundName}</div>
           <div class="round-progress"><div class="round-progress-fill" style="width:${progress}%"></div></div>
-          ${players.length > 1 ? `<div class="picks-cue" style="--pc: ${PLAYER_COLORS[activePlayer]}">⚜️ ${escapeHtml(players[activePlayer].name)}, choose your battlefield</div>` : ''}
         </div>
         <div class="scoreboard">
           ${players.map((p, i) => `
@@ -438,13 +438,20 @@ function renderBoard() {
         `).join('')}
       </div>
       <div class="board-footer">
-        ${cluesAnswered === 0 ? '<button class="link-btn reroll-btn" id="btn-reroll">🗺️ Redraw the map</button>' : ''}
-        <div class="clues-remaining">
-          ${totalClues - cluesAnswered} clues left
-          ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
+        <div class="host-dock">
+          <img class="host-medallion" src="./assets/napoleon-bust.webp" alt="Napoleon, your host">
+          <div class="host-plaque" aria-live="polite">${players.length > 1
+            ? `<strong style="color: ${PLAYER_COLORS[activePlayer]}">${escapeHtml(players[activePlayer].name)}</strong>, choose your battlefield.`
+            : pick(BOARD_LINES)}</div>
+        </div>
+        <div class="board-footer-info">
+          ${cluesAnswered === 0 ? '<button class="link-btn reroll-btn" id="btn-reroll">🗺️ Redraw the map</button>' : ''}
+          <div class="clues-remaining">
+            ${totalClues - cluesAnswered} clues left
+            ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
+          </div>
         </div>
       </div>
-      <img class="host-peek" src="./assets/napoleon-peek.webp" alt="" aria-hidden="true">
     </div>
   `;
 

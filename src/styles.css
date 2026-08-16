@@ -146,21 +146,35 @@ input { font-family: var(--font-ui); }
   font-family: var(--font-display);
   font-weight: 900;
   font-optical-sizing: auto;
-  font-size: 3.6rem;
+  font-size: 4.4rem;
   line-height: 1;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   text-align: center;
   color: var(--cream);
+  text-shadow: 0 2px 0 rgba(255, 253, 245, 0.7);
 }
 
 .logo-subtitle {
-  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.68rem;
   font-weight: 700;
   color: var(--brass);
-  letter-spacing: 0.42em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  margin-top: 14px;
+  white-space: nowrap;
+  margin-top: 16px;
   text-align: center;
+}
+/* brass rules flanking the subtitle — a title screen, not a form header */
+.logo-subtitle::before, .logo-subtitle::after {
+  content: '';
+  width: 28px;
+  height: 1px;
+  flex-shrink: 0;
+  background: rgba(160, 116, 48, 0.5);
 }
 
 /* ============================================================
@@ -182,49 +196,60 @@ input { font-family: var(--font-ui); }
 
 .setup-card {
   background: var(--surface-1);
-  border: 1px solid var(--line);
-  border-radius: var(--r-lg);
-  padding: 30px;
+  border: none;
+  border-radius: 16px;
+  padding: 34px 32px;
   width: 100%;
-  box-shadow: var(--shadow);
+  box-shadow: inset 0 1px 0 rgba(255, 253, 245, 0.8), var(--shadow);
 }
 
 .setup-card h2 {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  display: flex;
+  align-items: center;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--cream-faint);
+  color: var(--cream-dim);
   margin-bottom: 14px;
+}
+/* brass hairline carries each section label across the card */
+.setup-card h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  margin-left: 12px;
+  background: rgba(160, 116, 48, 0.3);
 }
 
 /* Segmented control */
 .player-count-buttons {
   display: flex;
   gap: 4px;
-  padding: 4px;
-  background: var(--ink);
-  border: 1px solid var(--line);
+  padding: 5px;
+  background: rgba(62, 46, 30, 0.07);
+  border: none;
   border-radius: 12px;
   margin-bottom: 24px;
 }
 
 .btn-player-count {
   flex: 1;
-  padding: 11px;
-  font-size: 0.9rem;
+  padding: 12px;
+  font-size: 0.92rem;
   font-weight: 600;
   background: transparent;
   color: var(--cream-dim);
-  border-radius: 9px;
+  border-radius: 8px;
 }
 
 .btn-player-count:hover { color: var(--cream); }
 
 .btn-player-count.selected {
-  background: var(--surface-3);
-  color: var(--cream);
-  box-shadow: inset 0 0 0 1px var(--line-strong);
+  background: var(--cream);
+  color: var(--surface-1);
+  font-weight: 700;
+  box-shadow: 0 3px 8px -2px rgba(44, 33, 21, 0.4);
 }
 
 /* Player rows */
@@ -322,10 +347,10 @@ input { font-family: var(--font-ui); }
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
-  padding: 15px;
-  background: var(--ink);
+  padding: 16px;
+  background: rgba(62, 46, 30, 0.05);
   color: var(--cream);
-  border: 1px solid var(--line);
+  border: 1.5px solid transparent;
   border-radius: var(--r-md);
   text-align: left;
 }
@@ -333,14 +358,15 @@ input { font-family: var(--font-ui); }
 .btn-mode:hover { border-color: var(--line-strong); }
 
 .btn-mode.selected {
-  border-color: var(--jade);
-  background: var(--surface-2);
+  border-color: var(--cream);
+  background: #faf4e6;
+  box-shadow: 0 4px 10px -4px rgba(44, 33, 21, 0.3);
 }
 
-.mode-name { font-size: 0.98rem; font-weight: 700; }
-.btn-mode.selected .mode-name { color: var(--jade-bright); }
+.mode-name { font-size: 1rem; font-weight: 700; }
+.btn-mode.selected .mode-name { color: var(--terracotta-deep); }
 
-.mode-desc { font-size: 0.72rem; font-weight: 400; color: var(--cream-faint); line-height: 1.45; }
+.mode-desc { font-size: 0.76rem; font-weight: 500; color: var(--cream-dim); line-height: 1.45; }
 
 .btn-start {
   width: 100%;
@@ -438,7 +464,9 @@ input { font-family: var(--font-ui); }
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  padding: 0 2px 14px;
+  padding: 0 2px 13px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(160, 116, 48, 0.4);
   flex-shrink: 0;
 }
 
@@ -446,7 +474,7 @@ input { font-family: var(--font-ui); }
 
 .round-name {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   font-weight: 800;
   letter-spacing: -0.01em;
   color: var(--cream);
@@ -520,13 +548,19 @@ input { font-family: var(--font-ui); }
 
 .streak { font-size: 0.66rem; color: var(--wrong); font-weight: 700; }
 
-/* The grid */
+/* The grid — an inset panel, a real object on the table */
 .game-board {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 7px;
+  gap: 9px;
   flex: 1;
   min-height: 0;
+  padding: 12px;
+  background: rgba(62, 46, 30, 0.065);
+  border: 1px solid rgba(62, 46, 30, 0.12);
+  border-radius: 12px;
+  box-shadow: inset 0 2px 10px rgba(74, 52, 28, 0.12),
+              inset 0 -1px 0 rgba(255, 253, 245, 0.5);
 }
 
 .game-board.revealing .board-category { animation: revealCategory 0.5s var(--ease) backwards; }
@@ -545,27 +579,29 @@ input { font-family: var(--font-ui); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Engraved campaign banners, not plain labels */
 .category-header {
-  background: var(--terracotta);
+  background: linear-gradient(180deg, #d17e60 0%, #c46749 55%, #b45a3f 100%);
+  border: 1px solid rgba(122, 48, 28, 0.45);
   border-radius: var(--r-sm);
   padding: 10px 8px;
   text-align: center;
   font-family: var(--font-board);
-  font-size: 0.84rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #f8efdd;
-  text-shadow: 0 1px 0 rgba(90, 35, 18, 0.35);
+  letter-spacing: 0.1em;
+  color: #faf1df;
+  text-shadow: 0 1px 1px rgba(90, 35, 18, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
+  min-height: 60px;
   line-height: 1.25;
   flex-shrink: 0;
-  box-shadow: inset 0 1px 0 rgba(255, 235, 220, 0.28),
-              inset 0 -2px 0 rgba(122, 48, 28, 0.35),
-              0 6px 14px -8px rgba(122, 48, 28, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 235, 220, 0.35),
+              inset 0 -2px 0 rgba(122, 48, 28, 0.4),
+              0 5px 12px -6px rgba(122, 48, 28, 0.55);
 }
 
 .board-clue {
@@ -578,7 +614,7 @@ input { font-family: var(--font-ui); }
   align-items: center;
   justify-content: center;
   font-family: var(--font-board);
-  font-size: 1.6rem;
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
   font-weight: 600;
   letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;
@@ -588,6 +624,11 @@ input { font-family: var(--font-ui); }
   box-shadow: var(--tile-shadow);
   transition: background 0.16s var(--ease), color 0.16s var(--ease),
               transform 0.16s var(--ease), box-shadow 0.16s var(--ease);
+}
+
+.board-clue:active:not(.answered) {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(74, 52, 28, 0.18);
 }
 
 .board-clue:hover:not(.answered) {
@@ -601,10 +642,15 @@ input { font-family: var(--font-ui); }
 
 /* Claimed tiles read as pressed impressions left in the felt */
 .board-clue.answered {
-  background: rgba(62, 46, 30, 0.045);
-  border: 1px dashed rgba(62, 46, 30, 0.18);
+  background: rgba(62, 46, 30, 0.05);
+  border: 1px dashed rgba(62, 46, 30, 0.2);
   box-shadow: inset 0 2px 6px rgba(74, 52, 28, 0.1);
   cursor: default;
+}
+.board-clue.answered::after {
+  content: '\269C'; /* a faint fleur-de-lis stamp marks conquered ground */
+  font-size: 1.1rem;
+  color: rgba(160, 116, 48, 0.32);
 }
 
 .board-footer {
@@ -1791,44 +1837,55 @@ input { font-family: var(--font-ui); }
    THE HOST — Napoleon, tastefully present
    ============================================================ */
 
-/* Peeks around the right edge of the board, as in the mockup */
-.host-peek {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-52%);
-  height: min(256px, 30vh);
-  width: auto;
-  z-index: 20;
-  pointer-events: none;
-  /* Feather the cut edges so he emerges from the parchment */
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14%),
-                      linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to right, transparent 0, #000 14%),
-              linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
-  mask-composite: intersect;
-  filter: drop-shadow(-6px 8px 12px rgba(74, 52, 28, 0.25));
-  animation: hostPeekIn 0.7s var(--ease) 0.45s backwards;
+/* The host's dock — a fixed post beside the board, never a floating sticker */
+.host-dock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  text-align: left;
+  animation: fadeSlideIn 0.5s var(--ease) 0.3s backwards;
 }
 
-@keyframes hostPeekIn {
-  from { opacity: 0; transform: translateY(-52%) translateX(24px); }
-  to { opacity: 1; transform: translateY(-52%) translateX(0); }
-}
-
-/* Framed portrait on the setup screen — an arched salon frame */
-.host-portrait {
-  width: 104px;
-  height: 128px;
+.host-medallion {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 50%;
   object-fit: cover;
   object-position: top;
-  border-radius: 60px 60px 10px 10px;
-  border: 3px solid var(--brass);
-  box-shadow: inset 0 0 0 2px var(--surface-1), var(--shadow-sm);
+  border: 2.5px solid var(--brass);
+  box-shadow: 0 0 0 2px var(--surface-1), var(--shadow-sm);
+  background: #e9dbc4;
+}
+
+.host-plaque {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--cream-dim);
+  background: var(--surface-1);
+  border: 1px solid rgba(160, 116, 48, 0.45);
+  border-radius: var(--r-md);
+  padding: 10px 16px;
+  box-shadow: var(--tile-shadow);
+  min-width: 0;
+}
+.host-plaque strong { font-style: normal; font-weight: 700; }
+
+/* Medallion portrait on the title screen */
+.host-portrait {
+  width: 132px;
+  height: 132px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 4px solid var(--brass);
+  box-shadow: 0 0 0 4px var(--surface-1), 0 0 0 5px rgba(160, 116, 48, 0.45), var(--shadow-sm);
   background: #e9dbc4;
   display: block;
-  margin: 0 auto 4px;
+  margin: 0 auto 18px;
 }
 
 /* A dry remark from the Emperor — small, never a full-screen interruption */
@@ -1860,13 +1917,35 @@ input { font-family: var(--font-ui); }
   color: var(--cream-faint);
 }
 
-@media (max-width: 900px) {
-  .host-peek { height: min(220px, 26vh); }
+/* Board footer carries the host dock left, table info right */
+.board-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  padding: 12px 4px 0;
 }
-@media (max-width: 640px) {
-  .host-peek { display: none; } /* never crowd a phone board */
-  .host-portrait { width: 84px; height: 104px; }
+.board-footer-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
 }
-@media (prefers-reduced-motion: reduce) {
-  .host-peek { animation: none; }
+
+@media (max-width: 768px) {
+  .host-portrait { width: 100px; height: 100px; border-width: 3px; }
+  .logo { font-size: 2.9rem; }
+  .logo-subtitle { letter-spacing: 0.26em; }
+  .host-medallion { width: 40px; height: 40px; border-width: 2px; }
+  .host-plaque { font-size: 0.85rem; padding: 7px 12px; }
+  .board-footer { flex-wrap: wrap; justify-content: center; gap: 8px 14px; }
+  .category-header { font-size: 0.66rem; letter-spacing: 0.05em; min-height: 46px; font-weight: 600; }
+  .board-clue { font-size: 1.15rem; }
+  .game-board { padding: 7px; gap: 6px; }
+}
+@media (max-width: 480px) {
+  .host-plaque { display: none; } /* the medallion alone hosts a phone table */
+  .category-header { font-size: 0.58rem; min-height: 40px; }
+  .board-clue { font-size: 0.98rem; }
 }
