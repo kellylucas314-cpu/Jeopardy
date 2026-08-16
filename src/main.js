@@ -17,6 +17,19 @@ let boardRevealDone = false;
 
 // Player identity
 const PLAYER_COLORS = ['var(--p0)', 'var(--p1)', 'var(--p2)'];
+// Authored icon set — drawn strokes, never glyphs standing in for icons.
+const ICONS = {
+  check: 'M4 11.5l4.6 4.5L20 5.5',
+  cross: 'M5.5 5.5l13 13M18.5 5.5l-13 13',
+  clock: 'M12 6.5v6l4 2',
+};
+function icon(name, cls = '') {
+  const extra = name === 'clock'
+    ? '<circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="2"/>'
+    : '';
+  return `<svg class="icon ${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${extra}<path d="${ICONS[name]}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+
 const ROMAN = ['I', 'II', 'III'];
 
 /** A player's mark is their initial, struck like a monogram on a seal. */
@@ -110,7 +123,7 @@ function updateTimerDisplay(seconds, total) {
   const urgent = seconds <= 5;
   const timerEl = document.getElementById('timer-bar');
   if (timerEl) {
-    timerEl.style.width = `${(Math.max(0, seconds) / total) * 100}%`;
+    timerEl.style.setProperty('--fill', Math.max(0, seconds) / total);
     timerEl.classList.toggle('urgent', urgent);
   }
   const timerText = document.getElementById('timer-text');
@@ -182,7 +195,7 @@ function handleTimeExpired() {
 
   showFeedback(`
     <div class="feedback-wrong">
-      <div class="feedback-icon">&mdash;</div>
+      <div class="feedback-icon">${icon('clock')}</div>
       <div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
@@ -419,7 +432,7 @@ function renderBoard() {
         <button class="btn-menu" id="btn-menu" aria-label="Game menu" title="Menu (Esc)">☰</button>
         <div class="round-meta">
           <div class="round-name">${roundName}</div>
-          <div class="round-progress"><div class="round-progress-fill" style="width:${progress}%"></div></div>
+          <div class="round-progress"><div class="round-progress-fill" style="--fill:${progress / 100}"></div></div>
         </div>
         <div class="scoreboard">
           ${players.map((p, i) => `
@@ -801,7 +814,7 @@ function handleSubmitAnswer() {
   if (result.correct) {
     showFeedback(`
       <div class="feedback-correct">
-        <div class="feedback-icon">&#x2713;</div>
+        <div class="feedback-icon">${icon('check')}</div>
         <div>${pick(CORRECT_LINES)} +$${formatMoney(result.value)}</div>
         ${bonusHtml(result)}
       </div>
@@ -810,12 +823,12 @@ function handleSubmitAnswer() {
   } else {
     showFeedback(`
       <div class="feedback-wrong">
-        <div class="feedback-icon">&#x2717;</div>
+        <div class="feedback-icon">${icon('cross')}</div>
         <div>${pick(WRONG_LINES)} -$${formatMoney(result.value)}</div>
         <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
         <div class="feedback-actions">
           <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
-          <button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it &#x2713;</button>
+          <button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it</button>
         </div>
       </div>
     `);
@@ -831,7 +844,7 @@ function handleOverride() {
   if (!result) return;
   showFeedback(`
     <div class="feedback-correct">
-      <div class="feedback-icon">&#x2713;</div>
+      <div class="feedback-icon">${icon('check')}</div>
       <div>We'll accept it! +$${formatMoney(result.value)} (penalty refunded)</div>
       ${bonusHtml(result)}
     </div>
@@ -895,7 +908,7 @@ function renderBuzzerRow() {
     <button class="btn-buzzer ${buzzAttempted[i] ? 'out' : ''}" data-player="${i}"
             style="--pc: ${PLAYER_COLORS[i]}" ${buzzAttempted[i] ? 'disabled' : ''}>
       <span class="buzzer-name">${escapeHtml(p.name)}</span>
-      <span class="buzzer-key">${buzzAttempted[i] ? '&#x2717;' : BUZZ_KEYS[i].toUpperCase()}</span>
+      <span class="buzzer-key">${buzzAttempted[i] ? icon('cross') : BUZZ_KEYS[i].toUpperCase()}</span>
     </button>
   `).join('');
 
@@ -1012,7 +1025,7 @@ function resolveBuzzAnswer(answer, timedOut) {
     buzzPhase = 'done';
     showFeedback(`
       <div class="feedback-correct">
-        <div class="feedback-icon">&#x2713;</div>
+        <div class="feedback-icon">${icon('check')}</div>
         <div>${pick(CORRECT_LINES)} +$${formatMoney(result.value)}</div>
         ${bonusHtml(result)}
       </div>
@@ -1023,8 +1036,8 @@ function resolveBuzzAnswer(answer, timedOut) {
 
   // Wrong (or silent) — maybe others can still steal it
   const header = timedOut
-    ? `<div class="feedback-icon">&mdash;</div><div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>`
-    : `<div class="feedback-icon">&#x2717;</div><div>${pick(WRONG_LINES)} -$${formatMoney(result.value)}</div>`;
+    ? `<div class="feedback-icon">${icon('clock')}</div><div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>`
+    : `<div class="feedback-icon">${icon('cross')}</div><div>${pick(WRONG_LINES)} -$${formatMoney(result.value)}</div>`;
 
   if (result.canRebuzz) {
     showFeedback(`
@@ -1033,7 +1046,7 @@ function resolveBuzzAnswer(answer, timedOut) {
         <div class="correct-response">${pick(STEAL_LINES)} ${result.remaining} player${result.remaining > 1 ? 's' : ''} can buzz.</div>
         <div class="feedback-actions">
           <button class="btn-feedback-continue" id="btn-fb-continue">Open Buzzers</button>
-          ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it &#x2713;</button>`}
+          ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it</button>`}
         </div>
       </div>
     `);
@@ -1048,7 +1061,7 @@ function resolveBuzzAnswer(answer, timedOut) {
         <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
         <div class="feedback-actions">
           <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
-          ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it &#x2713;</button>`}
+          ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it</button>`}
         </div>
       </div>
     `);
@@ -1370,7 +1383,7 @@ function renderFinalAnswer() {
             <div class="frp-total">$${formatMoney(p.score)}</div>
             ${finalWagers[i] > 0 || finalAnswers[i].answer ? `
               <button class="btn-final-override" data-player="${i}">
-                ${finalAnswers[i].correct ? 'Mark wrong &#x2717;' : "The Emperor accepts it &#x2713;"}
+                ${finalAnswers[i].correct ? 'Mark wrong' : 'The Emperor accepts it'}
               </button>
             ` : ''}
           </div>
@@ -1477,8 +1490,8 @@ function renderResults() {
             <div class="result-stats-row">
               <span class="rsr-name" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">${escapeHtml(p.name)}</span>
               <span class="rsr-stats">
-                <span class="stat-good">&#x2713; ${p.correct}</span>
-                <span class="stat-bad">&#x2717; ${p.wrong}</span>
+                <span class="stat-good">${icon('check')}${p.correct}</span>
+                <span class="stat-bad">${icon('cross')}${p.wrong}</span>
                 <span>${accuracy}%</span>
                 ${p.bestStreak >= 2 ? `<span>best run &times;${p.bestStreak}</span>` : ''}
               </span>
