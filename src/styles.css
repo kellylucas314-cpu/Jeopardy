@@ -1,56 +1,69 @@
 /* ============================================================
-   GAME NIGHT — "Late-Night Supper Club"
-   Creative North Star: a warm art-deco game-show lounge.
-   Tinted warm-black, brass for money, one jade accent, ivory
-   ink, a characterful display serif over a clean grotesque.
-   No glassmorphism, no rainbow gradients, no bounce.
+   CLUE D'ÉTAT — "The Emperor's Trivia Salon"
+   Creative North Star: a parlor-game evening in a Napoleonic
+   townhouse. Parchment and ivory, deep sepia ink, terracotta
+   category banners, brass strictly for money, oxblood for
+   drama, one imperial-green accent. Airbnb-level clarity with
+   warm parlor drama. No neon, no casino clutter, no bounce.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Oswald:wght@500;600&display=swap');
 
 :root {
-  /* Warm ink surfaces — tinted, never pure black */
-  --ink: #16110d;
-  --surface-1: #1f1812;
-  --surface-2: #29201a;
-  --surface-3: #332820;
-  --line: rgba(238, 222, 198, 0.11);
-  --line-strong: rgba(238, 222, 198, 0.2);
+  /* Parchment surfaces — warm paper, never sterile white
+     (base sampled from the salon mockups) */
+  --ink: #e9dcc9;            /* page parchment (legacy name, kept for compatibility) */
+  --surface-1: #f4ecdd;      /* card ivory */
+  --surface-2: #efe5d2;      /* raised ivory */
+  --surface-3: #e0d2ba;      /* pressed parchment */
+  --line: rgba(62, 46, 30, 0.16);
+  --line-strong: rgba(62, 46, 30, 0.3);
 
-  /* Ivory text — warm, never pure white or pure gray */
-  --cream: #f3ead8;
-  --cream-dim: #bcab93;
-  --cream-faint: #8a7a64;
+  /* Sepia ink text — warm, never pure black (legacy names kept) */
+  --cream: #2c2115;
+  --cream-dim: #6d5b47;
+  --cream-faint: #97846b;
+  --text-dim: #6d5b47;
 
-  /* One disciplined accent — jade */
-  --jade: #34b88a;
-  --jade-bright: #46d29e;
-  --jade-deep: #1c7a5a;
+  /* One disciplined accent — imperial green */
+  --jade: #41684e;
+  --jade-bright: #527f61;
+  --jade-deep: #2d4b37;
 
   /* Brass — reserved for money and a few earned highlights */
-  --brass: #d8a85a;
-  --brass-bright: #ecc578;
+  --brass: #a07430;
+  --brass-bright: #8a6122;
+  --money: #a07430;
+
+  /* Salon drama */
+  --terracotta: #c96f52;      /* category banners (from the mockup) */
+  --terracotta-deep: #ad573c;
+  --oxblood: #7e2d21;         /* Waterloo Wager, danger, theatrics */
 
   /* Verdicts */
-  --correct: #4ec78f;
-  --wrong: #db6a48;
+  --correct: #3c7a54;
+  --wrong: #a63d29;
 
   /* Player identities — warm, distinct, never the accent */
-  --p0: #e2795c;
-  --p1: #5bb0b8;
-  --p2: #d6a648;
+  --p0: #b65535;
+  --p1: #2e7078;
+  --p2: #8f6a23;
 
-  --shadow: 0 24px 60px -22px rgba(0, 0, 0, 0.75);
-  --shadow-sm: 0 8px 24px -14px rgba(0, 0, 0, 0.7);
+  --shadow: 0 22px 48px -20px rgba(74, 52, 28, 0.38);
+  --shadow-sm: 0 10px 22px -12px rgba(74, 52, 28, 0.32);
+  --tile-shadow: inset 0 1px 0 rgba(255, 253, 245, 0.65),
+                 0 2px 4px -1px rgba(74, 52, 28, 0.16),
+                 0 9px 18px -10px rgba(74, 52, 28, 0.24);
 
   --r-sm: 8px;
-  --r-md: 14px;
-  --r-lg: 20px;
+  --r-md: 10px;
+  --r-lg: 14px;
 
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1); /* confident ease-out, no overshoot */
 
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-ui: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-board: 'Oswald', 'Arial Narrow', 'Helvetica Neue', sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -61,10 +74,11 @@ body {
   font-family: var(--font-ui);
   color: var(--cream);
   background-color: var(--ink);
-  /* A single warm spotlight from above — flat, not an aurora */
+  /* Warm daylight from above, a whisper of paper grain, soft edge vignette */
   background-image:
-    radial-gradient(120% 80% at 50% -10%, rgba(216, 168, 90, 0.07), transparent 55%),
-    radial-gradient(90% 70% at 50% 120%, rgba(52, 184, 138, 0.05), transparent 55%);
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.29 0 0 0 0 0.22 0 0 0 0 0.13 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23g)'/%3E%3C/svg%3E"),
+    radial-gradient(120% 85% at 50% -12%, rgba(255, 250, 238, 0.75), transparent 58%),
+    radial-gradient(130% 110% at 50% 55%, transparent 62%, rgba(122, 88, 48, 0.14) 100%);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -116,14 +130,15 @@ button:focus-visible, input:focus-visible {
 
 input { font-family: var(--font-ui); }
 
-/* Primary action — solid jade, flat, confident */
+/* Primary action — solid ink, flat, confident */
 .btn-start, .btn-submit, .btn-continue, .btn-play-again, .btn-feedback-continue, .btn-wager-submit {
-  background: var(--jade);
-  color: #08251b;
+  background: var(--cream);
+  color: var(--surface-1);
   font-weight: 700;
+  box-shadow: var(--shadow-sm);
 }
 .btn-start:hover, .btn-submit:hover, .btn-continue:hover, .btn-play-again:hover,
-.btn-feedback-continue:hover, .btn-wager-submit:hover { background: var(--jade-bright); }
+.btn-feedback-continue:hover, .btn-wager-submit:hover { background: #46372a; }
 
 /* ——— Logo / marquee ——— */
 
@@ -268,10 +283,11 @@ input { font-family: var(--font-ui); }
   gap: 6px;
   margin: 28px auto 24px;
   padding: 26px 48px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(216, 168, 90, 0.25);
-  border-radius: 18px;
+  background: var(--surface-1);
+  border: 1px solid rgba(160, 116, 48, 0.4);
+  border-radius: var(--r-lg);
   width: fit-content;
+  box-shadow: var(--tile-shadow);
   animation: popIn 0.5s ease both;
 }
 .solo-scorecard .podium-avatar { font-size: 3rem; }
@@ -281,7 +297,7 @@ input { font-family: var(--font-ui); }
   font-weight: 700;
   color: var(--brass-bright, #ecc578);
 }
-.solo-score-money.negative { color: #e2795c; }
+.solo-score-money.negative { color: var(--wrong); }
 .solo-score-sub { color: var(--text-dim, #a89a86); font-size: 0.95rem; }
 
 .solo-next-hint {
@@ -530,23 +546,26 @@ input { font-family: var(--font-ui); }
 }
 
 .category-header {
-  background: var(--surface-3);
+  background: var(--terracotta);
   border-radius: var(--r-sm);
   padding: 10px 8px;
   text-align: center;
-  font-family: var(--font-display);
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-family: var(--font-board);
+  font-size: 0.84rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: var(--cream);
+  letter-spacing: 0.12em;
+  color: #f8efdd;
+  text-shadow: 0 1px 0 rgba(90, 35, 18, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 56px;
-  line-height: 1.2;
+  line-height: 1.25;
   flex-shrink: 0;
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 235, 220, 0.28),
+              inset 0 -2px 0 rgba(122, 48, 28, 0.35),
+              0 6px 14px -8px rgba(122, 48, 28, 0.5);
 }
 
 .board-clue {
@@ -558,25 +577,33 @@ input { font-family: var(--font-ui); }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
-  font-size: 1.55rem;
-  font-weight: 700;
+  font-family: var(--font-board);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;
-  color: var(--brass);
+  color: var(--cream);
   cursor: pointer;
   user-select: none;
-  transition: background 0.16s var(--ease), color 0.16s var(--ease), transform 0.16s var(--ease);
+  box-shadow: var(--tile-shadow);
+  transition: background 0.16s var(--ease), color 0.16s var(--ease),
+              transform 0.16s var(--ease), box-shadow 0.16s var(--ease);
 }
 
 .board-clue:hover:not(.answered) {
-  background: var(--surface-3);
-  color: var(--brass-bright);
+  background: #faf3e4;
+  color: var(--terracotta-deep);
   transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255, 253, 245, 0.65),
+              0 4px 7px -2px rgba(74, 52, 28, 0.2),
+              0 14px 24px -12px rgba(74, 52, 28, 0.3);
 }
 
+/* Claimed tiles read as pressed impressions left in the felt */
 .board-clue.answered {
-  background: transparent;
-  border-color: rgba(238, 222, 198, 0.05);
+  background: rgba(62, 46, 30, 0.045);
+  border: 1px dashed rgba(62, 46, 30, 0.18);
+  box-shadow: inset 0 2px 6px rgba(74, 52, 28, 0.1);
   cursor: default;
 }
 
@@ -635,8 +662,8 @@ input { font-family: var(--font-ui); }
   padding: 36px;
   animation: clueIn 0.35s var(--ease);
   background:
-    radial-gradient(90% 60% at 50% 20%, rgba(216, 168, 90, 0.06), transparent 60%),
-    var(--surface-1);
+    radial-gradient(90% 60% at 50% 20%, rgba(255, 250, 238, 0.8), transparent 60%),
+    var(--surface-2);
 }
 
 @keyframes clueIn {
@@ -693,10 +720,10 @@ input { font-family: var(--font-ui); }
   background: var(--brass);
   border-radius: 2px;
   transition: width 1s linear;
-  box-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+  box-shadow: 0 0 8px rgba(160, 116, 48, 0.4);
 }
 
-.timer-bar.urgent { background: var(--wrong); box-shadow: 0 0 10px rgba(219, 106, 72, 0.5); }
+.timer-bar.urgent { background: var(--wrong); box-shadow: 0 0 8px rgba(166, 61, 41, 0.45); }
 
 .timer-text {
   font-family: var(--font-display);
@@ -712,11 +739,13 @@ input { font-family: var(--font-ui); }
 .timer-text.urgent { color: var(--wrong); }
 
 .clue-text {
-  font-size: 2.1rem;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
   font-weight: 500;
+  font-optical-sizing: auto;
   text-align: center;
   max-width: 880px;
-  line-height: 1.4;
+  line-height: 1.42;
   text-wrap: balance;
   margin-bottom: 30px;
   flex-shrink: 0;
@@ -798,8 +827,8 @@ input { font-family: var(--font-ui); }
   font-size: 1.5rem;
 }
 
-.feedback-correct .feedback-icon { background: rgba(78, 199, 143, 0.13); border: 1px solid var(--correct); }
-.feedback-wrong .feedback-icon { background: rgba(219, 106, 72, 0.13); border: 1px solid var(--wrong); }
+.feedback-correct .feedback-icon { background: rgba(60, 122, 84, 0.12); border: 1px solid var(--correct); }
+.feedback-wrong .feedback-icon { background: rgba(166, 61, 41, 0.1); border: 1px solid var(--wrong); }
 
 .correct-response { font-size: 0.95rem; margin-top: 8px; color: var(--cream-dim); font-weight: 400; }
 .correct-response strong { color: var(--cream); font-weight: 700; }
@@ -837,7 +866,7 @@ input { font-family: var(--font-ui); }
   border: 1px solid var(--correct);
   border-radius: var(--r-md);
 }
-.btn-feedback-accept:hover { background: rgba(78, 199, 143, 0.1); }
+.btn-feedback-accept:hover { background: rgba(60, 122, 84, 0.09); }
 
 .streak-callout {
   margin-top: 10px;
@@ -847,8 +876,8 @@ input { font-family: var(--font-ui); }
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--brass-bright);
-  background: rgba(216, 168, 90, 0.1);
-  border: 1px solid rgba(216, 168, 90, 0.4);
+  background: rgba(160, 116, 48, 0.12);
+  border: 1px solid rgba(160, 116, 48, 0.45);
   animation: popIn 0.4s var(--ease);
 }
 
@@ -946,8 +975,8 @@ input { font-family: var(--font-ui); }
   padding: 32px;
   animation: fadeIn 0.3s ease;
   background:
-    radial-gradient(80% 55% at 50% 30%, rgba(216, 168, 90, 0.1), transparent 62%),
-    var(--surface-1);
+    radial-gradient(80% 55% at 50% 30%, rgba(126, 45, 33, 0.12), transparent 62%),
+    var(--surface-2);
   overflow-y: auto;
 }
 
@@ -966,7 +995,8 @@ input { font-family: var(--font-ui); }
   text-align: center;
   line-height: 1.02;
   letter-spacing: -0.01em;
-  color: var(--brass);
+  color: var(--oxblood);
+  text-shadow: 0 1px 0 rgba(255, 250, 238, 0.6);
 }
 
 .dd-content {
@@ -1016,7 +1046,7 @@ input { font-family: var(--font-ui); }
   background: var(--ink);
   border: 1px solid var(--line-strong);
   border-radius: var(--r-md);
-  color: var(--brass);
+  color: var(--cream);
   outline: none;
   text-align: center;
 }
@@ -1035,9 +1065,7 @@ input { font-family: var(--font-ui); }
   border: 1px solid var(--line);
   border-radius: 9px;
 }
-.btn-preset:hover { color: var(--brass); border-color: rgba(216, 168, 90, 0.4); }
-
-.btn-preset:hover { border-color: var(--money); color: var(--money); }
+.btn-preset:hover { color: var(--brass); border-color: rgba(160, 116, 48, 0.45); }
 
 .btn-wager-submit {
   width: 100%;
@@ -1047,10 +1075,11 @@ input { font-family: var(--font-ui); }
   border-radius: var(--r-md);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  background: var(--brass);
-  color: #2a1c06;
+  background: var(--oxblood);
+  color: #f7ead8;
+  box-shadow: var(--shadow-sm);
 }
-.btn-wager-submit:hover { background: var(--brass-bright); }
+.btn-wager-submit:hover { background: #94382a; }
 
 /* ============================================================
    ROUND TRANSITION
@@ -1143,8 +1172,8 @@ input { font-family: var(--font-ui); }
   animation: fadeIn 0.5s ease;
   overflow-y: auto;
   background:
-    radial-gradient(80% 50% at 50% 14%, rgba(52, 184, 138, 0.07), transparent 62%),
-    var(--surface-1);
+    radial-gradient(80% 50% at 50% 14%, rgba(45, 75, 55, 0.1), transparent 62%),
+    var(--surface-2);
 }
 
 .final-header {
@@ -1295,7 +1324,7 @@ input { font-family: var(--font-ui); }
   border: 1px solid var(--line);
   border-radius: 8px;
 }
-.final-result-player.wrong .btn-final-override { color: var(--correct); border-color: rgba(78, 199, 143, 0.4); }
+.final-result-player.wrong .btn-final-override { color: var(--correct); border-color: rgba(60, 122, 84, 0.45); }
 
 /* ============================================================
    RESULTS — PODIUM
@@ -1374,9 +1403,9 @@ input { font-family: var(--font-ui); }
 
 .podium-col.rank-1 .podium-block {
   height: 128px;
-  background: var(--surface-3);
-  border-color: rgba(216, 168, 90, 0.4);
-  box-shadow: inset 0 2px 0 var(--brass);
+  background: var(--surface-1);
+  border-color: rgba(160, 116, 48, 0.5);
+  box-shadow: inset 0 2px 0 var(--brass), var(--shadow-sm);
 }
 .podium-col.rank-2 .podium-block { height: 90px; }
 .podium-col.rank-3 .podium-block { height: 62px; }
@@ -1442,7 +1471,7 @@ input { font-family: var(--font-ui); }
   justify-content: center;
   gap: 26px;
   background:
-    radial-gradient(60% 45% at 50% 45%, rgba(216, 168, 90, 0.08), transparent 65%),
+    radial-gradient(60% 45% at 50% 45%, rgba(255, 250, 238, 0.85), transparent 65%),
     var(--ink);
   cursor: pointer;
   animation: fadeIn 0.3s ease;
@@ -1454,7 +1483,7 @@ input { font-family: var(--font-ui); }
 .ci-label {
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--brass);
+  color: var(--terracotta-deep);
   text-transform: uppercase;
   letter-spacing: 0.32em;
 }
@@ -1515,7 +1544,7 @@ input { font-family: var(--font-ui); }
 
 .btn-cta {
   background: var(--jade);
-  color: #08251b;
+  color: #eef3ea;
   font-weight: 700;
 }
 .btn-cta:hover { background: var(--jade-bright); }
@@ -1528,11 +1557,11 @@ input { font-family: var(--font-ui); }
 .btn-quiet:hover { color: var(--cream); }
 
 .btn-danger {
-  background: var(--wrong);
-  color: #2a0f08;
+  background: var(--oxblood);
+  color: #f7ead8;
   font-weight: 700;
 }
-.btn-danger:hover { filter: brightness(1.08); }
+.btn-danger:hover { filter: brightness(1.12); }
 
 .modal-overlay {
   position: fixed;
@@ -1542,7 +1571,7 @@ input { font-family: var(--font-ui); }
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: rgba(10, 8, 5, 0.72);
+  background: rgba(44, 30, 16, 0.45);
   animation: fadeIn 0.2s ease;
 }
 
@@ -1632,8 +1661,8 @@ input { font-family: var(--font-ui); }
   pointer-events: none;
   animation: screenFlash 0.55s var(--ease) forwards;
 }
-.screen-flash.correct { background: radial-gradient(60% 50% at 50% 50%, rgba(78, 199, 143, 0.28), transparent 75%); }
-.screen-flash.wrong { background: radial-gradient(60% 50% at 50% 50%, rgba(219, 106, 72, 0.26), transparent 75%); }
+.screen-flash.correct { background: radial-gradient(60% 50% at 50% 50%, rgba(60, 122, 84, 0.22), transparent 75%); }
+.screen-flash.wrong { background: radial-gradient(60% 50% at 50% 50%, rgba(166, 61, 41, 0.2), transparent 75%); }
 
 @keyframes screenFlash {
   0% { opacity: 0; }
@@ -1757,3 +1786,87 @@ input { font-family: var(--font-ui); }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 3px; }
+
+/* ============================================================
+   THE HOST — Napoleon, tastefully present
+   ============================================================ */
+
+/* Peeks around the right edge of the board, as in the mockup */
+.host-peek {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-52%);
+  height: min(256px, 30vh);
+  width: auto;
+  z-index: 20;
+  pointer-events: none;
+  /* Feather the cut edges so he emerges from the parchment */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14%),
+                      linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent 0, #000 14%),
+              linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+  mask-composite: intersect;
+  filter: drop-shadow(-6px 8px 12px rgba(74, 52, 28, 0.25));
+  animation: hostPeekIn 0.7s var(--ease) 0.45s backwards;
+}
+
+@keyframes hostPeekIn {
+  from { opacity: 0; transform: translateY(-52%) translateX(24px); }
+  to { opacity: 1; transform: translateY(-52%) translateX(0); }
+}
+
+/* Framed portrait on the setup screen — an arched salon frame */
+.host-portrait {
+  width: 104px;
+  height: 128px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 60px 60px 10px 10px;
+  border: 3px solid var(--brass);
+  box-shadow: inset 0 0 0 2px var(--surface-1), var(--shadow-sm);
+  background: #e9dbc4;
+  display: block;
+  margin: 0 auto 4px;
+}
+
+/* A dry remark from the Emperor — small, never a full-screen interruption */
+.host-line {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: var(--cream-dim);
+  text-align: center;
+  max-width: 440px;
+  margin: 14px auto 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(160, 116, 48, 0.4);
+  animation: fadeSlideIn 0.45s var(--ease) 0.15s backwards;
+}
+.host-line::before { content: '— '; color: var(--brass); }
+.host-line::after { content: ' —'; color: var(--brass); }
+
+.host-attrib {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-ui);
+  font-style: normal;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+}
+
+@media (max-width: 900px) {
+  .host-peek { height: min(220px, 26vh); }
+}
+@media (max-width: 640px) {
+  .host-peek { display: none; } /* never crowd a phone board */
+  .host-portrait { width: 84px; height: 104px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .host-peek { animation: none; }
+}
