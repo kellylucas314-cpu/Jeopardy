@@ -1,0 +1,86 @@
+[
+  { "name": "A.K.A.-PULCO", "clues": [
+    { "clue": "Poets have hailed this Italian capital on the Tiber as 'the Eternal City' since the days of the emperors", "response": "Rome", "value": 200 },
+    { "clue": "Gondolas glide through 'the Floating City,' this Italian lagoon-bound home of St. Mark's Square", "response": "Venice", "value": 400 },
+    { "clue": "Gothic steeples above the Vltava earned this Czech capital its nickname, 'the City of a Hundred Spires'", "response": "Prague", "value": 600 },
+    { "clue": "Painted rosy pink to welcome a British prince in 1876, this Rajasthan capital is India's 'Pink City'", "response": "Jaipur", "value": 800 },
+    { "clue": "South Africans call this port beneath Table Mountain 'the Mother City'; it's their country's oldest", "response": "Cape Town", "value": 1000 }
+  ] },
+  { "name": "NICK OF TOWN", "clues": [
+    { "clue": "Windbag politicians, not lake breezes, may explain the blustery nickname of this Illinois metropolis", "response": "Chicago", "value": 200 },
+    { "clue": "Home of the Grand Ole Opry & rows of recording studios, this Tennessee capital answers to 'Music City'", "response": "Nashville", "value": 400 },
+    { "clue": "A downtown arch proclaims this Nevada casino town 'The Biggest Little City in the World'", "response": "Reno", "value": 600 },
+    { "clue": "Coal smoke curling over its Old Town earned this Scottish capital the nickname 'Auld Reekie'", "response": "Edinburgh", "value": 800 },
+    { "clue": "A Spanish presidio of 1775 grew into this Arizona city, known fondly as 'the Old Pueblo'", "response": "Tucson", "value": 1000 }
+  ] },
+  { "name": "FLYING COLORS", "clues": [
+    { "clue": "In 1965 this country retired the Red Ensign for a new flag bearing a single red maple leaf", "response": "Canada", "value": 200 },
+    { "clue": "A green cedar, pride of its ancient forests, centers the red & white flag of this Middle Eastern land", "response": "Lebanon", "value": 400 },
+    { "clue": "Its flag of two stacked crimson pennants isn't a rectangle, fitting for this nation of Himalayan peaks", "response": "Nepal", "value": 600 },
+    { "clue": "An AK-47 crossed with a hoe adorns the flag of this southeast African nation, once a Portuguese colony", "response": "Mozambique", "value": 800 },
+    { "clue": "Legend says the white-crossed Dannebrog fell from the sky at a 1219 battle, rallying this nation's army", "response": "Denmark", "value": 1000 }
+  ] },
+  { "name": "CAPTURE THE FLAG", "clues": [
+    { "clue": "Blending the crosses of Saints George, Andrew & Patrick, it's the familiar name of Britain's flag", "response": "the Union Jack", "value": 200 },
+    { "clue": "Hoisted by pirates as a final warning, this black flag bears a skull above crossed bones", "response": "the Jolly Roger", "value": 400 },
+    { "clue": "Born in the French Revolution, this vertical blue, white & red banner has a name that simply counts its hues", "response": "the Tricolore", "value": 600 },
+    { "clue": "Australia, New Zealand, Samoa & Papua New Guinea all display this compact constellation on their flags", "response": "the Southern Cross", "value": 800 },
+    { "clue": "The stars of the U.S. flag fill this upper hoist-side quarter, whose name is also a Swiss state", "response": "the canton", "value": 1000 }
+  ] },
+  { "name": "MAGMA CUM LAUDE", "clues": [
+    { "clue": "Its eruption of 79 A.D. entombed Pompeii; this volcano still looms over the Bay of Naples", "response": "Vesuvius", "value": 200 },
+    { "clue": "The May 1980 blast of this Washington State volcano flattened forests & lopped 1,300 feet off its summit", "response": "Mount St. Helens", "value": 400 },
+    { "clue": "The goddess Pele is said to dwell at Halemaumau crater atop this highly active Big Island volcano", "response": "Kilauea", "value": 600 },
+    { "clue": "Hollywood placed it 'East of Java,' but this Indonesian island volcano that blew apart in 1883 lies west", "response": "Krakatoa", "value": 800 },
+    { "clue": "In nearly constant eruption for 2,000 years, this Aeolian island is called 'the Lighthouse of the Mediterranean'", "response": "Stromboli", "value": 1000 }
+  ] },
+  { "name": "ASH ME ANYTHING", "clues": [
+    { "clue": "About 3 of every 4 of Earth's active volcanoes sit along this horseshoe-shaped belt rimming the Pacific", "response": "the Ring of Fire", "value": 200 },
+    { "clue": "Pilgrims climb Japan's highest peak, this sacred snow-capped volcano that last erupted in 1707", "response": "Mount Fuji", "value": 400 },
+    { "clue": "A Bronze Age mega-eruption carved the cliff-ringed lagoon of this Greek isle, a favorite Atlantis suspect", "response": "Santorini", "value": 600 },
+    { "clue": "From the Spanish for 'cauldron,' it's the vast basin left when a drained volcano collapses, as at Crater Lake", "response": "a caldera", "value": 800 },
+    { "clue": "This Indonesian volcano's colossal 1815 eruption chilled the globe into 1816's 'Year Without a Summer'", "response": "Tambora", "value": 1000 }
+  ] },
+  { "name": "SPAN OF CONTROL", "clues": [
+    { "clue": "Since 1883 the Gothic stone towers of this span have linked Manhattan to a namesake borough", "response": "the Brooklyn Bridge", "value": 200 },
+    { "clue": "Never mind 'falling down': in 1968 an 1830s version of this span was sold for rebuilding in Arizona", "response": "London Bridge", "value": 400 },
+    { "clue": "Goldsmiths' shops line this Arno crossing, the only Florence span the retreating Germans spared in 1944", "response": "the Ponte Vecchio", "value": 600 },
+    { "clue": "Aussies dub this steel arch over Port Jackson 'the Coathanger'; New Year's fireworks cascade off it", "response": "the Sydney Harbour Bridge", "value": 800 },
+    { "clue": "Masts taller than the Eiffel Tower hold up this cable-stayed wonder of 2004 above France's Tarn Valley", "response": "the Millau Viaduct", "value": 1000 }
+  ] },
+  { "name": "A BORING CATEGORY", "clues": [
+    { "clue": "Since 1994 Eurostar trains have shuttled between England & France via this 31-mile undersea rail link", "response": "the Channel Tunnel", "value": 200 },
+    { "clue": "Chief engineer Clifford, not a European country, gave his surname to this 1927 Hudson River crossing", "response": "the Holland Tunnel", "value": 400 },
+    { "clue": "Drivers zip from France to Italy beneath Western Europe's highest peak via this 7-mile bore", "response": "the Mont Blanc Tunnel", "value": 600 },
+    { "clue": "Completed in 1988, this rail passage dips under the Tsugaru Strait to join Honshu with Hokkaido", "response": "the Seikan Tunnel", "value": 800 },
+    { "clue": "Some 17 years of digging beneath the Swiss Alps produced this 35-mile rail route, the world's longest at its 2016 debut", "response": "the Gotthard Base Tunnel", "value": 1000 }
+  ] },
+  { "name": "BAZAAR BEHAVIOR", "clues": [
+    { "clue": "Named for a bothersome bug, it's the open-air bazaar where you haggle over secondhand treasures", "response": "a flea market", "value": 200 },
+    { "clue": "Begun under Mehmed the Conqueror, this vast covered market has tempted Istanbul shoppers since the 1400s", "response": "the Grand Bazaar", "value": 400 },
+    { "clue": "Spice pyramids perfume Marrakesh's medina at this type of Arab market, a 4-letter word also spelled with a 'q'", "response": "a souk", "value": 600 },
+    { "clue": "Sushi chefs once bid on giant bluefin at predawn auctions in this Tokyo fish market district", "response": "Tsukiji", "value": 800 },
+    { "clue": "Egypt's Nobel laureate Naguib Mahfouz titled a 1940s novel after this labyrinthine Cairo bazaar", "response": "Khan el-Khalili", "value": 1000 }
+  ] },
+  { "name": "TERROIR FIRMA", "clues": [
+    { "clue": "Baked, mashed or fried, America's most famous potatoes grow in this state's volcanic Snake River Plain", "response": "Idaho", "value": 200 },
+    { "clue": "Fictional grower Juan Valdez & his trusty mule long pitched the mountain-grown coffee of this nation", "response": "Colombia", "value": 400 },
+    { "clue": "Dubbed 'the champagne of teas,' this brew is plucked in India's Himalayan foothills near a namesake hill town", "response": "Darjeeling", "value": 600 },
+    { "clue": "This port on Greece's Peloponnese lends its name to prized almond-shaped dark olives", "response": "Kalamata", "value": 800 },
+    { "clue": "Spain's costly saffron & its Manchego cheese come from this windmill-dotted plateau roamed by Don Quixote", "response": "La Mancha", "value": 1000 }
+  ] },
+  { "name": "FIELD TRIPS", "clues": [
+    { "clue": "Amber waves of winter wheat earn Dorothy's home state its nickname 'the Wheat State'", "response": "Kansas", "value": 200 },
+    { "clue": "Foam cheesehead hats honor the dairy pride of this state, whose license plates say 'America's Dairyland'", "response": "Wisconsin", "value": 400 },
+    { "clue": "By law, sweet onions sold under this name must be grown in a small region around its namesake Georgia town", "response": "Vidalia", "value": 600 },
+    { "clue": "Its famed 'Bourbon' vanilla honors a nearby isle, not a whiskey; growers hand-pollinate orchids on this huge island off East Africa", "response": "Madagascar", "value": 800 },
+    { "clue": "Terraced vineyards demarcated back in 1756 make this Portuguese river's valley the one true home of port", "response": "the Douro", "value": 1000 }
+  ] },
+  { "name": "ISLE OF VIEW", "clues": [
+    { "clue": "Columbus made his first New World landfall in 1492 in this island nation whose capital is Nassau", "response": "the Bahamas", "value": 200 },
+    { "clue": "Suva is the capital of this South Pacific nation of some 300 islands & a famously pure bottled water", "response": "Fiji", "value": 400 },
+    { "clue": "Knights of St. John held this Mediterranean island through a great 1565 Ottoman siege; it became a nation in 1964", "response": "Malta", "value": 600 },
+    { "clue": "The coco de mer palm & its famously enormous double seeds are native to this Indian Ocean archipelago nation", "response": "the Seychelles", "value": 800 },
+    { "clue": "Pronounce it 'KIRR-ih-bass': this nation of 33 coral islands sprawls across all four of Earth's hemispheres", "response": "Kiribati", "value": 1000 }
+  ] }
+]

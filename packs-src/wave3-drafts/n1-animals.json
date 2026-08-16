@@ -1,0 +1,122 @@
+[
+  {
+    "name": "SHELL, YEAH!",
+    "clues": [
+      { "clue": "This shelled marine reptile crawls ashore to bury its eggs on the very beach where it hatched", "response": "the sea turtle", "value": 200 },
+      { "clue": "This little crustacean never grows its own armor — it moves into empty snail shells and upgrades as it grows", "response": "the hermit crab", "value": 400 },
+      { "clue": "Captain Nemo's submarine shares its name with this spiral-shelled mollusk that adjusts buoyancy with gas-filled chambers", "response": "the nautilus", "value": 600 },
+      { "clue": "Older than the dinosaurs, this helmeted shore dweller bleeds blue; labs use its blood to test vaccines for toxins", "response": "the horseshoe crab", "value": 800 },
+      { "clue": "A delicacy of Puget Sound, this giant burrowing clam sports a spelling-defying name pronounced 'gooey duck'", "response": "the geoduck", "value": 1000 }
+    ]
+  },
+  {
+    "name": "GO FISH",
+    "clues": [
+      { "clue": "Interlocking triangular teeth earned this Amazon river swimmer its fearsome flesh-stripping reputation", "response": "the piranha", "value": 200 },
+      { "clue": "Among these curly-tailed upright swimmers, dad does the mothering: males carry the eggs in a belly pouch", "response": "the seahorse", "value": 400 },
+      { "clue": "Japanese chefs train for years to serve fugu, the risky delicacy sliced from this self-inflating fish", "response": "the pufferfish", "value": 600 },
+      { "clue": "In the pitch-black deep, females of this fanged fish dangle a glowing lure to draw dinner within gulping range", "response": "the anglerfish", "value": 800 },
+      { "clue": "Believed extinct for 66 million years, this lobe-finned 'living fossil' turned up in a South African trawler's catch in 1938", "response": "the coelacanth", "value": 1000 }
+    ]
+  },
+  {
+    "name": "FLIGHT RISKS",
+    "clues": [
+      { "clue": "'Dead as' this portly flightless bird of Mauritius, gone since the 1600s, means utterly extinct", "response": "the dodo", "value": 200 },
+      { "clue": "New Zealanders proudly call themselves by the name of this shaggy night bird, which lays an egg up to a fifth its own weight", "response": "the kiwi", "value": 400 },
+      { "clue": "Sporting a bony helmet and a 4-inch dagger claw on each foot, this Australian rainforest heavyweight is famously dangerous", "response": "the cassowary", "value": 600 },
+      { "clue": "Flocks of this long-necked runner roam the South American pampas; its name honors the Titaness who mothered Zeus", "response": "the rhea", "value": 800 },
+      { "clue": "This moss-green, owl-faced New Zealander is the world's only flightless parrot — and one of its rarest", "response": "the kakapo", "value": 1000 }
+    ]
+  },
+  {
+    "name": "FREQUENT FLYERS",
+    "clues": [
+      { "clue": "Honking V formations headed south usually mean these black-necked, white-chinstrapped North American birds are on the move", "response": "Canada geese", "value": 200 },
+      { "clue": "Folklore's baby deliverer, this long-legged bird really does commute from European rooftops to African wintering grounds", "response": "the stork", "value": 400 },
+      { "clue": "Each spring, hundreds of thousands of these tall gray birds jam Nebraska's Platte River on their way north", "response": "sandhill cranes", "value": 600 },
+      { "clue": "These high-altitude waterfowl, named for the twin black stripes on their heads, migrate directly over the Himalayas", "response": "bar-headed geese", "value": 800 },
+      { "clue": "Tracking studies showed this aptly named European bird can stay airborne ten months straight, even napping aloft", "response": "the common swift", "value": 1000 }
+    ]
+  },
+  {
+    "name": "FELINE GOOD",
+    "clues": [
+      { "clue": "The largest cat of all wears orange-and-black stripes as individual as fingerprints", "response": "the tiger", "value": 200 },
+      { "clue": "It can hit 60 mph in about three seconds, but this spotted sprinter can't roar — it chirps and purrs", "response": "the cheetah", "value": 400 },
+      { "clue": "The Americas' largest cat dispatches caimans and capybaras with a bite straight through the skull", "response": "the jaguar", "value": 600 },
+      { "clue": "Nicknamed the 'ghost of the mountains,' this high-Himalayan cat drapes its extra-long tail over its face for warmth", "response": "the snow leopard", "value": 800 },
+      { "clue": "Long black ear tufts crown this reddish African and Asian wildcat, which leaps 10 feet up to snatch birds in flight", "response": "the caracal", "value": 1000 }
+    ]
+  },
+  {
+    "name": "EAT, PREY, LOVE",
+    "clues": [
+      { "clue": "The ocean's largest predatory fish, it prowls seal colonies with rows of serrated, replaceable teeth", "response": "the great white shark", "value": 200 },
+      { "clue": "Led by a breeding pair, packs of this howling northern canine can trail a moose for miles", "response": "the gray wolf", "value": 400 },
+      { "clue": "The largest member of the dolphin family, this black-and-white hunter teams up to wash seals off ice floes", "response": "the orca", "value": 600 },
+      { "clue": "Despite its scavenger reputation, this whooping, 'laughing' African predator kills most of its own meals", "response": "the spotted hyena", "value": 800 },
+      { "clue": "With talons rivaling a grizzly's claws, this crested rainforest raptor snatches sloths and monkeys from the canopy", "response": "the harpy eagle", "value": 1000 }
+    ]
+  },
+  {
+    "name": "STING OPERATIONS",
+    "clues": [
+      { "clue": "Stinging you is a suicide mission for this fuzzy pollinator — its barbed weapon rips away and stays behind", "response": "the honeybee", "value": 200 },
+      { "clue": "Shine a UV flashlight at night and this venomous-tailed desert dweller glows an eerie blue-green", "response": "the scorpion", "value": 400 },
+      { "clue": "When floodwaters rise, colonies of these stinging insects lock legs and float away as living rafts", "response": "fire ants", "value": 600 },
+      { "clue": "Entomologist Justin Schmidt ranked this rainforest insect's sting the most painful of all — 'like walking over flaming charcoal'", "response": "the bullet ant", "value": 800 },
+      { "clue": "New Mexico's state insect is this giant blue-black wasp that stings a big spider into a paralyzed nursery for its egg", "response": "the tarantula hawk", "value": 1000 }
+    ]
+  },
+  {
+    "name": "SMALL TALK",
+    "clues": [
+      { "clue": "Gardeners roll out the welcome mat for this spotted red beetle, a voracious eater of aphids", "response": "the ladybug", "value": 200 },
+      { "clue": "The cold chemical glow in this beetle's abdomen turns summer lawns into blinking light shows", "response": "the firefly", "value": 400 },
+      { "clue": "Red-eyed broods of these droning insects spend 17 years underground, then emerge by the billions for one loud summer", "response": "cicadas", "value": 600 },
+      { "clue": "Pushing its smelly prize backward with its hind legs, this tidy-up insect can steer by the light of the Milky Way", "response": "the dung beetle", "value": 800 },
+      { "clue": "Threaten this insect and it fires a boiling chemical spray from its rear end with an audible pop", "response": "the bombardier beetle", "value": 1000 }
+    ]
+  },
+  {
+    "name": "MAY THE FOREST BE WITH YOU",
+    "clues": [
+      { "clue": "A stylized 11-point leaf of this syrup-giving tree anchors the center of Canada's flag", "response": "the maple", "value": 200 },
+      { "clue": "Long, drooping branches give this waterside tree its mournful name and its curtain-like silhouette", "response": "the weeping willow", "value": 400 },
+      { "clue": "Nicknamed the upside-down tree, this bulbous African icon hoards thousands of gallons of water in its swollen trunk", "response": "the baobab", "value": 600 },
+      { "clue": "Methuselah, a gnarled specimen of this high-altitude Western conifer, has been alive for nearly 5,000 years", "response": "the bristlecone pine", "value": 800 },
+      { "clue": "Utah's 47,000-trunk 'Pando,' one of Earth's heaviest single organisms, is a clone colony of this trembling-leaved tree", "response": "the quaking aspen", "value": 1000 }
+    ]
+  },
+  {
+    "name": "PETAL PUSHERS",
+    "clues": [
+      { "clue": "Make a wish and blow: this lawn invader's fluffy white seed head scatters on the breeze", "response": "the dandelion", "value": 200 },
+      { "clue": "'In Flanders Fields' helped make this red bloom the flower of remembrance for the war dead", "response": "the poppy", "value": 400 },
+      { "clue": "Japan's imperial throne is named for this many-petaled bloom of autumn festivals", "response": "the chrysanthemum", "value": 600 },
+      { "clue": "The heart drug digitalis is derived from this tall bell-flowered plant, named like mittens for a sly canine", "response": "the foxglove", "value": 800 },
+      { "clue": "Parasitic and leafless, this Sumatran plant unfurls the world's largest single flower — 3 reeking feet across", "response": "the rafflesia", "value": 1000 }
+    ]
+  },
+  {
+    "name": "PARKS & RECREATURES",
+    "clues": [
+      { "clue": "Yellowstone traffic 'jams' often mean a herd of these shaggy, hump-shouldered grazers owns the road", "response": "bison", "value": 200 },
+      { "clue": "Everglades National Park is the one place on Earth where this broad-snouted American reptile lives alongside crocodiles", "response": "the alligator", "value": 400 },
+      { "clue": "During the fall rut, Rocky Mountain National Park rings with the eerie bugling of these antlered bulls", "response": "elk", "value": 600 },
+      { "clue": "Down to 22 birds in the 1980s, this giant scavenger again rides thermals over the Grand Canyon", "response": "the California condor", "value": 800 },
+      { "clue": "One water-filled cavern in Death Valley National Park holds the entire wild population of this inch-long iridescent fish", "response": "the pupfish", "value": 1000 }
+    ]
+  },
+  {
+    "name": "BABES IN THE WOODS",
+    "clues": [
+      { "clue": "Born the size of a jellybean, a baby kangaroo goes by this name as it rides in mom's pouch", "response": "a joey", "value": 200 },
+      { "clue": "A baby goat shares this three-letter name with your average human youngster", "response": "a kid", "value": 400 },
+      { "clue": "Andersen's 'ugly duckling' was never a duckling at all — it was this baby swan", "response": "a cygnet", "value": 600 },
+      { "clue": "Born with soft quills that harden in days, a baby porcupine gets this suitably cute name", "response": "a porcupette", "value": 800 },
+      { "clue": "A baby echidna hatches from its egg and into this name, shared with a pug-beagle crossbreed", "response": "a puggle", "value": 1000 }
+    ]
+  }
+]

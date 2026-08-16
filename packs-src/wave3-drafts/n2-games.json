@@ -1,0 +1,122 @@
+[
+  {
+    "name": "PLAY IT AGAIN, SUMER",
+    "clues": [
+      { "clue": "Rivals fence off territory with black and white stones in this game, a Chinese classic for over 2,000 years", "response": "Go", "value": 400 },
+      { "clue": "Players 'sow' seeds or pebbles into rows of pits in this ancient African family of count-and-capture games", "response": "mancala", "value": 800 },
+      { "clue": "Tutankhamun was entombed with four boards for this 30-square 'game of passing' beloved by pharaohs", "response": "senet", "value": 1200 },
+      { "clue": "Greek and Roman kids played this jacks-like tossing game with astragali, the ankle bones of sheep and goats", "response": "knucklebones", "value": 1600 },
+      { "clue": "This Sumerian city, Abraham's traditional birthplace, gives its name to a 4,500-year-old 'Royal Game'", "response": "Ur", "value": 2000 }
+    ]
+  },
+  {
+    "name": "A CHECKERED PAST",
+    "clues": [
+      { "clue": "In chess, this game-ending word comes from the Persian 'shah mat', announcing the king's downfall", "response": "checkmate", "value": 400 },
+      { "clue": "Chess began around the 6th century in this country as chaturanga, named for an army's 'four divisions'", "response": "India", "value": 800 },
+      { "clue": "In this Japanese cousin of chess, captured enemy pieces can be dropped back onto the board as your own", "response": "shogi", "value": 1200 },
+      { "clue": "A Hebridean sand dune yielded these brooding 12th-century walrus-ivory chess pieces in 1831", "response": "the Lewis chessmen", "value": 1600 },
+      { "clue": "Benjamin Franklin and Napoleon both lost to this turbaned chess 'automaton' secretly run by a hidden human", "response": "the Turk", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GAME CHANGERS",
+    "clues": [
+      { "clue": "Unemployed architect Alfred Butts counted letters in the New York Times to set this word game's tile values", "response": "Scrabble", "value": 400 },
+      { "clue": "First pitched as 'Pretzel', this floor-mat party game took off after Johnny Carson tangled with Eva Gabor in 1966", "response": "Twister", "value": 800 },
+      { "clue": "Recovering from polio, schoolteacher Eleanor Abbott invented this sugary path-racing game for kids on her ward", "response": "Candy Land", "value": 1200 },
+      { "clue": "As his beardless Lincoln prints tanked, this Springfield lithographer scored with 1860's 'Checkered Game of Life'", "response": "Milton Bradley", "value": 1600 },
+      { "clue": "Monopoly grew out of 'The Landlord's Game', patented in 1904 by this reform-minded stenographer", "response": "Lizzie Magie", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THINKING OUTSIDE THE BOX",
+    "clues": [
+      { "clue": "Canadian newsmen Scott Abbott and Chris Haney cooked up this wedge-collecting quiz game in 1979", "response": "Trivial Pursuit", "value": 400 },
+      { "clue": "Ohio barber Merle Robbins printed the first 5,000 decks of this shout-it-when-one-card-remains game", "response": "Uno", "value": 800 },
+      { "clue": "Gary Gygax and Dave Arneson unleashed this 20-sided-die role-playing landmark from Lake Geneva, Wisconsin in 1974", "response": "Dungeons & Dragons", "value": 1200 },
+      { "clue": "Patented in Baltimore in 1891, this 'talking board' supposedly picked its own odd name when asked", "response": "Ouija", "value": 1600 },
+      { "clue": "German dental technician Klaus Teuber had players trading brick and wool on this hexagon-tiled island in 1995", "response": "Settlers of Catan", "value": 2000 }
+    ]
+  },
+  {
+    "name": "TOY-COONS",
+    "clues": [
+      { "clue": "This Barbie-making giant splices the names of founders Harold 'Matt' Matson and Elliot Handler", "response": "Mattel", "value": 400 },
+      { "clue": "Charles Lazarus grew a D.C. children's furniture shop into this superstore chain with a backwards letter", "response": "Toys \"R\" Us", "value": 800 },
+      { "clue": "G.I. Joe's maker, this Rhode Island giant condensed its original name, Hassenfeld Brothers", "response": "Hasbro", "value": 1200 },
+      { "clue": "The Corn Popper and the Chatter Telephone toddle out of this preschool powerhouse of East Aurora, New York", "response": "Fisher-Price", "value": 1600 },
+      { "clue": "An Olympic pole vault champion, this Erector Set inventor was hailed as 'the man who saved Christmas' in 1918", "response": "A.C. Gilbert", "value": 2000 }
+    ]
+  },
+  {
+    "name": "PLAYING FOR KEEPS",
+    "clues": [
+      { "clue": "President Roosevelt's mercy toward a roped bruin on a 1902 Mississippi hunt inspired this cuddly toy", "response": "the teddy bear", "value": 400 },
+      { "clue": "This egg-packaged stretchy goo, a failed wartime rubber substitute, orbited the moon with Apollo 8", "response": "Silly Putty", "value": 800 },
+      { "clue": "Wham-O's Pluto Platter took this new name from a Connecticut pie company whose tins Yale students flung", "response": "the Frisbee", "value": 1200 },
+      { "clue": "Shoppers rioted in 1983 over Xavier Roberts' pudgy-cheeked dolls, sold under this name with adoption papers", "response": "Cabbage Patch Kids", "value": 1600 },
+      { "clue": "Frank Lloyd Wright's son John modeled these interlocking toy timbers on Tokyo's quake-resistant Imperial Hotel", "response": "Lincoln Logs", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GAME OF TOMES",
+    "clues": [
+      { "clue": "Katniss Everdeen volunteers as tribute for a televised fight to the death in this Suzanne Collins novel", "response": "The Hunger Games", "value": 400 },
+      { "clue": "A jungle board game looses rhinos and monsoons on a tidy suburban house in this Chris Van Allsburg picture book", "response": "Jumanji", "value": 800 },
+      { "clue": "The wager that sends Phileas Fogg racing around the world arises over this trick-taking game at the Reform Club", "response": "whist", "value": 1200 },
+      { "clue": "Lewis Carroll framed this Alice sequel as a chess problem, marching his pawn heroine to the eighth rank", "response": "Through the Looking-Glass", "value": 1600 },
+      { "clue": "Days before his 1942 suicide in Brazil, this Austrian mailed publishers 'The Royal Game', his novella of chess obsession", "response": "Stefan Zweig", "value": 2000 }
+    ]
+  },
+  {
+    "name": "PLAYING TO THE GALLERY",
+    "clues": [
+      { "clue": "Commissioned to pitch cigars, Cassius Coolidge's kitschy canine card-table paintings go by this 3-word name", "response": "Dogs Playing Poker", "value": 400 },
+      { "clue": "One version of this French post-impressionist's 'The Card Players' reportedly sold to Qatar for about $250 million", "response": "Cézanne", "value": 800 },
+      { "clue": "In this Baroque bad boy's 'The Cardsharps', a cheat hides extra cards behind his back to fleece a naive youth", "response": "Caravaggio", "value": 1200 },
+      { "clue": "Some 80 pastimes, from hoop rolling to leapfrog, crowd this Flemish master's 1560 canvas 'Children's Games'", "response": "Bruegel", "value": 1600 },
+      { "clue": "This 'Nude Descending a Staircase' provocateur all but quit art to play chess for France's national team", "response": "Marcel Duchamp", "value": 2000 }
+    ]
+  },
+  {
+    "name": "THE HOUSE ALWAYS WINS",
+    "clues": [
+      { "clue": "Bugsy Siegel's Flamingo, opened in 1946 on Highway 91, helped turn this city's Strip into a neon playground", "response": "Las Vegas", "value": 400 },
+      { "clue": "San Francisco mechanic Charles Fey built the bell-ringing 1890s granddaddy of this 'one-armed bandit'", "response": "the slot machine", "value": 800 },
+      { "clue": "Casino money from this Monaco district let Prince Charles III scrap income tax, though locals are barred from play", "response": "Monte Carlo", "value": 1200 },
+      { "clue": "Legend credits Blaise Pascal's perpetual-motion tinkering for this game whose name is French for 'little wheel'", "response": "roulette", "value": 1600 },
+      { "clue": "This Venetian gaming house, opened in a palazzo wing in 1638, is often called the first state-licensed casino", "response": "the Ridotto", "value": 2000 }
+    ]
+  },
+  {
+    "name": "ODDS & ENDINGS",
+    "clues": [
+      { "clue": "Toy salesman Edwin Lowe renamed the carnival game 'beano' as this after an excited winner blurted it out", "response": "bingo", "value": 400 },
+      { "clue": "Brought to New Orleans around 1805, this casino dice game descends from the old English pastime hazard", "response": "craps", "value": 800 },
+      { "clue": "Card players do things 'according to' this Englishman, whose 1742 whist treatise codified genteel play", "response": "Hoyle", "value": 1200 },
+      { "clue": "First drawn in 1812, Spain's Christmas lottery calls its mammoth top prize this, 'the Fat One'", "response": "El Gordo", "value": 1600 },
+      { "clue": "Dostoevsky dictated this 1866 novella in under a month to beat a predatory contract and cover roulette debts", "response": "The Gambler", "value": 2000 }
+    ]
+  },
+  {
+    "name": "WORLD TOUR-NAMENT",
+    "clues": [
+      { "clue": "Winds, dragons and flower tiles clatter in this Chinese game whose name is often said to mean 'sparrow'", "response": "mahjong", "value": 400 },
+      { "clue": "The four letters on this Hanukkah spinning top stand for 'a great miracle happened there'", "response": "the dreidel", "value": 800 },
+      { "clue": "Winners at this Japanese upright pinball-style game trade steel balls for prizes; cash changes hands off-site", "response": "pachinko", "value": 1200 },
+      { "clue": "Born in Provence, this French boules game takes its name from dialect for 'feet planted' — no run-up allowed", "response": "pétanque", "value": 1600 },
+      { "clue": "Despite its name, this star-boarded marble-hopping game debuted in 1892 Germany as 'Stern-Halma'", "response": "Chinese checkers", "value": 2000 }
+    ]
+  },
+  {
+    "name": "GAMES WITHOUT BORDERS",
+    "clues": [
+      { "clue": "From Havana park tables to Chinatown parlors, players slam down these pip-marked tiles nicknamed 'bones'", "response": "dominoes", "value": 400 },
+      { "clue": "Victorian Britain imported this slithery ups-and-downs race game from India, where it once taught karma", "response": "Snakes and Ladders", "value": 800 },
+      { "clue": "El Gallo and La Sirena are among the picture cards called out in this Mexican cousin of bingo", "response": "Lotería", "value": 1200 },
+      { "clue": "Titania laments that this three-in-a-row 'mill' game, once cut into village turf, is 'fill'd up with mud'", "response": "Nine Men's Morris", "value": 1600 },
+      { "clue": "Emperor Akbar reportedly played this Indian ancestor of Parcheesi on palace courtyards with human pieces", "response": "Pachisi", "value": 2000 }
+    ]
+  }
+]

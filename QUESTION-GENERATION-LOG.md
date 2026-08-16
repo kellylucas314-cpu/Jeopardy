@@ -112,3 +112,18 @@ packs-src/). Sources of record: `packs-src/wave3-drafts/` (rich sources),
 ~18 games); a mythology/legends dedicated slice; more Before & After; daily-challenge
 seed boards. Test first: play a Fresh full game and an Easy quick game on the PR
 preview; spot-read the F1/UNC categories for family fit.
+
+## 2026-08-16 ~18:00 UTC — Wave 4 underway (Fable limit → Opus 5)
+
+- **Milestone: 2,362 accepted clues** (464 categories + 42 finals), 52 revisions,
+  still **zero rejections**. Wave-4 grading has cleared mythology ×2 and animals ×2
+  (48/48 accepted, 46–48), catching 14 cross-file duplicate clues that the automated
+  checker cannot see (a Ravana leak between myth files, twin clownfish/goose clues,
+  a third owl answer).
+- Fable 5 session limit hit mid-wave; six agents died and were relaunched on Opus 5
+  with identical briefs. No authored work was lost — every dead agent's file was
+  either already on disk or rewritten fresh.
+- Wave-4 slices drafted so far: mythology ×2, animals ×2, games & toys ×2,
+  geography II, wordplay II, science II, history II, music II, plus 24 new finals.
+- Still to come: screen II, literature II, food II, six Easy Breezy II lanes,
+  12 easy finals, then grading, compile, and verification toward the 3,300 stop.

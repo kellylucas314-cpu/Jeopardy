@@ -1,0 +1,86 @@
+[
+  { "name": "DOUBLE-O HEAVEN", "clues": [
+    { "clue": "Like every response in this category, this poppable party inflatable packs a double O", "response": "a balloon", "value": 200 },
+    { "clue": "Blocks of packed snow spiral upward into this dome-shaped Inuit shelter", "response": "an igloo", "value": 400 },
+    { "clue": "Napoleon met his final defeat in June 1815 at this site in modern-day Belgium", "response": "Waterloo", "value": 600 },
+    { "clue": "Hollywood pins needle-stuffed dolls on this Haitian religion whose spirits are called lwa", "response": "voodoo", "value": 800 },
+    { "clue": "In Prokofiev's 'Peter and the Wolf,' this double-reed woodwind grumbles as the grandfather", "response": "a bassoon", "value": 1000 }
+  ] },
+  { "name": "CATCHING SOME ZZ'S", "clues": [
+    { "clue": "Every answer here naps on a double Z, including this pie Naples tops with tomato & mozzarella", "response": "pizza", "value": 200 },
+    { "clue": "Meteorologists want winds of 35+ mph & blinding snow before declaring this fearsome storm", "response": "a blizzard", "value": 400 },
+    { "clue": "Ursus arctos horribilis is the fittingly fearsome formal name of this North American bear", "response": "a grizzly", "value": 600 },
+    { "clue": "A family of Italian immigrant brothers went from airplane propellers to this whirlpool-tub brand", "response": "Jacuzzi", "value": 800 },
+    { "clue": "A celebrity-chasing photographer in Fellini's 'La Dolce Vita' lent his name to this flashbulb swarm", "response": "the paparazzi", "value": 1000 }
+  ] },
+  { "name": "\"CAT\" GOT YOUR TONGUE?", "clues": [
+    { "clue": "There's a 'cat' napping inside every answer, like this summer break you might spend at the beach", "response": "a vacation", "value": 200 },
+    { "clue": "Horace Mann crusaded to make this free, public & universal for American children", "response": "education", "value": 400 },
+    { "clue": "This adjective suits fine porcelain and touchy diplomatic situations alike", "response": "delicate", "value": 600 },
+    { "clue": "Opposite of legato, this Italian musical marking clips notes short & detached", "response": "staccato", "value": 800 },
+    { "clue": "Chichen Itza & the buried crater of the dinosaur-killing asteroid share this Mexican peninsula", "response": "the Yucatan", "value": 1000 }
+  ] },
+  { "name": "SMELLING A \"RAT\"", "clues": [
+    { "clue": "A 'rat' scurries through each answer, including this plank-walking, booty-burying sea robber", "response": "a pirate", "value": 200 },
+    { "clue": "This Okinawan-born martial art's name translates as 'empty hand'", "response": "karate", "value": 400 },
+    { "clue": "Arizona's famous 'Meteor' one is nearly a mile wide — it's this bowl-shaped impact scar", "response": "a crater", "value": 600 },
+    { "clue": "Condemned for corrupting the youth of Athens, this philosopher drank hemlock in 399 B.C.", "response": "Socrates", "value": 800 },
+    { "clue": "Home to the ozone layer, this second layer of Earth's atmosphere sits just above the troposphere", "response": "the stratosphere", "value": 1000 }
+  ] },
+  { "name": "IDIOMS OFF THE LEASH", "clues": [
+    { "clue": "A clumsy lug turned loose amid the fine porcelain is this animal 'in a china shop'", "response": "a bull", "value": 200 },
+    { "clue": "Phony, theatrical grief comes as the 'tears' of this snappy Nile reptile", "response": "a crocodile", "value": 400 },
+    { "clue": "Legend says Siamese kings ruined courtiers with gifts of this pale pachyderm, now any costly unwanted thing", "response": "a white elephant", "value": 600 },
+    { "clue": "Quit cigarettes all at once and you've gone 'cold' as this Thanksgiving bird", "response": "turkey", "value": 800 },
+    { "clue": "Coleridge's becalmed mariner wore this shot seabird around his neck, now any inescapable burden", "response": "an albatross", "value": 1000 }
+  ] },
+  { "name": "COSTS AN ARM & A LEG", "clues": [
+    { "clue": "Jittery grooms are said to get these 'cold' right before the wedding", "response": "feet", "value": 200 },
+    { "clue": "A stern governess ordering you to hush might tell you to 'hold' this", "response": "your tongue", "value": 400 },
+    { "clue": "The Book of Job gave us escaping 'by the skin of' these", "response": "your teeth", "value": 600 },
+    { "clue": "Grandma's all-purpose cleaning product: 'grease' from this joint", "response": "the elbow", "value": 800 },
+    { "clue": "In the King James Bible, bracing for a mighty task means 'girding up' these", "response": "your loins", "value": 1000 }
+  ] },
+  { "name": "MISSING LINKS", "clues": [
+    { "clue": "Each answer bridges two words: this one follows 'rain' for a colorful arc & precedes 'tie' at a fancy party", "response": "bow", "value": 200 },
+    { "clue": "It follows 'camp' for a s'mores session and precedes 'works' for a Fourth of July show", "response": "fire", "value": 400 },
+    { "clue": "It follows 'news' at the breakfast table and precedes 'back' at the bookstore", "response": "paper", "value": 600 },
+    { "clue": "It follows 'pad' at the gym and precedes 'smith' at the key-cutter's shop", "response": "lock", "value": 800 },
+    { "clue": "It follows 'jay' in a street-crossing offense and precedes 'about' in an Australian outback wander", "response": "walk", "value": 1000 }
+  ] },
+  { "name": "ONE WORD LEADS TO ANOTHER", "clues": [
+    { "clue": "All 3 fit: this single word can precede 'shake,' 'cuff' & 'writing'", "response": "hand", "value": 200 },
+    { "clue": "It can precede 'light,' 'shine' & 'walk' — Michael Jackson glided backward through that last one", "response": "moon", "value": 400 },
+    { "clue": "It can precede 'storm' in a meeting, 'child' in a eureka moment & 'washing' in a spy thriller", "response": "brain", "value": 600 },
+    { "clue": "It can precede 'fly' in the garden, 'milk' in the fridge & 'scotch' in the candy dish", "response": "butter", "value": 800 },
+    { "clue": "It can precede 'lock' in rush-hour traffic & 'iron' on the football field", "response": "grid", "value": 1000 }
+  ] },
+  { "name": "A MAN, A PLAN, A CATEGORY", "clues": [
+    { "clue": "Each answer here reads the same in both directions, like this hour when the sun hits its daily peak", "response": "noon", "value": 200 },
+    { "clue": "Tip over in this slim Inuit-invented paddle craft and you'll be glad you learned to roll it", "response": "a kayak", "value": 400 },
+    { "clue": "This whirling helicopter part comes in 'main' and 'tail' varieties", "response": "a rotor", "value": 600 },
+    { "clue": "The palindromic first name of the 'Iron Chancellor' who unified Germany in 1871", "response": "Otto", "value": 800 },
+    { "clue": "Spoken in India's Kerala state, this Dravidian language's 9-letter name is a palindrome", "response": "Malayalam", "value": 1000 }
+  ] },
+  { "name": "-OLOGY MAJORS", "clues": [
+    { "clue": "Lions & tigers & bears — oh my, they all fall under this branch of biology", "response": "zoology", "value": 200 },
+    { "clue": "Fronts & forecasts, not fireballs from space, are the business of this misleadingly named science", "response": "meteorology", "value": 400 },
+    { "clue": "Grab a butterfly net for this study of insects, often confused with a word-history discipline", "response": "entomology", "value": 600 },
+    { "clue": "Victorian quacks felt for skull bumps in this long-debunked 'science' of head-reading", "response": "phrenology", "value": 800 },
+    { "clue": "From the Latin for 'bell,' it's the study & art beloved by church-tower change ringers", "response": "campanology", "value": 1000 }
+  ] },
+  { "name": "A HERD OF HOMOPHONES", "clues": [
+    { "clue": "Each answer is a sound-alike pair, like this grizzly who forgot his fur coat", "response": "a bare bear", "value": 200 },
+    { "clue": "A gentle woodland grazer the whole family adores, like Bambi", "response": "a dear deer", "value": 400 },
+    { "clue": "A pony that's been cheering too loudly at the racetrack all afternoon", "response": "a hoarse horse", "value": 600 },
+    { "clue": "A rooster guilty of unsportsmanlike conduct in the barnyard", "response": "a foul fowl", "value": 800 },
+    { "clue": "A wildebeest fresh off the showroom floor", "response": "a new gnu", "value": 1000 }
+  ] },
+  { "name": "HOMOPHONE IT IN", "clues": [
+    { "clue": "You heard breakfast flakes, but it's this adjective for a killer who strikes again & again", "response": "serial", "value": 200 },
+    { "clue": "It sounds like a garden bloom, but you sift this powder into the cake batter", "response": "flour", "value": 400 },
+    { "clue": "Sounding like something a bodybuilder flexes, this bivalve steams open in garlic broth", "response": "a mussel", "value": 600 },
+    { "clue": "This bit of corn on the cob is pronounced exactly like a U.S. Army officer's rank", "response": "a kernel", "value": 800 },
+    { "clue": "From the Spanish for 'little war,' this word for an irregular fighter sounds just like a great ape", "response": "a guerrilla", "value": 1000 }
+  ] }
+]

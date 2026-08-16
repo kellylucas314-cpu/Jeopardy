@@ -1,0 +1,86 @@
+[
+  { "name": "ZIGGURAT WHAT IT TAKES", "clues": [
+    { "clue": "Babylon's blue-tiled processional gate and a notorious 1987 Hollywood flop both take the name of this goddess of love and war", "response": "Ishtar", "value": 400 },
+    { "clue": "Armed with winds and a net, this patron god of Babylon formed heaven and earth by splitting a slain sea dragon's corpse", "response": "Marduk", "value": 800 },
+    { "clue": "Dungeons & Dragons' five-headed dragon queen borrows her name from this primordial saltwater monster of the Enuma Elish", "response": "Tiamat", "value": 1200 },
+    { "clue": "Atop Hammurabi's law stele, this sun god of justice hands the king a ceremonial rod and ring", "response": "Shamash", "value": 1600 },
+    { "clue": "Assyrians wore amulets of this king of the wind demons for protection — millennia before he menaced Regan in 'The Exorcist' films", "response": "Pazuzu", "value": 2000 }
+  ] },
+  { "name": "OM IS WHERE THE HEART IS", "clues": [
+    { "clue": "Devotees smash coconuts for this elephant-headed remover of obstacles before launching any new venture", "response": "Ganesha", "value": 400 },
+    { "clue": "As Nataraja, lord of the dance, this destroyer god whirls within a ring of flames, trampling the dwarf of ignorance", "response": "Shiva", "value": 800 },
+    { "clue": "Tongue out and garlanded with severed heads, this ferocious dark goddess halts her rampage upon stepping on her prostrate consort", "response": "Kali", "value": 1200 },
+    { "clue": "Seated on a white lotus with a swan at her side, this goddess of learning and music plays the veena", "response": "Saraswati", "value": 1600 },
+    { "clue": "This Vedic king of the gods freed the pent-up waters by slaying the serpent Vritra with his thunderbolt, the vajra", "response": "Indra", "value": 2000 }
+  ] },
+  { "name": "URUK & ROLL", "clues": [
+    { "clue": "Shaped from clay to humble King Gilgamesh, this wild man instead became his dearest friend — and his death sparks the quest", "response": "Enkidu", "value": 400 },
+    { "clue": "The epic's most complete tablets surfaced in Ashurbanipal's library in this Assyrian capital, Jonah's reluctant destination", "response": "Nineveh", "value": 800 },
+    { "clue": "Gilgamesh crosses the Waters of Death to ask this flood survivor, the 'Babylonian Noah,' how to live forever", "response": "Utnapishtim", "value": 1200 },
+    { "clue": "Gilgamesh beheads this bellowing guardian of the Cedar Forest, whose wrinkled face resembles coiled entrails", "response": "Humbaba", "value": 1600 },
+    { "clue": "Keeping a tavern at the edge of the sea, this divine alewife advises the grieving king to eat, drink and be merry", "response": "Siduri", "value": 2000 }
+  ] },
+  { "name": "RAMA KNOWS BEST", "clues": [
+    { "clue": "Son of the wind god, this monkey hero leapt an ocean strait to Lanka, then burned the city with his blazing tail", "response": "Hanuman", "value": 400 },
+    { "clue": "Ten heads, twenty arms: this rakshasa king of Lanka carried Sita off in a flying chariot", "response": "Ravana", "value": 800 },
+    { "clue": "Tradition credits this reformed highwayman-turned-sage with composing the Ramayana's roughly 24,000 verses", "response": "Valmiki", "value": 1200 },
+    { "clue": "Rows of Diwali lamps recall Rama's triumphant return from exile to this capital of the Kosala kingdom", "response": "Ayodhya", "value": 1600 },
+    { "clue": "Cashing in two long-promised boons, this junior queen won the throne for her son Bharata and 14 years' exile for Rama", "response": "Kaikeyi", "value": 2000 }
+  ] },
+  { "name": "MYTHTERPIECE THEATER", "clues": [
+    { "clue": "Zephyr's breath wafts a goddess ashore on a scallop shell in this Florentine's 'The Birth of Venus'", "response": "Botticelli", "value": 400 },
+    { "clue": "Daphne's fingertips burst into laurel leaves as Apollo grasps her in this sculptor's Galleria Borghese marble", "response": "Bernini", "value": 800 },
+    { "clue": "One of this Spaniard's nightmarish Black Paintings shows the titan Saturn devouring his own son", "response": "Goya", "value": 1200 },
+    { "clue": "For a Duke of Ferrara, this Venetian painted Bacchus leaping from a cheetah-drawn chariot toward Ariadne", "response": "Titian", "value": 1600 },
+    { "clue": "Arachne's weaving contest with Athena hides in the background of 'The Spinners' by this painter to Philip IV", "response": "Velázquez", "value": 2000 }
+  ] },
+  { "name": "WRITTEN IN THE STARS", "clues": [
+    { "clue": "A scorpion's sting felled this giant huntsman of myth; now his three-starred belt sets as Scorpius rises", "response": "Orion", "value": 400 },
+    { "clue": "Sprung from a beheaded Gorgon's blood, this winged horse marks autumn skies with its Great Square", "response": "Pegasus", "value": 800 },
+    { "clue": "Zeus' lover Callisto, transformed into a bear, now lumbers around the celestial pole as this constellation", "response": "Ursa Major", "value": 1200 },
+    { "clue": "Punished for a vain boast about beauty, this mythic queen circles the celestial pole chained to her throne, often upside down", "response": "Cassiopeia", "value": 1600 },
+    { "clue": "An Egyptian queen's hair, vowed to the gods for her husband's safe return from war, still shines as this faint constellation", "response": "Coma Berenices", "value": 2000 }
+  ] },
+  { "name": "UNDERWORLD WIDE WEB", "clues": [
+    { "clue": "Zeus locked the defeated Titans in this Greek pit as far below the earth as the sky is above it", "response": "Tartarus", "value": 400 },
+    { "clue": "Ra's solar barge sailed nightly through this Egyptian netherworld, where hearts were weighed against a feather", "response": "the Duat", "value": 800 },
+    { "clue": "Izanagi fled this Japanese land of the dead after seeing his wife's rotting corpse, sealing the exit with a boulder", "response": "Yomi", "value": 1200 },
+    { "clue": "Aided by a faithful dog, Aztec souls trekked four years through nine perilous levels to reach this deepest underworld", "response": "Mictlan", "value": 1600 },
+    { "clue": "In Finland's Kalevala, a dark river rings this realm of the dead; Sibelius gave its swan a haunting tone poem", "response": "Tuonela", "value": 2000 }
+  ] },
+  { "name": "AFTERLIFE OF THE PARTY", "clues": [
+    { "clue": "Greeks buried their dead with a coin in the mouth — ferry fare for this grizzled boatman of the underworld", "response": "Charon", "value": 400 },
+    { "clue": "In the 'Aeneid,' the Sibyl quiets this three-headed watchdog with a drugged honey cake", "response": "Cerberus", "value": 800 },
+    { "clue": "Riding a buffalo and carrying a noose, this first mortal to die became the Hindu judge of the dead", "response": "Yama", "value": 1200 },
+    { "clue": "This top-hatted, rum-loving Vodou lwa of death and resurrection swaggered into the Bond film 'Live and Let Die'", "response": "Baron Samedi", "value": 1600 },
+    { "clue": "This queen of the Mesopotamian 'land of no return' shares her throne with Nergal, god of war and plague", "response": "Ereshkigal", "value": 2000 }
+  ] },
+  { "name": "TRICKSTER TREAT", "clues": [
+    { "clue": "For engineering Baldr's death, this Norse mischief-maker was bound beneath a serpent that drips venom on his face", "response": "Loki", "value": 400 },
+    { "clue": "This Polynesian demigod snared the sun to slow its crossing and fished islands up from the seafloor", "response": "Maui", "value": 800 },
+    { "clue": "All stories belong to this West African spider, who paid the sky god a price that included hornets, a python and a leopard", "response": "Anansi", "value": 1200 },
+    { "clue": "Hatched from a stone, this Monkey King gorged on the peaches of immortality and spent 500 years pinned under a mountain", "response": "Sun Wukong", "value": 1600 },
+    { "clue": "Honored first at Yoruba rites, this messenger of the crossroads wore a two-colored hat that set two sworn friends feuding", "response": "Eshu", "value": 2000 }
+  ] },
+  { "name": "PRANKS FOR THE MEMORIES", "clues": [
+    { "clue": "'Please don't throw me in the briar patch!' begged this trickster hare of African American folklore — so the fox did", "response": "Br'er Rabbit", "value": 400 },
+    { "clue": "This wily canine trickster of many Native American tales stole fire for humans and scattered the stars", "response": "Coyote", "value": 800 },
+    { "clue": "Mere hours after his birth, this future messenger god rustled Apollo's cattle, marching them backward to hide the trail", "response": "Hermes", "value": 1200 },
+    { "clue": "This medieval beast-epic con artist was so beloved that his name shoved aside 'goupil' as the French word for fox", "response": "Reynard", "value": 1600 },
+    { "clue": "His name means 'owl mirror': Richard Strauss scored the merry pranks of this roguish jester of German chapbooks", "response": "Till Eulenspiegel", "value": 2000 }
+  ] },
+  { "name": "HALO, IT'S ME", "clues": [
+    { "clue": "This missionary bishop reputedly banished Ireland's snakes and used the shamrock to explain the Trinity", "response": "Saint Patrick", "value": 400 },
+    { "clue": "By night, this 4th-century bishop of Myra tossed gold through a poor man's window, seeding a jolly gift-giving legend", "response": "Saint Nicholas", "value": 800 },
+    { "clue": "England's flag bears the red cross of this soldier-martyr, famed in legend for lancing a dragon to save a princess", "response": "Saint George", "value": 1200 },
+    { "clue": "Legend says this Bible-translating scholar plucked a thorn from a lion's paw and gained a lifelong companion", "response": "Saint Jerome", "value": 1600 },
+    { "clue": "Beheaded on Montmartre, this patron of Paris allegedly picked up his head and preached for miles", "response": "Saint Denis", "value": 2000 }
+  ] },
+  { "name": "LEGEND HAS IT", "clues": [
+    { "clue": "To win tax relief for Coventry, this 11th-century noblewoman rode through town clothed only in her long hair", "response": "Lady Godiva", "value": 400 },
+    { "clue": "A Habsburg bailiff forced this Swiss marksman to split an apple on his son's head with a crossbow bolt", "response": "William Tell", "value": 800 },
+    { "clue": "Cheated of his rat-catching fee, this gaudily dressed musician of 1284 legend led Hamelin's children away", "response": "the Pied Piper", "value": 1200 },
+    { "clue": "Legend straps this Castilian hero's corpse into the saddle to win one last battle for Valencia", "response": "El Cid", "value": 1600 },
+    { "clue": "Medieval Europe hunted for this legendary Christian priest-king, whose fabled realm drifted from Asia to Ethiopia on the maps", "response": "Prester John", "value": 2000 }
+  ] }
+]
