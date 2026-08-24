@@ -2,6 +2,9 @@
  * Main entry — renders all screens based on game state.
  */
 
+import '@fontsource-variable/manrope';
+import '@fontsource/ibm-plex-mono/400.css';
+
 import { getState, setState, subscribe, resetForNewGame, loadPrefs, savePrefs, loadRecords, recordGame } from './state.js';
 import {
   startGame, selectClue, submitWager, submitAnswer, buzzIn, noBuzz,
@@ -17,17 +20,9 @@ let boardRevealDone = false;
 
 // Player identity
 const PLAYER_COLORS = ['var(--p0)', 'var(--p1)', 'var(--p2)'];
-// Authored icon set — drawn strokes, never glyphs standing in for icons.
-const ICONS = {
-  check: 'M4 11.5l4.6 4.5L20 5.5',
-  cross: 'M5.5 5.5l13 13M18.5 5.5l-13 13',
-  clock: 'M12 6.5v6l4 2',
-};
+const ICONS = { check: 'check', cross: 'x', clock: 'clock' };
 function icon(name, cls = '') {
-  const extra = name === 'clock'
-    ? '<circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="2"/>'
-    : '';
-  return `<svg class="icon ${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${extra}<path d="${ICONS[name]}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  return `<i class="ph ph-${ICONS[name]} icon ${cls}" aria-hidden="true"></i>`;
 }
 
 const ROMAN = ['I', 'II', 'III'];
@@ -227,69 +222,85 @@ function renderSetup() {
 
   app.innerHTML = `
     <div class="setup-screen">
-      <div class="logo-container">
-        <img class="host-portrait" src="./assets/napoleon-bust.webp" alt="Napoleon Bonaparte, your host">
-        <h1 class="logo">Clue d&rsquo;&Eacute;tat</h1>
-        <div class="logo-subtitle">A trivia coup hosted by Napoleon</div>
-      </div>
-      ${hof}
-      <div class="setup-card">
-        <h2>How many players?</h2>
-        <div class="player-count-buttons">
-          ${[1, 2, 3].map(n => `
-            <button class="btn-player-count ${n === playerCount ? 'selected' : ''}" data-count="${n}">
-              ${n} Player${n > 1 ? 's' : ''}
+      <section class="setup-hero" aria-labelledby="game-title">
+        <div class="setup-brand">
+          <div class="eyebrow">A trivia coup hosted by Napoleon</div>
+          <h1 class="logo" id="game-title">Clue d&rsquo;&Eacute;tat</h1>
+          <p class="setup-deck">History is watching. Choose your battlefield and seize the board.</p>
+        </div>
+        <div class="title-film">
+          <video class="title-video" autoplay muted loop playsinline preload="metadata"
+                 poster="./assets/napoleon-title-poster.webp"
+                 aria-label="Animated low-poly Napoleon, host of Clue d'État">
+            <source src="./assets/napoleon-title.mp4" type="video/mp4">
+          </video>
+          <div class="title-film-label">The Emperor awaits</div>
+        </div>
+        ${hof}
+      </section>
+      <section class="setup-panel">
+        <div class="setup-panel-heading">
+          <span class="setup-panel-kicker">Prepare the table</span>
+          <h2>Begin a campaign</h2>
+        </div>
+        <div class="setup-card">
+          <h2>How many players?</h2>
+          <div class="player-count-buttons">
+            ${[1, 2, 3].map(n => `
+              <button class="btn-player-count ${n === playerCount ? 'selected' : ''}" data-count="${n}">
+                ${n} Player${n > 1 ? 's' : ''}
+              </button>
+            `).join('')}
+          </div>
+          <div id="player-names"></div>
+          <h2 class="mode-title">Game length</h2>
+          <div class="player-count-buttons length-buttons">
+            <button class="btn-player-count btn-length ${gameLength === 'quick' ? 'selected' : ''}" data-length="quick">
+              Quick &middot; ~20 min
             </button>
-          `).join('')}
-        </div>
-        <div id="player-names"></div>
-        <h2 class="mode-title">Game length</h2>
-        <div class="player-count-buttons length-buttons">
-          <button class="btn-player-count btn-length ${gameLength === 'quick' ? 'selected' : ''}" data-length="quick">
-            Quick &middot; ~20 min
-          </button>
-          <button class="btn-player-count btn-length ${gameLength === 'full' ? 'selected' : ''}" data-length="full">
-            Full &middot; ~45 min
-          </button>
-        </div>
-        <h2 class="mode-title">Questions</h2>
-        <div class="mode-buttons pack-buttons">
-          <button class="btn-mode btn-pack ${pack === 'fresh' ? 'selected' : ''}" data-pack="fresh">
-            <span class="mode-name">Fresh Pack</span>
-            <span class="mode-desc">4,100+ original clues written for this game</span>
-          </button>
-          <button class="btn-mode btn-pack ${pack === 'easy' ? 'selected' : ''}" data-pack="easy">
-            <span class="mode-name">Easy Breezy</span>
-            <span class="mode-desc">Gentler questions, classics &amp; nostalgia</span>
-          </button>
-          <button class="btn-mode btn-pack ${pack === 'archive' ? 'selected' : ''}" data-pack="archive">
-            <span class="mode-name">Deep Archive</span>
-            <span class="mode-desc">460,000+ clues &middot; tough &amp; twisty</span>
-          </button>
-        </div>
-        <div id="mode-section">
-          <h2 class="mode-title">Game mode</h2>
-          <div class="mode-buttons">
-            <button class="btn-mode ${gameMode === 'turns' ? 'selected' : ''}" data-mode="turns">
-              <span class="mode-name">Take Turns</span>
-              <span class="mode-desc">Pass the keyboard, answer one at a time</span>
-            </button>
-            <button class="btn-mode ${gameMode === 'buzz' ? 'selected' : ''}" data-mode="buzz">
-              <span class="mode-name">Buzz In!</span>
-              <span class="mode-desc">Race to the buzzer, salon-style</span>
+            <button class="btn-player-count btn-length ${gameLength === 'full' ? 'selected' : ''}" data-length="full">
+              Full &middot; ~45 min
             </button>
           </div>
+          <h2 class="mode-title">Questions</h2>
+          <div class="mode-buttons pack-buttons">
+            <button class="btn-mode btn-pack ${pack === 'fresh' ? 'selected' : ''}" data-pack="fresh">
+              <span class="mode-name">Fresh Pack</span>
+              <span class="mode-desc">4,100+ original clues written for this game</span>
+            </button>
+            <button class="btn-mode btn-pack ${pack === 'easy' ? 'selected' : ''}" data-pack="easy">
+              <span class="mode-name">Easy Breezy</span>
+              <span class="mode-desc">Gentler questions, classics &amp; nostalgia</span>
+            </button>
+            <button class="btn-mode btn-pack ${pack === 'archive' ? 'selected' : ''}" data-pack="archive">
+              <span class="mode-name">Deep Archive</span>
+              <span class="mode-desc">460,000+ clues &middot; tough &amp; twisty</span>
+            </button>
+          </div>
+          <div id="mode-section">
+            <h2 class="mode-title">Game mode</h2>
+            <div class="mode-buttons">
+              <button class="btn-mode ${gameMode === 'turns' ? 'selected' : ''}" data-mode="turns">
+                <span class="mode-name">Take Turns</span>
+                <span class="mode-desc">Pass the keyboard, answer one at a time</span>
+              </button>
+              <button class="btn-mode ${gameMode === 'buzz' ? 'selected' : ''}" data-mode="buzz">
+                <span class="mode-name">Buzz In!</span>
+                <span class="mode-desc">Race to the buzzer, salon-style</span>
+              </button>
+            </div>
+          </div>
+          <button class="btn-start" id="btn-start-game">Begin the Campaign</button>
         </div>
-        <button class="btn-start" id="btn-start-game">Begin the Campaign</button>
-      </div>
-      <div class="setup-footer">
-        <label class="sound-toggle">
-          <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
-          <span>Sound Effects</span>
-        </label>
-        <button class="link-btn" id="btn-how-to">How to play</button>
-        <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
-      </div>
+        <div class="setup-footer">
+          <label class="sound-toggle">
+            <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
+            <span>Sound Effects</span>
+          </label>
+          <button class="link-btn" id="btn-how-to">How to play</button>
+          <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
+        </div>
+      </section>
     </div>
   `;
 
@@ -429,10 +440,15 @@ function renderBoard() {
   app.innerHTML = `
     <div class="board-screen">
       <div class="board-header">
-        <button class="btn-menu" id="btn-menu" aria-label="Game menu" title="Menu (Esc)">☰</button>
-        <div class="round-meta">
-          <div class="round-name">${roundName}</div>
-          <div class="round-progress"><div class="round-progress-fill" style="--fill:${progress / 100}"></div></div>
+        <button class="btn-menu" id="btn-menu" aria-label="Game menu" title="Menu (Esc)">
+          <i class="ph ph-list" aria-hidden="true"></i>
+        </button>
+        <div class="board-brand">
+          <div class="board-title">Clue d&rsquo;&Eacute;tat</div>
+          <div class="round-meta">
+            <div class="round-name">${roundName}</div>
+            <div class="round-progress"><div class="round-progress-fill" style="--fill:${progress / 100}"></div></div>
+          </div>
         </div>
         <div class="scoreboard">
           ${players.map((p, i) => `
@@ -446,32 +462,42 @@ function renderBoard() {
           `).join('')}
         </div>
       </div>
-      <div class="game-board" id="game-board">
-        ${categories.map((cat, ci) => `
-          <div class="board-category" data-cat="${ci}">
-            <div class="category-header">${escapeHtml(cat.name)}</div>
-            ${cat.clues.map((clue, cli) => `
-              <div class="board-clue ${clue.answered ? 'answered' : ''}"
-                   data-cat="${ci}" data-clue="${cli}">
-                ${clue.answered ? '' : '$' + clue.value}
-              </div>
-            `).join('')}
-          </div>
-        `).join('')}
+      <div class="board-stage">
+        <div class="game-board" id="game-board">
+          ${categories.map((cat, ci) => `
+            <div class="board-category" data-cat="${ci}">
+              <div class="category-header">${escapeHtml(cat.name)}</div>
+              ${cat.clues.map((clue, cli) => `
+                <div class="board-clue ${clue.answered ? 'answered' : ''}"
+                     data-cat="${ci}" data-clue="${cli}">
+                  ${clue.answered ? '' : '$' + clue.value}
+                </div>
+              `).join('')}
+            </div>
+          `).join('')}
+        </div>
+        <aside class="board-host" aria-label="Napoleon, your host">
+          <img src="./assets/napoleon-lowpoly-full.webp" alt="Low-poly Napoleon standing at the game board">
+        </aside>
       </div>
       <div class="board-footer">
         <div class="host-dock">
-          <img class="host-medallion" src="./assets/napoleon-bust.webp" alt="Napoleon, your host">
+          <div class="host-monogram" aria-hidden="true">N</div>
           <div class="host-plaque" aria-live="polite">${players.length > 1
             ? `<strong style="color: ${PLAYER_COLORS[activePlayer]}">${escapeHtml(players[activePlayer].name)}</strong>, choose your battlefield.`
             : pick(BOARD_LINES)}</div>
         </div>
         <div class="board-footer-info">
-          ${cluesAnswered === 0 ? '<button class="link-btn reroll-btn" id="btn-reroll">Redraw the map</button>' : ''}
+          ${cluesAnswered === 0 ? '<button class="reroll-btn" id="btn-reroll">Redraw the map</button>' : ''}
           <div class="clues-remaining">
             ${totalClues - cluesAnswered} clues left
             ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
           </div>
+        </div>
+        <div class="guest-panel" aria-label="Tonight's historical guests: Cleopatra, Leonardo da Vinci, and Marie Curie">
+          <div class="guest-title">Tonight&rsquo;s guests</div>
+          <img class="guest-strip" src="./assets/historical-guests.webp" alt="Cleopatra, Leonardo da Vinci, and Marie Curie">
+          <div class="guest-names"><span>Cleopatra</span><span>Leonardo da Vinci</span><span>Marie Curie</span></div>
         </div>
       </div>
     </div>
