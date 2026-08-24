@@ -2286,6 +2286,7 @@ input { caret-color: var(--terracotta-deep); }
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  overflow: visible;
 }
 .board-host img {
   display: block;
@@ -2294,6 +2295,8 @@ input { caret-color: var(--terracotta-deep); }
   max-height: 100%;
   object-fit: contain;
   object-position: center bottom;
+  transform: scale(1.55);
+  transform-origin: center bottom;
   filter: drop-shadow(0 16px 18px rgba(37, 49, 40, 0.13));
 }
 
@@ -2363,7 +2366,7 @@ input { caret-color: var(--terracotta-deep); }
 .guest-strip {
   display: block;
   width: min(100%, 330px);
-  height: 64px;
+  height: 78px;
   margin: 0 auto;
   object-fit: contain;
 }
