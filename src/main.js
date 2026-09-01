@@ -7,10 +7,15 @@ import '@fontsource/ibm-plex-mono/400.css';
 
 import { getState, setState, subscribe, resetForNewGame, loadPrefs, savePrefs, loadRecords, recordGame } from './state.js';
 import {
-  startGame, selectClue, submitWager, submitAnswer, buzzIn, noBuzz,
+  startGame, beginChapter, selectClue, submitWager, submitAnswer, buzzIn, noBuzz,
   overrideCorrect, overrideFinalAnswer, returnToBoard, timeExpired,
   skipClue, startDoubleJeopardy, submitFinalWagers, submitFinalAnswers, showResults, rerollBoard,
+  LEGION_CLUES,
 } from './engine.js';
+import {
+  loadCampaign, loadProgress, resetProgress, getChapter, chapterCount, chapterTarget,
+  chapterTimer, tierLabel, empireHoldings, empireLosses, empireMax, statusLabel,
+} from './campaign.js';
 import * as sounds from './sounds.js';
 
 const app = document.getElementById('app');
@@ -79,6 +84,7 @@ function render() {
   switch (state.screen) {
     case 'setup': renderSetup(); break;
     case 'loading': renderLoading(); break;
+    case 'chapter-intro': renderChapterIntro(); break;
     case 'error': renderError(); break;
     case 'board': renderBoard(); break;
     case 'clue': renderClue(); break;
@@ -208,6 +214,7 @@ function renderSetup() {
   const gameMode = prefs.gameMode || 'turns';
   const gameLength = prefs.gameLength || 'full';
   const pack = ['archive', 'easy'].includes(prefs.pack) ? prefs.pack : 'fresh';
+  const playStyle = prefs.playStyle === 'campaign' ? 'campaign' : 'free';
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
   prevLeader = null;
   prevScores = [];
@@ -253,6 +260,18 @@ function renderSetup() {
             `).join('')}
           </div>
           <div id="player-names"></div>
+          <h2 class="mode-title">Play style</h2>
+          <div class="mode-buttons style-buttons">
+            <button class="btn-mode btn-style ${playStyle === 'free' ? 'selected' : ''}" data-style="free">
+              <span class="mode-name">Free Play</span>
+              <span class="mode-desc">A fresh board every night, from the pack you choose</span>
+            </button>
+            <button class="btn-mode btn-style ${playStyle === 'campaign' ? 'selected' : ''}" data-style="campaign">
+              <span class="mode-name">The Campaign</span>
+              <span class="mode-desc">Napoleon's life in 15 chapters. Win a chapter and the Empire grows</span>
+            </button>
+          </div>
+          <div id="chapter-card" class="chapter-card" ${playStyle === 'campaign' ? '' : 'hidden'}></div>
           <h2 class="mode-title">Game length</h2>
           <div class="player-count-buttons length-buttons">
             <button class="btn-player-count btn-length ${gameLength === 'quick' ? 'selected' : ''}" data-length="quick">
@@ -266,7 +285,7 @@ function renderSetup() {
           <div class="mode-buttons pack-buttons">
             <button class="btn-mode btn-pack ${pack === 'fresh' ? 'selected' : ''}" data-pack="fresh">
               <span class="mode-name">Fresh Pack</span>
-              <span class="mode-desc">4,100+ original clues written for this game</span>
+              <span class="mode-desc">4,900+ original clues written for this game</span>
             </button>
             <button class="btn-mode btn-pack ${pack === 'easy' ? 'selected' : ''}" data-pack="easy">
               <span class="mode-name">Easy Breezy</span>
@@ -290,7 +309,7 @@ function renderSetup() {
               </button>
             </div>
           </div>
-          <button class="btn-start" id="btn-start-game">Begin the Campaign</button>
+          <button class="btn-start" id="btn-start-game">${playStyle === 'campaign' ? 'March on' : 'Open the Board'}</button>
         </div>
         <div class="setup-footer">
           <label class="sound-toggle">
@@ -323,8 +342,25 @@ function renderSetup() {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.btn-length').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
+      renderChapterCard(); // the chapter's target depends on game length
     });
   });
+
+  // Play style buttons
+  document.querySelectorAll('.btn-style').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.btn-style').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      const style = btn.dataset.style;
+      savePrefs({ playStyle: style });
+      const card = document.getElementById('chapter-card');
+      if (card) card.hidden = style !== 'campaign';
+      const start = document.getElementById('btn-start-game');
+      if (start && style !== 'campaign') start.textContent = 'Open the Board';
+      renderChapterCard();
+    });
+  });
+  renderChapterCard();
 
   // Mode buttons
   document.querySelectorAll('.btn-mode:not(.btn-pack)').forEach(btn => {
@@ -362,10 +398,158 @@ function renderSetup() {
     const mode = document.querySelector('.btn-mode.selected:not(.btn-pack)')?.dataset.mode || 'turns';
     const length = document.querySelector('.btn-length.selected')?.dataset.length || 'full';
     const packSel = document.querySelector('.btn-pack.selected')?.dataset.pack || 'fresh';
-    savePrefs({ names, avatars, playerCount: names.length, gameMode: mode, gameLength: length, pack: packSel, sound: sounds.isEnabled() });
+    const style = document.querySelector('.btn-style.selected')?.dataset.style || 'free';
+    savePrefs({ names, avatars, playerCount: names.length, gameMode: mode, gameLength: length, pack: packSel, playStyle: style, sound: sounds.isEnabled() });
     sounds.playSelect();
-    startGame(names, mode, avatars, length);
+    if (style === 'campaign') {
+      const number = selectedChapterNumber();
+      loadCampaign().then(() => {
+        startGame(names, mode, avatars, length, { chapter: getChapter(number), basePack: packSel });
+      }).catch(() => setState({ screen: 'error', errorContext: 'campaign' }));
+    } else {
+      startGame(names, mode, avatars, length);
+    }
   });
+}
+
+/** The chapter the table picked on the setup card (defaults to the current one). */
+function selectedChapterNumber() {
+  const progress = loadProgress();
+  const card = document.getElementById('chapter-card');
+  const picked = Number(document.getElementById('chapter-select')?.value || card?.dataset.selected || 0);
+  return picked >= 1 && picked <= progress.current ? picked : progress.current;
+}
+
+/** The setup screen's chapter card — where the Campaign stands and what's at stake. */
+async function renderChapterCard() {
+  const card = document.getElementById('chapter-card');
+  if (!card || card.hidden) return;
+  if (!card.innerHTML) card.innerHTML = '<div class="chapter-loading">Unrolling the map&hellip;</div>';
+  try {
+    await loadCampaign();
+  } catch {
+    card.innerHTML = '<div class="chapter-loading">Couldn&rsquo;t load the Campaign. Check your connection.</div>';
+    return;
+  }
+  if (!document.getElementById('chapter-card')) return; // the screen moved on while loading
+
+  const progress = loadProgress();
+  const total = chapterCount();
+  const number = selectedChapterNumber();
+  const chapter = getChapter(number);
+  const length = document.querySelector('.btn-length.selected')?.dataset.length || 'full';
+  const target = chapterTarget(chapter, length, progress);
+  const won = progress.completed.length;
+  const unlocked = Array.from({ length: progress.current }, (_, i) => i + 1);
+  const options = unlocked.map(n => {
+    const c = getChapter(n);
+    const done = progress.completed.some(x => x.number === n);
+    return `<option value="${n}" ${n === number ? 'selected' : ''}>Chapter ${n} · ${escapeHtml(c.title)}${done ? ' ✓' : ''}</option>`;
+  }).join('');
+  const attempts = progress.attempts[number] || 0;
+  const ledgerChapter = getChapter(Math.max(1, ...progress.completed.map(c => c.number)));
+
+  card.dataset.selected = String(number);
+  card.innerHTML = `
+    <div class="chapter-kicker">Chapter ${chapter.number} of ${total} &middot; ${escapeHtml(chapter.years)}</div>
+    <div class="chapter-title">${escapeHtml(chapter.title)}</div>
+    <div class="chapter-stage">${escapeHtml(chapter.stage)}</div>
+    <div class="chapter-facts">
+      <span>${tierLabel(chapter.tier)} &middot; tier ${chapter.tier} of 5</span>
+      <span>Target ${money(target)}</span>
+      <span>${chapterTimer(chapter)}s per clue</span>
+      ${attempts ? `<span>${attempts} attempt${attempts > 1 ? 's' : ''} so far</span>` : ''}
+    </div>
+    <div class="chapter-empire">${escapeHtml(chapter.empire.headline)} &middot; ${empireHoldings(chapter).length} holdings on the ledger</div>
+    ${unlocked.length > 1 ? `<label class="chapter-pick">Play chapter <select id="chapter-select">${options}</select></label>` : ''}
+    <div class="chapter-links">
+      <button class="link-btn" id="btn-empire">The Empire so far</button>
+      ${won ? `<span class="chapter-progress">${Math.min(won, total)} of ${total} chapters won</span>` : ''}
+      ${won || Object.keys(progress.attempts).length ? '<button class="link-btn" id="btn-campaign-reset">Start over</button>' : ''}
+    </div>
+  `;
+  const start = document.getElementById('btn-start-game');
+  if (start) start.textContent = `March on Chapter ${chapter.number}`;
+
+  document.getElementById('chapter-select')?.addEventListener('change', (e) => {
+    card.dataset.selected = e.target.value;
+    renderChapterCard();
+  });
+  document.getElementById('btn-empire').addEventListener('click', () => showEmpire(ledgerChapter));
+  document.getElementById('btn-campaign-reset')?.addEventListener('click', confirmCampaignReset);
+}
+
+function confirmCampaignReset() {
+  if (document.querySelector('.modal-overlay')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = `
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Start the Campaign over">
+      <div class="modal-title">Start the Campaign over?</div>
+      <div class="modal-body">Every chapter is locked again and the Empire shrinks back to the Kingdom of France. Your Hall of Fame is untouched.</div>
+      <div class="modal-actions">
+        <button class="btn-quiet modal-cancel">Keep my progress</button>
+        <button class="btn-danger modal-confirm">Start over</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  const close = () => overlay.remove();
+  overlay.querySelector('.modal-cancel').addEventListener('click', close);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  overlay.querySelector('.modal-confirm').addEventListener('click', () => {
+    resetProgress();
+    close();
+    const card = document.getElementById('chapter-card');
+    if (card) { delete card.dataset.selected; renderChapterCard(); }
+  });
+  overlay.querySelector('.modal-cancel').focus();
+}
+
+const STATUS_ORDER = ['core', 'annexed', 'satellite', 'allied', 'occupied', 'lost', 'exile'];
+
+/** The Empire ledger for a chapter: every holding, its status, and why. */
+function showEmpire(chapter) {
+  if (!chapter || document.querySelector('.modal-overlay')) return;
+  const emp = chapter.empire;
+  const holdings = [...emp.holdings].sort((a, b) => STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status));
+  const size = empireHoldings(chapter).length;
+  const max = empireMax();
+  const meta = [
+    `${size} holding${size === 1 ? '' : 's'}`,
+    `zenith ${max}`,
+    emp.departements ? `${emp.departements} départements` : '',
+    emp.peopleMillions ? `about ${emp.peopleMillions} million people` : '',
+  ].filter(Boolean).join(' · ');
+
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = `
+    <div class="modal empire" role="dialog" aria-modal="true" aria-label="The Empire">
+      <div class="modal-title">The Empire &middot; Chapter ${chapter.number} &middot; ${escapeHtml(chapter.years)}</div>
+      <div class="empire-headline">${escapeHtml(emp.headline)}</div>
+      <div class="empire-note">${escapeHtml(emp.note || '')}</div>
+      <div class="empire-bar" role="img" aria-label="Empire size ${size} of ${max}"><div class="empire-bar-fill" style="--fill:${size / max}"></div></div>
+      <div class="empire-meta">${escapeHtml(meta)}</div>
+      <ul class="empire-list">
+        ${holdings.map(h => `
+          <li class="status-${h.status}">
+            <span class="eh-name">${escapeHtml(h.name)}</span>
+            <span class="eh-status">${escapeHtml(statusLabel(h.status))}${h.since ? ` &middot; ${escapeHtml(h.since)}` : ''}</span>
+            ${h.note ? `<span class="eh-note">${escapeHtml(h.note)}</span>` : ''}
+          </li>
+        `).join('')}
+      </ul>
+      <div class="modal-actions">
+        <button class="btn-cta modal-cancel">Close</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  const close = () => overlay.remove();
+  overlay.querySelector('.modal-cancel').addEventListener('click', close);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  overlay.querySelector('.modal-cancel').focus();
 }
 
 function updateModeVisibility(count) {
@@ -404,19 +588,51 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
 // ——— Loading Screen ———
 
 function renderLoading() {
+  const { campaign } = getState();
+  const ch = campaign && campaign.chapter;
   app.innerHTML = `
     <div class="loading-screen">
-      <div class="logo">RING IN</div>
+      <div class="logo">Clue d&rsquo;&Eacute;tat</div>
+      ${ch ? `<div class="chapter-kicker">Chapter ${ch.number} &middot; ${escapeHtml(ch.title)}</div>` : ''}
       <div class="loading-spinner"></div>
-      <div class="loading-text">Loading clues...</div>
+      <div class="loading-text">${ch ? 'Drawing up the order of battle&hellip;' : 'Loading clues...'}</div>
     </div>
   `;
+}
+
+/** The chapter's story, read before the board is drawn. */
+function renderChapterIntro() {
+  const { campaign, gameLength } = getState();
+  const ch = campaign && campaign.chapter;
+  if (!ch) { beginChapter(); return; }
+  const target = chapterTarget(ch, gameLength);
+  app.innerHTML = `
+    <div class="chapter-intro-screen">
+      <div class="chapter-kicker">Chapter ${ch.number} of ${chapterCount()} &middot; ${escapeHtml(ch.years)}</div>
+      <h1 class="chapter-title">${escapeHtml(ch.title)}</h1>
+      <div class="chapter-stage">${escapeHtml(ch.stage)} &middot; ${escapeHtml(ch.place)}</div>
+      <p class="chapter-blurb">${escapeHtml(ch.blurb)}</p>
+      <div class="host-line">${escapeHtml(ch.quote.text)}<span class="host-attrib">${escapeHtml(ch.quote.by)}</span></div>
+      <div class="chapter-intro-facts">
+        <span>Target ${money(target)}</span>
+        <span>${chapterTimer(ch)}s per clue</span>
+        <span>${tierLabel(ch.tier)}</span>
+        <span>${LEGION_CLUES} chapter clues = Légion d&rsquo;honneur</span>
+      </div>
+      <button class="btn-continue" id="btn-begin-chapter">To the board</button>
+      <button class="link-btn" id="btn-intro-empire">The Empire at this point</button>
+    </div>
+  `;
+  const go = document.getElementById('btn-begin-chapter');
+  go.focus();
+  go.addEventListener('click', () => { boardRevealDone = false; beginChapter(); });
+  document.getElementById('btn-intro-empire').addEventListener('click', () => showEmpire(ch));
 }
 
 function renderError() {
   app.innerHTML = `
     <div class="loading-screen">
-      <div class="logo">RING IN</div>
+      <div class="logo">Clue d&rsquo;&Eacute;tat</div>
       <div class="error-box">
         <div class="error-title">Couldn't load the clues</div>
         <div class="error-body">Check your connection and try again.</div>
@@ -433,8 +649,11 @@ function renderError() {
 // ——— Game Board ———
 
 function renderBoard() {
-  const { categories, players, activePlayer, round, cluesAnswered, totalClues, gameMode } = getState();
-  const roundName = round === 1 ? 'Campaign I' : 'Campaign II · Doubled';
+  const { categories, players, activePlayer, round, cluesAnswered, totalClues, gameMode, campaign, gameLength } = getState();
+  const chapter = campaign && campaign.chapter;
+  const roundName = chapter
+    ? `Chapter ${chapter.number} · ${chapter.title} · ${round === 1 ? 'Round I' : 'Round II · Doubled'}`
+    : round === 1 ? 'Campaign I' : 'Campaign II · Doubled';
   const progress = Math.round((cluesAnswered / totalClues) * 100);
 
   app.innerHTML = `
@@ -465,8 +684,8 @@ function renderBoard() {
       <div class="board-stage">
         <div class="game-board" id="game-board">
           ${categories.map((cat, ci) => `
-            <div class="board-category" data-cat="${ci}">
-              <div class="category-header">${escapeHtml(cat.name)}</div>
+            <div class="board-category ${cat.themed ? 'themed' : ''}" data-cat="${ci}">
+              <div class="category-header" ${cat.themed ? 'title="This chapter\'s category — three right answers earn the Légion d\'honneur"' : ''}>${escapeHtml(cat.name)}</div>
               ${cat.clues.map((clue, cli) => `
                 <div class="board-clue ${clue.answered ? 'answered' : ''}"
                      data-cat="${ci}" data-clue="${cli}">
@@ -490,7 +709,7 @@ function renderBoard() {
         <div class="board-footer-info">
           ${cluesAnswered === 0 ? '<button class="reroll-btn" id="btn-reroll">Redraw the map</button>' : ''}
           <div class="clues-remaining">
-            ${totalClues - cluesAnswered} clues left
+            ${totalClues - cluesAnswered} clues left${chapter ? ` &nbsp;&middot;&nbsp; target ${money(chapterTarget(chapter, gameLength))}` : ''}
             ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
           </div>
         </div>
@@ -573,6 +792,7 @@ function showHowTo() {
         <li>The table is the judge: hit <strong>"The Emperor accepts it"</strong> if a close answer got marked wrong.</li>
         <li><strong>Playing solo?</strong> Chase a Rank — S is Grand Champion — and beat your personal best.</li>
         <li><strong>Question packs:</strong> Fresh Pack is written just for this game, Easy Breezy is gentler for casual and older players, and the Deep Archive holds 460k+ tough classics. The game remembers what you've played — no repeat categories until you've seen a whole pack.</li>
+        <li><strong>The Campaign:</strong> Napoleon's life in 15 chapters, from cadet to Saint Helena. Each chapter is one game with a category about that year and one about Napoleon himself; the rest of the board climbs in difficulty as the chapters do. Reach the chapter's score target and the Empire on your ledger grows — exactly as history did, peaking in 1811. Three right answers in the chapter category earn the <strong>Légion d'honneur</strong> bonus.</li>
       </ul>
       <div class="modal-actions">
         <button class="btn-cta modal-cancel">Got it</button>
@@ -624,7 +844,7 @@ window.addEventListener('keydown', (e) => {
   const open = document.querySelector('.modal-overlay');
   if (open) { open.remove(); return; }
   const screen = getState().screen;
-  if (['board', 'clue', 'daily-double', 'round-transition',
+  if (['chapter-intro', 'board', 'clue', 'daily-double', 'round-transition',
        'final-category', 'final-wager', 'final-clue', 'final-answer'].includes(screen)) {
     confirmQuit();
   }
@@ -671,7 +891,7 @@ function attachBoardKeys(openClue) {
 }
 
 /** TV-chyron style announcement banner. */
-function showToast(html, color = 'var(--accent-1)') {
+function showToast(html, color = 'var(--brass)') {
   const toast = document.createElement('div');
   toast.className = 'toast';
   toast.style.setProperty('--pc', color);
@@ -786,8 +1006,10 @@ function flashScreen(kind) {
 
 /** Campaign Momentum callout when a streak pays extra. */
 function bonusHtml(result) {
-  if (!result.bonus) return '';
-  return `<div class="streak-callout">Campaign Momentum &middot; ${result.streak} in a row &middot; +$${formatMoney(result.bonus)}</div>`;
+  let html = '';
+  if (result.bonus) html += `<div class="streak-callout">Campaign Momentum &middot; ${result.streak} in a row &middot; +$${formatMoney(result.bonus)}</div>`;
+  if (result.legion) html += `<div class="streak-callout legion-callout">Légion d&rsquo;honneur &middot; ${LEGION_CLUES} chapter clues &middot; +$${formatMoney(result.legion)}</div>`;
+  return html;
 }
 
 // — Turns mode (and daily doubles in any mode) —
@@ -809,7 +1031,7 @@ function renderTurnsClue() {
     </div>
   `);
 
-  startTimer(30, handleTimeExpired);
+  startTimer(getState().clueSeconds || 30, handleTimeExpired);
 
   const input = document.getElementById('answer-input');
   setTimeout(() => input.focus(), 50);
@@ -1206,7 +1428,7 @@ function renderRoundTransition() {
   app.innerHTML = `
     <div class="transition-screen">
       <div class="transition-scores">
-        <h3>End of Campaign I</h3>
+        <h3>${getState().campaign ? 'End of Round I' : 'End of Campaign I'}</h3>
         ${players.map(p => `
           <div class="transition-player">
             <span>${escapeHtml(p.name)}</span>
@@ -1214,8 +1436,8 @@ function renderRoundTransition() {
           </div>
         `).join('')}
       </div>
-      <div class="transition-title">Campaign II</div>
-      <div class="transition-subtitle">All values are doubled!</div>
+      <div class="transition-title">${getState().campaign ? 'Round II' : 'Campaign II'}</div>
+      <div class="transition-subtitle">All values are doubled!${getState().campaign ? ' Napoleon\'s own chapter joins the board.' : ''}</div>
       ${players.length > 1 ? `<div class="transition-note"><strong>${escapeHtml(players[lowest].name)}</strong> is trailing and gets first pick</div>` : ''}
       <button class="btn-continue" id="btn-continue">March On</button>
     </div>
@@ -1231,12 +1453,18 @@ function renderRoundTransition() {
 
 // ——— Final Jeopardy ———
 
+/** Free play ends at Waterloo; a chapter ends at its own decisive hour. */
+function finalHeader() {
+  const { campaign } = getState();
+  return campaign ? 'The Decisive Hour' : 'Waterloo';
+}
+
 function renderFinalCategory() {
   const { finalClue, players } = getState();
 
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Waterloo</div>
+      <div class="final-header">${finalHeader()}</div>
       <div class="final-scores">
         ${players.map(p => `
           <div class="transition-player">
@@ -1266,7 +1494,7 @@ function passCover(playerIdx, sub, onReady) {
   const p = getState().players[playerIdx];
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Waterloo</div>
+      <div class="final-header">${finalHeader()}</div>
       <div class="pass-card">
         <div class="pass-avatar" style="--pc: ${PLAYER_COLORS[playerIdx]}">${escapeHtml(p.avatar || monogram(p.name))}</div>
         <div class="pass-name">Pass the device to ${escapeHtml(p.name)}</div>
@@ -1301,7 +1529,7 @@ function renderFinalWager() {
     const maxW = Math.max(0, p.score);
     app.innerHTML = `
       <div class="final-screen">
-        <div class="final-header">Waterloo</div>
+        <div class="final-header">${finalHeader()}</div>
         <div class="final-subtitle" style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)} — you have $${formatMoney(p.score)}</div>
         <div class="dd-wager-area" style="max-width:380px;width:100%">
           <label>Your secret wager</label>
@@ -1345,7 +1573,7 @@ function renderFinalClue() {
   // Everyone reads the clue together, think music playing.
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Waterloo</div>
+      <div class="final-header">${finalHeader()}</div>
       <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
       <div class="final-clue-text">${escapeHtml(finalClue.clue)}</div>
       <div class="think-music-note">&#9835; Think music playing…</div>
@@ -1368,7 +1596,7 @@ function renderFinalClue() {
       const p = players[idx];
       app.innerHTML = `
         <div class="final-screen">
-          <div class="final-header">Waterloo</div>
+          <div class="final-header">${finalHeader()}</div>
           <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
           <div class="final-clue-text" style="font-size:1.3rem">${escapeHtml(finalClue.clue)}</div>
           <div class="final-answer-form">
@@ -1395,7 +1623,7 @@ function renderFinalAnswer() {
 
   app.innerHTML = `
     <div class="final-screen">
-      <div class="final-header">Waterloo</div>
+      <div class="final-header">${finalHeader()}</div>
       <div class="final-correct-response">
         <div class="label">Correct response:</div>
         <div class="response">${escapeHtml(finalClue.response)}</div>
@@ -1459,8 +1687,35 @@ function soloRank(p, gameLength) {
   }
 }
 
+function chapterOutcomeHtml() {
+  const { campaign, chapterOutcome } = getState();
+  if (!campaign || !chapterOutcome) return '';
+  const ch = campaign.chapter;
+  const o = chapterOutcome;
+  const losses = empireLosses(ch);
+  let body;
+  if (o.won) {
+    const parts = [];
+    if (o.gained.length) parts.push(`The Empire grows: ${o.gained.map(escapeHtml).join(', ')}.`);
+    if (losses.length) parts.push(`History takes its due: ${losses.map(escapeHtml).join(', ')}.`);
+    if (!parts.length) parts.push('The Empire holds its ground.');
+    body = parts.join(' ');
+  } else {
+    body = `The table needed ${money(o.target)} and reached ${money(o.topScore)}. Regroup and refight this chapter${o.attempts >= 2 ? '' : ' — after two setbacks the target eases'}.`;
+  }
+  return `
+    <div class="chapter-outcome ${o.won ? 'won' : 'lost'}">
+      <div class="chapter-kicker">Chapter ${ch.number} &middot; ${escapeHtml(ch.title)} &middot; ${escapeHtml(ch.years)}</div>
+      <div class="co-title">${o.won ? 'Victory — the Campaign advances' : 'Setback — the chapter holds'}</div>
+      <div class="co-body">${body}</div>
+      ${o.won && o.next ? `<div class="co-next">Next: Chapter ${o.next.number} &middot; ${escapeHtml(o.next.title)} (${escapeHtml(o.next.years)})</div>` : ''}
+      ${o.campaignComplete ? '<div class="co-next">The Campaign is complete — from Ajaccio to Saint Helena. Replay any chapter from the setup screen.</div>' : ''}
+    </div>
+  `;
+}
+
 function renderResults() {
-  const { players, gameLength } = getState();
+  const { players, gameLength, campaign } = getState();
   const rec = loadRecords();
   const prevBest = rec.best ? rec.best.score : null;
   if (!recordedThisGame) { recordGame(players); recordedThisGame = true; }
@@ -1487,6 +1742,7 @@ function renderResults() {
       ${newBest ? '<div class="solo-best-callout">New personal best!</div>' : ''}
       ${solo && rank.next ? `<div class="solo-next-hint">${rank.next}</div>` : ''}
       ${!solo && !isTie ? `<div class="host-line">Not since Austerlitz have I seen such form.<span class="host-attrib">The Emperor</span></div>` : ''}
+      ${chapterOutcomeHtml()}
       ${solo ? `
       <div class="solo-scorecard" style="--pc: ${PLAYER_COLORS[0]}">
         <div class="podium-avatar">${escapeHtml(winner.avatar || monogram(winner.name))}</div>
@@ -1526,7 +1782,8 @@ function renderResults() {
         }).join('')}
       </div>
       <div class="results-actions">
-        <button class="btn-play-again" id="btn-play-again">Play Again</button>
+        <button class="btn-play-again" id="btn-play-again">${campaign && getState().chapterOutcome?.won && !getState().chapterOutcome?.campaignComplete ? 'Next Chapter' : 'Play Again'}</button>
+        ${campaign ? '<button class="btn-quiet" id="btn-results-empire">The Empire</button>' : ''}
         <button class="btn-quiet btn-share" id="btn-share">Share Result</button>
       </div>
     </div>
@@ -1544,6 +1801,7 @@ function renderResults() {
   });
 
   document.getElementById('btn-share').addEventListener('click', () => shareResult(ranked, isTie));
+  document.getElementById('btn-results-empire')?.addEventListener('click', () => showEmpire(campaign.chapter));
 }
 
 /** Copy a shareable summary of the game to the clipboard. */
@@ -1552,8 +1810,10 @@ function shareResult(ranked, isTie) {
   const solo = ranked.length === 1;
   const lines = ranked.map((p, i) => `${medals[i] || '•'} ${p.name} — ${money(p.score)}`);
   const rank = solo ? soloRank(ranked[0], getState().gameLength) : null;
-  const header = solo ? `${ranked[0].name} hit Rank ${rank.letter} (${rank.title}) on Clue d'État!`
-    : isTie ? "It's a tie on Clue d'État!" : `${ranked[0].name} won Clue d'État!`;
+  const { campaign, chapterOutcome } = getState();
+  const chapterNote = campaign ? ` — Chapter ${campaign.chapter.number}, ${campaign.chapter.title}${chapterOutcome?.won ? ', won' : ''}` : '';
+  const header = solo ? `${ranked[0].name} hit Rank ${rank.letter} (${rank.title}) on Clue d'État${chapterNote}!`
+    : isTie ? `It's a tie on Clue d'État${chapterNote}!` : `${ranked[0].name} won Clue d'État${chapterNote}!`;
   const text = `${header}\n${lines.join('\n')}\n\nPlay: https://kellylucas314-cpu.github.io/Jeopardy/`;
   const done = () => showToast('Result copied — go brag!', 'var(--brass)');
   if (navigator.clipboard?.writeText) {

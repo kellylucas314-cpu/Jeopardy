@@ -1,0 +1,2359 @@
+{
+  "version": 1,
+  "title": "The Campaign",
+  "subtitle": "Fifteen chapters of Napoleon's life, from a Corsican cadet to the legend of Saint Helena",
+  "statusLabels": {
+    "core": "France proper",
+    "annexed": "Annexed into France",
+    "satellite": "Satellite state",
+    "allied": "Ally or protectorate",
+    "occupied": "Occupied",
+    "lost": "Lost",
+    "exile": "Place of exile"
+  },
+  "chapters": [
+    {
+      "id": "cadet",
+      "number": 1,
+      "years": "1769–1785",
+      "title": "The Cadet from Corsica",
+      "stage": "Second lieutenant of artillery, age 16",
+      "place": "Ajaccio · Brienne · Paris · Valence",
+      "tier": 1,
+      "blurb": "Napoleone di Buonaparte was born in Ajaccio on 15 August 1769, a year after France bought Corsica from Genoa. A royal scholarship sent the fierce little Corsican to military school at Brienne and then to the École Militaire in Paris, where he finished the two-year course in one. In September 1785, aged sixteen, he was commissioned a second lieutenant of artillery.",
+      "quote": {
+        "text": "I was born when my country was perishing.",
+        "by": "Napoleon, letter to Pasquale Paoli, 1789"
+      },
+      "empire": {
+        "headline": "The Kingdom of France",
+        "note": "No empire yet: a sixteen-year-old lieutenant in a monarchy that will be gone in four years.",
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "The kingdom of Louis XVI: about 28 million people, the largest population in western Europe."
+          },
+          {
+            "name": "Corsica",
+            "status": "annexed",
+            "since": "1768",
+            "note": "Bought from the Republic of Genoa the year before Napoleon was born."
+          }
+        ]
+      },
+      "era": {
+        "name": "MEANWHILE, 1785",
+        "clues": [
+          {
+            "clue": "The 1783 Treaty of Paris ended this war, with Britain recognizing 13 former colonies as independent",
+            "response": "the American Revolution (Revolutionary War)",
+            "value": 200
+          },
+          {
+            "clue": "In 1783 the Montgolfier brothers sent the first human passengers aloft in one of these",
+            "response": "a hot-air balloon",
+            "value": 400
+          },
+          {
+            "clue": "William Herschel discovered this seventh planet in 1781, the first found with a telescope",
+            "response": "Uranus",
+            "value": 600
+          },
+          {
+            "clue": "'The Marriage of Figaro', an opera drawn from a banned French play, premiered in Vienna in 1786 with music by this man",
+            "response": "Mozart",
+            "value": 800
+          },
+          {
+            "clue": "Succeeding Franklin in 1785, this future president was U.S. minister to France until the Revolution's first summer",
+            "response": "Thomas Jefferson",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "THE CADET FROM CORSICA",
+        "clues": [
+          {
+            "clue": "Napoleon was born in 1769 in Ajaccio, on this Mediterranean island that had been French for barely a year",
+            "response": "Corsica",
+            "value": 200
+          },
+          {
+            "clue": "At the military school of Brienne the boy excelled at this subject, the artilleryman's essential science",
+            "response": "mathematics (math)",
+            "value": 400
+          },
+          {
+            "clue": "In 1785 he was commissioned a second lieutenant in this branch of the army, the one that serves the cannons",
+            "response": "the artillery",
+            "value": 600
+          },
+          {
+            "clue": "Napoleon's parents, Carlo and Letizia, bore this Italian form of the family name; he later dropped a letter from it",
+            "response": "Buonaparte",
+            "value": 800
+          },
+          {
+            "clue": "Posted to the La Fère regiment at Valence, the 16-year-old lieutenant lived beside this great river of southern France",
+            "response": "the Rhône",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "THE LIEUTENANT'S LIBRARY",
+        "clue": "As a bookish young officer Napoleon devoured the works of this Geneva-born philosopher of 'The Social Contract'",
+        "response": "Jean-Jacques Rousseau"
+      }
+    },
+    {
+      "id": "toulon",
+      "number": 2,
+      "years": "1793",
+      "title": "The Siege of Toulon",
+      "stage": "Captain, then brigadier general at 24",
+      "place": "Toulon, on the Mediterranean coast",
+      "tier": 1,
+      "blurb": "The Revolution turned to Terror in 1793: the king was executed in January, and royalist Toulon surrendered its port and fleet to the British and Spanish. Captain Bonaparte, commanding the besiegers' artillery, saw that the heights over the harbor were the key. When they fell in December the enemy fleet sailed away, and the 24-year-old was promoted to brigadier general.",
+      "quote": {
+        "text": "The moral is to the physical as three to one.",
+        "by": "Napoleon, military maxim"
+      },
+      "empire": {
+        "headline": "The Republic, besieged",
+        "note": "The Revolution's first annexations, Avignon, Savoy, and Nice, while Corsica itself slips away.",
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "The First Republic, at war with most of Europe since early 1793."
+          },
+          {
+            "name": "Avignon & the Comtat Venaissin",
+            "status": "annexed",
+            "since": "1791",
+            "note": "Papal enclaves that voted to join France."
+          },
+          {
+            "name": "Savoy",
+            "status": "annexed",
+            "since": "1792",
+            "note": "Taken from the King of Sardinia; became the département of Mont-Blanc."
+          },
+          {
+            "name": "Nice",
+            "status": "annexed",
+            "since": "1793",
+            "note": "The county of Nice, also from Sardinia; the Alpes-Maritimes."
+          },
+          {
+            "name": "Corsica",
+            "status": "lost",
+            "since": "1793",
+            "note": "In revolt under Paoli; a British-backed Anglo-Corsican Kingdom followed in 1794–96."
+          }
+        ]
+      },
+      "era": {
+        "name": "PARIS UNDER THE TERROR",
+        "clues": [
+          {
+            "clue": "On January 21, 1793 this king of France went to the guillotine in the Place de la Révolution",
+            "response": "Louis XVI (Louis the Sixteenth)",
+            "value": 200
+          },
+          {
+            "clue": "In July 1793 Charlotte Corday stabbed this radical journalist to death in his bathtub",
+            "response": "Jean-Paul Marat",
+            "value": 400
+          },
+          {
+            "clue": "The republican calendar of 1793 renamed the months; the 'fog' month would later host Napoleon's coup",
+            "response": "Brumaire",
+            "value": 600
+          },
+          {
+            "clue": "The levée en masse of August 1793 was history's first modern version of this compulsory call-up of citizens",
+            "response": "conscription (the draft)",
+            "value": 800
+          },
+          {
+            "clue": "Defined in 1793 as one ten-millionth of the distance from the North Pole to the equator, it became France's base unit of length",
+            "response": "the meter (metre)",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "TOULON, 1793",
+        "clues": [
+          {
+            "clue": "Toulon's royalists handed the port and its fleet to Spain and this island nation, France's great naval rival",
+            "response": "Britain (England, the UK)",
+            "value": 200
+          },
+          {
+            "clue": "Napoleon arrived at the siege holding this artillery rank, the same word used for a ship's commander",
+            "response": "captain",
+            "value": 400
+          },
+          {
+            "clue": "His plan ignored the walls and targeted a hill the British called Little Gibraltar; it fell in this month, just before Christmas",
+            "response": "December",
+            "value": 600
+          },
+          {
+            "clue": "For Toulon the 24-year-old was jumped to this lowest general's rank, named for a formation of a few regiments",
+            "response": "brigadier general",
+            "value": 800
+          },
+          {
+            "clue": "This younger brother of the Terror's most feared man was at Toulon and wrote home praising Bonaparte's 'transcendent merit'",
+            "response": "Augustin Robespierre",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "A FAMILY NAME",
+        "clue": "Louis XVI was tried as a plain citizen under this surname, taken from his 10th-century ancestor Hugh",
+        "response": "Capet"
+      }
+    },
+    {
+      "id": "vendemiaire",
+      "number": 3,
+      "years": "1795–1796",
+      "title": "A Whiff of Grapeshot",
+      "stage": "General of the Army of the Interior, age 26",
+      "place": "Paris",
+      "tier": 1,
+      "blurb": "On 13 Vendémiaire (5 October 1795) royalist crowds rose against the Convention in Paris. Bonaparte, handed command at the last minute, had cannon brought up and cleared the streets with what Carlyle later called 'a whiff of grapeshot'. The grateful Directory gave him the Army of the Interior, then the Army of Italy, and in March 1796 he married Joséphine de Beauharnais.",
+      "quote": {
+        "text": "Death is nothing, but to live defeated and inglorious is to die daily.",
+        "by": "Napoleon, attributed"
+      },
+      "empire": {
+        "headline": "The 'natural frontiers'",
+        "note": "Belgium and the Rhineland bring the Republic to the Rhine, the frontier revolutionary France had dreamed of.",
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "The Directory takes office in November 1795."
+          },
+          {
+            "name": "Avignon, Savoy & Nice",
+            "status": "annexed",
+            "since": "1791–93",
+            "note": "The Revolution's first additions."
+          },
+          {
+            "name": "The Austrian Netherlands & Liège",
+            "status": "annexed",
+            "since": "1795",
+            "note": "Belgium, made into nine new départements, from Jemmapes to Forêts."
+          },
+          {
+            "name": "Left bank of the Rhine",
+            "status": "occupied",
+            "since": "1794",
+            "note": "Held since 1794; the annexation was made formal at Lunéville in 1801."
+          },
+          {
+            "name": "Batavian Republic",
+            "status": "satellite",
+            "since": "1795",
+            "note": "The Netherlands, remade as a sister republic after French cavalry crossed the frozen rivers."
+          },
+          {
+            "name": "Corsica",
+            "status": "lost",
+            "since": "1794",
+            "note": "Under British occupation until 1796."
+          }
+        ]
+      },
+      "era": {
+        "name": "AROUND THE GLOBE, 1796",
+        "clues": [
+          {
+            "clue": "In 1796 this first U.S. president published a farewell address warning against permanent foreign alliances",
+            "response": "George Washington",
+            "value": 200
+          },
+          {
+            "clue": "Edward Jenner inoculated a boy with cowpox in 1796, pioneering this medical technique",
+            "response": "vaccination (vaccines, the vaccine)",
+            "value": 400
+          },
+          {
+            "clue": "Catherine the Great died in 1796 after 34 years ruling this empire",
+            "response": "Russia",
+            "value": 600
+          },
+          {
+            "clue": "Scottish explorer Mungo Park reached this West African river in 1796 and settled which way it flowed",
+            "response": "the Niger",
+            "value": 800
+          },
+          {
+            "clue": "Haydn wrote 'God Save Emperor Francis' in 1797; his melody later became the national anthem of this country, though not Austria",
+            "response": "Germany",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "A WHIFF OF GRAPESHOT",
+        "clues": [
+          {
+            "clue": "On 13 Vendémiaire, October 5, 1795, Bonaparte's cannon scattered a royalist uprising in this city",
+            "response": "Paris",
+            "value": 200
+          },
+          {
+            "clue": "He was defending this legislature, whose name means 'assembly'; it had just written a new constitution",
+            "response": "the National Convention",
+            "value": 400
+          },
+          {
+            "clue": "His reward came in March 1796: command of this army, named for the country it would invade across the Alps",
+            "response": "the Army of Italy",
+            "value": 600
+          },
+          {
+            "clue": "Two days before leaving for that command, Napoleon married this widow of a guillotined viscount",
+            "response": "Joséphine de Beauharnais",
+            "value": 800
+          },
+          {
+            "clue": "This Directory member, the day's political winner, had handed Bonaparte the command; he had also been Bonaparte's bride's lover",
+            "response": "Paul Barras",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "THE PROCLAMATION",
+        "clue": "'Soldiers, you are naked, ill fed…' Napoleon told the Army of Italy in 1796, promising them 'honor, glory, and' this",
+        "response": "riches (wealth)"
+      }
+    },
+    {
+      "id": "italy",
+      "number": 4,
+      "years": "1796–1797",
+      "title": "The Italian Campaign",
+      "stage": "Commander of the Army of Italy, age 26–28",
+      "place": "Lodi · Arcole · Rivoli · Campo Formio",
+      "tier": 2,
+      "blurb": "In 1796 a ragged Army of Italy under its 26-year-old general beat the Piedmontese and Austrians in a string of battles: Montenotte, Lodi, Arcole, Rivoli. Mantua fell in early 1797 and Austria signed the Treaty of Campo Formio, ceding Belgium and conceding the left bank of the Rhine while France set up sister republics in northern Italy. Bonaparte returned to Paris a national hero.",
+      "quote": {
+        "text": "Soldiers, you are naked, ill fed… I will lead you into the most fertile plains in the world.",
+        "by": "Napoleon, proclamation to the Army of Italy, March 1796"
+      },
+      "empire": {
+        "headline": "Sister republics in Italy",
+        "note": "Campo Formio: Austria out of Belgium and Lombardy, France in the Ionian Sea.",
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "Bonaparte returns from Italy a hero; the Directory is nervous."
+          },
+          {
+            "name": "Corsica",
+            "status": "annexed",
+            "since": "1768",
+            "note": "Reoccupied in 1796 after the British withdrew."
+          },
+          {
+            "name": "Avignon, Savoy & Nice",
+            "status": "annexed",
+            "since": "1791–93",
+            "note": "The Revolution's first additions."
+          },
+          {
+            "name": "Belgium",
+            "status": "annexed",
+            "since": "1795",
+            "note": "Austria formally gave it up at Campo Formio."
+          },
+          {
+            "name": "Left bank of the Rhine",
+            "status": "occupied",
+            "since": "1794",
+            "note": "Conceded in Campo Formio's secret clauses; formal in 1801."
+          },
+          {
+            "name": "Batavian Republic",
+            "status": "satellite",
+            "since": "1795",
+            "note": "The Dutch sister republic."
+          },
+          {
+            "name": "Cisalpine Republic",
+            "status": "satellite",
+            "since": "1797",
+            "note": "Bonaparte's own creation, centered on Milan, with a French-style constitution."
+          },
+          {
+            "name": "Ligurian Republic",
+            "status": "satellite",
+            "since": "1797",
+            "note": "The old Republic of Genoa, remodeled on French lines."
+          },
+          {
+            "name": "Ionian Islands",
+            "status": "annexed",
+            "since": "1797",
+            "note": "Corfu and its neighbors, taken from Venice at Campo Formio."
+          }
+        ]
+      },
+      "era": {
+        "name": "THE WIDER WORLD, 1797",
+        "clues": [
+          {
+            "clue": "In March 1797 this Massachusetts man became the second U.S. president",
+            "response": "John Adams",
+            "value": 200
+          },
+          {
+            "clue": "Coleridge's 1797 poem describes the 'stately pleasure-dome' of this Mongol ruler in Xanadu",
+            "response": "Kubla Khan",
+            "value": 400
+          },
+          {
+            "clue": "In 1797 the Bank of England stopped paying out this metal for its notes, a 'restriction' that lasted 24 years",
+            "response": "gold",
+            "value": 600
+          },
+          {
+            "clue": "The frigate USS Constitution, 'Old Ironsides', was launched in October 1797 in this New England city",
+            "response": "Boston",
+            "value": 800
+          },
+          {
+            "clue": "In October 1797 André-Jacques Garnerin jumped from a balloon over Paris and floated down with the first of these",
+            "response": "a parachute",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "THE ITALIAN CAMPAIGN",
+        "clues": [
+          {
+            "clue": "In 1796 the Army of Italy crossed these mountains to strike Austria's forces on the plain of the Po",
+            "response": "the Alps",
+            "value": 200
+          },
+          {
+            "clue": "After Lodi, adoring soldiers gave Napoleon this nickname, 'the little' one of a lowly rank",
+            "response": "the Little Corporal (le petit caporal)",
+            "value": 400
+          },
+          {
+            "clue": "Legend says he grabbed a flag and led a charge onto the bridge at this November 1796 battle in the marshes",
+            "response": "Arcole",
+            "value": 600
+          },
+          {
+            "clue": "The 1797 Treaty of Campo Formio handed this old maritime republic to Austria, ending 1,100 years of independence",
+            "response": "Venice",
+            "value": 800
+          },
+          {
+            "clue": "The same treaty recognized the Cisalpine Republic, with its capital in this city whose cathedral later saw Napoleon crowned King of Italy",
+            "response": "Milan",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "SPOILS OF WAR",
+        "clue": "In 1797 Napoleon shipped four ancient bronze animals from St Mark's Basilica to Paris; Venice got these back in 1815",
+        "response": "the horses of St Mark (horses)"
+      }
+    },
+    {
+      "id": "egypt",
+      "number": 5,
+      "years": "1798–1799",
+      "title": "The Egyptian Expedition",
+      "stage": "Commander of the Army of the Orient, age 28–30",
+      "place": "Malta · Alexandria · the Pyramids · Acre",
+      "tier": 2,
+      "blurb": "In May 1798 Bonaparte sailed for Egypt with some 35,000 troops and 160 scholars, seizing Malta on the way. He crushed the Mamluks at the Battle of the Pyramids, but Nelson destroyed his fleet at the Nile and a march into Syria broke on the walls of Acre. Leaving his army behind, he slipped back to France in October 1799, while the savants' work gave the world the Rosetta Stone and modern Egyptology.",
+      "quote": {
+        "text": "Soldiers, from the summit of these pyramids, forty centuries look down upon you.",
+        "by": "Napoleon, before the Battle of the Pyramids, 21 July 1798"
+      },
+      "empire": {
+        "headline": "From the Rhine to the Nile",
+        "note": "The Republic's reach at its most ambitious, and most overstretched.",
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "The Directory, unpopular and broke, is glad to have its hero far away."
+          },
+          {
+            "name": "Corsica",
+            "status": "annexed",
+            "since": "1768",
+            "note": "French since 1768; reoccupied in 1796 after the British withdrew."
+          },
+          {
+            "name": "Savoy, Nice & Avignon",
+            "status": "annexed",
+            "since": "1791–93",
+            "note": "The Revolution's first additions."
+          },
+          {
+            "name": "Belgium",
+            "status": "annexed",
+            "since": "1795",
+            "note": "Nine départements, from Jemmapes to Forêts."
+          },
+          {
+            "name": "Left bank of the Rhine",
+            "status": "occupied",
+            "since": "1794",
+            "note": "Awaiting formal annexation."
+          },
+          {
+            "name": "Ionian Islands",
+            "status": "annexed",
+            "since": "1797",
+            "note": "Corfu, Zante, Cephalonia."
+          },
+          {
+            "name": "Batavian Republic",
+            "status": "satellite",
+            "since": "1795",
+            "note": "The Netherlands, a sister republic."
+          },
+          {
+            "name": "Cisalpine Republic",
+            "status": "satellite",
+            "since": "1797",
+            "note": "Milan and Lombardy."
+          },
+          {
+            "name": "Ligurian Republic",
+            "status": "satellite",
+            "since": "1797",
+            "note": "Genoa."
+          },
+          {
+            "name": "Helvetic Republic",
+            "status": "satellite",
+            "since": "1798",
+            "note": "Switzerland, invaded in 1798 and given a centralized French-style constitution."
+          },
+          {
+            "name": "Roman Republic",
+            "status": "satellite",
+            "since": "1798",
+            "note": "The pope was deposed in February 1798; Pius VI died a French prisoner in 1799."
+          },
+          {
+            "name": "Malta",
+            "status": "occupied",
+            "since": "1798",
+            "note": "Taken from the Knights of St John on the way to Egypt."
+          },
+          {
+            "name": "Egypt",
+            "status": "occupied",
+            "since": "1798",
+            "note": "Won at the Pyramids, cut off at the Nile; the army held on until 1801."
+          }
+        ]
+      },
+      "era": {
+        "name": "THE WORLD BEYOND THE NILE, 1798",
+        "clues": [
+          {
+            "clue": "Wordsworth and Coleridge's 1798 'Lyrical Ballads' launched this literary movement in English poetry",
+            "response": "Romanticism (the Romantic movement)",
+            "value": 200
+          },
+          {
+            "clue": "Thomas Malthus's 1798 essay warned that this would always outgrow the food supply",
+            "response": "population",
+            "value": 400
+          },
+          {
+            "clue": "Alessandro Volta announced this invention in 1800: a stack of zinc and copper discs giving a steady electric current",
+            "response": "the battery (voltaic pile)",
+            "value": 600
+          },
+          {
+            "clue": "Beethoven's Piano Sonata No. 8, published in 1799, carries this French nickname meaning 'full of feeling'",
+            "response": "Pathétique",
+            "value": 800
+          },
+          {
+            "clue": "In 1799 Alexander von Humboldt sailed off for five years exploring this continent's jungles, rivers, and volcanoes",
+            "response": "South America",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "THE EGYPTIAN EXPEDITION",
+        "clues": [
+          {
+            "clue": "In July 1798, with these monuments in view, Napoleon told his troops that 'forty centuries look down upon you'",
+            "response": "the pyramids",
+            "value": 200
+          },
+          {
+            "clue": "Days later Horatio Nelson destroyed the French fleet at Aboukir Bay in the Battle of this river",
+            "response": "the Nile",
+            "value": 400
+          },
+          {
+            "clue": "In July 1799 soldiers rebuilding a fort near the town of Rashid unearthed this three-script slab",
+            "response": "the Rosetta Stone",
+            "value": 600
+          },
+          {
+            "clue": "The expedition fought Egypt's ruling warrior caste, slave-soldiers known by this name",
+            "response": "the Mamluks",
+            "value": 800
+          },
+          {
+            "clue": "Napoleon's 1799 push into Syria stalled at this coastal fortress, held by the Ottomans with British naval support",
+            "response": "Acre",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "LOST IN TRANSLATION",
+        "clue": "The Rosetta Stone carries hieroglyphs, Greek, and this everyday Egyptian script whose name means 'popular'",
+        "response": "Demotic"
+      }
+    },
+    {
+      "id": "brumaire",
+      "number": 6,
+      "years": "1799",
+      "title": "The Coup of 18 Brumaire",
+      "stage": "First Consul, age 30",
+      "place": "Saint-Cloud, outside Paris",
+      "tier": 2,
+      "blurb": "France in late 1799 was bankrupt, riddled with corruption, and losing the war of the Second Coalition. On 18–19 Brumaire (9–10 November) Bonaparte, the abbé Sieyès, and Napoleon's brother Lucien overthrew the Directory at Saint-Cloud. The new Consulate had three consuls, but its First Consul held the real power: at thirty, Napoleon ruled France.",
+      "quote": {
+        "text": "Citizens, the Revolution is established upon the principles which began it: it is ended.",
+        "by": "Napoleon, proclamation of 15 December 1799"
+      },
+      "empire": {
+        "headline": "Italy lost, the Republic in crisis",
+        "note": "Everything won in 1796–97 has been swept away, which is exactly the emergency the coup exploits.",
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "Bankrupt and losing the war of the Second Coalition."
+          },
+          {
+            "name": "Corsica",
+            "status": "annexed",
+            "since": "1768",
+            "note": "French since 1768; reoccupied in 1796 after the British withdrew."
+          },
+          {
+            "name": "Savoy, Nice & Avignon",
+            "status": "annexed",
+            "since": "1791–93",
+            "note": "The Revolution's first additions."
+          },
+          {
+            "name": "Belgium",
+            "status": "annexed",
+            "since": "1795",
+            "note": "Still French."
+          },
+          {
+            "name": "Left bank of the Rhine",
+            "status": "occupied",
+            "since": "1794",
+            "note": "Still held."
+          },
+          {
+            "name": "Batavian Republic",
+            "status": "satellite",
+            "since": "1795",
+            "note": "Survived an Anglo-Russian invasion in the autumn of 1799."
+          },
+          {
+            "name": "Helvetic Republic",
+            "status": "satellite",
+            "since": "1798",
+            "note": "Fought over all summer; Masséna's victory at Zurich in September saved it."
+          },
+          {
+            "name": "Egypt",
+            "status": "occupied",
+            "since": "1798",
+            "note": "The army Bonaparte left behind, under Kléber, holds on."
+          },
+          {
+            "name": "Malta",
+            "status": "occupied",
+            "since": "1798",
+            "note": "Under British blockade; it falls in September 1800."
+          },
+          {
+            "name": "Cisalpine Republic",
+            "status": "lost",
+            "since": "1799",
+            "note": "Overrun by Suvorov's Russians and the Austrians while Bonaparte was in Egypt."
+          },
+          {
+            "name": "Roman Republic",
+            "status": "lost",
+            "since": "1799",
+            "note": "Collapsed in September 1799; the Naples sister republic lasted five months."
+          },
+          {
+            "name": "Ionian Islands",
+            "status": "lost",
+            "since": "1799",
+            "note": "Taken by a Russo-Turkish fleet."
+          }
+        ]
+      },
+      "era": {
+        "name": "1799: A CENTURY CLOSES",
+        "clues": [
+          {
+            "clue": "George Washington died on December 14, 1799 at this Virginia estate",
+            "response": "Mount Vernon",
+            "value": 200
+          },
+          {
+            "clue": "To pay for the war with France, Prime Minister Pitt introduced this tax on personal earnings in Britain in 1799",
+            "response": "income tax",
+            "value": 400
+          },
+          {
+            "clue": "In 1799 Eli Whitney won a U.S. contract for 10,000 muskets, promoting this idea of components that fit any unit",
+            "response": "interchangeable parts",
+            "value": 600
+          },
+          {
+            "clue": "In 1799 this young English chemist inhaled nitrous oxide and reported its giddy 'laughing' effects",
+            "response": "Humphry Davy",
+            "value": 800
+          },
+          {
+            "clue": "In 1799 the world's first great multinational, the Dutch East India Company, was dissolved; its Dutch initials were these",
+            "response": "VOC",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "THE COUP OF 18 BRUMAIRE",
+        "clues": [
+          {
+            "clue": "The coup of November 1799 toppled this five-man executive that had governed France since 1795",
+            "response": "the Directory",
+            "value": 200
+          },
+          {
+            "clue": "Napoleon became the first of three of these officials, a title borrowed from the ancient Roman republic",
+            "response": "consul",
+            "value": 400
+          },
+          {
+            "clue": "The coup's mastermind was this abbé, famous for his 1789 pamphlet 'What Is the Third Estate?'",
+            "response": "Sieyès",
+            "value": 600
+          },
+          {
+            "clue": "The decisive scene played out not in Paris but at this château west of the city, where the councils had been moved",
+            "response": "Saint-Cloud (St-Cloud)",
+            "value": 800
+          },
+          {
+            "clue": "When deputies mobbed Napoleon, this brother, presiding over the Council of Five Hundred, called in the grenadiers",
+            "response": "Lucien Bonaparte",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "ROMAN ECHOES",
+        "clue": "Like 'consul', the title Napoleon took in 1804 came from ancient Rome, where it first honored a victorious general",
+        "response": "emperor (imperator)"
+      }
+    },
+    {
+      "id": "marengo",
+      "number": 7,
+      "years": "1800–1802",
+      "title": "Marengo and the Consulate",
+      "stage": "First Consul for Life, age 30–33",
+      "place": "The Great St Bernard Pass · Marengo · Paris",
+      "tier": 2,
+      "blurb": "In May 1800 the First Consul led an army over the Great St Bernard Pass and beat the Austrians at Marengo on 14 June, a defeat turned into victory by Desaix's arrival. Peace followed: Lunéville with Austria (1801), the Concordat with the pope (1801), Amiens with Britain (1802). At home he founded the Bank of France, the lycées, and the Légion d'honneur, and in 1802 was made Consul for Life.",
+      "quote": {
+        "text": "It is with such baubles that men are led.",
+        "by": "Napoleon, defending the new Légion d'honneur, 1802"
+      },
+      "empire": {
+        "headline": "Rebuilt at Marengo",
+        "note": "The Rhine frontier is law, Piedmont is French, and Italy is a client again.",
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "The Consulate: order, a new currency (the franc germinal), and peace on every front."
+          },
+          {
+            "name": "Corsica",
+            "status": "annexed",
+            "since": "1768",
+            "note": "French since 1768; reoccupied in 1796 after the British withdrew."
+          },
+          {
+            "name": "Savoy, Nice & Avignon",
+            "status": "annexed",
+            "since": "1791–93",
+            "note": "The Revolution's first additions."
+          },
+          {
+            "name": "Belgium",
+            "status": "annexed",
+            "since": "1795",
+            "note": "Nine départements, from Jemmapes to Forêts."
+          },
+          {
+            "name": "Left bank of the Rhine",
+            "status": "annexed",
+            "since": "1801",
+            "note": "Four départements, Roer, Sarre, Rhin-et-Moselle, and Mont-Tonnerre, confirmed at Lunéville."
+          },
+          {
+            "name": "Piedmont",
+            "status": "annexed",
+            "since": "1802",
+            "note": "Six départements; Turin becomes a French prefecture."
+          },
+          {
+            "name": "Elba",
+            "status": "annexed",
+            "since": "1802",
+            "note": "A small island that will matter later."
+          },
+          {
+            "name": "Italian Republic",
+            "status": "satellite",
+            "since": "1802",
+            "note": "The Cisalpine Republic, restored after Marengo and renamed, with Bonaparte as its president."
+          },
+          {
+            "name": "Ligurian Republic",
+            "status": "satellite",
+            "since": "1800",
+            "note": "Genoa, again under French protection."
+          },
+          {
+            "name": "Batavian Republic",
+            "status": "satellite",
+            "since": "1795",
+            "note": "The Netherlands, a sister republic."
+          },
+          {
+            "name": "Helvetic Republic",
+            "status": "satellite",
+            "since": "1798",
+            "note": "Switzerland."
+          },
+          {
+            "name": "Egypt & Malta",
+            "status": "lost",
+            "since": "1800–01",
+            "note": "Malta fell to Britain in 1800; the Egyptian army capitulated in 1801."
+          }
+        ]
+      },
+      "era": {
+        "name": "THE WORLD IN 1801",
+        "clues": [
+          {
+            "clue": "Thomas Jefferson was inaugurated in 1801 in this brand-new capital city",
+            "response": "Washington, D.C.",
+            "value": 200
+          },
+          {
+            "clue": "On New Year's Day 1801 Giuseppe Piazzi found Ceres, the first known of these small bodies between Mars and Jupiter",
+            "response": "asteroids",
+            "value": 400
+          },
+          {
+            "clue": "The 1801 Act of Union joined Great Britain with this island to form the United Kingdom",
+            "response": "Ireland",
+            "value": 600
+          },
+          {
+            "clue": "Richard Trevithick's 1801 'Puffing Devil' carried passengers up a Cornish hill, the first road vehicle driven by this",
+            "response": "steam",
+            "value": 800
+          },
+          {
+            "clue": "In 1801 Toussaint Louverture proclaimed a constitution for this French colony, the future Haiti",
+            "response": "Saint-Domingue",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "MARENGO & THE CONSULATE",
+        "clues": [
+          {
+            "clue": "David painted him crossing the Alps on a rearing horse; in truth Napoleon rode this humbler animal",
+            "response": "a mule",
+            "value": 200
+          },
+          {
+            "clue": "On June 14, 1800 Napoleon beat the Austrians at this Piedmont village, later the namesake of a chicken dish",
+            "response": "Marengo",
+            "value": 400
+          },
+          {
+            "clue": "In May 1802 Napoleon founded this order of merit with its five-armed white cross, awarded to soldiers and civilians alike",
+            "response": "the Légion d'honneur (Legion of Honor)",
+            "value": 600
+          },
+          {
+            "clue": "The 1801 Concordat mended France's break with the Church under this pope, who later attended the coronation",
+            "response": "Pius VII (Pius the Seventh)",
+            "value": 800
+          },
+          {
+            "clue": "Marengo was rescued by the late arrival of this general, killed at the moment of triumph",
+            "response": "Louis Desaix",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "PEACE AT LAST",
+        "clue": "The 1802 Peace of Amiens was the only time between 1793 and 1814 that France was at peace with this nation",
+        "response": "Britain (England, the UK)"
+      }
+    },
+    {
+      "id": "coronation",
+      "number": 8,
+      "years": "1804",
+      "title": "An Emperor Is Crowned",
+      "stage": "Emperor of the French, age 35",
+      "place": "Notre-Dame de Paris",
+      "tier": 3,
+      "blurb": "On 18 May 1804 the Senate proclaimed Napoleon Emperor of the French, and on 2 December, in Notre-Dame, he crowned himself with Pope Pius VII looking on. The same year saw the Civil Code, later called the Napoleonic Code, and the creation of eighteen Marshals of the Empire. The Republic's general had become a monarch with eagles, bees, and a court.",
+      "quote": {
+        "text": "I found the crown of France lying on the ground, and I picked it up with my sword.",
+        "by": "Napoleon, attributed"
+      },
+      "empire": {
+        "headline": "An Empire is proclaimed",
+        "note": "Same borders as the Consulate, new crown.",
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "The Empire, proclaimed 18 May 1804."
+          },
+          {
+            "name": "Corsica",
+            "status": "annexed",
+            "since": "1768",
+            "note": "French since 1768; reoccupied in 1796 after the British withdrew."
+          },
+          {
+            "name": "Savoy, Nice & Avignon",
+            "status": "annexed",
+            "since": "1791–93",
+            "note": "The Revolution's first additions."
+          },
+          {
+            "name": "Belgium",
+            "status": "annexed",
+            "since": "1795",
+            "note": "Nine départements, from Jemmapes to Forêts."
+          },
+          {
+            "name": "Left bank of the Rhine",
+            "status": "annexed",
+            "since": "1801",
+            "note": "Four départements, Roer, Sarre, Rhin-et-Moselle, and Mont-Tonnerre, confirmed at Lunéville."
+          },
+          {
+            "name": "Piedmont",
+            "status": "annexed",
+            "since": "1802",
+            "note": "Six départements; Turin becomes a French prefecture."
+          },
+          {
+            "name": "Elba",
+            "status": "annexed",
+            "since": "1802",
+            "note": "A small island that will matter later."
+          },
+          {
+            "name": "Italian Republic",
+            "status": "satellite",
+            "since": "1802",
+            "note": "Napoleon its president; a kingdom the next year."
+          },
+          {
+            "name": "Ligurian Republic",
+            "status": "satellite",
+            "since": "1800",
+            "note": "Genoa."
+          },
+          {
+            "name": "Batavian Republic",
+            "status": "satellite",
+            "since": "1795",
+            "note": "The Netherlands, a sister republic."
+          },
+          {
+            "name": "Swiss Confederation",
+            "status": "allied",
+            "since": "1803",
+            "note": "Reorganized by Napoleon's Act of Mediation; he is its 'Mediator'."
+          },
+          {
+            "name": "Louisiana",
+            "status": "lost",
+            "since": "1803",
+            "note": "Sold to the United States for about $15 million; the North American dream is over."
+          },
+          {
+            "name": "Saint-Domingue",
+            "status": "lost",
+            "since": "1804",
+            "note": "Independent Haiti, after Leclerc's expedition failed."
+          }
+        ]
+      },
+      "era": {
+        "name": "MEANWHILE, 1804",
+        "clues": [
+          {
+            "clue": "In 1804 Lewis and Clark left St. Louis and headed up this river on their way toward the Pacific",
+            "response": "the Missouri",
+            "value": 200
+          },
+          {
+            "clue": "In July 1804 Vice President Aaron Burr shot and killed this former Treasury secretary in a duel",
+            "response": "Alexander Hamilton",
+            "value": 400
+          },
+          {
+            "clue": "On January 1, 1804 this Caribbean nation declared independence, the first republic founded by formerly enslaved people",
+            "response": "Haiti",
+            "value": 600
+          },
+          {
+            "clue": "Hearing Napoleon had made himself emperor, Beethoven scratched the dedication off this 1804 symphony",
+            "response": "the Eroica (Symphony No. 3, the Third)",
+            "value": 800
+          },
+          {
+            "clue": "In 1804 Schiller's last completed play dramatized this Swiss marksman who shot an apple from his son's head",
+            "response": "William Tell",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "AN EMPEROR IS CROWNED",
+        "clues": [
+          {
+            "clue": "On December 2, 1804 Napoleon crowned himself in this Paris cathedral",
+            "response": "Notre-Dame",
+            "value": 200
+          },
+          {
+            "clue": "The pope came to bless the ceremony, but Napoleon placed the crown on his own head and then on this woman's",
+            "response": "Joséphine",
+            "value": 400
+          },
+          {
+            "clue": "In 1803 the First Consul sold this vast North American territory to the United States for about $15 million",
+            "response": "Louisiana",
+            "value": 600
+          },
+          {
+            "clue": "In 1804 Napoleon promulgated a unified body of civil law, known by this name, later copied from Italy to Japan",
+            "response": "the Napoleonic Code (Civil Code)",
+            "value": 800
+          },
+          {
+            "clue": "Napoleon replaced the Bourbon fleur-de-lis with this industrious insect as an imperial emblem",
+            "response": "the bee",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "ALL THE EMPEROR'S MEN",
+        "clue": "In 1804 Napoleon created 18 of these top military ranks, a title revived from the old monarchy; Ney and Murat were among the first",
+        "response": "Marshal of France (marshal)"
+      }
+    },
+    {
+      "id": "austerlitz",
+      "number": 9,
+      "years": "1805",
+      "title": "The Sun of Austerlitz",
+      "stage": "Emperor of the French and King of Italy, age 36",
+      "place": "Ulm · Trafalgar · Austerlitz",
+      "tier": 3,
+      "blurb": "When Britain, Austria, and Russia formed the Third Coalition in 1805, the Grande Armée marched from the Channel coast to the Danube in weeks, trapping an Austrian army at Ulm. Trafalgar (21 October) ended Napoleon's hopes at sea, but on 2 December, the coronation's anniversary, he destroyed the Russo-Austrian army at Austerlitz. The Treaty of Pressburg stripped Austria of Venetia and made Bavaria and Württemberg kingdoms.",
+      "quote": {
+        "text": "Soldiers, I am pleased with you.",
+        "by": "Napoleon, proclamation after Austerlitz, 3 December 1805"
+      },
+      "empire": {
+        "headline": "Austerlitz redraws the map",
+        "note": "Austria humbled, Venice inside the Kingdom of Italy, and the south German states are Napoleon's clients.",
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "The Empire, one year old."
+          },
+          {
+            "name": "Corsica",
+            "status": "annexed",
+            "since": "1768",
+            "note": "French since 1768; reoccupied in 1796 after the British withdrew."
+          },
+          {
+            "name": "Savoy, Nice & Avignon",
+            "status": "annexed",
+            "since": "1791–93",
+            "note": "The Revolution's first additions."
+          },
+          {
+            "name": "Belgium",
+            "status": "annexed",
+            "since": "1795",
+            "note": "Nine départements, from Jemmapes to Forêts."
+          },
+          {
+            "name": "Left bank of the Rhine",
+            "status": "annexed",
+            "since": "1801",
+            "note": "Four départements, Roer, Sarre, Rhin-et-Moselle, and Mont-Tonnerre, confirmed at Lunéville."
+          },
+          {
+            "name": "Piedmont",
+            "status": "annexed",
+            "since": "1802",
+            "note": "Six départements; Turin becomes a French prefecture."
+          },
+          {
+            "name": "Elba",
+            "status": "annexed",
+            "since": "1802",
+            "note": "A small island that will matter later."
+          },
+          {
+            "name": "Liguria",
+            "status": "annexed",
+            "since": "1805",
+            "note": "Genoa and its coast become three French départements."
+          },
+          {
+            "name": "Kingdom of Italy",
+            "status": "satellite",
+            "since": "1805",
+            "note": "Napoleon crowned with the Iron Crown in Milan, his stepson Eugène as viceroy; Venetia added after Austerlitz."
+          },
+          {
+            "name": "Batavian Republic",
+            "status": "satellite",
+            "since": "1795",
+            "note": "The Netherlands, a sister republic."
+          },
+          {
+            "name": "Swiss Confederation",
+            "status": "allied",
+            "since": "1803",
+            "note": "Reorganized by Napoleon's Act of Mediation; he is its 'Mediator'."
+          },
+          {
+            "name": "Bavaria",
+            "status": "allied",
+            "since": "1805",
+            "note": "Raised to a kingdom at Pressburg and enlarged with the Tyrol."
+          },
+          {
+            "name": "Württemberg",
+            "status": "allied",
+            "since": "1805",
+            "note": "Also made a kingdom."
+          },
+          {
+            "name": "Baden",
+            "status": "allied",
+            "since": "1805",
+            "note": "A grand duchy, tied to the Beauharnais family by marriage."
+          },
+          {
+            "name": "Command of the sea",
+            "status": "lost",
+            "since": "1805",
+            "note": "Trafalgar ends any hope of invading Britain."
+          }
+        ]
+      },
+      "era": {
+        "name": "1805: BEYOND THE BATTLEFIELD",
+        "clues": [
+          {
+            "clue": "In November 1805 Lewis and Clark reached this ocean, the goal of their outbound journey",
+            "response": "the Pacific",
+            "value": 200
+          },
+          {
+            "clue": "Beethoven's only opera, about a wife who rescues her husband from a political prison, premiered in 1805 as this",
+            "response": "Fidelio",
+            "value": 400
+          },
+          {
+            "clue": "In 1805 Muhammad Ali became Ottoman governor of this country and founded a dynasty that lasted until 1952",
+            "response": "Egypt",
+            "value": 600
+          },
+          {
+            "clue": "Born in Odense in 1805, this Dane grew up to write 'The Ugly Duckling'",
+            "response": "Hans Christian Andersen",
+            "value": 800
+          },
+          {
+            "clue": "Jacquard's loom of 1804–05 used punched cards to weave patterns, an idea later borrowed by these machines",
+            "response": "computers",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "THE SUN OF AUSTERLITZ",
+        "clues": [
+          {
+            "clue": "On December 2, 1805 Napoleon crushed a Russo-Austrian army at Austerlitz, in what is now this country",
+            "response": "the Czech Republic (Czechia)",
+            "value": 200
+          },
+          {
+            "clue": "Austerlitz is the Battle of the Three Emperors: Napoleon, Francis of Austria, and this Russian tsar",
+            "response": "Alexander I (Alexander the First)",
+            "value": 400
+          },
+          {
+            "clue": "Weeks earlier Nelson had smashed the French and Spanish fleets off this Spanish cape, dying in victory",
+            "response": "Trafalgar",
+            "value": 600
+          },
+          {
+            "clue": "Napoleon feigned weakness to lure the allies down off these heights, which his troops then stormed",
+            "response": "the Pratzen Heights",
+            "value": 800
+          },
+          {
+            "clue": "Before Austerlitz, Napoleon's army encircled and captured an entire Austrian army at this Danube city on October 20, 1805",
+            "response": "Ulm",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "KISS ME, HARDY",
+        "clue": "Nelson's dying words were addressed to Thomas Hardy, captain of this flagship, later preserved at Portsmouth",
+        "response": "HMS Victory"
+      }
+    },
+    {
+      "id": "tilsit",
+      "number": 10,
+      "years": "1806–1807",
+      "title": "From Jena to Tilsit",
+      "stage": "Master of Germany, age 37–38",
+      "place": "Jena · Eylau · Friedland · the raft on the Niemen",
+      "tier": 3,
+      "blurb": "In 1806 Napoleon dissolved the thousand-year-old Holy Roman Empire, gathered the German states into a Confederation of the Rhine, and put brothers on the thrones of Naples and Holland. Prussia's army was wrecked at Jena and Auerstedt in a single day (14 October 1806). After the bloody draw at Eylau and the victory at Friedland, Napoleon and Tsar Alexander I met on a raft on the Niemen and divided Europe at Tilsit.",
+      "quote": {
+        "text": "Sire, I hate the English no less than you do.",
+        "by": "Tsar Alexander I to Napoleon at Tilsit, 1807 (as reported)"
+      },
+      "empire": {
+        "headline": "From the Atlantic to the Niemen",
+        "note": "Family kingdoms, a German confederation, a Polish duchy, and Russia as a partner.",
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "Paris is the capital of Europe."
+          },
+          {
+            "name": "Corsica",
+            "status": "annexed",
+            "since": "1768",
+            "note": "French since 1768; reoccupied in 1796 after the British withdrew."
+          },
+          {
+            "name": "Savoy, Nice & Avignon",
+            "status": "annexed",
+            "since": "1791–93",
+            "note": "The Revolution's first additions."
+          },
+          {
+            "name": "Belgium",
+            "status": "annexed",
+            "since": "1795",
+            "note": "Nine départements, from Jemmapes to Forêts."
+          },
+          {
+            "name": "Left bank of the Rhine",
+            "status": "annexed",
+            "since": "1801",
+            "note": "Four départements, Roer, Sarre, Rhin-et-Moselle, and Mont-Tonnerre, confirmed at Lunéville."
+          },
+          {
+            "name": "Piedmont",
+            "status": "annexed",
+            "since": "1802",
+            "note": "Six départements; Turin becomes a French prefecture."
+          },
+          {
+            "name": "Elba",
+            "status": "annexed",
+            "since": "1802",
+            "note": "A small island that will matter later."
+          },
+          {
+            "name": "Liguria",
+            "status": "annexed",
+            "since": "1805",
+            "note": "Genoa and its coast become three French départements."
+          },
+          {
+            "name": "Kingdom of Italy",
+            "status": "satellite",
+            "since": "1805",
+            "note": "Dalmatia added in 1806."
+          },
+          {
+            "name": "Kingdom of Naples",
+            "status": "satellite",
+            "since": "1806",
+            "note": "Joseph Bonaparte king; the Bourbons cling to Sicily under British guard."
+          },
+          {
+            "name": "Kingdom of Holland",
+            "status": "satellite",
+            "since": "1806",
+            "note": "Louis Bonaparte king, replacing the Batavian Republic."
+          },
+          {
+            "name": "Grand Duchy of Berg",
+            "status": "satellite",
+            "since": "1806",
+            "note": "Murat's Rhineland duchy."
+          },
+          {
+            "name": "Kingdom of Westphalia",
+            "status": "satellite",
+            "since": "1807",
+            "note": "Jérôme Bonaparte king of a state carved from Prussian and Hessian lands."
+          },
+          {
+            "name": "Duchy of Warsaw",
+            "status": "satellite",
+            "since": "1807",
+            "note": "Polish lands taken from Prussia, under the King of Saxony."
+          },
+          {
+            "name": "Confederation of the Rhine",
+            "status": "allied",
+            "since": "1806",
+            "note": "Sixteen German states at first, Bavaria, Württemberg, and Baden among them, with Napoleon as 'Protector'."
+          },
+          {
+            "name": "Swiss Confederation",
+            "status": "allied",
+            "since": "1803",
+            "note": "Reorganized by Napoleon's Act of Mediation; he is its 'Mediator'."
+          },
+          {
+            "name": "Russia",
+            "status": "allied",
+            "since": "1807",
+            "note": "Tsar Alexander's alliance from the raft at Tilsit, with a promise to join the Continental System."
+          },
+          {
+            "name": "Prussia",
+            "status": "occupied",
+            "since": "1807",
+            "note": "Halved, garrisoned, and billed for a crushing indemnity."
+          }
+        ]
+      },
+      "era": {
+        "name": "1807: THE WORLD TURNS",
+        "clues": [
+          {
+            "clue": "In 1807 Robert Fulton's steamboat Clermont chugged up this New York river to Albany",
+            "response": "the Hudson",
+            "value": 200
+          },
+          {
+            "clue": "An 1807 act of Parliament banned British ships from carrying enslaved Africans across the Atlantic, abolishing this 'trade'",
+            "response": "the slave trade",
+            "value": 400
+          },
+          {
+            "clue": "This German philosopher finished 'The Phenomenology of Spirit' in 1806 as Napoleon's guns thundered at Jena",
+            "response": "Hegel",
+            "value": 600
+          },
+          {
+            "clue": "In 1807 London's Pall Mall became the first street lit by lamps burning this fuel",
+            "response": "gas",
+            "value": 800
+          },
+          {
+            "clue": "In 1806 this Connecticut lexicographer published his first dictionary, 22 years before his famous big one",
+            "response": "Noah Webster",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "FROM JENA TO TILSIT",
+        "clues": [
+          {
+            "clue": "In 1806 Napoleon's brothers took thrones: Joseph in Naples and Louis in this low-lying kingdom",
+            "response": "Holland (the Netherlands)",
+            "value": 200
+          },
+          {
+            "clue": "On October 14, 1806 Napoleon shattered the army of this German kingdom at Jena, while Davout won at Auerstedt",
+            "response": "Prussia",
+            "value": 400
+          },
+          {
+            "clue": "The Berlin Decree of 1806 banned British goods from Europe's ports, a blockade known as this 'Continental' scheme",
+            "response": "the Continental System",
+            "value": 600
+          },
+          {
+            "clue": "In July 1807 Napoleon and the tsar made peace at Tilsit on a raft moored in the middle of this river",
+            "response": "the Niemen (Neman, Nemunas)",
+            "value": 800
+          },
+          {
+            "clue": "The Tilsit deal carved a French-allied duchy out of Prussian Poland, named for this city",
+            "response": "Warsaw",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "NEITHER HOLY NOR ROMAN",
+        "clue": "Voltaire quipped that it was 'neither holy, nor Roman, nor an empire'; Napoleon finished it off in 1806",
+        "response": "the Holy Roman Empire"
+      }
+    },
+    {
+      "id": "zenith",
+      "number": 11,
+      "years": "1808–1811",
+      "title": "The Zenith of Empire",
+      "stage": "Emperor at the summit, age 41",
+      "place": "Madrid · Wagram · Vienna · Paris",
+      "tier": 4,
+      "blurb": "By 1810–11 the Empire was at its height: 130 départements from Hamburg to Rome, a ring of kingdoms ruled by Bonapartes and marshals, and an Austrian archduchess, Marie-Louise, as empress. But the Spanish 'ulcer' opened in 1808 bled the army in guerrilla war, Wagram (1809) was won at a heavy price, and the Continental System was straining every ally.",
+      "quote": {
+        "text": "That unfortunate war in Spain was a real affliction, the first cause of the calamities of France.",
+        "by": "Napoleon at Saint Helena, recorded by Las Cases"
+      },
+      "empire": {
+        "headline": "The Grand Empire at its height",
+        "note": "130 départements and some 44 million people in France proper: the summit. From here the map only shrinks.",
+        "departements": 130,
+        "peopleMillions": 44,
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "130 départements from Hamburg to Rome, the most France has ever had."
+          },
+          {
+            "name": "Corsica",
+            "status": "annexed",
+            "since": "1768",
+            "note": "French since 1768; reoccupied in 1796 after the British withdrew."
+          },
+          {
+            "name": "Savoy, Nice & Avignon",
+            "status": "annexed",
+            "since": "1791–93",
+            "note": "The Revolution's first additions."
+          },
+          {
+            "name": "Belgium",
+            "status": "annexed",
+            "since": "1795",
+            "note": "Nine départements, from Jemmapes to Forêts."
+          },
+          {
+            "name": "Left bank of the Rhine",
+            "status": "annexed",
+            "since": "1801",
+            "note": "Four départements, Roer, Sarre, Rhin-et-Moselle, and Mont-Tonnerre, confirmed at Lunéville."
+          },
+          {
+            "name": "Piedmont",
+            "status": "annexed",
+            "since": "1802",
+            "note": "Six départements; Turin becomes a French prefecture."
+          },
+          {
+            "name": "Elba",
+            "status": "annexed",
+            "since": "1802",
+            "note": "A small island that will matter later."
+          },
+          {
+            "name": "Liguria",
+            "status": "annexed",
+            "since": "1805",
+            "note": "Genoa and its coast become three French départements."
+          },
+          {
+            "name": "Tuscany & Parma",
+            "status": "annexed",
+            "since": "1808",
+            "note": "Three new départements; Elisa Bonaparte grand duchess of Tuscany."
+          },
+          {
+            "name": "Rome & the Papal States",
+            "status": "annexed",
+            "since": "1809",
+            "note": "Pius VII excommunicated Napoleon and was carried off to France."
+          },
+          {
+            "name": "Illyrian Provinces",
+            "status": "annexed",
+            "since": "1809",
+            "note": "Trieste, Slovenia, Croatia, and Dalmatia, governed from Ljubljana."
+          },
+          {
+            "name": "Holland",
+            "status": "annexed",
+            "since": "1810",
+            "note": "Louis was too Dutch for his brother; his kingdom became French départements."
+          },
+          {
+            "name": "Valais",
+            "status": "annexed",
+            "since": "1810",
+            "note": "The Swiss valley of the Simplon road, made the département of Simplon."
+          },
+          {
+            "name": "The North Sea coast",
+            "status": "annexed",
+            "since": "1810",
+            "note": "Hamburg, Bremen, Lübeck, and Oldenburg, annexed to seal the Continental System."
+          },
+          {
+            "name": "Kingdom of Italy",
+            "status": "satellite",
+            "since": "1805",
+            "note": "Eugène de Beauharnais as viceroy."
+          },
+          {
+            "name": "Kingdom of Naples",
+            "status": "satellite",
+            "since": "1806",
+            "note": "Murat king since 1808, when Joseph moved to Madrid."
+          },
+          {
+            "name": "Kingdom of Spain",
+            "status": "satellite",
+            "since": "1808",
+            "note": "Joseph Bonaparte's throne, held only where French bayonets stand; Wellington's army waits in Portugal."
+          },
+          {
+            "name": "Kingdom of Westphalia",
+            "status": "satellite",
+            "since": "1807",
+            "note": "Jérôme Bonaparte."
+          },
+          {
+            "name": "Grand Duchy of Berg",
+            "status": "satellite",
+            "since": "1806",
+            "note": "Held for Napoleon's infant nephew after Murat left for Naples."
+          },
+          {
+            "name": "Duchy of Warsaw",
+            "status": "satellite",
+            "since": "1807",
+            "note": "Enlarged with Austrian Galicia after Wagram."
+          },
+          {
+            "name": "Confederation of the Rhine",
+            "status": "allied",
+            "since": "1806",
+            "note": "Nearly every German state outside Austria and Prussia."
+          },
+          {
+            "name": "Swiss Confederation",
+            "status": "allied",
+            "since": "1803",
+            "note": "Reorganized by Napoleon's Act of Mediation; he is its 'Mediator'."
+          },
+          {
+            "name": "Austria",
+            "status": "allied",
+            "since": "1810",
+            "note": "Bound by Napoleon's marriage to the Archduchess Marie-Louise."
+          },
+          {
+            "name": "Prussia",
+            "status": "allied",
+            "since": "1807",
+            "note": "Reduced, resentful, and forced into alliance."
+          },
+          {
+            "name": "Russia",
+            "status": "allied",
+            "since": "1807",
+            "note": "The Tilsit partnership is fraying over trade and Poland."
+          },
+          {
+            "name": "Denmark-Norway",
+            "status": "allied",
+            "since": "1807",
+            "note": "Britain's bombardment of Copenhagen pushed it into Napoleon's camp."
+          },
+          {
+            "name": "Sweden",
+            "status": "allied",
+            "since": "1810",
+            "note": "Marshal Bernadotte elected crown prince, an ally who will soon change sides."
+          }
+        ]
+      },
+      "era": {
+        "name": "1809: THE WORLD AT THE ZENITH",
+        "clues": [
+          {
+            "clue": "Born the same day in February 1809: Abraham Lincoln and this English naturalist",
+            "response": "Charles Darwin",
+            "value": 200
+          },
+          {
+            "clue": "In September 1810 Father Hidalgo's 'Grito de Dolores' launched this country's war of independence from Spain",
+            "response": "Mexico",
+            "value": 400
+          },
+          {
+            "clue": "Beethoven's Fifth and Sixth symphonies premiered on one freezing December night in 1808 in this city",
+            "response": "Vienna",
+            "value": 600
+          },
+          {
+            "clue": "Washington Irving's 1809 comic 'History of New York' appeared under this pen name, later a nickname for Manhattanites",
+            "response": "Diedrich Knickerbocker",
+            "value": 800
+          },
+          {
+            "clue": "Goethe's 'Faust, Part One' appeared in 1808; the devil who bargains for Faust's soul goes by this name",
+            "response": "Mephistopheles (Mephisto)",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "THE ZENITH OF EMPIRE",
+        "clues": [
+          {
+            "clue": "In 1808 Napoleon made his brother Joseph king of this country, sparking a guerrilla war he called his 'ulcer'",
+            "response": "Spain",
+            "value": 200
+          },
+          {
+            "clue": "Goya's 'The Third of May 1808' shows French troops executing rebels in this city",
+            "response": "Madrid",
+            "value": 400
+          },
+          {
+            "clue": "In July 1809 Napoleon beat Austria at this battle near Vienna, the last of his great victories over that empire",
+            "response": "Wagram",
+            "value": 600
+          },
+          {
+            "clue": "Divorcing Joséphine, Napoleon wed this Austrian archduchess in 1810 to found a dynasty",
+            "response": "Marie-Louise",
+            "value": 800
+          },
+          {
+            "clue": "After Wagram, Napoleon annexed the Illyrian Provinces along the eastern shore of this sea",
+            "response": "the Adriatic",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "A DYNASTIC MATCH",
+        "clue": "Napoleon's 1810 bride Marie-Louise was the great-niece of this queen who was guillotined in 1793",
+        "response": "Marie Antoinette"
+      }
+    },
+    {
+      "id": "russia",
+      "number": 12,
+      "years": "1812",
+      "title": "The Russian Campaign",
+      "stage": "Commander of the Grande Armée, age 43",
+      "place": "The Niemen · Borodino · Moscow · the Berezina",
+      "tier": 4,
+      "blurb": "In June 1812 the Grande Armée, more than 600,000 men and barely half of them French, crossed the Niemen into Russia. Borodino (7 September) was the bloodiest day of the wars; Moscow was entered a week later and burned. Alexander refused to negotiate, and the retreat through snow and Cossacks destroyed the army. Napoleon raced back to Paris in December.",
+      "quote": {
+        "text": "From the sublime to the ridiculous is but a step.",
+        "by": "Napoleon to the abbé de Pradt, Warsaw, December 1812"
+      },
+      "empire": {
+        "headline": "600,000 march east",
+        "note": "The Empire's map is unchanged; its army is not.",
+        "departements": 130,
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "130 départements, and a conscription machine running at full stretch."
+          },
+          {
+            "name": "Corsica",
+            "status": "annexed",
+            "since": "1768",
+            "note": "French since 1768; reoccupied in 1796 after the British withdrew."
+          },
+          {
+            "name": "Savoy, Nice & Avignon",
+            "status": "annexed",
+            "since": "1791–93",
+            "note": "The Revolution's first additions."
+          },
+          {
+            "name": "Belgium",
+            "status": "annexed",
+            "since": "1795",
+            "note": "Nine départements, from Jemmapes to Forêts."
+          },
+          {
+            "name": "Left bank of the Rhine",
+            "status": "annexed",
+            "since": "1801",
+            "note": "Four départements, Roer, Sarre, Rhin-et-Moselle, and Mont-Tonnerre, confirmed at Lunéville."
+          },
+          {
+            "name": "Piedmont",
+            "status": "annexed",
+            "since": "1802",
+            "note": "Six départements; Turin becomes a French prefecture."
+          },
+          {
+            "name": "Elba",
+            "status": "annexed",
+            "since": "1802",
+            "note": "A small island that will matter later."
+          },
+          {
+            "name": "Liguria",
+            "status": "annexed",
+            "since": "1805",
+            "note": "Genoa and its coast become three French départements."
+          },
+          {
+            "name": "Tuscany & Parma",
+            "status": "annexed",
+            "since": "1808",
+            "note": "Three new départements; Elisa Bonaparte grand duchess of Tuscany."
+          },
+          {
+            "name": "Rome & the Papal States",
+            "status": "annexed",
+            "since": "1809",
+            "note": "Pius VII excommunicated Napoleon and was carried off to France."
+          },
+          {
+            "name": "Illyrian Provinces",
+            "status": "annexed",
+            "since": "1809",
+            "note": "Trieste, Slovenia, Croatia, and Dalmatia, governed from Ljubljana."
+          },
+          {
+            "name": "Holland",
+            "status": "annexed",
+            "since": "1810",
+            "note": "Louis was too Dutch for his brother; his kingdom became French départements."
+          },
+          {
+            "name": "Valais",
+            "status": "annexed",
+            "since": "1810",
+            "note": "The Swiss valley of the Simplon road, made the département of Simplon."
+          },
+          {
+            "name": "The North Sea coast",
+            "status": "annexed",
+            "since": "1810",
+            "note": "Hamburg, Bremen, Lübeck, and Oldenburg, annexed to seal the Continental System."
+          },
+          {
+            "name": "Kingdom of Italy",
+            "status": "satellite",
+            "since": "1805",
+            "note": "Eugène leads its army into Russia."
+          },
+          {
+            "name": "Kingdom of Naples",
+            "status": "satellite",
+            "since": "1806",
+            "note": "Murat commands the Grande Armée's cavalry."
+          },
+          {
+            "name": "Kingdom of Spain",
+            "status": "occupied",
+            "since": "1808",
+            "note": "Wellington takes Madrid in August 1812 as Joseph flees; 200,000 French troops are tied down."
+          },
+          {
+            "name": "Kingdom of Westphalia",
+            "status": "satellite",
+            "since": "1807",
+            "note": "Jérôme commands a corps, badly, and goes home."
+          },
+          {
+            "name": "Grand Duchy of Berg",
+            "status": "satellite",
+            "since": "1806",
+            "note": "Held for Napoleon's infant nephew after Murat left for Naples."
+          },
+          {
+            "name": "Duchy of Warsaw",
+            "status": "satellite",
+            "since": "1807",
+            "note": "Nearly 100,000 Poles march for the 'Second Polish War'."
+          },
+          {
+            "name": "Confederation of the Rhine",
+            "status": "allied",
+            "since": "1806",
+            "note": "Bavarians, Saxons, Württembergers, and Westphalians fill the ranks."
+          },
+          {
+            "name": "Swiss Confederation",
+            "status": "allied",
+            "since": "1803",
+            "note": "Reorganized by Napoleon's Act of Mediation; he is its 'Mediator'."
+          },
+          {
+            "name": "Austria",
+            "status": "allied",
+            "since": "1810",
+            "note": "Contributes a corps under Schwarzenberg, without enthusiasm."
+          },
+          {
+            "name": "Prussia",
+            "status": "allied",
+            "since": "1812",
+            "note": "Forced to send 20,000 men; they will change sides at year's end."
+          },
+          {
+            "name": "Russia",
+            "status": "lost",
+            "since": "1812",
+            "note": "Enemy since the Niemen crossing in June."
+          },
+          {
+            "name": "Denmark-Norway",
+            "status": "allied",
+            "since": "1807",
+            "note": "Britain's bombardment of Copenhagen pushed it into Napoleon's camp."
+          },
+          {
+            "name": "Sweden",
+            "status": "lost",
+            "since": "1812",
+            "note": "Bernadotte allies with the tsar."
+          }
+        ]
+      },
+      "era": {
+        "name": "1812: THE WORLD BEYOND RUSSIA",
+        "clues": [
+          {
+            "clue": "In June 1812 the United States declared war on this country, a conflict that gave us 'The Star-Spangled Banner'",
+            "response": "Britain (England, the UK)",
+            "value": 200
+          },
+          {
+            "clue": "In 1812 two German brothers published the first volume of their collected fairy tales",
+            "response": "the Brothers Grimm",
+            "value": 400
+          },
+          {
+            "clue": "Lord Byron 'awoke one morning and found himself famous' in 1812 after publishing this pilgrimage poem",
+            "response": "Childe Harold's Pilgrimage",
+            "value": 600
+          },
+          {
+            "clue": "In 1812 Massachusetts governor Elbridge Gerry signed a salamander-shaped district into law, giving us this word",
+            "response": "gerrymander",
+            "value": 800
+          },
+          {
+            "clue": "Spain's 1812 Constitution of Cádiz is nicknamed 'La Pepa' because it was proclaimed on this saint's feast day",
+            "response": "St. Joseph (Saint Joseph)",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "THE RUSSIAN CAMPAIGN",
+        "clues": [
+          {
+            "clue": "In September 1812 Napoleon occupied this Russian city, only to watch it burn around him",
+            "response": "Moscow",
+            "value": 200
+          },
+          {
+            "clue": "The bloodiest single day of the Napoleonic Wars came on September 7, 1812 at this village west of Moscow",
+            "response": "Borodino",
+            "value": 400
+          },
+          {
+            "clue": "This one-eyed Russian field marshal gave up Moscow rather than lose his army, then harried the French retreat",
+            "response": "Kutuzov",
+            "value": 600
+          },
+          {
+            "clue": "The retreat's most desperate moment came crossing this river in November, on bridges built by Eblé's engineers",
+            "response": "the Berezina",
+            "value": 800
+          },
+          {
+            "clue": "'The Emperor's health has never been better': the infamous closing line of the 29th of these official war reports",
+            "response": "bulletin",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "OVERTURE TO DISASTER",
+        "clue": "Tchaikovsky's '1812 Overture' represents the invading French with this anthem, though it wasn't the Empire's official song in 1812",
+        "response": "La Marseillaise"
+      }
+    },
+    {
+      "id": "leipzig",
+      "number": 13,
+      "years": "1813–1814",
+      "title": "The Battle of the Nations",
+      "stage": "Sovereign of Elba, age 44",
+      "place": "Leipzig · Champaubert · Fontainebleau · Elba",
+      "tier": 5,
+      "blurb": "Prussia, Austria, and Russia joined Britain in 1813, and at Leipzig, the Battle of the Nations, Napoleon was overwhelmed by numbers. His brilliant Six Days' Campaign of February 1814 could not save Paris, which fell on 31 March. On 6 April he abdicated at Fontainebleau and was given the island of Elba as a tiny sovereign state.",
+      "quote": {
+        "text": "Impossible is not French.",
+        "by": "Napoleon, letter to General Le Marois, July 1813"
+      },
+      "empire": {
+        "headline": "The Empire dissolves",
+        "note": "Everything outside the old kingdom is gone in eighteen months.",
+        "departements": 87,
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "Reduced by the Treaty of Paris to the frontiers of 1792, with a few additions such as Avignon, Mulhouse, and part of Savoy."
+          },
+          {
+            "name": "Elba",
+            "status": "satellite",
+            "since": "1814",
+            "note": "Napoleon's sovereign principality: 86 square miles, an army of about a thousand, and his own flag."
+          },
+          {
+            "name": "Belgium & the Rhineland",
+            "status": "lost",
+            "since": "1814",
+            "note": "Belgium to a new Kingdom of the Netherlands; the Rhineland mostly to Prussia."
+          },
+          {
+            "name": "Kingdom of Italy",
+            "status": "lost",
+            "since": "1814",
+            "note": "Dissolved; Lombardy and Venetia go to Austria."
+          },
+          {
+            "name": "Holland",
+            "status": "lost",
+            "since": "1813",
+            "note": "The House of Orange returns."
+          },
+          {
+            "name": "Kingdom of Spain",
+            "status": "lost",
+            "since": "1814",
+            "note": "Ferdinand VII restored; Wellington crosses into France."
+          },
+          {
+            "name": "Confederation of the Rhine",
+            "status": "lost",
+            "since": "1813",
+            "note": "Dissolved after Leipzig."
+          },
+          {
+            "name": "Duchy of Warsaw",
+            "status": "lost",
+            "since": "1813",
+            "note": "Occupied by Russia."
+          },
+          {
+            "name": "Illyrian Provinces",
+            "status": "lost",
+            "since": "1814",
+            "note": "Returned to Austria."
+          },
+          {
+            "name": "Rome & Tuscany",
+            "status": "lost",
+            "since": "1814",
+            "note": "Pius VII returns to Rome."
+          },
+          {
+            "name": "Kingdom of Naples",
+            "status": "lost",
+            "since": "1814",
+            "note": "Murat keeps his throne only by joining the Allies in January 1814."
+          }
+        ]
+      },
+      "era": {
+        "name": "MEANWHILE, 1814",
+        "clues": [
+          {
+            "clue": "Francis Scott Key wrote 'The Star-Spangled Banner' in 1814 after watching the British bombard this Baltimore fort",
+            "response": "Fort McHenry",
+            "value": 200
+          },
+          {
+            "clue": "Published in 1813, this Jane Austen novel opens with a truth universally acknowledged",
+            "response": "Pride and Prejudice",
+            "value": 400
+          },
+          {
+            "clue": "In 1814 diplomats gathered in this Austrian capital to redraw the map of Europe after Napoleon",
+            "response": "Vienna",
+            "value": 600
+          },
+          {
+            "clue": "In 1814 George Stephenson built 'Blücher', his first of these machines, for a colliery railway",
+            "response": "a locomotive (steam locomotive)",
+            "value": 800
+          },
+          {
+            "clue": "The Treaty of Ghent ended the War of 1812 in December 1814, but the news arrived too late to stop this January 1815 battle",
+            "response": "the Battle of New Orleans",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "THE BATTLE OF THE NATIONS",
+        "clues": [
+          {
+            "clue": "In April 1814 Napoleon abdicated and was exiled to this small island off Tuscany",
+            "response": "Elba",
+            "value": 200
+          },
+          {
+            "clue": "The October 1813 'Battle of the Nations', Europe's largest before World War I, was fought at this Saxon city",
+            "response": "Leipzig",
+            "value": 400
+          },
+          {
+            "clue": "In mid-battle the troops of this German kingdom, Napoleon's ally, switched sides to the Coalition",
+            "response": "Saxony",
+            "value": 600
+          },
+          {
+            "clue": "Napoleon bade farewell to his Old Guard in the courtyard of this palace south of Paris, kissing its eagle standard",
+            "response": "Fontainebleau",
+            "value": 800
+          },
+          {
+            "clue": "In the Six Days' Campaign of February 1814 Napoleon won four battles in four days against this Prussian field marshal",
+            "response": "Blücher",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "THE ISLAND SOVEREIGN",
+        "clue": "Napoleon kept a title, a tiny army, and a flag of his own design on Elba: white with a red stripe and three of these insects",
+        "response": "bees"
+      }
+    },
+    {
+      "id": "waterloo",
+      "number": 14,
+      "years": "1815",
+      "title": "The Hundred Days",
+      "stage": "Emperor again for a hundred days, age 45",
+      "place": "Golfe-Juan · Paris · Ligny · Waterloo",
+      "tier": 5,
+      "blurb": "On 26 February 1815 Napoleon slipped away from Elba and landed near Cannes with about a thousand men. Troops sent to stop him joined him; Louis XVIII fled; on 20 March he was back in the Tuileries. The Allies declared him an outlaw, and on 18 June 1815 Wellington and Blücher defeated him at Waterloo. He abdicated again on 22 June and surrendered to the British on 15 July.",
+      "quote": {
+        "text": "Soldiers of the 5th! If there is one among you who wishes to kill his emperor, here I am.",
+        "by": "Napoleon at Laffrey, 7 March 1815"
+      },
+      "empire": {
+        "headline": "One last throw",
+        "note": "A hundred days of France alone against all Europe.",
+        "departements": 86,
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "Held during the Hundred Days at the 1814 frontiers; the Second Treaty of Paris in November pushes them back to those of 1790."
+          },
+          {
+            "name": "Elba",
+            "status": "lost",
+            "since": "1815",
+            "note": "Abandoned on 26 February."
+          },
+          {
+            "name": "Kingdom of Naples",
+            "status": "lost",
+            "since": "1815",
+            "note": "Murat, gambling on Napoleon's return, loses his kingdom at Tolentino in May and his life in October."
+          },
+          {
+            "name": "The Emperor himself",
+            "status": "lost",
+            "since": "1815",
+            "note": "A prisoner aboard HMS Bellerophon from 15 July."
+          }
+        ]
+      },
+      "era": {
+        "name": "1815: THE WORLD IN WATERLOO'S YEAR",
+        "clues": [
+          {
+            "clue": "Waterloo lies in this kingdom, which didn't exist in 1815; it won independence from the Netherlands in 1830",
+            "response": "Belgium",
+            "value": 200
+          },
+          {
+            "clue": "In April 1815 Mount Tambora erupted in this present-day country, causing 1816's 'year without a summer'",
+            "response": "Indonesia",
+            "value": 400
+          },
+          {
+            "clue": "The Congress of Vienna's final act in 1815 guaranteed the permanent neutrality of this Alpine country",
+            "response": "Switzerland",
+            "value": 600
+          },
+          {
+            "clue": "In 1815 Humphry Davy invented a safety lamp for these workers, whose open flames had been igniting gas underground",
+            "response": "miners",
+            "value": 800
+          },
+          {
+            "clue": "Britain's 1815 Corn Laws put tariffs on imports of this, which is what 'corn' meant to a Briton",
+            "response": "grain (wheat)",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "THE HUNDRED DAYS",
+        "clues": [
+          {
+            "clue": "Escaping Elba, Napoleon ruled France again for roughly this many days, as the episode's name says",
+            "response": "100 (one hundred)",
+            "value": 200
+          },
+          {
+            "clue": "On June 18, 1815 Napoleon met his final defeat at this village south of Brussels",
+            "response": "Waterloo",
+            "value": 400
+          },
+          {
+            "clue": "The British commander at Waterloo, this 'Iron Duke', had already driven the French out of Spain",
+            "response": "the Duke of Wellington",
+            "value": 600
+          },
+          {
+            "clue": "Marshal Ney promised King Louis XVIII to bring Napoleon back to Paris in one of these, then joined him instead",
+            "response": "an iron cage",
+            "value": 800
+          },
+          {
+            "clue": "In July 1815 Napoleon surrendered to Captain Maitland aboard this British ship named for a Greek hero",
+            "response": "HMS Bellerophon",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "THE LAST WORD",
+        "clue": "Called on to lay down arms at Waterloo, General Cambronne is said to have replied 'The Guard dies, it does not' do this, or with one short vulgar word",
+        "response": "surrender"
+      }
+    },
+    {
+      "id": "helena",
+      "number": 15,
+      "years": "1815–1821",
+      "title": "Saint Helena and the Legend",
+      "stage": "Prisoner of Saint Helena; died at 51",
+      "place": "Longwood House, Saint Helena · Les Invalides",
+      "tier": 5,
+      "blurb": "Exiled to Saint Helena, 1,200 miles off the coast of Africa, Napoleon spent five and a half years at damp Longwood House dictating his memoirs and feuding with Governor Hudson Lowe. He died on 5 May 1821. In 1840 his body was returned to Paris in triumph and laid under the dome of Les Invalides; his nephew became Napoleon III in 1852, and his Code, his legend, and his wars still shape Europe.",
+      "quote": {
+        "text": "France, l'armée, tête d'armée, Joséphine.",
+        "by": "Napoleon's reported last words, 5 May 1821"
+      },
+      "empire": {
+        "headline": "An island, a tomb, a legend",
+        "note": "The map is France's of 1790. The legend keeps growing.",
+        "departements": 86,
+        "holdings": [
+          {
+            "name": "France",
+            "status": "core",
+            "since": "",
+            "note": "The Bourbon Restoration: Louis XVIII, then Charles X."
+          },
+          {
+            "name": "Saint Helena",
+            "status": "exile",
+            "since": "1815",
+            "note": "British; Napoleon's prison at Longwood House from October 1815 until his death."
+          },
+          {
+            "name": "Les Invalides",
+            "status": "exile",
+            "since": "1840",
+            "note": "His tomb since the Retour des cendres of December 1840; the red quartzite sarcophagus was finished in 1861."
+          }
+        ]
+      },
+      "era": {
+        "name": "THE WORLD AFTER NAPOLEON",
+        "clues": [
+          {
+            "clue": "Mary Shelley dreamed up this 1818 novel during the gloomy 'year without a summer' beside Lake Geneva",
+            "response": "Frankenstein",
+            "value": 200
+          },
+          {
+            "clue": "In 1819 this steamship, named for a Georgia port, made the first Atlantic crossing partly under steam",
+            "response": "the Savannah",
+            "value": 400
+          },
+          {
+            "clue": "The 1820 Missouri Compromise admitted Missouri as a slave state and this New England state as a free one",
+            "response": "Maine",
+            "value": 600
+          },
+          {
+            "clue": "In 1819 cavalry charged a reform rally in Manchester; the massacre was nicknamed after Napoleon's last battle",
+            "response": "Peterloo",
+            "value": 800
+          },
+          {
+            "clue": "Champollion cracked hieroglyphs in 1822 using the Rosetta Stone, which had gone to this country's national museum after 1801",
+            "response": "Britain (England, the British Museum)",
+            "value": 1000
+          }
+        ]
+      },
+      "chapter": {
+        "name": "SAINT HELENA & THE LEGEND",
+        "clues": [
+          {
+            "clue": "Napoleon died on May 5, 1821 on this remote island in the South Atlantic",
+            "response": "Saint Helena (St. Helena)",
+            "value": 200
+          },
+          {
+            "clue": "In 1840 his remains came home to Paris and were laid beneath the golden dome of this military complex",
+            "response": "Les Invalides",
+            "value": 400
+          },
+          {
+            "clue": "Napoleon's nephew Louis-Napoléon took this imperial name in 1852 and ruled the Second Empire",
+            "response": "Napoleon III (Napoleon the Third)",
+            "value": 600
+          },
+          {
+            "clue": "Napoleon's son, the King of Rome, spent his short life at the Austrian court as the Duke of this",
+            "response": "Reichstadt",
+            "value": 800
+          },
+          {
+            "clue": "The British governor whose petty restrictions embittered the exile on Saint Helena was this general",
+            "response": "Sir Hudson Lowe",
+            "value": 1000
+          }
+        ]
+      },
+      "final": {
+        "name": "LAST WORDS",
+        "clue": "Napoleon's reported final words were 'France, l'armée, tête d'armée,' and the name of this woman",
+        "response": "Joséphine"
+      }
+    }
+  ]
+}
