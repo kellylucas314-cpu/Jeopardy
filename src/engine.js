@@ -6,12 +6,22 @@ import { getState, setState } from './state.js';
 import { loadRoundCategories, loadFinalClue } from './data.js';
 import { checkAnswer } from './fuzzy.js';
 import * as sounds from './sounds.js';
+import {
+  chapterRecipe, chapterTimer, themedCategory, themedFinal, recordChapterResult,
+} from './campaign.js';
 
 // Category/Final names already used this game — keeps a session fresh.
 let seenCategories = new Set();
 
+/**
+ * Légion d'honneur: answer three clues from a chapter's themed category and
+ * the Emperor pins a cross on you — a flat bonus, awarded once per game.
+ */
+export const LEGION_BONUS = 500;
+export const LEGION_CLUES = 3;
+
 function newPlayer(name, avatar) {
-  return { name, avatar, score: 0, correct: 0, wrong: 0, streak: 0, bestStreak: 0 };
+  return { name, avatar, score: 0, correct: 0, wrong: 0, streak: 0, bestStreak: 0, chapterCorrect: 0, decorated: false };
 }
 
 /**
@@ -25,12 +35,15 @@ export function streakBonus(streak) {
 /**
  * Start a new game with the given player names and mode ('turns' | 'buzz').
  */
-export async function startGame(playerNames, gameMode = 'turns', avatars = [], gameLength = 'full') {
+export async function startGame(playerNames, gameMode = 'turns', avatars = [], gameLength = 'full', campaign = null) {
   seenCategories = new Set();
   setState({
     players: playerNames.map((name, i) => newPlayer(name, avatars[i] || String(i + 1))),
     gameMode: playerNames.length > 1 ? gameMode : 'turns',
     gameLength,
+    campaign: campaign && campaign.chapter ? { chapter: campaign.chapter, basePack: campaign.basePack || 'fresh' } : null,
+    clueSeconds: campaign && campaign.chapter ? chapterTimer(campaign.chapter) : 30,
+    chapterOutcome: null,
     activePlayer: 0,
     answeringPlayer: 0,
     lastCorrectPlayer: 0,
@@ -39,6 +52,17 @@ export async function startGame(playerNames, gameMode = 'turns', avatars = [], g
     screen: 'loading',
   });
 
+  // A chapter opens with its story; the board is drawn when the table is ready.
+  if (campaign && campaign.chapter) {
+    setState({ screen: 'chapter-intro' });
+    return;
+  }
+  await loadRound(1);
+}
+
+/** Leave the chapter's story page and draw its first board. */
+export async function beginChapter() {
+  setState({ screen: 'loading' });
   await loadRound(1);
 }
 
@@ -46,9 +70,22 @@ export async function startGame(playerNames, gameMode = 'turns', avatars = [], g
  * Load categories for a round and set up the board.
  */
 async function loadRound(round) {
+  const { campaign, gameLength } = getState();
   let categories;
   try {
-    categories = await loadRoundCategories(round, seenCategories);
+    if (campaign) {
+      // One themed category per board (the year's wider world in Round 1, the
+      // chapter itself in Round 2 or a quick game); the other five follow the
+      // chapter's difficulty recipe.
+      const themed = themedCategory(campaign.chapter, round, gameLength);
+      seenCategories.add(themed.name);
+      const recipe = chapterRecipe(campaign.chapter, round, campaign.basePack);
+      const drawn = await loadRoundCategories(round, seenCategories, { recipe, count: 5 });
+      categories = drawn.slice(0, 5);
+      categories.splice(Math.floor(Math.random() * (categories.length + 1)), 0, themed);
+    } else {
+      categories = await loadRoundCategories(round, seenCategories);
+    }
   } catch (err) {
     setState({ screen: 'error', errorContext: 'round' });
     return;
@@ -138,6 +175,7 @@ export function selectClue(catIndex, clueIndex) {
     value: clue.value,
     isDailyDouble: clue.isDailyDouble,
     categoryName: cat.name,
+    themed: !!cat.themed,
   };
 
   setState({
@@ -152,7 +190,7 @@ export function selectClue(catIndex, clueIndex) {
     setState({ screen: 'daily-double' });
   } else {
     sounds.playSelect();
-    setState({ screen: 'clue', timerSeconds: 30, timerRunning: true });
+    setState({ screen: 'clue', timerSeconds: getState().clueSeconds, timerRunning: true });
   }
 }
 
@@ -163,9 +201,24 @@ export function submitWager(amount) {
   setState({
     wagerAmount: amount,
     screen: 'clue',
-    timerSeconds: 30,
+    timerSeconds: getState().clueSeconds,
     timerRunning: true,
   });
+}
+
+/**
+ * Credit a correct answer on the chapter's themed category. Returns the
+ * Légion d'honneur bonus if this answer earned it (0 otherwise) and the
+ * updated player fields.
+ */
+function themedCredit(player, currentClue) {
+  if (!currentClue.themed) return { bonus: 0, fields: {} };
+  const chapterCorrect = (player.chapterCorrect || 0) + 1;
+  const earned = !player.decorated && chapterCorrect >= LEGION_CLUES;
+  return {
+    bonus: earned ? LEGION_BONUS : 0,
+    fields: { chapterCorrect, decorated: player.decorated || earned },
+  };
 }
 
 /**
@@ -210,12 +263,16 @@ export function submitAnswer(userAnswer) {
 
   let bonus = 0;
   let streak = 0;
+  let legion = 0;
   if (result.correct) {
     streak = p.streak + 1;
     bonus = streakBonus(streak);
+    const credit = themedCredit(p, currentClue);
+    legion = credit.bonus;
     updatedPlayers[answeringPlayer] = {
       ...p,
-      score: p.score + value + bonus,
+      ...credit.fields,
+      score: p.score + value + bonus + legion,
       correct: p.correct + 1,
       streak,
       bestStreak: Math.max(p.bestStreak, streak),
@@ -257,6 +314,7 @@ export function submitAnswer(userAnswer) {
     correctResponse: currentClue.response,
     value,
     bonus,
+    legion,
     streak,
     canRebuzz,
     remaining,
@@ -276,9 +334,12 @@ export function overrideCorrect() {
   const p = updatedPlayers[playerIndex];
   const streak = p.streak + 1;
   const bonus = streakBonus(streak);
+  const credit = themedCredit(p, currentClue || {});
+  const legion = credit.bonus;
   updatedPlayers[playerIndex] = {
     ...p,
-    score: p.score + value * 2 + bonus, // refund the penalty + award the value (+ streak bonus)
+    ...credit.fields,
+    score: p.score + value * 2 + bonus + legion, // refund the penalty + award the value (+ bonuses)
     correct: p.correct + 1,
     wrong: Math.max(0, p.wrong - 1),
     streak,
@@ -300,7 +361,7 @@ export function overrideCorrect() {
   if (clueStillOpen) markClueAnswered();
 
   sounds.playCorrect();
-  return { value, bonus, streak };
+  return { value, bonus, legion, streak };
 }
 
 /**
@@ -403,9 +464,10 @@ export async function startDoubleJeopardy() {
  * Start Final Jeopardy.
  */
 async function startFinalJeopardy() {
+  const { campaign } = getState();
   let finalClue;
   try {
-    finalClue = await loadFinalClue(seenCategories);
+    finalClue = campaign ? themedFinal(campaign.chapter) : await loadFinalClue(seenCategories);
   } catch (err) {
     setState({ screen: 'error', errorContext: 'final' });
     return;
@@ -493,5 +555,11 @@ export function overrideFinalAnswer(playerIndex) {
  * Show final results.
  */
 export function showResults() {
-  setState({ screen: 'results' });
+  const { campaign, players, gameLength, chapterOutcome } = getState();
+  const updates = { screen: 'results' };
+  // Tally the chapter once — the results screen can be re-rendered freely.
+  if (campaign && !chapterOutcome) {
+    updates.chapterOutcome = recordChapterResult(campaign.chapter, players, gameLength);
+  }
+  setState(updates);
 }

@@ -2451,3 +2451,201 @@ input { caret-color: var(--terracotta-deep); }
 .ph.ph-clock::before { content: "\e19a"; }
 .ph.ph-list::before { content: "\e2f0"; }
 .ph.ph-x::before { content: "\e4f6"; }
+
+/* ============================================================
+   THE CAMPAIGN — chapter card, intro, ledger, outcome
+   Functional pass: reuses the salon's tokens; the full design
+   treatment (map, chapter art) comes in the front-end pass.
+   ============================================================ */
+
+.style-buttons .btn-mode { flex: 1; }
+
+.chapter-card {
+  margin-top: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface-3);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.chapter-card[hidden] { display: none; }
+.chapter-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass-bright);
+}
+.chapter-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--cream);
+}
+.chapter-stage { font-size: 0.86rem; color: var(--cream-dim); }
+.chapter-facts, .chapter-intro-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--jade-deep);
+}
+.chapter-empire { font-size: 0.8rem; color: var(--cream-dim); }
+.chapter-pick {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--cream-dim);
+  margin-top: 4px;
+}
+.chapter-pick select {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface-1);
+  color: var(--cream);
+  max-width: 100%;
+  min-width: 0;
+}
+.chapter-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--cream-faint);
+}
+.chapter-loading { font-size: 0.85rem; color: var(--cream-faint); }
+.chapter-blurb {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--cream-dim);
+  max-width: 62ch;
+}
+
+.chapter-intro-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 760px;
+  max-height: 100dvh;
+  overflow-y: auto;
+  text-align: center;
+  animation: riseIn 0.5s var(--ease);
+}
+.chapter-intro-screen .chapter-title { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.chapter-intro-screen .chapter-intro-facts { justify-content: center; font-size: 0.82rem; }
+.chapter-intro-screen .btn-continue { margin-top: 6px; }
+
+/* The chapter's own category wears the Emperor's mark */
+.board-category.themed .category-header { box-shadow: inset 0 -3px 0 var(--brass); }
+.board-category.themed .category-header::before {
+  content: 'N';
+  display: inline-block;
+  margin-right: 6px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.72em;
+  color: var(--brass);
+}
+
+.legion-callout { color: var(--oxblood); }
+
+.chapter-outcome {
+  width: 100%;
+  max-width: 470px;
+  padding: 16px 18px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--surface-1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.chapter-outcome.won { border-color: rgba(60, 122, 84, 0.5); }
+.chapter-outcome.lost { border-color: rgba(166, 61, 41, 0.45); }
+.co-title { font-weight: 700; font-size: 1.05rem; color: var(--cream); }
+.chapter-outcome.won .co-title { color: var(--correct); }
+.chapter-outcome.lost .co-title { color: var(--wrong); }
+.co-body { font-size: 0.9rem; line-height: 1.5; color: var(--cream-dim); }
+.co-next { font-size: 0.85rem; font-weight: 600; color: var(--jade-deep); }
+
+.modal.empire {
+  max-width: 580px;
+  width: min(580px, 94vw);
+  max-height: 88dvh;
+  overflow-y: auto;
+  text-align: left;
+}
+.empire-headline { font-weight: 700; font-size: 1.05rem; color: var(--cream); }
+.empire-note { font-size: 0.88rem; color: var(--cream-dim); margin: 2px 0 10px; line-height: 1.5; }
+.empire-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  overflow: hidden;
+  margin: 6px 0;
+}
+.empire-bar-fill {
+  height: 100%;
+  width: calc(var(--fill, 0) * 100%);
+  background: var(--brass);
+  border-radius: 999px;
+  transition: width 0.4s var(--ease);
+}
+.empire-meta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+  margin-bottom: 12px;
+}
+.empire-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+.empire-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  border-left: 3px solid var(--line-strong);
+}
+.empire-list li.status-core { border-left-color: var(--jade-deep); }
+.empire-list li.status-annexed { border-left-color: var(--jade); }
+.empire-list li.status-satellite { border-left-color: var(--brass); }
+.empire-list li.status-allied { border-left-color: var(--terracotta); }
+.empire-list li.status-occupied { border-left-color: var(--p1); }
+.empire-list li.status-lost { border-left-color: var(--wrong); opacity: 0.72; }
+.empire-list li.status-exile { border-left-color: var(--cream-faint); }
+.eh-name { font-weight: 700; font-size: 0.92rem; color: var(--cream); }
+.eh-status {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cream-faint);
+  white-space: nowrap;
+  align-self: center;
+}
+.eh-note { grid-column: 1 / -1; font-size: 0.82rem; line-height: 1.45; color: var(--cream-dim); }
+
+@media (max-width: 640px) {
+  .style-buttons { flex-direction: column; }
+  .chapter-facts, .chapter-intro-facts { font-size: 0.74rem; }
+  .empire-list li { grid-template-columns: 1fr; }
+  .eh-status { white-space: normal; }
+}

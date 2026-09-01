@@ -8,6 +8,10 @@ Share that link with friends and play on any device.
 
 ## Features
 
+- **The Campaign** — Napoleon's life in 15 chapters, from the cadet at Valence to Saint
+  Helena. Each chapter is one game with a category about that year and one about
+  Napoleon himself, a rising difficulty tier, and a score target; win and the Empire on
+  your ledger grows exactly as history's did (see `CAMPAIGN.md`)
 - **Three question packs:**
   - ✨ **Fresh Pack** (default) — original clues written for Ring In: smart, doable
     difficulty curve, zero copyright worries, safe to share anywhere
