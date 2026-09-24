@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+client/dist/
+
+# Secrets — never commit API keys
+.env
+.env.*
+!.env.example
+
+# Local-only data. The J-Archive dataset author asks that it not be used in a
+# public-facing site, so the raw TSV and the processed clues.json stay local.
+# Regenerate clues.json with: npm run process-dataset
+data/*.tsv
+client/src/data/clues.json
+
+# Reference books (copyrighted PDFs, local only)
+trivia-books/
+
+# OS / editor noise
+.DS_Store

@@ -1,0 +1,310 @@
+.final-jeopardy-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Announce */
+.fj-announce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fj-announce-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--jeopardy-gold);
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+  letter-spacing: 6px;
+  animation: ddPulse 0.6s ease-in-out infinite alternate;
+}
+
+/* Category reveal */
+.fj-category-reveal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.fj-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.fj-category-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--jeopardy-gold);
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.fj-continue-btn,
+.fj-submit-wagers-btn,
+.fj-submit-answers-btn {
+  padding: 0.85rem 2rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--jeopardy-blue-deep);
+  background: linear-gradient(180deg, var(--jeopardy-gold-light), var(--jeopardy-gold));
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+
+.fj-continue-btn:hover,
+.fj-submit-wagers-btn:hover,
+.fj-submit-answers-btn:hover {
+  background: linear-gradient(180deg, var(--jeopardy-gold), var(--jeopardy-gold-dark));
+  transform: translateY(-1px);
+}
+
+/* Wagers */
+.fj-wagers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+.fj-category-small {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--jeopardy-gold);
+  text-transform: uppercase;
+}
+
+.fj-wager-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.fj-wager-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+}
+
+.fj-wager-player {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.fj-wager-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.fj-wager-score {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.fj-wager-score.positive { color: var(--correct); }
+.fj-wager-score.negative { color: var(--wrong); }
+
+.fj-wager-input {
+  width: 140px;
+  padding: 0.5rem 0.75rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  color: var(--jeopardy-gold);
+  outline: none;
+}
+
+.fj-wager-input:focus {
+  border-color: var(--jeopardy-gold);
+}
+
+.fj-no-wager {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Clue phase */
+.fj-clue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.fj-clue-category {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--jeopardy-gold);
+  text-transform: uppercase;
+}
+
+.fj-clue-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.5;
+  padding: 2rem;
+  background: linear-gradient(180deg, var(--jeopardy-blue), var(--jeopardy-blue-light));
+  border-radius: 12px;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+.fj-answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.fj-answer-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fj-answer-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  min-width: 100px;
+}
+
+.fj-answer-input {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.fj-answer-input:focus {
+  border-color: var(--jeopardy-gold);
+}
+
+.fj-answer-input::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Results */
+.fj-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+.fj-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.fj-result-card {
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  animation: resultFadeIn 0.5s ease;
+}
+
+.fj-result-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--jeopardy-gold);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.fj-result-guess {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.fj-result-wager {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.fj-result-score {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.fj-result-score.positive { color: var(--correct); }
+.fj-result-score.negative { color: var(--wrong); }
+
+.fj-correct-response {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+}
+
+.fj-correct-response strong {
+  color: var(--text-primary);
+}

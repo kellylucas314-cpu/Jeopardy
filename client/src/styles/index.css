@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  /* Jeopardy signature colors */
+  --jeopardy-blue-deep: #050514;
+  --jeopardy-blue-dark: #0a0a2e;
+  --jeopardy-blue: #1a1a6e;
+  --jeopardy-blue-light: #12124a;
+  --jeopardy-blue-hover: #2a2a8e;
+  --jeopardy-gold: #d4a843;
+  --jeopardy-gold-light: #f0d78c;
+  --jeopardy-gold-dark: #b8862d;
+
+  /* Feedback colors */
+  --correct: #4ade80;
+  --wrong: #ef4444;
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #8888aa;
+  --text-muted: #555555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background: linear-gradient(180deg, var(--jeopardy-blue-deep) 0%, var(--jeopardy-blue-dark) 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

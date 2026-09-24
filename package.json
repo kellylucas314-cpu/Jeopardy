@@ -1,0 +1,33 @@
+{
+  "name": "jeopardy-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive Jeopardy game with 529K real clues",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build": "cd client && npm run build",
+    "process-dataset": "node scripts/processDataset.js",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kellylucas314-cpu/Jeopardy.git"
+  },
+  "keywords": [
+    "jeopardy",
+    "trivia",
+    "game"
+  ],
+  "author": "Kelly Lucas",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

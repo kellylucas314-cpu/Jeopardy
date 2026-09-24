@@ -1,0 +1,212 @@
+.clue-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.clue-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.clue-category {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.clue-value {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--jeopardy-gold);
+}
+
+.clue-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.5;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(180deg, var(--jeopardy-blue), var(--jeopardy-blue-light));
+  border-radius: 12px;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Timer */
+.timer-container {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.timer-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--jeopardy-gold), var(--jeopardy-gold-light));
+  border-radius: 14px;
+  transition: width 1s linear;
+}
+
+.timer-bar.urgent {
+  background: linear-gradient(90deg, var(--wrong), #ff6b6b);
+}
+
+.timer-text {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Answer input */
+.answer-input-container {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.answer-input {
+  flex: 1;
+  padding: 0.85rem 1.25rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.answer-input:focus {
+  border-color: var(--jeopardy-gold);
+}
+
+.answer-input::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.submit-btn {
+  padding: 0.85rem 1.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--jeopardy-blue-deep);
+  background: linear-gradient(180deg, var(--jeopardy-gold-light), var(--jeopardy-gold));
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(180deg, var(--jeopardy-gold), var(--jeopardy-gold-dark));
+}
+
+.submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.current-player-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+}
+
+/* Result display */
+.result-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 12px;
+  animation: resultFadeIn 0.3s ease;
+}
+
+.result-display.correct {
+  border: 2px solid var(--correct);
+  background: rgba(74, 222, 128, 0.08);
+}
+
+.result-display.incorrect {
+  border: 2px solid var(--wrong);
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.result-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.result-display.correct .result-text {
+  color: var(--correct);
+}
+
+.result-display.incorrect .result-text {
+  color: var(--wrong);
+}
+
+.correct-answer {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: var(--text-secondary);
+}
+
+.correct-answer strong {
+  color: var(--text-primary);
+}
+
+.result-value {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.result-display.correct .result-value {
+  color: var(--correct);
+}
+
+.result-display.incorrect .result-value {
+  color: var(--wrong);
+}
+
+@keyframes resultFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

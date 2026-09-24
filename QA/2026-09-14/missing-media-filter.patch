@@ -1,0 +1,48 @@
+--- a/client/src/utils/dataLoader.js
++++ b/client/src/utils/dataLoader.js
+@@ -2,6 +2,15 @@
+ // Load dataset and generate random Jeopardy boards
+ 
+ import cluesData from '../data/clues.json';
++
++// Archive stage directions can refer to audio/video this app cannot play.
++// Filter these before tier selection so missing media cannot enter a board.
++const unavailableMedia = /\[[^\]]*\b(?:music plays|song plays|audio clip|video clip)\b[^\]]*\]/i;
++const standaloneCluesData = Object.fromEntries(
++  Object.entries(cluesData)
++    .map(([category, clues]) => [category, clues.filter(clue => !unavailableMedia.test(clue.clue))])
++    .filter(([, clues]) => clues.length > 0)
++);
+ 
+ /**
+  * Assign a difficulty tier based on the original clue value
+@@ -38,7 +47,7 @@
+  */
+ export function generateBoard(customCategories = []) {
+   const board = {};
+-  const allCategories = Object.keys(cluesData);
++  const allCategories = Object.keys(standaloneCluesData);
+ 
+   // 1. Add custom AI categories (if any)
+   for (const custom of customCategories) {
+@@ -64,7 +73,7 @@
+     if (filled >= slotsNeeded) break;
+     if (takenNames.has(category.toLowerCase())) continue; // name already used by a custom category
+ 
+-    const clues = cluesData[category];
++    const clues = standaloneCluesData[category];
+ 
+     // Group clues by tier
+     const byTier = { 1: [], 2: [], 3: [], 4: [], 5: [] };
+@@ -131,9 +140,9 @@
+  * So we'll generate a challenging clue from a random hard category
+  */
+ export function getFinalJeopardyClue() {
+-  const allCategories = Object.keys(cluesData);
++  const allCategories = Object.keys(standaloneCluesData);
+   const category = allCategories[Math.floor(Math.random() * allCategories.length)];
+-  const clues = cluesData[category];
++  const clues = standaloneCluesData[category];
+ 
+   // Pick a harder clue (from higher value tiers)
+   const hardClues = clues.filter(c => assignTier(c.val) >= 4);

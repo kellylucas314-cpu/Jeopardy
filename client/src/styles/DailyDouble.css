@@ -1,0 +1,196 @@
+.daily-double-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Reveal animation */
+.dd-reveal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.dd-reveal-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--jeopardy-gold);
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+  letter-spacing: 6px;
+  animation: ddPulse 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes ddPulse {
+  from {
+    transform: scale(0.97);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1.03);
+    opacity: 1.0;
+  }
+}
+
+/* Wager phase */
+.dd-wager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.dd-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--jeopardy-gold);
+  letter-spacing: 3px;
+}
+
+.dd-category {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.dd-player-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+}
+
+.dd-player-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.dd-player-score {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.dd-player-score.positive { color: var(--correct); }
+.dd-player-score.negative { color: var(--wrong); }
+
+.dd-wager-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.dd-wager-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.dd-wager-input {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: var(--jeopardy-gold);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.dd-wager-input:focus {
+  border-color: var(--jeopardy-gold);
+}
+
+.dd-quick-wagers {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quick-wager-btn {
+  padding: 0.5rem 1rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quick-wager-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--jeopardy-gold);
+}
+
+.quick-wager-btn.all-in {
+  color: var(--jeopardy-gold);
+  border-color: var(--jeopardy-gold-dark);
+}
+
+.quick-wager-btn.all-in:hover {
+  background: rgba(212, 168, 67, 0.15);
+}
+
+.dd-wager-submit {
+  width: 100%;
+  padding: 0.85rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--jeopardy-blue-deep);
+  background: linear-gradient(180deg, var(--jeopardy-gold-light), var(--jeopardy-gold));
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dd-wager-submit:hover:not(:disabled) {
+  background: linear-gradient(180deg, var(--jeopardy-gold), var(--jeopardy-gold-dark));
+}
+
+.dd-wager-submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Clue phase - reuses .clue-* classes from ClueScreen.css */
+.dd-clue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}

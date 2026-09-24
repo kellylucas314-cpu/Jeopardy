@@ -1,0 +1,285 @@
+.setup-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.game-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--jeopardy-gold);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 6px;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.setup-container {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 460px;
+}
+
+.setup-container h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--jeopardy-gold);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.player-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.player-input-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.player-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.player-input:focus {
+  border-color: var(--jeopardy-gold);
+}
+
+.player-input::placeholder {
+  color: var(--text-muted);
+}
+
+.remove-player-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.remove-player-btn:hover {
+  border-color: var(--wrong);
+  color: var(--wrong);
+}
+
+.add-player-btn {
+  background: none;
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  color: var(--text-secondary);
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s;
+}
+
+.add-player-btn:hover {
+  border-color: var(--jeopardy-gold);
+  color: var(--jeopardy-gold);
+}
+
+.category-note {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(212, 168, 67, 0.06);
+  border-radius: 8px;
+}
+
+.note-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.note-subtext {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.start-game-btn {
+  width: 100%;
+  padding: 1rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--jeopardy-blue-deep);
+  background: linear-gradient(180deg, var(--jeopardy-gold-light), var(--jeopardy-gold));
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+.start-game-btn:hover:not(:disabled) {
+  background: linear-gradient(180deg, var(--jeopardy-gold), var(--jeopardy-gold-dark));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(212, 168, 67, 0.3);
+}
+
+.start-game-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---- Custom category slots ---- */
+.setup-container {
+  max-width: 520px;
+}
+
+.categories-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.categories-header h2 {
+  margin-bottom: 0.35rem;
+}
+
+.clear-slots-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.clear-slots-btn:hover {
+  color: var(--jeopardy-gold);
+}
+
+.categories-help {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 0.9rem;
+  line-height: 1.4;
+}
+
+.category-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.category-slot-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slot-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  width: 14px;
+  text-align: right;
+}
+
+.category-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.6rem 0.85rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.category-input:focus {
+  border-color: var(--jeopardy-gold);
+}
+
+.category-input::placeholder {
+  color: var(--text-muted);
+}
+
+.slot-badge {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  width: 78px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.slot-badge.random {
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.slot-badge.ai {
+  color: var(--jeopardy-gold);
+  background: rgba(212, 168, 67, 0.12);
+  border: 1px solid rgba(212, 168, 67, 0.35);
+}
+
+.note-warning {
+  font-size: 12px;
+  color: #fca5a5;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}

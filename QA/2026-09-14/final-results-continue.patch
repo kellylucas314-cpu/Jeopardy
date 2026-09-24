@@ -1,0 +1,43 @@
+--- a/client/src/App.jsx
++++ b/client/src/App.jsx
+@@ -225,10 +225,7 @@
+     }
+     setPlayers(newPlayers);
+ 
+-    // Go to game over screen
+-    setTimeout(() => {
+-      setScreen('gameOver');
+-    }, 3000);
++    // FinalJeopardy keeps the complete reveal visible until the player continues.
+   };
+ 
+   // Play again
+@@ -291,6 +288,7 @@
+           players={players}
+           onSubmitWagers={submitFinalWagers}
+           onSubmitGuesses={submitFinalGuesses}
++          onComplete={() => setScreen('gameOver')}
+         />
+       )}
+ 
+--- a/client/src/components/FinalJeopardy.jsx
++++ b/client/src/components/FinalJeopardy.jsx
+@@ -2,7 +2,7 @@
+ import { useSound } from '../hooks/useSound';
+ import '../styles/FinalJeopardy.css';
+ 
+-function FinalJeopardy({ finalJeopardy, players, onSubmitWagers, onSubmitGuesses }) {
++function FinalJeopardy({ finalJeopardy, players, onSubmitWagers, onSubmitGuesses, onComplete }) {
+   // Phases: 'announce' → 'category' → 'wagers' → 'clue' → 'results'
+   const [phase, setPhase] = useState('announce');
+   const [wagers, setWagers] = useState({});
+@@ -218,6 +218,9 @@
+           {revealIndex >= players.length - 1 && (
+             <div className="fj-correct-response">
+               Correct response: <strong>{finalJeopardy.response}</strong>
++              <button className="fj-continue-btn" onClick={onComplete}>
++                SEE FINAL SCORES
++              </button>
+             </div>
+           )}
+         </div>
