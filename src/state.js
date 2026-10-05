@@ -8,10 +8,15 @@ const state = {
   screen: 'setup', // setup | board | clue | daily-double | round-transition | final-category | final-wager | final-clue | final-answer | results
   round: 1,        // 1 = Jeopardy, 2 = Double Jeopardy, 3 = Final Jeopardy
 
+  // The Campaign: { chapter, basePack } while a chapter is being played, else null.
+  campaign: null,
+  clueSeconds: 30,      // clue timer — the Campaign shortens it as chapters climb
+  chapterOutcome: null, // set when a chapter's results are tallied
+
   gameMode: 'turns', // 'turns' = take turns | 'buzz' = race to buzz in
   gameLength: 'full', // 'quick' = 1 round + final | 'full' = 2 rounds + final
 
-  players: [],       // [{ name, score, correct, wrong, streak, bestStreak }]
+  players: [],       // [{ name, score, correct, wrong, streak, bestStreak, chapterCorrect, decorated }]
   activePlayer: 0,   // index of the player picking clues
   answeringPlayer: 0, // index of the player answering the current clue
   lastCorrectPlayer: 0,
@@ -62,6 +67,9 @@ export function resetForNewGame() {
   state.screen = 'setup';
   state.round = 1;
   state.gameLength = 'full';
+  state.campaign = null;
+  state.clueSeconds = 30;
+  state.chapterOutcome = null;
   state.players = [];
   state.activePlayer = 0;
   state.answeringPlayer = 0;

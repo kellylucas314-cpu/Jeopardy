@@ -2,14 +2,19 @@
  * Data loading — fetches random chunks from the question packs.
  *
  * Three packs ship with the game:
- *  - 'fresh'   → data/original/…  Original clues written for Ring In (default).
+ *  - 'fresh'   → data/original/…  Original clues written for the game (default).
  *  - 'easy'    → data/easy/…      Gentler original clues, nostalgia-friendly.
  *  - 'archive' → data/…           A large unofficial archive of televised clues,
  *                                 kept as an opt-in for personal play.
  *
  * Repeat avoidance: every category you actually get on a board is remembered in
- * localStorage (per pack). Boards never reuse a remembered category until the
- * whole pack has been cycled, at which point that pack's memory resets.
+ * localStorage (per pack + round). Boards never reuse a remembered category
+ * until the whole pack has been cycled, at which point that pack's memory resets.
+ *
+ * Recipes: the Campaign asks for boards mixed from several packs at once
+ * ("three Easy Breezy round-one categories plus two Fresh round-two ones").
+ * `loadRoundCategories` accepts such a recipe and re-scales each drawn
+ * category's values to the round being played.
  */
 
 import { loadPrefs } from './state.js';
@@ -25,6 +30,14 @@ async function loadManifest() {
 
 function randomInt(max) {
   return Math.floor(Math.random() * max);
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = randomInt(i + 1);
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }
 
 export function currentPack() {
@@ -60,19 +73,25 @@ async function loadChunk(baseDir, roundDir, chunkIndex) {
   return res.json();
 }
 
-/** Chunk-count + base dir for the active pack, falling back to the archive. */
-async function packInfo(round) {
+const ROUND_DIRS = { 1: 'jeopardy', 2: 'double', final: 'final' };
+const ROUND_VALUES = { jeopardy: [200, 400, 600, 800, 1000], double: [400, 800, 1200, 1600, 2000] };
+
+/** Chunk-count + base dir for a pack's round directory, falling back to the archive. */
+async function packInfoFor(pack, dir) {
   const m = await loadManifest();
-  const dirNames = { 1: 'jeopardy', 2: 'double', final: 'final' };
-  const dir = dirNames[round] || dirNames.final;
-  const pack = currentPack();
   if (pack === 'fresh' && m.original && m.original[dir] > 0) {
     return { pack, base: 'original/', dir, total: m.original[dir] };
   }
   if (pack === 'easy' && m.easy && m.easy[dir] > 0) {
     return { pack, base: 'easy/', dir, total: m.easy[dir] };
   }
-  return { pack: pack === 'archive' ? 'archive' : pack, base: '', dir, total: m[dir] };
+  return { pack: 'archive', base: '', dir, total: m[dir] };
+}
+
+/** Pack info for the active pack and a round number (1, 2, or 'final'). */
+async function packInfo(round) {
+  const dir = ROUND_DIRS[round] || ROUND_DIRS.final;
+  return packInfoFor(currentPack(), dir);
 }
 
 // ——— Cross-game repeat memory (per pack + round, persisted) ———
@@ -145,12 +164,11 @@ function resetPlayed(key, keep) {
 }
 
 /**
- * Load 6 random categories for the given round.
+ * Draw `count` unplayed categories from one pack directory.
  * `seen` guards within the current game; the persisted memory guards across games.
- * Returns an array of { name, clues: [{ clue, response, value }] }
+ * Returns raw categories (uncleaned, unscaled).
  */
-export async function loadRoundCategories(round, seen = new Set()) {
-  const { pack, base, dir, total } = await packInfo(round);
+async function drawCategories({ pack, base, dir, total }, count, seen) {
   const memKey = `${pack}:${dir}`;
   const played = playedSet(memKey);
   // A few category names exist in both rounds' pools — a name played in either
@@ -159,13 +177,9 @@ export async function loadRoundCategories(round, seen = new Set()) {
 
   // Visit chunks in random order, pooling unplayed categories from several
   // chunks so a board never mirrors one chunk's little neighborhood.
-  const order = Array.from({ length: total }, (_, i) => i);
-  for (let i = order.length - 1; i > 0; i--) {
-    const j = randomInt(i + 1);
-    [order[i], order[j]] = [order[j], order[i]];
-  }
+  const order = shuffle(Array.from({ length: total }, (_, i) => i));
 
-  const POOL_TARGET = 18;
+  const POOL_TARGET = Math.max(18, count * 3);
   // Scan every chunk of an original pack before declaring it exhausted: a
   // late-cycle board may have its last unplayed categories sitting in the one
   // chunk a capped scan would skip, and stopping early resets the memory while
@@ -186,10 +200,10 @@ export async function loadRoundCategories(round, seen = new Set()) {
     }
   }
 
-  // Every chunk in reach scanned and still under a boardful of new categories:
+  // Every chunk in reach scanned and still short of what the board needs:
   // the pack has genuinely cycled. Start a new cycle, but keep the most recent
   // boards excluded so nothing repeats back-to-back.
-  if (pool.length < 6) {
+  if (pool.length < count) {
     const recent = new Set(playedList(memKey).slice(-RESET_KEEP));
     resetPlayed(memKey, RESET_KEEP);
     for (const cat of fallback) {
@@ -197,33 +211,64 @@ export async function loadRoundCategories(round, seen = new Set()) {
       if (!recent.has(cat.name)) pool.push(cat);
     }
     // Tiny-pack edge case: better a recent repeat than no board at all.
-    if (pool.length < 6) {
+    if (pool.length < count) {
       for (const cat of fallback) {
-        if (pool.length >= 6) break;
+        if (pool.length >= count) break;
         if (recent.has(cat.name)) pool.push(cat);
       }
     }
   }
 
-  // Pick 6 at random from the pool.
-  for (let i = pool.length - 1; i > 0; i--) {
-    const j = randomInt(i + 1);
-    [pool[i], pool[j]] = [pool[j], pool[i]];
-  }
-  const chosen = pool.slice(0, 6);
+  shuffle(pool);
+  const chosen = pool.slice(0, count);
   for (const cat of chosen) seen.add(cat.name);
   rememberPlayed(memKey, chosen.map(c => c.name));
+  return chosen;
+}
 
-  return chosen.map(cat => ({
+/** Normalize a raw category for the board, re-scaling values to the round's ladder. */
+function toBoardCategory(cat, values) {
+  return {
     name: clean(cat.name),
-    clues: cat.clues.map(c => ({
+    clues: cat.clues.map((c, i) => ({
       clue: clean(c.clue),
       response: clean(c.response),
-      value: c.value,
+      value: values ? values[i] : c.value,
       answered: false,
       isDailyDouble: false, // We assign these ourselves
     })),
-  }));
+  };
+}
+
+/**
+ * Load categories for the given round.
+ *
+ * Default: 6 categories from the active pack's directory for that round.
+ * With `opts.recipe` ([{ pack, dir, count }]) the board is mixed from several
+ * pack directories; `opts.count` (default 6) caps the total and any shortfall
+ * is topped up from the active pack. Values are always re-scaled to the round.
+ *
+ * Returns an array of { name, clues: [{ clue, response, value }] }
+ */
+export async function loadRoundCategories(round, seen = new Set(), opts = {}) {
+  const dir = ROUND_DIRS[round] || ROUND_DIRS[1];
+  const values = ROUND_VALUES[dir];
+  const want = opts.count || 6;
+  const drawn = [];
+
+  if (Array.isArray(opts.recipe) && opts.recipe.length) {
+    for (const entry of opts.recipe) {
+      if (!entry.count) continue;
+      const info = await packInfoFor(entry.pack, entry.dir);
+      drawn.push(...(await drawCategories(info, entry.count, seen)));
+    }
+  }
+  if (drawn.length < want) {
+    const info = await packInfo(round);
+    drawn.push(...(await drawCategories(info, want - drawn.length, seen)));
+  }
+
+  return shuffle(drawn.slice(0, want)).map(cat => toBoardCategory(cat, values));
 }
 
 /**

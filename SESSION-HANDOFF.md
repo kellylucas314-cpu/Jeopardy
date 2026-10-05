@@ -73,6 +73,21 @@ PR history: #1 buzz mode+redesign, #2 fuzzy matching+Supper Club design, #3 five
 - PRs must be un-drafted (`update_pull_request draft:false`) before merging.
 - User prefs (Kelly): loves iterative "grade yourself and improve" loops, wants no repeat questions, plays with older family (keep Easy Breezy gentle), cares about copyright safety for anything shareable.
 
+## The Campaign (added 2026-09-01)
+
+Play style toggle on the setup screen: **Free Play** (the classic random board) or
+**The Campaign** — Napoleon's life in 15 historically accurate chapters, each one
+game with a themed category (+ the chapter's own Final), a difficulty tier that shapes
+the rest of the board, a shorter timer as tiers climb, and a score target to advance.
+Winning grows the Empire ledger (accurate holdings per chapter, peaking in 1811 and
+collapsing after). Three right answers in the chapter category pay the Légion d'honneur
+bonus. See `CAMPAIGN.md`. Files: `public/data/campaign/chapters.json` (content),
+`src/campaign.js` (progress, recipes, targets), engine hooks in `src/engine.js`,
+UI in `src/main.js` (chapter card, intro, results outcome, Empire ledger modal),
+checker `scripts/check-campaign.cjs`. Progress key: `jeopardy-campaign`.
+The visual map and chapter art are the next front-end pass.
+
 ## Ideas discussed but not built
 
-- Phones-as-buzzers remote multiplayer; topic picker for boards; daily challenge seed; more Easy Breezy content; difficulty selector within packs.
+- Phones-as-buzzers remote multiplayer; topic picker for boards; daily challenge seed; more Easy Breezy content.
+- Campaign front-end: SVG map of Europe driven by the ledger, chapter art, chapter-specific host lines.
