@@ -1,0 +1,24 @@
+# fresh-07 independent check (70 categories, 350 clues)
+
+All 350 clues read for accuracy, single-answer, response/clue agreement, ladder, category fit, giveaways and style. `python3 validate.py fresh-07`: 0 errors, 0 warnings. Also ran a pack-wide scan for repeated responses and for one category's response appearing in another category's clue.
+
+## Changes made
+- STATUETTE OF LIMITATIONS $200: "...from an Alabama bus bench in this 1994 film" -> "...from a Georgia bus bench in this 1994 film" (Forrest Gump). Reason: Forrest is from Alabama but the bus-bench framing scenes are set in Savannah, Georgia; factual error.
+- THE HUMAN SKELETON $200: "This long bone of the upper arm shares its name with a nerve nicknamed the 'funny bone'" -> "This long bone of the upper arm inspired the pun behind the elbow's 'funny bone' nickname" (the humerus). Reason: the "funny bone" is the ulnar nerve, which does not share the humerus's name; the nickname is a pun on humerus/humorous.
+- MONTH TO MONTH $800: Ramadan clue -> "Thanks to Russia's old Julian calendar, the 1917 'October Revolution' fell in this month by Western reckoning" (November). Reason: Ramadan was a duplicate response with FAITH ACCOMPLI $200 in the same pack; the $200 row is the better home for it.
+- DOUBLE-O HEAVEN $600: Waterloo/ABBA clue -> "Max Yasgur's dairy farm in Bethel, New York hosted this 1969 festival named for a town 40 miles away" (Woodstock). Reason: Waterloo was a duplicate response with SITES FOR SORE ARMIES $200; Woodstock keeps the double-O gimmick and the $600 difficulty.
+- CAPITAL GAINS $600: Tokyo "eastern capital" clue -> "Locals call it Krung Thep, but this Thai capital's full ceremonial name runs well over 100 letters" (Bangkok). Reason: Tokyo was a duplicate response with WORLD CAPITALS $200 (both clues also leaned on Kyoto).
+- RHYMES WITH "CAT" $200: Dracula/bat clue -> "A magician's rabbit traditionally emerges from this piece of headwear, often a tall black one" (a hat (a top hat)). Reason: "the bat" was a duplicate response with ANIMAL KINGDOM 101 $400; the editor had reworded the clue but the answer still repeated.
+- GODS & MONARCHS $400: Amaterasu/"the sun" clue -> "France's 'Sun King' Louis XIV modeled his royal image on this Greco-Roman god of light and music" (Apollo). Reason: "the sun" was a duplicate response with STARRY, STARRY NIGHT $200; Apollo keeps the god-and-monarch pairing.
+- HAUTE TOPICS $1000: "Christian Dior called this Spanish couturier... 'the master of us all'" -> "Famed for sculptural shapes, this Spanish couturier was hailed by his Paris rivals as 'the master of us all'" (Balenciaga). Reason: the clue named Christian Dior, who is the HOUSE RULES $600 response in the same pack; the quote is Dior's, so "Paris rivals" stays true.
+
+## Facts verified and left alone (non-obvious ones)
+Harold Russell's two Oscars for The Best Years of Our Lives; BEC first made in Colorado 1995; hyoid as the only non-articulating bone; Kate Bush at 19 topping the UK chart with Wuthering Heights; Hope Diamond mailed to the Smithsonian in 1958; Cullinan 3,106 carats named for the mine chairman; Vasa raised 1961; Golden Hind renamed from Pelican mid-voyage; Perrault 1697; Gaugamela = Arbela 331 B.C.; Tours = Poitiers 732; Actium 31 B.C.; Farnsworth's 1927 image at 21; Zipper coined by B.F. Goodrich; Thermos from Greek via a German firm; Richard Bachman outed 1985; Pictionary by Seattle waiter Rob Angel 1985; euchre "bowers" from German Bauer; Suckling and cribbage; Millau Viaduct taller than the Eiffel Tower; Christiania -> Oslo 1925; Abuja 1991; Ankara 1923; Ottawa 1857; Taser from Tom Swift; CARE acronym; Woodstock site is about 40 miles from the town of Woodstock; October Revolution = 7 November 1917 Gregorian.
+
+## Still shaky / judgment calls
+- SKELETON CREW and THE HUMAN SKELETON are two bone categories in one pack with no shared responses, but both $200 clues cite the 206-bone count. Pack-level overlap, not a clue error; flagging for the pack assembler.
+- WORLD CAPITALS, CAPITAL GAINS and CAPITAL OFFENSES are three capital-city categories in one pack (no shared responses after the Bangkok change).
+- "Great Wall is the longest man-made structure" (WONDER-FUL $200) is a popular claim kept as is, as the editor noted.
+- Ramen's descent from Chinese lamian (USE YOUR NOODLE $400) is the standard account but etymology is debated; the response (China) is safe either way.
+- Minor cross-category name drops left alone because the hinted answers are $200-$400 rows or common knowledge: Tina Fey named in LAUGHING ON THE JOB $800 (SNL $400 response); Vienna named in ANTAGONIST'S PARADISE $1000 (SULTANS OF SWING $1200 response); Waterloo named in two other clues ($200 response).
+- CLOUD NINE $200 "a rainbow" and GOING VIRAL $800 "a double rainbow" are distinct responses but close cousins.
