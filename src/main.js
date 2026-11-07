@@ -206,6 +206,11 @@ function handleTimeExpired() {
 
 // ——— Setup Screen ———
 
+function prefersReducedMotion() {
+  return typeof window.matchMedia === 'function'
+    && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
 function renderSetup() {
   const prefs = loadPrefs();
   const savedNames = prefs.names || [];
@@ -231,24 +236,26 @@ function renderSetup() {
     <div class="setup-screen">
       <section class="setup-hero" aria-labelledby="game-title">
         <div class="setup-brand">
-          <div class="eyebrow">A trivia coup hosted by Napoleon</div>
           <h1 class="logo" id="game-title">Clue d&rsquo;&Eacute;tat</h1>
-          <p class="setup-deck">History is watching. Choose your battlefield and seize the board.</p>
+          <p class="setup-deck">A trivia coup hosted by Napoleon. History is watching.</p>
         </div>
-        <div class="title-film">
-          <video class="title-video" autoplay muted loop playsinline preload="metadata"
-                 poster="./assets/napoleon-title-poster.webp"
-                 aria-label="Animated low-poly Napoleon, host of Clue d'État">
+        <figure class="title-stage" role="img"
+                aria-label="Low-poly Napoleon tips his hat as he rises out of a folded map of Europe">
+          <img class="title-map title-map-back" src="./assets/napoleon-map-back.webp" alt=""
+               width="1485" height="546" decoding="async">
+          <video class="title-napoleon" muted loop playsinline preload="metadata"
+                 ${prefersReducedMotion() ? '' : 'autoplay'}
+                 poster="./assets/napoleon-title-poster.webp" aria-hidden="true">
             <source src="./assets/napoleon-title.mp4" type="video/mp4">
           </video>
-          <div class="title-film-label">The Emperor awaits</div>
-        </div>
+          <img class="title-map title-map-front" src="./assets/napoleon-map-front.webp" alt=""
+               width="1485" height="546" decoding="async">
+        </figure>
         ${hof}
       </section>
       <section class="setup-panel">
         <div class="setup-panel-heading">
-          <span class="setup-panel-kicker">Prepare the table</span>
-          <h2>Begin a campaign</h2>
+          <h2>Prepare the table</h2>
         </div>
         <div class="setup-card">
           <h2>How many players?</h2>

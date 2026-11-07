@@ -2003,7 +2003,6 @@ input { caret-color: var(--terracotta-deep); }
 
 .eyebrow,
 .setup-panel-kicker,
-.title-film-label,
 .guest-title,
 .guest-names,
 .round-name,
@@ -2032,33 +2031,44 @@ input { caret-color: var(--terracotta-deep); }
   line-height: 1.55;
 }
 
-.title-film {
+/* Napoleon rises out of a folded map: map back, the hat-tip film, map front.
+   The film's white ground multiplies away into the stage, so there is no box. */
+.title-stage {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: #ffffff;
-  box-shadow: var(--shadow);
+  max-width: 980px;
+  aspect-ratio: 1485 / 883;
+  margin: 0;
+  background: var(--ink);
+  isolation: isolate;
 }
 
-.title-video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.title-film-label {
+.title-map {
   position: absolute;
-  left: 18px;
-  bottom: 18px;
-  padding: 9px 14px;
-  border-radius: 999px;
-  background: rgba(34, 34, 34, 0.9);
-  color: #ffffff;
-  font-size: 0.64rem;
+  left: 0;
+  top: 38.16%;
+  width: 100%;
+  height: 61.84%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.title-map-back { z-index: 0; }
+.title-map-front { z-index: 2; }
+
+.title-napoleon {
+  position: absolute;
+  z-index: 1;
+  left: 11.25%;
+  top: 0;
+  width: 74.14%;
+  height: 70.1%;
+  object-fit: fill;
+  mix-blend-mode: multiply;
+  filter: brightness(1.05);
+  /* the hat brushes the top of the film when he lifts it: let it fade, not slice */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 7%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 7%);
 }
 
 .setup-hero .hall-of-fame {
@@ -2070,10 +2080,10 @@ input { caret-color: var(--terracotta-deep); }
   min-height: 0;
   overflow-y: auto;
   padding: clamp(22px, 2.6vw, 38px);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: rgba(255, 253, 250, 0.96);
-  box-shadow: var(--shadow);
+  border: 0;
+  border-radius: 28px;
+  background: #f6ede1;
+  box-shadow: none;
 }
 
 .setup-panel-heading { margin-bottom: 24px; }
@@ -2397,6 +2407,9 @@ input { caret-color: var(--terracotta-deep); }
     min-height: 100dvh;
     grid-template-columns: 1fr;
     overflow: visible;
+    /* #app centres its child; a tall setup page must start at the top, or its
+       title overflows above the scroll origin where nobody can reach it */
+    align-self: flex-start;
   }
   .setup-hero { justify-content: flex-start; }
   .setup-panel { overflow: visible; }
@@ -2419,7 +2432,6 @@ input { caret-color: var(--terracotta-deep); }
 @media (max-width: 560px) {
   .setup-screen { padding: 14px; }
   .setup-panel { padding: 18px; }
-  .title-film { border-radius: 18px; }
   .board-host { display: none; }
   .board-stage { grid-template-columns: 1fr; }
   .board-footer { display: flex; flex-direction: column; align-items: stretch; }
