@@ -660,7 +660,7 @@ function renderBoard() {
   const chapter = campaign && campaign.chapter;
   const roundName = chapter
     ? `Chapter ${chapter.number} · ${chapter.title} · ${round === 1 ? 'Round I' : 'Round II · Doubled'}`
-    : round === 1 ? 'Campaign I' : 'Campaign II · Doubled';
+    : round === 1 ? 'Round I' : 'Round II · Doubled';
   const progress = Math.round((cluesAnswered / totalClues) * 100);
 
   app.innerHTML = `

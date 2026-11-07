@@ -2661,3 +2661,95 @@ input { caret-color: var(--terracotta-deep); }
   .empire-list li { grid-template-columns: 1fr; }
   .eh-status { white-space: normal; }
 }
+
+/* ============================================================
+   POSTER PASS (Nov 2026): the rules that make kellylucas.dev and
+   the HelioFlux site feel calm, applied to the board and clues.
+   One quiet frame, flat fills, no borders or shadows, round shapes,
+   big type at a regular weight. Napoleonic palette unchanged.
+   ============================================================ */
+
+/* A calmer table: the faceted hills stay, washed back toward paper */
+.board-screen {
+  background:
+    linear-gradient(rgba(255, 249, 243, 0.62), rgba(255, 249, 243, 0.62)),
+    var(--ink) url('/assets/board-faceted-bg.webp') center / cover no-repeat;
+}
+
+/* The wordmark already owns the title page; on the board it is a header */
+.board-title { font-size: clamp(2rem, 3.4vw, 3.3rem); font-weight: 500; }
+.round-name { color: var(--jade-deep); }
+
+.btn-menu,
+.player-score,
+.host-monogram,
+.host-plaque {
+  border: 0;
+  background: var(--surface-1);
+}
+.btn-menu { border-radius: 999px; }
+.player-score { border-radius: 999px; padding-right: 20px; }
+.player-score.active { background: var(--surface-1); box-shadow: inset 0 0 0 2px var(--pc); }
+.player-avatar { border-radius: 999px; }
+.host-monogram { border-radius: 999px; color: var(--brass-bright); }
+.host-plaque { border-radius: 999px; padding: 12px 20px; }
+
+/* The grid: flat tiles on a flat tray, rows that line up at any width */
+.game-board {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: auto repeat(5, minmax(0, 1fr));
+  border: 0;
+  border-radius: 24px;
+  background: rgba(243, 231, 216, 0.82);
+  backdrop-filter: none;
+  box-shadow: none;
+}
+.board-category {
+  display: grid;
+  grid-row: 1 / -1;
+  grid-template-rows: subgrid;
+}
+.category-header {
+  border: 0;
+  border-radius: 16px;
+  background: #b4532f; /* deep terracotta: white text clears 4.5:1 */
+  font-weight: 600;
+}
+.board-category.themed .category-header { box-shadow: none; background: var(--jade-deep); }
+
+.board-clue {
+  border: 0;
+  border-radius: 16px;
+  background: var(--surface-1);
+  font-weight: 430;
+  box-shadow: none;
+}
+.board-clue:hover:not(.answered),
+.board-clue.cursor {
+  border: 0;
+  background: var(--jade-deep);
+  transform: none;
+}
+.board-clue.answered {
+  border: 0;
+  background: rgba(255, 253, 250, 0.38);
+}
+
+.board-host img { filter: none; }
+
+.guest-title { color: var(--jade-deep); font-size: 0.66rem; }
+.guest-names { font-size: 0.6rem; color: var(--cream); }
+
+/* The clue: the sentence is the poster; controls are pills */
+.answer-input,
+.btn-submit,
+.btn-skip { border-radius: 999px; }
+.answer-input { padding-left: 24px; padding-right: 24px; }
+
+@media (max-width: 560px) {
+  .game-board { border-radius: 18px; }
+  .category-header,
+  .board-clue { border-radius: 12px; }
+  .category-header { padding: 6px 2px; hyphens: auto; overflow-wrap: anywhere; }
+  .player-score { padding-right: 14px; }
+}
