@@ -18,7 +18,7 @@
     "value": 600
    },
    {
-    "clue": "German dental technician Klaus Teuber invented this 1995 game of island settlement",
+    "clue": "Rolling a 7 lets a player move the robber and steal a card in this German strategy game",
     "response": "Catan (The Settlers of Catan)",
     "value": 800
    },
@@ -78,7 +78,7 @@
     "value": 600
    },
    {
-    "clue": "A failed WWII rubber substitute became this bouncy, stretchy toy goo sold in a plastic egg",
+    "clue": "Apollo 8 astronauts took this stretchy goo into lunar orbit to help hold their tools in place",
     "response": "Silly Putty",
     "value": 800
    },
@@ -153,8 +153,8 @@
   "name": "WHAT'S IN A BRAND NAME?",
   "clues": [
    {
-    "clue": "Translated from German, this automaker's name simply means 'people's car'",
-    "response": "Volkswagen",
+    "clue": "Dallas-born in 1927, this convenience chain was renamed in 1946 for its new, longer hours",
+    "response": "7-Eleven",
     "value": 200
    },
    {
@@ -318,8 +318,8 @@
     "value": 600
    },
    {
-    "clue": "A Philadelphia hatter's 1865 'Boss of the Plains' made his name a byword for cowboy hats",
-    "response": "Stetson",
+    "clue": "This knitted cap that covers all but the face is named for an 1854 Crimean War battle site",
+    "response": "a balaclava",
     "value": 800
    },
    {

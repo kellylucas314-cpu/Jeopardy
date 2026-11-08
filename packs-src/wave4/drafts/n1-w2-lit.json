@@ -79,7 +79,7 @@
   { "name": "LANDLUBBER LINGO", "clues": [
     { "clue": "Sheets are the ropes that trim a sail, so a staggering drunk is 'three sheets to' this", "response": "the wind", "value": 200 },
     { "clue": "A sudden headwind pressing the sails backward left a ship 'taken' this way, now meaning startled", "response": "aback", "value": 400 },
-    { "clue": "Admiral Vernon, nicknamed 'Old Grog,' watered his sailors' rum, giving us this word for woozy", "response": "groggy", "value": 600 },
+    { "clue": "A deck gun that snapped its ropes and careered wildly gave us this phrase for a reckless person", "response": "a loose cannon", "value": 600 },
     { "clue": "The last of an anchor cable, tied to deck posts called bitts, gave us this phrase for the very finish", "response": "the bitter end", "value": 800 },
     { "clue": "A ship's drinking-water cask, where crews swapped gossip, gave us this word for rumor", "response": "scuttlebutt", "value": 1000 }
   ] }

@@ -1,86 +1,362 @@
 [
-  { "name": "CROONER CORNER", "clues": [
-    { "clue": "Ol' Blue Eyes did it 'My Way' and sang of 'New York, New York'", "response": "Frank Sinatra", "value": 200 },
-    { "clue": "'Chestnuts roasting on an open fire' opens this velvet-voiced singer's classic", "response": "Nat King Cole", "value": 400 },
-    { "clue": "This 'Splish Splash' and 'Mack the Knife' singer married actress Sandra Dee in 1960", "response": "Bobby Darin", "value": 600 },
-    { "clue": "Before his 'Hot Diggity' fame, this crooner cut hair in Canonsburg, Pennsylvania", "response": "Perry Como", "value": 800 },
-    { "clue": "This crooner painted, too, signing his canvases with his real surname, Benedetto", "response": "Tony Bennett", "value": 1000 }
-  ] },
-  { "name": "RABBIT EARS", "clues": [
-    { "clue": "He led the band at the Tropicana nightclub, then came home to Lucy", "response": "Ricky Ricardo (Desi Arnaz)", "value": 200 },
-    { "clue": "Aunt Bee and little Opie lived in this TV town, where Floyd ran the barbershop", "response": "Mayberry", "value": 400 },
-    { "clue": "Art Carney played sewer worker Ed Norton on this classic sitcom", "response": "The Honeymooners", "value": 600 },
-    { "clue": "Ward and June Cleaver raised sons Wally and Theodore on this sitcom", "response": "Leave It to Beaver", "value": 800 },
-    { "clue": "Don Adams' bumbling Agent 86 took calls on a shoe phone in this spy spoof", "response": "Get Smart", "value": 1000 }
-  ] },
-  { "name": "WE'RE OFF TO SEE", "clues": [
-    { "clue": "Played by a female terrier named Terry, he was Dorothy's little dog", "response": "Toto", "value": 200 },
-    { "clue": "In the 1939 film, Dorothy clicks the heels of these sparkly red shoes", "response": "ruby slippers", "value": 400 },
-    { "clue": "The Tin Man joined the trip to Oz hoping to be given one of these", "response": "a heart", "value": 600 },
-    { "clue": "Dorothy Gale lived on her aunt and uncle's farm in this state", "response": "Kansas", "value": 800 },
-    { "clue": "This vaudeville comic roared and whimpered as the Cowardly Lion", "response": "Bert Lahr", "value": 1000 }
-  ] },
-  { "name": "BIG BAND STAND", "clues": [
-    { "clue": "'Chattanooga Choo Choo' and 'Pennsylvania 6-5000' came from this bandleader", "response": "Glenn Miller", "value": 200 },
-    { "clue": "Gene Krupa pounded the drums on 'Sing, Sing, Sing' for this clarinetist's band", "response": "Benny Goodman", "value": 400 },
-    { "clue": "His 'Champagne Music' bubbled on TV with a 'wunnerful, wunnerful'", "response": "Lawrence Welk", "value": 600 },
-    { "clue": "Sinatra swung through 'Fly Me to the Moon' in 1964 with this bandleader's orchestra", "response": "Count Basie", "value": 800 },
-    { "clue": "Tommy and Jimmy were the bandleading brothers with this last name", "response": "Dorsey", "value": 1000 }
-  ] },
-  { "name": "YULE BE WATCHING", "clues": [
-    { "clue": "An angel named Clarence earns his wings saving George Bailey in this film", "response": "It's a Wonderful Life", "value": 200 },
-    { "clue": "Ralphie dreams of a Red Ryder BB gun in this holiday film", "response": "A Christmas Story", "value": 400 },
-    { "clue": "A man who says he's Kris Kringle goes on trial in New York in this 1947 film", "response": "Miracle on 34th Street", "value": 600 },
-    { "clue": "Danny Kaye and Bing Crosby put on a show at a Vermont inn in this 1954 film", "response": "White Christmas", "value": 800 },
-    { "clue": "Cary Grant played an angel named Dudley in this 1947 Christmas film", "response": "The Bishop's Wife", "value": 1000 }
-  ] },
-  { "name": "FURRY CO-STARS", "clues": [
-    { "clue": "This collie always ran for help when Timmy was in trouble", "response": "Lassie", "value": 200 },
-    { "clue": "The Lone Ranger called out 'Hi-yo' to this white horse", "response": "Silver", "value": 400 },
-    { "clue": "This bottlenose dolphin had his own TV series in the 1960s", "response": "Flipper", "value": 600 },
-    { "clue": "After he died, this palomino was mounted for display at Roy Rogers' museum", "response": "Trigger", "value": 800 },
-    { "clue": "This chimp played Tarzan's sidekick in the Johnny Weissmuller films", "response": "Cheeta (Cheetah)", "value": 1000 }
-  ] },
-  { "name": "SOCK HOP HITS", "clues": [
-    { "clue": "Big Mama Thornton sang this blues hit in 1953, three years before Elvis covered it", "response": "Hound Dog", "value": 200 },
-    { "clue": "This Chubby Checker dance hit topped the charts in 1960 and again in 1962", "response": "the Twist", "value": 400 },
-    { "clue": "'Ain't That a Shame' and 'I'm Walkin'' came from this New Orleans rocker", "response": "Fats Domino", "value": 600 },
-    { "clue": "Buddy Holly's backing band shared its name with these chirping insects", "response": "the Crickets", "value": 800 },
-    { "clue": "This vocal group's 'Smoke Gets in Your Eyes' topped the charts in 1959", "response": "the Platters", "value": 1000 }
-  ] },
-  { "name": "MUSIC ROOM FAVORITES", "clues": [
-    { "clue": "A standard one of these has 88 keys, 52 white and 36 black", "response": "a piano", "value": 200 },
-    { "clue": "Louis Armstrong blew this brass horn with three valves", "response": "a trumpet", "value": 400 },
-    { "clue": "Angels in old paintings often pluck this tall, many-stringed instrument", "response": "a harp", "value": 600 },
-    { "clue": "Polka bands love this squeezebox with a keyboard and bellows", "response": "an accordion", "value": 800 },
-    { "clue": "This big coiled bass horn wraps around a marcher and is named for a bandmaster", "response": "a sousaphone", "value": 1000 }
-  ] },
-  { "name": "TV'S WILD WEST", "clues": [
-    { "clue": "Doc, Festus and Miss Kitty were Dodge City regulars on this show", "response": "Gunsmoke", "value": 200 },
-    { "clue": "The Cartwrights ran the Ponderosa ranch on this show", "response": "Bonanza", "value": 400 },
-    { "clue": "Frankie Laine sang the whip-cracking theme of this cattle-drive show", "response": "Rawhide", "value": 600 },
-    { "clue": "James Garner played a cardsharp gambler on this comic Western", "response": "Maverick", "value": 800 },
-    { "clue": "Widower Lucas McCain raised his son Mark on a North Fork ranch in this Western", "response": "The Rifleman", "value": 1000 }
-  ] },
-  { "name": "HOLLYWOOD HOOFERS", "clues": [
-    { "clue": "Hollywood's switch to talking pictures is the backdrop of this 1952 Gene Kelly film", "response": "Singin' in the Rain", "value": 200 },
-    { "clue": "Deborah Kerr's widowed governess whistles a happy tune in Siam in this 1956 film", "response": "The King and I", "value": 400 },
-    { "clue": "Judy Garland met her future husband Vincente Minnelli making this 1944 musical", "response": "Meet Me in St. Louis", "value": 600 },
-    { "clue": "Ginger Rogers' feathered gown molted on Fred during 'Cheek to Cheek' in this film", "response": "Top Hat", "value": 800 },
-    { "clue": "Leslie Caron's Paris schoolgirl blossoms into a lady in this 1958 Best Picture", "response": "Gigi", "value": 1000 }
-  ] },
-  { "name": "PAIRED FOR LAUGHS", "clues": [
-    { "clue": "'Who's on First?' was this pair's famous baseball routine", "response": "Abbott and Costello", "value": 200 },
-    { "clue": "This duo hauled a piano up a long flight of steps in 'The Music Box'", "response": "Laurel and Hardy", "value": 400 },
-    { "clue": "She was George Burns' scatterbrained wife and comedy partner", "response": "Gracie Allen", "value": 600 },
-    { "clue": "Siblings Tom and Dick hosted a 1960s comedy hour on CBS", "response": "the Smothers Brothers", "value": 800 },
-    { "clue": "Dean and Jerry made 16 films together as this comedy team", "response": "Martin and Lewis", "value": 1000 }
-  ] },
-  { "name": "HUMMABLE CLASSICS", "clues": [
-    { "clue": "This child prodigy from Salzburg wrote 'Eine kleine Nachtmusik'", "response": "Mozart", "value": 200 },
-    { "clue": "He composed 'Für Elise' and the 'Moonlight' Sonata while losing his hearing", "response": "Beethoven", "value": 400 },
-    { "clue": "Disney's 'Sleeping Beauty' borrowed its waltz 'Once Upon a Dream' from this Russian", "response": "Tchaikovsky", "value": 600 },
-    { "clue": "'The Blue Danube' came from this Viennese 'Waltz King'", "response": "Johann Strauss (II)", "value": 800 },
-    { "clue": "This Frenchman's 'Clair de lune' paints moonlight on the piano", "response": "Claude Debussy", "value": 1000 }
-  ] }
+ {
+  "name": "CROONER CORNER",
+  "clues": [
+   {
+    "clue": "Bobby-soxers swooned for this skinny young crooner at New York's Paramount Theater",
+    "response": "Frank Sinatra",
+    "value": 200
+   },
+   {
+    "clue": "'Chestnuts roasting on an open fire' opens this velvet-voiced singer's classic",
+    "response": "Nat King Cole",
+    "value": 400
+   },
+   {
+    "clue": "This 'Splish Splash' and 'Mack the Knife' singer married actress Sandra Dee in 1960",
+    "response": "Bobby Darin",
+    "value": 600
+   },
+   {
+    "clue": "'Papa Loves Mambo' in 1954 and 'Hot Diggity' in 1956 were hits for this crooner",
+    "response": "Perry Como",
+    "value": 800
+   },
+   {
+    "clue": "Bob Hope suggested this crooner's stage name after catching his act in 1949",
+    "response": "Tony Bennett",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "RABBIT EARS",
+  "clues": [
+   {
+    "clue": "'Babalu' was this TV bandleader's signature number at the Tropicana",
+    "response": "Ricky Ricardo (Desi Arnaz)",
+    "value": 200
+   },
+   {
+    "clue": "Aunt Bee and little Opie lived in this TV town, where Floyd ran the barbershop",
+    "response": "Mayberry",
+    "value": 400
+   },
+   {
+    "clue": "Art Carney played sewer worker Ed Norton on this classic sitcom",
+    "response": "The Honeymooners",
+    "value": 600
+   },
+   {
+    "clue": "Smooth-talking Eddie Haskell buttered up Mrs. Cleaver on this sitcom",
+    "response": "Leave It to Beaver",
+    "value": 800
+   },
+   {
+    "clue": "Don Adams' bumbling Agent 86 took calls on a shoe phone in this spy spoof",
+    "response": "Get Smart",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "WE'RE OFF TO SEE",
+  "clues": [
+   {
+    "clue": "Played by a female terrier named Terry, he was Dorothy's little dog",
+    "response": "Toto",
+    "value": 200
+   },
+   {
+    "clue": "In the 1939 film, Dorothy clicks the heels of these sparkly red shoes",
+    "response": "ruby slippers",
+    "value": 400
+   },
+   {
+    "clue": "The Tin Man joined the trip to Oz hoping to be given one of these",
+    "response": "a heart",
+    "value": 600
+   },
+   {
+    "clue": "Dorothy Gale lived on her aunt and uncle's farm in this state",
+    "response": "Kansas",
+    "value": 800
+   },
+   {
+    "clue": "This vaudeville comic roared and whimpered as the Cowardly Lion",
+    "response": "Bert Lahr",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BIG BAND STAND",
+  "clues": [
+   {
+    "clue": "'Chattanooga Choo Choo' and 'Pennsylvania 6-5000' came from this bandleader",
+    "response": "Glenn Miller",
+    "value": 200
+   },
+   {
+    "clue": "Gene Krupa pounded the drums on 'Sing, Sing, Sing' for this clarinetist's band",
+    "response": "Benny Goodman",
+    "value": 400
+   },
+   {
+    "clue": "The Lennon Sisters harmonized for years on this bandleader's TV show",
+    "response": "Lawrence Welk",
+    "value": 600
+   },
+   {
+    "clue": "Sinatra swung through 'Fly Me to the Moon' in 1964 with this bandleader's orchestra",
+    "response": "Count Basie",
+    "value": 800
+   },
+   {
+    "clue": "Tommy and Jimmy were the bandleading brothers with this last name",
+    "response": "Dorsey",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "YULE BE WATCHING",
+  "clues": [
+   {
+    "clue": "George Bailey finds Zuzu's petals in his pocket in this film",
+    "response": "It's a Wonderful Life",
+    "value": 200
+   },
+   {
+    "clue": "Ralphie dreams of a Red Ryder BB gun in this holiday film",
+    "response": "A Christmas Story",
+    "value": 400
+   },
+   {
+    "clue": "A man who says he's Kris Kringle goes on trial in New York in this 1947 film",
+    "response": "Miracle on 34th Street",
+    "value": 600
+   },
+   {
+    "clue": "Danny Kaye and Bing Crosby put on a show at a Vermont inn in this 1954 film",
+    "response": "White Christmas",
+    "value": 800
+   },
+   {
+    "clue": "Cary Grant played an angel named Dudley in this 1947 Christmas film",
+    "response": "The Bishop's Wife",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "FURRY CO-STARS",
+  "clues": [
+   {
+    "clue": "A male collie named Pal played this canine heroine, and so did his descendants",
+    "response": "Lassie",
+    "value": 200
+   },
+   {
+    "clue": "The Lone Ranger called out 'Hi-yo' to this white horse",
+    "response": "Silver",
+    "value": 400
+   },
+   {
+    "clue": "'No one you see is smarter than he,' went this TV dolphin's theme",
+    "response": "Flipper",
+    "value": 600
+   },
+   {
+    "clue": "After he died, this palomino was mounted for display at Roy Rogers' museum",
+    "response": "Trigger",
+    "value": 800
+   },
+   {
+    "clue": "This chimp played Tarzan's sidekick in the Johnny Weissmuller films",
+    "response": "Cheeta (Cheetah)",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "SOCK HOP HITS",
+  "clues": [
+   {
+    "clue": "Big Mama Thornton sang this blues hit in 1953, three years before Elvis covered it",
+    "response": "Hound Dog",
+    "value": 200
+   },
+   {
+    "clue": "Move as if you're drying your back with a towel to do this 1960 dance",
+    "response": "the Twist",
+    "value": 400
+   },
+   {
+    "clue": "'Ain't That a Shame' and 'I'm Walkin'' came from this New Orleans rocker",
+    "response": "Fats Domino",
+    "value": 600
+   },
+   {
+    "clue": "Buddy Holly's backing band shared its name with these chirping insects",
+    "response": "the Crickets",
+    "value": 800
+   },
+   {
+    "clue": "This vocal group's 'Smoke Gets in Your Eyes' topped the charts in 1959",
+    "response": "the Platters",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "MUSIC ROOM FAVORITES",
+  "clues": [
+   {
+    "clue": "Liberace's trademark candelabra glowed atop this instrument as he played",
+    "response": "a piano",
+    "value": 200
+   },
+   {
+    "clue": "Harry James, Betty Grable's husband, led his big band on this brass horn",
+    "response": "a trumpet",
+    "value": 400
+   },
+   {
+    "clue": "Angels in old paintings often pluck this tall, many-stringed instrument",
+    "response": "a harp",
+    "value": 600
+   },
+   {
+    "clue": "Arthur Godfrey strummed this little four-stringed instrument on his TV shows",
+    "response": "a ukulele",
+    "value": 800
+   },
+   {
+    "clue": "Its name is German for 'bell play,' and marching bands strike its metal bars",
+    "response": "a glockenspiel",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "TV'S WILD WEST",
+  "clues": [
+   {
+    "clue": "Doc, Festus and Miss Kitty were Dodge City regulars on this show",
+    "response": "Gunsmoke",
+    "value": 200
+   },
+   {
+    "clue": "A map bursting into flames opened each episode of this Nevada Western",
+    "response": "Bonanza",
+    "value": 400
+   },
+   {
+    "clue": "Frankie Laine sang the whip-cracking theme of this cattle-drive show",
+    "response": "Rawhide",
+    "value": 600
+   },
+   {
+    "clue": "'Who is the tall dark stranger there?' asked the theme of this Western",
+    "response": "Maverick",
+    "value": 800
+   },
+   {
+    "clue": "Ward Bond's Major Seth Adams led settlers west from Missouri on this Western",
+    "response": "Wagon Train",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HOLLYWOOD HOOFERS",
+  "clues": [
+   {
+    "clue": "Hollywood's switch to talking pictures is the backdrop of this 1952 Gene Kelly film",
+    "response": "Singin' in the Rain",
+    "value": 200
+   },
+   {
+    "clue": "Deborah Kerr's widowed governess whistles a happy tune in Siam in this 1956 film",
+    "response": "The King and I",
+    "value": 400
+   },
+   {
+    "clue": "Judy Garland met her future husband Vincente Minnelli making this 1944 musical",
+    "response": "Meet Me in St. Louis",
+    "value": 600
+   },
+   {
+    "clue": "Ginger Rogers' feathered gown molted on Fred during 'Cheek to Cheek' in this film",
+    "response": "Top Hat",
+    "value": 800
+   },
+   {
+    "clue": "Leslie Caron's Paris schoolgirl blossoms into a lady in this 1958 Best Picture",
+    "response": "Gigi",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "PAIRED FOR LAUGHS",
+  "clues": [
+   {
+    "clue": "Bud and Lou met Frankenstein in a 1948 horror spoof as this duo",
+    "response": "Abbott and Costello",
+    "value": 200
+   },
+   {
+    "clue": "This duo hauled a piano up a long flight of steps in 'The Music Box'",
+    "response": "Laurel and Hardy",
+    "value": 400
+   },
+   {
+    "clue": "In 1940 she ran a mock campaign for president with the Surprise Party",
+    "response": "Gracie Allen",
+    "value": 600
+   },
+   {
+    "clue": "Pat Paulsen's deadpan 1968 run for president began on these siblings' show",
+    "response": "the Smothers Brothers",
+    "value": 800
+   },
+   {
+    "clue": "Dean and Jerry made 16 films together as this comedy team",
+    "response": "Martin and Lewis",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HUMMABLE CLASSICS",
+  "clues": [
+   {
+    "clue": "This child prodigy from Salzburg wrote 'Eine kleine Nachtmusik'",
+    "response": "Mozart",
+    "value": 200
+   },
+   {
+    "clue": "He composed 'Für Elise' and the 'Moonlight' Sonata while losing his hearing",
+    "response": "Beethoven",
+    "value": 400
+   },
+   {
+    "clue": "Disney's 'Sleeping Beauty' borrowed its waltz 'Once Upon a Dream' from this Russian",
+    "response": "Tchaikovsky",
+    "value": 600
+   },
+   {
+    "clue": "'The Blue Danube' came from this Viennese 'Waltz King'",
+    "response": "Johann Strauss (II)",
+    "value": 800
+   },
+   {
+    "clue": "This Frenchman's 'Clair de lune' paints moonlight on the piano",
+    "response": "Claude Debussy",
+    "value": 1000
+   }
+  ]
+ }
 ]

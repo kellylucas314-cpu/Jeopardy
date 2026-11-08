@@ -23,7 +23,7 @@
         "value": 1600
       },
       {
-        "clue": "Nicknamed 'water bears,' these eight-legged micro-animals have survived exposure to outer space",
+        "clue": "Dried out into a shriveled 'tun,' these micro-animals can revive after years without water",
         "response": "tardigrades",
         "value": 2000
       }
@@ -43,7 +43,7 @@
         "value": 800
       },
       {
-        "clue": "A hero dipped in the River Styx lends his name to this cord linking your calf muscle to your heel",
+        "clue": "The body's thickest and strongest of its kind, this heel cord can still snap during a sprint",
         "response": "the Achilles tendon",
         "value": 1200
       },
@@ -68,7 +68,7 @@
         "value": 400
       },
       {
-        "clue": "Jim Lovell's crew looped around the moon and limped home aboard this crippled 1970 mission",
+        "clue": "Ken Mattingly was bumped from this 1970 mission days before launch after a German measles exposure",
         "response": "Apollo 13",
         "value": 800
       },
@@ -98,7 +98,7 @@
         "value": 400
       },
       {
-        "clue": "Einstein showed that mass and this are interchangeable, linked by the speed of light squared",
+        "clue": "Physics says this can't be created or destroyed, only changed from one form into another",
         "response": "energy",
         "value": 800
       },
@@ -108,12 +108,12 @@
         "value": 1200
       },
       {
-        "clue": "A straw seems to snap in two in a glass of water thanks to this bending of light",
+        "clue": "Pools look shallower than they really are because of this bending of light at the surface",
         "response": "refraction",
         "value": 1600
       },
       {
-        "clue": "Named for an Austrian physicist, this shift makes a passing siren seem to drop in pitch",
+        "clue": "Police radar guns clock speeders by measuring this shift in the frequency of returning waves",
         "response": "the Doppler effect",
         "value": 2000
       }
@@ -153,7 +153,7 @@
     "name": "THE CHEMISTRY SET",
     "clues": [
       {
-        "clue": "Fizzing on a scraped knee, this first-aid antiseptic has the formula H2O2",
+        "clue": "Its formula, H2O2, adds just one oxygen atom to water's, and it can bleach hair blond",
         "response": "hydrogen peroxide",
         "value": 400
       },
@@ -213,8 +213,8 @@
     "name": "KITCHEN FRENCH",
     "clues": [
       {
-        "clue": "From the French for 'jumped,' it means to cook food quickly in a little hot fat",
-        "response": "saute",
+        "clue": "Cooks pour brandy over crêpes Suzette and set it alight to serve them this way",
+        "response": "flambé (flambe)",
         "value": 400
       },
       {
@@ -228,12 +228,12 @@
         "value": 1200
       },
       {
-        "clue": "From a French word for 'white,' it means to dunk vegetables in boiling water, then in ice water",
-        "response": "blanch",
+        "clue": "From the French for 'rags,' this cut turns rolled-up basil leaves into thin ribbons",
+        "response": "chiffonade",
         "value": 1600
       },
       {
-        "clue": "Chefs use this French phrase for having every ingredient chopped and measured before cooking",
+        "clue": "Anthony Bourdain called this French term for kitchen prep 'the religion of all good line cooks'",
         "response": "mise en place",
         "value": 2000
       }
@@ -243,7 +243,7 @@
     "name": "SHE MADE IT",
     "clues": [
       {
-        "clue": "Ruth Wakefield of the Toll House Inn created this treat in the late 1930s",
+        "clue": "In 1997 Massachusetts honored this Ruth Wakefield treat with official state status",
         "response": "the chocolate chip cookie",
         "value": 400
       },
@@ -273,7 +273,7 @@
     "name": "WHEY TO GO",
     "clues": [
       {
-        "clue": "Greece guards the name of this crumbly brined cheese, made mostly from sheep's milk",
+        "clue": "EU rules let only Greece sell this cheese, made mostly from sheep's milk, under its name",
         "response": "feta",
         "value": 400
       },
@@ -283,7 +283,7 @@
         "value": 800
       },
       {
-        "clue": "Blue-veined and English, this cheese shares its name with a village in Cambridgeshire",
+        "clue": "Often paired with port at Christmas, this blue is nicknamed the 'King of English Cheeses'",
         "response": "Stilton",
         "value": 1200
       },
@@ -308,7 +308,7 @@
         "value": 400
       },
       {
-        "clue": "James Watt coined this unit to sell steam engines by comparing them to draft animals",
+        "clue": "Car engines are rated in this unit, with each one equal to about 746 watts",
         "response": "horsepower",
         "value": 800
       },
@@ -338,7 +338,7 @@
         "value": 400
       },
       {
-        "clue": "New Zealand growers renamed the 'Chinese gooseberry' after their national bird",
+        "clue": "An enzyme in this fuzzy brown fruit keeps gelatin desserts from setting",
         "response": "kiwi (kiwifruit)",
         "value": 800
       },
@@ -348,7 +348,7 @@
         "value": 1200
       },
       {
-        "clue": "Its stench gets this spiky 'king of fruits' banned on Singapore's subway trains",
+        "clue": "Malaysia's prized Musang King is a variety of this spiky, notoriously smelly fruit",
         "response": "the durian",
         "value": 1600
       },

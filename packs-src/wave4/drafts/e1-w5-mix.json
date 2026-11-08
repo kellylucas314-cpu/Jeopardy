@@ -23,7 +23,7 @@
     "value": 800
    },
    {
-    "clue": "Tiny cars carry pegs for spouses and kids in this Milton Bradley classic",
+    "clue": "Art Linkletter's face smiled from the play money in the 1960 edition of this classic",
     "response": "The Game of Life",
     "value": 1000
    }
@@ -53,7 +53,7 @@
     "value": 800
    },
    {
-    "clue": "'The outlook wasn't brilliant for the Mudville nine' begins this poem",
+    "clue": "Ernest Thayer first printed this baseball ballad in a San Francisco paper in 1888",
     "response": "Casey at the Bat",
     "value": 1000
    }
@@ -93,17 +93,17 @@
   "name": "HANG IT ON THE WALL",
   "clues": [
    {
-    "clue": "Her mysterious smile draws crowds at the Louvre in Paris",
+    "clue": "Napoleon once hung this Leonardo portrait in his bedroom",
     "response": "the Mona Lisa",
     "value": 200
    },
    {
-    "clue": "Vincent van Gogh painted swirling stars over a sleepy village in this work",
+    "clue": "Since 1941 this starlit van Gogh canvas has hung at New York's Museum of Modern Art",
     "response": "The Starry Night",
     "value": 400
    },
    {
-    "clue": "A farmer holds a pitchfork beside his daughter in this Grant Wood work",
+    "clue": "A pointed church-style window on an Iowa farmhouse gave this Grant Wood work its name",
     "response": "American Gothic",
     "value": 600
    },
@@ -163,7 +163,7 @@
     "value": 400
    },
    {
-    "clue": "Borden's cow mascot was married to Elmer, who went on to sell glue",
+    "clue": "This Borden cow mascot's face peers out of a daisy, and Beulah is one of her calves",
     "response": "Elsie (the Cow)",
     "value": 600
    },
@@ -218,8 +218,8 @@
     "value": 200
    },
    {
-    "clue": "These flared-leg pants were a 1970s disco dance floor staple",
-    "response": "bell-bottoms",
+    "clue": "Mary Tyler Moore set a trend wearing these snug, calf-length slacks as Laura Petrie",
+    "response": "capri pants",
     "value": 400
    },
    {
@@ -233,7 +233,7 @@
     "value": 800
    },
    {
-    "clue": "Long jackets and baggy pegged trousers made up this flashy 1940s outfit",
+    "clue": "Cab Calloway strutted in a white one of these in the 1943 film 'Stormy Weather'",
     "response": "the zoot suit",
     "value": 1000
    }
@@ -243,28 +243,28 @@
   "name": "SHUFFLE OFF",
   "clues": [
    {
-    "clue": "'Do you have any sevens?' kids ask in this card game",
-    "response": "Go Fish",
+    "clue": "Each player flips a card, and the higher one wins both, in this simple game",
+    "response": "War",
     "value": 200
    },
    {
-    "clue": "This one-player card game passed many a rainy afternoon",
+    "clue": "Britons call this card game 'patience,' and you'll need some to win it",
     "response": "solitaire",
     "value": 400
    },
    {
-    "clue": "Nobody wants to be stuck holding the unmatched queen in this game",
-    "response": "Old Maid",
+    "clue": "Flip two face-down cards at a time, hoping for a pair, in this test of recall",
+    "response": "Concentration (Memory)",
     "value": 600
    },
    {
-    "clue": "A wooden board with pegs keeps score in this card game",
-    "response": "cribbage",
+    "clue": "Get four of a kind, then snatch a utensil from the middle of the table in this game",
+    "response": "Spoons",
     "value": 800
    },
    {
-    "clue": "Born in Uruguay, this rummy game was a 1950s American craze",
-    "response": "canasta",
+    "clue": "This card game uses a 48-card deck, with two of every card from nine to ace",
+    "response": "pinochle",
     "value": 1000
    }
   ]
@@ -273,7 +273,7 @@
   "name": "HYMNAL NOTES",
   "clues": [
    {
-    "clue": "First sung in an Austrian village church in 1818, it's 'Stille Nacht' in German",
+    "clue": "Soldiers in the trenches sang this carol during the 1914 Christmas truce",
     "response": "Silent Night",
     "value": 200
    },
@@ -293,7 +293,7 @@
     "value": 800
    },
    {
-    "clue": "'Then sings my soul' rang out in this hymn at Billy Graham crusades",
+    "clue": "A Swedish poem from 1885 became this hymn, a staple of Billy Graham crusades",
     "response": "How Great Thou Art",
     "value": 1000
    }
@@ -308,8 +308,8 @@
     "value": 200
    },
    {
-    "clue": "Wham-O's flying disc was named for a Connecticut pie company",
-    "response": "the Frisbee",
+    "clue": "In America, Parker Brothers owned the rights to this bouncy name for table tennis",
+    "response": "Ping-Pong",
     "value": 400
    },
    {

@@ -1,0 +1,362 @@
+[
+  {
+    "name": "TWEET TALK",
+    "clues": [
+      {
+        "clue": "Kids in science class pick apart the furry, bony pellets this night bird coughs up",
+        "response": "the owl",
+        "value": 200
+      },
+      {
+        "clue": "Pecking up to 20 times a second, this bird drums holes in tree trunks",
+        "response": "the woodpecker",
+        "value": 400
+      },
+      {
+        "clue": "Emperor dads of this bird warm the egg on their feet all through Antarctic winter",
+        "response": "the penguin",
+        "value": 600
+      },
+      {
+        "clue": "Don Featherstone's 1957 plastic lawn ornament was one of these leggy pink birds",
+        "response": "flamingos",
+        "value": 800
+      },
+      {
+        "clue": "Its eyeball is bigger than its brain, and it's the biggest bird alive",
+        "response": "the ostrich",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "BLOOMING MARVELOUS",
+    "clues": [
+      {
+        "clue": "Hold this shiny yellow flower under a friend's chin to see if they like butter",
+        "response": "the buttercup",
+        "value": 200
+      },
+      {
+        "clue": "Anna Jarvis handed out white ones of these at the first Mother's Day in 1908",
+        "response": "carnations",
+        "value": 400
+      },
+      {
+        "clue": "Pinch this tall garden flower and its blossom opens like a tiny mouth",
+        "response": "the snapdragon",
+        "value": 600
+      },
+      {
+        "clue": "This velvety flower's name comes from French 'pensée', meaning a thought",
+        "response": "the pansy",
+        "value": 800
+      },
+      {
+        "clue": "A yellow species of this tropical bloom is Hawaii's state flower",
+        "response": "the hibiscus",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "BUG'S EYE VIEW",
+    "clues": [
+      {
+        "clue": "An old nursery rhyme tells this spotted red beetle to 'fly away home'",
+        "response": "the ladybug (ladybird)",
+        "value": 200
+      },
+      {
+        "clue": "On summer nights, kids catch these glowing 'lightning bugs' in jars",
+        "response": "fireflies",
+        "value": 400
+      },
+      {
+        "clue": "Its caterpillars feed only on milkweed, which makes this butterfly taste bad to birds",
+        "response": "the monarch",
+        "value": 600
+      },
+      {
+        "clue": "An old rule says this insect's chirps in 14 seconds plus 40 is about the temperature",
+        "response": "the cricket",
+        "value": 800
+      },
+      {
+        "clue": "Folks often call these loud, buzzing summer insects 'locusts', but they aren't",
+        "response": "cicadas",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "BACKYARD CRITTERS",
+    "clues": [
+      {
+        "clue": "Forgotten acorns buried by this bushy-tailed critter can grow into new oak trees",
+        "response": "the squirrel",
+        "value": 200
+      },
+      {
+        "clue": "Stretchy cheek pouches let these striped critters haul seeds home to their burrows",
+        "response": "chipmunks",
+        "value": 400
+      },
+      {
+        "clue": "This masked bandit of the trash can has nimble little hands",
+        "response": "the raccoon",
+        "value": 600
+      },
+      {
+        "clue": "Before it grows legs and loses its tail, a baby frog is called this",
+        "response": "a tadpole (polliwog)",
+        "value": 800
+      },
+      {
+        "clue": "Robins tug these up from lawns after a rain, and they breathe through their skin",
+        "response": "earthworms",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "MOONWALKERS",
+    "clues": [
+      {
+        "clue": "Apollo 11's commander got a pilot's license at 16, before he had a driver's license",
+        "response": "Neil Armstrong",
+        "value": 200
+      },
+      {
+        "clue": "Born Edwin, this Apollo 11 moonwalker made his boyhood nickname legal in 1988",
+        "response": "Buzz Aldrin",
+        "value": 400
+      },
+      {
+        "clue": "While his Apollo 11 crewmates walked on the Moon, he circled it alone",
+        "response": "Michael Collins",
+        "value": 600
+      },
+      {
+        "clue": "Right after landing, Armstrong radioed that 'the Eagle has landed' at this spot",
+        "response": "Tranquility Base (Tranquility)",
+        "value": 800
+      },
+      {
+        "clue": "A plaque left on the Moon reads 'We came in peace for all' this",
+        "response": "mankind",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "RING, RING!",
+    "clues": [
+      {
+        "clue": "Helen Keller dedicated 'The Story of My Life' to this telephone inventor",
+        "response": "Alexander Graham Bell",
+        "value": 200
+      },
+      {
+        "clue": "Neighbors sharing one of these could listen in on each other's calls",
+        "response": "a party line",
+        "value": 400
+      },
+      {
+        "clue": "Before push buttons, you dialed by spinning a finger wheel on this kind of telephone",
+        "response": "a rotary phone",
+        "value": 600
+      },
+      {
+        "clue": "Clark Kent famously ducked into one of these to change into Superman",
+        "response": "a phone booth",
+        "value": 800
+      },
+      {
+        "clue": "Glenn Miller's band had a 1940 hit with the hotel number 'Pennsylvania 6-' this",
+        "response": "5000 (five thousand)",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "SAY 'AHH'",
+    "clues": [
+      {
+        "clue": "Folks say 'take two of these and call me in the morning'",
+        "response": "aspirin",
+        "value": 200
+      },
+      {
+        "clue": "Under the tongue, this glass tube was supposed to read a 'normal' 98.6",
+        "response": "a thermometer",
+        "value": 400
+      },
+      {
+        "clue": "Kids who had these throat glands taken out were often treated to ice cream",
+        "response": "tonsils",
+        "value": 600
+      },
+      {
+        "clue": "The 'iron lung' helped many patients of this disease breathe in the 1950s",
+        "response": "polio",
+        "value": 800
+      },
+      {
+        "clue": "Doctors tap just below your kneecap with a little rubber hammer to test these",
+        "response": "reflexes",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "BORN TO SPARKLE",
+    "clues": [
+      {
+        "clue": "The famous Hope and Koh-i-Noor are both this April birthstone",
+        "response": "diamonds",
+        "value": 200
+      },
+      {
+        "clue": "Dorothy's 1939 movie slippers were named for this red gem, July's birthstone",
+        "response": "rubies",
+        "value": 400
+      },
+      {
+        "clue": "May's green birthstone, it's the gem the 'Isle' of Ireland is nicknamed for",
+        "response": "the emerald",
+        "value": 600
+      },
+      {
+        "clue": "February's purple birthstone, it was once thought to prevent drunkenness",
+        "response": "amethyst",
+        "value": 800
+      },
+      {
+        "clue": "January babies get this deep red stone, whose name is tied to the pomegranate",
+        "response": "the garnet",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "GIDDY-UP",
+    "clues": [
+      {
+        "clue": "Newborn horses, called these, can usually stand within an hour or two of birth",
+        "response": "foals",
+        "value": 200
+      },
+      {
+        "clue": "Budweiser's famous hitch is pulled by these big, shaggy-footed Scottish horses",
+        "response": "Clydesdales",
+        "value": 400
+      },
+      {
+        "clue": "TV's talking horse Mister Ed was this golden kind with a light mane",
+        "response": "a palomino",
+        "value": 600
+      },
+      {
+        "clue": "Scotland's tiny Shetland is a famous breed of this small horse",
+        "response": "a pony",
+        "value": 800
+      },
+      {
+        "clue": "A horse gets its shoes fitted and nailed on by this hoof-care craftsman",
+        "response": "a farrier",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "SUM FUN",
+    "clues": [
+      {
+        "clue": "Old Glory has this many stripes, one for each of the original colonies",
+        "response": "13 (thirteen)",
+        "value": 200
+      },
+      {
+        "clue": "Lincoln's 'Four score and seven years ago' meant this many years",
+        "response": "87",
+        "value": 400
+      },
+      {
+        "clue": "Twelve dozen pencils make one of these, a word that also means 'yucky'",
+        "response": "a gross",
+        "value": 600
+      },
+      {
+        "clue": "In Roman numerals, the letter L stands for this number",
+        "response": "50 (fifty)",
+        "value": 800
+      },
+      {
+        "clue": "Add up the dots on a pair of ordinary dice and you get this many",
+        "response": "42 (forty-two)",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "SANDY SHORES",
+    "clues": [
+      {
+        "clue": "Hold this to your ear and you'll seem to hear the ocean",
+        "response": "a seashell (conch shell)",
+        "value": 200
+      },
+      {
+        "clue": "Boardwalk souvenir shops sold this little critter living in a painted shell",
+        "response": "a hermit crab",
+        "value": 400
+      },
+      {
+        "clue": "Its flat, round skeleton with a five-petal pattern washes up on beaches",
+        "response": "a sand dollar",
+        "value": 600
+      },
+      {
+        "clue": "This seabird scoops up fish in the stretchy pouch under its bill",
+        "response": "the pelican",
+        "value": 800
+      },
+      {
+        "clue": "Rough waves tumble broken bottles into frosted pieces of this beach treasure",
+        "response": "sea glass",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "GRANDPA'S GADGETS",
+    "clues": [
+      {
+        "clue": "Thomas Edison recited 'Mary Had a Little Lamb' into his 1877 invention, this",
+        "response": "the phonograph",
+        "value": 200
+      },
+      {
+        "clue": "Families fiddled with these twin rod antennas on top of the TV set",
+        "response": "rabbit ears",
+        "value": 400
+      },
+      {
+        "clue": "Named for its tiny inner part, this pocket-size set took rock 'n' roll to the beach",
+        "response": "a transistor radio",
+        "value": 600
+      },
+      {
+        "clue": "A 3-year-old asking why she couldn't see her snapshot yet inspired this instant brand",
+        "response": "the Polaroid camera",
+        "value": 800
+      },
+      {
+        "clue": "A loud click mid-song meant one of these cartridges was switching to its next program",
+        "response": "8-track tapes (eight-track)",
+        "value": 1000
+      }
+    ]
+  }
+]

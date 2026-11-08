@@ -93,7 +93,7 @@
   "name": "PHARAOH ENOUGH",
   "clues": [
    {
-    "clue": "A gold mask weighing more than 20 pounds covered the mummy of this boy pharaoh",
+    "clue": "Iron from a meteorite was forged into a dagger found wrapped with the mummy of this boy pharaoh",
     "response": "Tutankhamun (King Tut)",
     "value": 200
    },
@@ -113,7 +113,7 @@
     "value": 800
    },
    {
-    "clue": "Likely Tutankhamun's father, this pharaoh renamed himself for the sun disk he worshipped",
+    "clue": "Queen Nefertiti, of the famous painted bust in Berlin, was the chief wife of this pharaoh",
     "response": "Akhenaten",
     "value": 1000
    }
@@ -123,12 +123,12 @@
   "name": "NECESSITY'S CHILDREN",
   "clues": [
    {
-    "clue": "His 42-line Bible, finished around 1455, was the first major book in Europe printed with metal type",
+    "clue": "Fewer than 50 copies survive of his famous 42-line Bible, finished around 1455",
     "response": "Johannes Gutenberg",
     "value": 200
    },
    {
-    "clue": "Eli Whitney's 1793 machine stripped the seeds from fluffy bolls, making Southern plantations boom",
+    "clue": "Copycats pirated Eli Whitney's 1794 patent on this machine so widely that it barely paid him",
     "response": "the cotton gin",
     "value": 400
    },
@@ -283,7 +283,7 @@
     "value": 400
    },
    {
-    "clue": "Antoni Gaudí is buried in the crypt of this Barcelona basilica, which he worked on for 43 years",
+    "clue": "Antoni Gaudí lies buried in the crypt of this Barcelona basilica he designed",
     "response": "the Sagrada Família",
     "value": 600
    },
@@ -308,7 +308,7 @@
     "value": 200
    },
    {
-    "clue": "Machu Picchu was a royal mountain estate for the rulers of this Andean empire",
+    "clue": "Its people called this Andean empire Tawantinsuyu, or 'the four parts together'",
     "response": "the Inca",
     "value": 400
    },

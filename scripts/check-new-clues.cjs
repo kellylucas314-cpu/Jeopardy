@@ -12,6 +12,8 @@
  *      that shares a seven-word run with a real clue or closely matches one with the same
  *      response (we write our own sentences);
  *   3. the other new files in the same run (same rules, so two writers can't collide).
+ *      Categories already appended under the same name are skipped, so a deployed wave
+ *      can be re-audited against everything else.
  * Structure and banned phrases are checked by scripts/check-questions.cjs; run both.
  * Exit code 1 on any problem.
  */
@@ -71,14 +73,28 @@ function flatten(items, source) {
   return rows;
 }
 
+// ——— inputs (read first: an already-appended wave is audited against everything else) ———
+const targets = process.argv.slice(2);
+if (!targets.length) { console.error('usage: node scripts/check-new-clues.cjs <file-or-dir> […]'); process.exit(1); }
+const files = [];
+for (const t of targets) {
+  const st = fs.statSync(t);
+  if (st.isDirectory()) for (const f of fs.readdirSync(t).sort()) { if (/^(n1|n2|nf|e1|e2|ef)-.*\.json$/.test(f)) files.push(path.join(t, f)); }
+  else files.push(t);
+}
+
+const inputNames = new Set();
+for (const f of files) { try { for (const it of JSON.parse(fs.readFileSync(f, 'utf8'))) inputNames.add(String(it.name || '').trim().toUpperCase()); } catch {} }
+
 // ——— existing material ———
 const ours = [];
 const ourNames = new Map();
 for (const [pack, label] of [['original', 'Fresh'], ['easy', 'Easy Breezy']]) {
   for (const dir of ['jeopardy', 'double', 'final']) {
     const items = readChunks(path.join(DATA, pack, dir));
-    for (const it of items) ourNames.set(String(it.name).trim().toUpperCase(), `${label} ${dir}`);
-    ours.push(...flatten(items, `${label} ${dir}`));
+    const kept = items.filter(it => !inputNames.has(String(it.name).trim().toUpperCase()));
+    for (const it of kept) ourNames.set(String(it.name).trim().toUpperCase(), `${label} ${dir}`);
+    ours.push(...flatten(kept, `${label} ${dir}`));
   }
 }
 const campaignPath = path.join(DATA, 'campaign', 'chapters.json');
@@ -118,16 +134,6 @@ for (const row of ours) {
   if (!ourByResponse.has(key)) ourByResponse.set(key, []);
   ourByResponse.get(key).push(row);
   ourExact.set(norm(row.clue), row);
-}
-
-// ——— new material ———
-const targets = process.argv.slice(2);
-if (!targets.length) { console.error('usage: node scripts/check-new-clues.cjs <file-or-dir> […]'); process.exit(1); }
-const files = [];
-for (const t of targets) {
-  const st = fs.statSync(t);
-  if (st.isDirectory()) for (const f of fs.readdirSync(t).sort()) { if (/^(n1|n2|nf|e1|e2|ef)-.*\.json$/.test(f)) files.push(path.join(t, f)); }
-  else files.push(t);
 }
 
 const problems = [];

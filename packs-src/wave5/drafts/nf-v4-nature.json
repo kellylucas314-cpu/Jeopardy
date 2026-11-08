@@ -1,0 +1,22 @@
+[
+  {
+    "name": "TOP ROW SEATS",
+    "clue": "Typists still use this layout, named for letters on the top row of Christopher Sholes's 1870s typewriters",
+    "response": "QWERTY"
+  },
+  {
+    "name": "PLUMB CRAZY",
+    "clue": "The Latin name of this heavy metal gave us the word 'plumber', since Romans made water pipes from it",
+    "response": "lead"
+  },
+  {
+    "name": "SPLIT PERSONALITY",
+    "clue": "Greek thinkers named this for being uncuttable, a label that 20th-century physics proved wrong",
+    "response": "the atom"
+  },
+  {
+    "name": "BROKEN AND MENDED",
+    "clue": "This branch of math takes its name from 'al-jabr', Arabic for 'restoration', in a 9th-century book title",
+    "response": "algebra"
+  }
+]

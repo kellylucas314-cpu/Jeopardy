@@ -1,17 +1,17 @@
 [
   { "name": "ARIA KIDDING?", "clues": [
-    { "clue": "'Figaro! Figaro! Figaro!' rings out in this Rossini comic opera set in Spain", "response": "The Barber of Seville", "value": 400 },
+    { "clue": "Beaumarchais' play about Count Almaviva wooing Rosina became this 1816 Rossini comedy", "response": "The Barber of Seville", "value": 400 },
     { "clue": "Cio-Cio-San waits in vain at Nagasaki for her American naval officer in this Puccini opera", "response": "Madama Butterfly", "value": 800 },
-    { "clue": "Its 'Triumphal March,' blared on long trumpets, is a highlight of this Verdi opera set in Egypt", "response": "Aida", "value": 1200 },
+    { "clue": "Condemned as a traitor, Radamès is entombed alive with his secret love as this Verdi opera ends", "response": "Aida", "value": 1200 },
     { "clue": "Brünnhilde rides into Siegfried's funeral pyre at the end of this last opera of Wagner's 'Ring'", "response": "Götterdämmerung (Twilight of the Gods)", "value": 1600 },
-    { "clue": "Bellini's Druid high priestess, secretly a mother, gives this opera its name", "response": "Norma", "value": 2000 }
+    { "clue": "Maria Callas sang this Bellini title role 89 times, more than any other part", "response": "Norma", "value": 2000 }
   ] },
   { "name": "DRAMA SCHOOLED", "clues": [
     { "clue": "Bryan Cranston went from a sitcom dad to a meth kingpin on this series", "response": "Breaking Bad", "value": 400 },
     { "clue": "Don Draper pitches ad campaigns on 1960s Madison Avenue in this AMC drama", "response": "Mad Men", "value": 800 },
     { "clue": "Martin Sheen played Josiah Bartlet, a Nobel-winning fictional president, on this Aaron Sorkin series", "response": "The West Wing", "value": 1200 },
-    { "clue": "Each season of this HBO drama widened its view of Baltimore, from the docks to the schools", "response": "The Wire", "value": 1600 },
-    { "clue": "Ian McShane's foul-mouthed saloon keeper Al Swearengen ruled a Dakota camp in this HBO series", "response": "Deadwood", "value": 2000 }
+    { "clue": "Idris Elba's Stringer Bell took economics classes to run a drug crew like a business on this series", "response": "The Wire", "value": 1600 },
+    { "clue": "Timothy Olyphant played real-life lawman Seth Bullock in this HBO western", "response": "Deadwood", "value": 2000 }
   ] },
   { "name": "OPUS POCUS", "clues": [
     { "clue": "Spring, Summer, Autumn and Winter make up this famous set of Vivaldi violin concertos", "response": "The Four Seasons", "value": 400 },
@@ -25,33 +25,33 @@
     { "clue": "Ben Kingsley played India's great apostle of nonviolence in this 1982 Best Picture", "response": "Gandhi", "value": 800 },
     { "clue": "Burt Lancaster and Deborah Kerr kiss in the Hawaiian surf in this 1953 Best Picture", "response": "From Here to Eternity", "value": 1200 },
     { "clue": "Jack Lemmon's insurance clerk lends his flat to philandering bosses in this 1960 winner", "response": "The Apartment", "value": 1600 },
-    { "clue": "Clara Bow and a young Gary Cooper appear in this WWI aviation film, the inaugural top Oscar winner", "response": "Wings", "value": 2000 }
+    { "clue": "WWI flier William Wellman directed Clara Bow and a young Gary Cooper in this silent aviation epic", "response": "Wings", "value": 2000 }
   ] },
   { "name": "CLASSIC ROCK ROLL CALL", "clues": [
-    { "clue": "Jimmy Page's guitar and Robert Plant's wail build 'Stairway to Heaven' for this band", "response": "Led Zeppelin", "value": 400 },
-    { "clue": "A prism splitting a beam of light into a rainbow graces this band's 'The Dark Side of the Moon'", "response": "Pink Floyd", "value": 800 },
+    { "clue": "'Whole Lotta Love' and 'Kashmir' are anthems of this band of Jimmy Page and Robert Plant", "response": "Led Zeppelin", "value": 400 },
+    { "clue": "An inflatable pig floated over London's Battersea Power Station for this band's 1977 'Animals' cover", "response": "Pink Floyd", "value": 800 },
     { "clue": "Don Henley and Glenn Frey checked into 'Hotel California' with this band", "response": "the Eagles", "value": 1200 },
     { "clue": "This Jacksonville band's misspelled name poked fun at a gym teacher who hated long hair", "response": "Lynyrd Skynyrd", "value": 1600 },
     { "clue": "Walter Becker and Donald Fagen named their band after a gadget in William Burroughs' 'Naked Lunch'", "response": "Steely Dan", "value": 2000 }
   ] },
   { "name": "NOT A PEEP", "clues": [
-    { "clue": "He cooked and ate his own boot for Thanksgiving dinner in 'The Gold Rush'", "response": "Charlie Chaplin", "value": 400 },
+    { "clue": "He cooked and ate his own boot for Thanksgiving dinner in a 1925 Klondike comedy", "response": "Charlie Chaplin", "value": 400 },
     { "clue": "Never smiling on screen, this 'Great Stone Face' stood still as a house front fell around him", "response": "Buster Keaton", "value": 800 },
-    { "clue": "Horn-rimmed glasses marked this daredevil comic of 'Safety Last!' and 'The Freshman'", "response": "Harold Lloyd", "value": 1200 },
-    { "clue": "Dubbed 'America's Sweetheart,' she co-founded United Artists with Chaplin, Fairbanks and Griffith", "response": "Mary Pickford", "value": 1600 },
-    { "clue": "Count Orlok, an unauthorized take on Dracula, stalks this 1922 F.W. Murnau film", "response": "Nosferatu", "value": 2000 }
+    { "clue": "A 1919 prop-bomb blast cost this bespectacled comic a thumb and finger, yet he kept doing stunts", "response": "Harold Lloyd", "value": 1200 },
+    { "clue": "This silent star won the second Best Actress Oscar ever given, for the 1929 talkie 'Coquette'", "response": "Mary Pickford", "value": 1600 },
+    { "clue": "Max Schreck, whose surname is German for 'fright,' played the vampire in this 1922 film", "response": "Nosferatu", "value": 2000 }
   ] },
   { "name": "BROADWAY BYLINES", "clues": [
-    { "clue": "He wrote 'Hamilton' and originated its title role, the ten-dollar Founding Father", "response": "Lin-Manuel Miranda", "value": 400 },
+    { "clue": "Disney's 'Encanto' and 'Moana' got songs from this Broadway writer-star", "response": "Lin-Manuel Miranda", "value": 400 },
     { "clue": "'Cats,' 'Evita' and 'The Phantom of the Opera' all came from this English composer", "response": "Andrew Lloyd Webber", "value": 800 },
-    { "clue": "'Night and Day' and 'I Get a Kick Out of You' came from this Yale-educated songwriter", "response": "Cole Porter", "value": 1200 },
-    { "clue": "Lyricist of 'West Side Story,' he wrote both the words and music for 'Into the Woods'", "response": "Stephen Sondheim", "value": 1600 },
+    { "clue": "'I Get a Kick Out of You' and 'Begin the Beguine' came from this Yale-educated songwriter", "response": "Cole Porter", "value": 1200 },
+    { "clue": "Mentored as a teen by Oscar Hammerstein II, he later wrote words and music for 'Into the Woods'", "response": "Stephen Sondheim", "value": 1600 },
     { "clue": "This songwriting team gave Broadway both 'Cabaret' and 'Chicago'", "response": "Kander and Ebb", "value": 2000 }
   ] },
   { "name": "CATCHPHRASE CRAZE", "clues": [
     { "clue": "'Nanu nanu' was the Orkan greeting of Robin Williams' alien on this sitcom", "response": "Mork & Mindy", "value": 400 },
     { "clue": "'Dy-no-mite!' was J.J. Evans' trademark yell on this 1970s sitcom", "response": "Good Times", "value": 800 },
-    { "clue": "'Sock it to me!' and 'Verrry interesting' were catchphrases on this 1960s sketch show", "response": "Laugh-In", "value": 1200 },
+    { "clue": "'You bet your bippy!' and 'Here come de judge!' were catchphrases on this 1960s sketch show", "response": "Laugh-In", "value": 1200 },
     { "clue": "'Kiss my grits!' was waitress Flo's favorite retort on this diner sitcom", "response": "Alice", "value": 1600 },
     { "clue": "'Up your nose with a rubber hose!' was Vinnie Barbarino's taunt on this sitcom", "response": "Welcome Back, Kotter", "value": 2000 }
   ] },
@@ -59,11 +59,11 @@
     { "clue": "Themes for a shark, a Jedi and a boy wizard all came from this composer", "response": "John Williams", "value": 400 },
     { "clue": "This composer's slinky saxophone theme backed the cartoon titles of 'The Pink Panther'", "response": "Henry Mancini", "value": 800 },
     { "clue": "This Italian finally won a competitive Oscar for scoring Tarantino's 'The Hateful Eight'", "response": "Ennio Morricone", "value": 1200 },
-    { "clue": "Stabbing strings for the shower scene in 'Psycho' were the work of this composer", "response": "Bernard Herrmann", "value": 1600 },
+    { "clue": "Twin theremins gave an eerie wail to this composer's score for 'The Day the Earth Stood Still'", "response": "Bernard Herrmann", "value": 1600 },
     { "clue": "This Greek's synthesizer score for 'Chariots of Fire' won the Oscar", "response": "Vangelis", "value": 2000 }
   ] },
   { "name": "LONG-PLAYING BEATLES", "clues": [
-    { "clue": "Its title honors the London street outside the EMI studio where this 1969 album was made", "response": "Abbey Road", "value": 400 },
+    { "clue": "George Harrison's 'Something' and 'Here Comes the Sun' both appear on this 1969 album", "response": "Abbey Road", "value": 400 },
     { "clue": "Cardboard cutouts of celebrities crowd the Fab Four on the cover of this 1967 album", "response": "Sgt. Pepper's Lonely Hearts Club Band", "value": 800 },
     { "clue": "Officially titled 'The Beatles,' this 1968 double LP is nicknamed for its blank cover's color", "response": "the White Album", "value": 1200 },
     { "clue": "Phil Spector produced this album, released in 1970 a month after the breakup became public", "response": "Let It Be", "value": 1600 },
@@ -72,15 +72,15 @@
   { "name": "SHE'S GOT TOP BILLING", "clues": [
     { "clue": "Gregory Peck showed her runaway princess around Rome on a Vespa in 'Roman Holiday'", "response": "Audrey Hepburn", "value": 400 },
     { "clue": "She won Oscars for 'Dangerous' and 'Jezebel' and co-founded the Hollywood Canteen", "response": "Bette Davis", "value": 800 },
-    { "clue": "Her Ilsa boards the plane in 'Casablanca,' and her daughter Isabella Rossellini became a star too", "response": "Ingrid Bergman", "value": 1200 },
+    { "clue": "Her scandalous romance with director Roberto Rossellini produced a daughter, actress Isabella", "response": "Ingrid Bergman", "value": 1200 },
     { "clue": "She won an Oscar as 'Mildred Pierce' and was later skewered in the tell-all 'Mommie Dearest'", "response": "Joan Crawford", "value": 1600 },
     { "clue": "She played con artist Jean in 'The Lady Eve' and a ranch matriarch on TV's 'The Big Valley'", "response": "Barbara Stanwyck", "value": 2000 }
   ] },
   { "name": "PRIZE-TIME TELEVISION", "clues": [
-    { "clue": "Merv Griffin created this letter-guessing show, which grew out of the game Hangman", "response": "Wheel of Fortune", "value": 400 },
-    { "clue": "'Come on down!' summons shoppers to Contestants' Row on this game show", "response": "The Price Is Right", "value": 800 },
-    { "clue": "'Survey says!' rings out as two clans face off on this game show", "response": "Family Feud", "value": 1200 },
-    { "clue": "Monty Hall offered costumed traders the curtain or Door No. 3 on this show", "response": "Let's Make a Deal", "value": 1600 },
+    { "clue": "In the bonus round of this game show, contestants get R, S, T, L, N and E for free", "response": "Wheel of Fortune", "value": 400 },
+    { "clue": "Chips bounce down a pegboard in Plinko, a pricing game on this long-running show", "response": "The Price Is Right", "value": 800 },
+    { "clue": "Two players from one clan race to reach 200 points in the 'Fast Money' round of this show", "response": "Family Feud", "value": 1200 },
+    { "clue": "A 'Zonk' is a booby prize, like a goat or a junk car, hiding behind a door on this show", "response": "Let's Make a Deal", "value": 1600 },
     { "clue": "Blindfolded panelists quizzed the mystery guest on this long-running CBS show", "response": "What's My Line?", "value": 2000 }
   ] }
 ]

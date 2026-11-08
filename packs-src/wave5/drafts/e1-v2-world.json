@@ -1,0 +1,86 @@
+[
+  { "name": "DOLLS, DOMES AND DACHAS", "clues": [
+    { "clue": "Open one of these painted wooden Russian figures and a smaller one waits inside", "response": "nesting dolls (matryoshka)", "value": 200 },
+    { "clue": "St. Basil's Cathedral, with its colorful onion domes, stands on this Moscow plaza", "response": "Red Square", "value": 400 },
+    { "clue": "Russia's rulers have long worked behind the red brick walls of this Moscow fortress", "response": "the Kremlin", "value": 600 },
+    { "clue": "The czars and Soviets alike sent exiles to this vast, frozen land east of the Urals", "response": "Siberia", "value": 800 },
+    { "clue": "This Moscow theater's famous ballet company first toured America in 1959", "response": "the Bolshoi", "value": 1000 }
+  ]},
+  { "name": "CRITTERS ON THE MAP", "clues": [
+    { "clue": "A group of these hopping Australians is called a mob, and the big males are boomers", "response": "the kangaroo", "value": 200 },
+    { "clue": "A newborn of this bamboo-loving Chinese bear is about the size of a stick of butter", "response": "the giant panda", "value": 400 },
+    { "clue": "New Zealanders proudly take their nickname from this small flightless bird", "response": "the kiwi", "value": 600 },
+    { "clue": "Herders in the Andes load their goods onto this woolly cousin of the camel", "response": "the llama", "value": 800 },
+    { "clue": "Proud India names this striped big cat as its national animal", "response": "the Bengal tiger (tiger)", "value": 1000 }
+  ]},
+  { "name": "MEXICO, MI AMOR", "clues": [
+    { "clue": "Corn or flour, this flat round bread wraps up a taco or a burrito", "response": "the tortilla", "value": 200 },
+    { "clue": "Puebla's 1862 defeat of a French army is remembered each year on this spring holiday", "response": "Cinco de Mayo", "value": 400 },
+    { "clue": "Her cobalt 'Blue House' in Mexico City is a museum to this famous self-portraitist", "response": "Frida Kahlo", "value": 600 },
+    { "clue": "Jalisco's capital, this city is called the birthplace of mariachi music", "response": "Guadalajara", "value": 800 },
+    { "clue": "Herb Alpert's trumpet-led 1960s band, the Brass, was named for this border city", "response": "Tijuana", "value": 1000 }
+  ]},
+  { "name": "PAGES FROM ABROAD", "clues": [
+    { "clue": "Rub the old lamp and a genie appears for this hero of the 'Arabian Nights'", "response": "Aladdin", "value": 200 },
+    { "clue": "Audrey Hepburn played Natasha in the 1956 film of this long Tolstoy novel", "response": "War and Peace", "value": 400 },
+    { "clue": "Greta Garbo played this tragic Tolstoy heroine in a 1935 movie", "response": "Anna Karenina", "value": 600 },
+    { "clue": "Riding a donkey, he's Don Quixote's loyal, down-to-earth squire", "response": "Sancho Panza", "value": 800 },
+    { "clue": "Don Quixote's creator, this Spaniard was once held captive in Algiers for five years", "response": "Cervantes (Miguel de Cervantes)", "value": 1000 }
+  ]},
+  { "name": "MADE IN OLD CHINA", "clues": [
+    { "clue": "In China, diners pick up rice and noodles with this slender pair of utensils", "response": "chopsticks", "value": 200 },
+    { "clue": "Ancient China gave us this toy, flown high on a string on a windy day", "response": "the kite", "value": 400 },
+    { "clue": "Chinese alchemists seeking a magic potion of long life discovered this explosive", "response": "gunpowder", "value": 600 },
+    { "clue": "Beijing's famous roast bird is served with thin pancakes and hoisin sauce", "response": "Peking duck", "value": 800 },
+    { "clue": "Long before calculators, Chinese merchants slid beads along rods on this frame", "response": "the abacus", "value": 1000 }
+  ]},
+  { "name": "DOWN UNDER DELIGHTS", "clues": [
+    { "clue": "Throw this curved Aboriginal throwing stick just right and it flies back to you", "response": "the boomerang", "value": 200 },
+    { "clue": "Folks call this cuddly eucalyptus eater a bear, but it isn't one at all", "response": "the koala", "value": 400 },
+    { "clue": "Australians call their vast, dry and thinly settled interior this", "response": "the Outback", "value": 600 },
+    { "clue": "Aboriginal musicians blow into a long hollow branch to play this droning horn", "response": "the didgeridoo", "value": 800 },
+    { "clue": "Men at Work's hit 'Down Under' mentions a sandwich made with this salty spread", "response": "Vegemite", "value": 1000 }
+  ]},
+  { "name": "AFRICA AT A GLANCE", "clues": [
+    { "clue": "This North African desert is roughly as big as the whole United States", "response": "the Sahara", "value": 200 },
+    { "clue": "This South African leader and F.W. de Klerk split the 1993 Nobel Peace Prize", "response": "Nelson Mandela", "value": 400 },
+    { "clue": "Explorer David Livingstone named this thundering African waterfall for his queen", "response": "Victoria Falls", "value": 600 },
+    { "clue": "The Maasai word behind this Tanzanian park's name is said to mean 'endless plains'", "response": "the Serengeti", "value": 800 },
+    { "clue": "The rosy 'Red City' of Marrakesh lies in this North African kingdom", "response": "Morocco", "value": 1000 }
+  ]},
+  { "name": "BIG CITY POSTCARDS", "clues": [
+    { "clue": "In 1997 Britain handed this busy harbor city back to China", "response": "Hong Kong", "value": 200 },
+    { "clue": "'The Girl from Ipanema' strolls a beach in this Brazilian city", "response": "Rio de Janeiro", "value": 400 },
+    { "clue": "In 1983 the first Disney park outside the U.S. opened near this Japanese capital", "response": "Tokyo", "value": 600 },
+    { "clue": "The India Gate war memorial arch stands in this capital city", "response": "New Delhi", "value": 800 },
+    { "clue": "Climbers bound for Mount Everest often start out in this capital of Nepal", "response": "Kathmandu", "value": 1000 }
+  ]},
+  { "name": "HATS OFF, WRAPS ON", "clues": [
+    { "clue": "Japanese women tie this long silk robe with a wide sash called an obi", "response": "the kimono", "value": 200 },
+    { "clue": "Many women in India drape this long length of cloth as a graceful dress", "response": "the sari", "value": 400 },
+    { "clue": "Andean herders wear this blanket-like cloak with a hole for the head", "response": "the poncho", "value": 600 },
+    { "clue": "Shriners in their parades sport this red, tasseled, brimless hat", "response": "the fez", "value": 800 },
+    { "clue": "Popular in the 1960s, this loose, colorful tunic comes from West Africa", "response": "the dashiki", "value": 1000 }
+  ]},
+  { "name": "WORTH THE TRIP", "clues": [
+    { "clue": "Nixon walked a stretch of it in 1972 and declared it truly a great wall", "response": "the Great Wall of China", "value": 200 },
+    { "clue": "Princess Diana sat alone on a bench before this Indian tomb in 1992", "response": "the Taj Mahal", "value": 400 },
+    { "clue": "No two faces are alike among the clay soldiers guarding this Chinese tomb", "response": "the Terracotta Army", "value": 600 },
+    { "clue": "A 'tablecloth' of cloud often drapes this flat-topped peak above Cape Town", "response": "Table Mountain", "value": 800 },
+    { "clue": "'Poor Niagara!' Eleanor Roosevelt reportedly said on seeing this cascade in South America", "response": "Iguazu Falls (Iguaçu Falls)", "value": 1000 }
+  ]},
+  { "name": "A TASTE OF FARAWAY", "clues": [
+    { "clue": "Turmeric and cumin flavor this spicy, saucy dish that India gave the world", "response": "curry", "value": 200 },
+    { "clue": "Fried balls of ground chickpeas, tucked into pita, make this Middle Eastern snack", "response": "falafel", "value": 400 },
+    { "clue": "In Narnia, the White Witch tempts Edmund with this sweet, sugar-dusted candy", "response": "Turkish delight", "value": 600 },
+    { "clue": "Carts of steamed dumplings roll past the tables at this Cantonese brunch", "response": "dim sum", "value": 800 },
+    { "clue": "Mango is a favorite version of this sweet-and-tangy Indian relish", "response": "chutney", "value": 1000 }
+  ]},
+  { "name": "JAPAN, JUST SO", "clues": [
+    { "clue": "Japanese chefs roll this dish of vinegared rice and raw fish in seaweed", "response": "sushi", "value": 200 },
+    { "clue": "Huge wrestlers try to push each other out of a ring in this Japanese sport", "response": "sumo", "value": 400 },
+    { "clue": "In this Japanese art, a tree is kept tiny by careful pruning in a pot", "response": "bonsai", "value": 600 },
+    { "clue": "This short Japanese poem has just three lines and 17 syllables", "response": "haiku", "value": 800 },
+    { "clue": "Arthur Golden's 1997 best seller was 'Memoirs of a' one of these entertainers", "response": "geisha", "value": 1000 }
+  ]}
+]

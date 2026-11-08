@@ -63,8 +63,8 @@
     "name": "NAMESAKE STORIES",
     "clues": [
       {
-        "clue": "Count Ferdinand von Zeppelin lent his name to these cigar-shaped airships",
-        "response": "zeppelins",
+        "clue": "Librarian Melvil gave his name to this way of numbering library books",
+        "response": "the Dewey Decimal System",
         "value": 400
       },
       {
@@ -83,8 +83,8 @@
         "value": 1600
       },
       {
-        "clue": "Philadelphia hatter John B. gave his name to this broad-brimmed cowboy hat",
-        "response": "a Stetson",
+        "clue": "California rink owner Frank gave his name to this ice-smoothing machine",
+        "response": "the Zamboni",
         "value": 2000
       }
     ]

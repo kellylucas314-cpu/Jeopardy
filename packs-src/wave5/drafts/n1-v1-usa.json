@@ -1,0 +1,362 @@
+[
+ {
+  "name": "THE EAST WING",
+  "clues": [
+   {
+    "clue": "After the White House, this former first lady spent nearly 20 years as a book editor",
+    "response": "Jacqueline Kennedy Onassis (Jackie Kennedy)",
+    "value": 200
+   },
+   {
+    "clue": "She quit the DAR in 1939 after it barred singer Marian Anderson from Constitution Hall",
+    "response": "Eleanor Roosevelt",
+    "value": 400
+   },
+   {
+    "clue": "After her husband's 1919 stroke, she decided which papers and visitors reached the president",
+    "response": "Edith Wilson",
+    "value": 600
+   },
+   {
+    "clue": "Years before the White House, she used an inheritance to buy KTBC, a struggling Austin radio station",
+    "response": "Lady Bird Johnson",
+    "value": 800
+   },
+   {
+    "clue": "A Stanford geology grad, this first lady spoke Mandarin with her husband in the White House for privacy",
+    "response": "Lou Hoover",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "AMENDMENT ROLL CALL",
+  "clues": [
+   {
+    "clue": "Its establishment clause bars Congress from setting up an official national church",
+    "response": "the First Amendment (1st)",
+    "value": 200
+   },
+   {
+    "clue": "Nicknamed for Susan B. Anthony, it was introduced in Congress in 1878 and ratified in 1920",
+    "response": "the 19th Amendment",
+    "value": 400
+   },
+   {
+    "clue": "Ratified in December 1865, it abolished slavery throughout the United States",
+    "response": "the 13th Amendment",
+    "value": 600
+   },
+   {
+    "clue": "Ratified in about 100 days in 1971, it lowered the voting age to 18",
+    "response": "the 26th Amendment",
+    "value": 800
+   },
+   {
+    "clue": "Ratified in 1913, it took the choice of U.S. senators away from state legislatures and gave it to voters",
+    "response": "the 17th Amendment",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "MANIFEST DESTINATIONS",
+  "clues": [
+   {
+    "clue": "Pioneers on this route west carved their names on Wyoming's Independence Rock",
+    "response": "the Oregon Trail",
+    "value": 200
+   },
+   {
+    "clue": "Opened in 1821, this wagon route ran some 900 miles from Missouri to a New Mexico capital",
+    "response": "the Santa Fe Trail",
+    "value": 400
+   },
+   {
+    "clue": "Cowboys drove Texas longhorns north to the railhead at Abilene, Kansas, along this cattle route",
+    "response": "the Chisholm Trail",
+    "value": 600
+   },
+   {
+    "clue": "The transcontinental telegraph put this mail service out of business in 1861, after only 18 months",
+    "response": "the Pony Express",
+    "value": 800
+   },
+   {
+    "clue": "A deal with Mexico ratified in 1854 gave the U.S. this strip of desert for a southern railroad route",
+    "response": "the Gadsden Purchase",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "SHOP CLASS HEROES",
+  "clues": [
+   {
+    "clue": "In 1914 this carmaker stunned industry by paying his factory workers $5 a day",
+    "response": "Henry Ford",
+    "value": 200
+   },
+   {
+    "clue": "A Vermont-born blacksmith, he built a self-scouring steel plow in Grand Detour, Illinois, in 1837",
+    "response": "John Deere",
+    "value": 400
+   },
+   {
+    "clue": "In 1857 his company installed the first passenger safety elevator, in a five-story Broadway store",
+    "response": "Elisha Otis",
+    "value": 600
+   },
+   {
+    "clue": "He patented vulcanized rubber in 1844, but the tire company that bears his name came decades after his death",
+    "response": "Charles Goodyear",
+    "value": 800
+   },
+   {
+    "clue": "In 1916 this Cleveland inventor wore his own breathing hood to rescue men trapped in a tunnel under Lake Erie",
+    "response": "Garrett Morgan",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "STATE ALIASES",
+  "clues": [
+   {
+    "clue": "Turnpike exits and oil refineries aside, this state proudly calls itself the Garden State",
+    "response": "New Jersey",
+    "value": 200
+   },
+   {
+    "clue": "Its central spot among the 13 colonies is the usual reason given for this 'Keystone State'",
+    "response": "Pennsylvania",
+    "value": 400
+   },
+   {
+    "clue": "Settlers who jumped the gun before the 1889 land run gave this state its nickname",
+    "response": "Oklahoma",
+    "value": 600
+   },
+   {
+    "clue": "The Free State and the Old Line State are both nicknames for this home of the Chesapeake blue crab",
+    "response": "Maryland",
+    "value": 800
+   },
+   {
+    "clue": "Legend says its peddlers sold carved wooden fakes of a kitchen spice, hence its 'Nutmeg State' name",
+    "response": "Connecticut",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "RANGER STATION",
+  "clues": [
+   {
+    "clue": "'Leave it as it is,' Teddy Roosevelt urged in a 1903 speech at the rim of this Arizona wonder",
+    "response": "the Grand Canyon",
+    "value": 200
+   },
+   {
+    "clue": "John Muir and Teddy Roosevelt camped out together in this California park in 1903",
+    "response": "Yosemite",
+    "value": 400
+   },
+   {
+    "clue": "Airboats skim the sawgrass of this South Florida park, dedicated by Harry Truman in 1947",
+    "response": "the Everglades",
+    "value": 600
+   },
+   {
+    "clue": "John D. Rockefeller Jr. paid for some 45 miles of car-free carriage roads in this Maine park",
+    "response": "Acadia",
+    "value": 800
+   },
+   {
+    "clue": "Cliff Palace, an Ancestral Puebloan village of some 150 rooms, is the showpiece of this Colorado park",
+    "response": "Mesa Verde",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "OLYMPUS HR",
+  "clues": [
+   {
+    "clue": "Besides the seas, this god oversaw horses, and myth says he made the very first one",
+    "response": "Poseidon",
+    "value": 200
+   },
+   {
+    "clue": "On his first day of life, this god of messengers and thieves made a lyre from a tortoise shell",
+    "response": "Hermes",
+    "value": 400
+   },
+   {
+    "clue": "She set the hundred eyes of her slain watchman Argus in the tail of her bird, the peacock",
+    "response": "Hera (Juno)",
+    "value": 600
+   },
+   {
+    "clue": "He caught his wife Aphrodite with her lover Ares in an invisible golden net",
+    "response": "Hephaestus",
+    "value": 800
+   },
+   {
+    "clue": "Wooed by both Poseidon and Apollo, this hearth goddess swore to stay a maiden forever",
+    "response": "Hestia",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "VALHALLA OR BUST",
+  "clues": [
+   {
+    "clue": "Two goats pull his chariot, and he can eat them for supper and raise them back to life by morning",
+    "response": "Thor",
+    "value": 200
+   },
+   {
+    "clue": "Dwarves forged this hammer for Thor, but Loki, disguised as a fly, made them botch its handle",
+    "response": "Mjolnir",
+    "value": 400
+   },
+   {
+    "clue": "As a prank, this shape-shifting trickster cut off all the golden hair of Thor's wife, Sif",
+    "response": "Loki",
+    "value": 600
+   },
+   {
+    "clue": "Odin is swallowed by the wolf Fenrir during this doomsday battle of the gods",
+    "response": "Ragnarok",
+    "value": 800
+   },
+   {
+    "clue": "The watchman Heimdall guards this rainbow bridge that links Asgard to the world of humans",
+    "response": "Bifrost",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "DIVINE NILE",
+  "clues": [
+   {
+    "clue": "Egyptian art shows this sun god with a falcon's head topped by a sun disk and a cobra",
+    "response": "Ra (Re)",
+    "value": 200
+   },
+   {
+    "clue": "A black statue of this jackal god guarded the treasury of Tutankhamun's tomb",
+    "response": "Anubis",
+    "value": 400
+   },
+   {
+    "clue": "Egyptian artists gave this god of the dead green skin and a mummy's wrappings",
+    "response": "Osiris",
+    "value": 600
+   },
+   {
+    "clue": "Her cult spread all the way to Rome, and the throne on her head spells her name",
+    "response": "Isis",
+    "value": 800
+   },
+   {
+    "clue": "Greek settlers in Egypt identified this ibis-headed god with their own Hermes",
+    "response": "Thoth",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "FEASTS & FASTS",
+  "clues": [
+   {
+    "clue": "A smudged cross of ashes on the forehead opens this 40-day season before Easter",
+    "response": "Lent",
+    "value": 200
+   },
+   {
+    "clue": "A seder plate with bitter herbs and a roasted shank bone is the centerpiece of this spring holiday",
+    "response": "Passover (Pesach)",
+    "value": 400
+   },
+   {
+    "clue": "Hindus clean their homes to welcome Lakshmi, goddess of wealth, during this autumn festival",
+    "response": "Diwali",
+    "value": 600
+   },
+   {
+    "clue": "A long blast of the shofar closes this 25-hour fast, the holiest day of the Jewish year",
+    "response": "Yom Kippur",
+    "value": 800
+   },
+   {
+    "clue": "Families eat in leafy temporary huts during this weeklong Jewish harvest festival",
+    "response": "Sukkot",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "OYEZ, OYEZ",
+  "clues": [
+   {
+    "clue": "Topeka third-grader Linda and her father, Oliver, lent their surname to this landmark 1954 case",
+    "response": "Brown v. Board of Education",
+    "value": 200
+   },
+   {
+    "clue": "Since 1869 the Supreme Court has had this many seats, though FDR tried to add more",
+    "response": "nine",
+    "value": 400
+   },
+   {
+    "clue": "This 1966 case is named for Ernesto, a Phoenix man whose confession was thrown out",
+    "response": "Miranda v. Arizona",
+    "value": 600
+   },
+   {
+    "clue": "Raised on the Lazy B, a cattle ranch on the Arizona-New Mexico line, she joined the high court in 1981",
+    "response": "Sandra Day O'Connor",
+    "value": 800
+   },
+   {
+    "clue": "Before he led the Court, this chief justice won three elections as governor of California",
+    "response": "Earl Warren",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "CITY HALL PASS",
+  "clues": [
+   {
+    "clue": "Fishmongers famously toss whole salmon to each other at Pike Place Market in this city",
+    "response": "Seattle",
+    "value": 200
+   },
+   {
+    "clue": "Budweiser has been brewed in this Mississippi River city since 1876",
+    "response": "St. Louis",
+    "value": 400
+   },
+   {
+    "clue": "A gilded, 42-foot Athena fills a full-size copy of the Parthenon in this Tennessee city",
+    "response": "Nashville",
+    "value": 600
+   },
+   {
+    "clue": "Santiago Calatrava gave this Wisconsin city's art museum a sunscreen that opens and closes like wings",
+    "response": "Milwaukee",
+    "value": 800
+   },
+   {
+    "clue": "The 1994 best seller 'Midnight in the Garden of Good and Evil' is set in this Georgia port",
+    "response": "Savannah",
+    "value": 1000
+   }
+  ]
+ }
+]

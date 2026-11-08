@@ -1,0 +1,362 @@
+[
+ {
+  "name": "PRESIDENTIAL FOOTNOTES",
+  "clues": [
+   {
+    "clue": "Before politics, this Georgian served under Admiral Rickover in the nuclear submarine program",
+    "response": "Jimmy Carter",
+    "value": 400
+   },
+   {
+    "clue": "Raised in Kinderhook, New York, this eighth president grew up speaking Dutch at home",
+    "response": "Martin Van Buren",
+    "value": 800
+   },
+   {
+    "clue": "He served 17 years in the House after his presidency and collapsed at his desk there in 1848",
+    "response": "John Quincy Adams",
+    "value": 1200
+   },
+   {
+    "clue": "As an Ohio congressman, this future president published an original proof of the Pythagorean theorem",
+    "response": "James Garfield",
+    "value": 1600
+   },
+   {
+    "clue": "A dapper New Yorker, he hired Louis Comfort Tiffany to redecorate the White House in 1882",
+    "response": "Chester A. Arthur",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "A HEARTBEAT AWAY",
+  "clues": [
+   {
+    "clue": "At a 1992 spelling bee, this vice president 'corrected' a student's potato to 'potatoe'",
+    "response": "Dan Quayle",
+    "value": 400
+   },
+   {
+    "clue": "The first man to hold the job, he called the vice presidency 'the most insignificant office'",
+    "response": "John Adams",
+    "value": 800
+   },
+   {
+    "clue": "Nixon's first vice president, he blasted the press as 'nattering nabobs of negativism'",
+    "response": "Spiro Agnew",
+    "value": 1200
+   },
+   {
+    "clue": "He served as vice president under two presidents, the sixth and the seventh, then quit to join the Senate",
+    "response": "John C. Calhoun",
+    "value": 1600
+   },
+   {
+    "clue": "Herbert Hoover's vice president, he was an enrolled member of the Kaw Nation",
+    "response": "Charles Curtis",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FREEDOM'S ROAD MAP",
+  "clues": [
+   {
+    "clue": "A 26-year-old Martin Luther King Jr. led this 1955-56 Alabama protest against segregated buses",
+    "response": "the Montgomery bus boycott",
+    "value": 400
+   },
+   {
+    "clue": "Bull Connor turned fire hoses and police dogs on young marchers in this Alabama city in 1963",
+    "response": "Birmingham",
+    "value": 800
+   },
+   {
+    "clue": "In 1963 civil rights leader Medgar Evers was shot in his driveway in this Mississippi capital",
+    "response": "Jackson",
+    "value": 1200
+   },
+   {
+    "clue": "In 1960, at age 6, she walked into a New Orleans elementary school flanked by U.S. marshals",
+    "response": "Ruby Bridges",
+    "value": 1600
+   },
+   {
+    "clue": "This pacifist organizer ran the day-to-day planning of the 1963 March on Washington",
+    "response": "Bayard Rustin",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "OFFICIALLY STATE-ISH",
+  "clues": [
+   {
+    "clue": "The humuhumunukunukuapua'a, a reef triggerfish, is this state's official fish",
+    "response": "Hawaii",
+    "value": 400
+   },
+   {
+    "clue": "Boston cream pie, which is really a cake, is this state's official dessert",
+    "response": "Massachusetts",
+    "value": 800
+   },
+   {
+    "clue": "The nine-banded armadillo is the official small mammal of this state, along with the longhorn as its large one",
+    "response": "Texas",
+    "value": 1200
+   },
+   {
+    "clue": "Knights on horseback spearing rings: jousting is the official sport of this Chesapeake state",
+    "response": "Maryland",
+    "value": 1600
+   },
+   {
+    "clue": "In 1997 this state honored its Mormon pioneer cooks by naming the Dutch oven its official cooking pot",
+    "response": "Utah",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "GILDED AGE GIANTS",
+  "clues": [
+   {
+    "clue": "Once a $1.20-a-week bobbin boy, this Scot sold his steel empire for $480 million in 1901",
+    "response": "Andrew Carnegie",
+    "value": 400
+   },
+   {
+    "clue": "He and his partners founded the Standard Oil Company in Cleveland in 1870",
+    "response": "John D. Rockefeller",
+    "value": 800
+   },
+   {
+    "clue": "This railroad tycoon opened Grand Central Depot in Manhattan in 1871",
+    "response": "Cornelius Vanderbilt",
+    "value": 1200
+   },
+   {
+    "clue": "During the Panic of 1907 this banker gathered rival bankers in his library until they agreed on a rescue",
+    "response": "J.P. Morgan",
+    "value": 1600
+   },
+   {
+    "clue": "With partner Jim Fisk, this speculator tried to corner the gold market, causing 1869's Black Friday",
+    "response": "Jay Gould",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "HEROIC MEASURES",
+  "clues": [
+   {
+    "clue": "Showing up in one sandal, he fulfilled an oracle's warning to King Pelias, then sailed on the Argo",
+    "response": "Jason",
+    "value": 400
+   },
+   {
+    "clue": "Flying home with Medusa's head, he rescued Andromeda from a sea monster",
+    "response": "Perseus",
+    "value": 800
+   },
+   {
+    "clue": "His father Aegeus leapt into the sea when this hero forgot to switch his black sails for white",
+    "response": "Theseus",
+    "value": 1200
+   },
+   {
+    "clue": "Zeus sent a gadfly to sting Pegasus when this proud rider tried to fly up to Olympus",
+    "response": "Bellerophon",
+    "value": 1600
+   },
+   {
+    "clue": "Left on a mountainside at birth, this swift huntress was nursed by a she-bear",
+    "response": "Atalanta",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "HOLY WRIT LARGE",
+  "clues": [
+   {
+    "clue": "Its Arabic name means 'the recitation,' and those who memorize all of it are honored as hafiz",
+    "response": "the Quran (Koran)",
+    "value": 400
+   },
+   {
+    "clue": "Its five books are handwritten on a parchment scroll and read aloud in synagogues over a year",
+    "response": "the Torah",
+    "value": 800
+   },
+   {
+    "clue": "On a battlefield, Krishna counsels the warrior Arjuna in this section of the Mahabharata",
+    "response": "the Bhagavad Gita",
+    "value": 1200
+   },
+   {
+    "clue": "This 1830 scripture tells of the prophet Lehi's family leaving Jerusalem and sailing to the Americas",
+    "response": "the Book of Mormon",
+    "value": 1600
+   },
+   {
+    "clue": "Each night at Amritsar's Golden Temple, this Sikh scripture is carried in a palanquin to rest nearby",
+    "response": "the Guru Granth Sahib (Adi Granth)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "KARMA CHAMELEONS",
+  "clues": [
+   {
+    "clue": "Born a prince at Lumbini, in what is now Nepal, he gave up palace life to seek enlightenment",
+    "response": "the Buddha (Siddhartha Gautama)",
+    "value": 400
+   },
+   {
+    "clue": "Called Chan in China and Seon in Korea, this meditative Buddhist school goes by its Japanese name",
+    "response": "Zen",
+    "value": 800
+   },
+   {
+    "clue": "Rama and Krishna are both avatars of this Hindu preserver god",
+    "response": "Vishnu",
+    "value": 1200
+   },
+   {
+    "clue": "Tens of millions of pilgrims bathe where rivers meet at Prayagraj during this huge Hindu festival",
+    "response": "the Kumbh Mela",
+    "value": 1600
+   },
+   {
+    "clue": "In Mahayana Buddhism, this compassionate being puts off nirvana to help others reach it",
+    "response": "a bodhisattva",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "LAND DEALS",
+  "clues": [
+   {
+    "clue": "Robert Livingston and James Monroe went to buy New Orleans and came home with this 1803 bargain",
+    "response": "the Louisiana Purchase",
+    "value": 400
+   },
+   {
+    "clue": "Franklin, Adams and Jay signed this 1783 deal pushing the U.S. border west to the Mississippi",
+    "response": "the Treaty of Paris",
+    "value": 800
+   },
+   {
+    "clue": "In 1917 the U.S. paid Denmark $25 million in gold for this Caribbean island group",
+    "response": "the U.S. Virgin Islands (Danish West Indies)",
+    "value": 1200
+   },
+   {
+    "clue": "Ignoring his recall, diplomat Nicholas Trist stayed in Mexico and negotiated this 1848 peace deal",
+    "response": "the Treaty of Guadalupe Hidalgo",
+    "value": 1600
+   },
+   {
+    "clue": "In this 1819 deal Spain ceded Florida to the U.S. and drew a boundary all the way to the Pacific",
+    "response": "the Adams-Onis Treaty",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "WHERE STATES MEET",
+  "clues": [
+   {
+    "clue": "The twin cities of Texarkana sit on either side of the line between Texas and this state",
+    "response": "Arkansas",
+    "value": 400
+   },
+   {
+    "clue": "Ohio and this territory squared off over a strip of land in the 1835 'Toledo War'",
+    "response": "Michigan",
+    "value": 800
+   },
+   {
+    "clue": "A loop of the Mississippi cuts off a piece of this state, reachable by road only from Tennessee",
+    "response": "Kentucky",
+    "value": 1200
+   },
+   {
+    "clue": "An arc drawn 12 miles out from the town of New Castle forms this state's northern border",
+    "response": "Delaware",
+    "value": 1600
+   },
+   {
+    "clue": "Reachable by road only through Canada, the Northwest Angle belongs to this state",
+    "response": "Minnesota",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "CABINET MEETING",
+  "clues": [
+   {
+    "clue": "The Secret Service was created in 1865 inside this department to fight counterfeit money",
+    "response": "the Treasury",
+    "value": 400
+   },
+   {
+    "clue": "Frances Perkins, the first woman in a presidential cabinet, ran this department for FDR",
+    "response": "Labor",
+    "value": 800
+   },
+   {
+    "clue": "Lincoln signed it into being in 1862 and called it 'the people's department'",
+    "response": "Agriculture",
+    "value": 1200
+   },
+   {
+    "clue": "The National Park Service and the Bureau of Land Management both answer to this department",
+    "response": "the Interior",
+    "value": 1600
+   },
+   {
+    "clue": "Jimmy Carter signed the 1979 law that carved this cabinet department out of HEW",
+    "response": "Education",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "MONSTER MASH-UP",
+  "clues": [
+   {
+    "clue": "Orpheus lulled this three-headed watchdog with music on his way into the underworld",
+    "response": "Cerberus",
+    "value": 400
+   },
+   {
+    "clue": "Hera sent a giant crab to nip at Hercules' feet while he battled this many-headed serpent",
+    "response": "the Hydra",
+    "value": 800
+   },
+   {
+    "clue": "'Release the' this sea monster, Zeus orders in the 1981 film 'Clash of the Titans'",
+    "response": "the Kraken",
+    "value": 1200
+   },
+   {
+    "clue": "In Ovid, a jealous Circe's potion turned this nymph into the monster facing Charybdis",
+    "response": "Scylla",
+    "value": 1600
+   },
+   {
+    "clue": "Prague legend says Rabbi Judah Loew shaped this clay guardian and brought it to life",
+    "response": "a golem",
+    "value": 2000
+   }
+  ]
+ }
+]

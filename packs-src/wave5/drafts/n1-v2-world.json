@@ -1,0 +1,86 @@
+[
+  { "name": "BANKS OF THE WORLD", "clues": [
+    { "clue": "Hindu myth says this sacred river fell from heaven and was caught in Shiva's matted hair", "response": "the Ganges (Ganga)", "value": 200 },
+    { "clue": "Asia's longest river rises on the Tibetan Plateau and meets the sea at Shanghai", "response": "the Yangtze", "value": 400 },
+    { "clue": "Each monsoon, this swollen river forces Cambodia's Tonle Sap River to run backward", "response": "the Mekong", "value": 600 },
+    { "clue": "Lake Kariba, one of the largest man-made lakes on Earth, was formed by damming this river", "response": "the Zambezi", "value": 800 },
+    { "clue": "Timbuktu's traders relied on this West African river, which lends its name to two nations", "response": "the Niger", "value": 1000 }
+  ]},
+  { "name": "ALIAS ON THE ATLAS", "clues": [
+    { "clue": "India's film capital officially traded the name Bombay for this one in 1995", "response": "Mumbai", "value": 200 },
+    { "clue": "Saigon took this new name in 1976 to honor the late leader of North Vietnam", "response": "Ho Chi Minh City", "value": 400 },
+    { "clue": "The Dutch East India Company ran its Asian trade from Batavia, a city known by this name today", "response": "Jakarta", "value": 600 },
+    { "clue": "Long called Rangoon in English, Myanmar's largest city goes by this name", "response": "Yangon", "value": 800 },
+    { "clue": "Named for a Belgian king, the Congo River port of Léopoldville took this name in 1966", "response": "Kinshasa", "value": 1000 }
+  ]},
+  { "name": "ONCE UPON AN EMPIRE", "clues": [
+    { "clue": "To stay alive, Scheherazade spins the king a new story every night in this collection", "response": "the Arabian Nights (1001 Nights)", "value": 200 },
+    { "clue": "A prince of Ayodhya rescues his wife Sita from the demon king Ravana in this Hindu epic", "response": "the Ramayana", "value": 400 },
+    { "clue": "Often called the longest poem ever written, this Sanskrit epic tells of feuding royal cousins", "response": "the Mahabharata", "value": 600 },
+    { "clue": "A lazy, greedy pig-man called Pigsy is one of the pilgrim heroes of this 16th-century Chinese novel", "response": "Journey to the West", "value": 800 },
+    { "clue": "Decoding its flood tablet at the British Museum in 1872, George Smith reportedly began to undress in glee", "response": "the Epic of Gilgamesh (Gilgamesh)", "value": 1000 }
+  ]},
+  { "name": "MARK YOUR WORLD CALENDAR", "clues": [
+    { "clue": "Firecrackers are said to scare off a monster called Nian during this holiday", "response": "Chinese New Year (Lunar New Year)", "value": 200 },
+    { "clue": "Sweet loaves of 'pan de muerto' are set on family altars for this Mexican holiday", "response": "the Day of the Dead (Día de los Muertos)", "value": 400 },
+    { "clue": "A surprise attack in 1968 took its name from this Vietnamese lunar new year holiday", "response": "Tet", "value": 600 },
+    { "clue": "Families share mooncakes and admire the full moon during this Chinese harvest holiday", "response": "the Mid-Autumn Festival", "value": 800 },
+    { "clue": "Every June, Cusco stages a grand reenactment of this Inca festival honoring the sun god", "response": "Inti Raymi", "value": 1000 }
+  ]},
+  { "name": "WORDS WITH PASSPORTS", "clues": [
+    { "clue": "Kipling put this word in a book title, though its Sanskrit root meant dry wasteland", "response": "jungle", "value": 200 },
+    { "clue": "A Japanese title for the shogun gave English this word for a business magnate", "response": "tycoon", "value": 400 },
+    { "clue": "Today it's a newsstand, but this word comes from a Turkish name for a garden pavilion", "response": "kiosk", "value": 600 },
+    { "clue": "From a Hindi word meaning 'of Bengal', this term names a low, one-story house with a porch", "response": "bungalow", "value": 800 },
+    { "clue": "British India gave us this word for a brute, first used for bands of highway robbers who strangled travelers", "response": "thug", "value": 1000 }
+  ]},
+  { "name": "LOST AND FOUND CITIES", "clues": [
+    { "clue": "Boney M.'s disco hit borrowed Psalm 137's line about weeping by the rivers of this city", "response": "Babylon", "value": 200 },
+    { "clue": "Rome razed this Phoenician-founded rival, near modern Tunis, in 146 B.C.", "response": "Carthage", "value": 400 },
+    { "clue": "Electricians' 1978 find of a moon goddess stone led to the Templo Mayor of this Aztec capital", "response": "Tenochtitlan (Tenochtitlán)", "value": 600 },
+    { "clue": "A famous bronze 'Dancing Girl' statuette was dug up at this Indus Valley city in Pakistan", "response": "Mohenjo-daro (Mohenjodaro)", "value": 800 },
+    { "clue": "A soapstone bird carved at this ruined medieval Shona city now flies on a national flag", "response": "Great Zimbabwe", "value": 1000 }
+  ]},
+  { "name": "STREET FOOD SAFARI", "clues": [
+    { "clue": "Napa cabbage fermented with chili and garlic is the classic version of this Korean side dish", "response": "kimchi", "value": 200 },
+    { "clue": "In the 1940s the government in Bangkok promoted this tangy noodle stir-fry as a national dish", "response": "pad thai", "value": 400 },
+    { "clue": "Poland's 'ruskie' variety of these dumplings is stuffed with potato and farmer's cheese", "response": "pierogi (pierogies)", "value": 600 },
+    { "clue": "Hyderabad and Lucknow each boast a famous style of this layered, saffron-scented rice dish", "response": "biryani", "value": 800 },
+    { "clue": "Nigerians and Ghanaians argue happily over who cooks the best version of this spicy one-pot tomato dish", "response": "jollof rice (jollof)", "value": 1000 }
+  ]},
+  { "name": "PEN PALS ABROAD", "clues": [
+    { "clue": "Florentino waits over 50 years to win Fermina in 'Love in the Time of Cholera' by this Colombian", "response": "Gabriel García Márquez", "value": 200 },
+    { "clue": "'The House of the Spirits' began as a letter this Chilean wrote to her dying grandfather", "response": "Isabel Allende", "value": 400 },
+    { "clue": "Borrowing a line from Yeats for his title, he wrote of Okonkwo's fall in an Igbo village", "response": "Chinua Achebe", "value": 600 },
+    { "clue": "In 1994 this Cairo novelist survived a stabbing by extremists angered by his fiction", "response": "Naguib Mahfouz (Najib Mahfuz)", "value": 800 },
+    { "clue": "Istanbul's Museum of Innocence displays objects from a novel by this Turkish Nobel laureate", "response": "Orhan Pamuk", "value": 1000 }
+  ]},
+  { "name": "PEAK PERFORMANCES", "clues": [
+    { "clue": "A Japanese saying calls you wise to climb this peak once and a fool to climb it twice", "response": "Mount Fuji", "value": 200 },
+    { "clue": "Llamas and alpacas were first domesticated in this South American mountain range", "response": "the Andes", "value": 400 },
+    { "clue": "Greek myth chained Prometheus to a peak in this range between the Black and Caspian Seas", "response": "the Caucasus", "value": 600 },
+    { "clue": "Named for the Titan who held up the sky, this range stretches from Morocco into Tunisia", "response": "the Atlas Mountains", "value": 800 },
+    { "clue": "The Tatras are the loftiest part of this mountain arc curving through Slovakia, Poland and Romania", "response": "the Carpathians", "value": 1000 }
+  ]},
+  { "name": "DOWN UNDER AND BEYOND", "clues": [
+    { "clue": "Long called Ayers Rock, this huge sandstone monolith in the Outback is sacred to the Anangu", "response": "Uluru", "value": 200 },
+    { "clue": "Ka Mate, the best-known version of this Maori challenge dance, is credited to the chief Te Rauparaha", "response": "the haka", "value": 400 },
+    { "clue": "This Pacific nation won its first Olympic medal of any kind with gold in rugby sevens in 2016", "response": "Fiji", "value": 600 },
+    { "clue": "Home to more than 800 living languages, it's the most linguistically diverse nation on Earth", "response": "Papua New Guinea", "value": 800 },
+    { "clue": "Robert Louis Stevenson spent his last years in this island nation and lies buried on Mount Vaea", "response": "Samoa", "value": 1000 }
+  ]},
+  { "name": "MIND YOUR LANGUAGE", "clues": [
+    { "clue": "The Quran was revealed in this language, which is written from right to left", "response": "Arabic", "value": 200 },
+    { "clue": "Its alphabet stacks letters into square syllable blocks, and it's spoken in both Seoul and Pyongyang", "response": "Korean", "value": 400 },
+    { "clue": "The Inca Empire's main tongue, it's still spoken by millions in Peru and Bolivia", "response": "Quechua", "value": 600 },
+    { "clue": "After Arabic, this language of Addis Ababa has more speakers than any other Semitic tongue", "response": "Amharic", "value": 800 },
+    { "clue": "Pakistan's national language sounds much like Hindi but is written in a Perso-Arabic script", "response": "Urdu", "value": 1000 }
+  ]},
+  { "name": "HARD HAT HISTORY", "clues": [
+    { "clue": "'The Last Emperor' was the first Western feature film allowed to shoot inside this Beijing palace", "response": "the Forbidden City", "value": 200 },
+    { "clue": "The climax of 'Indiana Jones and the Last Crusade' was filmed at this Jordanian site's Treasury", "response": "Petra", "value": 400 },
+    { "clue": "Six minarets and thousands of Iznik tiles adorn this 17th-century Istanbul landmark", "response": "the Blue Mosque (Sultan Ahmed Mosque)", "value": 600 },
+    { "clue": "Once the Dalai Lama's winter home, this many-roomed hilltop fortress towers over Lhasa", "response": "the Potala Palace", "value": 800 },
+    { "clue": "Buried under volcanic ash and jungle, this Javanese temple was cleared after Stamford Raffles heard of it", "response": "Borobudur", "value": 1000 }
+  ]}
+]

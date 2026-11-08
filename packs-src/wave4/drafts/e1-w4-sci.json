@@ -8,13 +8,13 @@
         "value": 200
       },
       {
-        "clue": "Folks once watched for this red-breasted bird as the first sign of spring",
+        "clue": "'When the red, red' this 'comes bob, bob, bobbin' along,' the old tune goes",
         "response": "the robin",
         "value": 400
       },
       {
-        "clue": "Fill a red feeder with sugar water to bring these tiny, buzzing birds to the porch",
-        "response": "hummingbirds",
+        "clue": "Ethel Waters sang that 'His eye is on' this small brown bird",
+        "response": "the sparrow",
         "value": 600
       },
       {
@@ -68,8 +68,8 @@
         "value": 200
       },
       {
-        "clue": "Boardwalk shops in Atlantic City pulled this chewy treat named for the sea",
-        "response": "saltwater taffy",
+        "clue": "Leo Hirshfield named these chewy chocolate logs for his daughter's nickname",
+        "response": "Tootsie Rolls",
         "value": 400
       },
       {
@@ -98,8 +98,8 @@
         "value": 200
       },
       {
-        "clue": "On February 2nd, folks wait to see if this burrowing critter spots its shadow",
-        "response": "the groundhog",
+        "clue": "'Rain before seven, clear by' this hour, the old weather rhyme promises",
+        "response": "eleven",
         "value": 400
       },
       {
@@ -108,8 +108,8 @@
         "value": 600
       },
       {
-        "clue": "'Red sky in the morning' is a warning to this seafaring fellow",
-        "response": "a sailor",
+        "clue": "Since 1792 this yearly New England booklet has made long-range weather forecasts",
+        "response": "The Old Farmer's Almanac",
         "value": 800
       },
       {
@@ -153,7 +153,7 @@
     "name": "AMERICAN TINKERERS",
     "clues": [
       {
-        "clue": "This inventor of the phonograph earned more than 1,000 U.S. patents",
+        "clue": "Born in Milan, Ohio, this inventor earned more than 1,000 U.S. patents",
         "response": "Thomas Edison",
         "value": 200
       },
@@ -173,8 +173,8 @@
         "value": 800
       },
       {
-        "clue": "Eli Whitney's 1793 gin pulled the seeds out of this fluffy crop",
-        "response": "cotton",
+        "clue": "Cyrus McCormick's mechanical reaper sped up the harvest of this grain",
+        "response": "wheat",
         "value": 1000
       }
     ]
@@ -313,8 +313,8 @@
         "value": 400
       },
       {
-        "clue": "Peonies and hostas count as these, the garden plants that return every spring",
-        "response": "perennials",
+        "clue": "Gardeners cheer these wrigglers, which tunnel through the soil and enrich it",
+        "response": "earthworms",
         "value": 600
       },
       {

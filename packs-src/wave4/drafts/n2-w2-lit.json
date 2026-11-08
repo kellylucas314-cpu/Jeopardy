@@ -11,7 +11,7 @@
     { "clue": "Latin for 'into the middle of things,' it's how Homer launches the 'Iliad'", "response": "in medias res", "value": 800 },
     { "clue": "JFK's 'Ask not' line mirrors its own words in this A-B-B-A rhetorical device", "response": "chiasmus (antimetabole)", "value": 1200 },
     { "clue": "Calling your car your 'wheels' uses this figure, in which a part stands for the whole", "response": "synecdoche", "value": 1600 },
-    { "clue": "'He lost his hat and his temper' is this figure, with one verb yoked to two different senses", "response": "zeugma (syllepsis)", "value": 2000 }
+    { "clue": "Calling the sea the 'whale-road' in 'Beowulf' uses this kind of compound metaphor", "response": "a kenning", "value": 2000 }
   ] },
   { "name": "CAMELOT CALL SHEET", "clues": [
     { "clue": "This queen's love for Lancelot helps doom the fellowship of the Round Table", "response": "Guinevere", "value": 400 },

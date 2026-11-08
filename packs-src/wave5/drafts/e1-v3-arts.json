@@ -1,0 +1,86 @@
+[
+  { "name": "FUNNIES ON SUNDAY", "clues": [
+    { "clue": "Lucy always yanks the football away just as this round-headed kid goes to kick it", "response": "Charlie Brown", "value": 200 },
+    { "clue": "This lovable Great Dane has hogged the Winslow family sofa in the funnies since 1954", "response": "Marmaduke", "value": 400 },
+    { "clue": "'Leapin' lizards!' cried this blank-eyed, curly-topped redhead of the comic strips", "response": "Little Orphan Annie", "value": 600 },
+    { "clue": "This horn-helmeted Viking goes off raiding, then comes home to his wife, Helga", "response": "Hägar the Horrible (Hagar)", "value": 800 },
+    { "clue": "Hal Foster's richly drawn Sunday strip followed this young Arthurian knight from 1937", "response": "Prince Valiant", "value": 1000 }
+  ] },
+  { "name": "CEREAL AND CARTOONS", "clues": [
+    { "clue": "This flying, caped cartoon rodent was the super-strong hero of the Terrytoons", "response": "Mighty Mouse", "value": 200 },
+    { "clue": "'I tawt I taw a puddy tat!' said this little yellow canary", "response": "Tweety (Tweety Bird)", "value": 400 },
+    { "clue": "Red-mustached and rootin'-tootin', this tiny gunslinger forever battled Bugs", "response": "Yosemite Sam", "value": 600 },
+    { "clue": "Humble Shoeshine Boy was the secret identity of this rhyming superhero dog", "response": "Underdog", "value": 800 },
+    { "clue": "Genius beagle Mr. Peabody and his boy Sherman toured history in this gizmo", "response": "the WABAC machine (Wayback Machine)", "value": 1000 }
+  ] },
+  { "name": "ONCE UPON A DISNEY", "clues": [
+    { "clue": "Pongo and Perdita are the proud parents of the puppies in this Disney film", "response": "101 Dalmatians", "value": 200 },
+    { "clue": "Baloo the bear croons 'The Bare Necessities' to Mowgli in this 1967 Disney film", "response": "The Jungle Book", "value": 400 },
+    { "clue": "This wicked fairy curses baby Aurora, then turns into a dragon in 'Sleeping Beauty'", "response": "Maleficent", "value": 600 },
+    { "clue": "Young Arthur, called Wart, studies with Merlin in this 1963 Disney film", "response": "The Sword in the Stone", "value": 800 },
+    { "clue": "A Volkswagen Beetle numbered 53, with a mind of its own, starred in this 1968 comedy", "response": "The Love Bug", "value": 1000 }
+  ] },
+  { "name": "HOME, SWEET STYLE", "clues": [
+    { "clue": "Shaped like a capital letter, this cabin's steep roof slopes nearly to the ground", "response": "an A-frame", "value": 200 },
+    { "clue": "Long, low and one-story, this postwar suburban home was named for Western spreads", "response": "a ranch house", "value": 400 },
+    { "clue": "Gingerbread trim, turrets and wraparound porches mark homes of this queen's era", "response": "Victorian", "value": 600 },
+    { "clue": "This cozy, shingled New England style is named for a Massachusetts peninsula", "response": "Cape Cod", "value": 800 },
+    { "clue": "Two stories in front, one behind: this New England house mimics an old salt container", "response": "a saltbox", "value": 1000 }
+  ] },
+  { "name": "MUSIC FOR THE OCCASION", "clues": [
+    { "clue": "Wagner's 'Bridal Chorus' is better known by this four-word phrase", "response": "'Here Comes the Bride'", "value": 200 },
+    { "clue": "Caps and gowns file in to Elgar's 'Pomp and Circumstance' at this ceremony", "response": "graduation (commencement)", "value": 400 },
+    { "clue": "Audiences traditionally rise to their feet for this joyful part of Handel's 'Messiah'", "response": "the Hallelujah Chorus", "value": 600 },
+    { "clue": "Newlyweds leave the church to the 'Wedding March' by this German composer", "response": "Felix Mendelssohn", "value": 800 },
+    { "clue": "Johann Pachelbel's best-known piece, a wedding favorite, is this one in D major", "response": "Canon (Canon in D)", "value": 1000 }
+  ] },
+  { "name": "STANDING STILL", "clues": [
+    { "clue": "Rodin's bronze man sits chin on hand, lost in deep thought, in this statue", "response": "The Thinker", "value": 200 },
+    { "clue": "Daniel Chester French designed the seated 16th president inside this landmark", "response": "the Lincoln Memorial", "value": 400 },
+    { "clue": "A Central Park statue honors this sled dog of the 1925 medicine run to Nome", "response": "Balto", "value": 600 },
+    { "clue": "A tiny bronze boy relieving himself in a fountain is a beloved symbol of this city", "response": "Brussels", "value": 800 },
+    { "clue": "In 1989 Arturo Di Modica sneaked this bronze beast onto Wall Street overnight", "response": "Charging Bull (a bull)", "value": 1000 }
+  ] },
+  { "name": "SMILE FOR THE CAMERA", "clues": [
+    { "clue": "Just before the shutter clicked, photographers asked you to say this dairy word", "response": "cheese", "value": 200 },
+    { "clue": "Yellow-bordered covers made this magazine's photos of faraway lands famous", "response": "National Geographic", "value": 400 },
+    { "clue": "Film was once developed under a dim red safelight in this kind of room", "response": "a darkroom", "value": 600 },
+    { "clue": "A strip of four snapshots for a coin or two came out of this curtained arcade box", "response": "a photo booth", "value": 800 },
+    { "clue": "Kodak's box camera shared its name with these elfin sprites of Palmer Cox", "response": "Brownies", "value": 1000 }
+  ] },
+  { "name": "AND NOW, A REALLY BIG SHOW", "clues": [
+    { "clue": "Buck Owens and Roy Clark picked and grinned in Kornfield Kounty on this country show", "response": "Hee Haw", "value": 200 },
+    { "clue": "Bus driver Ralph Kramden was the signature role of this comic, 'The Great One'", "response": "Jackie Gleason", "value": 400 },
+    { "clue": "Called 'Mr. Television,' he sold Texaco on TV's first big hit, often in a dress", "response": "Milton Berle", "value": 600 },
+    { "clue": "'Kiss me goodnight, Eddie,' this Italian mouse puppet told Ed Sullivan", "response": "Topo Gigio", "value": 800 },
+    { "clue": "Lyrics rolled across the TV screen so viewers could join this bandleader's show", "response": "Sing Along with Mitch (Mitch Miller)", "value": 1000 }
+  ] },
+  { "name": "SMALL-SCREEN SLEUTHS", "clues": [
+    { "clue": "Peter Falk's detective kept mentioning his wife, who never once appeared", "response": "Columbo", "value": 200 },
+    { "clue": "James Garner's private eye lived in a trailer by the beach in Malibu", "response": "The Rockford Files (Jim Rockford)", "value": 400 },
+    { "clue": "Raymond Burr returned to TV in a wheelchair as this San Francisco chief of detectives", "response": "Ironside", "value": 600 },
+    { "clue": "Henry Mancini's jazzy theme backed this suave TV private eye of the late 1950s", "response": "Peter Gunn", "value": 800 },
+    { "clue": "William Conrad, radio's Matt Dillon, later played this portly TV private eye", "response": "Cannon (Frank Cannon)", "value": 1000 }
+  ] },
+  { "name": "SHOW-STOPPING TUNES", "clues": [
+    { "clue": "'You'll Never Walk Alone' is from this Rodgers and Hammerstein show named for a ride", "response": "Carousel", "value": 200 },
+    { "clue": "JFK liked to play the cast album of this 1960 musical about King Arthur at bedtime", "response": "Camelot", "value": 400 },
+    { "clue": "Barbra Streisand belted 'Don't Rain on My Parade' in this Broadway musical", "response": "Funny Girl", "value": 600 },
+    { "clue": "A vamp sings 'Whatever Lola Wants' in this musical about the Washington Senators", "response": "Damn Yankees", "value": 800 },
+    { "clue": "'Put on a Happy Face' is from this musical about a rock idol getting drafted", "response": "Bye Bye Birdie", "value": 1000 }
+  ] },
+  { "name": "AMERICAN BRUSHSTROKES", "clues": [
+    { "clue": "Ruby Bridges walks to school with U.S. marshals in this illustrator's 1964 work", "response": "Norman Rockwell", "value": 200 },
+    { "clue": "His unfinished portrait of George Washington became the face on the $1 bill", "response": "Gilbert Stuart", "value": 400 },
+    { "clue": "A woman in pink reaches across a Maine field in this painter's 'Christina's World'", "response": "Andrew Wyeth", "value": 600 },
+    { "clue": "Famed for stormy seascapes, he began as a Civil War illustrator for Harper's Weekly", "response": "Winslow Homer", "value": 800 },
+    { "clue": "This artist painted 435 life-size plates for 'The Birds of America'", "response": "John James Audubon", "value": 1000 }
+  ] },
+  { "name": "BEST-SELLER TO SILVER SCREEN", "clues": [
+    { "clue": "A collie walks hundreds of miles back to her boy in this Eric Knight story", "response": "Lassie Come-Home", "value": 200 },
+    { "clue": "A young Elizabeth Taylor rode The Pie to steeplechase glory in this 1944 film", "response": "National Velvet", "value": 400 },
+    { "clue": "Gregory Peck and Jane Wyman played Florida backwoods parents in this 1946 film", "response": "The Yearling", "value": 600 },
+    { "clue": "Ronald Colman finds paradise in the Himalayas in Capra's 1937 film of this novel", "response": "Lost Horizon", "value": 800 },
+    { "clue": "Edna Ferber's sprawling Texas saga became James Dean's final film", "response": "Giant", "value": 1000 }
+  ] }
+]

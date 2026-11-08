@@ -285,7 +285,7 @@ function renderSetup() {
           <div class="mode-buttons pack-buttons">
             <button class="btn-mode btn-pack ${pack === 'fresh' ? 'selected' : ''}" data-pack="fresh">
               <span class="mode-name">Fresh Pack</span>
-              <span class="mode-desc">4,900+ original clues written for this game</span>
+              <span class="mode-desc">6,200+ original clues written for this game</span>
             </button>
             <button class="btn-mode btn-pack ${pack === 'easy' ? 'selected' : ''}" data-pack="easy">
               <span class="mode-name">Easy Breezy</span>

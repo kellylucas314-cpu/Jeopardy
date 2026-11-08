@@ -1,0 +1,86 @@
+[
+  { "name": "THE FAT LADY SINGS", "clues": [
+    { "clue": "Pavarotti, Domingo and Carreras first sang together as this trio in Rome in 1990", "response": "The Three Tenors", "value": 400 },
+    { "clue": "In 1955 this contralto became the first Black soloist at the Metropolitan Opera", "response": "Marian Anderson", "value": 800 },
+    { "clue": "Nicknamed 'Bubbles,' this Brooklyn-born soprano later ran the New York City Opera", "response": "Beverly Sills", "value": 1200 },
+    { "clue": "Mario Lanza played this legendary Neapolitan tenor in a 1951 film biography", "response": "Enrico Caruso", "value": 1600 },
+    { "clue": "Little Buttercup sells her wares to sailors aboard this Gilbert and Sullivan ship", "response": "H.M.S. Pinafore", "value": 2000 }
+  ] },
+  { "name": "TUTU LOVELY", "clues": [
+    { "clue": "Clara's Christmas gift carries her to the Land of Sweets in this ballet", "response": "The Nutcracker", "value": 400 },
+    { "clue": "Ballerinas dance up on the very tips of their toes, a position called this", "response": "en pointe (pointe)", "value": 800 },
+    { "clue": "A toymaker's lifelike doll fools a lovestruck young man in this comic ballet", "response": "Coppélia (Coppelia)", "value": 1200 },
+    { "clue": "'The Dying Swan' was the signature solo of this Russian ballerina", "response": "Anna Pavlova", "value": 1600 },
+    { "clue": "Mikhail Baryshnikov slipped away from his Soviet troupe in this Canadian city in 1974", "response": "Toronto", "value": 2000 }
+  ] },
+  { "name": "LOONEY LINES", "clues": [
+    { "clue": "'Sufferin' succotash!' sputtered this lisping cat, forever chasing Tweety", "response": "Sylvester", "value": 400 },
+    { "clue": "This stuttering pig closed many a Warner Bros. cartoon with a famous farewell", "response": "Porky Pig", "value": 800 },
+    { "clue": "'I say, I say, boy!' drawled this big, blustery barnyard rooster", "response": "Foghorn Leghorn", "value": 1200 },
+    { "clue": "'You're despicable!' lisped this hot-tempered Warner Bros. quacker", "response": "Daffy Duck", "value": 1600 },
+    { "clue": "This sombrero-topped cartoon mouse zipped rings around a hungry cat", "response": "Speedy Gonzales", "value": 2000 }
+  ] },
+  { "name": "MUSEUM MILE", "clues": [
+    { "clue": "Dorothy's ruby slippers and the Hope Diamond belong to this Washington institution", "response": "the Smithsonian", "value": 400 },
+    { "clue": "Egypt's Temple of Dendur sits in a glass-walled wing of this Fifth Avenue landmark", "response": "the Met (Metropolitan Museum of Art)", "value": 800 },
+    { "clue": "The Norman Rockwell Museum sits in this Massachusetts town where the artist lived", "response": "Stockbridge", "value": 1200 },
+    { "clue": "Marie Tussaud made death masks in the Revolution, then founded this London wax museum", "response": "Madame Tussauds", "value": 1600 },
+    { "clue": "Warhol's 'Campbell's Soup Cans' belong to this four-letter Manhattan collection", "response": "MoMA (the Museum of Modern Art)", "value": 2000 }
+  ] },
+  { "name": "OLD MASTERS, NEW FRIENDS", "clues": [
+    { "clue": "Leonardo drew this nude man with arms outstretched inside a circle and a square", "response": "Vitruvian Man", "value": 400 },
+    { "clue": "Van Gogh painted vases of these yellow blooms to brighten Gauguin's room in Arles", "response": "sunflowers", "value": 800 },
+    { "clue": "Rembrandt's huge 'The Night Watch' is the pride of this Dutch city's Rijksmuseum", "response": "Amsterdam", "value": 1200 },
+    { "clue": "Leonardo da Vinci filled his notebooks with this backward handwriting", "response": "mirror writing", "value": 1600 },
+    { "clue": "Thomas Gainsborough dressed this young sitter in a shimmering satin suit", "response": "The Blue Boy", "value": 2000 }
+  ] },
+  { "name": "KIDDIE TV", "clues": [
+    { "clue": "'Say, kids, what time is it?' Buffalo Bob asked the Peanut Gallery on this program", "response": "The Howdy Doody Show (Howdy Doody)", "value": 400 },
+    { "clue": "Mr. Green Jeans and Bunny Rabbit visited this mustached host's Treasure House", "response": "Captain Kangaroo", "value": 800 },
+    { "clue": "Shari Lewis's sweet-voiced sock puppet was this little sheep", "response": "Lamb Chop", "value": 1200 },
+    { "clue": "A hostess peered through her Magic Mirror to greet children at home on this show", "response": "Romper Room", "value": 1600 },
+    { "clue": "Puppets Kukla and Ollie shared their show's title with this warm human hostess", "response": "Fran Allison (Fran)", "value": 2000 }
+  ] },
+  { "name": "SNAPSHOTS IN TIME", "clues": [
+    { "clue": "A famous 1965 photo shows this boxer snarling over a fallen Sonny Liston", "response": "Muhammad Ali", "value": 400 },
+    { "clue": "Apollo 8's crew snapped our blue planet rising over the Moon in this 1968 photo", "response": "Earthrise", "value": 800 },
+    { "clue": "Ironworkers eat on a steel beam high over Manhattan in this famous 1932 photo", "response": "Lunch atop a Skyscraper", "value": 1200 },
+    { "clue": "This genius stuck out his tongue for a photographer on his 72nd birthday", "response": "Albert Einstein", "value": 1600 },
+    { "clue": "Neil Armstrong held the camera, so most famous Moon-walk photos show this astronaut", "response": "Buzz Aldrin", "value": 2000 }
+  ] },
+  { "name": "IT'S NOT EASY BEING GREEN", "clues": [
+    { "clue": "Kermit sat on a log and sang 'Rainbow Connection' in this 1979 film", "response": "The Muppet Movie", "value": 400 },
+    { "clue": "This glamorous, karate-chopping pig only had eyes for Kermit", "response": "Miss Piggy", "value": 800 },
+    { "clue": "This furry green grump lives in a trash can on Sesame Street", "response": "Oscar the Grouch", "value": 1200 },
+    { "clue": "'Wocka wocka!' cheered this hapless stand-up comic in a polka-dot tie", "response": "Fozzie Bear", "value": 1600 },
+    { "clue": "These two grumpy old Muppet hecklers were named for two famous hotels", "response": "Statler and Waldorf", "value": 2000 }
+  ] },
+  { "name": "COMIC BOOK RACK", "clues": [
+    { "clue": "Perry White edits this paper, where Lois Lane and Clark Kent are reporters", "response": "the Daily Planet", "value": 400 },
+    { "clue": "Riverdale High's Betty and Veronica both had a crush on this freckled redhead", "response": "Archie (Archie Andrews)", "value": 800 },
+    { "clue": "Adam West's Batman fought crooks with on-screen 'Pow!' and 'Zap!' in this decade", "response": "the 1960s", "value": 1200 },
+    { "clue": "Young Billy Batson shouts 'Shazam!' to become this caped hero", "response": "Captain Marvel", "value": 1600 },
+    { "clue": "Harvey Comics' boy billionaire had a butler named Cadbury and a dog named Dollar", "response": "Richie Rich", "value": 2000 }
+  ] },
+  { "name": "LIGHTS ON BROADWAY", "clues": [
+    { "clue": "This wide-eyed blonde played Dolly Levi in 'Hello, Dolly!' thousands of times", "response": "Carol Channing", "value": 400 },
+    { "clue": "Before 'Murder, She Wrote,' she won a Tony as the madcap title aunt in 'Mame'", "response": "Angela Lansbury", "value": 800 },
+    { "clue": "This brassy belter introduced 'There's No Business Like Show Business' in 1946", "response": "Ethel Merman", "value": 1200 },
+    { "clue": "This bald star played the King of Siam more than 4,600 times", "response": "Yul Brynner", "value": 1600 },
+    { "clue": "Larry Hagman's mother, she created Nellie Forbush and Maria von Trapp on Broadway", "response": "Mary Martin", "value": 2000 }
+  ] },
+  { "name": "PIANO LESSON FAVORITES", "clues": [
+    { "clue": "Parents hum Johannes Brahms's 'Wiegenlied,' better known as this, at bedtime", "response": "Lullaby (Cradle Song)", "value": 400 },
+    { "clue": "Beethoven dedicated this little piano piece to a mystery woman", "response": "'Für Elise' (Fur Elise)", "value": 800 },
+    { "clue": "Chopin's speedy waltz shares its nickname with this unit of time, but takes longer", "response": "a minute", "value": 1200 },
+    { "clue": "A critic's image of Lake Lucerne at night gave this Beethoven piano work its nickname", "response": "the Moonlight Sonata", "value": 1600 },
+    { "clue": "Rimsky-Korsakov's frantic interlude depicts the flight of this buzzing insect", "response": "a bumblebee", "value": 2000 }
+  ] },
+  { "name": "HOMES WITH A HISTORY", "clues": [
+    { "clue": "A ladies' association saved George Washington's Potomac River estate in the 1850s", "response": "Mount Vernon", "value": 400 },
+    { "clue": "Thomas Jefferson spent some 40 years building and rebuilding this Virginia home", "response": "Monticello", "value": 800 },
+    { "clue": "Stairs to nowhere fill this rambling San Jose mansion built by a rifle heiress", "response": "the Winchester Mystery House", "value": 1200 },
+    { "clue": "The Vanderbilts called The Breakers their summer 'cottage' in this Rhode Island town", "response": "Newport", "value": 1600 },
+    { "clue": "Frank Lloyd Wright named his Wisconsin home and studio for a Welsh bard", "response": "Taliesin", "value": 2000 }
+  ] }
+]

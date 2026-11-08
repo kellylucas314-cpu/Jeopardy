@@ -1,0 +1,362 @@
+[
+  {
+    "name": "THE CAT'S PAJAMAS",
+    "clues": [
+      {
+        "clue": "A sniff of this mint-family herb sends many cats into a rolling, rubbing frenzy",
+        "response": "catnip",
+        "value": 400
+      },
+      {
+        "clue": "Lasagna-loving Garfield is an orange cat with this striped coat pattern",
+        "response": "the tabby",
+        "value": 800
+      },
+      {
+        "clue": "A big, shaggy breed, this is the official state cat of a New England state",
+        "response": "the Maine coon",
+        "value": 1200
+      },
+      {
+        "clue": "Tailless ones are 'rumpies' and short-tailed ones 'stumpies' in this cat breed",
+        "response": "the Manx",
+        "value": 1600
+      },
+      {
+        "clue": "Maryland picked this patchy cat as its state cat, since it shares the oriole's colors",
+        "response": "calico",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "EARTH IN MOTION",
+    "clues": [
+      {
+        "clue": "'Funiculi, Funicula' cheered a new railway up this volcano by Naples",
+        "response": "Mount Vesuvius (Vesuvius)",
+        "value": 400
+      },
+      {
+        "clue": "Dwayne Johnson's 2015 disaster movie took its title from this California rift",
+        "response": "the San Andreas Fault",
+        "value": 800
+      },
+      {
+        "clue": "Beno Gutenberg co-created this quake gauge, yet it carries only his partner's name",
+        "response": "the Richter scale",
+        "value": 1200
+      },
+      {
+        "clue": "Creeping 'rivers of ice' called these carved out Yosemite's famous valley",
+        "response": "glaciers",
+        "value": 1600
+      },
+      {
+        "clue": "Ash from its 1883 eruption gave sunsets around the world a fiery red glow",
+        "response": "Krakatoa",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "SAFARI SNAPSHOTS",
+    "clues": [
+      {
+        "clue": "Its bluish-black tongue can be about a foot and a half long",
+        "response": "the giraffe",
+        "value": 400
+      },
+      {
+        "clue": "Under all those stripes, this African animal's skin is actually black",
+        "response": "zebras",
+        "value": 800
+      },
+      {
+        "clue": "Black 'tear marks' run from the eyes down the face of this spotted African cat",
+        "response": "the cheetah",
+        "value": 1200
+      },
+      {
+        "clue": "Pumbaa in 'The Lion King' is one of these tusked wild African pigs",
+        "response": "a warthog",
+        "value": 1600
+      },
+      {
+        "clue": "Famous for their 'laugh', these African hunters live in clans led by females",
+        "response": "hyenas (spotted hyenas)",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "ON THE RISE",
+    "clues": [
+      {
+        "clue": "In 'The Third Man', Orson Welles rides Vienna's famous giant one of these",
+        "response": "the Ferris wheel",
+        "value": 400
+      },
+      {
+        "clue": "Every October, hundreds of these float over Albuquerque at a famous fiesta",
+        "response": "hot-air balloons",
+        "value": 800
+      },
+      {
+        "clue": "Soft, bland background tunes like Muzak are often nicknamed this kind of 'music'",
+        "response": "the elevator (elevator music)",
+        "value": 1200
+      },
+      {
+        "clue": "Jesse Reno's 1896 Coney Island ride was an early version of this moving stairway",
+        "response": "the escalator",
+        "value": 1600
+      },
+      {
+        "clue": "No peak in the eastern U.S. tops this state's 6,684-foot Mount Mitchell",
+        "response": "North Carolina",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "LIFTOFF!",
+    "clues": [
+      {
+        "clue": "A 1929 Fritz Lang film is credited with starting this '10, 9, 8...' launch ritual",
+        "response": "the countdown",
+        "value": 400
+      },
+      {
+        "clue": "Her name is Russian for 'barker', and this Soviet space dog never came home",
+        "response": "Laika",
+        "value": 800
+      },
+      {
+        "clue": "'Poyekhali!', or 'Let's go!', shouted this cosmonaut as his rocket lifted off",
+        "response": "Yuri Gagarin",
+        "value": 1200
+      },
+      {
+        "clue": "In 1998, at age 77, this Mercury astronaut flew again aboard the shuttle Discovery",
+        "response": "John Glenn",
+        "value": 1600
+      },
+      {
+        "clue": "Freedom 7 carried this Navy test pilot on a 15-minute hop in 1961",
+        "response": "Alan Shepard",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "BODY OF SAYINGS",
+    "clues": [
+      {
+        "clue": "Nervous before a big speech? You may feel butterflies fluttering in this",
+        "response": "the stomach (your stomach)",
+        "value": 400
+      },
+      {
+        "clue": "A clumsy person is said to be 'all' these, as if every finger were one",
+        "response": "thumbs",
+        "value": 800
+      },
+      {
+        "clue": "The British are famed for keeping this facial feature firm in hard times",
+        "response": "the upper lip (a stiff upper lip)",
+        "value": 1200
+      },
+      {
+        "clue": "A fatal weakness is called this, after a Greek hero's one unprotected spot",
+        "response": "an Achilles' heel",
+        "value": 1600
+      },
+      {
+        "clue": "Someone you cherish is 'the apple of' this, a phrase from the Old Testament",
+        "response": "the eye (my eye)",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "SKY WATCHERS",
+    "clues": [
+      {
+        "clue": "Its handle and bowl make it an easy star pattern to spot in northern skies",
+        "response": "the Big Dipper",
+        "value": 400
+      },
+      {
+        "clue": "Bright stars Betelgeuse and Rigel both shine in this hunter constellation",
+        "response": "Orion",
+        "value": 800
+      },
+      {
+        "clue": "Our home galaxy is named for its creamy streak across the night sky",
+        "response": "the Milky Way",
+        "value": 1200
+      },
+      {
+        "clue": "A space rock that survives the fiery fall and lands on Earth is called this",
+        "response": "a meteorite",
+        "value": 1600
+      },
+      {
+        "clue": "Every August, Earth passes through comet dust to give us this famous meteor shower",
+        "response": "the Perseids",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "HOME SWEET HABITAT",
+    "clues": [
+      {
+        "clue": "Honeybees store their honey in wax combs inside this busy home",
+        "response": "a hive (beehive)",
+        "value": 400
+      },
+      {
+        "clue": "Messy bedrooms get compared to this muddy pen where pigs live",
+        "response": "a pigsty (sty)",
+        "value": 800
+      },
+      {
+        "clue": "Beavers raise their kits in this dome-shaped home of sticks and mud",
+        "response": "a lodge",
+        "value": 1200
+      },
+      {
+        "clue": "Rabbits dig a whole network of connected burrows called this",
+        "response": "a warren",
+        "value": 1600
+      },
+      {
+        "clue": "Eagles build this huge nest high on a cliff or treetop",
+        "response": "an aerie (eyrie)",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "KEEPING TIME",
+    "clues": [
+      {
+        "clue": "Every four years or so, this extra day pops up on the calendar",
+        "response": "February 29 (Leap Day)",
+        "value": 400
+      },
+      {
+        "clue": "'Spring forward, fall back' helps you remember this twice-yearly clock change",
+        "response": "daylight saving time",
+        "value": 800
+      },
+      {
+        "clue": "Before clocks, this garden device told the time with a shadow",
+        "response": "a sundial",
+        "value": 1200
+      },
+      {
+        "clue": "London's Big Ben is really the nickname of this, not the tower",
+        "response": "the bell (the Great Bell)",
+        "value": 1600
+      },
+      {
+        "clue": "Our calendar is named for this pope, who fixed the leap-year rule in 1582",
+        "response": "Gregory XIII",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "JURASSIC LARK",
+    "clues": [
+      {
+        "clue": "Its tiny arms look silly, but this 'tyrant lizard king' had a bone-crushing bite",
+        "response": "T. rex (Tyrannosaurus rex)",
+        "value": 400
+      },
+      {
+        "clue": "Three horns and a big bony frill made this plant-eater a tough customer",
+        "response": "Triceratops",
+        "value": 800
+      },
+      {
+        "clue": "Spiky plates ran down the back of this dinosaur, famous for its tiny brain",
+        "response": "Stegosaurus",
+        "value": 1200
+      },
+      {
+        "clue": "The real one was only about turkey-sized, unlike the menacing 'Jurassic Park' version",
+        "response": "Velociraptor",
+        "value": 1600
+      },
+      {
+        "clue": "Most scientists blame a giant one of these, striking Mexico, for the dinosaurs' end",
+        "response": "an asteroid",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "SOMETHING FISHY",
+    "clues": [
+      {
+        "clue": "Carnival prizes in little plastic bags were often these orange pets",
+        "response": "goldfish",
+        "value": 400
+      },
+      {
+        "clue": "Named for their whiskers, these bottom-feeders are a Southern fried favorite",
+        "response": "catfish",
+        "value": 800
+      },
+      {
+        "clue": "Grizzly bears wade into waterfalls to snatch these leaping fish in midair",
+        "response": "salmon",
+        "value": 1200
+      },
+      {
+        "clue": "This fish uses its long, flat bill to slash at its prey",
+        "response": "the swordfish",
+        "value": 1600
+      },
+      {
+        "clue": "Real caviar comes from the eggs of this ancient fish",
+        "response": "the sturgeon",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "FROM LITTLE SEEDS",
+    "clues": [
+      {
+        "clue": "'Mighty oaks from little' these grow, so the saying goes",
+        "response": "acorns",
+        "value": 400
+      },
+      {
+        "clue": "Ray Bradbury named a 1957 novel for the homemade wine made from this yellow weed",
+        "response": "the dandelion",
+        "value": 800
+      },
+      {
+        "clue": "Maple seeds twirl to the ground like little versions of these whirling aircraft",
+        "response": "helicopters",
+        "value": 1200
+      },
+      {
+        "clue": "This palm's fruit can float across oceans to sprout on far-off beaches",
+        "response": "the coconut",
+        "value": 1600
+      },
+      {
+        "clue": "Clay rams and puppies sprouted green 'fur' from seeds in this TV-advertised novelty",
+        "response": "the Chia Pet",
+        "value": 2000
+      }
+    ]
+  }
+]
