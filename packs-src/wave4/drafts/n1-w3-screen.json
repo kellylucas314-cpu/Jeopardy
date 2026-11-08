@@ -1,0 +1,86 @@
+[
+  { "name": "THE COMPOSER'S CHAIR", "clues": [
+    { "clue": "'Rhapsody in Blue' and the folk opera 'Porgy and Bess' came from this Brooklyn-born composer", "response": "George Gershwin", "value": 200 },
+    { "clue": "This Frenchman died just three months after his opera 'Carmen' opened in Paris in 1875", "response": "Georges Bizet", "value": 400 },
+    { "clue": "'In the Hall of the Mountain King' comes from this Norwegian's music for Ibsen's 'Peer Gynt'", "response": "Edvard Grieg", "value": 600 },
+    { "clue": "Mars, the Bringer of War, opens 'The Planets,' this Englishman's seven-movement suite", "response": "Gustav Holst", "value": 800 },
+    { "clue": "Written in 1899 to protest Russian censorship, the tone poem 'Finlandia' is by this composer", "response": "Jean Sibelius", "value": 1000 }
+  ] },
+  { "name": "PUNCHING THE TV CLOCK", "clues": [
+    { "clue": "Dwight Schrute farms beets when he's not selling paper on this sitcom", "response": "The Office", "value": 200 },
+    { "clue": "Louie De Palma barked at the drivers of New York's Sunshine Cab Company on this sitcom", "response": "Taxi", "value": 400 },
+    { "clue": "Ron Swanson loathes government while working for it in Pawnee, Indiana, on this sitcom", "response": "Parks and Recreation", "value": 600 },
+    { "clue": "Pompous anchor Ted Baxter mangled the news at Minneapolis station WJM on this sitcom", "response": "The Mary Tyler Moore Show", "value": 800 },
+    { "clue": "Dr. Johnny Fever spun records and Les Nessman read farm reports on this radio-station sitcom", "response": "WKRP in Cincinnati", "value": 1000 }
+  ] },
+  { "name": "OVERTURES AND BEGINNERS", "clues": [
+    { "clue": "Little orphan with a dog named Sandy, she's certain the sun'll come out tomorrow", "response": "Annie", "value": 200 },
+    { "clue": "Three sisters beg 'Matchmaker, Matchmaker' to find them husbands in this 1964 musical", "response": "Fiddler on the Roof", "value": 400 },
+    { "clue": "'Tonight,' 'Maria' and 'America' are all numbers from this 1957 musical", "response": "West Side Story", "value": 600 },
+    { "clue": "Henry Higgins drills the Cockney out of Eliza Doolittle's vowels in this Lerner and Loewe hit", "response": "My Fair Lady", "value": 800 },
+    { "clue": "Mrs. Lovett bakes his victims into meat pies in this Sondheim show about a vengeful barber", "response": "Sweeney Todd", "value": 1000 }
+  ] },
+  { "name": "MOTOR CITY MUSIC", "clues": [
+    { "clue": "The Broadway musical 'Dreamgirls' was loosely inspired by this Motown trio", "response": "the Supremes", "value": 200 },
+    { "clue": "'Superstition' and 'Sir Duke' were 1970s No. 1s for this harmonica-playing Motown star", "response": "Stevie Wonder", "value": 400 },
+    { "clue": "'What's Going On' asked this soul singer on the title track of his landmark 1971 album", "response": "Marvin Gaye", "value": 600 },
+    { "clue": "David Ruffin sang lead on 'My Girl' for this sharp-dressed Motown quintet", "response": "the Temptations", "value": 800 },
+    { "clue": "Smokey Robinson fronted this Motown group on 'The Tracks of My Tears'", "response": "the Miracles", "value": 1000 }
+  ] },
+  { "name": "HITCH IN THE PLOT", "clues": [
+    { "clue": "Anthony Perkins' Norman Bates runs a lonely motel off the highway in this 1960 shocker", "response": "Psycho", "value": 200 },
+    { "clue": "Crows and gulls terrorize the California town of Bodega Bay in this 1963 thriller", "response": "The Birds", "value": 400 },
+    { "clue": "Laid up with a broken leg, James Stewart spies on his neighbors in this 1954 film", "response": "Rear Window", "value": 600 },
+    { "clue": "Cary Grant clings to Mount Rushmore at the climax of this 1959 cross-country chase", "response": "North by Northwest", "value": 800 },
+    { "clue": "Joan Fontaine's nameless bride is haunted by her husband's dead first wife in this 1940 film", "response": "Rebecca", "value": 1000 }
+  ] },
+  { "name": "BLUE NOTES", "clues": [
+    { "clue": "This gravel-voiced trumpeter knocked the Beatles from No. 1 in 1964 with 'Hello, Dolly!'", "response": "Louis Armstrong", "value": 200 },
+    { "clue": "This singer recorded a celebrated series of 'Songbook' albums, from Cole Porter to Gershwin", "response": "Ella Fitzgerald", "value": 400 },
+    { "clue": "'Mood Indigo' and 'It Don't Mean a Thing' came from this aristocratically nicknamed bandleader", "response": "Duke Ellington", "value": 600 },
+    { "clue": "Nicknamed 'the Prince of Darkness,' this trumpeter led a 1950s quintet with John Coltrane", "response": "Miles Davis", "value": 800 },
+    { "clue": "Puffed-out cheeks and an upturned trumpet bell were trademarks of this bebop pioneer", "response": "Dizzy Gillespie", "value": 1000 }
+  ] },
+  { "name": "PIXAR DUST", "clues": [
+    { "clue": "Thousands of balloons lift a grumpy widower's house into the sky in this 2009 film", "response": "Up", "value": 200 },
+    { "clue": "Mike Wazowski and Sulley collect children's screams to power a city in this 2001 film", "response": "Monsters, Inc.", "value": 400 },
+    { "clue": "Costume designer Edna Mode insists 'No capes!' in this 2004 superhero film", "response": "The Incredibles", "value": 600 },
+    { "clue": "Joy, Sadness, Anger, Fear and Disgust steer an 11-year-old's mind in this 2015 film", "response": "Inside Out", "value": 800 },
+    { "clue": "Miguel's aging great-grandmother gives her name to this 2017 Pixar film", "response": "Coco", "value": 1000 }
+  ] },
+  { "name": "TOON IN TOMORROW", "clues": [
+    { "clue": "Homer, Marge, Bart, Lisa and Maggie make their home in Springfield on this series", "response": "The Simpsons", "value": 200 },
+    { "clue": "Fred and Wilma raise little Pebbles in Bedrock on this modern Stone Age cartoon", "response": "The Flintstones", "value": 400 },
+    { "clue": "George, Jane, robot maid Rosie and dog Astro zip through the future on this cartoon", "response": "The Jetsons", "value": 600 },
+    { "clue": "Substitute Spanish teacher Peggy and son Bobby live in Arlen on this Fox cartoon", "response": "King of the Hill", "value": 800 },
+    { "clue": "Frostbite Falls, Minnesota, is home to this cartoon duo, a flying squirrel and a dim moose", "response": "Rocky and Bullwinkle", "value": 1000 }
+  ] },
+  { "name": "PICK, BLOW OR BOW", "clues": [
+    { "clue": "Kilted Highland regiments march to the drone of these blown Scottish instruments", "response": "bagpipes", "value": 200 },
+    { "clue": "Tiny Tim tiptoed through the tulips strumming this little four-stringed instrument", "response": "the ukulele", "value": 400 },
+    { "clue": "Prokofiev gave the duck's part in 'Peter and the Wolf' to this double-reed woodwind", "response": "the oboe", "value": 600 },
+    { "clue": "Strings that buzz in sympathy give this long-necked Indian instrument its shimmer", "response": "the sitar", "value": 800 },
+    { "clue": "Stroked with a cello bow, this bent carpenter's tool makes an eerie vaudeville wail", "response": "a musical saw", "value": 1000 }
+  ] },
+  { "name": "BOOTS AND BALLADS", "clues": [
+    { "clue": "Born in Butcher Hollow, Kentucky, she sang that she was a 'Coal Miner's Daughter'", "response": "Loretta Lynn", "value": 200 },
+    { "clue": "This 'Man in Black' married June Carter in 1968 and sang 'Jackson' with her", "response": "Johnny Cash", "value": 400 },
+    { "clue": "This braided Texan wrote 'On the Road Again' for his 1980 film 'Honeysuckle Rose'", "response": "Willie Nelson", "value": 600 },
+    { "clue": "'Hey, Good Lookin'' and 'I'm So Lonesome I Could Cry' came from this honky-tonk legend", "response": "Hank Williams", "value": 800 },
+    { "clue": "Once an inmate at San Quentin, this Bakersfield Sound star sang 'Okie from Muskogee'", "response": "Merle Haggard", "value": 1000 }
+  ] },
+  { "name": "CALL THE SHOTS", "clues": [
+    { "clue": "'E.T.' and 'Jurassic Park' were both directed by this filmmaker", "response": "Steven Spielberg", "value": 200 },
+    { "clue": "This director brought all three 'Godfather' films to the screen", "response": "Francis Ford Coppola", "value": 400 },
+    { "clue": "Jack Nicholson axed his way through a door in 'The Shining' for this exacting director", "response": "Stanley Kubrick", "value": 600 },
+    { "clue": "This Japanese master's 'Seven Samurai' was remade as the Western 'The Magnificent Seven'", "response": "Akira Kurosawa", "value": 800 },
+    { "clue": "A knight plays chess with Death in 'The Seventh Seal,' a film by this Swede", "response": "Ingmar Bergman", "value": 1000 }
+  ] },
+  { "name": "BRITISH INVASION FORCE", "clues": [
+    { "clue": "'Sympathy for the Devil' and 'Paint It Black' came from this band", "response": "the Rolling Stones", "value": 200 },
+    { "clue": "Pete Townshend smashed guitars onstage for this band of 'My Generation'", "response": "the Who", "value": 400 },
+    { "clue": "Brothers Ray and Dave Davies led this band of 'You Really Got Me'", "response": "the Kinks", "value": 600 },
+    { "clue": "Eric Burdon's band took 'The House of the Rising Sun' to No. 1 in 1964", "response": "the Animals", "value": 800 },
+    { "clue": "Graham Nash left this Manchester band in 1968 to join David Crosby and Stephen Stills", "response": "the Hollies", "value": 1000 }
+  ] }
+]

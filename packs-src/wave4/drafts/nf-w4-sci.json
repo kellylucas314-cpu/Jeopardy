@@ -1,0 +1,22 @@
+[
+  {
+    "name": "HEAVENLY METAL",
+    "clue": "Named for a planet found just eight years before it, this element identified in 1789 later fueled the bomb dropped on Hiroshima",
+    "response": "uranium"
+  },
+  {
+    "name": "GUAC OF FAME",
+    "clue": "Its name comes from the Nahuatl 'ahuacatl,' and its Hass variety traces back to one tree grown by a California mailman",
+    "response": "the avocado"
+  },
+  {
+    "name": "THE SCOTTISH POWER PLAY",
+    "clue": "The Scot whose improved steam engines drove the Industrial Revolution lends his name to this unit, one joule per second",
+    "response": "the watt"
+  },
+  {
+    "name": "TORTOISE TERRITORY",
+    "clue": "Named for an old Spanish word for their giant tortoises, this Ecuadorian archipelago gave Darwin food for thought",
+    "response": "the Galapagos Islands"
+  }
+]

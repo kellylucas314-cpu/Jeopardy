@@ -1,0 +1,362 @@
+[
+ {
+  "name": "GAME BOARD OF DIRECTORS",
+  "clues": [
+   {
+    "clue": "Slip with the tweezers and Cavity Sam's red nose lights up with a buzz in this game",
+    "response": "Operation",
+    "value": 200
+   },
+   {
+    "clue": "Gumdrop Mountains and a Molasses Swamp line the sugary path to King Kandy in this game",
+    "response": "Candy Land",
+    "value": 400
+   },
+   {
+    "clue": "A codebreaker gets a limited number of guesses at four hidden colored pegs in this 1970s game",
+    "response": "Mastermind",
+    "value": 600
+   },
+   {
+    "clue": "German dental technician Klaus Teuber invented this 1995 game of island settlement",
+    "response": "Catan (The Settlers of Catan)",
+    "value": 800
+   },
+   {
+    "clue": "Oscar winner Albert Lamorisse of 'The Red Balloon' fame invented this game of world conquest",
+    "response": "Risk",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "RINGS AND THINGS",
+  "clues": [
+   {
+    "clue": "Ironman racing is the long-distance version of this swim, bike and run sport",
+    "response": "the triathlon",
+    "value": 200
+   },
+   {
+    "clue": "'Hurry hard!' the skip shouts to the sweepers in this sport played on 'sheets' of ice",
+    "response": "curling",
+    "value": 400
+   },
+   {
+    "clue": "Greek water carrier Spyridon Louis won this long-distance race at the 1896 Athens Games",
+    "response": "the marathon",
+    "value": 600
+   },
+   {
+    "clue": "Sliders hurtle headfirst down an icy track on a small sled in this Winter Games event",
+    "response": "skeleton",
+    "value": 800
+   },
+   {
+    "clue": "Dick Fosbury went over the bar backward to win gold in this event at the 1968 Games",
+    "response": "the high jump",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "PLAYTHINGS PAST",
+  "clues": [
+   {
+    "clue": "Mattel's die-cast cars of 1968 zoomed down bright orange plastic track in this toy line",
+    "response": "Hot Wheels",
+    "value": 200
+   },
+   {
+    "clue": "Parker Brothers billed this brand's first foam ball as 'the world's first official indoor ball'",
+    "response": "Nerf",
+    "value": 400
+   },
+   {
+    "clue": "A light bulb did the baking in this 1963 Kenner toy for young chefs",
+    "response": "the Easy-Bake Oven",
+    "value": 600
+   },
+   {
+    "clue": "A failed WWII rubber substitute became this bouncy, stretchy toy goo sold in a plastic egg",
+    "response": "Silly Putty",
+    "value": 800
+   },
+   {
+    "clue": "A.C. Gilbert, a 1908 Olympic pole vault champion, invented this metal construction toy",
+    "response": "the Erector Set",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "ART-ITUDE",
+  "clues": [
+   {
+    "clue": "This Dutchman's bandaged head appears in an 1889 self-portrait, painted after he cut his ear",
+    "response": "Vincent van Gogh",
+    "value": 200
+   },
+   {
+    "clue": "Gold leaf shimmers around the embracing couple in 'The Kiss' by this Viennese painter",
+    "response": "Gustav Klimt",
+    "value": 400
+   },
+   {
+    "clue": "Blown-up comic-book panels with dots, like 'Whaam!', made this Pop artist famous",
+    "response": "Roy Lichtenstein",
+    "value": 600
+   },
+   {
+    "clue": "'The Great Wave off Kanagawa' comes from this artist's 'Thirty-Six Views of Mount Fuji'",
+    "response": "Hokusai",
+    "value": 800
+   },
+   {
+    "clue": "Fleshy, full-figured nudes by this Flemish Baroque master inspired an English adjective",
+    "response": "Peter Paul Rubens",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "SPORTING DIGITS",
+  "clues": [
+   {
+    "clue": "A regulation basketball rim hangs exactly this many feet above the floor",
+    "response": "10",
+    "value": 200
+   },
+   {
+    "clue": "Counting the goalie, each hockey team puts this many players on the ice at full strength",
+    "response": "six (6)",
+    "value": 400
+   },
+   {
+    "clue": "It's the number in the slot at the very top of a standard dartboard",
+    "response": "20",
+    "value": 600
+   },
+   {
+    "clue": "Fifteen rows of fifteen give a Scrabble board this many squares",
+    "response": "225",
+    "value": 800
+   },
+   {
+    "clue": "Count the red double stitches on an official baseball and you'll get this number",
+    "response": "108",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "WHAT'S IN A BRAND NAME?",
+  "clues": [
+   {
+    "clue": "Translated from German, this automaker's name simply means 'people's car'",
+    "response": "Volkswagen",
+    "value": 200
+   },
+   {
+    "clue": "Feuding brothers in a small Bavarian town founded this sportswear giant and its rival Puma",
+    "response": "Adidas",
+    "value": 400
+   },
+   {
+    "clue": "This sneaker brand took its name from a springy South African antelope",
+    "response": "Reebok",
+    "value": 600
+   },
+   {
+    "clue": "Its founders made up this Danish-sounding ice cream name in the Bronx",
+    "response": "Häagen-Dazs",
+    "value": 800
+   },
+   {
+    "clue": "August Horch's surname means 'listen', so he named his new car company this Latin word",
+    "response": "Audi",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "DATE NIGHTS",
+  "clues": [
+   {
+    "clue": "Many Americans mistake this spring fiesta for Mexico's independence day, which is in September",
+    "response": "Cinco de Mayo",
+    "value": 200
+   },
+   {
+    "clue": "Britain's Dec. 26 holiday is this, possibly named for gift boxes given to servants",
+    "response": "Boxing Day",
+    "value": 400
+   },
+   {
+    "clue": "Britons burn effigies and set off fireworks every Nov. 5 to recall a foiled 1605 plot",
+    "response": "Guy Fawkes Night (Bonfire Night)",
+    "value": 600
+   },
+   {
+    "clue": "Haggis, whisky and poetry fill Scottish tables every Jan. 25 at this celebration",
+    "response": "Burns Night (Burns Supper)",
+    "value": 800
+   },
+   {
+    "clue": "It's the Persian new year, welcomed at the spring equinox with a table of seven 'S' items",
+    "response": "Nowruz",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "COURTING DISASTER",
+  "clues": [
+   {
+    "clue": "Teams of six get up to three touches to send the ball back over the net in this sport",
+    "response": "volleyball",
+    "value": 200
+   },
+   {
+    "clue": "Of tennis's four majors, only Wimbledon is played on this surface",
+    "response": "grass",
+    "value": 400
+   },
+   {
+    "clue": "Pickleball players may not volley in the zone by the net nicknamed for this room of the house",
+    "response": "the kitchen",
+    "value": 600
+   },
+   {
+    "clue": "Pros use a double-yellow-dot ball that barely bounces when cold in this four-wall racket sport",
+    "response": "squash",
+    "value": 800
+   },
+   {
+    "clue": "Shuttlecocks first flew for Olympic medals at the 1992 Barcelona Games in this sport",
+    "response": "badminton",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HOLY DESTINATIONS",
+  "clues": [
+   {
+    "clue": "Visitors tuck written prayers into the cracks of this Jerusalem landmark",
+    "response": "the Western Wall",
+    "value": 200
+   },
+   {
+    "clue": "The Church of the Nativity marks Jesus' traditional birthplace in this West Bank town",
+    "response": "Bethlehem",
+    "value": 400
+   },
+   {
+    "clue": "Millions of pilgrims seek healing waters at a grotto in this French town in the Pyrenees",
+    "response": "Lourdes",
+    "value": 600
+   },
+   {
+    "clue": "Sikhism's holiest shrine, it gleams in the middle of a sacred pool at Amritsar",
+    "response": "the Golden Temple",
+    "value": 800
+   },
+   {
+    "clue": "Walkers on the Camino often carry a scallop shell, the badge of pilgrims to this Spanish city",
+    "response": "Santiago de Compostela",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "WHAT'S THAT THING?",
+  "clues": [
+   {
+    "clue": "A 3M man who sang in a church choir wanted a bookmark that stayed put, leading to these",
+    "response": "Post-it Notes",
+    "value": 200
+   },
+   {
+    "clue": "Made to seal WWII ammunition boxes, this cloth-backed adhesive went on to fix almost everything",
+    "response": "duct tape (duck tape)",
+    "value": 400
+   },
+   {
+    "clue": "Two engineers first tried to sell this as textured wallpaper before it cushioned packages",
+    "response": "Bubble Wrap",
+    "value": 600
+   },
+   {
+    "clue": "In 1947 Edward Lowe offered a neighbor absorbent clay, inventing this pet product",
+    "response": "Kitty Litter (cat litter)",
+    "value": 800
+   },
+   {
+    "clue": "Briton Edward Craven Walker's 1963 Astro, with wax blobs rising in liquid, became this",
+    "response": "the lava lamp",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "CLOTHES CALL",
+  "clues": [
+   {
+    "clue": "Coco Chanel made this short, simple, dark frock a staple of every woman's closet",
+    "response": "the little black dress",
+    "value": 200
+   },
+   {
+    "clue": "These pants are named for Genoa, the Italian port that was an early source of their tough cloth",
+    "response": "jeans",
+    "value": 400
+   },
+   {
+    "clue": "These skinny high heels share their name with a slender Italian dagger",
+    "response": "stilettos",
+    "value": 600
+   },
+   {
+    "clue": "A Philadelphia hatter's 1865 'Boss of the Plains' made his name a byword for cowboy hats",
+    "response": "Stetson",
+    "value": 800
+   },
+   {
+    "clue": "Hermès named this coveted handbag for the English actress and singer it was designed for",
+    "response": "the Birkin (Birkin bag)",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "FOOTY NOTES",
+  "clues": [
+   {
+    "clue": "Only this player may grab the ball with his hands, and only inside his own penalty area",
+    "response": "the goalkeeper",
+    "value": 200
+   },
+   {
+    "clue": "Each half of a regulation soccer match lasts this many minutes, plus stoppage time",
+    "response": "45",
+    "value": 400
+   },
+   {
+    "clue": "Being past both the ball and the next-to-last defender as a pass is played can draw this call",
+    "response": "offside",
+    "value": 600
+   },
+   {
+    "clue": "A dog named Pickles found the stolen World Cup trophy in 1966, the year this host won it",
+    "response": "England",
+    "value": 800
+   },
+   {
+    "clue": "The original World Cup trophy, retired in 1970, honored this French FIFA president",
+    "response": "Jules Rimet",
+    "value": 1000
+   }
+  ]
+ }
+]

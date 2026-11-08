@@ -1,0 +1,362 @@
+[
+ {
+  "name": "UNDER THE BRIDGE",
+  "clues": [
+   {
+    "clue": "London's Tower Bridge lifts its two halves so tall ships can pass along this river",
+    "response": "the Thames",
+    "value": 200
+   },
+   {
+    "clue": "Named for a Russian czar, the gilded Pont Alexandre III in Paris spans this river",
+    "response": "the Seine",
+    "value": 400
+   },
+   {
+    "clue": "Jewelers and goldsmiths still keep shops on Florence's Ponte Vecchio above this river",
+    "response": "the Arno",
+    "value": 600
+   },
+   {
+    "clue": "The Brooklyn, Manhattan and Williamsburg bridges all leap this misnamed tidal strait",
+    "response": "the East River",
+    "value": 800
+   },
+   {
+    "clue": "Venice's Rialto Bridge, rebuilt in stone in 1591, is the oldest of four that span this waterway",
+    "response": "the Grand Canal",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "CAPITALS BY DESIGN",
+  "clues": [
+   {
+    "clue": "Benjamin Banneker helped survey the 10-mile square for this new capital city in 1791",
+    "response": "Washington, D.C.",
+    "value": 200
+   },
+   {
+    "clue": "From the air, this South American capital opened in 1960 looks like an airplane or a bird",
+    "response": "Brasília",
+    "value": 400
+   },
+   {
+    "clue": "American architects Walter Burley Griffin and Marion Mahony Griffin planned this Australian capital",
+    "response": "Canberra",
+    "value": 600
+   },
+   {
+    "clue": "Twin city to Rawalpindi, this planned city was built in the 1960s as Pakistan's new capital",
+    "response": "Islamabad",
+    "value": 800
+   },
+   {
+    "clue": "Le Corbusier designed this modernist Indian city, which serves as the capital of two states",
+    "response": "Chandigarh",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "OFF THE OLD MAP",
+  "clues": [
+   {
+    "clue": "Dictated in a Genoese prison cell, his tales of Kublai Khan's court dazzled medieval Europe",
+    "response": "Marco Polo",
+    "value": 200
+   },
+   {
+    "clue": "Before winning the race to the South Pole, this Norwegian was first to sail the Northwest Passage",
+    "response": "Roald Amundsen",
+    "value": 400
+   },
+   {
+    "clue": "On his 1535 trip up the St. Lawrence, this Frenchman wrote down the Iroquoian word 'Canada'",
+    "response": "Jacques Cartier",
+    "value": 600
+   },
+   {
+    "clue": "Giraffes brought home by this Ming admiral's treasure fleets were hailed in China as mythical qilin",
+    "response": "Zheng He",
+    "value": 800
+   },
+   {
+    "clue": "In 1542 his men weighted this conquistador's corpse and slipped it into the Mississippi at night",
+    "response": "Hernando de Soto",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "PHARAOH ENOUGH",
+  "clues": [
+   {
+    "clue": "A gold mask weighing more than 20 pounds covered the mummy of this boy pharaoh",
+    "response": "Tutankhamun (King Tut)",
+    "value": 200
+   },
+   {
+    "clue": "Embalmers stored a dead pharaoh's lungs, liver, stomach and intestines in these four lidded vessels",
+    "response": "canopic jars",
+    "value": 400
+   },
+   {
+    "clue": "Four colossal seated statues of this 19th Dynasty pharaoh guard his temple at Abu Simbel",
+    "response": "Ramses II (Ramesses the Great)",
+    "value": 600
+   },
+   {
+    "clue": "After her death, Thutmose III had many images of this female pharaoh chiseled away",
+    "response": "Hatshepsut",
+    "value": 800
+   },
+   {
+    "clue": "Likely Tutankhamun's father, this pharaoh renamed himself for the sun disk he worshipped",
+    "response": "Akhenaten",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "NECESSITY'S CHILDREN",
+  "clues": [
+   {
+    "clue": "His 42-line Bible, finished around 1455, was the first major book in Europe printed with metal type",
+    "response": "Johannes Gutenberg",
+    "value": 200
+   },
+   {
+    "clue": "Eli Whitney's 1793 machine stripped the seeds from fluffy bolls, making Southern plantations boom",
+    "response": "the cotton gin",
+    "value": 400
+   },
+   {
+    "clue": "Chinese court official Cai Lun is credited with refining the making of this around A.D. 105",
+    "response": "paper",
+    "value": 600
+   },
+   {
+    "clue": "A rock band took its name from this 18th century English farmer whose horse-drawn seed drill changed farming",
+    "response": "Jethro Tull",
+    "value": 800
+   },
+   {
+    "clue": "James Hargreaves' 1760s machine with a woman's nickname let one worker spin eight threads at once",
+    "response": "the spinning jenny",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HOIST THE COLORS",
+  "clues": [
+   {
+    "clue": "Count them and you'll find 11 points on the red maple leaf of this country's flag",
+    "response": "Canada",
+    "value": 200
+   },
+   {
+    "clue": "The towers of Angkor Wat stand in white on this Southeast Asian nation's flag",
+    "response": "Cambodia",
+    "value": 400
+   },
+   {
+    "clue": "A Maasai warrior's shield over two crossed white spears marks this East African nation's flag",
+    "response": "Kenya",
+    "value": 600
+   },
+   {
+    "clue": "A white thunder dragon clutching jewels stretches across this Himalayan kingdom's flag",
+    "response": "Bhutan",
+    "value": 800
+   },
+   {
+    "clue": "A black double-headed eagle spreads its wings on the red flag of this Balkan country",
+    "response": "Albania",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "ISLE BE THERE",
+  "clues": [
+   {
+    "clue": "Lava from Kilauea has added hundreds of acres of new land to the Big Island of this U.S. state",
+    "response": "Hawaii",
+    "value": 200
+   },
+   {
+    "clue": "Marine iguanas, the only lizards that graze underwater, live wild solely on these Ecuadorian isles",
+    "response": "the Galápagos",
+    "value": 400
+   },
+   {
+    "clue": "Bigger than Mexico, this ice-covered Danish territory is the world's largest island",
+    "response": "Greenland",
+    "value": 600
+   },
+   {
+    "clue": "The Avenue of the Baobabs is a famous sight in this island nation nicknamed 'the eighth continent'",
+    "response": "Madagascar",
+    "value": 800
+   },
+   {
+    "clue": "Dutch explorers called it Van Diemen's Land, a name this Australian island state dropped in 1856",
+    "response": "Tasmania",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "REDCOATS & REBELS",
+  "clues": [
+   {
+    "clue": "This silversmith's midnight ride warned Lexington, but a British patrol nabbed him before Concord",
+    "response": "Paul Revere",
+    "value": 200
+   },
+   {
+    "clue": "On Christmas night 1776, Washington's troops crossed this icy river to surprise Trenton",
+    "response": "the Delaware",
+    "value": 400
+   },
+   {
+    "clue": "Prussia's Baron von Steuben drilled the Continental Army during its brutal winter at this camp",
+    "response": "Valley Forge",
+    "value": 600
+   },
+   {
+    "clue": "Burgoyne's 1777 surrender at this New York site persuaded France to join the American cause",
+    "response": "Saratoga",
+    "value": 800
+   },
+   {
+    "clue": "His French fleet sealed off Chesapeake Bay in 1781, leaving Cornwallis trapped at Yorktown",
+    "response": "de Grasse (Comte de Grasse)",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HELLENIC HIGHLIGHTS",
+  "clues": [
+   {
+    "clue": "Built in the 400s B.C., this marble temple to Athena crowns the Acropolis",
+    "response": "the Parthenon",
+    "value": 200
+   },
+   {
+    "clue": "Found guilty of impiety in 399 B.C., Socrates was put to death with a cup of this poison",
+    "response": "hemlock",
+    "value": 400
+   },
+   {
+    "clue": "Phidias' gold-and-ivory Zeus, an ancient Wonder, once sat in a temple at this home of the Games",
+    "response": "Olympia",
+    "value": 600
+   },
+   {
+    "clue": "Cicero dubbed this Greek, who chronicled the Persian Wars, 'the Father of History'",
+    "response": "Herodotus",
+    "value": 800
+   },
+   {
+    "clue": "Sculptors usually showed this Athenian statesman in a helmet, perhaps to hide his oddly long head",
+    "response": "Pericles",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BUCKET LIST STOPS",
+  "clues": [
+   {
+    "clue": "The four minarets of this Agra tomb tilt slightly outward, so a quake would topple them away from it",
+    "response": "the Taj Mahal",
+    "value": 200
+   },
+   {
+    "clue": "Engineers spent the 1990s nudging this Italian campanile about 18 inches back toward upright",
+    "response": "the Leaning Tower of Pisa",
+    "value": 400
+   },
+   {
+    "clue": "Antoni Gaudí is buried in the crypt of this Barcelona basilica, which he worked on for 43 years",
+    "response": "the Sagrada Família",
+    "value": 600
+   },
+   {
+    "clue": "Unfinished when 'Mad King' Ludwig II died in 1886, this Bavarian castle opened to tourists within weeks",
+    "response": "Neuschwanstein",
+    "value": 800
+   },
+   {
+    "clue": "Washington Irving lodged in this Moorish palace in Granada and published a book of tales about it in 1832",
+    "response": "the Alhambra",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "EMPIRE BUILDING",
+  "clues": [
+   {
+    "clue": "Genghis Khan forged his empire after uniting these nomadic tribes of the Asian steppe",
+    "response": "the Mongols",
+    "value": 200
+   },
+   {
+    "clue": "Machu Picchu was a royal mountain estate for the rulers of this Andean empire",
+    "response": "the Inca",
+    "value": 400
+   },
+   {
+    "clue": "Suleiman the Magnificent ruled this Turkish dynasty's realm at its height in the 1500s",
+    "response": "the Ottomans",
+    "value": 600
+   },
+   {
+    "clue": "Mansa Musa's gold-laden 1324 pilgrimage to Mecca showed off the riches of this West African empire",
+    "response": "Mali",
+    "value": 800
+   },
+   {
+    "clue": "Remorse after conquering Kalinga turned Ashoka, emperor of this ancient Indian realm, toward Buddhism",
+    "response": "the Mauryan Empire",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "LOWER 48 LORE",
+  "clues": [
+   {
+    "clue": "Mount Whitney, the lower 48's loftiest summit, marks the end of the John Muir Trail in this state",
+    "response": "California",
+    "value": 200
+   },
+   {
+    "clue": "Except on the Navajo Nation, clocks in this lower 48 state never spring forward for daylight saving",
+    "response": "Arizona",
+    "value": 400
+   },
+   {
+    "clue": "A buoy-shaped Key West marker claims to mark the lower 48's 'Southernmost Point' in this state",
+    "response": "Florida",
+    "value": 600
+   },
+   {
+    "clue": "Lubec, the easternmost town in the lower 48, sits on this state's border with New Brunswick",
+    "response": "Maine",
+    "value": 800
+   },
+   {
+    "clue": "Point Roberts, a U.S. enclave reachable by land only through Canada, belongs to this state",
+    "response": "Washington",
+    "value": 1000
+   }
+  ]
+ }
+]

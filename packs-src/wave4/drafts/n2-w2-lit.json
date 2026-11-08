@@ -1,0 +1,86 @@
+[
+  { "name": "WHO'S TELLING?", "clues": [
+    { "clue": "A Yale man selling bonds, he narrates his rich neighbor's rise and fall on West Egg", "response": "Nick Carraway", "value": 400 },
+    { "clue": "Housekeeper at Thrushcross Grange, she tells the tenant Mr. Lockwood all about Heathcliff", "response": "Nelly Dean", "value": 800 },
+    { "clue": "Feigning deafness, this towering patient narrates 'One Flew Over the Cuckoo's Nest'", "response": "Chief Bromden", "value": 1200 },
+    { "clue": "This aging English butler narrates Kazuo Ishiguro's 'The Remains of the Day'", "response": "Stevens", "value": 1600 },
+    { "clue": "Aboard the yawl Nellie on the Thames, he recounts his African river voyage in 'Heart of Darkness'", "response": "Marlow (Charles Marlow)", "value": 2000 }
+  ] },
+  { "name": "LIT TERMS & CONDITIONS", "clues": [
+    { "clue": "Told through letters, 'The Color Purple' and 'Frankenstein' are both this kind of novel", "response": "epistolary", "value": 400 },
+    { "clue": "Latin for 'into the middle of things,' it's how Homer launches the 'Iliad'", "response": "in medias res", "value": 800 },
+    { "clue": "JFK's 'Ask not' line mirrors its own words in this A-B-B-A rhetorical device", "response": "chiasmus (antimetabole)", "value": 1200 },
+    { "clue": "Calling your car your 'wheels' uses this figure, in which a part stands for the whole", "response": "synecdoche", "value": 1600 },
+    { "clue": "'He lost his hat and his temper' is this figure, with one verb yoked to two different senses", "response": "zeugma (syllepsis)", "value": 2000 }
+  ] },
+  { "name": "CAMELOT CALL SHEET", "clues": [
+    { "clue": "This queen's love for Lancelot helps doom the fellowship of the Round Table", "response": "Guinevere", "value": 400 },
+    { "clue": "Geoffrey of Monmouth says Arthur was conceived at this clifftop castle in Cornwall", "response": "Tintagel", "value": 800 },
+    { "clue": "A naive 'pure fool' who grows into a Grail hero, this knight gets Wagner's final opera", "response": "Percival (Parsifal)", "value": 1200 },
+    { "clue": "Told to throw Excalibur into the lake, this knight balks twice before obeying the dying Arthur", "response": "Bedivere", "value": 1600 },
+    { "clue": "While imprisoned, this knight compiled 'Le Morte d'Arthur,' finished around 1470", "response": "Thomas Malory", "value": 2000 }
+  ] },
+  { "name": "WORDS BORN IN BOOKS", "clues": [
+    { "clue": "Swift's filthy brutes in 'Gulliver's Travels' gave us this word for a boorish lout", "response": "yahoo", "value": 400 },
+    { "clue": "Rabelais' giant king, father of Pantagruel, had an appetite that gave us this word for huge", "response": "gargantuan", "value": 800 },
+    { "clue": "Rowe's 'haughty, gallant, gay' stage seducer of 1703 lent his name to any smooth womanizer", "response": "Lothario", "value": 1200 },
+    { "clue": "Athena disguises herself as this old friend of Odysseus to counsel young Telemachus", "response": "Mentor", "value": 1600 },
+    { "clue": "The Trojan go-between Pandarus, of Chaucer's 'Troilus,' gave us this verb for catering to base desires", "response": "pander", "value": 2000 }
+  ] },
+  { "name": "THE SILENT TYPE", "clues": [
+    { "clue": "Its 'p' silent, this book of 150 sacred songs sits near the middle of the Bible", "response": "Psalms", "value": 400 },
+    { "clue": "British Labour politicians famously mocked Swiss bankers as these 'of Zurich,' silent 'g' and all", "response": "gnomes", "value": 800 },
+    { "clue": "Its first 'm' silent, it's a memory aid like 'Roy G. Biv' for the colors of the rainbow", "response": "a mnemonic", "value": 1200 },
+    { "clue": "Its 'p' silent, this lung infection was called 'the friend of the aged' by Dr. William Osler", "response": "pneumonia", "value": 1600 },
+    { "clue": "Its silent 'p' was added by mistake, on a false Greek analogy, to this Gaelic-named Arctic grouse", "response": "the ptarmigan", "value": 2000 }
+  ] },
+  { "name": "AMERICAN DRAMA CLUB", "clues": [
+    { "clue": "Biff and Happy Loman watch their father's dreams collapse in this 1949 Arthur Miller play", "response": "Death of a Salesman", "value": 400 },
+    { "clue": "Laura Wingfield's treasured unicorn loses its horn in this Tennessee Williams memory play", "response": "The Glass Menagerie", "value": 800 },
+    { "clue": "A Stage Manager guides us through life and death in Grover's Corners in this Thornton Wilder play", "response": "Our Town", "value": 1200 },
+    { "clue": "A $10,000 life insurance check divides the Younger family in this Lorraine Hansberry drama", "response": "A Raisin in the Sun", "value": 1600 },
+    { "clue": "Ex-Negro Leagues slugger Troy Maxson hauls garbage in 1950s Pittsburgh in this August Wilson play", "response": "Fences", "value": 2000 }
+  ] },
+  { "name": "ODE COUNTRY", "clues": [
+    { "clue": "Beethoven set this Friedrich Schiller poem in the choral finale of his Ninth Symphony", "response": "'Ode to Joy'", "value": 400 },
+    { "clue": "'Beauty is truth, truth beauty' closes this Keats poem about a piece of ancient pottery", "response": "'Ode on a Grecian Urn'", "value": 800 },
+    { "clue": "Shelley hails a 'destroyer and preserver' and begs it to scatter his words like leaves in this ode", "response": "'Ode to the West Wind'", "value": 1200 },
+    { "clue": "Wilfred Owen called 'Dulce et decorum est' 'the old Lie,' quoting an ode by this Roman", "response": "Horace", "value": 1600 },
+    { "clue": "Victory odes for champions of the Olympic and other Greek games made this Theban poet famous", "response": "Pindar", "value": 2000 }
+  ] },
+  { "name": "MOTHER TONGUES ABROAD", "clues": [
+    { "clue": "Thanks to the 1494 Treaty of Tordesillas, Brazilians grow up speaking this language", "response": "Portuguese", "value": 400 },
+    { "clue": "Suriname is the only South American nation with this European language as its official tongue", "response": "Dutch", "value": 800 },
+    { "clue": "Its name from the Arabic for 'coasts,' this Bantu language is a lingua franca of East Africa", "response": "Swahili (Kiswahili)", "value": 1200 },
+    { "clue": "The European Union's only official Semitic language, it's written in the Latin alphabet", "response": "Maltese", "value": 1600 },
+    { "clue": "Spoken across Madagascar, this language's closest relatives are found on the island of Borneo", "response": "Malagasy", "value": 2000 }
+  ] },
+  { "name": "HOME IS WHERE THE INK IS", "clues": [
+    { "clue": "Six-toed cats still roam this novelist's former home in Key West, Florida", "response": "Ernest Hemingway", "value": 400 },
+    { "clue": "She wrote 'Little Women' at Orchard House, her family's home in Concord, Massachusetts", "response": "Louisa May Alcott", "value": 800 },
+    { "clue": "At Rowan Oak, his Mississippi home, he penciled the outline of 'A Fable' right onto his study walls", "response": "William Faulkner", "value": 1200 },
+    { "clue": "From his Berkshires farmhouse, Arrowhead, he gazed out at Mount Greylock while finishing his whale of a novel", "response": "Herman Melville", "value": 1600 },
+    { "clue": "Bateman's, a 17th-century Sussex manor, was home to this Nobel laureate from 1902 until his death", "response": "Rudyard Kipling", "value": 2000 }
+  ] },
+  { "name": "BIBLICAL BEST SUPPORTING", "clues": [
+    { "clue": "Moses' older brother, he did much of the talking before Pharaoh", "response": "Aaron", "value": 400 },
+    { "clue": "King Saul's son, his soul 'was knit with the soul of David,' says First Samuel", "response": "Jonathan", "value": 800 },
+    { "clue": "Elijah cast his mantle on this man, whom he found plowing with 12 yoke of oxen", "response": "Elisha", "value": 1200 },
+    { "clue": "Of the 12 spies sent into Canaan, only he and Joshua urged Israel to go in and take it", "response": "Caleb", "value": 1600 },
+    { "clue": "Jeremiah dictated his prophecies to this faithful scribe, who read them aloud in the Temple", "response": "Baruch", "value": 2000 }
+  ] },
+  { "name": "META-PHRASES", "clues": [
+    { "clue": "'Pretty ugly' and 'original copy' are examples of this self-contradicting figure of speech", "response": "an oxymoron", "value": 400 },
+    { "clue": "Sound swaps like 'a well-boiled icicle' are named for an Oxford don, giving us this kind of slip", "response": "a spoonerism", "value": 800 },
+    { "clue": "Humpty Dumpty tells Alice that a blend like 'slithy' is this, after a two-part suitcase", "response": "a portmanteau", "value": 1200 },
+    { "clue": "Liverpudlian, Glaswegian and Mancunian are all examples of this kind of word", "response": "a demonym", "value": 1600 },
+    { "clue": "'Acoustic guitar' and 'snail mail' are these, new names an old thing needs once technology moves on", "response": "retronyms", "value": 2000 }
+  ] },
+  { "name": "ONCE UPON A DANE", "clues": [
+    { "clue": "Only a child dares to say the vain ruler has nothing on in this Hans Christian Andersen tale", "response": "The Emperor's New Clothes", "value": 400 },
+    { "clue": "Promised in marriage to a mole, this thumb-sized heroine escapes on the back of a swallow", "response": "Thumbelina", "value": 800 },
+    { "clue": "Gerda journeys far to rescue her friend Kai from the icy palace of this title ruler", "response": "The Snow Queen", "value": 1200 },
+    { "clue": "A one-legged toy falls for a paper ballerina in this Andersen tale that ends in a stove", "response": "The Steadfast Tin Soldier", "value": 1600 },
+    { "clue": "A Chinese emperor prefers a jeweled mechanical bird to the real songbird in this Andersen tale", "response": "The Nightingale", "value": 2000 }
+  ] }
+]

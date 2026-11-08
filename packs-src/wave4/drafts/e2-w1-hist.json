@@ -1,0 +1,362 @@
+[
+ {
+  "name": "EXPLORERS' CLUB",
+  "clues": [
+   {
+    "clue": "Queen Isabella and King Ferdinand of Spain backed this sailor's 1492 voyage",
+    "response": "Christopher Columbus",
+    "value": 400
+   },
+   {
+    "clue": "This Spanish explorer named Florida when he landed there around Easter of 1513",
+    "response": "Ponce de León",
+    "value": 800
+   },
+   {
+    "clue": "This frontiersman blazed the Wilderness Road through the Cumberland Gap into Kentucky",
+    "response": "Daniel Boone",
+    "value": 1200
+   },
+   {
+    "clue": "His ship, the Half Moon, sailed up a New York river for the Dutch in 1609",
+    "response": "Henry Hudson",
+    "value": 1600
+   },
+   {
+    "clue": "Two whole continents got their name from this Italian navigator's first name",
+    "response": "Amerigo Vespucci",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "WORDS FOR THE AGES",
+  "clues": [
+   {
+    "clue": "'Speak softly and carry a big stick,' advised this Rough Rider president",
+    "response": "Theodore Roosevelt",
+    "value": 400
+   },
+   {
+    "clue": "'This was their finest hour,' said this British prime minister in 1940",
+    "response": "Winston Churchill",
+    "value": 800
+   },
+   {
+    "clue": "Hanged as a spy in 1776, he reportedly regretted having but one life to lose",
+    "response": "Nathan Hale",
+    "value": 1200
+   },
+   {
+    "clue": "Ordered out of the Philippines in 1942, this general vowed he would return, and he did",
+    "response": "Douglas MacArthur",
+    "value": 1600
+   },
+   {
+    "clue": "'Remember the ladies,' Abigail wrote in 1776 to her husband, this future president",
+    "response": "John Adams",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ROYAL ROUNDUP",
+  "clues": [
+   {
+    "clue": "This Tudor king had six wives, and two of them lost their heads",
+    "response": "Henry VIII",
+    "value": 400
+   },
+   {
+    "clue": "This monarch ruled Britain for 63 years and gave her name to a whole era",
+    "response": "Queen Victoria",
+    "value": 800
+   },
+   {
+    "clue": "'Let them eat cake' is wrongly pinned on this French queen",
+    "response": "Marie Antoinette",
+    "value": 1200
+   },
+   {
+    "clue": "Crowned in 1953, she sat on Britain's throne longer than any monarch before her",
+    "response": "Elizabeth II",
+    "value": 1600
+   },
+   {
+    "clue": "This crusader king spent only about six months of his 10-year reign in England",
+    "response": "Richard the Lionheart (Richard I)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ROLLIN' ON THE RIVER",
+  "clues": [
+   {
+    "clue": "Huck Finn and Jim drifted down this mighty river on a raft",
+    "response": "the Mississippi",
+    "value": 400
+   },
+   {
+    "clue": "Mexicans call this Texas border river the Río Bravo",
+    "response": "the Rio Grande",
+    "value": 800
+   },
+   {
+    "clue": "Hoover Dam holds back this river to form Lake Mead",
+    "response": "the Colorado",
+    "value": 1200
+   },
+   {
+    "clue": "Stephen Foster's 'Old Folks at Home' made this Florida river famous",
+    "response": "the Suwannee",
+    "value": 1600
+   },
+   {
+    "clue": "Lewis and Clark's Corps of Discovery paddled up this 'Big Muddy' river in 1804",
+    "response": "the Missouri",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "BLUE AND GRAY",
+  "clues": [
+   {
+    "clue": "The Civil War began when Confederates fired on this South Carolina harbor stronghold",
+    "response": "Fort Sumter",
+    "value": 400
+   },
+   {
+    "clue": "Lee surrendered to Grant in Wilmer McLean's parlor in this Virginia village in 1865",
+    "response": "Appomattox",
+    "value": 800
+   },
+   {
+    "clue": "Clara Barton tended wounded soldiers near a cornfield at this 1862 Maryland battle",
+    "response": "Antietam",
+    "value": 1200
+   },
+   {
+    "clue": "Before guiding others north, she escaped slavery in Maryland herself in 1849",
+    "response": "Harriet Tubman",
+    "value": 1600
+   },
+   {
+    "clue": "Lee's right-hand general, he was mistakenly shot by his own men at Chancellorsville",
+    "response": "Stonewall Jackson",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "LADIES OF THE HOUSE",
+  "clues": [
+   {
+    "clue": "FDR's wife wrote a newspaper column called 'My Day' for nearly 30 years",
+    "response": "Eleanor Roosevelt",
+    "value": 400
+   },
+   {
+    "clue": "In 1962 she gave TV viewers a guided tour of the White House",
+    "response": "Jacqueline Kennedy",
+    "value": 800
+   },
+   {
+    "clue": "The 4th president's wife was famous for serving ice cream at her parties",
+    "response": "Dolley Madison",
+    "value": 1200
+   },
+   {
+    "clue": "She starred with her husband, a future president, in 1957's 'Hellcats of the Navy'",
+    "response": "Nancy Reagan",
+    "value": 1600
+   },
+   {
+    "clue": "Born Claudia Alta Taylor, this Texan married a young LBJ in 1934",
+    "response": "Lady Bird Johnson",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ISLAND TIME",
+  "clues": [
+   {
+    "clue": "Al Capone spent years locked up on this island prison nicknamed 'The Rock'",
+    "response": "Alcatraz",
+    "value": 400
+   },
+   {
+    "clue": "A spooky 'Triangle' of the Atlantic is named for this British island territory",
+    "response": "Bermuda",
+    "value": 800
+   },
+   {
+    "clue": "Famous cigars are rolled from tobacco grown in this island nation's Pinar del Río",
+    "response": "Cuba",
+    "value": 1200
+   },
+   {
+    "clue": "Peter Minuit is said to have bought this island for about $24 worth of goods",
+    "response": "Manhattan",
+    "value": 1600
+   },
+   {
+    "clue": "Ferries carry visitors some 30 miles from Cape Cod to this isle of gray-shingled cottages",
+    "response": "Nantucket",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "NICKNAME THAT CITY",
+  "clues": [
+   {
+    "clue": "Gusty lake breezes or long-winded politicians? Either way it's the 'Windy City'",
+    "response": "Chicago",
+    "value": 400
+   },
+   {
+    "clue": "Spanish settlers named this California city for the angels, so it's the 'City of Angels'",
+    "response": "Los Angeles",
+    "value": 800
+   },
+   {
+    "clue": "Baked beans simmered in molasses gave this city the nickname 'Beantown'",
+    "response": "Boston",
+    "value": 1200
+   },
+   {
+    "clue": "Its mills turned out so much steel that this Pennsylvania city earned the name 'Steel City'",
+    "response": "Pittsburgh",
+    "value": 1600
+   },
+   {
+    "clue": "Evergreen forests all around earned this Pacific Northwest city the name 'Emerald City'",
+    "response": "Seattle",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "TOGAS AND TROJANS",
+  "clues": [
+   {
+    "clue": "Paris carried off Helen to this city, setting off a 10-year war",
+    "response": "Troy",
+    "value": 400
+   },
+   {
+    "clue": "Legend says this Egyptian queen died from the bite of an asp",
+    "response": "Cleopatra",
+    "value": 800
+   },
+   {
+    "clue": "Shakespeare gives this Roman ruler the dying words 'Et tu, Brute?'",
+    "response": "Julius Caesar",
+    "value": 1200
+   },
+   {
+    "clue": "'Friends, Romans, countrymen, lend me your ears' begins this Roman's famous speech",
+    "response": "Mark Antony",
+    "value": 1600
+   },
+   {
+    "clue": "This Macedonian conqueror named cities after himself, including a famous one in Egypt",
+    "response": "Alexander the Great",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "THE IKE AGE",
+  "clues": [
+   {
+    "clue": "Campaign buttons saying 'I Like Ike' helped elect this general in 1952",
+    "response": "Dwight D. Eisenhower",
+    "value": 400
+   },
+   {
+    "clue": "Begun in 1956, this road network gives its east-west routes even numbers",
+    "response": "the Interstate Highway System",
+    "value": 800
+   },
+   {
+    "clue": "In 1957 soldiers escorted nine Black students into Central High in this Arkansas city",
+    "response": "Little Rock",
+    "value": 1200
+   },
+   {
+    "clue": "This NAACP lawyer won the 1954 school case and later joined the Supreme Court",
+    "response": "Thurgood Marshall",
+    "value": 1600
+   },
+   {
+    "clue": "Rows of look-alike houses rose in this Long Island suburb built by William Levitt",
+    "response": "Levittown",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "PASSPORT STAMPS",
+  "clues": [
+   {
+    "clue": "Sydney's sail-roofed Opera House is a landmark of this country",
+    "response": "Australia",
+    "value": 400
+   },
+   {
+    "clue": "Dikes hold back the sea from this country, where much of the land lies below sea level",
+    "response": "the Netherlands (Holland)",
+    "value": 800
+   },
+   {
+    "clue": "The Great Wall winds for thousands of miles across this country",
+    "response": "China",
+    "value": 1200
+   },
+   {
+    "clue": "Machu Picchu sits high in the Andes of this South American country",
+    "response": "Peru",
+    "value": 1600
+   },
+   {
+    "clue": "This tiny country is tucked into the Pyrenees between France and Spain",
+    "response": "Andorra",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FIFTY NIFTY",
+  "clues": [
+   {
+    "clue": "Elvis Presley's Graceland mansion stands in Memphis in this state",
+    "response": "Tennessee",
+    "value": 400
+   },
+   {
+    "clue": "Old Faithful erupts in the part of Yellowstone that lies in this state",
+    "response": "Wyoming",
+    "value": 800
+   },
+   {
+    "clue": "The ballfield from 'Field of Dreams' was carved out of a cornfield in this state",
+    "response": "Iowa",
+    "value": 1200
+   },
+   {
+    "clue": "Ben & Jerry's first scooped ice cream in a converted gas station in this state",
+    "response": "Vermont",
+    "value": 1600
+   },
+   {
+    "clue": "The famous gold vault at Fort Knox sits in this Bluegrass State",
+    "response": "Kentucky",
+    "value": 2000
+   }
+  ]
+ }
+]

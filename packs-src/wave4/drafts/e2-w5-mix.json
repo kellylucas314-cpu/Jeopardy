@@ -1,0 +1,362 @@
+[
+  {
+    "name": "PARLOR GAMES",
+    "clues": [
+      {
+        "clue": "Players act out movie titles without saying a word in this party game",
+        "response": "charades",
+        "value": 400
+      },
+      {
+        "clue": "X's and O's battle on a nine-square grid in this game",
+        "response": "tic-tac-toe",
+        "value": 800
+      },
+      {
+        "clue": "'Right hand red!' called the spinner in this 1966 body-bending game",
+        "response": "Twister",
+        "value": 1200
+      },
+      {
+        "clue": "Players roll five dice hoping for a full house or a large straight in this game",
+        "response": "Yahtzee",
+        "value": 1600
+      },
+      {
+        "clue": "This American board game is based on India's pachisi",
+        "response": "Parcheesi",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "FOOTBALL SUNDAYS",
+    "clues": [
+      {
+        "clue": "Vince Lombardi's name is on the trophy handed out at this big game",
+        "response": "the Super Bowl",
+        "value": 400
+      },
+      {
+        "clue": "Green Bay's fan-owned team is named for an old meatpacking company",
+        "response": "the Packers",
+        "value": 800
+      },
+      {
+        "clue": "This Jets quarterback once wore pantyhose in a TV commercial",
+        "response": "Joe Namath",
+        "value": 1200
+      },
+      {
+        "clue": "This Steeler caught the 'Immaculate Reception' in 1972",
+        "response": "Franco Harris",
+        "value": 1600
+      },
+      {
+        "clue": "College football's top award honors a coach whose Georgia Tech team once won 222-0",
+        "response": "the Heisman Trophy",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "INK-REDIBLE STRIPS",
+    "clues": [
+      {
+        "clue": "This beagle's daydreams make him a World War I flying ace",
+        "response": "Snoopy",
+        "value": 400
+      },
+      {
+        "clue": "Lucy's psychiatric help booth in 'Peanuts' charges this much",
+        "response": "five cents (a nickel)",
+        "value": 800
+      },
+      {
+        "clue": "Dagwood Bumstead's wife gave her name to this long-running strip",
+        "response": "Blondie",
+        "value": 1200
+      },
+      {
+        "clue": "Al Capp's hillbilly strip was set in the town of Dogpatch",
+        "response": "Li'l Abner",
+        "value": 1600
+      },
+      {
+        "clue": "Comic-strip private Beetle Bailey loafs around this Army post",
+        "response": "Camp Swampy",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "POSTCARD PICKS",
+    "clues": [
+      {
+        "clue": "Galileo is said to have dropped balls from the famous tower of this Italian city",
+        "response": "Pisa",
+        "value": 400
+      },
+      {
+        "clue": "Theodore Roosevelt made this building's name official in 1901",
+        "response": "the White House",
+        "value": 800
+      },
+      {
+        "clue": "Sculptor Gutzon Borglum died months before work stopped on this granite memorial",
+        "response": "Mount Rushmore",
+        "value": 1200
+      },
+      {
+        "clue": "Tiny egg-shaped tram pods carry riders up inside this St. Louis landmark",
+        "response": "the Gateway Arch",
+        "value": 1600
+      },
+      {
+        "clue": "Abolitionists gave this cracked Philadelphia icon its famous name",
+        "response": "the Liberty Bell",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "GOOD BOOK CLUB",
+    "clues": [
+      {
+        "clue": "Looking back at Sodom turned Lot's wife into a pillar of this",
+        "response": "salt",
+        "value": 400
+      },
+      {
+        "clue": "Samson slew a thousand Philistines with the jawbone of this animal",
+        "response": "a donkey (an ass)",
+        "value": 800
+      },
+      {
+        "clue": "Noah's grandfather, he's the oldest man in the Bible",
+        "response": "Methuselah",
+        "value": 1200
+      },
+      {
+        "clue": "Thrown to the lions by order of King Darius, this prophet walked out unharmed",
+        "response": "Daniel",
+        "value": 1600
+      },
+      {
+        "clue": "In a dream, Jacob saw angels going up and down this to heaven",
+        "response": "a ladder (stairway)",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "NICKNAME DROPPERS",
+    "clues": [
+      {
+        "clue": "His World Series heroics made Yankee slugger Reggie Jackson 'Mister' this month",
+        "response": "October",
+        "value": 400
+      },
+      {
+        "clue": "Fierce Detroit Tigers star Ty Cobb was known as the Georgia this",
+        "response": "Peach",
+        "value": 800
+      },
+      {
+        "clue": "Basketball fans knew high-flying Julius Erving by this medical-sounding nickname",
+        "response": "Dr. J",
+        "value": 1200
+      },
+      {
+        "clue": "Oscar Robertson's nickname, this, played on his first initial",
+        "response": "the Big O",
+        "value": 1600
+      },
+      {
+        "clue": "Football's 'Galloping Ghost' starred at Illinois and for the Bears",
+        "response": "Red Grange",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "STORE-Y TIME",
+    "clues": [
+      {
+        "clue": "The 1960 Greensboro sit-ins began at this chain's lunch counter",
+        "response": "Woolworth's",
+        "value": 400
+      },
+      {
+        "clue": "Shoppers licked and pasted these S&H rewards into little books",
+        "response": "Green Stamps",
+        "value": 800
+      },
+      {
+        "clue": "Kids circled toys in the Christmas 'Wish Book' from this catalog company",
+        "response": "Sears",
+        "value": 1200
+      },
+      {
+        "clue": "The Great Atlantic & Pacific Tea Company was better known by these initials",
+        "response": "A&P",
+        "value": 1600
+      },
+      {
+        "clue": "S.S. Kresge's five-and-dime company took this discount name in 1977",
+        "response": "Kmart",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "LOVE ALL",
+    "clues": [
+      {
+        "clue": "Strawberries and cream are served at this London tennis tournament",
+        "response": "Wimbledon",
+        "value": 400
+      },
+      {
+        "clue": "'You cannot be serious!' this hothead yelled at a Wimbledon umpire",
+        "response": "John McEnroe",
+        "value": 800
+      },
+      {
+        "clue": "Arthur Ashe Stadium is the main court at this Grand Slam event",
+        "response": "the US Open",
+        "value": 1200
+      },
+      {
+        "clue": "This headbanded Swede won five Wimbledons in a row",
+        "response": "Björn Borg",
+        "value": 1600
+      },
+      {
+        "clue": "Chris Evert's great rival was this Czech-born lefty",
+        "response": "Martina Navratilova",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "PAINT BY NAMES",
+    "clues": [
+      {
+        "clue": "His 'Pietà' in St. Peter's Basilica is the only work he ever signed",
+        "response": "Michelangelo",
+        "value": 400
+      },
+      {
+        "clue": "This Spaniard painted 'Guernica' after the 1937 bombing of a Basque town",
+        "response": "Pablo Picasso",
+        "value": 800
+      },
+      {
+        "clue": "This Frenchman painted 'Luncheon of the Boating Party'",
+        "response": "Pierre-Auguste Renoir",
+        "value": 1200
+      },
+      {
+        "clue": "She took up painting in her late 70s and became a folk art star",
+        "response": "Grandma Moses",
+        "value": 1600
+      },
+      {
+        "clue": "Ballet dancers were a beloved subject of this French Impressionist",
+        "response": "Edgar Degas",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "DANCE CARD",
+    "clues": [
+      {
+        "clue": "'How low can you go?' asks this Caribbean dance under a bar",
+        "response": "the limbo",
+        "value": 400
+      },
+      {
+        "clue": "Flappers kicked up their heels doing this dance named for a Southern city",
+        "response": "the Charleston",
+        "value": 800
+      },
+      {
+        "clue": "Dick Clark hosted this teen dance show for decades, starting out in Philadelphia",
+        "response": "American Bandstand",
+        "value": 1200
+      },
+      {
+        "clue": "This Harlem swing dance took its name from a famous 1927 transatlantic flier",
+        "response": "the Lindy Hop",
+        "value": 1600
+      },
+      {
+        "clue": "He and his wife Kathryn taught America ballroom dancing on 1950s TV",
+        "response": "Arthur Murray",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "PASTIME PARADE",
+    "clues": [
+      {
+        "clue": "Folks paste photos and keepsakes into albums in this hobby",
+        "response": "scrapbooking",
+        "value": 400
+      },
+      {
+        "clue": "Lionel's electric ones often circled the Christmas tree",
+        "response": "toy trains",
+        "value": 800
+      },
+      {
+        "clue": "Britain's Penny Black of 1840 was the world's first of these, now a collector's prize",
+        "response": "postage stamps",
+        "value": 1200
+      },
+      {
+        "clue": "Arthur Wynne's 1913 'word-cross' in a New York paper began this pastime",
+        "response": "the crossword puzzle",
+        "value": 1600
+      },
+      {
+        "clue": "Coin collecting goes by this tongue-twisting name, from the Greek for 'coin'",
+        "response": "numismatics",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "HOME INVENTIONS",
+    "clues": [
+      {
+        "clue": "James Spangler sold his upright vacuum to this Ohio company",
+        "response": "Hoover",
+        "value": 400
+      },
+      {
+        "clue": "Melitta Bentz used blotting paper to invent this drip-brew helper",
+        "response": "the coffee filter",
+        "value": 800
+      },
+      {
+        "clue": "Earle Dickson stuck gauze to tape for his wife, who kept nicking her fingers, and made this",
+        "response": "the Band-Aid (adhesive bandage)",
+        "value": 1200
+      },
+      {
+        "clue": "Bandleader Fred Waring lent his name to an early version of this kitchen appliance",
+        "response": "the blender",
+        "value": 1600
+      },
+      {
+        "clue": "Josephine Cochrane patented this kitchen machine in 1886",
+        "response": "the dishwasher",
+        "value": 2000
+      }
+    ]
+  }
+]

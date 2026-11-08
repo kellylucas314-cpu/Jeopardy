@@ -1,0 +1,362 @@
+[
+  {
+    "name": "THE MARCH HOUSEHOLD",
+    "clues": [
+      {
+        "clue": "The writer among the March sisters, she turns down Laurie's proposal",
+        "response": "Jo",
+        "value": 400
+      },
+      {
+        "clue": "The eldest March sister, she marries the tutor John Brooke",
+        "response": "Meg",
+        "value": 800
+      },
+      {
+        "clue": "Gentle and piano-loving, this March sister never fully recovers from scarlet fever",
+        "response": "Beth",
+        "value": 1200
+      },
+      {
+        "clue": "The youngest March girl, an artist, she ends up marrying Laurie",
+        "response": "Amy",
+        "value": 1600
+      },
+      {
+        "clue": "It's the pet name the four March girls use for their mother",
+        "response": "Marmee",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "OZ, BY THE BOOK",
+    "clues": [
+      {
+        "clue": "The Scarecrow hopes the Wizard will give him one of these",
+        "response": "a brain",
+        "value": 400
+      },
+      {
+        "clue": "He wrote 'The Wonderful Wizard of Oz,' published in 1900",
+        "response": "L. Frank Baum",
+        "value": 800
+      },
+      {
+        "clue": "In the original book, Dorothy's magic shoes are this color, not ruby",
+        "response": "silver",
+        "value": 1200
+      },
+      {
+        "clue": "Back in Kansas, Dorothy's Aunt Em is married to this farmer",
+        "response": "Uncle Henry",
+        "value": 1600
+      },
+      {
+        "clue": "Everyone in the Emerald City must wear these, locked on with a key",
+        "response": "green spectacles (green glasses)",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "NAMESAKE STORIES",
+    "clues": [
+      {
+        "clue": "Count Ferdinand von Zeppelin lent his name to these cigar-shaped airships",
+        "response": "zeppelins",
+        "value": 400
+      },
+      {
+        "clue": "Health crusader Sylvester lent his name to this s'mores staple",
+        "response": "the graham cracker",
+        "value": 800
+      },
+      {
+        "clue": "Civil War general Ambrose Burnside's bushy whiskers gave us this word, flipped",
+        "response": "sideburns",
+        "value": 1200
+      },
+      {
+        "clue": "Britain's 'Iron Duke' gave his name to these tall rubber rain boots",
+        "response": "wellingtons (wellies)",
+        "value": 1600
+      },
+      {
+        "clue": "Philadelphia hatter John B. gave his name to this broad-brimmed cowboy hat",
+        "response": "a Stetson",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "BACKWARD GLANCES",
+    "clues": [
+      {
+        "clue": "Spell 'evil' backward and you get this word meaning to be alive",
+        "response": "live",
+        "value": 400
+      },
+      {
+        "clue": "Spelled backward, 'rats' becomes this twinkler in the night sky",
+        "response": "star",
+        "value": 800
+      },
+      {
+        "clue": "Backward, 'reward' spells this sliding part of a dresser",
+        "response": "drawer",
+        "value": 1200
+      },
+      {
+        "clue": "Backward, 'desserts' spells this, which is how a busy host may feel",
+        "response": "stressed",
+        "value": 1600
+      },
+      {
+        "clue": "Read 'diaper' backward to get this word meaning paid back",
+        "response": "repaid",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "POETS IN THE PARLOR",
+    "clues": [
+      {
+        "clue": "'By the shores of Gitche Gumee' comes from this poet's 'The Song of Hiawatha'",
+        "response": "Henry Wadsworth Longfellow",
+        "value": 400
+      },
+      {
+        "clue": "Steinbeck took 'Of Mice and Men' from a line in this Scottish poet's 'To a Mouse'",
+        "response": "Robert Burns",
+        "value": 800
+      },
+      {
+        "clue": "He mourned his lost love Annabel Lee in a kingdom by the sea",
+        "response": "Edgar Allan Poe",
+        "value": 1200
+      },
+      {
+        "clue": "'O Captain! My Captain!' was this poet's lament for Abraham Lincoln",
+        "response": "Walt Whitman",
+        "value": 1600
+      },
+      {
+        "clue": "Despite his first name, the author of 'Trees' was a man: this New Jersey-born poet",
+        "response": "Joyce Kilmer",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "LADIES OF THE GOOD BOOK",
+    "clues": [
+      {
+        "clue": "She had Samson's hair cut off, robbing him of his great strength",
+        "response": "Delilah",
+        "value": 400
+      },
+      {
+        "clue": "She gleaned barley in the fields of Boaz, whom she later married",
+        "response": "Ruth",
+        "value": 800
+      },
+      {
+        "clue": "This Jewish queen of Persia saved her people, as the feast of Purim recalls",
+        "response": "Esther",
+        "value": 1200
+      },
+      {
+        "clue": "Abraham's wife, she laughed at the news that she'd have a son in old age",
+        "response": "Sarah",
+        "value": 1600
+      },
+      {
+        "clue": "Jacob worked seven years, and then seven more, to marry her",
+        "response": "Rachel",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "LATIN FOR BEGINNERS",
+    "clues": [
+      {
+        "clue": "Picked for the Great Seal in 1782, this 13-letter Latin motto also rides on U.S. coins",
+        "response": "E pluribus unum",
+        "value": 400
+      },
+      {
+        "clue": "Grads call their old school this, Latin for 'nourishing mother'",
+        "response": "alma mater",
+        "value": 800
+      },
+      {
+        "clue": "Lawyers who take a case for free do it this way, 'for the good'",
+        "response": "pro bono",
+        "value": 1200
+      },
+      {
+        "clue": "Latin for 'something for something,' it's a favor traded for a favor",
+        "response": "quid pro quo",
+        "value": 1600
+      },
+      {
+        "clue": "'Let the buyer beware,' shoppers are warned in this Latin phrase",
+        "response": "caveat emptor",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "STORYBOOK HOMES",
+    "clues": [
+      {
+        "clue": "Scarlett's Irish-born father, Gerald O'Hara, owns this cotton plantation in Georgia",
+        "response": "Tara",
+        "value": 400
+      },
+      {
+        "clue": "Sherlock Holmes and Dr. Watson share rooms at this London address",
+        "response": "221B Baker Street",
+        "value": 800
+      },
+      {
+        "clue": "Matthew and Marilla Cuthbert take in orphan Anne Shirley at this farm",
+        "response": "Green Gables",
+        "value": 1200
+      },
+      {
+        "clue": "Elizabeth Bennet warms to Mr. Darcy after touring this Derbyshire estate",
+        "response": "Pemberley",
+        "value": 1600
+      },
+      {
+        "clue": "Mrs. Danvers rules the household staff at this Cornish estate in 'Rebecca'",
+        "response": "Manderley",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "OH, BOTHER!",
+    "clues": [
+      {
+        "clue": "Winnie-the-Pooh keeps his favorite food in jars he labels 'hunny'",
+        "response": "honey",
+        "value": 400
+      },
+      {
+        "clue": "This gloomy gray donkey once lost his tail, and Owl was using it as a bell-pull",
+        "response": "Eeyore",
+        "value": 800
+      },
+      {
+        "clue": "This bouncy striped newcomer finds that he loves Roo's extract of malt",
+        "response": "Tigger",
+        "value": 1200
+      },
+      {
+        "clue": "The real boy behind this Pooh character grew up to run a bookshop in Devon, England",
+        "response": "Christopher Robin",
+        "value": 1600
+      },
+      {
+        "clue": "In this game, you drop twigs off a bridge and see whose floats out first",
+        "response": "Poohsticks",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "NONSENSE, PLEASE",
+    "clues": [
+      {
+        "clue": "Alice sits down with the Mad Hatter and the March Hare at this kind of gathering",
+        "response": "a tea party",
+        "value": 400
+      },
+      {
+        "clue": "This grinning cat fades away until only its smile is left",
+        "response": "the Cheshire Cat",
+        "value": 800
+      },
+      {
+        "clue": "Edward Lear's Owl went to sea in a pea-green boat with this companion",
+        "response": "the Pussy-cat",
+        "value": 1200
+      },
+      {
+        "clue": "A vorpal blade goes 'snicker-snack' to slay the beast in this Carroll poem",
+        "response": "'Jabberwocky'",
+        "value": 1600
+      },
+      {
+        "clue": "Lear's Owl and Pussy-cat dined on mince and quince with this odd utensil",
+        "response": "a runcible spoon",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "HER BYLINE",
+    "clues": [
+      {
+        "clue": "Her 1936 blockbuster 'Gone with the Wind' won her a Pulitzer Prize",
+        "response": "Margaret Mitchell",
+        "value": 400
+      },
+      {
+        "clue": "She was 65 when 'Little House in the Big Woods' came out in 1932",
+        "response": "Laura Ingalls Wilder",
+        "value": 800
+      },
+      {
+        "clue": "'The Good Earth,' her novel of Chinese farm life, won a 1932 Pulitzer",
+        "response": "Pearl S. Buck (Pearl Buck)",
+        "value": 1200
+      },
+      {
+        "clue": "Her 1852 novel 'Uncle Tom's Cabin' stirred antislavery feeling",
+        "response": "Harriet Beecher Stowe",
+        "value": 1600
+      },
+      {
+        "clue": "Her 1938 novel 'The Yearling' follows a Florida boy and his pet fawn",
+        "response": "Marjorie Kinnan Rawlings",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "SAID THE BARD",
+    "clues": [
+      {
+        "clue": "Iago warns that jealousy is 'the green-eyed monster' in this tragedy",
+        "response": "Othello",
+        "value": 400
+      },
+      {
+        "clue": "'All that glisters is not gold,' reads a scroll in a casket in this play",
+        "response": "The Merchant of Venice",
+        "value": 800
+      },
+      {
+        "clue": "'Brevity is the soul of wit,' says long-winded Polonius in this play",
+        "response": "Hamlet",
+        "value": 1200
+      },
+      {
+        "clue": "Nick Bottom the weaver sprouts a donkey's head in this fairy-filled comedy",
+        "response": "A Midsummer Night's Dream",
+        "value": 1600
+      },
+      {
+        "clue": "'O brave new world,' marvels Miranda, who has seen few men, in this island play",
+        "response": "The Tempest",
+        "value": 2000
+      }
+    ]
+  }
+]

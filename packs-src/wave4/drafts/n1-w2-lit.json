@@ -1,0 +1,86 @@
+[
+  { "name": "FOUR-LEGGED FOOTNOTES", "clues": [
+    { "clue": "Anna Sewell's only novel, an 1877 'autobiography,' is narrated by this gentle horse", "response": "Black Beauty", "value": 200 },
+    { "clue": "A Newfoundland named this serves as the Darling children's nursemaid in 'Peter Pan'", "response": "Nana", "value": 400 },
+    { "clue": "Don Quixote's scrawny steed bears this name, built on 'rocin,' Spanish for a worn-out nag", "response": "Rocinante", "value": 600 },
+    { "clue": "After 20 years away, Odysseus is recognized by this old dog, who promptly dies", "response": "Argos (Argus)", "value": 800 },
+    { "clue": "Virginia Woolf wrote a 1933 'biography' of Elizabeth Barrett Browning's cocker spaniel, named this", "response": "Flush", "value": 1000 }
+  ] },
+  { "name": "TWIN-RHYME TIME", "clues": [
+    { "clue": "Stage magicians' rhyming patter, it's also the title of a 1993 Bette Midler witch comedy", "response": "hocus-pocus", "value": 200 },
+    { "clue": "From 'will he, nill he,' this rhyming phrase means whether you like it or not", "response": "willy-nilly", "value": 400 },
+    { "clue": "Macbeth's three witches plan to meet again once this rhyming tumult of battle is done", "response": "hurly-burly", "value": 600 },
+    { "clue": "King Claudius admits Polonius was buried hastily and in secret, in this rhyming manner", "response": "hugger-mugger", "value": 800 },
+    { "clue": "Henry Carey coined this rhyming put-down to mock the sugary verse of poet Ambrose Philips", "response": "namby-pamby", "value": 1000 }
+  ] },
+  { "name": "MOTHERS OF MYTH", "clues": [
+    { "clue": "Telemachus' mother, she unraveled her weaving every night to stall her suitors", "response": "Penelope", "value": 200 },
+    { "clue": "This sea nymph dipped baby Achilles in the River Styx, holding him by one heel", "response": "Thetis", "value": 400 },
+    { "clue": "Helen of Troy hatched from an egg laid by this Spartan queen, whom Zeus wooed as a swan", "response": "Leda", "value": 600 },
+    { "clue": "Her father shut her in a bronze chamber, but Zeus slipped in as golden rain and fathered Perseus", "response": "Danae", "value": 800 },
+    { "clue": "Tricked by Hera into asking to see Zeus in his full glory, Dionysus' mother burned up", "response": "Semele", "value": 1000 }
+  ] },
+  { "name": "GAZETTEER GLOSSARY", "clues": [
+    { "clue": "London's Bethlem Royal Hospital, long a home for the insane, gave English this word for uproar", "response": "bedlam", "value": 200 },
+    { "clue": "This word for an easy gallop shortens 'Canterbury pace,' the gait of mounted pilgrims", "response": "canter", "value": 400 },
+    { "clue": "Spartans, famous for terse replies, lived in the region of Laconia, giving us this adjective", "response": "laconic", "value": 600 },
+    { "clue": "A twisting river in what's now Turkey gave its name to this verb for wandering aimlessly", "response": "meander", "value": 800 },
+    { "clue": "Mosul, an ancient trading city on the Tigris, gave its name to this thin, plain-woven cotton cloth", "response": "muslin", "value": 1000 }
+  ] },
+  { "name": "EXIT, STAGE DEAD", "clues": [
+    { "clue": "She drinks a sleeping potion, wakes in the Capulet tomb and reaches for Romeo's dagger", "response": "Juliet", "value": 200 },
+    { "clue": "Dying, this witty friend of Romeo quips that tomorrow you shall find him 'a grave man'", "response": "Mercutio", "value": 400 },
+    { "clue": "Queen Gertrude reports that this young woman drowned in a brook, singing as she sank", "response": "Ophelia", "value": 600 },
+    { "clue": "In 'Richard III,' the hunchbacked schemer's brother is stabbed, then drowned in a butt of malmsey wine", "response": "Clarence (the Duke of Clarence)", "value": 800 },
+    { "clue": "'Exit, pursued by a bear' marks the grim end of this courtier in 'The Winter's Tale'", "response": "Antigonus", "value": 1000 }
+  ] },
+  { "name": "LOAN ARRANGERS", "clues": [
+    { "clue": "Kindergarten, angst and wanderlust all came to English from this language", "response": "German", "value": 200 },
+    { "clue": "Kayak and igloo both reached English from the language of these Arctic people", "response": "the Inuit (Inuktitut)", "value": 400 },
+    { "clue": "'Shampoo' traces to this language's word for 'press!' as in a vigorous massage", "response": "Hindi", "value": 600 },
+    { "clue": "U.S. troops in the Philippines brought home 'boondocks,' from this language's word for mountain", "response": "Tagalog", "value": 800 },
+    { "clue": "'Slogan' began in this Celtic language as a word for a clan's battle cry", "response": "Scottish Gaelic (Gaelic)", "value": 1000 }
+  ] },
+  { "name": "STORYBOOK ZIP CODES", "clues": [
+    { "clue": "From his mountaintop lair, the Grinch glowers down at the cheery residents of this town", "response": "Whoville", "value": 200 },
+    { "clue": "Weasels and stoats seize this grand riverside mansion until Badger, Mole and Ratty retake it", "response": "Toad Hall", "value": 400 },
+    { "clue": "Anne Shirley grows up in this fictional village on Prince Edward Island", "response": "Avonlea", "value": 600 },
+    { "clue": "In 'The Phantom Tollbooth,' Milo visits King Azaz's city, where words are sold at market", "response": "Dictionopolis", "value": 800 },
+    { "clue": "In 'A Wrinkle in Time,' Meg's father is held on this dark planet ruled by a brain called IT", "response": "Camazotz", "value": 1000 }
+  ] },
+  { "name": "VERSE & VERNACULAR", "clues": [
+    { "clue": "'Am I my brother's keeper?' asks Cain in this first book of the Bible", "response": "Genesis", "value": 200 },
+    { "clue": "'The writing on the wall' appears at King Belshazzar's feast in this prophet's book", "response": "Daniel", "value": 400 },
+    { "clue": "'The skin of my teeth' comes from this book about a sorely tested, famously patient man", "response": "Job", "value": 600 },
+    { "clue": "'Nothing new under the sun' and 'a time to every purpose' both come from this book", "response": "Ecclesiastes", "value": 800 },
+    { "clue": "'The powers that be' comes from this epistle Paul sent to believers in the imperial capital", "response": "Romans", "value": 1000 }
+  ] },
+  { "name": "KEEP YOUR DAY JOB", "clues": [
+    { "clue": "His years at the Salem Custom House supplied the framing intro to 'The Scarlet Letter'", "response": "Nathaniel Hawthorne", "value": 200 },
+    { "clue": "This 'Alice' author spent decades as a lecturer in mathematics at Oxford's Christ Church", "response": "Lewis Carroll", "value": 400 },
+    { "clue": "For 27 years he managed London's Lyceum Theatre for actor Henry Irving, writing on the side", "response": "Bram Stoker", "value": 600 },
+    { "clue": "A family doctor in Rutherford, N.J., he jotted down poems like 'The Red Wheelbarrow' between patients", "response": "William Carlos Williams", "value": 800 },
+    { "clue": "For 30 years this 'Whitsun Weddings' poet ran the library at England's University of Hull", "response": "Philip Larkin", "value": 1000 }
+  ] },
+  { "name": "Q, HOLD THE U", "clues": [
+    { "clue": "Baghdad straddles the Tigris River in this Middle Eastern country", "response": "Iraq", "value": 200 },
+    { "clue": "Al Jazeera broadcasts from Doha, capital of this small Persian Gulf peninsula nation", "response": "Qatar", "value": 400 },
+    { "clue": "The 'Flying Kangaroo,' this airline founded in Queensland in 1920, has an acronym for a name", "response": "Qantas", "value": 600 },
+    { "clue": "Chinese men had to wear the long braided queue under this Manchu dynasty, which fell in 1912", "response": "the Qing", "value": 800 },
+    { "clue": "Two letters and worth 11 points in Scrabble, it's the vital life force of Chinese medicine", "response": "qi (chi)", "value": 1000 }
+  ] },
+  { "name": "NAMED ON THE COVER", "clues": [
+    { "clue": "Pig's blood rains on a shy teen at the prom in this 1974 Stephen King debut", "response": "Carrie", "value": 200 },
+    { "clue": "Her father sells shady used cars, but this Roald Dahl girl only wants to read books", "response": "Matilda", "value": 400 },
+    { "clue": "Jane Austen predicted no one but herself would much like this meddling matchmaker of Highbury", "response": "Emma", "value": 600 },
+    { "clue": "Daphne du Maurier never tells us the narrator's first name, only that of this first Mrs. de Winter", "response": "Rebecca", "value": 800 },
+    { "clue": "A miserly weaver of Raveloe finds a golden-haired child on his hearth in this George Eliot novel", "response": "Silas Marner", "value": 1000 }
+  ] },
+  { "name": "LANDLUBBER LINGO", "clues": [
+    { "clue": "Sheets are the ropes that trim a sail, so a staggering drunk is 'three sheets to' this", "response": "the wind", "value": 200 },
+    { "clue": "A sudden headwind pressing the sails backward left a ship 'taken' this way, now meaning startled", "response": "aback", "value": 400 },
+    { "clue": "Admiral Vernon, nicknamed 'Old Grog,' watered his sailors' rum, giving us this word for woozy", "response": "groggy", "value": 600 },
+    { "clue": "The last of an anchor cable, tied to deck posts called bitts, gave us this phrase for the very finish", "response": "the bitter end", "value": 800 },
+    { "clue": "A ship's drinking-water cask, where crews swapped gossip, gave us this word for rumor", "response": "scuttlebutt", "value": 1000 }
+  ] }
+]

@@ -1,0 +1,362 @@
+[
+ {
+  "name": "GAME CLOSET",
+  "clues": [
+   {
+    "clue": "Good deeds climb you up and naughty ones slide you down in this kids' board game",
+    "response": "Chutes and Ladders",
+    "value": 200
+   },
+   {
+    "clue": "Bump a rival back to Start and apologize by name in this board game",
+    "response": "Sorry!",
+    "value": 400
+   },
+   {
+    "clue": "Pieces that reach the far side get 'kinged' in this red-and-black game",
+    "response": "checkers",
+    "value": 600
+   },
+   {
+    "clue": "An out-of-work architect named Alfred Butts invented this word game",
+    "response": "Scrabble",
+    "value": 800
+   },
+   {
+    "clue": "Tiny cars carry pegs for spouses and kids in this Milton Bradley classic",
+    "response": "The Game of Life",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BALLPARK MEMORIES",
+  "clues": [
+   {
+    "clue": "Fans sing for peanuts and Cracker Jack in this tune at the seventh-inning stretch",
+    "response": "Take Me Out to the Ball Game",
+    "value": 200
+   },
+   {
+    "clue": "Abbott and Costello tangled over a baseball lineup in this comedy routine",
+    "response": "Who's on First?",
+    "value": 400
+   },
+   {
+    "clue": "For 20 years Joe DiMaggio had roses delivered to this star's crypt",
+    "response": "Marilyn Monroe",
+    "value": 600
+   },
+   {
+    "clue": "Lawrence Berra sat cross-legged like a holy man, earning this Yankee nickname",
+    "response": "Yogi",
+    "value": 800
+   },
+   {
+    "clue": "'The outlook wasn't brilliant for the Mudville nine' begins this poem",
+    "response": "Casey at the Bat",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "TOY CHEST",
+  "clues": [
+   {
+    "clue": "This wooden spool climbs back up its string with a flick of the wrist",
+    "response": "a yo-yo",
+    "value": 200
+   },
+   {
+    "clue": "Bounce a small ball, then scoop up these six-pointed metal pieces",
+    "response": "jacks",
+    "value": 400
+   },
+   {
+    "clue": "Barbie's boyfriend, born in 1961, shares his name with Ruth Handler's son",
+    "response": "Ken",
+    "value": 600
+   },
+   {
+    "clue": "Kids pushed colored pegs into a glowing screen to make pictures with this toy",
+    "response": "Lite-Brite",
+    "value": 800
+   },
+   {
+    "clue": "Wooden spools and sticks made up this building toy, first sold in 1914",
+    "response": "Tinkertoys",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HANG IT ON THE WALL",
+  "clues": [
+   {
+    "clue": "Her mysterious smile draws crowds at the Louvre in Paris",
+    "response": "the Mona Lisa",
+    "value": 200
+   },
+   {
+    "clue": "Vincent van Gogh painted swirling stars over a sleepy village in this work",
+    "response": "The Starry Night",
+    "value": 400
+   },
+   {
+    "clue": "A farmer holds a pitchfork beside his daughter in this Grant Wood work",
+    "response": "American Gothic",
+    "value": 600
+   },
+   {
+    "clue": "This American painter showed his mother seated in profile in 1871",
+    "response": "James Whistler",
+    "value": 800
+   },
+   {
+    "clue": "Norman Rockwell painted hundreds of covers for this weekly magazine",
+    "response": "The Saturday Evening Post",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "DECK THE DAYS",
+  "clues": [
+   {
+    "clue": "Kids carve spooky faces into these orange gourds for Halloween",
+    "response": "pumpkins",
+    "value": 200
+   },
+   {
+    "clue": "Macy's has held its big New York parade on this holiday since 1924",
+    "response": "Thanksgiving",
+    "value": 400
+   },
+   {
+    "clue": "Folks sing 'Auld Lang Syne' as the clock strikes twelve on this night",
+    "response": "New Year's Eve",
+    "value": 600
+   },
+   {
+    "clue": "Wear green or risk a pinch from a friend on this March holiday",
+    "response": "St. Patrick's Day",
+    "value": 800
+   },
+   {
+    "clue": "On federal calendars, Presidents' Day is officially this man's birthday",
+    "response": "George Washington",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "MASCOT MEMORIES",
+  "clues": [
+   {
+    "clue": "This bald, muscular fellow with one gold earring has scrubbed up in ads since 1958",
+    "response": "Mr. Clean",
+    "value": 200
+   },
+   {
+    "clue": "The loneliest man in TV ads, he never had any washers to fix",
+    "response": "the Maytag repairman",
+    "value": 400
+   },
+   {
+    "clue": "Borden's cow mascot was married to Elmer, who went on to sell glue",
+    "response": "Elsie (the Cow)",
+    "value": 600
+   },
+   {
+    "clue": "A grinning stick figure made of lightning bolts, he sold electric power",
+    "response": "Reddy Kilowatt",
+    "value": 800
+   },
+   {
+    "clue": "With a fizzy tablet for a body, this little mascot plugged Alka-Seltzer",
+    "response": "Speedy",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "MEDAL MEMORIES",
+  "clues": [
+   {
+    "clue": "The 1980 'Miracle on Ice' was a U.S. upset win in this sport",
+    "response": "ice hockey",
+    "value": 200
+   },
+   {
+    "clue": "Nadia Comaneci of Romania was just 14 when she earned perfect 10s in this sport",
+    "response": "gymnastics",
+    "value": 400
+   },
+   {
+    "clue": "Swimmer Mark Spitz won this many gold medals at the 1972 Games",
+    "response": "seven (7)",
+    "value": 600
+   },
+   {
+    "clue": "Eric Heiden won all five of his golds at Lake Placid in 1980 in this sport",
+    "response": "speed skating",
+    "value": 800
+   },
+   {
+    "clue": "This diver hit his head on the springboard in 1988 but still won gold",
+    "response": "Greg Louganis",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "FASHION FLASHBACK",
+  "clues": [
+   {
+    "clue": "This felt sock-hop favorite of the 1950s often sported a stitched-on dog",
+    "response": "a poodle skirt",
+    "value": 200
+   },
+   {
+    "clue": "These flared-leg pants were a 1970s disco dance floor staple",
+    "response": "bell-bottoms",
+    "value": 400
+   },
+   {
+    "clue": "Jackie Kennedy made this small, brimless hat famous",
+    "response": "the pillbox hat",
+    "value": 600
+   },
+   {
+    "clue": "Women lined up for these new stockings when they hit stores in 1940",
+    "response": "nylons",
+    "value": 800
+   },
+   {
+    "clue": "Long jackets and baggy pegged trousers made up this flashy 1940s outfit",
+    "response": "the zoot suit",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "SHUFFLE OFF",
+  "clues": [
+   {
+    "clue": "'Do you have any sevens?' kids ask in this card game",
+    "response": "Go Fish",
+    "value": 200
+   },
+   {
+    "clue": "This one-player card game passed many a rainy afternoon",
+    "response": "solitaire",
+    "value": 400
+   },
+   {
+    "clue": "Nobody wants to be stuck holding the unmatched queen in this game",
+    "response": "Old Maid",
+    "value": 600
+   },
+   {
+    "clue": "A wooden board with pegs keeps score in this card game",
+    "response": "cribbage",
+    "value": 800
+   },
+   {
+    "clue": "Born in Uruguay, this rummy game was a 1950s American craze",
+    "response": "canasta",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HYMNAL NOTES",
+  "clues": [
+   {
+    "clue": "First sung in an Austrian village church in 1818, it's 'Stille Nacht' in German",
+    "response": "Silent Night",
+    "value": 200
+   },
+   {
+    "clue": "Isaac Watts wrote this carol that bids the Earth 'receive her King'",
+    "response": "Joy to the World",
+    "value": 400
+   },
+   {
+    "clue": "Arthur Sullivan of Gilbert and Sullivan wrote the tune for this marching hymn",
+    "response": "Onward, Christian Soldiers",
+    "value": 600
+   },
+   {
+    "clue": "A slave trader turned minister, he wrote the words to 'Amazing Grace'",
+    "response": "John Newton",
+    "value": 800
+   },
+   {
+    "clue": "'Then sings my soul' rang out in this hymn at Billy Graham crusades",
+    "response": "How Great Thou Art",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BRAND-NEW WORDS",
+  "clues": [
+   {
+    "clue": "A Johnson & Johnson worker invented these for his wife's kitchen cuts",
+    "response": "Band-Aids",
+    "value": 200
+   },
+   {
+    "clue": "Wham-O's flying disc was named for a Connecticut pie company",
+    "response": "the Frisbee",
+    "value": 400
+   },
+   {
+    "clue": "First sold to remove cold cream, these tissues found fame for noses",
+    "response": "Kleenex",
+    "value": 600
+   },
+   {
+    "clue": "Rival's slow cooker came to kitchens in 1971 under this name",
+    "response": "Crock-Pot",
+    "value": 800
+   },
+   {
+    "clue": "These cotton swabs were sold as 'Baby Gays' before getting this name",
+    "response": "Q-tips",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "WEDDING BELLES",
+  "clues": [
+   {
+    "clue": "The groom lifts this sheer face covering before kissing his bride",
+    "response": "the veil",
+    "value": 200
+   },
+   {
+    "clue": "Single ladies hope to catch this when the bride tosses it",
+    "response": "the bouquet",
+    "value": 400
+   },
+   {
+    "clue": "Guests once showered newlyweds with this grain for good luck",
+    "response": "rice",
+    "value": 600
+   },
+   {
+    "clue": "The groom tosses this to the bachelors at the reception",
+    "response": "the garter",
+    "value": 800
+   },
+   {
+    "clue": "Queen Victoria's 1840 wedding made this gown color the bridal standard",
+    "response": "white",
+    "value": 1000
+   }
+  ]
+ }
+]
