@@ -1,0 +1,362 @@
+[
+  {
+    "name": "HOME SWEET SITCOM",
+    "clues": [
+      {
+        "clue": "'Marcia, Marcia, Marcia!' middle sister Jan griped on this sitcom",
+        "response": "The Brady Bunch",
+        "value": 400
+      },
+      {
+        "clue": "The Fonz rented the room over the Cunninghams' Milwaukee garage on this sitcom",
+        "response": "Happy Days",
+        "value": 800
+      },
+      {
+        "clue": "Shirley Jones and her TV kids toured in a painted school bus on this sitcom",
+        "response": "The Partridge Family",
+        "value": 1200
+      },
+      {
+        "clue": "The real-life Nelsons played themselves for 14 years on this sitcom",
+        "response": "The Adventures of Ozzie and Harriet",
+        "value": 1600
+      },
+      {
+        "clue": "Danny Thomas played a nightclub entertainer raising kids on this 1950s sitcom",
+        "response": "Make Room for Daddy",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "BORN WITH ANOTHER NAME",
+    "clues": [
+      {
+        "clue": "Born Miss Kappelhoff in Cincinnati, this sunny star sang 'Que Sera, Sera'",
+        "response": "Doris Day",
+        "value": 400
+      },
+      {
+        "clue": "Born Frances Gumm, she sang in vaudeville with her sisters as a child",
+        "response": "Judy Garland",
+        "value": 800
+      },
+      {
+        "clue": "Born Roy Scherer, this tall leading man starred in 'Giant' with Elizabeth Taylor",
+        "response": "Rock Hudson",
+        "value": 1200
+      },
+      {
+        "clue": "Born Leonard Slye in Cincinnati, he rode to fame as a singing cowboy",
+        "response": "Roy Rogers",
+        "value": 1600
+      },
+      {
+        "clue": "Born Issur Danielovitch, he played the gladiator Spartacus in 1960",
+        "response": "Kirk Douglas",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "GROOVY SIXTIES SOUNDS",
+    "clues": [
+      {
+        "clue": "Brian Wilson's band sang of surfing, hot rods and 'Good Vibrations'",
+        "response": "the Beach Boys",
+        "value": 400
+      },
+      {
+        "clue": "Davy Jones was the British heartthrob of this made-for-TV band",
+        "response": "the Monkees",
+        "value": 800
+      },
+      {
+        "clue": "Later TV hosts, this duo topped the charts with 'I Got You Babe' in 1965",
+        "response": "Sonny and Cher",
+        "value": 1200
+      },
+      {
+        "clue": "This folk duo's 'Mrs. Robinson' was written for 'The Graduate'",
+        "response": "Simon and Garfunkel",
+        "value": 1600
+      },
+      {
+        "clue": "'California Dreamin'' was a 1966 hit for this foursome of two men and two women",
+        "response": "the Mamas and the Papas",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "OSCAR NIGHT MEMORIES",
+    "clues": [
+      {
+        "clue": "Atlanta burns and Tara survives in this 1939 epic of the Old South",
+        "response": "Gone with the Wind",
+        "value": 400
+      },
+      {
+        "clue": "Julie Andrews won an Oscar for her very first film role in this 1964 musical",
+        "response": "Mary Poppins",
+        "value": 800
+      },
+      {
+        "clue": "Charlton Heston played a Jewish prince turned galley slave in this 1959 Best Picture",
+        "response": "Ben-Hur",
+        "value": 1200
+      },
+      {
+        "clue": "Katharine Hepburn's prim missionary pours Bogart's gin overboard in this 1951 film",
+        "response": "The African Queen",
+        "value": 1600
+      },
+      {
+        "clue": "Grace Kelly played the Quaker bride of Gary Cooper's marshal in this 1952 film",
+        "response": "High Noon",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "THE KING'S THINGS",
+    "clues": [
+      {
+        "clue": "Elvis bought this Memphis estate in 1957, when he was just 22",
+        "response": "Graceland",
+        "value": 400
+      },
+      {
+        "clue": "Carl Perkins wrote this 1956 hit warning folks not to step on his footwear",
+        "response": "Blue Suede Shoes",
+        "value": 800
+      },
+      {
+        "clue": "Elvis got his first guitar at a hardware store in this Mississippi hometown",
+        "response": "Tupelo",
+        "value": 1200
+      },
+      {
+        "clue": "Elvis served in the Army in this country, where he met Priscilla",
+        "response": "Germany (West Germany)",
+        "value": 1600
+      },
+      {
+        "clue": "Dressed in black leather, Elvis reclaimed his crown on this 1968 NBC broadcast",
+        "response": "the '68 Comeback Special",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "BROADWAY BABIES",
+    "clues": [
+      {
+        "clue": "Mary Martin flew across the stage as the boy who wouldn't grow up",
+        "response": "Peter Pan",
+        "value": 400
+      },
+      {
+        "clue": "Robert Preston played a con man selling boys' band uniforms in Iowa in this show",
+        "response": "The Music Man",
+        "value": 800
+      },
+      {
+        "clue": "Ethel Merman played sharpshooter Oakley in this Irving Berlin show",
+        "response": "Annie Get Your Gun",
+        "value": 1200
+      },
+      {
+        "clue": "Stage mother Rose pushes her daughters into vaudeville in this musical",
+        "response": "Gypsy",
+        "value": 1600
+      },
+      {
+        "clue": "A Scottish village appears once every 100 years in this Lerner and Loewe show",
+        "response": "Brigadoon",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "TUNING IN THE RADIO",
+    "clues": [
+      {
+        "clue": "This 'boy wonder' panicked radio listeners in 1938, then made 'Citizen Kane'",
+        "response": "Orson Welles",
+        "value": 400
+      },
+      {
+        "clue": "Candice, the star of TV's 'Murphy Brown,' is the daughter of this radio ventriloquist",
+        "response": "Edgar Bergen",
+        "value": 800
+      },
+      {
+        "clue": "Famously stingy Jack Benny forever claimed to be this age",
+        "response": "39",
+        "value": 1200
+      },
+      {
+        "clue": "Eve Arden taught English at Madison High on radio and then TV in this sitcom",
+        "response": "Our Miss Brooks",
+        "value": 1600
+      },
+      {
+        "clue": "Kate Smith introduced this Irving Berlin anthem on her radio show in 1938",
+        "response": "God Bless America",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "WHEN YOU WISH UPON A FILM",
+    "clues": [
+      {
+        "clue": "'Magic mirror on the wall' begins the wicked queen's question in this 1937 film",
+        "response": "Snow White",
+        "value": 400
+      },
+      {
+        "clue": "Cleo the goldfish and Figaro the kitten live with Geppetto in this 1940 film",
+        "response": "Pinocchio",
+        "value": 800
+      },
+      {
+        "clue": "In this 1941 Disney film, the little elephant's real name is Jumbo Jr.",
+        "response": "Dumbo",
+        "value": 1200
+      },
+      {
+        "clue": "Siamese cats Si and Am stir up trouble in this 1955 Disney film",
+        "response": "Lady and the Tramp",
+        "value": 1600
+      },
+      {
+        "clue": "Hippos in tutus dance to 'Dance of the Hours' in this 1940 Disney film",
+        "response": "Fantasia",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "GRAND OLE OPRY-TUNITIES",
+    "clues": [
+      {
+        "clue": "Born in a one-room cabin in the Smokies, she sang of her 'Coat of Many Colors'",
+        "response": "Dolly Parton",
+        "value": 400
+      },
+      {
+        "clue": "Tammy Wynette urged wives to stay loyal in this 1968 country hit",
+        "response": "Stand by Your Man",
+        "value": 800
+      },
+      {
+        "clue": "'Trailer for sale or rent' opens this singer's 1965 hit 'King of the Road'",
+        "response": "Roger Miller",
+        "value": 1200
+      },
+      {
+        "clue": "This Arkansas guitarist rode alongside John Wayne in 1969's 'True Grit'",
+        "response": "Glen Campbell",
+        "value": 1600
+      },
+      {
+        "clue": "Minnie Pearl's straw hat always dangled one of these from its brim",
+        "response": "a price tag",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "SCRUBS AND SUITS",
+    "clues": [
+      {
+        "clue": "Raymond Burr's defense attorney almost never lost a case",
+        "response": "Perry Mason",
+        "value": 400
+      },
+      {
+        "clue": "Andy Griffith's folksy Atlanta lawyer wore seersucker suits on this show",
+        "response": "Matlock",
+        "value": 800
+      },
+      {
+        "clue": "Robert Young made house calls as this kindly TV doctor",
+        "response": "Marcus Welby",
+        "value": 1200
+      },
+      {
+        "clue": "Jack Klugman's medical examiner solved murders on this show",
+        "response": "Quincy, M.E.",
+        "value": 1600
+      },
+      {
+        "clue": "Richard Chamberlain played this young intern at Blair General Hospital",
+        "response": "Dr. Kildare",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "MATINEE MONSTERS",
+    "clues": [
+      {
+        "clue": "Fay Wray screamed in the giant hand of this 1933 movie ape",
+        "response": "King Kong",
+        "value": 400
+      },
+      {
+        "clue": "Bela Lugosi played this Transylvanian count in 1931",
+        "response": "Dracula",
+        "value": 800
+      },
+      {
+        "clue": "Boris Karloff played this flat-headed, bolt-necked creature in 1931",
+        "response": "Frankenstein's monster",
+        "value": 1200
+      },
+      {
+        "clue": "Lon Chaney Jr. howled at the full moon as this 1941 beast",
+        "response": "the Wolf Man",
+        "value": 1600
+      },
+      {
+        "clue": "A gilled beast rises out of an Amazon swamp in this 1954 3-D film",
+        "response": "Creature from the Black Lagoon",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "SING-ALONG STANDARDS",
+    "clues": [
+      {
+        "clue": "MGM almost cut this ballad from 'The Wizard of Oz' for slowing the film down",
+        "response": "Over the Rainbow",
+        "value": 400
+      },
+      {
+        "clue": "Louis Armstrong sang of trees of green and skies of blue in this hit",
+        "response": "What a Wonderful World",
+        "value": 800
+      },
+      {
+        "clue": "Dooley Wilson's Sam plays it again at Rick's in 'Casablanca'",
+        "response": "As Time Goes By",
+        "value": 1200
+      },
+      {
+        "clue": "This 1966 Frank Sinatra No. 1 ends with his scatted 'doo-be-doo-be-doo'",
+        "response": "Strangers in the Night",
+        "value": 1600
+      },
+      {
+        "clue": "Patsy Cline's 1961 hit with this one-word title was written by a young Willie Nelson",
+        "response": "Crazy",
+        "value": 2000
+      }
+    ]
+  }
+]

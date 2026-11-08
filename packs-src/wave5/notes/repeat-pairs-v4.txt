@@ -1,0 +1,800 @@
+e1-v4-nature.json [TWEET TALK] the owl
+  NEW: Wise old symbol of the night, this bird can turn its head about 270 degrees
+  OLD (Fresh jeopardy / WINGING IT): This night hunter can't move its eyes in their sockets, so it swivels its head about 270 degrees
+  shared: 270, degrees
+
+e1-v4-nature.json [TWEET TALK] the owl
+  NEW: Wise old symbol of the night, this bird can turn its head about 270 degrees
+  OLD (Easy jeopardy / LISTEN TO THE ANIMALS): This night bird hoots, and its wide eyes make it a symbol of wisdom
+  shared: symbol
+
+e1-v4-nature.json [TWEET TALK] the penguin
+  NEW: Emperor dads of this bird warm the egg on their feet all through Antarctic winter
+  OLD (Fresh jeopardy / WINGING IT): This tuxedoed Antarctic bird can't fly, but it 'flies' underwater on flipper-like wings
+  shared: antarctic
+
+e1-v4-nature.json [TWEET TALK] the penguin
+  NEW: Emperor dads of this bird warm the egg on their feet all through Antarctic winter
+  OLD (Fresh jeopardy / FLIGHT RISKS): Tuxedo-clad and at home on Antarctic ice, this bird traded the sky for 'flying' underwater
+  shared: antarctic
+
+e1-v4-nature.json [TWEET TALK] flamingos
+  NEW: These leggy pink birds get their color from the shrimp and algae they eat
+  OLD (Fresh jeopardy / CREATURE DISCOMFORTS): Gray at birth, this wading bird turns pink from pigments in the brine shrimp and algae it eats
+  shared: pink, shrimp, algae
+
+e1-v4-nature.json [TWEET TALK] flamingos
+  NEW: These leggy pink birds get their color from the shrimp and algae they eat
+  OLD (Fresh jeopardy / ANIMAL KINGDOM 101): A group of these pink waders is called a flamboyance, fitting for such colorful birds
+  shared: pink, birds
+
+e1-v4-nature.json [BUG'S EYE VIEW] the ladybug (ladybird)
+  NEW: Gardeners love this red, spotted beetle because it gobbles up aphids
+  OLD (Fresh jeopardy / SMALL TALK): Gardeners roll out the welcome mat for this spotted red beetle, a voracious aphid eater
+  shared: gardeners, spotted, beetle
+
+e1-v4-nature.json [BUG'S EYE VIEW] the monarch
+  NEW: Its caterpillars feed only on milkweed, which makes this butterfly taste bad to birds
+  OLD (Easy jeopardy / WILD AMERICA): This orange-and-black butterfly journeys thousands of miles to winter in Mexico
+  shared: butterfly
+
+e1-v4-nature.json [BUG'S EYE VIEW] the monarch
+  NEW: Its caterpillars feed only on milkweed, which makes this butterfly taste bad to birds
+  OLD (Easy double / FLOAT LIKE A BUTTERFLY): This 'regal' orange-and-black butterfly flies up to 3,000 miles to winter in Mexico
+  shared: butterfly
+
+e1-v4-nature.json [BUG'S EYE VIEW] cicadas
+  NEW: Some kinds of these buzzing insects come up out of the ground only every 17 years
+  OLD (Fresh jeopardy / SMALL TALK): Red-eyed broods of these droning insects spend 17 years underground, then emerge by the billions
+  shared: insects
+
+e1-v4-nature.json [BACKYARD CRITTERS] chipmunks
+  NEW: Alvin, Simon and Theodore are a singing trio of these striped critters
+  OLD (Fresh jeopardy / HITS & GIGGLES): Ross Bagdasarian sped up vocal tapes to create this rodent trio with a 1958 Christmas No. 1
+  shared: trio
+
+e1-v4-nature.json [MOONWALKERS] Neil Armstrong
+  NEW: Ohio-born, this Apollo 11 commander was the first person to step onto the Moon
+  OLD (Fresh jeopardy / FIRST THINGS FIRST): This Apollo 11 commander took 'one small step' onto the lunar surface in July 1969
+  shared: apollo, commander, step, onto
+
+e1-v4-nature.json [MOONWALKERS] Neil Armstrong
+  NEW: Ohio-born, this Apollo 11 commander was the first person to step onto the Moon
+  OLD (Fresh jeopardy / MOON SHOTS): 'That's one small step for man' were this astronaut's first words on the lunar surface in 1969
+  shared: step
+
+e1-v4-nature.json [MOONWALKERS] Neil Armstrong
+  NEW: Ohio-born, this Apollo 11 commander was the first person to step onto the Moon
+  OLD (Fresh jeopardy / THE RABBIT-EAR YEARS): An estimated 600 million TV viewers watched this astronaut take one small step in July 1969
+  shared: step
+
+e1-v4-nature.json [MOONWALKERS] Neil Armstrong
+  NEW: Ohio-born, this Apollo 11 commander was the first person to step onto the Moon
+  OLD (Fresh double / WHO SAID IT?): Stepping onto the lunar surface in 1969, he called it 'one small step for man'
+  shared: onto, step
+
+e1-v4-nature.json [MOONWALKERS] Neil Armstrong
+  NEW: Ohio-born, this Apollo 11 commander was the first person to step onto the Moon
+  OLD (Easy jeopardy / AMERICA'S ASTRONAUTS): He took 'one small step' and became the first person on the Moon in 1969
+  shared: step, person
+
+e1-v4-nature.json [MOONWALKERS] Neil Armstrong
+  NEW: Ohio-born, this Apollo 11 commander was the first person to step onto the Moon
+  OLD (Easy double / ONE GIANT LEAP): He climbed down the Eagle's ladder in July 1969 and took 'one small step' onto the Moon
+  shared: step, onto
+
+e1-v4-nature.json [MOONWALKERS] Neil Armstrong
+  NEW: Ohio-born, this Apollo 11 commander was the first person to step onto the Moon
+  OLD (Easy final / THE EAGLE HAS LANDED): In July 1969 this astronaut climbed down the Eagle's ladder and took 'one small step' onto the Moon.
+  shared: step, onto
+
+e1-v4-nature.json [MOONWALKERS] Buzz Aldrin
+  NEW: Edwin, the second man on the Moon, later made his nickname his legal first name
+  OLD (Easy jeopardy / AMERICA'S ASTRONAUTS): He followed Armstrong down the ladder to become the second man on the Moon
+  shared: second
+
+e1-v4-nature.json [RING, RING!] Alexander Graham Bell
+  NEW: In 1876 he made the first phone call, summoning his assistant Mr. Watson
+  OLD (Fresh jeopardy / MOTHER OF INVENTION): 'Mr. Watson, come here': this inventor patented the telephone in March 1876
+  shared: watson, 1876
+
+e1-v4-nature.json [RING, RING!] Alexander Graham Bell
+  NEW: In 1876 he made the first phone call, summoning his assistant Mr. Watson
+  OLD (Fresh jeopardy / PATENTLY BRILLIANT): This Scottish-born inventor's first phone call summoned his assistant: 'Mr. Watson, come here'
+  shared: phone, assistant, watson
+
+e1-v4-nature.json [RING, RING!] Alexander Graham Bell
+  NEW: In 1876 he made the first phone call, summoning his assistant Mr. Watson
+  OLD (Fresh double / PATENT PENDING): In 1876 this teacher of the deaf beat Elisha Gray to the patent office with his talking telegraph
+  shared: 1876
+
+e1-v4-nature.json [SAY 'AHH'] polio
+  NEW: The 'iron lung' helped many patients of this disease breathe in the 1950s
+  OLD (Fresh double / GREATEST HEALS): A massive 1954 field trial tested Jonas Salk's vaccine against this paralyzing disease
+  shared: disease
+
+e1-v4-nature.json [SAY 'AHH'] polio
+  NEW: The 'iron lung' helped many patients of this disease breathe in the 1950s
+  OLD (Fresh double / CONQUERED CONTAGIONS): Jonas Salk's 1950s vaccine turned the tide against this paralyzing disease once feared every summer
+  shared: 1950s, disease
+
+e1-v4-nature.json [BORN TO SPARKLE] diamonds
+  NEW: The famous Hope and Koh-i-Noor are both this April birthstone
+  OLD (Fresh jeopardy / CARAT & STICK): April's birthstone, it's the hardest natural substance known
+  shared: april, birthstone
+
+e1-v4-nature.json [GIDDY-UP] hands
+  NEW: Horses are measured in these units, each one four inches
+  OLD (Fresh jeopardy / RULE OF THUMB): A horse's height is measured from the ground to the withers in these four-inch units
+  shared: measured, units
+
+e1-v4-nature.json [GIDDY-UP] hands
+  NEW: Horses are measured in these units, each one four inches
+  OLD (Fresh double / GOING TO GREAT LENGTHS): Horses are measured in this unit of four inches, about the width of a clenched fist
+  shared: horses, measured, inches
+
+e1-v4-nature.json [SUM FUN] 13 (thirteen)
+  NEW: Bakers once tossed in an extra roll, so a baker's dozen is this many
+  OLD (Fresh jeopardy / COUNT ON IT): Order a baker's dozen of bagels and you'll walk out with this many
+  shared: baker, dozen
+
+e1-v4-nature.json [SANDY SHORES] a hermit crab
+  NEW: Lacking a hard shell of its own, this beach critter moves into empty snail shells
+  OLD (Fresh jeopardy / SHELL, YEAH!): This little crustacean never grows its own armor, moving into empty snail shells as it grows
+  shared: empty, snail, shells
+
+e1-v4-nature.json [GRANDPA'S GADGETS] the Polaroid camera
+  NEW: Its pictures developed in your hand within minutes, thanks to inventor Edwin Land
+  OLD (Fresh jeopardy / HANDHELD HISTORY): Edwin Land's company wowed 1948 shoppers with a camera that developed photos in about a minute
+  shared: edwin, developed
+
+e1-v4-nature.json [GRANDPA'S GADGETS] the Polaroid camera
+  NEW: Its pictures developed in your hand within minutes, thanks to inventor Edwin Land
+  OLD (Easy double / PLUG IT IN): Edwin Land's instant-camera company let families watch snapshots develop in a minute
+  shared: edwin
+
+e1-v4-nature.json [GRANDPA'S GADGETS] the Polaroid camera
+  NEW: Its pictures developed in your hand within minutes, thanks to inventor Edwin Land
+  OLD (Easy double / THE FAMILY ALBUM): The photo slid right out and developed in your hand with this instant camera brand
+  shared: developed
+
+e1-v4-nature.json [GRANDPA'S GADGETS] 8-track tapes (eight-track)
+  NEW: Cars of the '70s played these chunky looping cartridges, known for clicking mid-tune
+  OLD (Fresh double / BE KIND, REWIND): Learjet creator Bill Lear developed this looping tape cartridge, a staple of 1970s car stereos
+  shared: looping
+
+e1-v4-nature.json [GRANDPA'S GADGETS] 8-track tapes (eight-track)
+  NEW: Cars of the '70s played these chunky looping cartridges, known for clicking mid-tune
+  OLD (Easy double / PLUG IT IN): Popular in 1970s cars, this chunky tape cartridge was named for its number of sound channels
+  shared: cars, chunky
+
+e2-v4-nature.json [THE CAT'S PAJAMAS] a purr
+  NEW: Content cats make this rumbling sound, both breathing in and breathing out
+  OLD (Easy jeopardy / HERE, KITTY KITTY): A contented cat makes this soft rumbling sound in your lap
+  shared: rumbling, sound
+
+e2-v4-nature.json [THE CAT'S PAJAMAS] the tabby
+  NEW: Many cats with this striped coat wear an 'M' marking on the forehead
+  OLD (Easy jeopardy / HERE, KITTY KITTY): A striped or swirled house cat is called this, often with an 'M' on its forehead
+  shared: striped, forehead
+
+e2-v4-nature.json [THE CAT'S PAJAMAS] the Maine coon
+  NEW: A big, shaggy breed, this is the official state cat of a New England state
+  OLD (Fresh jeopardy / STATE OF THE PLATE): This New England state made the whoopie pie its official treat and blueberry pie its dessert
+  shared: official
+
+e2-v4-nature.json [THE CAT'S PAJAMAS] the Manx
+  NEW: Naturally tailless, this cat breed comes from an island in the Irish Sea
+  OLD (Fresh jeopardy / THE CAT'S MEOW): Folklore blames Noah's slamming Ark door for the missing tail of this breed from an Irish Sea island
+  shared: breed, irish
+
+e2-v4-nature.json [THE CAT'S PAJAMAS] calico
+  NEW: Nearly all cats with this patchy three-color coat are female
+  OLD (Easy double / THE PET PARADE): Nearly always female, this orange, black and white patched cat is named for a cotton cloth
+  shared: female
+
+e2-v4-nature.json [EARTH IN MOTION] Mount Vesuvius (Vesuvius)
+  NEW: Pompeii's plaster casts preserve victims of this volcano's eruption in A.D. 79
+  OLD (Fresh double / LAVA STORY): Pliny the Younger watched this volcano's 79 A.D. eruption, which entombed Pompeii and Herculaneum
+  shared: volcano, eruption, pompeii
+
+e2-v4-nature.json [EARTH IN MOTION] the San Andreas Fault
+  NEW: California's most famous crack, it marks where two plates grind past each other
+  OLD (Fresh double / QUAKE UP CALL): The 1906 San Francisco quake tore along this fault where the Pacific and North American plates grind
+  shared: plates, grind
+
+e2-v4-nature.json [EARTH IN MOTION] the Richter scale
+  NEW: In 1935 a Caltech seismologist gave his name to this earthquake measure
+  OLD (Fresh double / RATE EXPECTATIONS): His 1935 Caltech magnitude scale gave every earthquake headline a number to shout
+  shared: 1935, caltech, earthquake
+
+e2-v4-nature.json [EARTH IN MOTION] the Richter scale
+  NEW: In 1935 a Caltech seismologist gave his name to this earthquake measure
+  OLD (Fresh double / QUAKE UP CALL): A Caltech seismologist devised this logarithmic scale in 1935 to rate the size of earthquakes
+  shared: caltech, seismologist, 1935
+
+e2-v4-nature.json [EARTH IN MOTION] Old Faithful
+  NEW: Yellowstone's most famous geyser, it erupts roughly every hour and a half
+  OLD (Easy jeopardy / AMERICA THE BEAUTIFUL): Yellowstone's star geyser earned this trusty name by erupting right on schedule
+  shared: yellowstone, geyser
+
+e2-v4-nature.json [EARTH IN MOTION] Krakatoa
+  NEW: Ash from its 1883 eruption gave sunsets around the world a fiery red glow
+  OLD (Fresh jeopardy / MAGMA CUM LAUDE): Hollywood put it 'East of Java', but this island volcano that blew apart in 1883 actually lies west
+  shared: 1883
+
+e2-v4-nature.json [EARTH IN MOTION] Krakatoa
+  NEW: Ash from its 1883 eruption gave sunsets around the world a fiery red glow
+  OLD (Fresh double / LAVA STORY): Heard 3,000 miles away, this Indonesian volcano's 1883 blast left a 'child' now rising in its place
+  shared: 1883
+
+e2-v4-nature.json [SAFARI SNAPSHOTS] zebras
+  NEW: No two of these striped African animals have exactly the same pattern
+  OLD (Easy jeopardy / A DAY AT THE ZOO): No two of these striped African horse relatives have the same pattern
+  shared: striped, same, pattern
+
+e2-v4-nature.json [SAFARI SNAPSHOTS] the cheetah
+  NEW: The fastest land animal, this spotted cat can sprint more than 60 mph
+  OLD (Fresh jeopardy / FELINE GOOD): It can hit 60 mph in about three seconds, but this spotted sprinter chirps rather than roars
+  shared: mph, spotted
+
+e2-v4-nature.json [ON THE RISE] the Ferris wheel
+  NEW: The first of these rides, at Chicago's 1893 fair, had 36 cars that each held 60
+  OLD (Fresh double / IT BEARS MY NAME): Engineer George built this rotating ride for Chicago's 1893 fair to out-dazzle the Eiffel Tower
+  shared: chicago, 1893, fair
+
+e2-v4-nature.json [ON THE RISE] the Ferris wheel
+  NEW: The first of these rides, at Chicago's 1893 fair, had 36 cars that each held 60
+  OLD (Easy jeopardy / AT THE COUNTY FAIR): An engineer named George debuted this giant ride at Chicago's 1893 World's Fair
+  shared: chicago, 1893, fair
+
+e2-v4-nature.json [ON THE RISE] the Ferris wheel
+  NEW: The first of these rides, at Chicago's 1893 fair, had 36 cars that each held 60
+  OLD (Easy double / FUN AT THE FAIR): First turning at Chicago's 1893 World's Fair, this giant ride still rules the county fair
+  shared: chicago, 1893, fair
+
+e2-v4-nature.json [ON THE RISE] a hot-air balloon
+  NEW: In 1783 the Montgolfiers sent a sheep, a duck and a rooster aloft in one of these
+  OLD (Campaign / MEANWHILE, 1785): The Montgolfier brothers sent the first human passengers aloft in one of these in 1783
+  shared: sent, aloft, 1783
+
+e2-v4-nature.json [ON THE RISE] the elevator
+  NEW: Elisha Otis made this safe with a brake that caught it if the cable snapped
+  OLD (Fresh jeopardy / APPLIANCE SCIENCE): Elisha Otis wowed an 1854 New York crowd by cutting the rope on his safety version of this machine
+  shared: elisha, otis
+
+e2-v4-nature.json [ON THE RISE] the elevator
+  NEW: Elisha Otis made this safe with a brake that caught it if the cable snapped
+  OLD (Fresh double / SKYSCRAPER SECRETS): In 1854 Elisha Otis had the rope cut on his hoisted platform to prove a safety brake for this
+  shared: elisha, otis, brake
+
+e2-v4-nature.json [ON THE RISE] North Carolina
+  NEW: 'First in Flight' boast the license plates of this state, home of Kitty Hawk
+  OLD (Easy jeopardy / THE PRIDE OF THE STATE): The Wright brothers first flew on the dunes near Kitty Hawk in this state
+  shared: kitty, hawk
+
+e2-v4-nature.json [LIFTOFF!] Sputnik
+  NEW: Beeping as it circled Earth, this Soviet satellite started the space race in 1957
+  OLD (Fresh jeopardy / SPACE RACE): In 1957 the USSR kicked off the space age with this beach-ball-sized beeping satellite
+  shared: 1957, beeping, satellite
+
+e2-v4-nature.json [LIFTOFF!] Sputnik
+  NEW: Beeping as it circled Earth, this Soviet satellite started the space race in 1957
+  OLD (Fresh double / GROUND CONTROL TO MAJOR TECH): The beeps of this beach-ball-sized Soviet satellite kicked off the Space Race in October 1957
+  shared: soviet, satellite, race, 1957
+
+e2-v4-nature.json [LIFTOFF!] Sputnik
+  NEW: Beeping as it circled Earth, this Soviet satellite started the space race in 1957
+  OLD (Fresh double / IRON CURTAIN CALL): Its name is Russian for 'fellow traveler,' and its 1957 launch set off the space race
+  shared: 1957, race
+
+e2-v4-nature.json [LIFTOFF!] Sputnik
+  NEW: Beeping as it circled Earth, this Soviet satellite started the space race in 1957
+  OLD (Easy jeopardy / RACE FOR THE MOON): The beep-beep of this Soviet satellite in 1957 told America the race was on
+  shared: soviet, satellite, 1957, race
+
+e2-v4-nature.json [LIFTOFF!] Sputnik
+  NEW: Beeping as it circled Earth, this Soviet satellite started the space race in 1957
+  OLD (Easy double / DUCK & COVER): The steady beep of this 1957 Soviet satellite startled Americans into beefing up school science
+  shared: 1957, soviet, satellite
+
+e2-v4-nature.json [LIFTOFF!] Laika
+  NEW: Her name means 'barker' in Russian, and she rode Sputnik 2 in 1957
+  OLD (Fresh jeopardy / PUP QUIZ): A Moscow stray, she rode Sputnik 2 into orbit in 1957 as the first animal to circle the Earth
+  shared: rode, sputnik, 1957
+
+e2-v4-nature.json [LIFTOFF!] Yuri Gagarin
+  NEW: His historic Vostok 1 flight of April 12, 1961, lasted only 108 minutes
+  OLD (Fresh jeopardy / FIRST THINGS FIRST): Aboard Vostok 1 in 1961, he became the first human to orbit the Earth
+  shared: vostok, 1961
+
+e2-v4-nature.json [LIFTOFF!] Yuri Gagarin
+  NEW: His historic Vostok 1 flight of April 12, 1961, lasted only 108 minutes
+  OLD (Fresh jeopardy / SPACE RACE): In 1961 this cosmonaut became the first human in space, orbiting Earth once aboard Vostok 1
+  shared: 1961, vostok
+
+e2-v4-nature.json [LIFTOFF!] Yuri Gagarin
+  NEW: His historic Vostok 1 flight of April 12, 1961, lasted only 108 minutes
+  OLD (Easy double / ONE GIANT LEAP): In 1961 this Soviet cosmonaut beat every American into space with a single orbit
+  shared: 1961
+
+e2-v4-nature.json [LIFTOFF!] John Glenn
+  NEW: This Ohio senator returned to space in 1998, 36 years after he first orbited Earth
+  OLD (Easy jeopardy / RACE FOR THE MOON): In 1962 this Marine and future senator became the first American to orbit Earth
+  shared: senator
+
+e2-v4-nature.json [LIFTOFF!] John Glenn
+  NEW: This Ohio senator returned to space in 1998, 36 years after he first orbited Earth
+  OLD (Easy jeopardy / AMERICA'S ASTRONAUTS): The first American to orbit Earth, he later spent 24 years as a senator from Ohio
+  shared: senator, ohio
+
+e2-v4-nature.json [LIFTOFF!] John Glenn
+  NEW: This Ohio senator returned to space in 1998, 36 years after he first orbited Earth
+  OLD (Easy double / ONE GIANT LEAP): In 1962 this Marine pilot and future senator became the first American to orbit the Earth
+  shared: senator
+
+e2-v4-nature.json [BODY OF SAYINGS] cold feet
+  NEW: Nervous brides and grooms are said to get these before the wedding
+  OLD (Fresh jeopardy / COSTS AN ARM & A LEG): Jittery grooms are said to get these 'cold' right before the wedding
+  shared: grooms, wedding
+
+e2-v4-nature.json [BODY OF SAYINGS] cold feet
+  NEW: Nervous brides and grooms are said to get these before the wedding
+  OLD (Easy jeopardy / IDIOMS FROM HEAD TO TOE): A nervous groom who wants to back out of the wedding has these chilly extremities
+  shared: nervous, wedding
+
+e2-v4-nature.json [BODY OF SAYINGS] elbow grease
+  NEW: Old-timers said a tough cleaning job needs plenty of this joint 'lubricant'
+  OLD (Fresh jeopardy / COSTS AN ARM & A LEG): Grandma's all-purpose cleaning product was 'grease' from this arm joint
+  shared: cleaning, joint
+
+e2-v4-nature.json [BODY OF SAYINGS] elbow grease
+  NEW: Old-timers said a tough cleaning job needs plenty of this joint 'lubricant'
+  OLD (Easy jeopardy / HOUSEHOLD HINTS): Old-timers say no cleaner beats this two-word 'ingredient,' meaning plain hard scrubbing
+  shared: timers
+
+e2-v4-nature.json [BODY OF SAYINGS] teeth
+  NEW: Escaping 'by the skin of your' these is a phrase from the Book of Job
+  OLD (Fresh jeopardy / COSTS AN ARM & A LEG): The Book of Job gave us the phrase for a narrow escape 'by the skin of' these
+  shared: job, phrase, skin
+
+e2-v4-nature.json [BODY OF SAYINGS] teeth
+  NEW: Escaping 'by the skin of your' these is a phrase from the Book of Job
+  OLD (Easy jeopardy / IDIOMS FROM HEAD TO TOE): A narrow escape happens 'by the skin of' these pearly whites
+  shared: skin
+
+e2-v4-nature.json [SKY WATCHERS] Orion
+  NEW: Bright stars Betelgeuse and Rigel both shine in this hunter constellation
+  OLD (Easy double / CONSTELLATION PRIZES): Three bright stars in a row form the 'belt' of this constellation named for a hunter
+  shared: bright, stars, constellation, hunter
+
+e2-v4-nature.json [SOMETHING FISHY] salmon
+  NEW: These fish swim upstream to spawn in the very river where they hatched
+  OLD (Fresh double / MIGRATION & MOVEMENT): These fish hatch in rivers, fatten at sea, then battle upstream to spawn where they were born
+  shared: upstream, spawn
+
+e2-v4-nature.json [FROM LITTLE SEEDS] the dandelion
+  NEW: Kids blow on this weed's puffy seed heads to make a wish
+  OLD (Fresh jeopardy / PETAL PUSHERS): Make a wish and blow: this lawn invader's fluffy white seed head scatters on the breeze
+  shared: wish, blow, seed
+
+ef-v4-nature.json [LONG TIME NO SEE] Halley's Comet
+  NEW: Stitched into the Bayeux Tapestry in 1066, it swings back past Earth about every 76 years
+  OLD (Easy double / ONCE IN A BLUE MOON): Halley's, which swings by Earth about every 76 years, is the most famous of these icy wanderers
+  shared: swings
+
+n1-v4-nature.json [HUMERUS FACTS] 206
+  NEW: Babies are born with around 300 bones, but most adults end up with this many
+  OLD (Fresh jeopardy / THE HUMAN SKELETON): An adult has this many bones, down from about 300 at birth as many fuse together
+  shared: bones, 300
+
+n1-v4-nature.json [HUMERUS FACTS] the clavicle
+  NEW: Latin for 'little key', it's the bone you probably call your collarbone
+  OLD (Fresh jeopardy / SKELETON CREW): Connecting the breastbone to the shoulder blade, its name comes from the Latin for 'little key'
+  shared: key
+
+n1-v4-nature.json [HUMERUS FACTS] the ulnar nerve
+  NEW: Bang your 'funny bone' and the zing really comes from jolting this, which runs past the elbow
+  OLD (Fresh double / DEEP ANATOMY): The 'funny bone' zing is really a whack to this structure named for the forearm bone it runs beside
+  shared: funny, bone, zing, really, runs
+
+n1-v4-nature.json [HUMERUS FACTS] the hyoid
+  NEW: Touching no other bone, this U-shaped bone in the throat anchors the tongue
+  OLD (Fresh jeopardy / SKELETON CREW): This U-shaped bone in the neck is the only human bone that doesn't touch another bone
+  shared: bone
+
+n1-v4-nature.json [BODY OF NAMES] an Adam's apple
+  NEW: Named for a bite of forbidden fruit, this bump in a man's throat is really thyroid cartilage
+  OLD (Easy jeopardy / FAIRY TALE PROP ROOM): Snow White falls into a deep sleep after one bite of this poisoned fruit
+  shared: bite, fruit
+
+n1-v4-nature.json [BODY OF NAMES] the Eustachian tubes
+  NEW: Yawning on a descending plane helps open these canals linking the middle ear to the throat
+  OLD (Fresh double / DEEP ANATOMY): Named for a 16th-century Italian anatomist, it links middle ear to throat and pops in flight
+  shared: middle, ear, throat
+
+n1-v4-nature.json [PLANET HOPPING] Earth
+  NEW: More than 1,000 of this planet could fit inside giant Jupiter
+  OLD (Fresh double / FUTURE ON FILM): Remembering 'Klaatu barada nikto' keeps the robot Gort from vaporizing the planet in this 1951 saucer classic
+  shared: planet
+
+n1-v4-nature.json [PLANET HOPPING] Earth
+  NEW: More than 1,000 of this planet could fit inside giant Jupiter
+  OLD (e2-v3-arts.json / SNAPSHOTS IN TIME): Apollo 8's crew snapped our blue planet rising over the Moon in this 1968 photo
+  shared: planet
+
+n1-v4-nature.json [PLANET HOPPING] Mars
+  NEW: Olympus Mons, about two and a half times as tall as Everest, towers over this planet
+  OLD (Fresh jeopardy / PLANET PARADE): Nicknamed the Red Planet, it hosts Olympus Mons, a volcano over twice the height of Everest
+  shared: planet, olympus, mons, everest
+
+n1-v4-nature.json [PLANET HOPPING] Mars
+  NEW: Olympus Mons, about two and a half times as tall as Everest, towers over this planet
+  OLD (Fresh jeopardy / SPACED OUT): Plain old rust, iron oxide, gives this fourth planet its famous red color
+  shared: planet
+
+n1-v4-nature.json [PLANET HOPPING] Mars
+  NEW: Olympus Mons, about two and a half times as tall as Everest, towers over this planet
+  OLD (Fresh jeopardy / ROMAN AROUND): The red planet and the month of March are both named for this Roman god of war
+  shared: planet
+
+n1-v4-nature.json [PLANET HOPPING] Mars
+  NEW: Olympus Mons, about two and a half times as tall as Everest, towers over this planet
+  OLD (Fresh jeopardy / OVER THE MOONS): Phobos and Deimos, named for sons of the war god Ares, circle this planet
+  shared: planet
+
+n1-v4-nature.json [PLANET HOPPING] Mars
+  NEW: Olympus Mons, about two and a half times as tall as Everest, towers over this planet
+  OLD (Easy final / OUT OF THIS WORLD): Rusty iron dust in its soil gives this neighboring planet the red glow that got it named for a god of war.
+  shared: planet
+
+n1-v4-nature.json [PLANET HOPPING] Venus
+  NEW: This planet takes about 243 Earth days to spin once on its axis, longer than its whole year
+  OLD (Fresh jeopardy / PLANET PARADE): On this hottest planet, which spins backwards, the Sun rises in the west
+  shared: planet
+
+n1-v4-nature.json [PLANET HOPPING] Venus
+  NEW: This planet takes about 243 Earth days to spin once on its axis, longer than its whole year
+  OLD (Fresh jeopardy / SPACED OUT): A runaway greenhouse effect makes this planet, named for a love goddess, the hottest of all
+  shared: planet
+
+n1-v4-nature.json [PLANET HOPPING] Uranus
+  NEW: Tipped about 98 degrees, this ice giant essentially rolls around the Sun on its side
+  OLD (Fresh jeopardy / SPACED OUT): Spotted by William Herschel in 1781, this planet spins tipped over on its side
+  shared: tipped, side
+
+n1-v4-nature.json [PLANET HOPPING] Neptune
+  NEW: Math predicted where this planet would be before Berlin astronomers found it there in 1846
+  OLD (Fresh jeopardy / PLANET PARADE): Voyager 2 spied the Great Dark Spot, a storm on this windy blue planet farthest from the Sun
+  shared: planet
+
+n1-v4-nature.json [PLANET HOPPING] Neptune
+  NEW: Math predicted where this planet would be before Berlin astronomers found it there in 1846
+  OLD (Fresh jeopardy / OVER THE MOONS): Math predicted this planet before anyone saw it, and its big moon Triton orbits it backward
+  shared: math, predicted, planet
+
+n1-v4-nature.json [ELEMENTS OF PLACE] californium
+  NEW: Element 98 was named for the home state of the Berkeley lab where it was created
+  OLD (Fresh final / THE PERIODIC TABLE): Element 98, first made in 1950 in a university cyclotron, is named for the state where it was created
+  shared: element, created
+
+n1-v4-nature.json [HOUSE CALL HISTORY] the stethoscope
+  NEW: Its name blends Greek words for 'chest' and 'to look at', though doctors use it to listen
+  OLD (Fresh double / SCIENCE NON-FICTION): Too shy to press his ear to a woman's chest in 1816, René Laennec rolled up paper and invented this
+  shared: chest
+
+n1-v4-nature.json [HOUSE CALL HISTORY] X-rays
+  NEW: Wilhelm Rontgen's early image made with these showed the bones of his wife's hand and her ring
+  OLD (Fresh jeopardy / EUREKA MOMENTS): Wilhelm Röntgen named this radiation for algebra's symbol for an unknown, winning the first Physics Nobel
+  shared: wilhelm
+
+n1-v4-nature.json [HOUSE CALL HISTORY] ether
+  NEW: In 1846 dentist William Morton put a Boston surgical patient under with this vapor
+  OLD (Fresh double / SCALPEL FIRSTS): In 1846 William Morton demonstrated painless surgery in Boston using this inhaled anesthetic
+  shared: 1846, william, morton, boston
+
+n1-v4-nature.json [BARK TO BASICS] the eucalyptus (gum tree)
+  NEW: Koalas eat almost nothing but the leaves of this Australian evergreen
+  OLD (Fresh double / TREES & THEIR SECRETS): This Australian genus, the koala's favorite food, releases flammable oils that intensify bushfires
+  shared: australian
+
+n1-v4-nature.json [SEA THE WORLD] tides
+  NEW: The Moon's pull drives these twice-daily rises and falls of the sea
+  OLD (Fresh jeopardy / MOONLIGHTING): The Moon's gravity is the main driver of these twice-a-day ocean rises and falls
+  shared: twice, rises, falls
+
+n1-v4-nature.json [SEA THE WORLD] the equator
+  NEW: Sailors dreaded the windless 'doldrums', a calm belt near this imaginary line
+  OLD (Easy double / THE PULL-DOWN MAP): Halfway between the poles, this imaginary circle rings the earth's middle
+  shared: imaginary
+
+n1-v4-nature.json [SEA THE WORLD] the Sargasso Sea
+  NEW: Columbus sailed through the floating weed of this Atlantic sea, the only sea with no coastline
+  OLD (Fresh jeopardy / SEA WHAT I DID THERE): Bounded by currents rather than coastlines, this Atlantic sea is named for its floating seaweed
+  shared: floating
+
+n1-v4-nature.json [SEA THE WORLD] the Sargasso Sea
+  NEW: Columbus sailed through the floating weed of this Atlantic sea, the only sea with no coastline
+  OLD (Fresh double / OCEAN ECOSYSTEMS): Bounded by currents, not coasts, this North Atlantic sea is named for its floating seaweed
+  shared: floating
+
+n1-v4-nature.json [SEA THE WORLD] the Gulf Stream
+  NEW: The North Atlantic Drift, which helps keep northwest Europe mild, is an offshoot of this current
+  OLD (Fresh double / SOUNDING OFF): Postmaster Benjamin Franklin charted this warm current so mail ships could ride it toward England
+  shared: current
+
+n1-v4-nature.json [SEA THE WORLD] the Gulf Stream
+  NEW: The North Atlantic Drift, which helps keep northwest Europe mild, is an offshoot of this current
+  OLD (Fresh final / CURRENT AFFAIRS): After quizzing his whaling-captain cousin, Benjamin Franklin published one of the first charts of this warm Atlantic current
+  shared: current
+
+n1-v4-nature.json [SEA THE WORLD] the Pacific (South Pacific)
+  NEW: Old spacecraft are steered to crash near Point Nemo, the spot farthest from land, in this ocean
+  OLD (Easy jeopardy / OCEAN'S FIVE): Hawaii sits far out in the middle of this vast ocean
+  shared: ocean
+
+n1-v4-nature.json [SEA THE WORLD] the Pacific (South Pacific)
+  NEW: Old spacecraft are steered to crash near Point Nemo, the spot farthest from land, in this ocean
+  OLD (Campaign / 1805: BEYOND THE BATTLEFIELD): In November 1805 Lewis and Clark reached this ocean, the goal of their outbound journey
+  shared: ocean
+
+n1-v4-nature.json [BUILT BY BEASTS] beavers
+  NEW: These rodents' dams can flood whole valleys, and one in Canada stretches about half a mile
+  OLD (Easy jeopardy / WILD AMERICA): North America's largest rodent, it gnaws down trees to build its dams and lodges
+  shared: dams
+
+n1-v4-nature.json [BUILT BY BEASTS] beavers
+  NEW: These rodents' dams can flood whole valleys, and one in Canada stretches about half a mile
+  OLD (Easy double / TRUE NORTH): Canada's national animal, this flat-tailed dam builder swims on the nickel
+  shared: canada
+
+n1-v4-nature.json [BUILT BY BEASTS] blue
+  NEW: Male satin bowerbirds decorate their courtship bowers with objects of this color
+  OLD (e2-v3-arts.json / OLD MASTERS, NEW FRIENDS): Thomas Gainsborough dressed this young sitter in a shimmering satin suit
+  shared: satin
+
+n1-v4-nature.json [STAR-STUDDED] Betelgeuse
+  NEW: This red supergiant marks Orion's shoulder and sounds like a 1988 Michael Keaton movie
+  OLD (Fresh jeopardy / STARRY, STARRY NIGHT): This red supergiant on Orion's shoulder shares its name, more or less, with a Tim Burton movie ghost
+  shared: supergiant, orion, shoulder, movie
+
+n1-v4-nature.json [STAR-STUDDED] Antares
+  NEW: Called the 'heart of the scorpion', this red supergiant's name means 'rival of Mars'
+  OLD (Fresh double / GODS IN DISGUISE): Ares blazes in this red supergiant of Scorpius whose name means 'rival of' the war god
+  shared: supergiant, rival
+
+n2-v4-nature.json [SUM BODY] Srinivasa Ramanujan (Ramanujan)
+  NEW: Chatting with G.H. Hardy, this Indian prodigy noted 1729 is the smallest sum of two cubes two ways
+  OLD (Fresh jeopardy / LIVES UNDER THE MICROSCOPE): A 1913 letter packed with theorems to G.H. Hardy carried this self-taught Indian mathematician to Cambridge
+  shared: hardy, indian
+
+n2-v4-nature.json [MINERAL RIGHTS] obsidian
+  NEW: Sharp enough for some surgeons' scalpels, this black volcanic glass forms when lava cools fast
+  OLD (Fresh double / IGNEOUS IS BLISS): Lava cooled too fast to form crystals becomes this black volcanic glass once flaked into razor blades
+  shared: lava, fast, volcanic, glass
+
+n2-v4-nature.json [MINERAL RIGHTS] corundum
+  NEW: Rubies and sapphires are both gem varieties of this aluminum oxide mineral
+  OLD (Fresh double / FACET THE FACTS): Ruby and sapphire are one mineral in two moods: this aluminum oxide that rates a 9 for hardness
+  shared: mineral, aluminum, oxide
+
+n2-v4-nature.json [PROBE-ABLE CAUSE] the Hubble Space Telescope (Hubble)
+  NEW: Its mirror was ground slightly wrong, so a 1993 shuttle crew gave this orbiting observatory corrective optics
+  OLD (Fresh jeopardy / SPACE RACE): Astronauts fitted this orbiting observatory with corrective optics in 1993 to fix its blurry vision
+  shared: orbiting, observatory, corrective, optics, 1993
+
+n2-v4-nature.json [PROBE-ABLE CAUSE] the Hubble Space Telescope (Hubble)
+  NEW: Its mirror was ground slightly wrong, so a 1993 shuttle crew gave this orbiting observatory corrective optics
+  OLD (Fresh double / EYES ON THE SKIES): This space telescope launched in 1990 with a flawed mirror that astronauts fixed in 1993
+  shared: mirror, 1993
+
+n2-v4-nature.json [PROBE-ABLE CAUSE] the Hubble Space Telescope (Hubble)
+  NEW: Its mirror was ground slightly wrong, so a 1993 shuttle crew gave this orbiting observatory corrective optics
+  OLD (Fresh double / GROUND CONTROL TO MAJOR TECH): Launched with a flawed mirror in 1990, this space telescope got corrective optics from astronauts in 1993
+  shared: mirror, corrective, optics, 1993
+
+n2-v4-nature.json [SCRUB IN] Joseph Lister (Lister)
+  NEW: Inspired by Pasteur, this British surgeon sprayed carbolic acid to keep wounds sterile
+  OLD (Fresh double / GERM OF AN IDEA): This British surgeon cut surgical deaths with carbolic-acid antisepsis, and a mouthwash borrows his name
+  shared: surgeon, carbolic, acid
+
+n2-v4-nature.json [SCRUB IN] Ignaz Semmelweis (Semmelweis)
+  NEW: Rejecting evidence that clashes with old beliefs is called the 'reflex' of this mocked Hungarian doctor
+  OLD (Fresh double / GERM OF AN IDEA): Mocked for urging doctors to wash up between autopsies and deliveries, this Hungarian died in an asylum
+  shared: mocked, hungarian
+
+n2-v4-nature.json [SCRUB IN] Ignaz Semmelweis (Semmelweis)
+  NEW: Rejecting evidence that clashes with old beliefs is called the 'reflex' of this mocked Hungarian doctor
+  OLD (Fresh double / MEDICAL TRAILBLAZERS): This Hungarian doctor cut deadly 'childbed fever' by making physicians wash their hands
+  shared: hungarian, doctor
+
+n2-v4-nature.json [SCRUB IN] Andreas Vesalius (Vesalius)
+  NEW: His 1543 anatomy atlas 'De humani corporis fabrica' corrected centuries of Galen's errors
+  OLD (Fresh double / GREATEST HEALS): In 1543 this Flemish anatomist corrected Galen with 'On the Fabric of the Human Body'
+  shared: 1543, corrected, galen
+
+n2-v4-nature.json [SENSE-ATIONAL ANIMALS] infrared (heat)
+  NEW: Rattlesnakes' facial pits let them 'see' warm prey by sensing this kind of radiation
+  OLD (Fresh double / ANIMAL ESP): Facial pits let rattlesnakes strike in the dark by detecting this heat radiation beyond red light
+  shared: facial, pits, rattlesnakes, radiation
+
+n2-v4-nature.json [LOGGED ON] Alan Turing
+  NEW: He cracked Enigma messages at Bletchley Park and proposed a test of machine intelligence
+  OLD (Fresh jeopardy / CTRL + ALT + DELIGHT): This Bletchley Park codebreaker's 1950 paper proposed the 'imitation game' behind his namesake test
+  shared: bletchley, proposed, test
+
+n2-v4-nature.json [LOGGED ON] Alan Turing
+  NEW: He cracked Enigma messages at Bletchley Park and proposed a test of machine intelligence
+  OLD (Fresh double / COMPUTING PIONEERS): This Bletchley Park codebreaker lends his name to a test of whether a machine can pass for human
+  shared: bletchley, test, machine
+
+n2-v4-nature.json [LOGGED ON] Tim Berners-Lee
+  NEW: Working at CERN, this Briton wrote the first web browser and server around 1990
+  OLD (Fresh double / ARPANET & CHILL): 'Vague but exciting,' his boss wrote on this Briton's 1989 CERN proposal for the World Wide Web
+  shared: briton, cern, web
+
+n2-v4-nature.json [LOGGED ON] Tim Berners-Lee
+  NEW: Working at CERN, this Briton wrote the first web browser and server around 1990
+  OLD (Fresh double / COMPUTING PIONEERS): At CERN in 1989 this Briton proposed a system of linked hypertext documents, the World Wide Web
+  shared: cern, briton, web
+
+n2-v4-nature.json [LOGGED ON] Ada Lovelace
+  NEW: Lord Byron's only legitimate child, she wrote what's often called the first computer program
+  OLD (Fresh double / BINARY STARS): Lord Byron's daughter, she's hailed as the first programmer for her Analytical Engine notes
+  shared: lord, byron
+
+n2-v4-nature.json [LOGGED ON] Charles Babbage
+  NEW: His never-finished Difference Engine No. 2 was finally built by London's Science Museum in 1991
+  OLD (Fresh double / COMPUTING PIONEERS): Ada Lovelace wrote what's often called the first computer program for this man's Analytical Engine
+  shared: engine
+
+n2-v4-nature.json [CHEMICAL ALIASES] carbon dioxide
+  NEW: 'Dry ice' is the frozen form of this gas, which skips the liquid stage as it warms
+  OLD (Fresh jeopardy / KITCHEN CHEMISTRY): Mix baking soda and vinegar and the fizz is this gas, the same one that makes soda bubbly
+  shared: gas
+
+n2-v4-nature.json [CHEMICAL ALIASES] carbon dioxide
+  NEW: 'Dry ice' is the frozen form of this gas, which skips the liquid stage as it warms
+  OLD (Fresh jeopardy / FIZZY BUSINESS): Yeast makes bread rise by releasing this gas, the same one that puts the fizz in soda
+  shared: gas
+
+n2-v4-nature.json [CHEMICAL ALIASES] carbon dioxide
+  NEW: 'Dry ice' is the frozen form of this gas, which skips the liquid stage as it warms
+  OLD (Fresh jeopardy / DINNER TABLE DEMOS): The baking soda and vinegar 'volcano' erupts with this gas, the same one that fizzes your soda
+  shared: gas
+
+n2-v4-nature.json [GONE FOR GOOD] the dodo
+  NEW: Dutch sailors on Mauritius watched this flightless bird vanish within a century of first seeing it
+  OLD (Fresh jeopardy / BEASTS OF NATION): Extinct since the 1600s, this flightless bird still props up the coat of arms of Mauritius
+  shared: flightless, mauritius
+
+n2-v4-nature.json [GONE FOR GOOD] passenger pigeons
+  NEW: Billions of these birds once darkened North American skies in flocks that took hours to pass
+  OLD (Fresh double / THE LATE GREATS): Its flocks once darkened U.S. skies for days, but this bird went from billions to zero by 1914
+  shared: flocks, darkened, skies, billions
+
+n2-v4-nature.json [GONE FOR GOOD] woolly mammoths (mammoths)
+  NEW: Shaggy elephant kin on Russia's Wrangel Island were still alive when Egypt's pyramids went up
+  OLD (Fresh double / PALEO DIET): Frozen whole, this shaggy, curve-tusked Ice Age giant keeps thawing out of Siberian permafrost
+  shared: shaggy
+
+n2-v4-nature.json [GONE FOR GOOD] Steller's sea cow
+  NEW: Hunted out within 27 years of its 1741 discovery, this giant kelp-eater was a manatee relative
+  OLD (Fresh double / THE LATE GREATS): Named for the naturalist on Bering's 1741 voyage, this giant manatee kin was gone by 1768
+  shared: 1741, manatee
+
+n2-v4-nature.json [SKY WRITING] noctilucent clouds
+  NEW: Night-shining and electric blue, these are the highest cloud formations in Earth's atmosphere
+  OLD (Fresh double / CLOUD ATLAS): Earth's highest clouds, glowing electric blue in summer twilight, bear this name meaning 'night-shining'
+  shared: highest, electric, shining
+
+n2-v4-nature.json [STEEL AND STONE] the Golden Gate Bridge
+  NEW: Its signature paint shade is officially called International Orange
+  OLD (Fresh jeopardy / POSTCARD PERFECT): 'International Orange' paint helps this San Francisco span, opened in 1937, stand out in the fog
+  shared: international, paint
+
+n2-v4-nature.json [STEEL AND STONE] the Golden Gate Bridge
+  NEW: Its signature paint shade is officially called International Orange
+  OLD (Fresh jeopardy / WATER UNDER THE BRIDGE): Painted 'International Orange', this span crosses the strait at the mouth of San Francisco Bay
+  shared: international
+
+n2-v4-nature.json [STEEL AND STONE] the Golden Gate Bridge
+  NEW: Its signature paint shade is officially called International Orange
+  OLD (Fresh double / BRIDGE THE GAP): Its 'international orange' paint helps ships spot it in fog at the mouth of San Francisco Bay
+  shared: international, paint
+
+n2-v4-nature.json [STEEL AND STONE] the Golden Gate Bridge
+  NEW: Its signature paint shade is officially called International Orange
+  OLD (Easy jeopardy / COAST-TO-COAST LANDMARKS): Painted 'international orange,' this span crosses the mouth of San Francisco Bay
+  shared: international
+
+n2-v4-nature.json [STEEL AND STONE] the Golden Gate Bridge
+  NEW: Its signature paint shade is officially called International Orange
+  OLD (Easy jeopardy / WISH YOU WERE HERE): Painted 'international orange,' it has spanned San Francisco Bay's mouth since 1937
+  shared: international
+
+n2-v4-nature.json [STEEL AND STONE] the Eiffel Tower
+  NEW: Summer heat makes this iron Paris landmark grow by as much as six inches
+  OLD (Fresh jeopardy / TOWER OF POWER): Completed for an 1889 World's Fair, this iron lattice landmark defines the Paris skyline
+  shared: iron
+
+n2-v4-nature.json [STEEL AND STONE] the Eiffel Tower
+  NEW: Summer heat makes this iron Paris landmark grow by as much as six inches
+  OLD (Fresh jeopardy / DESIGNS ON YOU): Some 18,000 iron parts make up this Paris landmark, the world's tallest structure at the 1889 fair
+  shared: iron
+
+n2-v4-nature.json [STEEL AND STONE] the Eiffel Tower
+  NEW: Summer heat makes this iron Paris landmark grow by as much as six inches
+  OLD (Fresh jeopardy / LANDMARK DECISIONS): Built for an 1889 world's fair, this iron landmark was supposed to come down after 20 years
+  shared: iron
+
+n2-v4-nature.json [STEEL AND STONE] the Eiffel Tower
+  NEW: Summer heat makes this iron Paris landmark grow by as much as six inches
+  OLD (Easy jeopardy / SPRINGTIME IN PARIS): Built as a temporary exhibit for the 1889 fair, this iron landmark never came down
+  shared: iron
+
+n2-v4-nature.json [STEEL AND STONE] the Eiffel Tower
+  NEW: Summer heat makes this iron Paris landmark grow by as much as six inches
+  OLD (Easy final / CITY OF LIGHT): Built for an 1889 Paris fair and meant to come down after 20 years, this iron landmark still towers over the Seine.
+  shared: iron
+
+n2-v4-nature.json [STEEL AND STONE] the Brooklyn Bridge
+  NEW: When her husband fell ill, Emily Roebling oversaw much of the building of this span
+  OLD (Fresh jeopardy / SPAN OF CONTROL): Since 1883 the Gothic stone towers of this span have linked Manhattan to a namesake borough
+  shared: span
+
+n2-v4-nature.json [STEEL AND STONE] the Brooklyn Bridge
+  NEW: When her husband fell ill, Emily Roebling oversaw much of the building of this span
+  OLD (Fresh jeopardy / HOME PLATE SPECIAL): Ebbets Field fell to the wrecking ball in 1960 after this borough's beloved 'Bums' bolted for L.A.
+  shared: fell
+
+n2-v4-nature.json [STEEL AND STONE] the Brooklyn Bridge
+  NEW: When her husband fell ill, Emily Roebling oversaw much of the building of this span
+  OLD (Fresh jeopardy / WATER UNDER THE BRIDGE): Completed in 1883 to a Roebling design, this East River span linked Manhattan to a separate city
+  shared: roebling, span
+
+n2-v4-nature.json [STEEL AND STONE] the Brooklyn Bridge
+  NEW: When her husband fell ill, Emily Roebling oversaw much of the building of this span
+  OLD (Fresh double / BRIDGE THE GAP): Completed by the Roeblings in 1883, this East River crossing was the longest suspension span yet
+  shared: span
+
+n2-v4-nature.json [STEEL AND STONE] the Pantheon
+  NEW: Romans lightened this temple's dome with pumice near the top, and it still stands unreinforced
+  OLD (Easy jeopardy / ALL ROADS LEAD TO ROME): Sunlight pours through the open oculus of this ancient domed temple 'to all the gods'
+  shared: temple
+
+n2-v4-nature.json [GENE POOL PARTY] Dolly
+  NEW: Cloned in Scotland in 1996, this sheep was named after a country singer
+  OLD (Fresh double / PET PROJECTS): Cloned from an udder cell in 1996, this Scottish sheep was named for a big-haired country superstar
+  shared: cloned, 1996, sheep
+
+n2-v4-nature.json [GENE POOL PARTY] Dolly
+  NEW: Cloned in Scotland in 1996, this sheep was named after a country singer
+  OLD (Easy double / GRAND OLE OPRY-TUNITIES): This big-haired singer wrote 'Jolene' and starred in the film '9 to 5'
+  shared: singer
+
+n2-v4-nature.json [GENE POOL PARTY] Gregor Mendel
+  NEW: In an abbey garden in Brno, this friar bred thousands of pea plants to work out heredity
+  OLD (Fresh jeopardy / MINDS OVER MATTER): Published in 1866 and ignored for decades, this friar's pea-plant ratios founded modern genetics
+  shared: friar, pea
+
+n2-v4-nature.json [GENE POOL PARTY] Gregor Mendel
+  NEW: In an abbey garden in Brno, this friar bred thousands of pea plants to work out heredity
+  OLD (Fresh double / DOUBLE HELIX FEATURE): Genetics began in a monastery garden: this friar crossbred pea plants in the 1860s
+  shared: garden, friar, pea, plants
+
+n2-v4-nature.json [GENE POOL PARTY] Rosalind Franklin
+  NEW: She died at 37 in 1958, four years before Watson, Crick and Wilkins won the Nobel for DNA
+  OLD (Fresh jeopardy / GIVE HER SOME CREDIT): This British chemist's X-ray image of DNA, Photo 51, guided Watson and Crick to the double helix
+  shared: dna, watson, crick
+
+n2-v4-nature.json [GENE POOL PARTY] Rosalind Franklin
+  NEW: She died at 37 in 1958, four years before Watson, Crick and Wilkins won the Nobel for DNA
+  OLD (Fresh double / SHE BLINDED ME WITH SCIENCE): Her X-ray image 'Photo 51' handed Watson and Crick a key to DNA's double helix
+  shared: watson, crick, dna
+
+n2-v4-nature.json [HIVE MINDS] the waggle dance
+  NEW: Karl von Frisch shared a 1973 Nobel, in part for decoding this figure-eight bee routine
+  OLD (Fresh double / ANIMAL BEHAVIOR): Honeybees perform this figure-eight routine to tell hivemates the direction and distance of food
+  shared: figure, eight, routine
+

@@ -1,0 +1,34 @@
+# Independent check of the 98 Easy Breezy repeat-audit replacements
+
+Scope: only the 98 new clues listed in `repeat-audit-easy.md` (e1-/e2- files; the ef- files had no replacements). Each was checked for accuracy, one correct response, clue/response agreement, category fit, ladder, giveaways, length and banned phrases, and its response was grepped across public/data/original, easy, campaign, wave4 drafts and wave5 drafts.
+
+Note on the grep: wave4 is already appended to public/data/easy, so the old versions of these clues show up there; those self-matches were ignored. The real collisions were with the wave5 drafts, which the audit's pair list did not cover.
+
+84 clues passed unchanged. 14 were edited (6 replaced for wave5 repeats, 8 wording or accuracy fixes). Both checkers print OK.
+
+## Replaced: same fact already in the wave5 drafts
+
+- e1-w1-hist WAGONS, HO! $200: "The new telegraph put this horseback mail relay out of business after only 18 months" → "Riders of this 1860 horseback mail relay took an oath not to swear, drink or fight" (the Pony Express, kept). Reason: n1-v1-usa already has the telegraph and 18 months fact almost word for word. Alexander Majors' oath for Russell, Majors and Waddell riders is well documented.
+- e1-w5-mix FASHION FLASHBACK $400: "Two-tone black-and-white oxfords, worn with bobby socks, were these" (saddle shoes) → "Mary Tyler Moore set a trend wearing these snug, calf-length slacks as Laura Petrie" (capri pants). Reason: e2-v5-life has the identical saddle-shoe clue, and penny loafers are also there. Capri pants appear nowhere else.
+- e2-w4-sci PUSH-BUTTON LIVING $800: "Pocket-size ones of these let teens carry rock 'n' roll everywhere in the 1950s" (the transistor radio) → "Reddi-wip has squirted whipped cream from this kind of push-button can since 1948" (an aerosol can (aerosol)). Reason: e1-v4-nature has the same pocket-size and rock 'n' roll fact. The microwave was not used because Percy Spencer clues are already everywhere.
+- e2-w4-sci A PINCH OF THIS $1600: "Despite its name, this Jamaican berry is a single spice, not a blend" (allspice) → "Deli rye bread is often flecked with the little seeds of this spice" (caraway). Reason: n2-v5-life already uses "its name reflects its blend of flavors". Caraway appears nowhere else. The clue was worded so that "seeds" is not in the response.
+- e2-w5-mix INK-REDIBLE STRIPS $1200: "'Leapin' lizards!' was the favorite cry of this blank-eyed comic-strip redhead" (Little Orphan Annie) → "Wife Flo puts up with this lazy, pub-loving Briton in a comic strip begun in 1957" (Andy Capp). Reason: e1-v3-arts has the identical Leapin' lizards / blank-eyed redhead clue. Andy Capp (Reg Smythe, Daily Mirror, 1957) appears nowhere else. Marmaduke, Hagar, Prince Valiant, Dick Tracy, Dennis the Menace, Family Circus and Popeye were already taken.
+- e2-w5-mix INK-REDIBLE STRIPS $1600: "Walt Kelly set this possum's comic strip in Georgia's Okefenokee Swamp" (Pogo) → "Pranksters Hans and Fritz tormented the Captain in this strip begun in 1897" (The Katzenjammer Kids). Reason: n2-v3-arts has the same Walt Kelly and Okefenokee fact. The Katzenjammer Kids (Rudolph Dirks, 1897) appear nowhere else.
+
+## Fixed: accuracy, ambiguity, giveaway or near-repeat wording
+
+- e1-w3-screen CROONER CORNER $800: "'Hot Diggity' in 1956 followed 'Papa Loves Mambo' up the charts for this crooner" → "'Papa Loves Mambo' in 1954 and 'Hot Diggity' in 1956 were hits for this crooner" (Perry Como). Reason: "followed ... up the charts" suggests one hit came right after the other. Other Como hits came in between, so the clue now states both years.
+- e1-w3-screen FURRY CO-STARS $200: "A male collie named Pal played this canine heroine in her first film, in 1943" → "A male collie named Pal played this canine heroine, and so did his descendants" (Lassie). Reason: an existing Easy clue is "This heroic collie first found her way home in a 1943 film". The first-film and 1943 hook was dropped and the Pal hook kept.
+- e1-w3-screen SOCK HOP HITS $400: "Swivel as if you're drying off with a towel to do this 1960 dance craze" → "Move as if you're drying your back with a towel to do this 1960 dance" (the Twist). Reason: an existing Easy clue reads "got the whole country swiveling with this 1960 dance craze", so "swivel" and "craze" were removed. "Drying your back" follows Chubby Checker's own description.
+- e1-w5-mix MASCOT MEMORIES $600: "... and her calf is named Beulah" → "... and Beulah is one of her calves" (Elsie (the Cow)). Reason: Elsie has several calves (Beulah, Beauregard, the twins), not one.
+- e2-w4-sci LITTLE ONES $2000: "Fox and beaver mothers call their little ones by this three-letter name" → "Baby beavers, rabbits and ferrets can all be called by this three-letter name" (a kit). Reason: two answers fit. Fox young are also cubs and pups, both three letters, and "cubs" is the $400 answer in the same category. Rabbit and ferret young are kits, not cubs.
+- e2-w5-mix GOOD BOOK CLUB $1600: "God spoke to Moses from this, which blazed but was not burned up" → "God spoke to Moses from this plant, which blazed but was not consumed" (a burning bush). Reason: "burned" echoed the response "burning". "Consumed" follows Exodus 3:2, and "this plant" names the kind of answer.
+- e2-w5-mix NICKNAME DROPPERS $2000: "Red Grange delivered ice as a teen, earning the nickname 'the Wheaton' this" → "Lugging heavy blocks on a summer delivery route made Red Grange 'the Wheaton' this" (Iceman). Reason: "delivered ice" gave away "Iceman" on the hardest row. The player now has to work out that the blocks were ice. An alternate "(the Wheaton Iceman)" was tried and dropped because the checker flags "wheaton" as a giveaway.
+- e2-w5-mix PASTIME PARADE $1600: response "bird-watching" → "bird-watching (birding)". Reason: added the common alternate.
+
+## Considered and left alone
+
+- e2-w4-sci SEA CREATURE COMFORTS $1200 (blue whale tongue vs. an elephant): this is the standard popular claim, at roughly 2.7 tonnes, about the weight of an adult Asian elephant. A softer rewording ("can weigh as much as an elephant") shares a seven-word run with a televised clue, so the auditor's wording stays.
+- e1-w5-mix HANG IT ON THE WALL $400: The Starry Night has gone out on loan now and then, but MoMA has owned it since 1941, so "has hung at" is fair.
+- Ladder: GOOD BOOK CLUB has the burning bush ($1600) above manna ($1200). That is arguably a little easy for its row but not clearly inverted, so it was not swapped.
+- Same answer, different fact, accepted: Mona Lisa (Napoleon's bedroom vs. nf-v3-arts, Leonardo's move to France), earthworms (soil vs. e1-v4-nature, robins after rain), willow (catkins vs. e1-v5-life, cricket bats), ukulele (Arthur Godfrey vs. Tiny Tim), Kentucky (Lincoln's birthplace vs. n2-v1-usa, the Mississippi loop), Gateway Arch (as wide as it is tall vs. 630-foot clues), Red Grange (Wheaton Iceman vs. Galloping Ghost).

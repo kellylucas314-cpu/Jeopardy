@@ -1,0 +1,362 @@
+[
+  {
+    "name": "BACKYARD BIRDWATCH",
+    "clues": [
+      {
+        "clue": "The male of this crested songbird is bright red nearly all over",
+        "response": "the cardinal",
+        "value": 200
+      },
+      {
+        "clue": "'When the red, red' this 'comes bob, bob, bobbin' along,' the old tune goes",
+        "response": "the robin",
+        "value": 400
+      },
+      {
+        "clue": "Ethel Waters sang that 'His eye is on' this small brown bird",
+        "response": "the sparrow",
+        "value": 600
+      },
+      {
+        "clue": "Baltimore's ballclub takes its name from this orange-and-black songbird",
+        "response": "the oriole",
+        "value": 800
+      },
+      {
+        "clue": "This black-capped little bird is named for the call it sings at the feeder",
+        "response": "the chickadee",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "MIXING BOWL MEMORIES",
+    "clues": [
+      {
+        "clue": "Bakers proof this in warm water with a pinch of sugar until it foams",
+        "response": "yeast",
+        "value": 200
+      },
+      {
+        "clue": "Grandma's heavy black frying pan was made of this sturdy metal",
+        "response": "cast iron",
+        "value": 400
+      },
+      {
+        "clue": "Before electric mixers, cooks cranked the handle of this two-bladed tool",
+        "response": "an egg beater",
+        "value": 600
+      },
+      {
+        "clue": "It hissed and rattled on the stove, cooking a pot roast fast with trapped steam",
+        "response": "a pressure cooker",
+        "value": 800
+      },
+      {
+        "clue": "Home canners poured a layer of this melted wax on top of their jelly jars",
+        "response": "paraffin",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "PENNY CANDY COUNTER",
+    "clues": [
+      {
+        "clue": "A little paper plume pokes out of the foil on these chocolate drops",
+        "response": "Hershey's Kisses",
+        "value": 200
+      },
+      {
+        "clue": "Leo Hirshfield named these chewy chocolate logs for his daughter's nickname",
+        "response": "Tootsie Rolls",
+        "value": 400
+      },
+      {
+        "clue": "Flavors like clove and wintergreen came stacked in a paper roll of these discs",
+        "response": "Necco Wafers",
+        "value": 600
+      },
+      {
+        "clue": "Kids nibbled these colorful sugar dots right off long strips of paper",
+        "response": "candy buttons",
+        "value": 800
+      },
+      {
+        "clue": "Walter Diemer said pink was the only dye he had for his 1928 batch of this chewy treat",
+        "response": "bubble gum",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "FOLKLORE FORECAST",
+    "clues": [
+      {
+        "clue": "Lightning never strikes here twice, or so the saying goes",
+        "response": "the same place",
+        "value": 200
+      },
+      {
+        "clue": "The blustery weeks of this month are said to go from lion to lamb",
+        "response": "March",
+        "value": 400
+      },
+      {
+        "clue": "'Rain before seven, clear by' this hour, the old weather rhyme promises",
+        "response": "eleven",
+        "value": 600
+      },
+      {
+        "clue": "Since 1792 this yearly New England booklet has made long-range weather forecasts",
+        "response": "The Old Farmer's Almanac",
+        "value": 800
+      },
+      {
+        "clue": "Farm lore says rain is coming when cows do this out in the pasture",
+        "response": "lie down",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "BARNYARD ROLL CALL",
+    "clues": [
+      {
+        "clue": "Weather vanes on old barns often wear this crowing bird up top",
+        "response": "a rooster",
+        "value": 200
+      },
+      {
+        "clue": "Folks who can't sleep are told to count these woolly animals jumping a fence",
+        "response": "sheep",
+        "value": 400
+      },
+      {
+        "clue": "A baby pig is called this, just like Pooh's timid little friend",
+        "response": "a piglet",
+        "value": 600
+      },
+      {
+        "clue": "It's a mother horse, and put 'night' in front of it for a bad dream",
+        "response": "a mare",
+        "value": 800
+      },
+      {
+        "clue": "Ranchers call a young female cow this until she has her first calf",
+        "response": "a heifer",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "AMERICAN TINKERERS",
+    "clues": [
+      {
+        "clue": "Born in Milan, Ohio, this inventor earned more than 1,000 U.S. patents",
+        "response": "Thomas Edison",
+        "value": 200
+      },
+      {
+        "clue": "Before they built airplanes, Orville and Wilbur Wright sold and fixed these",
+        "response": "bicycles",
+        "value": 400
+      },
+      {
+        "clue": "'What hath God wrought' was the first official message on Morse's invention",
+        "response": "the telegraph",
+        "value": 600
+      },
+      {
+        "clue": "George Washington Carver found hundreds of uses for this humble legume",
+        "response": "the peanut",
+        "value": 800
+      },
+      {
+        "clue": "Cyrus McCormick's mechanical reaper sped up the harvest of this grain",
+        "response": "wheat",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "PIE CHART",
+    "clues": [
+      {
+        "clue": "This orange squash fills the pie on most Thanksgiving tables",
+        "response": "pumpkin",
+        "value": 200
+      },
+      {
+        "clue": "Order your pie 'a la mode' and it comes topped with this",
+        "response": "ice cream",
+        "value": 400
+      },
+      {
+        "clue": "Mashed potatoes, not pastry, top this meat pie named for a sheep-tending job",
+        "response": "shepherd's pie",
+        "value": 600
+      },
+      {
+        "clue": "The fluffy meringue on a lemon pie is whipped from these",
+        "response": "egg whites",
+        "value": 800
+      },
+      {
+        "clue": "Shoofly pie, a Pennsylvania Dutch treat, gets its sweetness from this syrup",
+        "response": "molasses",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "HEAD TO TOE",
+    "clues": [
+      {
+        "clue": "A full set for grown-ups is 32, counting the wisdom ones",
+        "response": "teeth",
+        "value": 200
+      },
+      {
+        "clue": "The doctor taps just below this joint with a little rubber hammer",
+        "response": "the knee",
+        "value": 400
+      },
+      {
+        "clue": "Doctors listen to this organ's 'lub-dub' through a stethoscope",
+        "response": "the heart",
+        "value": 600
+      },
+      {
+        "clue": "Covering you from head to toe, it's the body's largest organ",
+        "response": "the skin",
+        "value": 800
+      },
+      {
+        "clue": "Your Adam's apple is the bump at the front of this voice box",
+        "response": "the larynx",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "LOOK UP, WAY UP",
+    "clues": [
+      {
+        "clue": "This ringed planet lent its name to the rockets that carried men to the moon",
+        "response": "Saturn",
+        "value": 200
+      },
+      {
+        "clue": "Each of these icy visitors grows a glowing tail that points away from the sun",
+        "response": "a comet",
+        "value": 400
+      },
+      {
+        "clue": "John Glenn made history in 1962 by doing this three times aboard Friendship 7",
+        "response": "orbit the Earth",
+        "value": 600
+      },
+      {
+        "clue": "Sailors steered by this North Star at the end of the Little Dipper's handle",
+        "response": "Polaris",
+        "value": 800
+      },
+      {
+        "clue": "The Big Dipper's seven stars belong to this 'Great Bear' in the sky",
+        "response": "Ursa Major",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "RISE AND DINE",
+    "clues": [
+      {
+        "clue": "General Mills has been toasting these little oat O's since the 1940s",
+        "response": "Cheerios",
+        "value": 200
+      },
+      {
+        "clue": "Vermont farmers boil down tree sap to make this sweet pancake topping",
+        "response": "maple syrup",
+        "value": 400
+      },
+      {
+        "clue": "Eggs Benedict come smothered in this lemony, buttery sauce",
+        "response": "hollandaise",
+        "value": 600
+      },
+      {
+        "clue": "Southern grits are often made from this lye-soaked corn",
+        "response": "hominy",
+        "value": 800
+      },
+      {
+        "clue": "A full English breakfast often includes this dark sausage whose name sounds like a dessert",
+        "response": "black pudding",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "DIG IN THE DIRT",
+    "clues": [
+      {
+        "clue": "Gardeners turn kitchen scraps and leaves into this rich soil food",
+        "response": "compost",
+        "value": 200
+      },
+      {
+        "clue": "Kansas chose this tall, golden bloom with seed-packed faces as its state flower",
+        "response": "the sunflower",
+        "value": 400
+      },
+      {
+        "clue": "Gardeners cheer these wrigglers, which tunnel through the soil and enrich it",
+        "response": "earthworms",
+        "value": 600
+      },
+      {
+        "clue": "Ladybugs are a gardener's friend because they gobble up these tiny pests",
+        "response": "aphids",
+        "value": 800
+      },
+      {
+        "clue": "Fall gardens fill with 'mums,' short for these flowers",
+        "response": "chrysanthemums",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "AT THE SODA FOUNTAIN",
+    "clues": [
+      {
+        "clue": "A&W built its drive-ins around frosty mugs of this foamy soda",
+        "response": "root beer",
+        "value": 200
+      },
+      {
+        "clue": "Soda jerks sliced this fruit lengthwise to build a split",
+        "response": "a banana",
+        "value": 400
+      },
+      {
+        "clue": "A Brooklyn egg cream has no egg or cream, just milk, seltzer and this syrup",
+        "response": "chocolate",
+        "value": 600
+      },
+      {
+        "clue": "Maine's official soft drink, this bitter old brand gave English a word for nerve",
+        "response": "Moxie",
+        "value": 800
+      },
+      {
+        "clue": "A Waco, Texas drugstore served this soda a year before Coca-Cola came along",
+        "response": "Dr Pepper",
+        "value": 1000
+      }
+    ]
+  }
+]

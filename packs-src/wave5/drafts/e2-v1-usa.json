@@ -1,0 +1,362 @@
+[
+ {
+  "name": "EVERYDAY DEITIES",
+  "clues": [
+   {
+    "clue": "NASA named its moon-landing program for this Greek god of light and music",
+    "response": "Apollo",
+    "value": 400
+   },
+   {
+    "clue": "FTD florists made this winged Roman messenger their trademark",
+    "response": "Mercury",
+    "value": 800
+   },
+   {
+    "clue": "This fiery kind of mountain takes its name from Vulcan, the Roman god of fire",
+    "response": "a volcano",
+    "value": 1200
+   },
+   {
+    "clue": "Botanists call a region's plants this, a word borrowed from Rome's flower goddess",
+    "response": "flora",
+    "value": 1600
+   },
+   {
+    "clue": "This poppy-based painkiller is named for Morpheus, the Greek god of dreams",
+    "response": "morphine",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "HOME, SWEET PRESIDENT",
+  "clues": [
+   {
+    "clue": "In retirement, Washington ran a big whiskey distillery at this Virginia estate",
+    "response": "Mount Vernon",
+    "value": 400
+   },
+   {
+    "clue": "Jefferson's hilltop home has a 'Great Clock' that also tells the day of the week",
+    "response": "Monticello",
+    "value": 800
+   },
+   {
+    "clue": "Egypt's and Israel's leaders hammered out a 1978 peace deal at this Maryland retreat",
+    "response": "Camp David",
+    "value": 1200
+   },
+   {
+    "clue": "Andrew and Rachel Jackson are buried at this plantation near Nashville",
+    "response": "The Hermitage",
+    "value": 1600
+   },
+   {
+    "clue": "Teddy Roosevelt's 'Summer White House' stood in Oyster Bay on Long Island",
+    "response": "Sagamore Hill",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FREEDOM'S HEROES",
+  "clues": [
+   {
+    "clue": "His birthday became a federal holiday, first observed in January 1986",
+    "response": "Martin Luther King Jr.",
+    "value": 400
+   },
+   {
+    "clue": "Congress called this Montgomery seamstress 'the first lady of civil rights'",
+    "response": "Rosa Parks",
+    "value": 800
+   },
+   {
+    "clue": "Dressed as a sailor, this future abolitionist escaped slavery by train in 1838",
+    "response": "Frederick Douglass",
+    "value": 1200
+   },
+   {
+    "clue": "During the Civil War this famous Underground Railroad guide led a Union raid",
+    "response": "Harriet Tubman",
+    "value": 1600
+   },
+   {
+    "clue": "Born Isabella Baumfree, she picked a new name in 1843 and preached for freedom",
+    "response": "Sojourner Truth",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "STATE BIRDS OF A FEATHER",
+  "clues": [
+   {
+    "clue": "Beep-beep! New Mexico picked this speedy cartoon favorite as its state bird",
+    "response": "the roadrunner",
+    "value": 400
+   },
+   {
+    "clue": "A mother brown pelican feeds her chicks on the flag of this Gulf state",
+    "response": "Louisiana",
+    "value": 800
+   },
+   {
+    "clue": "Six states, including Kansas and Nebraska, chose this yellow-breasted songbird",
+    "response": "the western meadowlark",
+    "value": 1200
+   },
+   {
+    "clue": "Utah's state bird, named for another state, ate crickets that threatened 1848 crops",
+    "response": "the California gull",
+    "value": 1600
+   },
+   {
+    "clue": "Hawaii's state bird is this rare honker, named for its soft call",
+    "response": "the nene (Hawaiian goose)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FAITHFULLY YOURS",
+  "clues": [
+   {
+    "clue": "Catholics count their Hail Marys on this string of beads",
+    "response": "a rosary",
+    "value": 400
+   },
+   {
+    "clue": "Bell-ringers with red kettles collect for this church charity at Christmas",
+    "response": "the Salvation Army",
+    "value": 800
+   },
+   {
+    "clue": "A judge's joke about trembling before God gave this Society of Friends its nickname",
+    "response": "the Quakers",
+    "value": 1200
+   },
+   {
+    "clue": "Married men of this plain-living faith grow beards but keep their upper lips shaved",
+    "response": "the Amish",
+    "value": 1600
+   },
+   {
+    "clue": "Known for simple furniture, these believers gave us the hymn 'Simple Gifts'",
+    "response": "the Shakers",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SCHOOLHOUSE CIVICS",
+  "clues": [
+   {
+    "clue": "Big or small, each state sends this many senators to Washington",
+    "response": "two",
+    "value": 400
+   },
+   {
+    "clue": "The Constitution opens with these three famous words",
+    "response": "We the People",
+    "value": 800
+   },
+   {
+    "clue": "Every ten years the census reshuffles this body's 435 seats among the states",
+    "response": "the House of Representatives",
+    "value": 1200
+   },
+   {
+    "clue": "A candidate needs 270 votes from this body to win the White House",
+    "response": "the Electoral College",
+    "value": 1600
+   },
+   {
+    "clue": "Just a third of the Senate faces voters at a time, since each term runs this many years",
+    "response": "six",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FIFTIES FLASHBACK",
+  "clues": [
+   {
+    "clue": "Walt opened this park in Anaheim, California, in July 1955",
+    "response": "Disneyland",
+    "value": 400
+   },
+   {
+    "clue": "A slow 1919 Army convoy he joined helped inspire Ike's push for this road network",
+    "response": "the Interstate Highway System",
+    "value": 800
+   },
+   {
+    "clue": "In March 1958 this rock 'n' roll king was inducted into the Army",
+    "response": "Elvis Presley",
+    "value": 1200
+   },
+   {
+    "clue": "This Wisconsin senator's Red-hunting hearings gave us an '-ism'",
+    "response": "Joseph McCarthy",
+    "value": 1600
+   },
+   {
+    "clue": "A 'horse collar' grille couldn't save this much-hyped 1958 Ford flop",
+    "response": "the Edsel",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "PAN-DEMONIUM",
+  "clues": [
+   {
+    "clue": "Prospectors swirled gravel and water in this shallow metal dish",
+    "response": "a gold pan",
+    "value": 400
+   },
+   {
+    "clue": "James Bond foiled Goldfinger's plot against the gold in this Kentucky vault",
+    "response": "Fort Knox",
+    "value": 800
+   },
+   {
+    "clue": "Jack London joined this Yukon gold rush, which inspired 'The Call of the Wild'",
+    "response": "the Klondike",
+    "value": 1200
+   },
+   {
+    "clue": "An 1874 gold find in these South Dakota peaks, sacred to the Lakota, brought a rush",
+    "response": "the Black Hills",
+    "value": 1600
+   },
+   {
+    "clue": "'Pikes Peak or Bust' wagons rolled toward gold in this future state in 1859",
+    "response": "Colorado",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "BEASTLY LEGENDS",
+  "clues": [
+   {
+    "clue": "Also called Sasquatch, this hairy giant supposedly roams the Northwest woods",
+    "response": "Bigfoot",
+    "value": 400
+   },
+   {
+    "clue": "Columbus logged three of these sea maidens in 1493, though they were likely manatees",
+    "response": "mermaids",
+    "value": 800
+   },
+   {
+    "clue": "Narwhal tusks were once sold in Europe as the horns of this creature",
+    "response": "a unicorn",
+    "value": 1200
+   },
+   {
+    "clue": "Mobil gas stations long used this red flying horse as their emblem",
+    "response": "Pegasus",
+    "value": 1600
+   },
+   {
+    "clue": "Half eagle and half lion, this winged beast of legend was said to guard gold",
+    "response": "a griffin (gryphon)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ON THE AVENUE",
+  "clues": [
+   {
+    "clue": "In 1792 brokers signed a deal under a buttonwood tree on this Manhattan lane",
+    "response": "Wall Street",
+    "value": 400
+   },
+   {
+    "clue": "Jazz clubs and lacy iron balconies line this French Quarter strip",
+    "response": "Bourbon Street",
+    "value": 800
+   },
+   {
+    "clue": "Every inaugural parade rolls between the Capitol and the White House on this route",
+    "response": "Pennsylvania Avenue",
+    "value": 1200
+   },
+   {
+    "clue": "Cars creep down eight hairpin turns on this San Francisco block",
+    "response": "Lombard Street",
+    "value": 1600
+   },
+   {
+    "clue": "W.C. Handy named one of his most famous blues for this Memphis thoroughfare",
+    "response": "Beale Street",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "'TIS THE SEASON",
+  "clues": [
+   {
+    "clue": "The red 'petals' of this Christmas plant are really leaves called bracts",
+    "response": "the poinsettia",
+    "value": 400
+   },
+   {
+    "clue": "Shaped like a shepherd's crook, this red-and-white peppermint treat hangs on trees",
+    "response": "a candy cane",
+    "value": 800
+   },
+   {
+    "clue": "A giant tree lights up this Manhattan plaza each December",
+    "response": "Rockefeller Center",
+    "value": 1200
+   },
+   {
+    "clue": "This Harper's Weekly cartoonist gave Santa his round belly, fur suit and North Pole home",
+    "response": "Thomas Nast",
+    "value": 1600
+   },
+   {
+    "clue": "Many Italian American families serve this seafood supper on Christmas Eve",
+    "response": "the Feast of the Seven Fishes",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "TRAILBLAZING LADIES",
+  "clues": [
+   {
+    "clue": "Her little Arch Street house in Philadelphia is a must for flag fans",
+    "response": "Betsy Ross",
+    "value": 400
+   },
+   {
+    "clue": "This Massachusetts-born nurse started the American Red Cross in 1881",
+    "response": "Clara Barton",
+    "value": 800
+   },
+   {
+    "clue": "In 1979 she became the first real woman on a circulating U.S. coin, a small dollar",
+    "response": "Susan B. Anthony",
+    "value": 1200
+   },
+   {
+    "clue": "Born Phoebe Ann Mosey in Ohio, she became the Wild West shows' star sharpshooter",
+    "response": "Annie Oakley",
+    "value": 1600
+   },
+   {
+    "clue": "This Girl Scouts founder's nickname, 'Daisy,' lives on in the youngest troops",
+    "response": "Juliette Gordon Low",
+    "value": 2000
+   }
+  ]
+ }
+]

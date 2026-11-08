@@ -1,0 +1,1825 @@
+e1-w1-hist.json [PRESIDENTS IN YOUR POCKET] Abraham Lincoln
+  NEW: Honest Abe's face first turned up on the humble penny in 1909
+  OLD (Fresh jeopardy / PRESIDENTIAL NICKNAMES): 'Honest Abe', this rail-splitting 16th president also fronts the five-dollar bill
+  shared: honest, abe
+
+e1-w1-hist.json [PRESIDENTS IN YOUR POCKET] Andrew Jackson
+  NEW: 'Old Hickory' has gazed out from the twenty-dollar bill since 1928
+  OLD (Fresh jeopardy / OVAL OFFICE PILE-UPS): Old Hickory, hero of New Orleans, splatters onto the abstract expressionist famed for drip paintings
+  shared: hickory
+
+e1-w1-hist.json [PRESIDENTS IN YOUR POCKET] Andrew Jackson
+  NEW: 'Old Hickory' has gazed out from the twenty-dollar bill since 1928
+  OLD (Fresh jeopardy / PRESIDENTIAL NICKNAMES): 'Old Hickory' fit this hero of the Battle of New Orleans, said to be as tough as the wood
+  shared: hickory
+
+e1-w1-hist.json [PRESIDENTS IN YOUR POCKET] Ulysses S. Grant
+  NEW: The Union's top general of the Civil War appears on the fifty-dollar bill
+  OLD (Fresh final / INITIAL HERE): A congressman's slip on his West Point paperwork gave this Ohio-born Union commander and future president the initials 'U.S.'
+  shared: union
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] Mount Rushmore
+  NEW: Sculptor Gutzon Borglum spent 14 years carving this South Dakota memorial
+  OLD (Fresh jeopardy / MONUMENTAL ACHIEVEMENTS): Four presidents' 60-foot faces gaze from this granite memorial in South Dakota's Black Hills
+  shared: memorial, dakota
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] Mount Rushmore
+  NEW: Sculptor Gutzon Borglum spent 14 years carving this South Dakota memorial
+  OLD (Easy jeopardy / COAST-TO-COAST LANDMARKS): Four presidents' faces gaze out from this South Dakota mountainside
+  shared: dakota
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] Mount Rushmore
+  NEW: Sculptor Gutzon Borglum spent 14 years carving this South Dakota memorial
+  OLD (Easy jeopardy / WISH YOU WERE HERE): Four presidents' faces gaze from a granite cliff in South Dakota's Black Hills
+  shared: dakota
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] Mount Rushmore
+  NEW: Sculptor Gutzon Borglum spent 14 years carving this South Dakota memorial
+  OLD (Easy double / THE GREAT AMERICAN ROAD TRIP): Four 60-foot presidential faces gaze out from this South Dakota landmark
+  shared: dakota
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] Mount Rushmore
+  NEW: Sculptor Gutzon Borglum spent 14 years carving this South Dakota memorial
+  OLD (e2-w5-mix.json / POSTCARD PICKS): Sculptor Gutzon Borglum died months before work stopped on this granite memorial
+  shared: sculptor, gutzon, borglum, memorial
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] the Golden Gate Bridge
+  NEW: In 1937 this San Francisco landmark opened as the world's longest suspension span
+  OLD (Fresh jeopardy / POSTCARD PERFECT): 'International Orange' paint helps this San Francisco span, opened in 1937, stand out in the fog
+  shared: san, francisco, span, 1937
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] the Golden Gate Bridge
+  NEW: In 1937 this San Francisco landmark opened as the world's longest suspension span
+  OLD (Fresh jeopardy / WATER UNDER THE BRIDGE): Painted 'International Orange', this span crosses the strait at the mouth of San Francisco Bay
+  shared: span, san, francisco
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] the Golden Gate Bridge
+  NEW: In 1937 this San Francisco landmark opened as the world's longest suspension span
+  OLD (Fresh double / BRIDGE THE GAP): Its 'international orange' paint helps ships spot it in fog at the mouth of San Francisco Bay
+  shared: san, francisco
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] the Golden Gate Bridge
+  NEW: In 1937 this San Francisco landmark opened as the world's longest suspension span
+  OLD (Easy jeopardy / COAST-TO-COAST LANDMARKS): Painted 'international orange,' this span crosses the mouth of San Francisco Bay
+  shared: span, san, francisco
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] the Golden Gate Bridge
+  NEW: In 1937 this San Francisco landmark opened as the world's longest suspension span
+  OLD (Easy jeopardy / WISH YOU WERE HERE): Painted 'international orange,' it has spanned San Francisco Bay's mouth since 1937
+  shared: san, francisco, 1937
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] the Gateway Arch
+  NEW: Five-seat pods carry riders up inside the curved legs of this St. Louis monument
+  OLD (Easy jeopardy / COAST-TO-COAST LANDMARKS): St. Louis honors the pioneers who headed west with this 630-foot steel curve
+  shared: louis
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] the Gateway Arch
+  NEW: Five-seat pods carry riders up inside the curved legs of this St. Louis monument
+  OLD (Easy jeopardy / WISH YOU WERE HERE): This gleaming 630-foot St. Louis monument salutes the pioneers who headed west
+  shared: louis, monument
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] the Gateway Arch
+  NEW: Five-seat pods carry riders up inside the curved legs of this St. Louis monument
+  OLD (e2-w5-mix.json / POSTCARD PICKS): Tiny egg-shaped tram pods carry riders up inside this St. Louis landmark
+  shared: pods, carry, riders, louis
+
+e1-w1-hist.json [STARS AND STRIPES SIGHTS] Ellis Island
+  NEW: Irish teen Annie Moore was the first immigrant processed at this harbor station in 1892
+  OLD (Easy final / THE GOLDEN DOOR): From 1892 to 1954, some 12 million newcomers took their first steps in America at this New York Harbor station.
+  shared: 1892, harbor, station
+
+e1-w1-hist.json [OCEAN'S FIVE] the Pacific
+  NEW: Hawaii sits far out in the middle of this vast ocean
+  OLD (Campaign / 1805: BEYOND THE BATTLEFIELD): In November 1805 Lewis and Clark reached this ocean, the goal of their outbound journey
+  shared: ocean
+
+e1-w1-hist.json [OCEAN'S FIVE] the Atlantic
+  NEW: The Titanic went down in this ocean on its maiden voyage in 1912
+  OLD (Easy jeopardy / WATER, WATER EVERYWHERE): The Pilgrims crossed this ocean aboard the Mayflower to reach Plymouth
+  shared: ocean
+
+e1-w1-hist.json [HOME, SWEET COLONY] the Mayflower
+  NEW: About 102 passengers crowded aboard this little ship bound for the New World in 1620
+  OLD (Fresh jeopardy / ANCHORS AWEIGH!): Aiming for Virginia in 1620, this ship instead landed its Pilgrims on a Massachusetts shore
+  shared: 1620, ship
+
+e1-w1-hist.json [WAGONS, HO!] the Pony Express
+  NEW: Riders of this 1860s mail service galloped in relays from Missouri to California
+  OLD (Easy double / THE HISTORY LESSON): Young riders on horseback rushed the mail west in ten days for this short-lived 1860 outfit
+  shared: riders, mail
+
+e1-w1-hist.json [WHAT'LL THEY THINK OF NEXT?] Alexander Graham Bell
+  NEW: His mother and his wife were both deaf, and this telephone inventor taught deaf students
+  OLD (Fresh jeopardy / MOTHER OF INVENTION): 'Mr. Watson, come here': this inventor patented the telephone in March 1876
+  shared: inventor, telephone
+
+e1-w1-hist.json [WHAT'LL THEY THINK OF NEXT?] Alexander Graham Bell
+  NEW: His mother and his wife were both deaf, and this telephone inventor taught deaf students
+  OLD (Fresh jeopardy / PATENTLY BRILLIANT): This Scottish-born inventor's first phone call summoned his assistant: 'Mr. Watson, come here'
+  shared: inventor
+
+e1-w1-hist.json [WHAT'LL THEY THINK OF NEXT?] Alexander Graham Bell
+  NEW: His mother and his wife were both deaf, and this telephone inventor taught deaf students
+  OLD (Fresh double / PATENT PENDING): In 1876 this teacher of the deaf beat Elisha Gray to the patent office with his talking telegraph
+  shared: deaf
+
+e1-w1-hist.json [WHAT'LL THEY THINK OF NEXT?] the Model T
+  NEW: Ford's moving assembly line cut the time to build this car to about 90 minutes
+  OLD (Easy double / GETTING AROUND): Henry Ford's 'Tin Lizzie' came in any color you liked, as long as it was black
+  shared: ford
+
+e1-w1-hist.json [NORTHERN NEIGHBORS] Niagara Falls
+  NEW: Charles Blondin walked a tightrope across the gorge below this cascade in 1859
+  OLD (Easy jeopardy / AMERICA THE BEAUTIFUL): Honeymooners have long flocked to this thundering cascade on the Canadian border
+  shared: cascade
+
+e1-w1-hist.json [NORTHERN NEIGHBORS] Ottawa
+  NEW: Canada's Parliament meets on Parliament Hill in this capital city
+  OLD (Fresh jeopardy / CAPITAL OFFENSES): In 1857 Queen Victoria picked this city on the Rideau Canal to be Canada's capital
+  shared: canada
+
+e1-w1-hist.json [NORTHERN NEIGHBORS] Quebec
+  NEW: French is the main language of this big Canadian province, home of Montreal
+  OLD (Fresh double / BORDERLINE BIZARRE): Enter the Haskell Free Library in Derby Line, Vermont, but its books mostly sit in this province
+  shared: province
+
+e1-w1-hist.json [NORTHERN NEIGHBORS] Quebec
+  NEW: French is the main language of this big Canadian province, home of Montreal
+  OLD (Fresh double / COLLAPSE COURSE): A cantilever bridge named for this Canadian province fell twice while being built, in 1907 and 1916
+  shared: canadian, province
+
+e1-w1-hist.json [NORTHERN NEIGHBORS] Prince Edward Island
+  NEW: Canada's Confederation talks began in 1864 in Charlottetown, this province's capital
+  OLD (Easy double / TRUE NORTH): Anne of Green Gables grew up on this smallest Canadian province
+  shared: province
+
+e1-w1-hist.json [KEEP THE HOME FIRES BURNING] Rosie the Riveter
+  NEW: Norman Rockwell painted this wartime factory gal for a 1943 magazine cover
+  OLD (Easy double / THE HOME FRONT): Bandanna on, bicep flexed, this poster gal saluted the women working in World War II factories
+  shared: gal
+
+e1-w1-hist.json [KEEP THE HOME FIRES BURNING] D-Day
+  NEW: General Eisenhower gave the final go-ahead for this June 1944 landing in France
+  OLD (Easy jeopardy / HEADLINES OF THE FORTIES): June 6, 1944: Allied troops storm the beaches of Normandy on this famous day
+  shared: june, 1944
+
+e1-w1-hist.json [TALL TALES & TRUE] Paul Bunyan
+  NEW: Legend says this giant lumberjack's footprints filled up to become Minnesota's lakes
+  OLD (Easy double / ROADSIDE ATTRACTIONS): Statues of this giant lumberjack, often with Babe the Blue Ox, tower over northern towns
+  shared: lumberjack
+
+e1-w1-hist.json [TALL TALES & TRUE] Johnny Appleseed
+  NEW: Real-life nurseryman John Chapman planted orchards across Ohio as this frontier legend
+  OLD (Easy double / IT GROWS ON TREES): One of these 'a day keeps the doctor away,' and Johnny Appleseed planted orchards of them
+  shared: planted, orchards
+
+e1-w2-lit.json [BOYS BETWEEN THE COVERS] Tom Sawyer
+  NEW: He and Becky Thatcher get lost in a cave in Mark Twain's 1876 novel
+  OLD (Easy double / THE TWAIN SHALL MEET): This Twain hero gets his friends to pay him for the fun of whitewashing a fence
+  shared: twain
+
+e1-w2-lit.json [BOYS BETWEEN THE COVERS] Pinocchio
+  NEW: This wooden puppet's nose grows a little longer with every fib
+  OLD (Easy jeopardy / CLASSIC DISNEY): Jiminy Cricket sings 'When You Wish Upon a Star' in this tale of a wooden boy
+  shared: wooden
+
+e1-w2-lit.json [BOYS BETWEEN THE COVERS] Pinocchio
+  NEW: This wooden puppet's nose grows a little longer with every fib
+  OLD (e2-w3-screen.json / WHEN YOU WISH UPON A FILM): This wooden boy's nose grows whenever he tells a lie
+  shared: wooden, nose, grows
+
+e1-w2-lit.json [POOR RICHARD SAYS] oaks
+  NEW: 'Little strokes fell great' these trees, Poor Richard counseled patience
+  OLD (Easy double / SHADY CHARACTERS): 'Mighty' ones of these trees grow from little acorns, as the old saying goes
+  shared: trees
+
+e1-w2-lit.json [FAIRY TALE PROP ROOM] an apple
+  NEW: Snow White falls into a deep sleep after one bite of this poisoned fruit
+  OLD (Fresh jeopardy / TOP BANANA): Colonial hosts showed off this spiky-topped tropical fruit as a symbol of hospitality
+  shared: fruit
+
+e1-w2-lit.json [FAIRY TALE PROP ROOM] an apple
+  NEW: Snow White falls into a deep sleep after one bite of this poisoned fruit
+  OLD (Easy jeopardy / FAIRGROUND TREATS): This orchard fruit on a stick gets dunked in a sticky, chewy brown coating
+  shared: fruit
+
+e1-w2-lit.json [FAIRY TALE PROP ROOM] an apple
+  NEW: Snow White falls into a deep sleep after one bite of this poisoned fruit
+  OLD (Easy double / SAVE ROOM FOR DESSERT): Caramelized fruit rings show up on top once this dessert is flipped out of the pan
+  shared: fruit
+
+e1-w2-lit.json [HOLIDAY READING] Rudolph
+  NEW: Created for a 1939 Montgomery Ward booklet, this reindeer has a shiny red nose
+  OLD (ef-w5-mix.json / CATALOG OF CHRISTMAS): Copywriter Robert May created this famous misfit for a 1939 Montgomery Ward giveaway booklet
+  shared: created, 1939, montgomery, ward, booklet
+
+e1-w2-lit.json [GREEK GODS, ROMAN NAMES] Venus
+  NEW: Aphrodite, born from the sea foam, was this goddess to the Romans
+  OLD (Fresh jeopardy / SPACED OUT): A runaway greenhouse effect makes this planet, named for a love goddess, the hottest of all
+  shared: goddess
+
+e1-w2-lit.json [GREEK GODS, ROMAN NAMES] Venus
+  NEW: Aphrodite, born from the sea foam, was this goddess to the Romans
+  OLD (Fresh jeopardy / ROMAN AROUND): Botticelli painted this Roman goddess of love arriving ashore on a scallop shell
+  shared: goddess
+
+e1-w2-lit.json [GREEK GODS, ROMAN NAMES] Venus
+  NEW: Aphrodite, born from the sea foam, was this goddess to the Romans
+  OLD (Fresh double / PLANT DEFENSES & TRICKS): Named for a love goddess, this Carolina bog plant snaps shut on insects and then digests them
+  shared: goddess
+
+e1-w2-lit.json [READ IT BEFORE YOU SAW IT] Jaws
+  NEW: Peter Benchley's 1974 novel about a great white shark stalking a Long Island resort
+  OLD (Fresh jeopardy / OPENING WEEKEND WARRIORS): A mechanical shark nicknamed Bruce menaced the beach town of Amity in this 1975 Spielberg thriller
+  shared: shark
+
+e1-w2-lit.json [READ IT BEFORE YOU SAW IT] Jaws
+  NEW: Peter Benchley's 1974 novel about a great white shark stalking a Long Island resort
+  OLD (Easy jeopardy / MOVIE LINES TO REMEMBER): 'You're gonna need a bigger boat' is sound advice in this 1975 shark thriller
+  shared: shark
+
+e1-w2-lit.json [READ IT BEFORE YOU SAW IT] Jaws
+  NEW: Peter Benchley's 1974 novel about a great white shark stalking a Long Island resort
+  OLD (Easy double / HOLLYWOOD LORE): Bruce, Spielberg's balky mechanical shark, kept this 1975 thriller's menace mostly offscreen
+  shared: shark
+
+e1-w2-lit.json [READ IT BEFORE YOU SAW IT] The Sound of Music
+  NEW: Maria von Trapp's family memoir inspired this Rodgers and Hammerstein show
+  OLD (Fresh jeopardy / PICTURE THIS: BEST PICTURE): Maria teaches the von Trapp children to sing in this 1965 Best Picture winner
+  shared: maria, von, trapp
+
+e1-w2-lit.json [READ IT BEFORE YOU SAW IT] The Sound of Music
+  NEW: Maria von Trapp's family memoir inspired this Rodgers and Hammerstein show
+  OLD (Fresh jeopardy / BEST PICTURE, OLD SCHOOL): The hills are alive as Julie Andrews governs the von Trapp kids in this 1965 Best Picture winner
+  shared: von, trapp
+
+e1-w2-lit.json [READ IT BEFORE YOU SAW IT] The Sound of Music
+  NEW: Maria von Trapp's family memoir inspired this Rodgers and Hammerstein show
+  OLD (Easy jeopardy / GOTTA SING, GOTTA DANCE): The hills are alive as Julie Andrews governs the von Trapp children in this 1965 film
+  shared: von, trapp
+
+e1-w2-lit.json [READ IT BEFORE YOU SAW IT] The Sound of Music
+  NEW: Maria von Trapp's family memoir inspired this Rodgers and Hammerstein show
+  OLD (Easy jeopardy / MUSICALS AT THE MOVIES): Julie Andrews twirls on a hilltop as the von Trapps' governess in this 1965 film
+  shared: von
+
+e1-w2-lit.json [READ IT BEFORE YOU SAW IT] The Sound of Music
+  NEW: Maria von Trapp's family memoir inspired this Rodgers and Hammerstein show
+  OLD (Easy double / BROADWAY BLOCKBUSTERS): A guitar-toting postulant named Maria charms the von Trapp children in this musical
+  shared: maria, von, trapp
+
+e1-w2-lit.json [READ IT BEFORE YOU SAW IT] The Sound of Music
+  NEW: Maria von Trapp's family memoir inspired this Rodgers and Hammerstein show
+  OLD (Easy final / MUSICAL FAMILIES): A singing governess wins over Captain von Trapp and his seven children in this beloved musical.
+  shared: von, trapp
+
+e1-w3-screen.json [CROONER CORNER] Frank Sinatra
+  NEW: Ol' Blue Eyes did it 'My Way' and sang of 'New York, New York'
+  OLD (Easy jeopardy / CROONER'S CORNER): Fans called this Hoboken crooner 'Ol' Blue Eyes' and 'The Chairman of the Board'
+  shared: eyes
+
+e1-w3-screen.json [CROONER CORNER] Frank Sinatra
+  NEW: Ol' Blue Eyes did it 'My Way' and sang of 'New York, New York'
+  OLD (Easy jeopardy / THE CROONERS): 'Ol' Blue Eyes' led the Rat Pack and did it 'My Way'
+  shared: eyes
+
+e1-w3-screen.json [CROONER CORNER] Frank Sinatra
+  NEW: Ol' Blue Eyes did it 'My Way' and sang of 'New York, New York'
+  OLD (Easy jeopardy / MUSICAL MEMORIES): 'Ol' Blue Eyes' did it his way as leader of Hollywood's Rat Pack
+  shared: eyes
+
+e1-w3-screen.json [CROONER CORNER] Nat King Cole
+  NEW: 'Chestnuts roasting on an open fire' opens this velvet-voiced singer's classic
+  OLD (Fresh double / SCAT'S ENTERTAINMENT): This jazz trio pianist turned velvet crooner topped the charts with 'Nature Boy' and 'Mona Lisa'
+  shared: velvet
+
+e1-w3-screen.json [CROONER CORNER] Nat King Cole
+  NEW: 'Chestnuts roasting on an open fire' opens this velvet-voiced singer's classic
+  OLD (Easy jeopardy / CROONER'S CORNER): This velvet-voiced pianist sang 'Mona Lisa' and 'Unforgettable'
+  shared: velvet, voiced
+
+e1-w3-screen.json [CROONER CORNER] Nat King Cole
+  NEW: 'Chestnuts roasting on an open fire' opens this velvet-voiced singer's classic
+  OLD (Easy jeopardy / MUSICAL MEMORIES): This velvet-voiced pianist made 'Mona Lisa' and 'Unforgettable' truly unforgettable
+  shared: velvet, voiced
+
+e1-w3-screen.json [CROONER CORNER] Perry Como
+  NEW: Before his 'Hot Diggity' fame, this crooner cut hair in Canonsburg, Pennsylvania
+  OLD (Easy jeopardy / CROONER'S CORNER): A barber before fame, this cardigan-wearing crooner sang 'Catch a Falling Star'
+  shared: fame, crooner
+
+e1-w3-screen.json [CROONER CORNER] Perry Como
+  NEW: Before his 'Hot Diggity' fame, this crooner cut hair in Canonsburg, Pennsylvania
+  OLD (Easy jeopardy / THE CROONERS): Cozy cardigans and a relaxed TV show marked this 'Catch a Falling Star' crooner
+  shared: crooner
+
+e1-w3-screen.json [CROONER CORNER] Tony Bennett
+  NEW: This crooner painted, too, signing his canvases with his real surname, Benedetto
+  OLD (Easy jeopardy / CROONER'S CORNER): Born Anthony Benedetto, this crooner left his heart in San Francisco
+  shared: benedetto, crooner
+
+e1-w3-screen.json [RABBIT EARS] Ricky Ricardo (Desi Arnaz)
+  NEW: He led the band at the Tropicana nightclub, then came home to Lucy
+  OLD (Easy jeopardy / WE ALL LOVED LUCY): Desi Arnaz played this conga-drumming bandleader, Lucy's TV husband
+  shared: lucy
+
+e1-w3-screen.json [RABBIT EARS] Leave It to Beaver
+  NEW: Ward and June Cleaver raised sons Wally and Theodore on this sitcom
+  OLD (Easy jeopardy / BLACK & WHITE & FUNNY ALL OVER): Theodore Cleaver and big brother Wally got into gentle scrapes on this family sitcom
+  shared: theodore, cleaver, wally
+
+e1-w3-screen.json [WE'RE OFF TO SEE] Toto
+  NEW: Played by a female terrier named Terry, he was Dorothy's little dog
+  OLD (Easy jeopardy / PAWS & APPLAUSE): This little dog rode in Dorothy's basket all the way to Oz and back home to Kansas
+  shared: dorothy
+
+e1-w3-screen.json [WE'RE OFF TO SEE] Toto
+  NEW: Played by a female terrier named Terry, he was Dorothy's little dog
+  OLD (Easy jeopardy / FOUR-LEGGED FILM STARS): Dorothy carried this cairn terrier in a basket all the way to Oz
+  shared: dorothy, terrier
+
+e1-w3-screen.json [WE'RE OFF TO SEE] ruby slippers
+  NEW: In the 1939 film, Dorothy clicks the heels of these sparkly red shoes
+  OLD (Easy double / HOLLYWOOD LORE): Dorothy's silver shoes from the book became this red footwear on film to show off Technicolor
+  shared: dorothy, shoes
+
+e1-w3-screen.json [WE'RE OFF TO SEE] Kansas
+  NEW: Dorothy Gale lived on her aunt and uncle's farm in this state
+  OLD (Fresh jeopardy / FIELD TRIPS): Amber waves of winter wheat earn Dorothy's home state the nickname 'the Wheat State'
+  shared: dorothy
+
+e1-w3-screen.json [BIG BAND STAND] Glenn Miller
+  NEW: 'Chattanooga Choo Choo' and 'Pennsylvania 6-5000' came from this bandleader
+  OLD (Easy jeopardy / BIG BAND DAYS): 'In the Mood' and 'Moonlight Serenade' made this bandleader a wartime favorite
+  shared: bandleader
+
+e1-w3-screen.json [BIG BAND STAND] Glenn Miller
+  NEW: 'Chattanooga Choo Choo' and 'Pennsylvania 6-5000' came from this bandleader
+  OLD (Easy jeopardy / SWING TIME): This 'In the Mood' bandleader vanished on a 1944 flight over the English Channel
+  shared: bandleader
+
+e1-w3-screen.json [BIG BAND STAND] Lawrence Welk
+  NEW: His 'Champagne Music' bubbled on TV with a 'wunnerful, wunnerful'
+  OLD (Easy jeopardy / GATHER 'ROUND THE TV SET): Bubbles floated and 'champagne music' played on this bandleader's Saturday night show
+  shared: champagne, music
+
+e1-w3-screen.json [BIG BAND STAND] Lawrence Welk
+  NEW: His 'Champagne Music' bubbled on TV with a 'wunnerful, wunnerful'
+  OLD (Easy jeopardy / BIG BAND DAYS): With 'a-one an' a-two,' this bubbly maestro poured champagne music into TV homes
+  shared: champagne, music
+
+e1-w3-screen.json [BIG BAND STAND] Count Basie
+  NEW: Sinatra swung through 'Fly Me to the Moon' in 1964 with this bandleader's orchestra
+  OLD (Easy jeopardy / BIG BAND DAYS): 'One O'Clock Jump' was the theme of this Kansas City bandleader at the piano
+  shared: bandleader
+
+e1-w3-screen.json [BIG BAND STAND] Dorsey
+  NEW: Tommy and Jimmy were the bandleading brothers with this last name
+  OLD (Easy jeopardy / SWING TIME): Young Frank Sinatra got his break singing for this trombone-playing brother of Jimmy
+  shared: jimmy
+
+e1-w3-screen.json [YULE BE WATCHING] It's a Wonderful Life
+  NEW: An angel named Clarence earns his wings saving George Bailey in this film
+  OLD (Easy jeopardy / A NIGHT AT THE PICTURES): An angel named Clarence finally earns his wings in this beloved Christmas classic
+  shared: angel, clarence, earns, wings
+
+e1-w3-screen.json [YULE BE WATCHING] White Christmas
+  NEW: Danny Kaye and Bing Crosby put on a show at a Vermont inn in this 1954 film
+  OLD (Easy jeopardy / TUNES FROM THE BIG SCREEN): Bing Crosby introduced this Irving Berlin holiday favorite in 1942's 'Holiday Inn'
+  shared: bing, crosby, inn
+
+e1-w3-screen.json [FURRY CO-STARS] Lassie
+  NEW: This collie always ran for help when Timmy was in trouble
+  OLD (Easy jeopardy / FOUR-LEGGED FAVORITES): Timmy's brave TV collie, she always saved the day by the end of the episode
+  shared: timmy, collie, always
+
+e1-w3-screen.json [FURRY CO-STARS] Lassie
+  NEW: This collie always ran for help when Timmy was in trouble
+  OLD (Easy jeopardy / FOUR-LEGGED FILM STARS): This heroic collie first found her way home in a 1943 film
+  shared: collie
+
+e1-w3-screen.json [FURRY CO-STARS] Flipper
+  NEW: This bottlenose dolphin had his own TV series in the 1960s
+  OLD (Easy jeopardy / PAWS & APPLAUSE): This clever dolphin helped a Florida park ranger's sons on a 1960s adventure series
+  shared: dolphin, 1960s
+
+e1-w3-screen.json [FURRY CO-STARS] Trigger
+  NEW: After he died, this palomino was mounted for display at Roy Rogers' museum
+  OLD (Easy jeopardy / FOUR-LEGGED FAVORITES): Roy Rogers rode this golden palomino billed as 'the smartest horse in the movies'
+  shared: roy, rogers, palomino
+
+e1-w3-screen.json [FURRY CO-STARS] Trigger
+  NEW: After he died, this palomino was mounted for display at Roy Rogers' museum
+  OLD (Easy jeopardy / FOUR-LEGGED FILM STARS): Roy Rogers rode this golden palomino, billed as 'the smartest horse in the movies'
+  shared: roy, rogers, palomino
+
+e1-w3-screen.json [SOCK HOP HITS] Hound Dog
+  NEW: Big Mama Thornton sang this blues hit in 1953, three years before Elvis covered it
+  OLD (Easy double / ELVIS HAS ENTERED THE BUILDING): In this 1956 Elvis smash, the critter in question 'ain't never caught a rabbit'
+  shared: elvis
+
+e1-w3-screen.json [SOCK HOP HITS] the Twist
+  NEW: This Chubby Checker dance hit topped the charts in 1960 and again in 1962
+  OLD (Easy jeopardy / SHALL WE DANCE?): Chubby Checker got everyone doing this 1960 dance, and no partner was required
+  shared: chubby, checker, 1960, dance
+
+e1-w3-screen.json [SOCK HOP HITS] the Twist
+  NEW: This Chubby Checker dance hit topped the charts in 1960 and again in 1962
+  OLD (Easy double / CUTTING A RUG): Chubby Checker got the whole country swiveling with this 1960 dance craze
+  shared: chubby, checker, 1960, dance
+
+e1-w3-screen.json [SOCK HOP HITS] Fats Domino
+  NEW: 'Ain't That a Shame' and 'I'm Walkin'' came from this New Orleans rocker
+  OLD (Easy double / JUKEBOX SATURDAY NIGHT): This New Orleans piano man found his thrill on 'Blueberry Hill' in 1956
+  shared: orleans
+
+e1-w3-screen.json [SOCK HOP HITS] the Platters
+  NEW: This vocal group's 'Smoke Gets in Your Eyes' topped the charts in 1959
+  OLD (Easy double / JUKEBOX SATURDAY NIGHT): 'Only You' and 'The Great Pretender' showcased this smooth 1950s vocal group
+  shared: vocal, group
+
+e1-w3-screen.json [MUSIC ROOM FAVORITES] a piano
+  NEW: A standard one of these has 88 keys, 52 white and 36 black
+  OLD (Fresh jeopardy / IT'S INSTRUMENTAL): With 88 keys, this instrument anchors both concert halls and cocktail lounges
+  shared: keys
+
+e1-w3-screen.json [MUSIC ROOM FAVORITES] a trumpet
+  NEW: Louis Armstrong blew this brass horn with three valves
+  OLD (Fresh jeopardy / BRASS TACKS): Louis Armstrong and Miles Davis both blew this highest-pitched standard brass instrument
+  shared: louis, armstrong, blew, brass
+
+e1-w3-screen.json [MUSIC ROOM FAVORITES] a harp
+  NEW: Angels in old paintings often pluck this tall, many-stringed instrument
+  OLD (Fresh double / ALL KEYED UP): Quills pluck this Baroque keyboard's strings, so hitting the keys harder won't make it louder
+  shared: pluck
+
+e1-w3-screen.json [MUSIC ROOM FAVORITES] a harp
+  NEW: Angels in old paintings often pluck this tall, many-stringed instrument
+  OLD (Fresh double / STRINGS ATTACHED): Seven pedals let the 47-string orchestral version of this ancient plucked instrument change key
+  shared: instrument
+
+e1-w3-screen.json [MUSIC ROOM FAVORITES] an accordion
+  NEW: Polka bands love this squeezebox with a keyboard and bellows
+  OLD (Fresh double / KEYBOARD WARRIORS): Patented in 1829 Vienna, this bellows-driven squeezebox powers polka bands and zydeco dance floors
+  shared: bellows, squeezebox, polka, bands
+
+e1-w3-screen.json [MUSIC ROOM FAVORITES] a sousaphone
+  NEW: This big coiled bass horn wraps around a marcher and is named for a bandmaster
+  OLD (Fresh jeopardy / BRASS TACKS): Designed in the 1890s to the specs of the 'March King' himself, this big brass horn wraps around the player
+  shared: horn, wraps
+
+e1-w3-screen.json [TV'S WILD WEST] Gunsmoke
+  NEW: Doc, Festus and Miss Kitty were Dodge City regulars on this show
+  OLD (Easy jeopardy / PRIME-TIME COWBOYS): Marshal Matt Dillon kept the peace in Dodge City for 20 seasons on this western
+  shared: dodge
+
+e1-w3-screen.json [TV'S WILD WEST] Gunsmoke
+  NEW: Doc, Festus and Miss Kitty were Dodge City regulars on this show
+  OLD (Easy double / GATHER 'ROUND THE RADIO): Marshal Matt Dillon kept the peace in Dodge City in this western, on radio before it hit TV
+  shared: dodge
+
+e1-w3-screen.json [TV'S WILD WEST] Gunsmoke
+  NEW: Doc, Festus and Miss Kitty were Dodge City regulars on this show
+  OLD (Easy double / THE TV CORRAL): Marshal Matt Dillon kept the peace in Dodge City for 20 seasons on this Western
+  shared: dodge
+
+e1-w3-screen.json [TV'S WILD WEST] Bonanza
+  NEW: The Cartwrights ran the Ponderosa ranch on this show
+  OLD (Easy jeopardy / PRIME-TIME COWBOYS): Ben Cartwright and sons Adam, Hoss and Little Joe ran the Ponderosa on this western
+  shared: ponderosa
+
+e1-w3-screen.json [TV'S WILD WEST] Rawhide
+  NEW: Frankie Laine sang the whip-cracking theme of this cattle-drive show
+  OLD (Easy jeopardy / PRIME-TIME COWBOYS): Before movie stardom, Clint Eastwood drove cattle as Rowdy Yates on this western
+  shared: cattle
+
+e1-w3-screen.json [TV'S WILD WEST] Maverick
+  NEW: James Garner played a cardsharp gambler on this comic Western
+  OLD (Easy jeopardy / PRIME-TIME COWBOYS): James Garner played this poker-playing drifter, later a Mel Gibson movie role
+  shared: garner
+
+e1-w3-screen.json [TV'S WILD WEST] Maverick
+  NEW: James Garner played a cardsharp gambler on this comic Western
+  OLD (Easy double / THE TV CORRAL): James Garner played Bret, a poker-playing charmer, on this lighthearted Western
+  shared: garner, western
+
+e1-w3-screen.json [TV'S WILD WEST] The Rifleman
+  NEW: Widower Lucas McCain raised his son Mark on a North Fork ranch in this Western
+  OLD (Easy double / THE TV CORRAL): Chuck Connors spun his trusty Winchester as rancher Lucas McCain on this series
+  shared: lucas, mccain
+
+e1-w3-screen.json [HOLLYWOOD HOOFERS] Singin' in the Rain
+  NEW: Hollywood's switch to talking pictures is the backdrop of this 1952 Gene Kelly film
+  OLD (Easy jeopardy / GOTTA SING, GOTTA DANCE): Gene Kelly splashed through puddles with an umbrella in this 1952 musical
+  shared: gene, kelly, 1952
+
+e1-w3-screen.json [HOLLYWOOD HOOFERS] Singin' in the Rain
+  NEW: Hollywood's switch to talking pictures is the backdrop of this 1952 Gene Kelly film
+  OLD (Easy jeopardy / MUSICALS AT THE MOVIES): Gene Kelly splashed through puddles with a 'glorious feeling' in this 1952 classic
+  shared: gene, kelly, 1952
+
+e1-w3-screen.json [PAIRED FOR LAUGHS] Abbott and Costello
+  NEW: 'Who's on First?' was this pair's famous baseball routine
+  OLD (Easy jeopardy / COMEDY TEAMS): This duo's 'Who's on First?' routine left baseball fans forever confused
+  shared: routine, baseball
+
+e1-w3-screen.json [PAIRED FOR LAUGHS] Abbott and Costello
+  NEW: 'Who's on First?' was this pair's famous baseball routine
+  OLD (Easy double / GATHER 'ROUND THE RADIO): Radio audiences howled at this comedy duo's baseball routine, 'Who's on First?'
+  shared: baseball, routine
+
+e1-w3-screen.json [PAIRED FOR LAUGHS] Laurel and Hardy
+  NEW: This duo hauled a piano up a long flight of steps in 'The Music Box'
+  OLD (Easy jeopardy / COMEDY TEAMS): Thin Stan and stout Ollie got into 'another nice mess' as this duo
+  shared: duo
+
+e1-w3-screen.json [PAIRED FOR LAUGHS] Laurel and Hardy
+  NEW: This duo hauled a piano up a long flight of steps in 'The Music Box'
+  OLD (Easy double / PARTNERS IN COMEDY): Skinny Stan and portly Ollie got into 'another nice mess' as this derby-hatted duo
+  shared: duo
+
+e1-w3-screen.json [PAIRED FOR LAUGHS] Gracie Allen
+  NEW: She was George Burns' scatterbrained wife and comedy partner
+  OLD (Easy double / COMEDY ON THE DIAL): George Burns ended each broadcast by asking this dizzy wife and partner to 'say goodnight'
+  shared: george, burns, partner
+
+e1-w3-screen.json [PAIRED FOR LAUGHS] the Smothers Brothers
+  NEW: Siblings Tom and Dick hosted a 1960s comedy hour on CBS
+  OLD (Easy jeopardy / THE VARIETY HOUR): These folk-singing siblings' Comedy Hour was famous for its fights with CBS censors
+  shared: siblings, comedy, hour, cbs
+
+e1-w3-screen.json [PAIRED FOR LAUGHS] the Smothers Brothers
+  NEW: Siblings Tom and Dick hosted a 1960s comedy hour on CBS
+  OLD (Easy double / PARTNERS IN COMEDY): Tom needled Dick with 'Mom always liked you best!' on this folk-singing duo's show
+  shared: tom, dick
+
+e1-w3-screen.json [PAIRED FOR LAUGHS] Martin and Lewis
+  NEW: Dean and Jerry made 16 films together as this comedy team
+  OLD (Fresh jeopardy / TWO-SHOT WONDERS): A smooth crooner and a manic clown, this nightclub-bred comedy team split in 1956 after ten years
+  shared: comedy
+
+e1-w3-screen.json [HUMMABLE CLASSICS] Mozart
+  NEW: This child prodigy from Salzburg wrote 'Eine kleine Nachtmusik'
+  OLD (Fresh jeopardy / CLASSICAL GAS): A Salzburg-born prodigy, he toured royal courts as a child and left his Requiem unfinished at 35
+  shared: salzburg, prodigy, child
+
+e1-w3-screen.json [HUMMABLE CLASSICS] Mozart
+  NEW: This child prodigy from Salzburg wrote 'Eine kleine Nachtmusik'
+  OLD (Fresh final / SWAN SONGS): Dead at 35 in 1791, this Salzburg-born prodigy left his Requiem unfinished, and his pupil Süssmayr completed the mass
+  shared: salzburg, prodigy
+
+e1-w3-screen.json [HUMMABLE CLASSICS] Johann Strauss (II)
+  NEW: 'The Blue Danube' came from this Viennese 'Waltz King'
+  OLD (Easy double / AT THE SYMPHONY): Vienna rings in every New Year with waltzes by this 'Waltz King' and his musical family
+  shared: waltz
+
+e1-w4-sci.json [BACKYARD BIRDWATCH] the cardinal
+  NEW: The male of this crested songbird is bright red nearly all over
+  OLD (Easy jeopardy / AT THE BIRD FEEDER): Seven states, from Ohio to North Carolina, claim this crested red bird as their own
+  shared: crested
+
+e1-w4-sci.json [BACKYARD BIRDWATCH] the cardinal
+  NEW: The male of this crested songbird is bright red nearly all over
+  OLD (Easy double / A LITTLE BIRD TOLD ME): This crested red bird is the official state bird of seven states, more than any other
+  shared: crested
+
+e1-w4-sci.json [BACKYARD BIRDWATCH] the robin
+  NEW: Folks once watched for this red-breasted bird as the first sign of spring
+  OLD (Easy jeopardy / BACKYARD BIRDS): Seeing this red-breasted worm-puller hopping on the lawn is a classic sign of spring
+  shared: breasted, sign, spring
+
+e1-w4-sci.json [BACKYARD BIRDWATCH] the robin
+  NEW: Folks once watched for this red-breasted bird as the first sign of spring
+  OLD (Easy double / A LITTLE BIRD TOLD ME): The eggs of this red-breasted harbinger of spring gave their name to a shade of blue
+  shared: breasted, spring
+
+e1-w4-sci.json [BACKYARD BIRDWATCH] hummingbirds
+  NEW: Fill a red feeder with sugar water to bring these tiny, buzzing birds to the porch
+  OLD (Easy jeopardy / AT THE BIRD FEEDER): Sugar water in a red feeder draws this tiny bird that hovers on blurring wings
+  shared: sugar, feeder
+
+e1-w4-sci.json [MIXING BOWL MEMORIES] yeast
+  NEW: Bakers proof this in warm water with a pinch of sugar until it foams
+  OLD (Fresh double / FUNGI AMONG US): Bakers rely on this single-celled fungus to make bread rise by producing carbon dioxide
+  shared: bakers
+
+e1-w4-sci.json [MIXING BOWL MEMORIES] yeast
+  NEW: Bakers proof this in warm water with a pinch of sugar until it foams
+  OLD (Easy jeopardy / BAKING DAY): Bread dough rises thanks to this living single-celled ingredient feeding on sugar
+  shared: sugar
+
+e1-w4-sci.json [MIXING BOWL MEMORIES] cast iron
+  NEW: Grandma's heavy black frying pan was made of this sturdy metal
+  OLD (Fresh jeopardy / WHAT'S INSIDE?): Disposable hand warmers heat up as a powder of this metal inside rusts rapidly on contact with air
+  shared: metal
+
+e1-w4-sci.json [PENNY CANDY COUNTER] Hershey's Kisses
+  NEW: A little paper plume pokes out of the foil on these chocolate drops
+  OLD (Fresh jeopardy / SUGAR RUSH): Since 1907 these flat-bottomed, foil-wrapped chocolates have puckered up for Hershey
+  shared: foil
+
+e1-w4-sci.json [PENNY CANDY COUNTER] Hershey's Kisses
+  NEW: A little paper plume pokes out of the foil on these chocolate drops
+  OLD (Easy double / THE SWEET SHOPPE): This chocolate maker's Pennsylvania hometown has streetlights shaped like its Kisses
+  shared: chocolate
+
+e1-w4-sci.json [PENNY CANDY COUNTER] saltwater taffy
+  NEW: Boardwalk shops in Atlantic City pulled this chewy treat named for the sea
+  OLD (Easy jeopardy / FAIRGROUND TREATS): Boardwalk shops pull and stretch this chewy candy whose name mentions the briny sea
+  shared: boardwalk, shops, chewy
+
+e1-w4-sci.json [PENNY CANDY COUNTER] saltwater taffy
+  NEW: Boardwalk shops in Atlantic City pulled this chewy treat named for the sea
+  OLD (Easy double / THE SWEET SHOPPE): Legend credits an 1880s Atlantic City flood for this pulled boardwalk candy's briny name
+  shared: pulled, boardwalk
+
+e1-w4-sci.json [PENNY CANDY COUNTER] Necco Wafers
+  NEW: Flavors like clove and wintergreen came stacked in a paper roll of these discs
+  OLD (Easy double / THE SWEET SHOPPE): Initials of the New England Confectionery Company name these chalky pastel discs
+  shared: discs
+
+e1-w4-sci.json [FOLKLORE FORECAST] the groundhog
+  NEW: On February 2nd, folks wait to see if this burrowing critter spots its shadow
+  OLD (Easy jeopardy / COUNTRY WISDOM): Each February 2 this burrowing critter supposedly checks for its shadow
+  shared: february, burrowing, critter, shadow
+
+e1-w4-sci.json [FOLKLORE FORECAST] the groundhog
+  NEW: On February 2nd, folks wait to see if this burrowing critter spots its shadow
+  OLD (Easy double / TURN, TURN, TURN): On this February 2 holiday, a rodent's shadow means six more weeks of winter
+  shared: february, shadow
+
+e1-w4-sci.json [FOLKLORE FORECAST] March
+  NEW: The blustery weeks of this month are said to go from lion to lamb
+  OLD (Fresh final / CALENDAR LOGIC): September means 'seventh month', a name that made sense when the early Roman year began in this month
+  shared: month
+
+e1-w4-sci.json [FOLKLORE FORECAST] a sailor
+  NEW: 'Red sky in the morning' is a warning to this seafaring fellow
+  OLD (Easy jeopardy / COUNTRY WISDOM): 'Red sky at morning' tells these seafaring folks to take warning
+  shared: sky, morning, seafaring, warning
+
+e1-w4-sci.json [FOLKLORE FORECAST] a sailor
+  NEW: 'Red sky in the morning' is a warning to this seafaring fellow
+  OLD (Easy jeopardy / RED SKY AT NIGHT): A red sky at night is said to be a delight for these seafarers
+  shared: sky
+
+e1-w4-sci.json [BARNYARD ROLL CALL] a rooster
+  NEW: Weather vanes on old barns often wear this crowing bird up top
+  OLD (Fresh jeopardy / PARTY ANIMALS): In Latin 'gallus' meant both a Gaul and this bird, a pun that gave France a crowing symbol
+  shared: crowing
+
+e1-w4-sci.json [AMERICAN TINKERERS] Thomas Edison
+  NEW: This inventor of the phonograph earned more than 1,000 U.S. patents
+  OLD (Fresh jeopardy / MOTHER OF INVENTION): This 'Wizard of Menlo Park' gave the world the phonograph and a practical light bulb
+  shared: phonograph
+
+e1-w4-sci.json [AMERICAN TINKERERS] Thomas Edison
+  NEW: This inventor of the phonograph earned more than 1,000 U.S. patents
+  OLD (Fresh jeopardy / PATENTLY BRILLIANT): The 'Wizard of Menlo Park', he patented the phonograph and a practical incandescent bulb
+  shared: phonograph
+
+e1-w4-sci.json [AMERICAN TINKERERS] Thomas Edison
+  NEW: This inventor of the phonograph earned more than 1,000 U.S. patents
+  OLD (Fresh double / CONCRETE EVIDENCE): In the 1900s this prolific inventor poured whole houses from single molds and even pitched concrete furniture
+  shared: inventor
+
+e1-w4-sci.json [AMERICAN TINKERERS] Thomas Edison
+  NEW: This inventor of the phonograph earned more than 1,000 U.S. patents
+  OLD (Fresh final / FOR THE RECORD): 'Mary had a little lamb' were the first words this Menlo Park inventor recited into his new phonograph in 1877
+  shared: inventor, phonograph
+
+e1-w4-sci.json [AMERICAN TINKERERS] Thomas Edison
+  NEW: This inventor of the phonograph earned more than 1,000 U.S. patents
+  OLD (Easy final / BRIGHT IDEAS): The 'Wizard of Menlo Park,' he gave the world the phonograph and a practical light bulb.
+  shared: phonograph
+
+e1-w4-sci.json [AMERICAN TINKERERS] cotton
+  NEW: Eli Whitney's 1793 gin pulled the seeds out of this fluffy crop
+  OLD (n1-w1-hist.json / NECESSITY'S CHILDREN): Eli Whitney's 1793 machine stripped the seeds from fluffy bolls, making Southern plantations boom
+  shared: eli, whitney, 1793, seeds, fluffy
+
+e1-w4-sci.json [PIE CHART] pumpkin
+  NEW: This orange squash fills the pie on most Thanksgiving tables
+  OLD (e1-w5-mix.json / DECK THE DAYS): Kids carve spooky faces into these orange gourds for Halloween
+  shared: orange
+
+e1-w4-sci.json [PIE CHART] Florida
+  NEW: Key lime pie is the official pie of this sunny state
+  OLD (n1-w1-hist.json / LOWER 48 LORE): A buoy-shaped Key West marker claims to mark the lower 48's 'Southernmost Point' in this state
+  shared: key
+
+e1-w4-sci.json [HEAD TO TOE] the knee
+  NEW: The doctor taps just below this joint with a little rubber hammer
+  OLD (Easy jeopardy / RHYMES WITH "BEE"): Bend this joint between your thigh and your shin to take a bow
+  shared: joint
+
+e1-w4-sci.json [HEAD TO TOE] the heart
+  NEW: Doctors listen to this organ's 'lub-dub' through a stethoscope
+  OLD (Easy jeopardy / IDIOMS FROM HEAD TO TOE): When you memorize a poem word for word, you know it 'by' this organ
+  shared: organ
+
+e1-w4-sci.json [LOOK UP, WAY UP] Saturn
+  NEW: This ringed planet lent its name to the rockets that carried men to the moon
+  OLD (Fresh jeopardy / PLANET PARADE): Famous for its rings, this second-largest planet would float in a bathtub big enough to hold it
+  shared: planet
+
+e1-w4-sci.json [LOOK UP, WAY UP] Saturn
+  NEW: This ringed planet lent its name to the rockets that carried men to the moon
+  OLD (Easy double / ONCE IN A BLUE MOON): Its rings of ice and rock make this planet the showpiece of any backyard telescope
+  shared: planet
+
+e1-w4-sci.json [LOOK UP, WAY UP] Saturn
+  NEW: This ringed planet lent its name to the rockets that carried men to the moon
+  OLD (n1-w4-sci.json / OVER THE MOONS): Icy geysers on the moon Enceladus feed one of the outer rings of this planet
+  shared: planet
+
+e1-w4-sci.json [LOOK UP, WAY UP] a comet
+  NEW: Each of these icy visitors grows a glowing tail that points away from the sun
+  OLD (Easy double / ONCE IN A BLUE MOON): Halley's, which swings by Earth about every 76 years, is the most famous of these icy wanderers
+  shared: icy
+
+e1-w4-sci.json [LOOK UP, WAY UP] Polaris
+  NEW: Sailors steered by this North Star at the end of the Little Dipper's handle
+  OLD (Fresh jeopardy / STARRY, STARRY NIGHT): Navigators find this 'pole star' by following the pointer stars of the Big Dipper
+  shared: dipper
+
+e1-w4-sci.json [LOOK UP, WAY UP] Ursa Major
+  NEW: The Big Dipper's seven stars belong to this 'Great Bear' in the sky
+  OLD (Fresh double / WRITTEN IN THE STARS): Zeus' lover Callisto, turned into a bear, circles the celestial pole as this constellation
+  shared: bear
+
+e1-w4-sci.json [RISE AND DINE] maple syrup
+  NEW: Vermont farmers boil down tree sap to make this sweet pancake topping
+  OLD (Easy double / SHADY CHARACTERS): Canada put this tree's leaf on its flag, and its boiled sap sweetens your pancakes
+  shared: sap
+
+e1-w4-sci.json [DIG IN THE DIRT] the sunflower
+  NEW: Kansas chose this tall, golden bloom with seed-packed faces as its state flower
+  OLD (Easy jeopardy / IN FULL BLOOM): Its big golden head tops a tall stalk, and its striped seeds make a ballpark snack
+  shared: tall
+
+e1-w4-sci.json [DIG IN THE DIRT] perennials
+  NEW: Peonies and hostas count as these, the garden plants that return every spring
+  OLD (Easy jeopardy / GARDEN VARIETY): Unlike annuals, these plants come back year after year from the same roots
+  shared: plants
+
+e1-w4-sci.json [AT THE SODA FOUNTAIN] a banana
+  NEW: Soda jerks sliced this fruit lengthwise to build a split
+  OLD (Fresh jeopardy / WEIRD SCIENCE): Potassium-40 makes this yellow fruit slightly radioactive and the namesake of a joke dose unit
+  shared: fruit
+
+e1-w4-sci.json [AT THE SODA FOUNTAIN] a banana
+  NEW: Soda jerks sliced this fruit lengthwise to build a split
+  OLD (Easy jeopardy / BAKING DAY): Fruit going brown on the counter means it's time to bake this moist sweet loaf
+  shared: fruit
+
+e1-w4-sci.json [AT THE SODA FOUNTAIN] a banana
+  NEW: Soda jerks sliced this fruit lengthwise to build a split
+  OLD (n2-w4-sci.json / THE FRUIT BOWL GAME): Its plant's 'trunk' is rolled leaves, not wood, so this yellow fruit really comes from a giant herb
+  shared: fruit
+
+e1-w5-mix.json [GAME CLOSET] The Game of Life
+  NEW: Tiny cars carry pegs for spouses and kids in this Milton Bradley classic
+  OLD (Fresh jeopardy / BOARD CERTIFIED): Peg people ride a tiny plastic car from college to retirement in this Milton Bradley classic
+  shared: milton, bradley
+
+e1-w5-mix.json [BALLPARK MEMORIES] Yogi
+  NEW: Lawrence Berra sat cross-legged like a holy man, earning this Yankee nickname
+  OLD (Easy jeopardy / BASEBALL IMMORTALS): This Yankee catcher famously quipped, 'It ain't over till it's over'
+  shared: yankee
+
+e1-w5-mix.json [BALLPARK MEMORIES] Casey at the Bat
+  NEW: 'The outlook wasn't brilliant for the Mudville nine' begins this poem
+  OLD (Easy jeopardy / TAKE ME OUT TO THE BALL GAME): 'No joy in Mudville': this 1888 poem's mighty slugger strikes out
+  shared: mudville, poem
+
+e1-w5-mix.json [TOY CHEST] a yo-yo
+  NEW: This wooden spool climbs back up its string with a flick of the wrist
+  OLD (Fresh jeopardy / TOYING WITH HISTORY): Filipino immigrant Pedro Flores sparked a late-1920s craze for this string toy before Duncan bought him out
+  shared: string
+
+e1-w5-mix.json [HANG IT ON THE WALL] the Mona Lisa
+  NEW: Her mysterious smile draws crowds at the Louvre in Paris
+  OLD (Fresh jeopardy / STROKE OF GENIUS): A 1911 theft only added to the fame of Leonardo's mysteriously smiling Louvre portrait
+  shared: louvre
+
+e1-w5-mix.json [HANG IT ON THE WALL] the Mona Lisa
+  NEW: Her mysterious smile draws crowds at the Louvre in Paris
+  OLD (Fresh double / THE BIG SCORE): Handyman Vincenzo Peruggia walked out of the Louvre with this painting in 1911, boosting its fame
+  shared: louvre
+
+e1-w5-mix.json [HANG IT ON THE WALL] the Mona Lisa
+  NEW: Her mysterious smile draws crowds at the Louvre in Paris
+  OLD (Fresh final / FRAME JOB): Picasso was questioned over its 1911 theft, but an ex-Louvre worker had it in a trunk, resurfacing in Florence 2 years later
+  shared: louvre
+
+e1-w5-mix.json [HANG IT ON THE WALL] the Mona Lisa
+  NEW: Her mysterious smile draws crowds at the Louvre in Paris
+  OLD (Easy double / ON THE MUSEUM WALL): Crowds at the Louvre line up to glimpse this Leonardo portrait's famously faint smile
+  shared: crowds, louvre, smile
+
+e1-w5-mix.json [HANG IT ON THE WALL] the Mona Lisa
+  NEW: Her mysterious smile draws crowds at the Louvre in Paris
+  OLD (Easy final / THAT SMILE): Leonardo da Vinci's small portrait of a faintly smiling woman draws huge crowds at the Louvre.
+  shared: draws, crowds, louvre
+
+e1-w5-mix.json [HANG IT ON THE WALL] The Starry Night
+  NEW: Vincent van Gogh painted swirling stars over a sleepy village in this work
+  OLD (Fresh jeopardy / STROKE OF GENIUS): A cypress rises like a dark flame into the swirling sky of this 1889 van Gogh view from Saint-Rémy
+  shared: swirling, van, gogh
+
+e1-w5-mix.json [HANG IT ON THE WALL] The Starry Night
+  NEW: Vincent van Gogh painted swirling stars over a sleepy village in this work
+  OLD (Easy double / ON THE MUSEUM WALL): Van Gogh set a swirling sky and crescent moon over a sleeping village in this painting
+  shared: van, gogh, swirling, village
+
+e1-w5-mix.json [HANG IT ON THE WALL] American Gothic
+  NEW: A farmer holds a pitchfork beside his daughter in this Grant Wood work
+  OLD (Fresh jeopardy / STROKE OF GENIUS): Grant Wood got his sister and his dentist to pose as the stern pitchfork pair in this 1930 painting
+  shared: grant, wood, pitchfork
+
+e1-w5-mix.json [HANG IT ON THE WALL] American Gothic
+  NEW: A farmer holds a pitchfork beside his daughter in this Grant Wood work
+  OLD (Fresh double / CANVAS THE AREA): Grant Wood posed his sister and his dentist as the stern pitchfork pair of this 1930 painting
+  shared: grant, wood, pitchfork
+
+e1-w5-mix.json [HANG IT ON THE WALL] American Gothic
+  NEW: A farmer holds a pitchfork beside his daughter in this Grant Wood work
+  OLD (Easy double / ON THE MUSEUM WALL): Grim farmer, pitchfork, stern woman, Iowa farmhouse: that's this 1930 Grant Wood painting
+  shared: farmer, pitchfork, grant, wood
+
+e1-w5-mix.json [HANG IT ON THE WALL] American Gothic
+  NEW: A farmer holds a pitchfork beside his daughter in this Grant Wood work
+  OLD (Easy final / PITCHFORK PERFECT): Grant Wood posed his dentist, pitchfork in hand, and his sister before an Iowa farmhouse for this 1930 painting.
+  shared: grant, wood, pitchfork
+
+e1-w5-mix.json [DECK THE DAYS] pumpkins
+  NEW: Kids carve spooky faces into these orange gourds for Halloween
+  OLD (e1-w4-sci.json / PIE CHART): This orange squash fills the pie on most Thanksgiving tables
+  shared: orange
+
+e1-w5-mix.json [MASCOT MEMORIES] Elsie (the Cow)
+  NEW: Borden's cow mascot was married to Elmer, who went on to sell glue
+  OLD (Easy double / FRIENDLY FACES ON THE SHELF): Borden's gentle cow, she sold milk while husband Elmer lent his name to a glue
+  shared: borden, elmer, glue
+
+e1-w5-mix.json [FASHION FLASHBACK] bell-bottoms
+  NEW: These flared-leg pants were a 1970s disco dance floor staple
+  OLD (Fresh jeopardy / DRESSED BY THE DECADE): Flaring out below the knee, these trousers went from sailors' gear to 1970s disco uniform
+  shared: 1970s, disco
+
+e1-w5-mix.json [FASHION FLASHBACK] nylons
+  NEW: Women lined up for these new stockings when they hit stores in 1940
+  OLD (Easy double / THE HOME FRONT): With this stocking material diverted to parachutes, women drew fake seams on their bare legs
+  shared: women
+
+e1-w5-mix.json [FASHION FLASHBACK] the zoot suit
+  NEW: Long jackets and baggy pegged trousers made up this flashy 1940s outfit
+  OLD (Fresh jeopardy / CLOTHES ENCOUNTERS): Riots named for this flamboyant, broad-shouldered, high-waisted outfit rocked Los Angeles in 1943
+  shared: outfit
+
+e1-w5-mix.json [FASHION FLASHBACK] the zoot suit
+  NEW: Long jackets and baggy pegged trousers made up this flashy 1940s outfit
+  OLD (Fresh jeopardy / DRESSED BY THE DECADE): 1943 riots in Los Angeles were named for this flashy outfit of wide shoulders, baggy trousers and a long coat
+  shared: flashy, outfit, baggy, trousers
+
+e1-w5-mix.json [SHUFFLE OFF] Go Fish
+  NEW: 'Do you have any sevens?' kids ask in this card game
+  OLD (Fresh jeopardy / SUIT YOURSELF): Ask for 3s in this kids' game and if your rival has none, you're sent angling in the draw pile
+  shared: ask, kids
+
+e1-w5-mix.json [SHUFFLE OFF] solitaire
+  NEW: This one-player card game passed many a rainy afternoon
+  OLD (Fresh jeopardy / SUIT YOURSELF): Klondike is the classic form of this patient one-player pastime that came free with Windows
+  shared: player
+
+e1-w5-mix.json [SHUFFLE OFF] solitaire
+  NEW: This one-player card game passed many a rainy afternoon
+  OLD (Easy jeopardy / CARD TABLE CLASSICS): Klondike is the best-known version of this card game you play all by yourself
+  shared: card
+
+e1-w5-mix.json [SHUFFLE OFF] Old Maid
+  NEW: Nobody wants to be stuck holding the unmatched queen in this game
+  OLD (Easy jeopardy / PICK A CARD, ANY CARD): In this children's game, you don't want to be left holding the unmatched lady
+  shared: holding, unmatched
+
+e1-w5-mix.json [SHUFFLE OFF] cribbage
+  NEW: A wooden board with pegs keeps score in this card game
+  OLD (Fresh jeopardy / SUIT YOURSELF): Poet Sir John Suckling is credited with this card game scored by racing pegs along a holed board
+  shared: card, pegs, board
+
+e1-w5-mix.json [SHUFFLE OFF] cribbage
+  NEW: A wooden board with pegs keeps score in this card game
+  OLD (Easy jeopardy / GAMES GRANDMA TAUGHT YOU): 'Fifteen two, fifteen four': you peg your points on a wooden board in this card game
+  shared: wooden, board, card
+
+e1-w5-mix.json [SHUFFLE OFF] canasta
+  NEW: Born in Uruguay, this rummy game was a 1950s American craze
+  OLD (Fresh double / FULL HOUSE RULES): Devised in Uruguay around 1940, this rummy cousin takes its name from the Spanish for 'basket'
+  shared: uruguay, rummy
+
+e1-w5-mix.json [HYMNAL NOTES] Silent Night
+  NEW: First sung in an Austrian village church in 1818, it's 'Stille Nacht' in German
+  OLD (Easy double / DECK THE HALLS): First sung in Austria in 1818, this carol promises 'all is calm, all is bright'
+  shared: sung, 1818
+
+e1-w5-mix.json [HYMNAL NOTES] How Great Thou Art
+  NEW: 'Then sings my soul' rang out in this hymn at Billy Graham crusades
+  OLD (Easy double / FROM THE HYMNAL): 'Then sings my soul, my Savior God, to Thee' opens the soaring chorus of this Elvis favorite
+  shared: sings, soul
+
+e1-w5-mix.json [HYMNAL NOTES] How Great Thou Art
+  NEW: 'Then sings my soul' rang out in this hymn at Billy Graham crusades
+  OLD (Easy double / MAKE A JOYFUL NOISE): 'Then sings my soul, my Savior God, to thee' swells the refrain of this hymn
+  shared: sings, soul, hymn
+
+e1-w5-mix.json [BRAND-NEW WORDS] Band-Aids
+  NEW: A Johnson & Johnson worker invented these for his wife's kitchen cuts
+  OLD (Easy double / KISS IT & MAKE IT BETTER): This Johnson & Johnson brand became the everyday word for any small stick-on bandage
+  shared: johnson
+
+e1-w5-mix.json [BRAND-NEW WORDS] Band-Aids
+  NEW: A Johnson & Johnson worker invented these for his wife's kitchen cuts
+  OLD (Easy double / ON EVERY SHOPPING LIST): Since 1920, Johnson & Johnson's sticky little strips have covered scraped knees
+  shared: johnson
+
+e1-w5-mix.json [BRAND-NEW WORDS] the Frisbee
+  NEW: Wham-O's flying disc was named for a Connecticut pie company
+  OLD (Fresh jeopardy / TOYING WITH HISTORY): Wham-O renamed its Pluto Platter for a Connecticut pie company whose tins Yale students tossed
+  shared: wham, connecticut, pie
+
+e2-w1-hist.json [EXPLORERS' CLUB] Christopher Columbus
+  NEW: Queen Isabella and King Ferdinand of Spain backed this sailor's 1492 voyage
+  OLD (Fresh jeopardy / KEEP CALM AND CARAVEL ON): His Niña, Pinta and Santa María made landfall in the Bahamas in October 1492
+  shared: 1492
+
+e2-w1-hist.json [EXPLORERS' CLUB] Ponce de León
+  NEW: This Spanish explorer named Florida when he landed there around Easter of 1513
+  OLD (Fresh jeopardy / COMPASS AND CIRCUMSTANCE): Legend ties this Spanish explorer of Florida to a hunt for the Fountain of Youth
+  shared: explorer, florida
+
+e2-w1-hist.json [WORDS FOR THE AGES] Theodore Roosevelt
+  NEW: 'Speak softly and carry a big stick,' advised this Rough Rider president
+  OLD (Fresh jeopardy / VEEP TO THE TOP): This Rough Rider vice president, just 42, became the youngest president ever in 1901
+  shared: rough, rider
+
+e2-w1-hist.json [WORDS FOR THE AGES] Winston Churchill
+  NEW: 'This was their finest hour,' said this British prime minister in 1940
+  OLD (Fresh jeopardy / NUMBER 10): Moving into Downing Street in May 1940, he promised the Commons 'blood, toil, tears and sweat'
+  shared: 1940
+
+e2-w1-hist.json [WORDS FOR THE AGES] Winston Churchill
+  NEW: 'This was their finest hour,' said this British prime minister in 1940
+  OLD (Fresh double / THE NOBEL-EST PROFESSION): This British prime minister took the 1953 prize, honored partly for his six-volume WWII memoirs
+  shared: prime, minister
+
+e2-w1-hist.json [WORDS FOR THE AGES] Winston Churchill
+  NEW: 'This was their finest hour,' said this British prime minister in 1940
+  OLD (Fresh double / SPEECH! SPEECH!): He had 'nothing to offer but blood, toil, tears and sweat' in his first Commons speech as PM in 1940
+  shared: 1940
+
+e2-w1-hist.json [WORDS FOR THE AGES] Winston Churchill
+  NEW: 'This was their finest hour,' said this British prime minister in 1940
+  OLD (Easy jeopardy / FIGURES OF THE CENTURY): Cigar in hand, flashing a V for victory, this prime minister vowed to 'never surrender'
+  shared: prime, minister
+
+e2-w1-hist.json [WORDS FOR THE AGES] Winston Churchill
+  NEW: 'This was their finest hour,' said this British prime minister in 1940
+  OLD (Easy final / FINEST HOURS): Taking office in 1940, this prime minister offered Britain 'blood, toil, tears and sweat.'
+  shared: 1940, prime, minister
+
+e2-w1-hist.json [ROYAL ROUNDUP] Elizabeth II
+  NEW: Crowned in 1953, she sat on Britain's throne longer than any monarch before her
+  OLD (Easy double / THE WHOLE COUNTRY TUNED IN): In 1953 TV cameras in Westminster Abbey showed the world this young monarch's coronation
+  shared: 1953, monarch
+
+e2-w1-hist.json [ROLLIN' ON THE RIVER] the Mississippi
+  NEW: Huck Finn and Jim drifted down this mighty river on a raft
+  OLD (Easy double / THE TWAIN SHALL MEET): Samuel Clemens took his pen name from a riverboat depth call on this mighty river
+  shared: mighty
+
+e2-w1-hist.json [ROLLIN' ON THE RIVER] the Rio Grande
+  NEW: Mexicans call this Texas border river the Río Bravo
+  OLD (Easy jeopardy / WATER, WATER EVERYWHERE): This river forms the entire Texas-Mexico border on its way to the Gulf
+  shared: texas, border
+
+e2-w1-hist.json [ROLLIN' ON THE RIVER] the Missouri
+  NEW: Lewis and Clark's Corps of Discovery paddled up this 'Big Muddy' river in 1804
+  OLD (Easy jeopardy / OL' MAN RIVER): Lewis & Clark paddled up this long river that joins the Mississippi near St. Louis
+  shared: lewis, clark, paddled
+
+e2-w1-hist.json [ROLLIN' ON THE RIVER] the Missouri
+  NEW: Lewis and Clark's Corps of Discovery paddled up this 'Big Muddy' river in 1804
+  OLD (Campaign / MEANWHILE, 1804): Lewis and Clark left St. Louis in 1804 and headed up this river on their way toward the Pacific
+  shared: lewis, clark, 1804
+
+e2-w1-hist.json [BLUE AND GRAY] Harriet Tubman
+  NEW: Before guiding others north, she escaped slavery in Maryland herself in 1849
+  OLD (Fresh jeopardy / STARS OF THE STRIPES): Called 'Moses' by those she led, this Underground Railroad conductor guided dozens out of slavery
+  shared: slavery
+
+e2-w1-hist.json [LADIES OF THE HOUSE] Eleanor Roosevelt
+  NEW: FDR's wife wrote a newspaper column called 'My Day' for nearly 30 years
+  OLD (Easy jeopardy / FIRST LADIES OF THE LAND): FDR's tireless wife, she later helped shape the UN's Declaration of Human Rights
+  shared: fdr
+
+e2-w1-hist.json [NICKNAME THAT CITY] Boston
+  NEW: Baked beans simmered in molasses gave this city the nickname 'Beantown'
+  OLD (Fresh jeopardy / THAT ACTUALLY HAPPENED): In 1919 a burst tank sent a wave of molasses through this city's North End, killing 21
+  shared: molasses
+
+e2-w1-hist.json [NICKNAME THAT CITY] Boston
+  NEW: Baked beans simmered in molasses gave this city the nickname 'Beantown'
+  OLD (Easy double / A SUNDAY STROLL): Cows grazed until 1830 on this Beantown green, the oldest public park in America
+  shared: beantown
+
+e2-w1-hist.json [NICKNAME THAT CITY] Seattle
+  NEW: Evergreen forests all around earned this Pacific Northwest city the name 'Emerald City'
+  OLD (Fresh jeopardy / LANDMARK AMERICA): The Space Needle went up for this Pacific Northwest city's 1962 World's Fair
+  shared: northwest
+
+e2-w1-hist.json [NICKNAME THAT CITY] Seattle
+  NEW: Evergreen forests all around earned this Pacific Northwest city the name 'Emerald City'
+  OLD (Fresh double / MIGHTY MACHINES): 'Bertha', a tunnel-boring machine over 57 feet across, dug a highway tunnel under this Pacific Northwest city
+  shared: northwest
+
+e2-w1-hist.json [NICKNAME THAT CITY] Seattle
+  NEW: Evergreen forests all around earned this Pacific Northwest city the name 'Emerald City'
+  OLD (Easy double / THEY'RE OFF!): Unbeaten when he swept the 1977 Triple Crown, he's named for a Pacific Northwest city
+  shared: northwest
+
+e2-w1-hist.json [TOGAS AND TROJANS] Cleopatra
+  NEW: Legend says this Egyptian queen died from the bite of an asp
+  OLD (Fresh final / IT'S ALL GREEK TO HER): Egypt's last active pharaoh, she was a Macedonian Greek, reputedly the first in her 275-year dynasty to learn Egyptian
+  shared: egyptian
+
+e2-w1-hist.json [TOGAS AND TROJANS] Julius Caesar
+  NEW: Shakespeare gives this Roman ruler the dying words 'Et tu, Brute?'
+  OLD (Fresh double / BEFORE & AFTER): Shakespeare's doomed Roman dictator is tossed with romaine and croutons in a dish from Tijuana
+  shared: shakespeare
+
+e2-w1-hist.json [TOGAS AND TROJANS] Alexander the Great
+  NEW: This Macedonian conqueror named cities after himself, including a famous one in Egypt
+  OLD (Fresh jeopardy / CROWNED HEADS): Dead at 32, this Macedonian king had conquered everything from Greece to the Indus
+  shared: macedonian
+
+e2-w1-hist.json [TOGAS AND TROJANS] Alexander the Great
+  NEW: This Macedonian conqueror named cities after himself, including a famous one in Egypt
+  OLD (Fresh double / HISTORY IN A BLENDER): The Macedonian conqueror tutored by Aristotle crashes Jay's lavish West Egg parties
+  shared: macedonian, conqueror
+
+e2-w1-hist.json [THE IKE AGE] Dwight D. Eisenhower
+  NEW: Campaign buttons saying 'I Like Ike' helped elect this general in 1952
+  OLD (Fresh jeopardy / WARTIME COMMANDERS IN CHIEF): Nicknamed 'Ike', this D-Day commander went on to two terms in the White House
+  shared: ike
+
+e2-w1-hist.json [THE IKE AGE] Dwight D. Eisenhower
+  NEW: Campaign buttons saying 'I Like Ike' helped elect this general in 1952
+  OLD (Easy double / THE PRESIDENTS WE WATCHED): In his 1961 farewell, this general turned president warned of the 'military-industrial complex'
+  shared: general
+
+e2-w1-hist.json [PASSPORT STAMPS] Australia
+  NEW: Sydney's sail-roofed Opera House is a landmark of this country
+  OLD (n2-w4-sci.json / WHOSE FOOD IS IT ANYWAY?): Peach Melba honors Nellie Melba, an opera soprano from this country
+  shared: opera
+
+e2-w1-hist.json [PASSPORT STAMPS] China
+  NEW: The Great Wall winds for thousands of miles across this country
+  OLD (Easy final / WALL TO WALL): Begun over 2,000 years ago to stop northern raiders, this stone barrier winds thousands of miles toward the Gobi Desert.
+  shared: winds, thousands
+
+e2-w1-hist.json [FIFTY NIFTY] Tennessee
+  NEW: Elvis Presley's Graceland mansion stands in Memphis in this state
+  OLD (Easy jeopardy / CITY, MEET STATE): Nashville and Memphis keep the music playing in this state
+  shared: memphis
+
+e2-w1-hist.json [FIFTY NIFTY] Kentucky
+  NEW: The famous gold vault at Fort Knox sits in this Bluegrass State
+  OLD (Easy jeopardy / STATE NICKNAMES): Racehorses graze in this 'Bluegrass State,' home of a famous Derby
+  shared: bluegrass
+
+e2-w2-lit.json [NAMESAKE STORIES] zeppelins
+  NEW: Count Ferdinand von Zeppelin lent his name to these cigar-shaped airships
+  OLD (Fresh jeopardy / UP, UP & AWAY): Rigid airships in general are often called these, honoring the German count who pioneered them
+  shared: airships, count
+
+e2-w2-lit.json [NAMESAKE STORIES] a Stetson
+  NEW: Philadelphia hatter John B. gave his name to this broad-brimmed cowboy hat
+  OLD (n1-w5-mix.json / CLOTHES CALL): A Philadelphia hatter's 1865 'Boss of the Plains' made his name a byword for cowboy hats
+  shared: philadelphia, hatter, cowboy
+
+e2-w2-lit.json [BACKWARD GLANCES] star
+  NEW: Spelled backward, 'rats' becomes this twinkler in the night sky
+  OLD (Fresh jeopardy / STROKE OF GENIUS): A cypress rises like a dark flame into the swirling sky of this 1889 van Gogh view from Saint-Rémy
+  shared: sky
+
+e2-w2-lit.json [BACKWARD GLANCES] star
+  NEW: Spelled backward, 'rats' becomes this twinkler in the night sky
+  OLD (Easy double / ON THE MUSEUM WALL): Van Gogh set a swirling sky and crescent moon over a sleeping village in this painting
+  shared: sky
+
+e2-w2-lit.json [POETS IN THE PARLOR] Walt Whitman
+  NEW: 'O Captain! My Captain!' was this poet's lament for Abraham Lincoln
+  OLD (Fresh jeopardy / INK-CREDIBLE LIVES): This 'Leaves of Grass' poet tended wounded soldiers in Washington's Civil War hospitals
+  shared: poet
+
+e2-w2-lit.json [LATIN FOR BEGINNERS] pro bono
+  NEW: Lawyers who take a case for free do it this way, 'for the good'
+  OLD (Fresh jeopardy / ALIAS, ALIAS): U2's frontman took his name from a Dublin hearing-aid shop whose Latin-ish sign meant 'good voice'
+  shared: good
+
+e2-w2-lit.json [OH, BOTHER!] honey
+  NEW: Winnie-the-Pooh keeps his favorite food in jars he labels 'hunny'
+  OLD (Fresh jeopardy / WEIRD SCIENCE): Low moisture starves microbes, so jars of this bee product found in Egyptian tombs were still edible
+  shared: jars
+
+e2-w2-lit.json [SAID THE BARD] Othello
+  NEW: Iago warns that jealousy is 'the green-eyed monster' in this tragedy
+  OLD (Fresh jeopardy / THE PLAY'S THE THING): A missing handkerchief helps the scheming Iago convince this Moor of Venice that his wife is unfaithful
+  shared: iago
+
+e2-w2-lit.json [SAID THE BARD] Othello
+  NEW: Iago warns that jealousy is 'the green-eyed monster' in this tragedy
+  OLD (Fresh jeopardy / BARD TO THE BONE): The ensign Iago convinces this title Moor of Venice that Desdemona is untrue
+  shared: iago
+
+e2-w3-screen.json [HOME SWEET SITCOM] The Brady Bunch
+  NEW: Mike and Carol blended six kids under one roof on this sitcom
+  OLD (Fresh jeopardy / ENSEMBLE, ASSEMBLE): Housekeeper Alice keeps order for a blended family of six kids on this 1969-74 sitcom
+  shared: blended, six, kids
+
+e2-w3-screen.json [HOME SWEET SITCOM] The Brady Bunch
+  NEW: Mike and Carol blended six kids under one roof on this sitcom
+  OLD (Easy jeopardy / TV'S FIRST FAMILIES): Six kids, housekeeper Alice and a lovely lady made up this blended TV family
+  shared: six, kids, blended
+
+e2-w3-screen.json [HOME SWEET SITCOM] Happy Days
+  NEW: The Fonz rented the room over the Cunninghams' Milwaukee garage on this sitcom
+  OLD (Fresh jeopardy / ENSEMBLE, ASSEMBLE): Richie Cunningham and pals hang out at Arnold's with the Fonz on this nostalgic sitcom
+  shared: fonz
+
+e2-w3-screen.json [BORN WITH ANOTHER NAME] Roy Rogers
+  NEW: Born Leonard Slye, he became the 'King of the Cowboys'
+  OLD (Easy double / HAPPY TRAILS): This 'King of the Cowboys' rode Trigger and sang with his wife Dale Evans
+  shared: cowboys
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Gone with the Wind
+  NEW: Atlanta burns and Tara survives in this 1939 epic of the Old South
+  OLD (Fresh jeopardy / LEADING LADIES OF LIT): Scarlett O'Hara schemes to save Tara in this Pulitzer-winning Margaret Mitchell epic
+  shared: tara
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Gone with the Wind
+  NEW: Atlanta burns and Tara survives in this 1939 epic of the Old South
+  OLD (Fresh jeopardy / SAY THE LINE): Rhett Butler exits this 1939 epic telling Scarlett that, frankly, he doesn't give a damn
+  shared: 1939
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Gone with the Wind
+  NEW: Atlanta burns and Tara survives in this 1939 epic of the Old South
+  OLD (Fresh jeopardy / STATUETTE OF LIMITATIONS): Vivien Leigh won an Oscar for playing Scarlett O'Hara in this 1939 Civil War epic
+  shared: 1939
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Gone with the Wind
+  NEW: Atlanta burns and Tara survives in this 1939 epic of the Old South
+  OLD (Fresh double / AND THE FIRST OSCAR GOES TO...): Hattie McDaniel became the first Black Oscar winner for playing Mammy in this 1939 epic
+  shared: 1939
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Gone with the Wind
+  NEW: Atlanta burns and Tara survives in this 1939 epic of the Old South
+  OLD (Easy jeopardy / A NIGHT AT THE PICTURES): Scarlett O'Hara vows she'll never go hungry again in this 1939 Civil War epic
+  shared: 1939
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Gone with the Wind
+  NEW: Atlanta burns and Tara survives in this 1939 epic of the Old South
+  OLD (Easy final / HOLLYWOOD'S GOLDEN AGE): Scarlett O'Hara vows 'tomorrow is another day' at the end of this 1939 Civil War epic.
+  shared: 1939
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Mary Poppins
+  NEW: Julie Andrews won an Oscar in her very first film, as a flying nanny
+  OLD (Fresh jeopardy / ROLE WITH IT): Julie Andrews drifted in by umbrella as this 'practically perfect' London nanny in 1964
+  shared: julie, andrews, nanny
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Mary Poppins
+  NEW: Julie Andrews won an Oscar in her very first film, as a flying nanny
+  OLD (Easy jeopardy / MUSICALS AT THE MOVIES): A practically perfect nanny floats in by umbrella in this 1964 Disney musical
+  shared: nanny
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Mary Poppins
+  NEW: Julie Andrews won an Oscar in her very first film, as a flying nanny
+  OLD (ef-w2-lit.json / PRACTICALLY PERFECT PAGES): P.L. Travers' 1934 book about a nanny who blows in on the east wind became this beloved 1964 Disney film
+  shared: nanny
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Ben-Hur
+  NEW: Charlton Heston played a Jewish prince turned galley slave in this 1959 Best Picture
+  OLD (Fresh jeopardy / BEST PICTURE, OLD SCHOOL): Charlton Heston's chariot race helped this 1959 Roman-era epic haul in a then-record 11 Oscars
+  shared: charlton, heston, 1959
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Ben-Hur
+  NEW: Charlton Heston played a Jewish prince turned galley slave in this 1959 Best Picture
+  OLD (Easy jeopardy / BIG SCREEN EPICS): A thundering chariot race helped this 1959 epic win 11 Oscars
+  shared: 1959
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] Ben-Hur
+  NEW: Charlton Heston played a Jewish prince turned galley slave in this 1959 Best Picture
+  OLD (Easy jeopardy / A NIGHT AT THE PICTURES): Charlton Heston drives a chariot in this 1959 epic that won 11 Oscars
+  shared: charlton, heston, 1959
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] The African Queen
+  NEW: Katharine Hepburn's prim missionary pours Bogart's gin overboard in this 1951 film
+  OLD (Easy jeopardy / A NIGHT AT THE PICTURES): Bogart won his only Oscar as a riverboat captain opposite Hepburn in this 1951 film
+  shared: bogart, hepburn, 1951
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] High Noon
+  NEW: Grace Kelly played the Quaker bride of Gary Cooper's marshal in this 1952 film
+  OLD (Easy jeopardy / HOW THE WEST WAS FUN): Gary Cooper's marshal awaits a midday train full of killers in this 1952 western
+  shared: gary, cooper, marshal, 1952
+
+e2-w3-screen.json [OSCAR NIGHT MEMORIES] High Noon
+  NEW: Grace Kelly played the Quaker bride of Gary Cooper's marshal in this 1952 film
+  OLD (Easy double / WAY OUT WEST): Gary Cooper's marshal faces the Miller gang alone as the clock ticks in this 1952 Western
+  shared: gary, cooper, marshal, 1952
+
+e2-w3-screen.json [THE KING'S THINGS] Graceland
+  NEW: Elvis bought this Memphis estate in 1957, when he was just 22
+  OLD (Easy jeopardy / ALL SHOOK UP): Elvis's Memphis mansion, now a museum drawing millions of fans, goes by this name
+  shared: elvis, memphis
+
+e2-w3-screen.json [THE KING'S THINGS] Graceland
+  NEW: Elvis bought this Memphis estate in 1957, when he was just 22
+  OLD (Easy double / ELVIS HAS ENTERED THE BUILDING): Tourists still stroll past the Jungle Room at this Memphis mansion Elvis called home
+  shared: memphis, elvis
+
+e2-w3-screen.json [THE KING'S THINGS] Graceland
+  NEW: Elvis bought this Memphis estate in 1957, when he was just 22
+  OLD (Easy double / THE GREAT AMERICAN ROAD TRIP): Fans line up in Memphis to tour this mansion, the longtime home of Elvis Presley
+  shared: memphis, elvis
+
+e2-w3-screen.json [THE KING'S THINGS] Tupelo
+  NEW: Elvis got his first guitar at a hardware store in this Mississippi hometown
+  OLD (Easy jeopardy / ALL SHOOK UP): Elvis was born in a two-room house in this Mississippi town in 1935
+  shared: elvis, mississippi
+
+e2-w3-screen.json [THE KING'S THINGS] Tupelo
+  NEW: Elvis got his first guitar at a hardware store in this Mississippi hometown
+  OLD (Easy double / ELVIS HAS ENTERED THE BUILDING): Long before Memphis, Elvis was born in a two-room house in this Mississippi town
+  shared: elvis, mississippi
+
+e2-w3-screen.json [BROADWAY BABIES] The Music Man
+  NEW: Robert Preston played a con man selling boys' band uniforms in Iowa in this show
+  OLD (Fresh jeopardy / SHOW TUNES): Con man Harold Hill pictures 'Seventy-Six Trombones' parading through River City in this show
+  shared: con
+
+e2-w3-screen.json [BROADWAY BABIES] The Music Man
+  NEW: Robert Preston played a con man selling boys' band uniforms in Iowa in this show
+  OLD (Fresh jeopardy / DOUBLE FEATURE FUSIONS): The singing Alpine governess climbs every mountain to River City, where a con man promises 76 trombones
+  shared: con
+
+e2-w3-screen.json [BROADWAY BABIES] The Music Man
+  NEW: Robert Preston played a con man selling boys' band uniforms in Iowa in this show
+  OLD (Easy jeopardy / FROM STAGE TO SCREEN): Con man Harold Hill sells River City on 76 trombones in this show
+  shared: con
+
+e2-w3-screen.json [BROADWAY BABIES] The Music Man
+  NEW: Robert Preston played a con man selling boys' band uniforms in Iowa in this show
+  OLD (Easy double / THE GREAT WHITE WAY): Salesman Harold Hill promises River City a boys' band in this '76 Trombones' show
+  shared: boys
+
+e2-w3-screen.json [BROADWAY BABIES] Gypsy
+  NEW: Stage mother Rose pushes her daughters into vaudeville in this musical
+  OLD (Fresh jeopardy / ON WITH THE SHOW): Ethel Merman originated ferocious stage mother Rose in this 1959 backstage musical
+  shared: stage, rose
+
+e2-w3-screen.json [BROADWAY BABIES] Gypsy
+  NEW: Stage mother Rose pushes her daughters into vaudeville in this musical
+  OLD (Easy double / CHARACTERS TAKE THE STAGE): Ethel Merman's Mama Rose is the ultimate stage mother in this musical about a burlesque star
+  shared: rose, stage
+
+e2-w3-screen.json [TUNING IN THE RADIO] Edgar Bergen
+  NEW: Candice, the star of TV's 'Murphy Brown,' is the daughter of this radio ventriloquist
+  OLD (Easy double / COMEDY ON THE DIAL): Ventriloquism somehow worked on radio for this man and his monocled dummy Charlie McCarthy
+  shared: radio
+
+e2-w3-screen.json [WHEN YOU WISH UPON A FILM] Snow White
+  NEW: Seven little miners take in a runaway princess in this 1937 film
+  OLD (Fresh jeopardy / DRAWN TO STARDOM): For this 1937 film, Disney's first animated feature, Walt got an honorary Oscar plus 7 miniature ones
+  shared: 1937
+
+e2-w3-screen.json [WHEN YOU WISH UPON A FILM] Snow White
+  NEW: Seven little miners take in a runaway princess in this 1937 film
+  OLD (Fresh final / DRAWN TO GREATNESS): Skeptics dubbed it 'Disney's Folly', but this 1937 feature earned Walt an honorary Oscar: one statuette plus 7 miniatures
+  shared: 1937
+
+e2-w3-screen.json [WHEN YOU WISH UPON A FILM] Snow White
+  NEW: Seven little miners take in a runaway princess in this 1937 film
+  OLD (Easy jeopardy / CLASSIC DISNEY): Disney's first feature-length cartoon sent a princess to live with Doc, Grumpy and friends
+  shared: princess
+
+e2-w3-screen.json [WHEN YOU WISH UPON A FILM] Snow White
+  NEW: Seven little miners take in a runaway princess in this 1937 film
+  OLD (Easy final / FAIREST OF THEM ALL): Walt Disney's first full-length cartoon, from 1937, sent a princess to keep house for a bashful, sleepy, grumpy band of miners.
+  shared: 1937, princess, miners
+
+e2-w3-screen.json [WHEN YOU WISH UPON A FILM] Pinocchio
+  NEW: This wooden boy's nose grows whenever he tells a lie
+  OLD (Easy jeopardy / CLASSIC DISNEY): Jiminy Cricket sings 'When You Wish Upon a Star' in this tale of a wooden boy
+  shared: wooden
+
+e2-w3-screen.json [WHEN YOU WISH UPON A FILM] Pinocchio
+  NEW: This wooden boy's nose grows whenever he tells a lie
+  OLD (e1-w2-lit.json / BOYS BETWEEN THE COVERS): This wooden puppet's nose grows a little longer with every fib
+  shared: wooden, nose, grows
+
+e2-w3-screen.json [WHEN YOU WISH UPON A FILM] Dumbo
+  NEW: A baby elephant learns to fly with his giant ears in this 1941 film
+  OLD (Fresh jeopardy / CRITTER-ACCLAIMED): Oversized ears let this 1941 Disney circus elephant take flight, with a 'magic' feather for luck
+  shared: ears, 1941, elephant
+
+e2-w3-screen.json [WHEN YOU WISH UPON A FILM] Lady and the Tramp
+  NEW: Two dogs share a strand of spaghetti in this 1955 film
+  OLD (Easy jeopardy / CLASSIC DISNEY): A pampered cocker spaniel and a streetwise mutt share spaghetti in this 1955 romance
+  shared: share, spaghetti, 1955
+
+e2-w3-screen.json [WHEN YOU WISH UPON A FILM] Fantasia
+  NEW: Mickey Mouse plays the Sorcerer's Apprentice in this 1940 concert film
+  OLD (Easy jeopardy / CLASSIC DISNEY): Mickey dons a sorcerer's hat in this 1940 film set to classical music
+  shared: mickey, sorcerer, 1940
+
+e2-w3-screen.json [GRAND OLE OPRY-TUNITIES] Dolly Parton
+  NEW: This big-haired singer wrote 'Jolene' and starred in the film '9 to 5'
+  OLD (Fresh double / PET PROJECTS): Cloned from an udder cell in 1996, this Scottish sheep was named for a big-haired country superstar
+  shared: haired
+
+e2-w3-screen.json [GRAND OLE OPRY-TUNITIES] Dolly Parton
+  NEW: This big-haired singer wrote 'Jolene' and starred in the film '9 to 5'
+  OLD (Easy jeopardy / CLASSIC COUNTRY): This Tennessee songbird wrote 'Jolene' and lends her name to a theme park
+  shared: jolene
+
+e2-w3-screen.json [GRAND OLE OPRY-TUNITIES] Glen Campbell
+  NEW: This Arkansas guitarist hit No. 1 in 1975 as a 'Rhinestone Cowboy'
+  OLD (Easy jeopardy / GRAND OLE LEGENDS): This 'Rhinestone Cowboy' also spent time on the job as a 'Wichita Lineman'
+  shared: rhinestone, cowboy
+
+e2-w3-screen.json [MATINEE MONSTERS] King Kong
+  NEW: This giant ape climbs the Empire State Building in 1933
+  OLD (Fresh jeopardy / DOUBLE FEATURE FUSIONS): Simba's Disney savanna saga crashes into the giant movie ape who scaled the Empire State Building
+  shared: ape, empire, building
+
+e2-w3-screen.json [MATINEE MONSTERS] Dracula
+  NEW: Bela Lugosi played this Transylvanian count in 1931
+  OLD (Fresh final / MAIL BONDING): Told entirely in letters, diaries and news clippings, this 1897 Gothic novel tracks a count's sea voyage aboard the Demeter
+  shared: count
+
+e2-w3-screen.json [SING-ALONG STANDARDS] Over the Rainbow
+  NEW: A Kansas farm girl longs for bluebirds and lemon drops in this 1939 ballad
+  OLD (Easy jeopardy / TUNES FROM THE BIG SCREEN): Judy Garland sang this Oscar-winning ballad about a place where bluebirds fly
+  shared: ballad, bluebirds
+
+e2-w4-sci.json [WHO'S A GOOD DOG?] a beagle
+  NEW: Charlie Brown's dog Snoopy belongs to this floppy-eared breed
+  OLD (Fresh jeopardy / RHYME TIME): A small floppy-eared hunting hound carrying himself with the bearing of a king
+  shared: floppy, eared
+
+e2-w4-sci.json [WHO'S A GOOD DOG?] a Dalmatian
+  NEW: Firehouses adopted this spotted breed that once ran beside horse-drawn engines
+  OLD (Fresh jeopardy / PUP QUIZ): Cruella de Vil coveted the spotted coats of this breed named for a coastal region of Croatia
+  shared: spotted, breed
+
+e2-w4-sci.json [WHO'S A GOOD DOG?] a Dalmatian
+  NEW: Firehouses adopted this spotted breed that once ran beside horse-drawn engines
+  OLD (Easy jeopardy / MAN'S BEST FRIEND): This white breed with black spots is the classic firehouse dog
+  shared: breed
+
+e2-w4-sci.json [WHO'S A GOOD DOG?] corgis
+  NEW: Queen Elizabeth II kept more than 30 of these short-legged Welsh herders
+  OLD (Easy jeopardy / MAN'S BEST FRIEND): Queen Elizabeth II famously adored this short-legged Welsh herding breed
+  shared: elizabeth, short, legged, welsh
+
+e2-w4-sci.json [SUNDAY SUPPER] a turkey
+  NEW: Stuffed and roasted, this big bird is the star of the Thanksgiving table
+  OLD (Fresh jeopardy / IDIOMS OFF THE LEASH): Quit cigarettes all at once and you've gone 'cold' as this Thanksgiving bird
+  shared: thanksgiving
+
+e2-w4-sci.json [SUNDAY SUPPER] a turkey
+  NEW: Stuffed and roasted, this big bird is the star of the Thanksgiving table
+  OLD (Easy jeopardy / DOWN AT THE LANES): Three strikes in a row earn this nickname you might also see on a Thanksgiving table
+  shared: thanksgiving, table
+
+e2-w4-sci.json [SUNDAY SUPPER] a turkey
+  NEW: Stuffed and roasted, this big bird is the star of the Thanksgiving table
+  OLD (Easy double / GIVING THANKS): Norman Rockwell's 'Freedom from Want' shows Grandma serving this roasted bird
+  shared: roasted
+
+e2-w4-sci.json [SUNDAY SUPPER] braising
+  NEW: A pot roast is browned, then cooked low and slow in a covered pot by this method
+  OLD (Easy jeopardy / WHAT'S COOKING?): Slow-cooking a tough cut partly covered in liquid, as with pot roast, is called this
+  shared: slow, covered, pot, roast
+
+e2-w4-sci.json [WHITE COAT WONDERS] Isaac Newton
+  NEW: His three laws of motion made this Englishman a giant of physics
+  OLD (Fresh jeopardy / GRAVITY & OTHER ATTRACTIONS): Legend says an apple falling from a tree got this Englishman thinking about universal gravitation
+  shared: englishman
+
+e2-w4-sci.json [WHITE COAT WONDERS] Isaac Newton
+  NEW: His three laws of motion made this Englishman a giant of physics
+  OLD (Fresh jeopardy / EUREKA MOMENTS): Legend says a falling apple in a Lincolnshire orchard got this Englishman thinking about gravity
+  shared: englishman
+
+e2-w4-sci.json [WHITE COAT WONDERS] Jonas Salk
+  NEW: Church bells rang across America in 1955 when his polio vaccine was declared safe
+  OLD (Easy double / THE NIFTY FIFTIES): Parents cheered in 1955 when this doctor's vaccine tamed the summer terror of polio
+  shared: 1955, vaccine, polio
+
+e2-w4-sci.json [WHITE COAT WONDERS] Jonas Salk
+  NEW: Church bells rang across America in 1955 when his polio vaccine was declared safe
+  OLD (Easy final / SUMMERS WITHOUT FEAR): Asked who held the patent on his 1955 polio vaccine, this doctor answered, 'Could you patent the sun?'
+  shared: 1955, polio, vaccine
+
+e2-w4-sci.json [WHITE COAT WONDERS] Charles Darwin
+  NEW: A voyage aboard HMS Beagle led this naturalist to his theory of evolution
+  OLD (Fresh jeopardy / MINDS OVER MATTER): Galápagos wildlife helped this naturalist shape his theory of evolution by natural selection
+  shared: naturalist, theory, evolution
+
+e2-w4-sci.json [WHITE COAT WONDERS] Charles Darwin
+  NEW: A voyage aboard HMS Beagle led this naturalist to his theory of evolution
+  OLD (Campaign / 1809: THE WORLD AT THE ZENITH): Born the same day in February 1809: Abraham Lincoln and this English naturalist
+  shared: naturalist
+
+e2-w4-sci.json [WHITE COAT WONDERS] Louis Pasteur
+  NEW: The heat treatment that makes milk safe to drink is named for this French scientist
+  OLD (Fresh double / GERM OF AN IDEA): Gentle heating that keeps milk safe is named for this Frenchman, who also developed a rabies vaccine
+  shared: milk, safe
+
+e2-w4-sci.json [WHITE COAT WONDERS] Galileo
+  NEW: Church leaders confined this Italian astronomer for saying Earth circles the sun
+  OLD (Fresh double / HISTORY ON TRIAL): The Inquisition made this astronomer recant in 1633, but he supposedly muttered 'and yet it moves'
+  shared: astronomer
+
+e2-w4-sci.json [WE ALL SCREAM] marshmallows
+  NEW: Rocky road ice cream mixes chocolate with nuts and chunks of these
+  OLD (Fresh jeopardy / SWEET TOOTH): A s'more sandwiches chocolate and this fire-roasted puff between two graham crackers
+  shared: chocolate
+
+e2-w4-sci.json [TREE-MENDOUS] maple
+  NEW: A red leaf from this tree sits in the middle of Canada's flag
+  OLD (Fresh jeopardy / MAY THE FOREST BE WITH YOU): A stylized 11-point leaf of this syrup-giving tree anchors the center of Canada's flag
+  shared: leaf, canada, flag
+
+e2-w4-sci.json [TREE-MENDOUS] maple
+  NEW: A red leaf from this tree sits in the middle of Canada's flag
+  OLD (Easy double / SHADY CHARACTERS): Canada put this tree's leaf on its flag, and its boiled sap sweetens your pancakes
+  shared: canada, leaf, flag
+
+e2-w4-sci.json [TREE-MENDOUS] the willow
+  NEW: Its long, drooping branches give this riverside tree a 'weeping' look
+  OLD (Fresh jeopardy / MAY THE FOREST BE WITH YOU): Long, drooping branches give this waterside tree its mournful name and curtain-like silhouette
+  shared: drooping, branches, give
+
+e2-w4-sci.json [TREE-MENDOUS] the willow
+  NEW: Its long, drooping branches give this riverside tree a 'weeping' look
+  OLD (Easy double / SHADY CHARACTERS): This 'sad'-sounding tree trails long, drooping branches over the edge of a pond
+  shared: drooping, branches
+
+e2-w4-sci.json [LITTLE ONES] a cygnet
+  NEW: The ugly duckling of the fairy tale was really one of these baby swans
+  OLD (Fresh jeopardy / BABES IN THE WOODS): Andersen's 'ugly duckling' was no duckling at all but this baby swan
+  shared: ugly, duckling, baby
+
+e2-w4-sci.json [SEA CREATURE COMFORTS] an octopus
+  NEW: This eight-armed sea creature squirts a cloud of ink to escape
+  OLD (Fresh jeopardy / CREATURE DISCOMFORTS): This eight-armed sea creature pumps blue blood with its three hearts
+  shared: eight, armed, creature
+
+e2-w4-sci.json [SEA CREATURE COMFORTS] an octopus
+  NEW: This eight-armed sea creature squirts a cloud of ink to escape
+  OLD (Fresh jeopardy / CREATURES OF THE SEA): Eight arms, three hearts and a squirt of ink to cover its escape: that's this mollusk
+  shared: eight, ink, escape
+
+e2-w4-sci.json [SEA CREATURE COMFORTS] the seahorse
+  NEW: In this curly-tailed little fish, it's the father who carries the babies
+  OLD (Fresh jeopardy / CREATURES OF THE SEA): Among these fish, it's the male who carries the developing young in a pouch until they hatch
+  shared: fish, carries
+
+e2-w4-sci.json [SEA CREATURE COMFORTS] the seahorse
+  NEW: In this curly-tailed little fish, it's the father who carries the babies
+  OLD (Fresh jeopardy / GO FISH): Among these curly-tailed fish, dad does the mothering, carrying the eggs in a belly pouch
+  shared: curly, tailed, fish
+
+e2-w4-sci.json [SEA CREATURE COMFORTS] the blue whale
+  NEW: Tiny krill feed this ocean giant, which can grow nearly 100 feet long
+  OLD (Fresh jeopardy / CREATURES OF THE SEA): The largest animal ever to live, this filter feeder gorges on tiny krill
+  shared: krill
+
+e2-w4-sci.json [SEA CREATURE COMFORTS] the blue whale
+  NEW: Tiny krill feed this ocean giant, which can grow nearly 100 feet long
+  OLD (Easy final / BIG BLUE): Larger than any dinosaur, this ocean giant is the biggest animal ever known to live.
+  shared: ocean
+
+e2-w4-sci.json [THE HOLIDAY TABLE] Hanukkah
+  NEW: Crispy potato latkes are fried in oil for this eight-night holiday
+  OLD (Fresh jeopardy / LIGHT UP THE NIGHT): During this winter festival, a ninth 'helper' candle called the shamash lights the other eight
+  shared: eight
+
+e2-w4-sci.json [THE HOLIDAY TABLE] Hanukkah
+  NEW: Crispy potato latkes are fried in oil for this eight-night holiday
+  OLD (Fresh jeopardy / FAITH ACCOMPLI): One day's oil lasting eight in the rededicated Temple is the miracle behind this Jewish festival
+  shared: oil, eight
+
+e2-w4-sci.json [THE HOLIDAY TABLE] Hanukkah
+  NEW: Crispy potato latkes are fried in oil for this eight-night holiday
+  OLD (Easy final / HOLIDAY HISTORY): An eight-night Festival of Lights, its name means 'dedication' and its special lamp holds nine candles.
+  shared: eight
+
+e2-w4-sci.json [PUSH-BUTTON LIVING] TV dinners
+  NEW: Swanson's 1953 foil-tray meals were named for the new box in the living room
+  OLD (Easy double / KNOBS & ANTENNAS): Swanson's 1950s frozen turkey meal came in a tray made for eating in front of the set
+  shared: swanson, tray
+
+e2-w4-sci.json [PUSH-BUTTON LIVING] Tupperware
+  NEW: Brownie Wise made home parties the way to buy this brand of plastic food containers
+  OLD (Easy double / MOD CONS): Sold at home parties, these plastic food containers sealed in freshness with a famous 'burp'
+  shared: parties, plastic, food, containers
+
+e2-w4-sci.json [PUSH-BUTTON LIVING] the remote control
+  NEW: Zenith's 1950 'Lazy Bones' was an early one of these, tied to the TV by a cable
+  OLD (Easy double / MOD CONS): Zenith's 'Lazy Bones' and 'Space Command' were early versions of this couch potato's clicker
+  shared: zenith, lazy, bones, early
+
+e2-w4-sci.json [WEATHER-WISE] a rainbow
+  NEW: Irish legend puts a leprechaun's pot of gold where this colorful arc touches down
+  OLD (Fresh jeopardy / GOING VIRAL: THE CLASSICS): 'What does it MEAN?' In 2010 a man near Yosemite wept for joy at this twinned arc of color
+  shared: arc
+
+e2-w4-sci.json [WEATHER-WISE] a rainbow
+  NEW: Irish legend puts a leprechaun's pot of gold where this colorful arc touches down
+  OLD (Fresh jeopardy / CLOUD NINE): Sunlight bending through raindrops paints this colorful arc across the sky
+  shared: colorful, arc
+
+e2-w4-sci.json [WEATHER-WISE] a rainbow
+  NEW: Irish legend puts a leprechaun's pot of gold where this colorful arc touches down
+  OLD (Easy double / WEATHER OR NOT): Sunlight bending through leftover raindrops paints this seven-colored arc across the sky
+  shared: arc
+
+e2-w4-sci.json [WEATHER-WISE] lightning
+  NEW: Thunder is the sound made by this bright flash in a storm
+  OLD (Fresh jeopardy / HAIL YES): Count the seconds between this flash and the thunder to gauge how far away a storm is
+  shared: flash, thunder, storm
+
+e2-w4-sci.json [A PINCH OF THIS] cinnamon
+  NEW: Rolled-up tree bark gives us this sweet spice for apple pie
+  OLD (Easy jeopardy / THE SPICE RACK): This sweet bark spice flavors breakfast rolls often topped with cream cheese icing
+  shared: sweet, bark, spice
+
+e2-w4-sci.json [A PINCH OF THIS] paprika
+  NEW: A dusting of this red powder tops a plate of deviled eggs
+  OLD (Fresh jeopardy / SEASONED PROFESSIONALS): Hungarian cooks stir this red powder of dried ground peppers into goulash by the spoonful
+  shared: powder
+
+e2-w4-sci.json [A PINCH OF THIS] paprika
+  NEW: A dusting of this red powder tops a plate of deviled eggs
+  OLD (Easy jeopardy / THE SPICE RACK): Deviled eggs and potato salad traditionally get a sprinkle of this mild red spice
+  shared: deviled, eggs
+
+e2-w4-sci.json [A PINCH OF THIS] saffron
+  NEW: Threads from a purple crocus flower give us this costly golden spice
+  OLD (Fresh jeopardy / SEASONED PROFESSIONALS): Each purple crocus yields just three crimson threads of this, the priciest spice by weight
+  shared: purple, crocus, threads, spice
+
+e2-w4-sci.json [A PINCH OF THIS] saffron
+  NEW: Threads from a purple crocus flower give us this costly golden spice
+  OLD (Fresh final / WORTH ITS WEIGHT): It takes roughly 150 crocus flowers, each plucked by hand, to yield a single gram of the world's costliest spice
+  shared: crocus, spice
+
+e2-w4-sci.json [A PINCH OF THIS] saffron
+  NEW: Threads from a purple crocus flower give us this costly golden spice
+  OLD (Easy jeopardy / THE SPICE RACK): Hand-picked from crocuses, this costly spice gives paella its golden color
+  shared: costly, spice
+
+e2-w5-mix.json [PARLOR GAMES] charades
+  NEW: Players act out movie titles without saying a word in this party game
+  OLD (Fresh jeopardy / PARLOR TRICKS): Tugging an earlobe for 'sounds like' is legal, but speaking is not, in this act-it-out parlor game
+  shared: act
+
+e2-w5-mix.json [PARLOR GAMES] Yahtzee
+  NEW: Players roll five dice hoping for a full house or a large straight in this game
+  OLD (Fresh jeopardy / DICE, DICE, BABY): Five of a kind scores 50 in this shake-and-roll dice game whose name doubles as a victory shout
+  shared: roll, dice
+
+e2-w5-mix.json [PARLOR GAMES] Yahtzee
+  NEW: Players roll five dice hoping for a full house or a large straight in this game
+  OLD (Easy jeopardy / GAMES GRANDMA TAUGHT YOU): Five of a kind is worth 50 points and a happy shout in this five-dice game
+  shared: dice
+
+e2-w5-mix.json [FOOTBALL SUNDAYS] Joe Namath
+  NEW: This Jets quarterback once wore pantyhose in a TV commercial
+  OLD (Fresh jeopardy / NICKNAME HALL OF FAME): 'Broadway Joe', this flashy Jets quarterback guaranteed a win in Super Bowl III, then delivered it
+  shared: jets, quarterback
+
+e2-w5-mix.json [FOOTBALL SUNDAYS] the Heisman Trophy
+  NEW: College football's top award honors a coach whose Georgia Tech team once won 222-0
+  OLD (Easy double / AUTUMN SATURDAYS): Each season college football's finest player takes home this bronze stiff-arm award
+  shared: college, football, award
+
+e2-w5-mix.json [INK-REDIBLE STRIPS] Snoopy
+  NEW: This beagle's daydreams make him a World War I flying ace
+  OLD (Easy double / SUNDAY MORNING COMICS): Charlie Brown's beagle, he types his novel on the roof of his doghouse
+  shared: beagle
+
+e2-w5-mix.json [INK-REDIBLE STRIPS] Blondie
+  NEW: Dagwood Bumstead's wife gave her name to this long-running strip
+  OLD (Easy double / SUNDAY MORNING COMICS): Dagwood Bumstead's wife gives this comic strip, begun in 1930, its title
+  shared: dagwood, bumstead, strip
+
+e2-w5-mix.json [INK-REDIBLE STRIPS] Li'l Abner
+  NEW: Al Capp's hillbilly strip was set in the town of Dogpatch
+  OLD (Easy double / THE FUNNY PAGES): Al Capp's hillbilly strip about the folks of Dogpatch gave America Sadie Hawkins Day
+  shared: capp, hillbilly, strip, dogpatch
+
+e2-w5-mix.json [POSTCARD PICKS] Pisa
+  NEW: Galileo is said to have dropped balls from the famous tower of this Italian city
+  OLD (Fresh jeopardy / EURO TRIP): Soft soil gave this Italian city's marble bell tower its world-famous tilt
+  shared: tower
+
+e2-w5-mix.json [POSTCARD PICKS] Pisa
+  NEW: Galileo is said to have dropped balls from the famous tower of this Italian city
+  OLD (Fresh double / THE EXPERIMENT WORKED): Legend has Galileo dropping cannonballs off this tilted landmark to test how objects fall
+  shared: galileo
+
+e2-w5-mix.json [POSTCARD PICKS] Mount Rushmore
+  NEW: Sculptor Gutzon Borglum died months before work stopped on this granite memorial
+  OLD (Fresh jeopardy / MONUMENTAL ACHIEVEMENTS): Four presidents' 60-foot faces gaze from this granite memorial in South Dakota's Black Hills
+  shared: granite, memorial
+
+e2-w5-mix.json [POSTCARD PICKS] Mount Rushmore
+  NEW: Sculptor Gutzon Borglum died months before work stopped on this granite memorial
+  OLD (Easy jeopardy / WISH YOU WERE HERE): Four presidents' faces gaze from a granite cliff in South Dakota's Black Hills
+  shared: granite
+
+e2-w5-mix.json [POSTCARD PICKS] Mount Rushmore
+  NEW: Sculptor Gutzon Borglum died months before work stopped on this granite memorial
+  OLD (e1-w1-hist.json / STARS AND STRIPES SIGHTS): Sculptor Gutzon Borglum spent 14 years carving this South Dakota memorial
+  shared: sculptor, gutzon, borglum, memorial
+
+e2-w5-mix.json [POSTCARD PICKS] the Gateway Arch
+  NEW: Tiny egg-shaped tram pods carry riders up inside this St. Louis landmark
+  OLD (Easy jeopardy / COAST-TO-COAST LANDMARKS): St. Louis honors the pioneers who headed west with this 630-foot steel curve
+  shared: louis
+
+e2-w5-mix.json [POSTCARD PICKS] the Gateway Arch
+  NEW: Tiny egg-shaped tram pods carry riders up inside this St. Louis landmark
+  OLD (Easy jeopardy / WISH YOU WERE HERE): This gleaming 630-foot St. Louis monument salutes the pioneers who headed west
+  shared: louis
+
+e2-w5-mix.json [POSTCARD PICKS] the Gateway Arch
+  NEW: Tiny egg-shaped tram pods carry riders up inside this St. Louis landmark
+  OLD (e1-w1-hist.json / STARS AND STRIPES SIGHTS): Five-seat pods carry riders up inside the curved legs of this St. Louis monument
+  shared: pods, carry, riders, louis
+
+e2-w5-mix.json [POSTCARD PICKS] the Liberty Bell
+  NEW: Abolitionists gave this cracked Philadelphia icon its famous name
+  OLD (Easy jeopardy / THE VACATION SLIDESHOW): Cracked and silent, this Philadelphia icon of freedom once hung in Independence Hall
+  shared: cracked, philadelphia, icon
+
+e2-w5-mix.json [POSTCARD PICKS] the Liberty Bell
+  NEW: Abolitionists gave this cracked Philadelphia icon its famous name
+  OLD (ef-w1-hist.json / LET FREEDOM RING): Shipped from a London foundry in 1752, this Philadelphia icon cracked on its very first test ring and had to be recast
+  shared: philadelphia, icon, cracked
+
+e2-w5-mix.json [GOOD BOOK CLUB] Daniel
+  NEW: Thrown to the lions by order of King Darius, this prophet walked out unharmed
+  OLD (Fresh jeopardy / PROPHET MARGINS): This interpreter of Nebuchadnezzar's dreams later survived a night in the lions' den
+  shared: lions
+
+e2-w5-mix.json [GOOD BOOK CLUB] Daniel
+  NEW: Thrown to the lions by order of King Darius, this prophet walked out unharmed
+  OLD (n1-w2-lit.json / VERSE & VERNACULAR): 'The writing on the wall' appears at King Belshazzar's feast in this prophet's book
+  shared: prophet
+
+e2-w5-mix.json [NICKNAME DROPPERS] October
+  NEW: His World Series heroics made Yankee slugger Reggie Jackson 'Mister' this month
+  OLD (n2-w1-hist.json / OLD REGIMES, NEW REGIMES): Lenin's Bolsheviks seized power in this month of 1917 by Russia's old calendar, November by ours
+  shared: month
+
+e2-w5-mix.json [NICKNAME DROPPERS] Peach
+  NEW: Fierce Detroit Tigers star Ty Cobb was known as the Georgia this
+  OLD (Easy double / IT GROWS ON TREES): Georgia is nicknamed for this fuzzy tree fruit, the star of a favorite cobbler
+  shared: georgia
+
+e2-w5-mix.json [NICKNAME DROPPERS] Red Grange
+  NEW: Football's 'Galloping Ghost' starred at Illinois and for the Bears
+  OLD (Fresh jeopardy / NICKNAME HALL OF FAME): Sportswriter Grantland Rice helped dub this elusive 1920s Illinois halfback 'The Galloping Ghost'
+  shared: illinois, galloping, ghost
+
+e2-w5-mix.json [NICKNAME DROPPERS] Red Grange
+  NEW: Football's 'Galloping Ghost' starred at Illinois and for the Bears
+  OLD (Fresh jeopardy / SAY MY (NICK)NAME): 'The Galloping Ghost', this Illinois halfback drew huge crowds to the 1920s NFL with the Bears
+  shared: galloping, ghost, illinois, bears
+
+e2-w5-mix.json [STORE-Y TIME] Sears
+  NEW: Kids circled toys in the Christmas 'Wish Book' from this catalog company
+  OLD (Fresh double / BUY THE BOOK): Started by a watch-selling railroad agent, this Chicago catalog giant even sold kit houses
+  shared: catalog
+
+e2-w5-mix.json [STORE-Y TIME] Kmart
+  NEW: S.S. Kresge's five-and-dime company took this discount name in 1977
+  OLD (Easy jeopardy / THE FIVE & DIME): Sebastian Kresge's dime stores grew into this discount chain with the big red 'K'
+  shared: kresge, dime, discount
+
+e2-w5-mix.json [LOVE ALL] Wimbledon
+  NEW: Strawberries and cream are served at this London tennis tournament
+  OLD (Fresh jeopardy / HOME FIELD ADVANTAGE): Tennis's oldest major tournament has been played on the grass of this London suburb since 1877
+  shared: tennis, tournament
+
+e2-w5-mix.json [LOVE ALL] Wimbledon
+  NEW: Strawberries and cream are served at this London tennis tournament
+  OLD (Easy double / ANYONE FOR TENNIS?): The oldest of tennis's four majors is played on the grass of this London suburb
+  shared: tennis
+
+e2-w5-mix.json [LOVE ALL] Martina Navratilova
+  NEW: Chris Evert's great rival was this Czech-born lefty
+  OLD (Easy double / ANYONE FOR TENNIS?): Czech-born and left-handed, she won 18 major singles titles and ruled the 1980s
+  shared: czech
+
+e2-w5-mix.json [PAINT BY NAMES] Pablo Picasso
+  NEW: This Spaniard painted 'Guernica' after the 1937 bombing of a Basque town
+  OLD (Fresh double / SPANISH EYES): At the 1937 Paris world's fair he unveiled a vast gray canvas on the bombing of a Basque town
+  shared: 1937, bombing, basque
+
+e2-w5-mix.json [PAINT BY NAMES] Pablo Picasso
+  NEW: This Spaniard painted 'Guernica' after the 1937 bombing of a Basque town
+  OLD (Fresh final / WAR PAINT): He asked that his stark mural of a 1937 town bombing stay at New York's MoMA until democracy returned to Spain, as it did in 1981
+  shared: 1937, bombing
+
+e2-w5-mix.json [PAINT BY NAMES] Grandma Moses
+  NEW: She took up painting in her late 70s and became a folk art star
+  OLD (Fresh jeopardy / AND NOW FOR MY NEXT ACT): Arthritis turned this upstate New York farm wife from embroidery to painting in her late 70s
+  shared: painting, late, 70s
+
+e2-w5-mix.json [DANCE CARD] the Charleston
+  NEW: Flappers kicked up their heels doing this dance named for a Southern city
+  OLD (Easy double / CUTTING A RUG): Flappers went knock-kneed doing this Roaring '20s step named for a South Carolina city
+  shared: flappers, doing
+
+e2-w5-mix.json [DANCE CARD] American Bandstand
+  NEW: Dick Clark hosted this teen dance show for decades, starting out in Philadelphia
+  OLD (Easy double / JUKEBOX SATURDAY NIGHT): Philadelphia teens rated the records and danced on this long-running Dick Clark show
+  shared: philadelphia, dick, clark
+
+e2-w5-mix.json [DANCE CARD] Arthur Murray
+  NEW: He and his wife Kathryn taught America ballroom dancing on 1950s TV
+  OLD (Easy jeopardy / SWING YOUR PARTNER): This dance-studio founder taught America to fox-trot with numbered footprints
+  shared: taught
+
+e2-w5-mix.json [PASTIME PARADE] the crossword puzzle
+  NEW: Arthur Wynne's 1913 'word-cross' in a New York paper began this pastime
+  OLD (Fresh jeopardy / CROSS EXAMINATION): Arthur Wynne's diamond-shaped 1913 'word-cross' grew into this black-and-white grid pastime
+  shared: arthur, wynne, 1913, cross, pastime
+
+e2-w5-mix.json [HOME INVENTIONS] the blender
+  NEW: Bandleader Fred Waring lent his name to an early version of this kitchen appliance
+  OLD (Fresh double / TEST SUBJECTS): Hershey and Chase spun radioactive viruses in this kitchen appliance to prove DNA carries genes
+  shared: kitchen, appliance
+
+ef-w1-hist.json [FROM FRANCE, WITH LOVE] the Statue of Liberty
+  NEW: Shipped across the Atlantic in 1885 in 214 crates, this copper colossus was riveted back together on Bedloe's Island
+  OLD (Fresh jeopardy / MONUMENTAL ACHIEVEMENTS): France's copper-clad gift to America has lifted her torch over New York Harbor since 1886
+  shared: copper
+
+ef-w1-hist.json [FROM FRANCE, WITH LOVE] the Statue of Liberty
+  NEW: Shipped across the Atlantic in 1885 in 214 crates, this copper colossus was riveted back together on Bedloe's Island
+  OLD (Easy final / HUDDLED MASSES): Sculptor Bartholdi's copper lady, a gift from France, has raised her torch over New York Harbor since 1886.
+  shared: copper
+
+ef-w1-hist.json [LET FREEDOM RING] the Liberty Bell
+  NEW: Shipped from a London foundry in 1752, this Philadelphia icon cracked on its very first test ring and had to be recast
+  OLD (Easy jeopardy / THE VACATION SLIDESHOW): Cracked and silent, this Philadelphia icon of freedom once hung in Independence Hall
+  shared: cracked, philadelphia, icon
+
+ef-w1-hist.json [LET FREEDOM RING] the Liberty Bell
+  NEW: Shipped from a London foundry in 1752, this Philadelphia icon cracked on its very first test ring and had to be recast
+  OLD (e2-w5-mix.json / POSTCARD PICKS): Abolitionists gave this cracked Philadelphia icon its famous name
+  shared: cracked, philadelphia, icon
+
+ef-w2-lit.json [PRACTICALLY PERFECT PAGES] Mary Poppins
+  NEW: P.L. Travers' 1934 book about a nanny who blows in on the east wind became this beloved 1964 Disney film
+  OLD (Fresh jeopardy / ROLE WITH IT): Julie Andrews drifted in by umbrella as this 'practically perfect' London nanny in 1964
+  shared: nanny, 1964
+
+ef-w2-lit.json [PRACTICALLY PERFECT PAGES] Mary Poppins
+  NEW: P.L. Travers' 1934 book about a nanny who blows in on the east wind became this beloved 1964 Disney film
+  OLD (Easy jeopardy / MUSICALS AT THE MOVIES): A practically perfect nanny floats in by umbrella in this 1964 Disney musical
+  shared: nanny, 1964, disney
+
+ef-w2-lit.json [PRACTICALLY PERFECT PAGES] Mary Poppins
+  NEW: P.L. Travers' 1934 book about a nanny who blows in on the east wind became this beloved 1964 Disney film
+  OLD (e2-w3-screen.json / OSCAR NIGHT MEMORIES): Julie Andrews won an Oscar in her very first film, as a flying nanny
+  shared: nanny
+
+ef-w3-screen.json [HUCKLEBERRY FRIEND] Breakfast at Tiffany's
+  NEW: Audrey Hepburn sang 'Moon River' on a fire escape, guitar in hand, in this 1961 film
+  OLD (Fresh jeopardy / '90s ONE-HIT WONDERS): Deep Blue Something's 1995 hit is about a couple whose only common ground is this Audrey Hepburn film
+  shared: audrey, hepburn
+
+ef-w5-mix.json [CATALOG OF CHRISTMAS] Rudolph the Red-Nosed Reindeer
+  NEW: Copywriter Robert May created this famous misfit for a 1939 Montgomery Ward giveaway booklet
+  OLD (e1-w2-lit.json / HOLIDAY READING): Created for a 1939 Montgomery Ward booklet, this reindeer has a shiny red nose
+  shared: created, 1939, montgomery, ward, booklet
+

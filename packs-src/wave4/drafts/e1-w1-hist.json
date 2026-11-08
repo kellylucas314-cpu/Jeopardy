@@ -1,0 +1,362 @@
+[
+ {
+  "name": "PRESIDENTS IN YOUR POCKET",
+  "clues": [
+   {
+    "clue": "Honest Abe's face first turned up on the humble penny in 1909",
+    "response": "Abraham Lincoln",
+    "value": 200
+   },
+   {
+    "clue": "'Old Hickory' has gazed out from the twenty-dollar bill since 1928",
+    "response": "Andrew Jackson",
+    "value": 400
+   },
+   {
+    "clue": "Monticello sits on the back of the nickel, and its builder on the front",
+    "response": "Thomas Jefferson",
+    "value": 600
+   },
+   {
+    "clue": "After his death in 1945, this president's profile went onto the dime",
+    "response": "Franklin D. Roosevelt (FDR)",
+    "value": 800
+   },
+   {
+    "clue": "The Union's top general of the Civil War appears on the fifty-dollar bill",
+    "response": "Ulysses S. Grant",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "STARS AND STRIPES SIGHTS",
+  "clues": [
+   {
+    "clue": "Sculptor Gutzon Borglum spent 14 years carving this South Dakota memorial",
+    "response": "Mount Rushmore",
+    "value": 200
+   },
+   {
+    "clue": "In 1937 this San Francisco landmark opened as the world's longest suspension span",
+    "response": "the Golden Gate Bridge",
+    "value": 400
+   },
+   {
+    "clue": "Five-seat pods carry riders up inside the curved legs of this St. Louis monument",
+    "response": "the Gateway Arch",
+    "value": 600
+   },
+   {
+    "clue": "Irish teen Annie Moore was the first immigrant processed at this harbor station in 1892",
+    "response": "Ellis Island",
+    "value": 800
+   },
+   {
+    "clue": "A change in marble color partway up shows where work on this obelisk stalled",
+    "response": "the Washington Monument",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "OCEAN'S FIVE",
+  "clues": [
+   {
+    "clue": "Hawaii sits far out in the middle of this vast ocean",
+    "response": "the Pacific",
+    "value": 200
+   },
+   {
+    "clue": "The Titanic went down in this ocean on its maiden voyage in 1912",
+    "response": "the Atlantic",
+    "value": 400
+   },
+   {
+    "clue": "Polar bears hunt seals on the sea ice of this northernmost ocean",
+    "response": "the Arctic",
+    "value": 600
+   },
+   {
+    "clue": "Madagascar, Sri Lanka and the Maldives are all islands in these waters",
+    "response": "the Indian Ocean",
+    "value": 800
+   },
+   {
+    "clue": "Penguins swim in these icy waters that wrap all the way around Antarctica",
+    "response": "the Southern Ocean",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HOME, SWEET COLONY",
+  "clues": [
+   {
+    "clue": "About 102 passengers crowded aboard this little ship bound for the New World in 1620",
+    "response": "the Mayflower",
+    "value": 200
+   },
+   {
+    "clue": "Founded in 1607, this Virginia town was England's first lasting American settlement",
+    "response": "Jamestown",
+    "value": 400
+   },
+   {
+    "clue": "Legend says this Powhatan chief's daughter saved Captain John Smith's life",
+    "response": "Pocahontas",
+    "value": 600
+   },
+   {
+    "clue": "Using English he'd picked up abroad, this Patuxet man taught the Pilgrims to plant corn",
+    "response": "Squanto",
+    "value": 800
+   },
+   {
+    "clue": "Settled in 1587, the 'Lost Colony' vanished from this island off North Carolina",
+    "response": "Roanoke",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "WAGONS, HO!",
+  "clues": [
+   {
+    "clue": "Riders of this 1860 horseback mail relay took an oath not to swear, drink or fight",
+    "response": "the Pony Express",
+    "value": 200
+   },
+   {
+    "clue": "Folks who rushed west to hunt for California gold in 1849 got this nickname",
+    "response": "the forty-niners",
+    "value": 400
+   },
+   {
+    "clue": "Pioneers nicknamed these canvas-topped rigs 'prairie schooners'",
+    "response": "covered wagons",
+    "value": 600
+   },
+   {
+    "clue": "This 1862 law offered settlers 160 acres if they farmed the land for five years",
+    "response": "the Homestead Act",
+    "value": 800
+   },
+   {
+    "clue": "A golden spike finished the first transcontinental railroad at this Utah spot in 1869",
+    "response": "Promontory Summit (Promontory Point)",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "WHAT'LL THEY THINK OF NEXT?",
+  "clues": [
+   {
+    "clue": "Thomas Edison's Menlo Park lab made a long-lasting one of these in 1879",
+    "response": "the light bulb",
+    "value": 200
+   },
+   {
+    "clue": "His mother and his wife were both deaf, and this telephone inventor taught deaf students",
+    "response": "Alexander Graham Bell",
+    "value": 400
+   },
+   {
+    "clue": "Orville and Wilbur Wright made their first flights near this North Carolina town in 1903",
+    "response": "Kitty Hawk",
+    "value": 600
+   },
+   {
+    "clue": "Ford's moving assembly line cut the time to build this car to about 90 minutes",
+    "response": "the Model T",
+    "value": 800
+   },
+   {
+    "clue": "Edison's Pearl Street Station began selling this to Manhattan customers in 1882",
+    "response": "electricity",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "NORTHERN NEIGHBORS",
+  "clues": [
+   {
+    "clue": "Charles Blondin walked a tightrope across the gorge below this cascade in 1859",
+    "response": "Niagara Falls",
+    "value": 200
+   },
+   {
+    "clue": "Canada's Parliament meets on Parliament Hill in this capital city",
+    "response": "Ottawa",
+    "value": 400
+   },
+   {
+    "clue": "French is the main language of this big Canadian province, home of Montreal",
+    "response": "Quebec",
+    "value": 600
+   },
+   {
+    "clue": "The Mounties' formal name is the Royal Canadian this",
+    "response": "Mounted Police",
+    "value": 800
+   },
+   {
+    "clue": "Canada's Confederation talks began in 1864 in Charlottetown, this province's capital",
+    "response": "Prince Edward Island",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "KEEP THE HOME FIRES BURNING",
+  "clues": [
+   {
+    "clue": "Norman Rockwell painted this wartime factory gal for a 1943 magazine cover",
+    "response": "Rosie the Riveter",
+    "value": 200
+   },
+   {
+    "clue": "Kids gathered tin cans, old tires and pots and pans for these wartime collections",
+    "response": "scrap drives",
+    "value": 400
+   },
+   {
+    "clue": "Eleanor Roosevelt planted one of these patriotic vegetable patches at the White House",
+    "response": "a victory garden",
+    "value": 600
+   },
+   {
+    "clue": "Wardens patrolled to make sure no window glowed during these wartime lights-out drills",
+    "response": "blackouts",
+    "value": 800
+   },
+   {
+    "clue": "Families tore stamps from these booklets to buy sugar, coffee and meat",
+    "response": "ration books",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "CAPITAL CITY LIMITS",
+  "clues": [
+   {
+    "clue": "Coca-Cola was first served in 1886 in this Georgia capital",
+    "response": "Atlanta",
+    "value": 200
+   },
+   {
+    "clue": "This Gold Rush boomtown has been California's capital since 1854",
+    "response": "Sacramento",
+    "value": 400
+   },
+   {
+    "clue": "Texas named its capital for Stephen F., the 'Father of Texas'",
+    "response": "Austin",
+    "value": 600
+   },
+   {
+    "clue": "The Empire State's capital isn't the Big Apple but this city up the Hudson",
+    "response": "Albany",
+    "value": 800
+   },
+   {
+    "clue": "Florida's capital isn't Miami or Orlando but this city near the Georgia line",
+    "response": "Tallahassee",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "GREAT LAKES, GREAT TIMES",
+  "clues": [
+   {
+    "clue": "In HOMES, the handy word for remembering all five, the H stands for this one",
+    "response": "Huron (Lake Huron)",
+    "value": 200
+   },
+   {
+    "clue": "Toronto looks out over this one, the smallest of the five",
+    "response": "Lake Ontario",
+    "value": 400
+   },
+   {
+    "clue": "Cleveland and Buffalo sit on the shore of this one, the shallowest of the five",
+    "response": "Lake Erie",
+    "value": 600
+   },
+   {
+    "clue": "Sandy dunes in Indiana line the southern tip of this one",
+    "response": "Lake Michigan",
+    "value": 800
+   },
+   {
+    "clue": "Longfellow's 'Hiawatha' calls it Gitche Gumee, the shining Big-Sea-Water",
+    "response": "Lake Superior",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "TALL TALES & TRUE",
+  "clues": [
+   {
+    "clue": "Legend says this giant lumberjack's footprints filled up to become Minnesota's lakes",
+    "response": "Paul Bunyan",
+    "value": 200
+   },
+   {
+    "clue": "Real-life nurseryman John Chapman planted orchards across Ohio as this frontier legend",
+    "response": "Johnny Appleseed",
+    "value": 400
+   },
+   {
+    "clue": "Known for his coonskin cap, this Tennessee congressman died at the Alamo",
+    "response": "Davy Crockett",
+    "value": 600
+   },
+   {
+    "clue": "In the old ballad, this 'steel-driving man' beat a steam drill, then died",
+    "response": "John Henry",
+    "value": 800
+   },
+   {
+    "clue": "She could split a playing card edge-on with a bullet in Buffalo Bill's Wild West show",
+    "response": "Annie Oakley",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "OLD WORLD CAPITALS",
+  "clues": [
+   {
+    "clue": "The bell called Big Ben booms over the Houses of Parliament in this capital",
+    "response": "London",
+    "value": 200
+   },
+   {
+    "clue": "Legend says twin brothers raised by a she-wolf founded this capital",
+    "response": "Rome",
+    "value": 400
+   },
+   {
+    "clue": "Anne Frank's family hid in a secret annex in this canal city",
+    "response": "Amsterdam",
+    "value": 600
+   },
+   {
+    "clue": "The Spanish Riding School's white Lipizzaner stallions perform in this capital, not Madrid",
+    "response": "Vienna",
+    "value": 800
+   },
+   {
+    "clue": "Guinness has been brewed at St. James's Gate in this capital since 1759",
+    "response": "Dublin",
+    "value": 1000
+   }
+  ]
+ }
+]

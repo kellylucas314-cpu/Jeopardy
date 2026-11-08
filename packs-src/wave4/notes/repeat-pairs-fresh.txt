@@ -1,0 +1,1660 @@
+n1-w1-hist.json [UNDER THE BRIDGE] the Seine
+  NEW: Named for a Russian czar, the gilded Pont Alexandre III in Paris spans this river
+  OLD (Easy jeopardy / SPRINGTIME IN PARIS): This river winds through Paris beneath romantic bridges like the Pont Neuf
+  shared: pont
+
+n1-w1-hist.json [UNDER THE BRIDGE] the Grand Canal
+  NEW: Venice's Rialto Bridge, rebuilt in stone in 1591, is the oldest of four that span this waterway
+  OLD (Fresh double / CANAL KNOWLEDGE): Begun under the Sui dynasty, this 1,100-mile Chinese waterway links Beijing with Hangzhou
+  shared: waterway
+
+n1-w1-hist.json [CAPITALS BY DESIGN] Brasília
+  NEW: From the air, this South American capital opened in 1960 looks like an airplane or a bird
+  OLD (Fresh double / CAPITAL RELOCATION SERVICES): Brazil moved its capital inland in 1960 to this planned city of Niemeyer's curving concrete
+  shared: 1960
+
+n1-w1-hist.json [CAPITALS BY DESIGN] Canberra
+  NEW: American architects Walter Burley Griffin and Marion Mahony Griffin planned this Australian capital
+  OLD (Fresh double / CAPITAL RELOCATION SERVICES): Sydney-Melbourne rivalry led Australia to put its capital inland in this planned 'Bush Capital'
+  shared: planned
+
+n1-w1-hist.json [OFF THE OLD MAP] Marco Polo
+  NEW: Dictated in a Genoese prison cell, his tales of Kublai Khan's court dazzled medieval Europe
+  OLD (Fresh jeopardy / ARE WE THERE YET?): His 24-year trek to Kublai Khan's court spawned a medieval bestseller and a swimming pool game
+  shared: kublai, khan, court, medieval
+
+n1-w1-hist.json [OFF THE OLD MAP] Marco Polo
+  NEW: Dictated in a Genoese prison cell, his tales of Kublai Khan's court dazzled medieval Europe
+  OLD (Fresh double / HISTORY IN A BLENDER): Kublai Khan's Venetian chronicler models for the preppy designer whose emblem is a mallet-swinging horseman
+  shared: kublai, khan
+
+n1-w1-hist.json [OFF THE OLD MAP] Roald Amundsen
+  NEW: Before winning the race to the South Pole, this Norwegian was first to sail the Northwest Passage
+  OLD (Fresh jeopardy / ICE TO MEET YOU): This Norwegian's team beat Robert Falcon Scott to the South Pole in December 1911
+  shared: norwegian, pole
+
+n1-w1-hist.json [OFF THE OLD MAP] Roald Amundsen
+  NEW: Before winning the race to the South Pole, this Norwegian was first to sail the Northwest Passage
+  OLD (Fresh double / SAIL OF THE CENTURY): This Norwegian's dog teams reached the South Pole in December 1911, five weeks ahead of Scott
+  shared: norwegian, pole
+
+n1-w1-hist.json [OFF THE OLD MAP] Roald Amundsen
+  NEW: Before winning the race to the South Pole, this Norwegian was first to sail the Northwest Passage
+  OLD (Fresh double / POLES APART): He beat Robert Falcon Scott to the South Pole by five weeks in December 1911
+  shared: pole
+
+n1-w1-hist.json [OFF THE OLD MAP] Zheng He
+  NEW: Giraffes brought home by this Ming admiral's treasure fleets were hailed in China as mythical qilin
+  OLD (Fresh jeopardy / COMPASS AND CIRCUMSTANCE): This Ming dynasty admiral led seven treasure-fleet voyages, sailing as far as East Africa
+  shared: ming, admiral, treasure
+
+n1-w1-hist.json [PHARAOH ENOUGH] Tutankhamun (King Tut)
+  NEW: A gold mask weighing more than 20 pounds covered the mummy of this boy pharaoh
+  OLD (Fresh jeopardy / ANCIENT EGYPT): This boy king's nearly intact tomb, found in 1922, made his golden death mask world-famous
+  shared: mask
+
+n1-w1-hist.json [PHARAOH ENOUGH] Tutankhamun (King Tut)
+  NEW: A gold mask weighing more than 20 pounds covered the mummy of this boy pharaoh
+  OLD (Fresh jeopardy / WALK LIKE AN EGYPTIAN): In 1922 Howard Carter opened this boy pharaoh's nearly intact tomb in the Valley of the Kings
+  shared: pharaoh
+
+n1-w1-hist.json [PHARAOH ENOUGH] Tutankhamun (King Tut)
+  NEW: A gold mask weighing more than 20 pounds covered the mummy of this boy pharaoh
+  OLD (Fresh double / CAN YOU DIG IT?): By candlelight in 1922, Howard Carter glimpsed 'wonderful things', this pharaoh's tomb treasures
+  shared: pharaoh
+
+n1-w1-hist.json [PHARAOH ENOUGH] Tutankhamun (King Tut)
+  NEW: A gold mask weighing more than 20 pounds covered the mummy of this boy pharaoh
+  OLD (Fresh double / SHOVEL READY): In 1922 Howard Carter peered into a tomb and saw 'wonderful things' left with this boy pharaoh
+  shared: pharaoh
+
+n1-w1-hist.json [PHARAOH ENOUGH] Hatshepsut
+  NEW: After her death, Thutmose III had many images of this female pharaoh chiseled away
+  OLD (Fresh jeopardy / ANCIENT EGYPT): This female pharaoh of the 15th century B.C. wore a false beard and sent a trade expedition to Punt
+  shared: female, pharaoh
+
+n1-w1-hist.json [PHARAOH ENOUGH] Hatshepsut
+  NEW: After her death, Thutmose III had many images of this female pharaoh chiseled away
+  OLD (Fresh jeopardy / WALK LIKE AN EGYPTIAN): This female pharaoh wore a ceremonial false beard and sent a trading fleet to the Land of Punt
+  shared: female, pharaoh
+
+n1-w1-hist.json [PHARAOH ENOUGH] Hatshepsut
+  NEW: After her death, Thutmose III had many images of this female pharaoh chiseled away
+  OLD (Fresh double / THE NILE FILES): False beard and all, this queen ruled as pharaoh and built a terraced temple at Deir el-Bahri
+  shared: pharaoh
+
+n1-w1-hist.json [PHARAOH ENOUGH] Akhenaten
+  NEW: Likely Tutankhamun's father, this pharaoh renamed himself for the sun disk he worshipped
+  OLD (Fresh double / THE NILE FILES): This heretic pharaoh moved the capital to Amarna and traded Egypt's gods for the sun disk Aten
+  shared: pharaoh, disk
+
+n1-w1-hist.json [NECESSITY'S CHILDREN] Johannes Gutenberg
+  NEW: His 42-line Bible, finished around 1455, was the first major book in Europe printed with metal type
+  OLD (Fresh jeopardy / MOTHER OF INVENTION): Around 1450 this Mainz goldsmith perfected printing with movable metal type
+  shared: metal, type
+
+n1-w1-hist.json [NECESSITY'S CHILDREN] the cotton gin
+  NEW: Eli Whitney's 1793 machine stripped the seeds from fluffy bolls, making Southern plantations boom
+  OLD (e1-w4-sci.json / AMERICAN TINKERERS): Eli Whitney's 1793 gin pulled the seeds out of this fluffy crop
+  shared: eli, whitney, 1793, seeds, fluffy
+
+n1-w1-hist.json [HOIST THE COLORS] Canada
+  NEW: Count them and you'll find 11 points on the red maple leaf of this country's flag
+  OLD (Fresh jeopardy / FLYING COLORS): In 1965 this country retired the Red Ensign for a new flag bearing a single red maple leaf
+  shared: flag, maple, leaf
+
+n1-w1-hist.json [ISLE BE THERE] Tasmania
+  NEW: Dutch explorers called it Van Diemen's Land, a name this Australian island state dropped in 1856
+  OLD (Fresh jeopardy / ISLE BE SEEING YOU): The Bass Strait separates this island state from the Australian mainland
+  shared: australian
+
+n1-w1-hist.json [ISLE BE THERE] Tasmania
+  NEW: Dutch explorers called it Van Diemen's Land, a name this Australian island state dropped in 1856
+  OLD (Fresh double / NAMED FOR EXPLORERS): This Dutch navigator's surname graces an Australian island state and the sea east of it
+  shared: dutch, australian
+
+n1-w1-hist.json [REDCOATS & REBELS] Paul Revere
+  NEW: This silversmith's midnight ride warned Lexington, but a British patrol nabbed him before Concord
+  OLD (Fresh jeopardy / METER READERS): In a Longfellow poem, this silversmith rides to alarm 'every Middlesex village and farm'
+  shared: silversmith
+
+n1-w1-hist.json [REDCOATS & REBELS] Valley Forge
+  NEW: Prussia's Baron von Steuben drilled the Continental Army during its brutal winter at this camp
+  OLD (Easy double / THE HISTORY LESSON): Washington's ragged army shivered through the winter of 1777 at this Pennsylvania camp
+  shared: army, winter, camp
+
+n1-w1-hist.json [HELLENIC HIGHLIGHTS] Olympia
+  NEW: Phidias' gold-and-ivory Zeus, an ancient Wonder, once sat in a temple at this home of the Games
+  OLD (Fresh double / FIVE-RING CIRCUS): Sunlight kindles each Olympic flame at this Greek sanctuary that hosted the ancient games
+  shared: games
+
+n1-w1-hist.json [HELLENIC HIGHLIGHTS] Pericles
+  NEW: Sculptors usually showed this Athenian statesman in a helmet, perhaps to hide his oddly long head
+  OLD (Fresh jeopardy / THE GLORY THAT WAS GREECE): Athens' golden age is named for this statesman who commissioned the Parthenon
+  shared: statesman
+
+n1-w1-hist.json [HELLENIC HIGHLIGHTS] Pericles
+  NEW: Sculptors usually showed this Athenian statesman in a helmet, perhaps to hide his oddly long head
+  OLD (Fresh double / THE PLOT SICKENS): The plague Thucydides described so vividly killed this Parthenon-building Athenian in 429 B.C.
+  shared: athenian
+
+n1-w1-hist.json [BUCKET LIST STOPS] the Taj Mahal
+  NEW: The four minarets of this Agra tomb tilt slightly outward, so a quake would topple them away from it
+  OLD (Fresh jeopardy / POSTCARD PERFECT): Shah Jahan raised this white marble mausoleum at Agra in memory of his favorite wife
+  shared: agra
+
+n1-w1-hist.json [BUCKET LIST STOPS] the Taj Mahal
+  NEW: The four minarets of this Agra tomb tilt slightly outward, so a quake would topple them away from it
+  OLD (Fresh jeopardy / MONUMENTAL ACHIEVEMENTS): Shah Jahan built this white marble mausoleum in Agra as a tomb for his beloved wife
+  shared: agra, tomb
+
+n1-w1-hist.json [BUCKET LIST STOPS] the Taj Mahal
+  NEW: The four minarets of this Agra tomb tilt slightly outward, so a quake would topple them away from it
+  OLD (Fresh jeopardy / LANDMARK DECISIONS): Shah Jahan raised this white marble mausoleum at Agra for his favorite wife, Mumtaz
+  shared: agra
+
+n1-w1-hist.json [BUCKET LIST STOPS] the Taj Mahal
+  NEW: The four minarets of this Agra tomb tilt slightly outward, so a quake would topple them away from it
+  OLD (Easy jeopardy / POSTCARDS FROM ABROAD): An emperor built this white marble tomb in Agra, India, for his beloved wife
+  shared: tomb, agra
+
+n1-w1-hist.json [BUCKET LIST STOPS] the Taj Mahal
+  NEW: The four minarets of this Agra tomb tilt slightly outward, so a quake would topple them away from it
+  OLD (Easy double / TRIP OF A LIFETIME): An emperor built this white marble monument in Agra as a tomb for his beloved wife
+  shared: agra, tomb
+
+n1-w1-hist.json [BUCKET LIST STOPS] the Leaning Tower of Pisa
+  NEW: Engineers spent the 1990s nudging this Italian campanile about 18 inches back toward upright
+  OLD (Fresh jeopardy / TOWER OF POWER): Soft soil set this Italian cathedral campanile tilting before its builders even finished
+  shared: campanile
+
+n1-w1-hist.json [BUCKET LIST STOPS] the Sagrada Família
+  NEW: Antoni Gaudí is buried in the crypt of this Barcelona basilica, which he worked on for 43 years
+  OLD (n2-w5-mix.json / STRUCTURAL INTEGRITY): Gaudí toiled for decades on this Barcelona basilica, still unfinished when he died in 1926
+  shared: gaud, barcelona, basilica
+
+n1-w1-hist.json [BUCKET LIST STOPS] Neuschwanstein
+  NEW: Unfinished when 'Mad King' Ludwig II died in 1886, this Bavarian castle opened to tourists within weeks
+  OLD (Fresh jeopardy / HOUSE PROUD): 'Mad' King Ludwig II of Bavaria built this castle, a model for Disneyland's Sleeping Beauty Castle
+  shared: mad, ludwig, castle
+
+n1-w1-hist.json [BUCKET LIST STOPS] Neuschwanstein
+  NEW: Unfinished when 'Mad King' Ludwig II died in 1886, this Bavarian castle opened to tourists within weeks
+  OLD (Fresh jeopardy / EURO TRIP): Disneyland's Sleeping Beauty Castle took cues from this Bavarian fantasy of 'Mad' King Ludwig II
+  shared: castle, bavarian, mad, ludwig
+
+n1-w1-hist.json [BUCKET LIST STOPS] the Alhambra
+  NEW: Washington Irving lodged in this Moorish palace in Granada and published a book of tales about it in 1832
+  OLD (Fresh jeopardy / EURO TRIP): Its name means 'the red one', yet poets called this Granada palace a 'pearl set in emeralds'
+  shared: granada, palace
+
+n1-w1-hist.json [EMPIRE BUILDING] the Inca
+  NEW: Machu Picchu was a royal mountain estate for the rulers of this Andean empire
+  OLD (Fresh jeopardy / EMPIRE STATE OF MIND): Machu Picchu was built by this Andean civilization whose ruler was called the Sapa
+  shared: machu, picchu, andean
+
+n1-w1-hist.json [EMPIRE BUILDING] the Inca
+  NEW: Machu Picchu was a royal mountain estate for the rulers of this Andean empire
+  OLD (Fresh double / MILESTONE AGE): Runners called chasquis relayed messages over 25,000 miles of road built by this Andean empire
+  shared: andean, empire
+
+n1-w1-hist.json [EMPIRE BUILDING] the Inca
+  NEW: Machu Picchu was a royal mountain estate for the rulers of this Andean empire
+  OLD (Fresh double / AMERICA B.C.): Ruling from Cusco, this Andean empire kept its records on knotted cords called quipu
+  shared: andean, empire
+
+n1-w1-hist.json [LOWER 48 LORE] Florida
+  NEW: A buoy-shaped Key West marker claims to mark the lower 48's 'Southernmost Point' in this state
+  OLD (e1-w4-sci.json / PIE CHART): Key lime pie is the official pie of this sunny state
+  shared: key
+
+n1-w2-lit.json [TWIN-RHYME TIME] hocus-pocus
+  NEW: Stage magicians' rhyming patter, it's also the title of a 1993 Bette Midler witch comedy
+  OLD (Easy jeopardy / EASY RHYMERS): A magician might mutter this rhyming phrase, a cousin of 'abracadabra'
+  shared: rhyming
+
+n1-w2-lit.json [TWIN-RHYME TIME] willy-nilly
+  NEW: From 'will he, nill he,' this rhyming phrase means whether you like it or not
+  OLD (Easy jeopardy / EASY RHYMERS): Doing things in a haphazard, unplanned way is doing them this rhyming way
+  shared: rhyming
+
+n1-w2-lit.json [GAZETTEER GLOSSARY] canter
+  NEW: This word for an easy gallop shortens 'Canterbury pace,' the gait of mounted pilgrims
+  OLD (Fresh jeopardy / JOURNEYS BY THE BOOK): Chaucer's pilgrims swap tales on the road to Thomas Becket's shrine in this cathedral city
+  shared: pilgrims
+
+n1-w2-lit.json [GAZETTEER GLOSSARY] canter
+  NEW: This word for an easy gallop shortens 'Canterbury pace,' the gait of mounted pilgrims
+  OLD (Fresh double / PILGRIMS' PROGRESS): Chaucer's tale-telling pilgrims head for the shrine of Thomas Becket in this English cathedral city
+  shared: pilgrims
+
+n1-w2-lit.json [EXIT, STAGE DEAD] Juliet
+  NEW: She drinks a sleeping potion, wakes in the Capulet tomb and reaches for Romeo's dagger
+  OLD (Fresh jeopardy / WHEREFORE ART THOU?): This Capulet daughter asks 'wherefore art thou Romeo?' from her balcony
+  shared: capulet, romeo
+
+n1-w2-lit.json [VERSE & VERNACULAR] Daniel
+  NEW: 'The writing on the wall' appears at King Belshazzar's feast in this prophet's book
+  OLD (e2-w5-mix.json / GOOD BOOK CLUB): Thrown to the lions by order of King Darius, this prophet walked out unharmed
+  shared: prophet
+
+n1-w2-lit.json [Q, HOLD THE U] the Qing
+  NEW: Chinese men had to wear the long braided queue under this Manchu dynasty, which fell in 1912
+  OLD (Fresh jeopardy / EMPIRES' LAST GASPS): China's last imperial house, it fell in 1912 when 6-year-old Puyi abdicated
+  shared: fell, 1912
+
+n1-w2-lit.json [Q, HOLD THE U] the Qing
+  NEW: Chinese men had to wear the long braided queue under this Manchu dynasty, which fell in 1912
+  OLD (Fresh jeopardy / GONE BUT NOT FORGOTTEN): Chinese families sweep graves and burn joss paper during this spring festival, aka Tomb-Sweeping Day
+  shared: chinese
+
+n1-w2-lit.json [Q, HOLD THE U] the Qing
+  NEW: Chinese men had to wear the long braided queue under this Manchu dynasty, which fell in 1912
+  OLD (Fresh double / HEIR TODAY, GONE TOMORROW): Puyi, China's last emperor, was the final ruler of this dynasty founded by Manchu conquerors
+  shared: dynasty, manchu
+
+n1-w2-lit.json [Q, HOLD THE U] the Qing
+  NEW: Chinese men had to wear the long braided queue under this Manchu dynasty, which fell in 1912
+  OLD (Fresh double / CIVIL WARS OF THE WORLD): The Taiping Rebellion, among history's deadliest wars, failed to topple this final Chinese imperial dynasty
+  shared: chinese, dynasty
+
+n1-w2-lit.json [NAMED ON THE COVER] Matilda
+  NEW: Her father sells shady used cars, but this Roald Dahl girl only wants to read books
+  OLD (Fresh jeopardy / ONCE UPON A TIME): Roald Dahl's telekinetic bookworm heroine outsmarts the fearsome headmistress Miss Trunchbull
+  shared: roald, dahl
+
+n1-w2-lit.json [LANDLUBBER LINGO] groggy
+  NEW: Admiral Vernon, nicknamed 'Old Grog,' watered his sailors' rum, giving us this word for woozy
+  OLD (Fresh double / SAILS PITCH): Admiral Vernon watered down the Navy's rum in 1740, and sailors named this drink for his nickname
+  shared: admiral, vernon, watered, rum, sailors
+
+n1-w3-screen.json [PUNCHING THE TV CLOCK] Taxi
+  NEW: Louie De Palma barked at the drivers of New York's Sunshine Cab Company on this sitcom
+  OLD (Fresh jeopardy / ENSEMBLE, ASSEMBLE): Louie barks from a cage-like dispatch booth at the Sunshine Cab Company on this 1978-83 sitcom
+  shared: louie, sunshine, cab
+
+n1-w3-screen.json [PUNCHING THE TV CLOCK] Parks and Recreation
+  NEW: Ron Swanson loathes government while working for it in Pawnee, Indiana, on this sitcom
+  OLD (Fresh jeopardy / TAKE THIS JOB & LOVE IT): Waffle devotee Leslie Knope battles Pawnee, Indiana's bureaucracy in this mockumentary
+  shared: pawnee, indiana
+
+n1-w3-screen.json [PUNCHING THE TV CLOCK] Parks and Recreation
+  NEW: Ron Swanson loathes government while working for it in Pawnee, Indiana, on this sitcom
+  OLD (Fresh jeopardy / LAUGHING ON THE JOB): Amy Poehler's Leslie Knope served Pawnee, Indiana on this mockumentary about small-town government
+  shared: pawnee, indiana, government
+
+n1-w3-screen.json [PUNCHING THE TV CLOCK] The Mary Tyler Moore Show
+  NEW: Pompous anchor Ted Baxter mangled the news at Minneapolis station WJM on this sitcom
+  OLD (Fresh jeopardy / LAUGHING ON THE JOB): This 1970s sitcom opened with a single Minneapolis TV producer joyfully tossing her tam into the air
+  shared: minneapolis
+
+n1-w3-screen.json [PUNCHING THE TV CLOCK] The Mary Tyler Moore Show
+  NEW: Pompous anchor Ted Baxter mangled the news at Minneapolis station WJM on this sitcom
+  OLD (Easy jeopardy / SPIN-OFF CITY): Rhoda and Phyllis both left Minneapolis, spun off from this single-newswoman sitcom
+  shared: minneapolis
+
+n1-w3-screen.json [PUNCHING THE TV CLOCK] WKRP in Cincinnati
+  NEW: Dr. Johnny Fever spun records and Les Nessman read farm reports on this radio-station sitcom
+  OLD (Fresh jeopardy / LAUGHING ON THE JOB): Les Nessman covered a disastrous Thanksgiving turkey drop on this sitcom about an Ohio radio station
+  shared: les, nessman, radio, station
+
+n1-w3-screen.json [OVERTURES AND BEGINNERS] Annie
+  NEW: Little orphan with a dog named Sandy, she's certain the sun'll come out tomorrow
+  OLD (Easy double / CHARACTERS TAKE THE STAGE): A plucky orphan with a dog named Sandy wins over billionaire Oliver Warbucks in this musical
+  shared: orphan, sandy
+
+n1-w3-screen.json [OVERTURES AND BEGINNERS] West Side Story
+  NEW: 'Tonight,' 'Maria' and 'America' are all numbers from this 1957 musical
+  OLD (Fresh jeopardy / ON WITH THE SHOW): Bernstein scored this 1957 musical that reset Romeo and Juliet among rival New York street gangs
+  shared: 1957
+
+n1-w3-screen.json [OVERTURES AND BEGINNERS] West Side Story
+  NEW: 'Tonight,' 'Maria' and 'America' are all numbers from this 1957 musical
+  OLD (Easy jeopardy / MUSICALS AT THE MOVIES): Tony loves Maria despite the Jets and the Sharks in this 1961 musical
+  shared: maria
+
+n1-w3-screen.json [OVERTURES AND BEGINNERS] West Side Story
+  NEW: 'Tonight,' 'Maria' and 'America' are all numbers from this 1957 musical
+  OLD (Easy jeopardy / FROM STAGE TO SCREEN): Romeo and Juliet became Tony and Maria among rival New York gangs in this musical
+  shared: maria
+
+n1-w3-screen.json [OVERTURES AND BEGINNERS] West Side Story
+  NEW: 'Tonight,' 'Maria' and 'America' are all numbers from this 1957 musical
+  OLD (Easy double / CHARACTERS TAKE THE STAGE): Tony of the Jets falls for Maria, sister of a Shark, in this Romeo-and-Juliet musical
+  shared: maria
+
+n1-w3-screen.json [OVERTURES AND BEGINNERS] My Fair Lady
+  NEW: Henry Higgins drills the Cockney out of Eliza Doolittle's vowels in this Lerner and Loewe hit
+  OLD (Easy jeopardy / MUSICALS AT THE MOVIES): Eliza Doolittle masters 'the rain in Spain' in this 1964 Best Picture winner
+  shared: eliza, doolittle
+
+n1-w3-screen.json [MOTOR CITY MUSIC] the Supremes
+  NEW: The Broadway musical 'Dreamgirls' was loosely inspired by this Motown trio
+  OLD (Fresh jeopardy / GROUP DYNAMICS): Diana Ross led this Motown trio to a dozen No. 1 hits in the 1960s
+  shared: motown, trio
+
+n1-w3-screen.json [MOTOR CITY MUSIC] the Supremes
+  NEW: The Broadway musical 'Dreamgirls' was loosely inspired by this Motown trio
+  OLD (Easy jeopardy / HITSVILLE U.S.A.): Diana Ross led this trio that commanded 'Stop! In the Name of Love'
+  shared: trio
+
+n1-w3-screen.json [MOTOR CITY MUSIC] the Supremes
+  NEW: The Broadway musical 'Dreamgirls' was loosely inspired by this Motown trio
+  OLD (Easy jeopardy / THE MOTOWN SOUND): 'Baby Love' and 'Where Did Our Love Go' came from this Diana Ross-led trio
+  shared: trio
+
+n1-w3-screen.json [MOTOR CITY MUSIC] Stevie Wonder
+  NEW: 'Superstition' and 'Sir Duke' were 1970s No. 1s for this harmonica-playing Motown star
+  OLD (Fresh jeopardy / SOUL PROPRIETORS): Blind since infancy, this Motown prodigy signed with the label at age 11
+  shared: motown
+
+n1-w3-screen.json [MOTOR CITY MUSIC] Stevie Wonder
+  NEW: 'Superstition' and 'Sir Duke' were 1970s No. 1s for this harmonica-playing Motown star
+  OLD (Fresh jeopardy / SWEET SOUL MUSIC): Billed as 'Little' when Motown signed him at 11, he grew up to record 'Superstition'
+  shared: motown, superstition
+
+n1-w3-screen.json [MOTOR CITY MUSIC] Stevie Wonder
+  NEW: 'Superstition' and 'Sir Duke' were 1970s No. 1s for this harmonica-playing Motown star
+  OLD (Easy jeopardy / HITSVILLE U.S.A.): Blind since infancy, this 'Superstition' singer joined Motown at 11 as 'Little'
+  shared: superstition, motown
+
+n1-w3-screen.json [MOTOR CITY MUSIC] Stevie Wonder
+  NEW: 'Superstition' and 'Sir Duke' were 1970s No. 1s for this harmonica-playing Motown star
+  OLD (Easy jeopardy / THE MOTOWN SOUND): Signed by Motown at 11, this harmonica prodigy grew up to sing 'My Cherie Amour'
+  shared: motown, harmonica
+
+n1-w3-screen.json [MOTOR CITY MUSIC] Marvin Gaye
+  NEW: 'What's Going On' asked this soul singer on the title track of his landmark 1971 album
+  OLD (Fresh jeopardy / SOUL PROPRIETORS): His landmark 1971 album 'What's Going On' confronted war, poverty and pollution
+  shared: landmark, 1971, album, going
+
+n1-w3-screen.json [MOTOR CITY MUSIC] Marvin Gaye
+  NEW: 'What's Going On' asked this soul singer on the title track of his landmark 1971 album
+  OLD (Fresh jeopardy / SWEET SOUL MUSIC): This Motown prince asked 'What's Going On' in 1971, then turned up the heat with 'Let's Get It On'
+  shared: asked, going, 1971
+
+n1-w3-screen.json [MOTOR CITY MUSIC] Marvin Gaye
+  NEW: 'What's Going On' asked this soul singer on the title track of his landmark 1971 album
+  OLD (Easy jeopardy / HITSVILLE U.S.A.): He sang 'What's Going On' and joined Tammi Terrell on 'Ain't No Mountain High Enough'
+  shared: going
+
+n1-w3-screen.json [MOTOR CITY MUSIC] the Temptations
+  NEW: David Ruffin sang lead on 'My Girl' for this sharp-dressed Motown quintet
+  OLD (Fresh jeopardy / GROUP DYNAMICS): Known for razor-sharp choreography, this Motown quintet cut 'Papa Was a Rollin' Stone'
+  shared: sharp, motown, quintet
+
+n1-w3-screen.json [MOTOR CITY MUSIC] the Temptations
+  NEW: David Ruffin sang lead on 'My Girl' for this sharp-dressed Motown quintet
+  OLD (Easy jeopardy / HITSVILLE U.S.A.): 'My Girl' and 'Ain't Too Proud to Beg' were smashes for this five-man Motown group
+  shared: girl, motown
+
+n1-w3-screen.json [MOTOR CITY MUSIC] the Temptations
+  NEW: David Ruffin sang lead on 'My Girl' for this sharp-dressed Motown quintet
+  OLD (Easy jeopardy / THE MOTOWN SOUND): 'My Girl' gave sunshine on a cloudy day to this sharp-stepping Motown quintet
+  shared: girl, sharp, motown, quintet
+
+n1-w3-screen.json [HITCH IN THE PLOT] Psycho
+  NEW: Anthony Perkins' Norman Bates runs a lonely motel off the highway in this 1960 shocker
+  OLD (Fresh double / HITCH, PLEASE): Marion Crane checks into the Bates Motel and never checks out in this 1960 Hitchcock shocker
+  shared: bates, motel, 1960, shocker
+
+n1-w3-screen.json [HITCH IN THE PLOT] Psycho
+  NEW: Anthony Perkins' Norman Bates runs a lonely motel off the highway in this 1960 shocker
+  OLD (Easy jeopardy / THE MASTER OF SUSPENSE): A motel, a shower and shrieking violins made this 1960 Hitchcock film infamous
+  shared: motel, 1960
+
+n1-w3-screen.json [HITCH IN THE PLOT] Psycho
+  NEW: Anthony Perkins' Norman Bates runs a lonely motel off the highway in this 1960 shocker
+  OLD (Easy double / HOLLYWOOD LORE): Chocolate syrup played the blood in the shower scene of this black-and-white Hitchcock shocker
+  shared: shocker
+
+n1-w3-screen.json [HITCH IN THE PLOT] The Birds
+  NEW: Crows and gulls terrorize the California town of Bodega Bay in this 1963 thriller
+  OLD (Easy jeopardy / THE MASTER OF SUSPENSE): Feathered attackers terrorize Tippi Hedren's seaside California town in this thriller
+  shared: terrorize, thriller
+
+n1-w3-screen.json [HITCH IN THE PLOT] Rear Window
+  NEW: Laid up with a broken leg, James Stewart spies on his neighbors in this 1954 film
+  OLD (Fresh double / HITCH, PLEASE): A photographer laid up with a broken leg suspects a neighbor of murder in this 1954 thriller
+  shared: laid, broken, leg, 1954
+
+n1-w3-screen.json [HITCH IN THE PLOT] Rear Window
+  NEW: Laid up with a broken leg, James Stewart spies on his neighbors in this 1954 film
+  OLD (Easy jeopardy / THE MASTER OF SUSPENSE): A photographer with a broken leg spies on his neighbors in this Hitchcock classic
+  shared: broken, leg, spies, neighbors
+
+n1-w3-screen.json [HITCH IN THE PLOT] North by Northwest
+  NEW: Cary Grant clings to Mount Rushmore at the climax of this 1959 cross-country chase
+  OLD (Easy jeopardy / THE MASTER OF SUSPENSE): Cary Grant flees a crop duster and scales Mount Rushmore in this thriller
+  shared: cary, grant, mount, rushmore
+
+n1-w3-screen.json [HITCH IN THE PLOT] Rebecca
+  NEW: Joan Fontaine's nameless bride is haunted by her husband's dead first wife in this 1940 film
+  OLD (Fresh double / HITCH, PLEASE): Hitchcock's only Best Picture winner, this 1940 gothic tale opens with a dream of Manderley
+  shared: 1940
+
+n1-w3-screen.json [BLUE NOTES] Louis Armstrong
+  NEW: This gravel-voiced trumpeter knocked the Beatles from No. 1 in 1964 with 'Hello, Dolly!'
+  OLD (Fresh double / JAZZ HANDS): Nicknamed Satchmo, this New Orleans trumpeter growled through 'What a Wonderful World' in 1967
+  shared: trumpeter
+
+n1-w3-screen.json [BLUE NOTES] Louis Armstrong
+  NEW: This gravel-voiced trumpeter knocked the Beatles from No. 1 in 1964 with 'Hello, Dolly!'
+  OLD (Fresh double / JAZZ NICKNAMES): 'Satchmo' was this gravel-voiced New Orleans trumpeter of 'What a Wonderful World'
+  shared: gravel, voiced, trumpeter
+
+n1-w3-screen.json [BLUE NOTES] Ella Fitzgerald
+  NEW: This singer recorded a celebrated series of 'Songbook' albums, from Cole Porter to Gershwin
+  OLD (Fresh double / LADIES OF SONG): The 'First Lady of Song', she scatted like a horn and cut Porter and Gershwin 'songbook' albums
+  shared: porter, gershwin, songbook, albums
+
+n1-w3-screen.json [BLUE NOTES] Ella Fitzgerald
+  NEW: This singer recorded a celebrated series of 'Songbook' albums, from Cole Porter to Gershwin
+  OLD (Fresh double / SCAT'S ENTERTAINMENT): The First Lady of Song, she devoted entire 'Song Book' albums to Cole Porter, Gershwin and the like
+  shared: albums, cole, porter, gershwin
+
+n1-w3-screen.json [BLUE NOTES] Duke Ellington
+  NEW: 'Mood Indigo' and 'It Don't Mean a Thing' came from this aristocratically nicknamed bandleader
+  OLD (Fresh double / JAZZ HANDS): Billy Strayhorn wrote 'Take the A Train' as the theme of this bandleader who ruled the Cotton Club
+  shared: bandleader
+
+n1-w3-screen.json [BLUE NOTES] Duke Ellington
+  NEW: 'Mood Indigo' and 'It Don't Mean a Thing' came from this aristocratically nicknamed bandleader
+  OLD (Fresh double / JAZZ NICKNAMES): Billy Strayhorn's 'Take the 'A' Train' was the theme of this nobly nicknamed bandleader
+  shared: bandleader
+
+n1-w3-screen.json [BLUE NOTES] Duke Ellington
+  NEW: 'Mood Indigo' and 'It Don't Mean a Thing' came from this aristocratically nicknamed bandleader
+  OLD (Easy jeopardy / BIG BAND DAYS): 'Take the "A" Train' was the theme of this elegant composer-bandleader
+  shared: bandleader
+
+n1-w3-screen.json [BLUE NOTES] Duke Ellington
+  NEW: 'Mood Indigo' and 'It Don't Mean a Thing' came from this aristocratically nicknamed bandleader
+  OLD (Easy jeopardy / SWING TIME): 'Mood Indigo' and 'Sophisticated Lady' came from this elegant bandleader-composer
+  shared: mood, indigo, bandleader
+
+n1-w3-screen.json [BLUE NOTES] Miles Davis
+  NEW: Nicknamed 'the Prince of Darkness,' this trumpeter led a 1950s quintet with John Coltrane
+  OLD (Fresh double / JAZZ ON VINYL): 'So What' opens 'Kind of Blue', the 1959 modal masterpiece by this trumpeter
+  shared: trumpeter
+
+n1-w3-screen.json [PIXAR DUST] Coco
+  NEW: Miguel's aging great-grandmother gives her name to this 2017 Pixar film
+  OLD (Fresh jeopardy / PIXAR PERFECT): Guitarist Miguel strums his way into the Land of the Dead on Día de los Muertos in this 2017 film
+  shared: miguel, 2017
+
+n1-w3-screen.json [TOON IN TOMORROW] The Simpsons
+  NEW: Homer, Marge, Bart, Lisa and Maggie make their home in Springfield on this series
+  OLD (Fresh jeopardy / PRIME-TIME TOONS): Homer's 'D'oh!' rings through the Springfield Nuclear Power Plant on this long-running series
+  shared: homer, springfield
+
+n1-w3-screen.json [TOON IN TOMORROW] The Flintstones
+  NEW: Fred and Wilma raise little Pebbles in Bedrock on this modern Stone Age cartoon
+  OLD (Fresh jeopardy / PRIME-TIME TOONS): Fred and Barney bowled in Bedrock on this 1960 debut, prime time's first animated sitcom
+  shared: fred, bedrock
+
+n1-w3-screen.json [TOON IN TOMORROW] King of the Hill
+  NEW: Substitute Spanish teacher Peggy and son Bobby live in Arlen on this Fox cartoon
+  OLD (Fresh jeopardy / PRIME-TIME TOONS): Propane salesman Hank of Arlen, Texas extols 'propane and propane accessories' on this Mike Judge series
+  shared: arlen
+
+n1-w3-screen.json [PICK, BLOW OR BOW] bagpipes
+  NEW: Kilted Highland regiments march to the drone of these blown Scottish instruments
+  OLD (Fresh double / DIDGERI-DOS & DON'TS): Air squeezed from a bag feeds the chanter and drones of this Highland staple
+  shared: highland
+
+n1-w3-screen.json [PICK, BLOW OR BOW] bagpipes
+  NEW: Kilted Highland regiments march to the drone of these blown Scottish instruments
+  OLD (Fresh double / INSTRUMENTS OF THE WORLD): A bag squeezed under the arm feeds air to the drones and chanter of this Scottish instrument
+  shared: scottish
+
+n1-w3-screen.json [PICK, BLOW OR BOW] the oboe
+  NEW: Prokofiev gave the duck's part in 'Peter and the Wolf' to this double-reed woodwind
+  OLD (Fresh double / BLOW YOUR OWN HORN): Orchestras tune to the A sounded by this double-reed woodwind, descendant of the French hautbois
+  shared: double, reed, woodwind
+
+n1-w3-screen.json [PICK, BLOW OR BOW] the oboe
+  NEW: Prokofiev gave the duck's part in 'Peter and the Wolf' to this double-reed woodwind
+  OLD (Easy double / AT THE SYMPHONY): Before a concert, the whole orchestra tunes to an 'A' sounded by this reed instrument
+  shared: reed
+
+n1-w3-screen.json [PICK, BLOW OR BOW] the sitar
+  NEW: Strings that buzz in sympathy give this long-necked Indian instrument its shimmer
+  OLD (Fresh jeopardy / IT'S INSTRUMENTAL): George Harrison learned this long-necked Indian instrument from virtuoso Ravi Shankar
+  shared: necked, indian, instrument
+
+n1-w3-screen.json [PICK, BLOW OR BOW] the sitar
+  NEW: Strings that buzz in sympathy give this long-necked Indian instrument its shimmer
+  OLD (Fresh double / DIDGERI-DOS & DON'TS): Ravi Shankar taught George Harrison this long-necked Indian instrument with movable frets
+  shared: necked, indian, instrument
+
+n1-w3-screen.json [BOOTS AND BALLADS] Loretta Lynn
+  NEW: Born in Butcher Hollow, Kentucky, she sang that she was a 'Coal Miner's Daughter'
+  OLD (Easy jeopardy / GRAND OLE LEGENDS): 'Coal Miner's Daughter' was this Kentucky gal's hit song, memoir and 1980 movie
+  shared: coal, miner, daughter, kentucky
+
+n1-w3-screen.json [BOOTS AND BALLADS] Willie Nelson
+  NEW: This braided Texan wrote 'On the Road Again' for his 1980 film 'Honeysuckle Rose'
+  OLD (Easy jeopardy / CLASSIC COUNTRY): This pigtailed Texas outlaw was 'On the Road Again' and co-founded Farm Aid
+  shared: road, again
+
+n1-w3-screen.json [BOOTS AND BALLADS] Hank Williams
+  NEW: 'Hey, Good Lookin'' and 'I'm So Lonesome I Could Cry' came from this honky-tonk legend
+  OLD (Fresh double / TWANG THEORY): This Alabama honky-tonk legend died at 29 in the back seat of a Cadillac on New Year's Day 1953
+  shared: honky, tonk
+
+n1-w3-screen.json [BOOTS AND BALLADS] Merle Haggard
+  NEW: Once an inmate at San Quentin, this Bakersfield Sound star sang 'Okie from Muskogee'
+  OLD (Easy jeopardy / GRAND OLE LEGENDS): This 'Okie from Muskogee' served time in San Quentin before finding country stardom
+  shared: okie, muskogee, san, quentin
+
+n1-w3-screen.json [CALL THE SHOTS] Akira Kurosawa
+  NEW: This Japanese master's 'Seven Samurai' was remade as the Western 'The Magnificent Seven'
+  OLD (Fresh jeopardy / THE DIRECTOR'S CHAIR): Hollywood remade both 'Rashomon' and 'Seven Samurai', masterpieces by this Japanese director
+  shared: remade, samurai, japanese
+
+n1-w4-sci.json [AN INSIDE JOB] the liver
+  NEW: The body's largest internal organ, it can grow back after part of it is removed
+  OLD (Fresh jeopardy / MIGHTY ORGANS): The body's largest internal organ, it filters toxins and produces bile
+  shared: internal, organ
+
+n1-w4-sci.json [AN INSIDE JOB] the liver
+  NEW: The body's largest internal organ, it can grow back after part of it is removed
+  OLD (Fresh final / ORGAN RECITAL): Prometheus' punishment made grim sense: this organ can regrow to full size from as little as a quarter of itself
+  shared: organ
+
+n1-w4-sci.json [OVER THE MOONS] Mars
+  NEW: Phobos and Deimos, named for sons of the war god Ares, circle this planet
+  OLD (Fresh jeopardy / PLANET PARADE): Nicknamed the Red Planet, it hosts Olympus Mons, a volcano over twice the height of Everest
+  shared: planet
+
+n1-w4-sci.json [OVER THE MOONS] Mars
+  NEW: Phobos and Deimos, named for sons of the war god Ares, circle this planet
+  OLD (Fresh jeopardy / SPACED OUT): Plain old rust, iron oxide, gives this fourth planet its famous red color
+  shared: planet
+
+n1-w4-sci.json [OVER THE MOONS] Mars
+  NEW: Phobos and Deimos, named for sons of the war god Ares, circle this planet
+  OLD (Fresh jeopardy / ROMAN AROUND): The red planet and the month of March are both named for this Roman god of war
+  shared: planet
+
+n1-w4-sci.json [OVER THE MOONS] Mars
+  NEW: Phobos and Deimos, named for sons of the war god Ares, circle this planet
+  OLD (Easy final / OUT OF THIS WORLD): Rusty iron dust in its soil gives this neighboring planet the red glow that got it named for a god of war.
+  shared: planet
+
+n1-w4-sci.json [OVER THE MOONS] Jupiter
+  NEW: Galileo spotted four big moons, Io and Europa among them, orbiting this planet in 1610
+  OLD (Fresh jeopardy / SPACED OUT): The Great Red Spot, a storm raging for centuries, churns on this largest planet
+  shared: planet
+
+n1-w4-sci.json [OVER THE MOONS] Saturn
+  NEW: Icy geysers on the moon Enceladus feed one of the outer rings of this planet
+  OLD (Fresh jeopardy / PLANET PARADE): Famous for its rings, this second-largest planet would float in a bathtub big enough to hold it
+  shared: rings, planet
+
+n1-w4-sci.json [OVER THE MOONS] Saturn
+  NEW: Icy geysers on the moon Enceladus feed one of the outer rings of this planet
+  OLD (Fresh jeopardy / SPACED OUT): Showy rings aside, it's so light it would float in a bathtub big enough to hold it
+  shared: rings
+
+n1-w4-sci.json [OVER THE MOONS] Saturn
+  NEW: Icy geysers on the moon Enceladus feed one of the outer rings of this planet
+  OLD (Easy double / ONCE IN A BLUE MOON): Its rings of ice and rock make this planet the showpiece of any backyard telescope
+  shared: rings, planet
+
+n1-w4-sci.json [OVER THE MOONS] Saturn
+  NEW: Icy geysers on the moon Enceladus feed one of the outer rings of this planet
+  OLD (e1-w4-sci.json / LOOK UP, WAY UP): This ringed planet lent its name to the rockets that carried men to the moon
+  shared: planet
+
+n1-w4-sci.json [OVER THE MOONS] Neptune
+  NEW: Math predicted this planet before anyone saw it, and its big moon Triton orbits it backward
+  OLD (Fresh jeopardy / PLANET PARADE): Voyager 2 spied the Great Dark Spot, a storm on this windy blue planet farthest from the Sun
+  shared: planet
+
+n1-w4-sci.json [DRAWER POWER] a mortar and pestle
+  NEW: A Mexican molcajete, used for mashing guacamole, is a stone version of this grinding pair
+  OLD (Fresh jeopardy / COUNTER INTELLIGENCE): Grinding spices the old way takes this two-piece set: a sturdy bowl and a blunt crusher
+  shared: grinding
+
+n1-w4-sci.json [PERIODIC TABLE MANNERS] sodium
+  NEW: With the symbol Na, this soft metal makes up about 40 percent of table salt by weight
+  OLD (Fresh double / NUTRITION FACTS): Too much of this mineral, one of table salt's two elements, is linked to high blood pressure
+  shared: table, salt
+
+n1-w4-sci.json [PERIODIC TABLE MANNERS] iodine
+  NEW: Gently warm crystals of this element, symbol I, and they give off a striking violet vapor
+  OLD (Fresh double / GODS IN DISGUISE): Odin lurks in this element, No. 53, whose stinging tincture once dabbed every scraped knee
+  shared: element
+
+n1-w4-sci.json [PERIODIC TABLE MANNERS] tungsten
+  NEW: Old light bulb filaments glowed thanks to this metal, whose symbol W comes from 'wolfram'
+  OLD (Fresh double / TABLE FOR 118): Its unrivaled melting point among metals made this element, symbol W, ideal for light bulb filaments
+  shared: symbol, bulb, filaments
+
+n1-w4-sci.json [PERIODIC TABLE MANNERS] tungsten
+  NEW: Old light bulb filaments glowed thanks to this metal, whose symbol W comes from 'wolfram'
+  OLD (Fresh final / CHEMICAL SYMBOLS): Its symbol W comes from Wolfram, its German name, and no metal melts at a higher temperature
+  shared: symbol, wolfram, metal
+
+n1-w4-sci.json [FORECAST YOUR VOTE] tornadoes
+  NEW: Meteorologists rate these funnel-shaped twisters on the Enhanced Fujita scale
+  OLD (Fresh jeopardy / HAIL YES): The Enhanced Fujita scale rates these twisting storms from EF0 to EF5
+  shared: enhanced, fujita, scale
+
+n1-w4-sci.json [FORECAST YOUR VOTE] the jet stream
+  NEW: Eastbound flights get a speed boost from these fast rivers of wind high in the atmosphere
+  OLD (Fresh double / CLIMATE CONTROL): WWII bomber crews over Japan ran into this high-altitude river of air that speeds eastbound flights
+  shared: eastbound, flights
+
+n1-w4-sci.json [IDEA FACTORY] Post-it notes
+  NEW: Art Fry used a weak 3M glue to make hymnal bookmarks, and these sticky yellow squares followed
+  OLD (Fresh jeopardy / OOPS, ALL INVENTIONS): A 3M glue too weak to stick for good found its calling on these repositionable yellow squares
+  shared: glue, weak, yellow, squares
+
+n1-w4-sci.json [IDEA FACTORY] Post-it notes
+  NEW: Art Fry used a weak 3M glue to make hymnal bookmarks, and these sticky yellow squares followed
+  OLD (Fresh jeopardy / HAPPY ACCIDENTS): Spencer Silver's 'failed' weak adhesive found glory when Art Fry stuck it on these 3M squares
+  shared: weak, art, fry, squares
+
+n1-w4-sci.json [GREEN THUMB DRIVE] tulips
+  NEW: Dutch traders went wild for these spring bulbs during a 17th-century 'mania'
+  OLD (Fresh jeopardy / THAT ACTUALLY HAPPENED): At the peak of a Dutch mania that popped in 1637, one rare bulb of this flower cost years of wages
+  shared: dutch, mania
+
+n1-w4-sci.json [GREEN THUMB DRIVE] tulips
+  NEW: Dutch traders went wild for these spring bulbs during a 17th-century 'mania'
+  OLD (Fresh double / BUBBLE TROUBLE): At the height of a 1630s Dutch mania, a single bulb of this flower could trade for more than a house
+  shared: dutch, mania
+
+n1-w4-sci.json [GREEN THUMB DRIVE] tulips
+  NEW: Dutch traders went wild for these spring bulbs during a 17th-century 'mania'
+  OLD (Easy jeopardy / GARDEN VARIETY): Holland is famous for these cup-shaped spring bulbs that once sparked a trading mania
+  shared: spring, bulbs, mania
+
+n1-w4-sci.json [GREEN THUMB DRIVE] tulips
+  NEW: Dutch traders went wild for these spring bulbs during a 17th-century 'mania'
+  OLD (Easy jeopardy / IN FULL BLOOM): Holland's spring fields blaze with rows of this cup-shaped flower grown from bulbs
+  shared: spring, bulbs
+
+n1-w4-sci.json [GREEN THUMB DRIVE] tulips
+  NEW: Dutch traders went wild for these spring bulbs during a 17th-century 'mania'
+  OLD (Easy double / SAY IT WITH FLOWERS): In 1630s Holland, 'mania' over bulbs of this cup-shaped flower sent prices soaring
+  shared: mania, bulbs
+
+n1-w4-sci.json [GREEN THUMB DRIVE] photosynthesis
+  NEW: Chlorophyll soaks up red and blue light but reflects green during this sugar-making process
+  OLD (Fresh jeopardy / PLANT LIFE): Plants turn sunlight, water and carbon dioxide into sugar and oxygen in this process
+  shared: sugar, process
+
+n1-w5-mix.json [GAME BOARD OF DIRECTORS] Operation
+  NEW: Slip with the tweezers and Cavity Sam's red nose lights up with a buzz in this game
+  OLD (Fresh double / THINKING OUTSIDE THE BOX): A college student got $500 and an empty job promise for his prototype of this buzzing tweezers game
+  shared: tweezers
+
+n1-w5-mix.json [GAME BOARD OF DIRECTORS] Candy Land
+  NEW: Gumdrop Mountains and a Molasses Swamp line the sugary path to King Kandy in this game
+  OLD (Fresh double / GAME CHANGERS): Recovering from polio, Eleanor Abbott devised this sugary board game for the children on her ward
+  shared: sugary
+
+n1-w5-mix.json [GAME BOARD OF DIRECTORS] Catan (The Settlers of Catan)
+  NEW: German dental technician Klaus Teuber invented this 1995 game of island settlement
+  OLD (Fresh double / THINKING OUTSIDE THE BOX): German dental technician Klaus Teuber had players trading brick and wool on this hexagon-tiled island in 1995
+  shared: dental, technician, klaus, teuber, 1995
+
+n1-w5-mix.json [GAME BOARD OF DIRECTORS] Risk
+  NEW: Oscar winner Albert Lamorisse of 'The Red Balloon' fame invented this game of world conquest
+  OLD (Fresh jeopardy / DICE, DICE, BABY): Armies clash over 42 territories in this Parker Brothers game of world conquest
+  shared: conquest
+
+n1-w5-mix.json [RINGS AND THINGS] curling
+  NEW: 'Hurry hard!' the skip shouts to the sweepers in this sport played on 'sheets' of ice
+  OLD (Fresh jeopardy / WINTER GAMES): Sweepers with brooms guide a granite stone toward the 'house' in this Olympic sport
+  shared: sweepers, sport
+
+n1-w5-mix.json [RINGS AND THINGS] the marathon
+  NEW: Greek water carrier Spyridon Louis won this long-distance race at the 1896 Athens Games
+  OLD (Fresh jeopardy / SITES FOR SORE ARMIES): A messenger's fabled run from this 490 B.C. Greek battlefield gave a 26.2-mile race its name
+  shared: race
+
+n1-w5-mix.json [RINGS AND THINGS] the marathon
+  NEW: Greek water carrier Spyridon Louis won this long-distance race at the 1896 Athens Games
+  OLD (Fresh double / ANCIENT BATTLE STATIONS): A messenger's legendary run to Athens after this 490 BC victory over Persia inspired a 26-mile race
+  shared: athens, race
+
+n1-w5-mix.json [RINGS AND THINGS] the marathon
+  NEW: Greek water carrier Spyridon Louis won this long-distance race at the 1896 Athens Games
+  OLD (Fresh double / TOPONYM OF THE WORLD, MA!): A messenger's fabled run from a Greek battlefield to Athens gave this 26.2-mile race its name
+  shared: athens, race
+
+n1-w5-mix.json [PLAYTHINGS PAST] Silly Putty
+  NEW: A failed WWII rubber substitute became this bouncy, stretchy toy goo sold in a plastic egg
+  OLD (Fresh jeopardy / TOYING WITH HISTORY): A botched WWII attempt at synthetic rubber became this egg-packaged goo that lifts comic-strip ink
+  shared: wwii, rubber, goo
+
+n1-w5-mix.json [ART-ITUDE] Vincent van Gogh
+  NEW: This Dutchman's bandaged head appears in an 1889 self-portrait, painted after he cut his ear
+  OLD (Fresh double / IMPRESSION MANAGEMENT): He painted 'The Starry Night' from an asylum and bared his soul in letters to his brother Theo
+  shared: painted
+
+n1-w5-mix.json [ART-ITUDE] Vincent van Gogh
+  NEW: This Dutchman's bandaged head appears in an 1889 self-portrait, painted after he cut his ear
+  OLD (Fresh double / THE ARTS DEPARTMENT): A swirling night sky over Saint-Rémy fills this Dutchman's most famous 1889 canvas
+  shared: dutchman, 1889
+
+n1-w5-mix.json [WHAT'S IN A BRAND NAME?] Volkswagen
+  NEW: Translated from German, this automaker's name simply means 'people's car'
+  OLD (Fresh jeopardy / AUTO-BIOGRAPHY): The last of these insect-nicknamed German 'people's cars' rolled out of a Mexican plant in 2003
+  shared: people
+
+n1-w5-mix.json [COURTING DISASTER] the kitchen
+  NEW: Pickleball players may not volley in the zone by the net nicknamed for this room of the house
+  OLD (Easy double / THE NIFTY FIFTIES): Nixon and Khrushchev argued appliances in this 1959 Moscow face-off named for a room
+  shared: room
+
+n1-w5-mix.json [COURTING DISASTER] badminton
+  NEW: Shuttlecocks first flew for Olympic medals at the 1992 Barcelona Games in this sport
+  OLD (Easy jeopardy / BACKYARD CHAMPIONS): Players swat a feathered shuttlecock over a high net in this racket sport
+  shared: sport
+
+n1-w5-mix.json [HOLY DESTINATIONS] Santiago de Compostela
+  NEW: Walkers on the Camino often carry a scallop shell, the badge of pilgrims to this Spanish city
+  OLD (Fresh double / HOLY PLACES): Pilgrims on the Camino walk to this Spanish city said to hold the bones of the apostle James
+  shared: pilgrims, camino
+
+n1-w5-mix.json [CLOTHES CALL] Stetson
+  NEW: A Philadelphia hatter's 1865 'Boss of the Plains' made his name a byword for cowboy hats
+  OLD (e2-w2-lit.json / NAMESAKE STORIES): Philadelphia hatter John B. gave his name to this broad-brimmed cowboy hat
+  shared: philadelphia, hatter, cowboy
+
+n2-w1-hist.json [IRON CURTAIN CALL] the Berlin Wall
+  NEW: Checkpoint Charlie was the most famous crossing point for foreigners through this barrier
+  OLD (Fresh jeopardy / COLD WAR CHRONICLES): Jubilant crowds took hammers to this concrete barrier dividing a German city in November 1989
+  shared: barrier
+
+n2-w1-hist.json [IRON CURTAIN CALL] the Berlin Wall
+  NEW: Checkpoint Charlie was the most famous crossing point for foreigners through this barrier
+  OLD (Fresh double / IRON CURTAIN CALLS): East German guards stood aside on November 9, 1989 as crowds surged through this concrete barrier
+  shared: barrier
+
+n2-w1-hist.json [IRON CURTAIN CALL] the Berlin Wall
+  NEW: Checkpoint Charlie was the most famous crossing point for foreigners through this barrier
+  OLD (Easy jeopardy / HEADLINES OF THE SIXTIES): In August 1961 this barrier went up almost overnight, splitting a German city in two
+  shared: barrier
+
+n2-w1-hist.json [IRON CURTAIN CALL] the Berlin Wall
+  NEW: Checkpoint Charlie was the most famous crossing point for foreigners through this barrier
+  OLD (Easy double / DUCK & COVER): In 1961 this concrete barrier went up almost overnight, dividing a German city in two
+  shared: barrier
+
+n2-w1-hist.json [IRON CURTAIN CALL] Sputnik
+  NEW: Its name is Russian for 'fellow traveler,' and its 1957 launch set off the space race
+  OLD (Fresh jeopardy / SPACE RACE): In 1957 the USSR kicked off the space age with this beach-ball-sized beeping satellite
+  shared: 1957, space
+
+n2-w1-hist.json [IRON CURTAIN CALL] Sputnik
+  NEW: Its name is Russian for 'fellow traveler,' and its 1957 launch set off the space race
+  OLD (Fresh double / GROUND CONTROL TO MAJOR TECH): The beeps of this beach-ball-sized Soviet satellite kicked off the Space Race in October 1957
+  shared: space, race, 1957
+
+n2-w1-hist.json [IRON CURTAIN CALL] Sputnik
+  NEW: Its name is Russian for 'fellow traveler,' and its 1957 launch set off the space race
+  OLD (Easy jeopardy / RACE FOR THE MOON): The beep-beep of this Soviet satellite in 1957 told America the race was on
+  shared: 1957, race
+
+n2-w1-hist.json [IRON CURTAIN CALL] Sputnik
+  NEW: Its name is Russian for 'fellow traveler,' and its 1957 launch set off the space race
+  OLD (Easy double / DUCK & COVER): The steady beep of this 1957 Soviet satellite startled Americans into beefing up school science
+  shared: 1957
+
+n2-w1-hist.json [IRON CURTAIN CALL] the Warsaw Pact
+  NEW: This Soviet-led military alliance formally dissolved in July 1991, months before the USSR itself did
+  OLD (Fresh jeopardy / COLD WAR CHRONICLES): The Soviet bloc's 1955 answer to NATO was this military alliance named for the Polish capital
+  shared: soviet, military, alliance
+
+n2-w1-hist.json [CROWNS & CHRONICLES] the Hundred Years' War
+  NEW: Crécy, Poitiers and Agincourt were all English victories in this long Anglo-French struggle
+  OLD (Fresh double / WARS BY THE NUMBERS): Joan of Arc fought in this Anglo-French conflict whose name undercounts its actual 116 years
+  shared: anglo
+
+n2-w1-hist.json [CROWNS & CHRONICLES] Charlemagne
+  NEW: Einhard says this Frankish emperor kept writing tablets under his pillow but never quite learned to write
+  OLD (Fresh jeopardy / FEUDAL ATTRACTION): Pope Leo III crowned this Frankish king emperor on Christmas Day in the year 800
+  shared: frankish, emperor
+
+n2-w1-hist.json [CROWNS & CHRONICLES] Charlemagne
+  NEW: Einhard says this Frankish emperor kept writing tablets under his pillow but never quite learned to write
+  OLD (Fresh jeopardy / CROWNED HEADS): The pope crowned this Frankish king emperor of the Romans on Christmas Day in the year 800
+  shared: frankish, emperor
+
+n2-w1-hist.json [CROWNS & CHRONICLES] the Bayeux Tapestry
+  NEW: Halley's Comet makes a cameo in this 224-foot embroidered account of the Norman Conquest
+  OLD (Fresh jeopardy / FEUDAL ATTRACTION): Some 230 feet of embroidery tell the Norman Conquest story in this work named for the French town holding it
+  shared: norman, conquest
+
+n2-w1-hist.json [HIGH AND MIGHTY] Kilimanjaro
+  NEW: Kibo is the tallest of the three volcanic cones that make up this Tanzanian giant
+  OLD (Fresh jeopardy / PEAK PERFORMANCE): Hemingway's famous 'snows' cap this dormant Tanzanian volcano, the highest point in Africa
+  shared: tanzanian
+
+n2-w1-hist.json [HIGH AND MIGHTY] Kilimanjaro
+  NEW: Kibo is the tallest of the three volcanic cones that make up this Tanzanian giant
+  OLD (Easy jeopardy / THE HILLS ARE ALIVE): Africa's tallest peak, this snowcapped Tanzanian giant gave Hemingway a story title
+  shared: tallest, tanzanian
+
+n2-w1-hist.json [HIGH AND MIGHTY] Mount Ararat
+  NEW: Tradition says Noah's Ark came to rest on this snowy peak in far eastern Turkey
+  OLD (Fresh jeopardy / RHYMES WITH "CAT"): Genesis says Noah's Ark came to rest on the mountains of this region in modern Turkey
+  shared: noah, ark, rest, turkey
+
+n2-w1-hist.json [HIGH AND MIGHTY] Aconcagua
+  NEW: Its summit in Argentina is the highest point in both the Western and Southern Hemispheres
+  OLD (Fresh jeopardy / PEAK PERFORMANCE): At about 22,800 feet, this Argentine Andes summit is the highest mountain outside Asia
+  shared: summit, highest
+
+n2-w1-hist.json [THE OTHER PRESIDENTS] James K. Polk
+  NEW: He pledged to serve just one term, kept his word, and died about three months after leaving office
+  OLD (Fresh jeopardy / MOUNT RUSHMORE MATERIAL): Nicknamed 'Young Hickory', this dark horse added Oregon and the Southwest, then kept his one-term pledge
+  shared: kept, term
+
+n2-w1-hist.json [THE OTHER PRESIDENTS] James K. Polk
+  NEW: He pledged to serve just one term, kept his word, and died about three months after leaving office
+  OLD (Fresh jeopardy / COMMANDER IN BRIEF): He settled the Oregon boundary at the 49th parallel and won the Mexican-American War, all in one term
+  shared: term
+
+n2-w1-hist.json [THIRST QUARTERS] the Sahara
+  NEW: Only about a quarter of this vast North African desert is actually covered in sand dunes
+  OLD (Fresh jeopardy / AFRICA CALLING): Camel caravans once crossed this desert, Earth's largest hot one, from the Atlantic to the Red Sea
+  shared: desert
+
+n2-w1-hist.json [THIRST QUARTERS] the Sahara
+  NEW: Only about a quarter of this vast North African desert is actually covered in sand dunes
+  OLD (Fresh double / SAND TRAPS): Salt caravans from Timbuktu once crossed this desert, the largest hot one on Earth
+  shared: desert
+
+n2-w1-hist.json [THIRST QUARTERS] the Sahara
+  NEW: Only about a quarter of this vast North African desert is actually covered in sand dunes
+  OLD (Fresh double / DRY HUMOR): Fittingly, the Arabic word for 'deserts' gave its name to the world's largest hot desert
+  shared: desert
+
+n2-w1-hist.json [THIRST QUARTERS] the Gobi
+  NEW: Frost and even snow dust the dunes of this cold desert spanning southern Mongolia
+  OLD (Fresh double / SAND TRAPS): 1920s expeditions found famous dinosaur eggs in this cold Asian desert of Bactrian camels
+  shared: cold, desert
+
+n2-w1-hist.json [THIRST QUARTERS] the Gobi
+  NEW: Frost and even snow dust the dunes of this cold desert spanning southern Mongolia
+  OLD (Fresh double / DRY HUMOR): Roy Chapman Andrews unearthed famed dinosaur eggs in this Mongolia-China desert in the 1920s
+  shared: mongolia, desert
+
+n2-w1-hist.json [THIRST QUARTERS] the Atacama
+  NEW: ALMA, an array of 66 radio dishes, scans the sky from a high plateau in this Chilean desert
+  OLD (Fresh double / SAND TRAPS): Parts of this Chilean desert have never recorded rain, making it a handy stand-in for Mars
+  shared: chilean, desert
+
+n2-w1-hist.json [THIRST QUARTERS] the Atacama
+  NEW: ALMA, an array of 66 radio dishes, scans the sky from a high plateau in this Chilean desert
+  OLD (Fresh double / DRY HUMOR): Parts of this Chilean desert, the driest nonpolar place on Earth, have never recorded rainfall
+  shared: chilean, desert
+
+n2-w1-hist.json [THIRST QUARTERS] the Atacama
+  NEW: ALMA, an array of 66 radio dishes, scans the sky from a high plateau in this Chilean desert
+  OLD (Fresh final / HIGH & DRY): Astronomers prize the cloudless skies above this Chilean region, Earth's driest non-polar place and home to the ALMA observatory
+  shared: chilean, alma
+
+n2-w1-hist.json [THIRST QUARTERS] the Namib
+  NEW: The red dunes of Sossusvlei rise in this coastal desert, which gave its name to a whole nation
+  OLD (Fresh double / SAND TRAPS): Fog off the cold Benguela Current sustains beetles and welwitschia in this African coastal desert
+  shared: coastal, desert
+
+n2-w1-hist.json [THIRST QUARTERS] the Namib
+  NEW: The red dunes of Sossusvlei rise in this coastal desert, which gave its name to a whole nation
+  OLD (Fresh double / DRY HUMOR): Beetles drink fog on the dunes of this African desert, home to the Skeleton Coast
+  shared: dunes, desert
+
+n2-w1-hist.json [THIRST QUARTERS] Rub' al Khali (Empty Quarter)
+  NEW: In 1931 Bertram Thomas became the first Westerner to cross this vast sand sea of southern Arabia
+  OLD (Fresh double / SAND TRAPS): Its name is Arabic for 'the empty quarter': this sand sea of southern Arabia is Earth's largest erg
+  shared: sand, southern, arabia
+
+n2-w1-hist.json [THIRST QUARTERS] Rub' al Khali (Empty Quarter)
+  NEW: In 1931 Bertram Thomas became the first Westerner to cross this vast sand sea of southern Arabia
+  OLD (Fresh double / DRY HUMOR): Arabic for 'Empty Quarter,' it's the Arabian sand sea with Earth's largest unbroken dune field
+  shared: sand
+
+n2-w1-hist.json [OLD REGIMES, NEW REGIMES] the Bastille
+  NEW: Only seven prisoners were found inside this Paris fortress when revolutionaries took it in 1789
+  OLD (Fresh jeopardy / REVOLTING DEVELOPMENTS): A Parisian mob stormed this fortress prison on July 14, 1789, a date the French still celebrate
+  shared: fortress, 1789
+
+n2-w1-hist.json [OLD REGIMES, NEW REGIMES] October
+  NEW: Lenin's Bolsheviks seized power in this month of 1917 by Russia's old calendar, November by ours
+  OLD (e2-w5-mix.json / NICKNAME DROPPERS): His World Series heroics made Yankee slugger Reggie Jackson 'Mister' this month
+  shared: month
+
+n2-w1-hist.json [OLD REGIMES, NEW REGIMES] Toussaint Louverture
+  NEW: A former slave turned general, he took a surname meaning 'the opening' and led Haiti's revolt
+  OLD (Fresh double / COUP ARE YOU?): Once enslaved, he led Haiti's revolution but died in a French prison in the Jura mountains in 1803
+  shared: haiti
+
+n2-w1-hist.json [OLD REGIMES, NEW REGIMES] Thermidor
+  NEW: Robespierre fell on the 9th of this 'heat' month of France's revolutionary calendar
+  OLD (Fresh jeopardy / MONTH TO MONTH): This French Revolutionary calendar month of summer heat later lent its name to a lobster dish
+  shared: revolutionary, calendar, month, heat
+
+n2-w1-hist.json [LAKE EFFECT] the Caspian Sea
+  NEW: Europe's longest river, the Volga, empties into this landlocked body of salty water
+  OLD (Fresh double / SEAS THE DAY): Beluga sturgeon prized for caviar swim in this salty lake, the world's largest inland body of water
+  shared: salty
+
+n2-w1-hist.json [LAKE EFFECT] Lake Titicaca
+  NEW: The Uros people build floating reed islands on these high Andean waters shared by Peru and Bolivia
+  OLD (Fresh jeopardy / LAKE EXPECTATIONS): Reed boats ply this lake on the Peru-Bolivia border, often called the world's highest navigable lake
+  shared: reed, peru, bolivia
+
+n2-w1-hist.json [LAKE EFFECT] Lake Baikal
+  NEW: Over a mile deep, this Siberian rift holds about a fifth of Earth's unfrozen fresh surface water
+  OLD (Fresh jeopardy / LAKE EXPECTATIONS): The world's deepest, this Siberian rift lake holds about a fifth of Earth's unfrozen fresh water
+  shared: siberian, rift, holds, fifth, unfrozen, fresh
+
+n2-w1-hist.json [LAKE EFFECT] Lake Baikal
+  NEW: Over a mile deep, this Siberian rift holds about a fifth of Earth's unfrozen fresh surface water
+  OLD (Fresh double / NATURE'S RECORD BOOK): This Siberian rift lake holds more water than all five Great Lakes combined
+  shared: siberian, rift, holds
+
+n2-w1-hist.json [SHE RULED] Catherine the Great
+  NEW: This Russian empress bought Denis Diderot's library, then paid him to keep it as her librarian
+  OLD (Fresh jeopardy / CROWNED HEADS): German by birth, this Russian empress seized the throne in a 1762 coup against her husband Peter III
+  shared: empress
+
+n2-w1-hist.json [SHE RULED] Catherine the Great
+  NEW: This Russian empress bought Denis Diderot's library, then paid him to keep it as her librarian
+  OLD (Fresh double / BEFORE & AFTER): Russia's German-born 18th-century empress snorkels along Australia's vast coral ecosystem
+  shared: empress
+
+n2-w1-hist.json [SHE RULED] Cixi
+  NEW: China's empress dowager is said to have spent navy funds restoring the Summer Palace, marble boat and all
+  OLD (Fresh double / THE REGENT ERA): For nearly half a century this Qing empress dowager ruled China from behind a silk screen
+  shared: empress, dowager, china
+
+n2-w1-hist.json [SHE RULED] Theodora
+  NEW: A onetime actress, this wife of Justinian gazes out from glittering mosaics in Ravenna's San Vitale
+  OLD (Fresh double / THE REGENT ERA): A bear keeper's daughter, this empress stiffened Justinian's spine during the Nika riots of 532
+  shared: justinian
+
+n2-w1-hist.json [ALL HANDS ON DECK] the Lusitania
+  NEW: It took just 18 minutes for this Cunard liner to sink off Ireland's Old Head of Kinsale in 1915
+  OLD (Fresh double / LINER NOTES): A U-boat torpedo sank this British liner off Ireland in May 1915, pushing U.S. opinion toward war
+  shared: liner, ireland, 1915
+
+n2-w1-hist.json [ALL HANDS ON DECK] the Lusitania
+  NEW: It took just 18 minutes for this Cunard liner to sink off Ireland's Old Head of Kinsale in 1915
+  OLD (Easy double / OVER THERE): A German torpedo sank this British liner in 1915, turning many Americans against neutrality
+  shared: liner, 1915
+
+n2-w1-hist.json [ALL HANDS ON DECK] HMS Bounty
+  NEW: Breadfruit seedlings from Tahiti were the cargo of this ship when its crew mutinied in 1789
+  OLD (Fresh double / SAILS PITCH): Cast adrift from this ship by mutineers in 1789, Captain Bligh sailed an open boat 3,600 miles
+  shared: ship, 1789
+
+n2-w1-hist.json [THE MANDATE OF HEAVEN] Han
+  NEW: Nine in ten Chinese people share an ethnic name with this dynasty, which ruled for four centuries
+  OLD (Fresh jeopardy / ROYAL FAMILIES & DYNASTIES): China's majority ethnic group is named for this dynasty that ruled for 4 centuries from 206 B.C.
+  shared: ethnic, dynasty, ruled, centuries
+
+n2-w2-lit.json [LIT TERMS & CONDITIONS] zeugma (syllepsis)
+  NEW: 'He lost his hat and his temper' is this figure, with one verb yoked to two different senses
+  OLD (Fresh double / RHETORIC & ROLL): Greek for 'yoking', it's the device letting one verb pull double duty: 'she stole his heart and his wallet'
+  shared: verb
+
+n2-w2-lit.json [AMERICAN DRAMA CLUB] A Raisin in the Sun
+  NEW: A $10,000 life insurance check divides the Younger family in this Lorraine Hansberry drama
+  OLD (Fresh double / OPENING NIGHTS): Lorraine Hansberry took this play's title from a Langston Hughes poem about a dream deferred
+  shared: lorraine, hansberry
+
+n2-w2-lit.json [HOME IS WHERE THE INK IS] Herman Melville
+  NEW: From his Berkshires farmhouse, Arrowhead, he gazed out at Mount Greylock while finishing his whale of a novel
+  OLD (Easy double / CHARACTER WITNESS): Captain Ahab chases a white whale through the pages of a novel by this American author
+  shared: whale
+
+n2-w2-lit.json [ONCE UPON A DANE] The Emperor's New Clothes
+  NEW: Only a child dares to say the vain ruler has nothing on in this Hans Christian Andersen tale
+  OLD (Easy jeopardy / TALES AS OLD AS TIME): In this Andersen tale, two swindlers sell a vain ruler a suit only the wise can see
+  shared: andersen, vain, ruler
+
+n2-w2-lit.json [ONCE UPON A DANE] Thumbelina
+  NEW: Promised in marriage to a mole, this thumb-sized heroine escapes on the back of a swallow
+  OLD (Easy jeopardy / TALES AS OLD AS TIME): A toad steals this tiny Andersen heroine, born in a tulip, from her walnut-shell bed
+  shared: heroine
+
+n2-w3-screen.json [ARIA KIDDING?] The Barber of Seville
+  NEW: 'Figaro! Figaro! Figaro!' rings out in this Rossini comic opera set in Spain
+  OLD (Fresh double / ARIA READY?): The rapid-fire aria 'Largo al factotum' introduces the title haircutter of this Rossini comedy
+  shared: rossini
+
+n2-w3-screen.json [ARIA KIDDING?] Aida
+  NEW: Its 'Triumphal March,' blared on long trumpets, is a highlight of this Verdi opera set in Egypt
+  OLD (Fresh double / VERDI INTERESTING): An enslaved Ethiopian princess loves an Egyptian general in this opera with a famed triumphal march
+  shared: opera, triumphal, march
+
+n2-w3-screen.json [ARIA KIDDING?] Aida
+  NEW: Its 'Triumphal March,' blared on long trumpets, is a highlight of this Verdi opera set in Egypt
+  OLD (Fresh double / GRAND OPERA): Egypt's khedive commissioned this Verdi opera about an enslaved Ethiopian princess for Cairo in 1871
+  shared: egypt, verdi, opera
+
+n2-w3-screen.json [ARIA KIDDING?] Norma
+  NEW: Bellini's Druid high priestess, secretly a mother, gives this opera its name
+  OLD (Fresh double / ARIA READY?): A Druid priestess prays to the moon in 'Casta diva', the Act 1 showpiece of this Bellini opera
+  shared: druid, priestess, bellini, opera
+
+n2-w3-screen.json [DRAMA SCHOOLED] Breaking Bad
+  NEW: Bryan Cranston went from a sitcom dad to a meth kingpin on this series
+  OLD (Fresh jeopardy / TIVO OR NOT TIVO): Chemistry teacher Walter White cooked blue meth as 'Heisenberg' in this AMC drama
+  shared: meth
+
+n2-w3-screen.json [DRAMA SCHOOLED] The Wire
+  NEW: Each season of this HBO drama widened its view of Baltimore, from the docks to the schools
+  OLD (Fresh jeopardy / TIVO OR NOT TIVO): Whistling stick-up man Omar Little robbed Baltimore drug crews in this gritty HBO drama
+  shared: baltimore, hbo, drama
+
+n2-w3-screen.json [DRAMA SCHOOLED] The Wire
+  NEW: Each season of this HBO drama widened its view of Baltimore, from the docks to the schools
+  OLD (Fresh jeopardy / PRESTIGE DRAMA): Seasons of this Baltimore drama dissected drug corners, docks, schools, City Hall and a newsroom
+  shared: baltimore, drama, docks, schools
+
+n2-w3-screen.json [DRAMA SCHOOLED] The Wire
+  NEW: Each season of this HBO drama widened its view of Baltimore, from the docks to the schools
+  OLD (Fresh double / IT'S NOT TV): Each season of this Baltimore epic dissects another institution, from the port to the press
+  shared: season, baltimore
+
+n2-w3-screen.json [DRAMA SCHOOLED] Deadwood
+  NEW: Ian McShane's foul-mouthed saloon keeper Al Swearengen ruled a Dakota camp in this HBO series
+  OLD (Fresh double / IT'S NOT TV): Ian McShane's saloon boss Al Swearengen profanely rules this Dakota Territory gold-camp western
+  shared: ian, mcshane, saloon, swearengen, dakota, camp
+
+n2-w3-screen.json [STATUESQUE PICTURES] Gandhi
+  NEW: Ben Kingsley played India's great apostle of nonviolence in this 1982 Best Picture
+  OLD (Fresh jeopardy / WOMEN AT THE HELM): India's first female prime minister, she was assassinated by her own bodyguards in 1984
+  shared: india
+
+n2-w3-screen.json [STATUESQUE PICTURES] Gandhi
+  NEW: Ben Kingsley played India's great apostle of nonviolence in this 1982 Best Picture
+  OLD (Fresh jeopardy / NATION BUILDERS): India's 'Father of the Nation', this leader of the 1930 Salt March never held elected office
+  shared: india
+
+n2-w3-screen.json [STATUESQUE PICTURES] Gandhi
+  NEW: Ben Kingsley played India's great apostle of nonviolence in this 1982 Best Picture
+  OLD (Easy jeopardy / FIGURES OF THE CENTURY): Marching to the sea to make salt, this man led India to independence without violence
+  shared: india
+
+n2-w3-screen.json [STATUESQUE PICTURES] Wings
+  NEW: Clara Bow and a young Gary Cooper appear in this WWI aviation film, the inaugural top Oscar winner
+  OLD (Fresh double / AND THE FIRST OSCAR GOES TO...): The very first Best Picture winner, this silent 1927 film sent WWI biplanes into aerial dogfights
+  shared: winner, wwi
+
+n2-w3-screen.json [CLASSIC ROCK ROLL CALL] Led Zeppelin
+  NEW: Jimmy Page's guitar and Robert Plant's wail build 'Stairway to Heaven' for this band
+  OLD (Fresh jeopardy / ROCK LEGENDS): A quip that they'd go over like a lead balloon inspired the name of this 'Stairway to Heaven' band
+  shared: stairway, heaven
+
+n2-w3-screen.json [CLASSIC ROCK ROLL CALL] Pink Floyd
+  NEW: A prism splitting a beam of light into a rainbow graces this band's 'The Dark Side of the Moon'
+  OLD (Fresh jeopardy / ROCK LEGENDS): Syd Barrett named this 'Dark Side of the Moon' band by combining the first names of two Carolina bluesmen
+  shared: dark, side
+
+n2-w3-screen.json [NOT A PEEP] Charlie Chaplin
+  NEW: He cooked and ate his own boot for Thanksgiving dinner in 'The Gold Rush'
+  OLD (Fresh double / SILENCE IS GOLDEN): Bowler hat, cane, toothbrush mustache: his Little Tramp waddled through 'The Gold Rush'
+  shared: rush
+
+n2-w3-screen.json [NOT A PEEP] Buster Keaton
+  NEW: Never smiling on screen, this 'Great Stone Face' stood still as a house front fell around him
+  OLD (Fresh double / SILENCE IS GOLDEN): The 'Great Stone Face' chased a stolen locomotive through the Civil War in 1926's 'The General'
+  shared: stone, face
+
+n2-w3-screen.json [NOT A PEEP] Harold Lloyd
+  NEW: Horn-rimmed glasses marked this daredevil comic of 'Safety Last!' and 'The Freshman'
+  OLD (Fresh double / SILENCE IS GOLDEN): Glasses on, he dangled from a department store clock high above the street in 1923's 'Safety Last!'
+  shared: glasses, safety
+
+n2-w3-screen.json [NOT A PEEP] Mary Pickford
+  NEW: Dubbed 'America's Sweetheart,' she co-founded United Artists with Chaplin, Fairbanks and Griffith
+  OLD (Fresh jeopardy / SCREEN SOBRIQUETS): This silent-era star and United Artists co-founder was billed as 'America's Sweetheart'
+  shared: united, artists, sweetheart
+
+n2-w3-screen.json [NOT A PEEP] Nosferatu
+  NEW: Count Orlok, an unauthorized take on Dracula, stalks this 1922 F.W. Murnau film
+  OLD (Fresh jeopardy / A TITLE IN ONE): Bram Stoker's widow sued to destroy this 1922 German vampire film that renamed Dracula Count Orlok
+  shared: 1922, dracula, count, orlok
+
+n2-w3-screen.json [BROADWAY BYLINES] Lin-Manuel Miranda
+  NEW: He wrote 'Hamilton' and originated its title role, the ten-dollar Founding Father
+  OLD (Fresh jeopardy / SETTLING THE SCORE): Before 'Hamilton', this composer-lyricist won a Tony for the score of 'In the Heights'
+  shared: hamilton
+
+n2-w3-screen.json [BROADWAY BYLINES] Cole Porter
+  NEW: 'Night and Day' and 'I Get a Kick Out of You' came from this Yale-educated songwriter
+  OLD (Easy double / THEY WROTE THE SHOWS): 'Night and Day' and 'Anything Goes' showed off this Indiana-born songwriter's wit
+  shared: songwriter
+
+n2-w3-screen.json [BROADWAY BYLINES] Stephen Sondheim
+  NEW: Lyricist of 'West Side Story,' he wrote both the words and music for 'Into the Woods'
+  OLD (Easy double / THEY WROTE THE SHOWS): He wrote the lyrics for 'West Side Story' and 'Gypsy' before composing 'Sweeney Todd' himself
+  shared: side, story
+
+n2-w3-screen.json [CATCHPHRASE CRAZE] Mork & Mindy
+  NEW: 'Nanu nanu' was the Orkan greeting of Robin Williams' alien on this sitcom
+  OLD (Easy jeopardy / SPIN-OFF CITY): Robin Williams' spaceman from Ork got this spin-off after visiting Happy Days
+  shared: robin, williams
+
+n2-w3-screen.json [CATCHPHRASE CRAZE] Laugh-In
+  NEW: 'Sock it to me!' and 'Verrry interesting' were catchphrases on this 1960s sketch show
+  OLD (Fresh jeopardy / VARIETY HOUR): Goldie Hawn giggled in body paint and Nixon said 'Sock it to me?' on this rapid-fire 1960s show
+  shared: sock, 1960s
+
+n2-w3-screen.json [CATCHPHRASE CRAZE] Laugh-In
+  NEW: 'Sock it to me!' and 'Verrry interesting' were catchphrases on this 1960s sketch show
+  OLD (Easy jeopardy / THEY SAID IT ON TV): 'Sock it to me!' usually got somebody doused on this zany Rowan & Martin show
+  shared: sock
+
+n2-w3-screen.json [CATCHPHRASE CRAZE] Laugh-In
+  NEW: 'Sock it to me!' and 'Verrry interesting' were catchphrases on this 1960s sketch show
+  OLD (Easy jeopardy / THE VARIETY HOUR): 'Sock it to me!' was the catchphrase on this rapid-fire show hosted by Rowan and Martin
+  shared: sock
+
+n2-w3-screen.json [MOVIE MAESTROS] Bernard Herrmann
+  NEW: Stabbing strings for the shower scene in 'Psycho' were the work of this composer
+  OLD (Fresh double / SCORE KEEPERS): Shrieking violins in 'Psycho' are his, as are the scores for 'Citizen Kane' and 'Taxi Driver'
+  shared: psycho
+
+n2-w3-screen.json [LONG-PLAYING BEATLES] Abbey Road
+  NEW: Its title honors the London street outside the EMI studio where this 1969 album was made
+  OLD (Fresh jeopardy / MEET THE BEATLES): The Beatles just strolled across a zebra crossing outside their studio for this 1969 album cover
+  shared: outside, studio, 1969, album
+
+n2-w3-screen.json [LONG-PLAYING BEATLES] Abbey Road
+  NEW: Its title honors the London street outside the EMI studio where this 1969 album was made
+  OLD (Fresh jeopardy / SMALL SCREEN SMASH-UPS): The Crawley family's estate strolls the zebra crossing on the last album the Beatles recorded
+  shared: album
+
+n2-w3-screen.json [LONG-PLAYING BEATLES] Abbey Road
+  NEW: Its title honors the London street outside the EMI studio where this 1969 album was made
+  OLD (Fresh double / SPIN DOCTORS): Four Beatles stride a zebra crossing on the cover of this 1969 LP named for a London street
+  shared: 1969, street
+
+n2-w3-screen.json [SHE'S GOT TOP BILLING] Ingrid Bergman
+  NEW: Her Ilsa boards the plane in 'Casablanca,' and her daughter Isabella Rossellini became a star too
+  OLD (Fresh double / LEADING LADIES OF LEGEND): This 'Casablanca' star made 1978's 'Autumn Sonata' for an unrelated director with her surname
+  shared: casablanca
+
+n2-w3-screen.json [SHE'S GOT TOP BILLING] Ingrid Bergman
+  NEW: Her Ilsa boards the plane in 'Casablanca,' and her daughter Isabella Rossellini became a star too
+  OLD (Easy jeopardy / SILVER SCREEN QUEENS): This Swedish star of 'Casablanca' won Oscars for 'Gaslight' and 'Anastasia'
+  shared: casablanca
+
+n2-w3-screen.json [PRIZE-TIME TELEVISION] Wheel of Fortune
+  NEW: Merv Griffin created this letter-guessing show, which grew out of the game Hangman
+  OLD (Fresh jeopardy / GAME SHOW GENESIS): Since 1975 contestants on this hangman-inspired show have spun for cash and paid $250 for a vowel
+  shared: hangman
+
+n2-w3-screen.json [PRIZE-TIME TELEVISION] The Price Is Right
+  NEW: 'Come on down!' summons shoppers to Contestants' Row on this game show
+  OLD (Easy jeopardy / GAME SHOW GREATS): Bob Barker told contestants to 'come on down' and bid on showcases on this show
+  shared: contestants, come
+
+n2-w3-screen.json [PRIZE-TIME TELEVISION] Family Feud
+  NEW: 'Survey says!' rings out as two clans face off on this game show
+  OLD (Fresh jeopardy / GAME SHOW GENESIS): Richard Dawson kissed the contestants as first host of this show where clans guess survey answers
+  shared: clans, survey
+
+n2-w3-screen.json [PRIZE-TIME TELEVISION] Let's Make a Deal
+  NEW: Monty Hall offered costumed traders the curtain or Door No. 3 on this show
+  OLD (Fresh jeopardy / LOVELY PARTING FACTS): Costumed contestants risked a sure thing on what Monty Hall hid behind door number 3 on this show
+  shared: costumed, monty, hall, door
+
+n2-w3-screen.json [PRIZE-TIME TELEVISION] Let's Make a Deal
+  NEW: Monty Hall offered costumed traders the curtain or Door No. 3 on this show
+  OLD (Easy jeopardy / GAME SHOW GREATS): Monty Hall tempted costumed contestants with mystery doors on this trading show
+  shared: monty, hall, costumed
+
+n2-w4-sci.json [WILD CARDS] monotremes
+  NEW: Their name means 'single opening,' and these egg-laying mammals include the duck-billed platypus
+  OLD (Fresh jeopardy / FUR REAL): Platypuses and echidnas are the only living members of this order of egg-laying mammals
+  shared: laying, mammals
+
+n2-w4-sci.json [WILD CARDS] a salamander
+  NEW: Mexico's axolotl, which keeps its feathery gills into adulthood, is a type of this amphibian
+  OLD (Fresh double / CAMPAIGN CRITTERS): An 1812 cartoon fused Elbridge Gerry's contorted district with this amphibian, coining a political verb
+  shared: amphibian
+
+n2-w4-sci.json [WILD CARDS] tardigrades
+  NEW: Nicknamed 'water bears,' these eight-legged micro-animals have survived exposure to outer space
+  OLD (Fresh double / REMARKABLE CREATURES): Called a water bear, this nearly indestructible micro-animal has survived the vacuum of space
+  shared: micro, survived, space
+
+n2-w4-sci.json [WILD CARDS] tardigrades
+  NEW: Nicknamed 'water bears,' these eight-legged micro-animals have survived exposure to outer space
+  OLD (Fresh double / ODD DUCKS): Also called the water bear or moss piglet, this eight-legged micro-animal has survived open space
+  shared: eight, legged, micro, survived, space
+
+n2-w4-sci.json [BODY OF WORK] the Achilles tendon
+  NEW: A hero dipped in the River Styx lends his name to this cord linking your calf muscle to your heel
+  OLD (Fresh jeopardy / HERO WORSHIP): A dip in the River Styx left this 'Iliad' warrior invulnerable everywhere but his heel
+  shared: styx, heel
+
+n2-w4-sci.json [MISSION CONTROL FREAKS] Apollo 13
+  NEW: Jim Lovell's crew looped around the moon and limped home aboard this crippled 1970 mission
+  OLD (Fresh jeopardy / MOON SHOTS): An oxygen tank explosion on this 1970 lunar mission inspired the line 'Houston, we've had a problem'
+  shared: 1970, mission
+
+n2-w4-sci.json [MISSION CONTROL FREAKS] Apollo 13
+  NEW: Jim Lovell's crew looped around the moon and limped home aboard this crippled 1970 mission
+  OLD (Easy double / ONE GIANT LEAP): 'Houston, we've had a problem' came from this 1970 moon mission that limped safely home
+  shared: 1970, mission, limped
+
+n2-w4-sci.json [MISSION CONTROL FREAKS] Voyager (Voyager 1 and 2)
+  NEW: Each carrying a golden record of earthly sounds, these twin probes left Earth in 1977
+  OLD (Fresh jeopardy / SPACE RACE): Launched in 1977, this probe became the first human-made object to enter interstellar space
+  shared: 1977
+
+n2-w4-sci.json [MISSION CONTROL FREAKS] Valentina Tereshkova
+  NEW: Radioing under the call sign 'Chaika,' or 'Seagull,' she became the first woman in orbit in 1963
+  OLD (Fresh jeopardy / LADIES FIRST): A former textile worker, this Soviet cosmonaut orbited Earth in 1963 as the first woman in space
+  shared: 1963
+
+n2-w4-sci.json [FORCE OF HABIT] energy
+  NEW: Einstein showed that mass and this are interchangeable, linked by the speed of light squared
+  OLD (Fresh jeopardy / ENERGY DRINKS): Einstein's E = mc squared says a little bit of mass can become a whole lot of this
+  shared: einstein, squared, mass
+
+n2-w4-sci.json [FORCE OF HABIT] energy
+  NEW: Einstein showed that mass and this are interchangeable, linked by the speed of light squared
+  OLD (Fresh jeopardy / ENERGY DRINKS): From the Greek for 'motion', it's the kind a moving car has, and it quadruples when speed doubles
+  shared: speed
+
+n2-w4-sci.json [FORCE OF HABIT] refraction
+  NEW: A straw seems to snap in two in a glass of water thanks to this bending of light
+  OLD (Fresh double / PRISM BREAK): A straw looks snapped at the waterline and a mirage shimmers, both thanks to this bending of light
+  shared: straw, thanks, bending
+
+n2-w4-sci.json [FORCE OF HABIT] the Doppler effect
+  NEW: Named for an Austrian physicist, this shift makes a passing siren seem to drop in pitch
+  OLD (Fresh jeopardy / GOOD VIBRATIONS): An ambulance siren's pitch drops as it passes you, an effect named for this Austrian physicist
+  shared: siren, pitch, austrian, physicist
+
+n2-w4-sci.json [WHOSE FOOD IS IT ANYWAY?] Australia
+  NEW: Peach Melba honors Nellie Melba, an opera soprano from this country
+  OLD (e2-w1-hist.json / PASSPORT STAMPS): Sydney's sail-roofed Opera House is a landmark of this country
+  shared: opera
+
+n2-w4-sci.json [THE CHEMISTRY SET] hydrogen peroxide
+  NEW: Fizzing on a scraped knee, this first-aid antiseptic has the formula H2O2
+  OLD (Easy double / KISS IT & MAKE IT BETTER): Kept in a brown bottle, this clear antiseptic famously fizzes white on a cut
+  shared: antiseptic
+
+n2-w4-sci.json [THAT ROCKS!] diamond
+  NEW: Talc sits at 1 on the Mohs hardness scale, and this gem sits at the top at 10
+  OLD (Fresh jeopardy / CARAT & STICK): A 'curse' legend trails this 45-carat blue gem that Harry Winston mailed to the Smithsonian in 1958
+  shared: gem
+
+n2-w4-sci.json [THAT ROCKS!] diamond
+  NEW: Talc sits at 1 on the Mohs hardness scale, and this gem sits at the top at 10
+  OLD (Fresh jeopardy / ALL THAT GLITTERS): Reputedly cursed, this 45-carat blue gem reached the Smithsonian by registered mail in 1958
+  shared: gem
+
+n2-w4-sci.json [THAT ROCKS!] Pangaea
+  NEW: Alfred Wegener named this ancient supercontinent that later split into Laurasia and Gondwana
+  OLD (Fresh double / TECTONIC SHIFTS): Greek for 'all earth', it's the supercontinent that began breaking up some 200 million years ago
+  shared: supercontinent
+
+n2-w4-sci.json [KITCHEN FRENCH] saute
+  NEW: From the French for 'jumped,' it means to cook food quickly in a little hot fat
+  OLD (Fresh jeopardy / BRAISE THE ROOF): From the French for 'to jump', this method tosses food quickly in a hot, oiled pan
+  shared: food, quickly
+
+n2-w4-sci.json [KITCHEN FRENCH] saute
+  NEW: From the French for 'jumped,' it means to cook food quickly in a little hot fat
+  OLD (Easy jeopardy / WHAT'S COOKING?): Cooking food fast in a little hot fat, from the French word for 'jump'
+  shared: food, fat
+
+n2-w4-sci.json [KITCHEN FRENCH] blanch
+  NEW: From a French word for 'white,' it means to dunk vegetables in boiling water, then in ice water
+  OLD (Fresh jeopardy / BRAISE THE ROOF): This technique boils vegetables briefly, then plunges them into ice water to lock in color
+  shared: vegetables
+
+n2-w4-sci.json [KITCHEN FRENCH] blanch
+  NEW: From a French word for 'white,' it means to dunk vegetables in boiling water, then in ice water
+  OLD (Easy jeopardy / WHAT'S COOKING?): A quick boil and an ice-water bath give vegetables this 'whitening' treatment
+  shared: vegetables
+
+n2-w4-sci.json [KITCHEN FRENCH] mise en place
+  NEW: Chefs use this French phrase for having every ingredient chopped and measured before cooking
+  OLD (Fresh jeopardy / COUNTER INTELLIGENCE): Before the first order, chefs chop, measure and arrange it all per this 3-word French phrase
+  shared: chefs, phrase
+
+n2-w4-sci.json [SHE MADE IT] the chocolate chip cookie
+  NEW: Ruth Wakefield of the Toll House Inn created this treat in the late 1930s
+  OLD (Easy jeopardy / BAKING DAY): The Toll House Inn gave America this classic cookie dotted with semi-sweet morsels
+  shared: toll, inn
+
+n2-w4-sci.json [WHEY TO GO] feta
+  NEW: Greece guards the name of this crumbly brined cheese, made mostly from sheep's milk
+  OLD (Fresh jeopardy / CHEESE, PLEASE): Crumbly, briny and Greek, it's the cheese that crowns a proper village salad
+  shared: crumbly, cheese
+
+n2-w4-sci.json [WHEY TO GO] Stilton
+  NEW: Blue-veined and English, this cheese shares its name with a village in Cambridgeshire
+  OLD (Fresh jeopardy / CURD YOUR ENTHUSIASM): Protected-origin rules bar this English blue from being made in the Cambridgeshire village it's named for
+  shared: cambridgeshire, village
+
+n2-w4-sci.json [UNITED UNITS] horsepower
+  NEW: James Watt coined this unit to sell steam engines by comparing them to draft animals
+  OLD (Fresh double / GOING TO GREAT LENGTHS): James Watt pegged this unit at 33,000 foot-pounds per minute, flattering the animals his engines replaced
+  shared: watt, unit, animals, engines
+
+n2-w4-sci.json [UNITED UNITS] fathoms
+  NEW: Mark Twain's pen name came from a riverboat call meaning a depth of two of these
+  OLD (Fresh double / MEASURE FOR MEASURE): Sailors sound off depth in this 6-foot unit, from an Old English word for outstretched arms
+  shared: depth
+
+n2-w4-sci.json [THE FRUIT BOWL GAME] the banana
+  NEW: Its plant's 'trunk' is rolled leaves, not wood, so this yellow fruit really comes from a giant herb
+  OLD (Fresh jeopardy / WEIRD SCIENCE): Potassium-40 makes this yellow fruit slightly radioactive and the namesake of a joke dose unit
+  shared: yellow, fruit
+
+n2-w4-sci.json [THE FRUIT BOWL GAME] the banana
+  NEW: Its plant's 'trunk' is rolled leaves, not wood, so this yellow fruit really comes from a giant herb
+  OLD (Easy jeopardy / BAKING DAY): Fruit going brown on the counter means it's time to bake this moist sweet loaf
+  shared: fruit
+
+n2-w4-sci.json [THE FRUIT BOWL GAME] the banana
+  NEW: Its plant's 'trunk' is rolled leaves, not wood, so this yellow fruit really comes from a giant herb
+  OLD (e1-w4-sci.json / AT THE SODA FOUNTAIN): Soda jerks sliced this fruit lengthwise to build a split
+  shared: fruit
+
+n2-w4-sci.json [THE FRUIT BOWL GAME] kiwi (kiwifruit)
+  NEW: New Zealand growers renamed the 'Chinese gooseberry' after their national bird
+  OLD (Fresh jeopardy / FLIGHT RISKS): This shaggy New Zealand night bird lays an egg up to a fifth of its own body weight
+  shared: zealand
+
+n2-w4-sci.json [THE FRUIT BOWL GAME] kiwi (kiwifruit)
+  NEW: New Zealand growers renamed the 'Chinese gooseberry' after their national bird
+  OLD (Fresh jeopardy / TOP BANANA): Once called the Chinese gooseberry, this fuzzy import was renamed for New Zealand's national bird
+  shared: chinese, gooseberry, renamed, zealand
+
+n2-w4-sci.json [THE FRUIT BOWL GAME] the durian
+  NEW: Its stench gets this spiky 'king of fruits' banned on Singapore's subway trains
+  OLD (Fresh jeopardy / TOP BANANA): The stink of this spiky Southeast Asian fruit gets it banned from Singapore's subways and hotels
+  shared: spiky, gets, banned, singapore
+
+n2-w5-mix.json [CHECKMATES] castling
+  NEW: This special move shifts the king two squares and tucks a rook in beside it
+  OLD (Fresh jeopardy / CHECK, MATE): In this maneuver the king slides two squares toward a rook, which then hops over to its other side
+  shared: squares, rook
+
+n2-w5-mix.json [ART MOVES] Impressionism
+  NEW: Claude Monet's 'Impression, Sunrise' gave this 19th-century movement its name
+  OLD (Fresh double / "ISM" ON THE PRIZE): A critic mocking Monet's hazy 'Impression, Sunrise' accidentally named this movement
+  shared: monet, impression, sunrise, movement
+
+n2-w5-mix.json [ART MOVES] Impressionism
+  NEW: Claude Monet's 'Impression, Sunrise' gave this 19th-century movement its name
+  OLD (Fresh double / PERIOD PIECES): Debussy loathed it, but critics applied this label from Monet's hazy canvases to his music
+  shared: monet
+
+n2-w5-mix.json [ART MOVES] Impressionism
+  NEW: Claude Monet's 'Impression, Sunrise' gave this 19th-century movement its name
+  OLD (Fresh double / MOVEMENT CLASS): A mocking critic coined this movement's name from Monet's hazy 1872 harbor view of a sunrise
+  shared: movement, monet, sunrise
+
+n2-w5-mix.json [ART MOVES] Cubism
+  NEW: Picasso and Braque shattered objects into geometric planes in this movement
+  OLD (Fresh double / MOVEMENT CLASS): Braque's blocky landscapes led a critic to sneer about little cubes, naming this style he built with Picasso
+  shared: braque, picasso
+
+n2-w5-mix.json [ART MOVES] Fauvism
+  NEW: A critic called Matisse and his boldly colored friends 'wild beasts', naming this movement
+  OLD (Fresh double / "ISM" ON THE PRIZE): Matisse and his blazing-color crew were dubbed 'wild beasts', a jab that named this movement
+  shared: matisse, wild, beasts, movement
+
+n2-w5-mix.json [ART MOVES] Fauvism
+  NEW: A critic called Matisse and his boldly colored friends 'wild beasts', naming this movement
+  OLD (Fresh double / MOVEMENT CLASS): Matisse led these 'wild beasts' of color, so dubbed when a critic found a Donatello-like statue 'among' them
+  shared: matisse, wild, beasts, critic
+
+n2-w5-mix.json [ART MOVES] Dada
+  NEW: Duchamp's urinal titled 'Fountain' is an icon of this anti-art movement born in Zurich
+  OLD (Fresh double / AVANT-GARDE PARTY): Born at Zurich's Cabaret Voltaire in 1916, this anti-art movement's name is French for 'hobbyhorse'
+  shared: zurich, anti, art, movement
+
+n2-w5-mix.json [ART MOVES] Dada
+  NEW: Duchamp's urinal titled 'Fountain' is an icon of this anti-art movement born in Zurich
+  OLD (Fresh double / -ISM SCHISMS): Born at Zurich's Cabaret Voltaire in 1916, Tzara's anti-art movement chose a baby-talk name
+  shared: zurich, anti, art, movement
+
+n2-w5-mix.json [ART MOVES] Dada
+  NEW: Duchamp's urinal titled 'Fountain' is an icon of this anti-art movement born in Zurich
+  OLD (Fresh double / MOVEMENT CLASS): Born at Zurich's Cabaret Voltaire in 1916, this anti-art movement may be named for a toy hobbyhorse
+  shared: zurich, anti, art, movement
+
+n2-w5-mix.json [ART MOVES] De Stijl
+  NEW: Mondrian's grids of red, yellow and blue came out of this Dutch movement, 'The Style'
+  OLD (Fresh double / MOVEMENT CLASS): Mondrian's grids of primary colors defined this Dutch movement whose name simply means 'The Style'
+  shared: mondrian, grids, dutch, movement, style
+
+n2-w5-mix.json [STRUCTURAL INTEGRITY] the Louvre
+  NEW: Since 1989 most visitors have entered this Paris museum through I.M. Pei's glass pyramid
+  OLD (Easy jeopardy / SPRINGTIME IN PARIS): The Mona Lisa smiles at visitors in this former royal palace turned museum
+  shared: visitors, museum
+
+n2-w5-mix.json [STRUCTURAL INTEGRITY] the Louvre
+  NEW: Since 1989 most visitors have entered this Paris museum through I.M. Pei's glass pyramid
+  OLD (Easy double / POSTCARDS FROM PARIS): A glass pyramid marks the entrance to this former palace, now home to the Mona Lisa
+  shared: glass, pyramid
+
+n2-w5-mix.json [STRUCTURAL INTEGRITY] the Sagrada Família
+  NEW: Gaudí toiled for decades on this Barcelona basilica, still unfinished when he died in 1926
+  OLD (n1-w1-hist.json / BUCKET LIST STOPS): Antoni Gaudí is buried in the crypt of this Barcelona basilica, which he worked on for 43 years
+  shared: gaud, barcelona, basilica
+
+n2-w5-mix.json [STRUCTURAL INTEGRITY] the Sydney Opera House
+  NEW: Its architect quit in 1966 and never came back to see this harborside landmark completed
+  OLD (Fresh jeopardy / SOUTHERN HEMISPHERE CITIES): Sail-like white shells top the harborside opera house of this Australian city
+  shared: harborside
+
+n2-w5-mix.json [STRUCTURAL INTEGRITY] the Sydney Opera House
+  NEW: Its architect quit in 1966 and never came back to see this harborside landmark completed
+  OLD (Fresh jeopardy / POSTCARD PERFECT): Jorn Utzon's white sail-like shells rise from Bennelong Point in this harborside Australian landmark
+  shared: harborside, landmark
+
+n2-w5-mix.json [STRUCTURAL INTEGRITY] the Sydney Opera House
+  NEW: Its architect quit in 1966 and never came back to see this harborside landmark completed
+  OLD (Fresh jeopardy / DESIGNS ON YOU): Danish architect Jørn Utzon designed this Australian landmark whose roof suggests billowing sails
+  shared: architect, landmark
+
+n2-w5-mix.json [STRUCTURAL INTEGRITY] the Sydney Opera House
+  NEW: Its architect quit in 1966 and never came back to see this harborside landmark completed
+  OLD (Easy jeopardy / POSTCARDS FROM ABROAD): Sail-shaped white roofs top this famous harborside concert hall Down Under
+  shared: harborside
+
+n2-w5-mix.json [STRUCTURAL INTEGRITY] St. Paul's Cathedral
+  NEW: A whisper carries clear around the dome's Whispering Gallery in this Wren landmark in London
+  OLD (Easy jeopardy / LONDON CALLING): Christopher Wren designed this great domed church that survived the Blitz
+  shared: wren
+
+n2-w5-mix.json [FAITH-BASED FACTS] the Ganges
+  NEW: Hindu pilgrims bathe in this sacred river at the holy city of Varanasi
+  OLD (Fresh double / HOLY PLACES): Hindus flock to Varanasi to bathe in this river, believed to wash away sins
+  shared: varanasi, bathe
+
+n2-w5-mix.json [FAITH-BASED FACTS] the Ganges
+  NEW: Hindu pilgrims bathe in this sacred river at the holy city of Varanasi
+  OLD (Fresh double / DELTA FORCE): Swimming tigers prowl the Sundarbans, the mangrove delta this holy river shares with the Brahmaputra
+  shared: holy
+
+n2-w5-mix.json [FAITH-BASED FACTS] Zoroastrianism
+  NEW: Founded by an ancient Persian prophet, this faith keeps sacred fires burning in its temples
+  OLD (Fresh jeopardy / FAITH ACCOMPLI): Zarathustra founded this ancient Persian religion whose supreme deity is Ahura Mazda
+  shared: persian
+
+n2-w5-mix.json [IN THE FAST LANE] Monaco
+  NEW: F1 cars snake past a casino and through a tunnel in this tiny principality's Grand Prix
+  OLD (Fresh jeopardy / SMALL WONDERS): Grace Kelly became princess of this Riviera microstate famed for the Monte Carlo casino
+  shared: casino
+
+n2-w5-mix.json [IN THE FAST LANE] Monaco
+  NEW: F1 cars snake past a casino and through a tunnel in this tiny principality's Grand Prix
+  OLD (Fresh jeopardy / CIRCUIT TRAINING): F1's most glamorous race threads the harborside streets of this tiny Mediterranean principality
+  shared: principality
+
+n2-w5-mix.json [PLAYING YOUR CARDS RIGHT] Uno
+  NEW: Down to your last card in this Mattel game, you'd better shout its name
+  OLD (Fresh jeopardy / SUIT YOURSELF): Forget to shout this game's own name when you're down to one card and you'll draw a penalty
+  shared: shout, card
+
+n2-w5-mix.json [PLAYING YOUR CARDS RIGHT] Uno
+  NEW: Down to your last card in this Mattel game, you'd better shout its name
+  OLD (Easy jeopardy / CARD TABLE CLASSICS): Shout this game's name, Spanish for 'one,' when you're down to a single card
+  shared: shout, card
+
+n2-w5-mix.json [PLAYING YOUR CARDS RIGHT] bridge
+  NEW: One partner's hand is laid face up as the 'dummy' in this contract card game
+  OLD (Fresh double / FULL HOUSE RULES): Descended from whist, this partnership game involves bidding, contracts and a face-up 'dummy'
+  shared: face, dummy
+
+n2-w5-mix.json [PLAYING YOUR CARDS RIGHT] bridge
+  NEW: One partner's hand is laid face up as the 'dummy' in this contract card game
+  OLD (Easy jeopardy / CARD TABLE CLASSICS): Partners bid for tricks in this four-player game, and one of them plays as 'dummy'
+  shared: dummy
+
+n2-w5-mix.json [PLAYING YOUR CARDS RIGHT] euchre
+  NEW: The jack of trump is the 'right bower' in this trick-taking Midwestern favorite
+  OLD (Fresh jeopardy / SUIT YOURSELF): In this trump game beloved in the Midwest, jacks become 'bowers', from a German word for farmer
+  shared: trump
+
+n2-w5-mix.json [PLAYING YOUR CARDS RIGHT] euchre
+  NEW: The jack of trump is the 'right bower' in this trick-taking Midwestern favorite
+  OLD (Easy jeopardy / CARD TABLE CLASSICS): This Midwest favorite uses just 24 cards, and its top trump is the 'right bower'
+  shared: favorite, trump, right, bower
+
+n2-w5-mix.json [DIAMOND MINDS] Fenway Park
+  NEW: The 'Green Monster' looms over left field at this Boston ballpark
+  OLD (Fresh double / IF YOU BUILD IT): This Boston ballpark opened in April 1912, the same week the Titanic went down
+  shared: boston, ballpark
+
+n2-w5-mix.json [DIAMOND MINDS] Wrigley Field
+  NEW: This Chicago ballpark didn't install lights for night games until 1988
+  OLD (Fresh jeopardy / HOME FIELD ADVANTAGE): The Cubs play beneath ivy-covered outfield walls at this Chicago ballpark
+  shared: chicago, ballpark
+
+n2-w5-mix.json [PLAYER ONE] Pac-Man
+  NEW: Its creator imagined a pizza missing a slice when he designed this ghost-gobbling hero
+  OLD (Fresh jeopardy / QUARTER MASTERS): Ghosts named Blinky, Pinky, Inky and Clyde chase this dot-chomping yellow arcade hero
+  shared: hero
+
+n2-w5-mix.json [PLAYER ONE] Zelda
+  NEW: Shigeru Miyamoto named this Nintendo princess after F. Scott Fitzgerald's wife
+  OLD (Fresh jeopardy / GAME OVER ACHIEVERS): Link, not the title princess, is the sword-swinging hero of this Nintendo series
+  shared: princess, nintendo
+
+n2-w5-mix.json [SELF-MADE] Milton Hershey
+  NEW: Streetlights shaped like Kisses line the Pennsylvania town built by this chocolate maker
+  OLD (Fresh double / THE BIG CHEESES): He sold Lancaster Caramel for $1 million in 1900, then built a Pennsylvania chocolate company town
+  shared: pennsylvania, chocolate
+
+n2-w5-mix.json [SELF-MADE] Milton Hershey
+  NEW: Streetlights shaped like Kisses line the Pennsylvania town built by this chocolate maker
+  OLD (Easy double / THE SWEET SHOPPE): This chocolate maker's Pennsylvania hometown has streetlights shaped like its Kisses
+  shared: chocolate, maker, pennsylvania, streetlights, kisses
+
+n2-w5-mix.json [SELF-MADE] Heinz (H.J. Heinz)
+  NEW: This Pittsburgh food maker began touting his ketchup and pickles as '57 varieties' in 1896
+  OLD (Fresh double / THE BIG CHEESES): A rail-car ad touting '21 styles of shoes' inspired this Pittsburgh condiment king's famous '57 Varieties'
+  shared: touting, pittsburgh, varieties
+
+n2-w5-mix.json [SELF-MADE] Toys "R" Us
+  NEW: Charles Lazarus founded this toy chain, whose mascot was Geoffrey the giraffe
+  OLD (Fresh double / TOY-COONS): Charles Lazarus grew a D.C. children's furniture shop into this chain with a backwards letter
+  shared: charles, lazarus, chain
+
+n2-w5-mix.json [TEE-RIFFIC] an albatross (double eagle)
+  NEW: Three under par on a single hole is called this rare seabird
+  OLD (Fresh jeopardy / IDIOMS OFF THE LEASH): Coleridge's ancient mariner wore this slain seabird around his neck, now any inescapable burden
+  shared: seabird
+
+nf-w1-hist.json [WRONG WAY ROUND] the Panama Canal
+  NEW: Odd but true: a ship sailing this famous waterway from the Atlantic to the Pacific ends up farther east than where it began
+  OLD (Fresh double / CANAL KNOWLEDGE): Quirk of geography: a ship crossing this canal from the Atlantic to the Pacific heads southeast
+  shared: ship
+
+nf-w1-hist.json [WRONG WAY ROUND] the Panama Canal
+  NEW: Odd but true: a ship sailing this famous waterway from the Atlantic to the Pacific ends up farther east than where it began
+  OLD (Easy double / THE PULL-DOWN MAP): A set of giant locks lifts ships across Central America on this waterway of 1914
+  shared: waterway
+
+nf-w2-lit.json [CHANGE OF NUMBERS] Catch-22 (22)
+  NEW: To avoid clashing with Leon Uris' 'Mila 18,' Joseph Heller's 1961 novel swapped the 18 in its title for this
+  OLD (Fresh jeopardy / NOVELS BY THE NUMBERS): Joseph Heller's darkly comic war novel gave English a numbered term for a no-win rule
+  shared: joseph, heller
+
+nf-w2-lit.json [CHANGE OF NUMBERS] Catch-22 (22)
+  NEW: To avoid clashing with Leon Uris' 'Mila 18,' Joseph Heller's 1961 novel swapped the 18 in its title for this
+  OLD (Easy double / THAT CAME FROM A BOOK): Joseph Heller's 1961 novel title became our term for a no-win rule
+  shared: joseph, heller, 1961
+
+nf-w2-lit.json [X MARKS THE START] Treasure Island
+  NEW: A map Robert Louis Stevenson drew to amuse his stepson on a rainy Scottish holiday grew into this 1883 novel
+  OLD (Fresh jeopardy / X MARKS THE PLOT): Young Jim Hawkins sails with Long John Silver in this Robert Louis Stevenson pirate tale
+  shared: robert, louis, stevenson
+
+nf-w3-screen.json [PAINLESS OPERATION] M*A*S*H
+  NEW: The director's 14-year-old son wrote the lyrics to 'Suicide Is Painless,' the theme of this war comedy
+  OLD (Easy jeopardy / THEME SONG TIME): 'Suicide Is Painless' was the oddly titled theme of this Korean War comedy-drama
+  shared: suicide, painless, theme, comedy
+
+nf-w3-screen.json [TAKE A HINT] Joseph Haydn
+  NEW: In this composer's 'Farewell' Symphony, players snuff their candles and walk out one by one, a hint to their prince
+  OLD (Fresh double / SYMPHONIC PROPORTIONS): His Symphony No. 94 is nicknamed 'Surprise' for a fortissimo chord meant to jolt dozing listeners
+  shared: symphony
+
+nf-w5-mix.json [LOOKING UP TO IT] the Eiffel Tower
+  NEW: Opened in 1889, this structure stood as the world's tallest until New York's Chrysler Building passed it in 1930
+  OLD (Fresh jeopardy / TOWER OF POWER): Completed for an 1889 World's Fair, this iron lattice landmark defines the Paris skyline
+  shared: 1889
+
+nf-w5-mix.json [LOOKING UP TO IT] the Eiffel Tower
+  NEW: Opened in 1889, this structure stood as the world's tallest until New York's Chrysler Building passed it in 1930
+  OLD (Fresh jeopardy / DESIGNS ON YOU): Some 18,000 iron parts make up this Paris landmark, the world's tallest structure at the 1889 fair
+  shared: tallest, structure, 1889
+
+nf-w5-mix.json [LOOKING UP TO IT] the Eiffel Tower
+  NEW: Opened in 1889, this structure stood as the world's tallest until New York's Chrysler Building passed it in 1930
+  OLD (Fresh jeopardy / LANDMARK DECISIONS): Built for an 1889 world's fair, this iron landmark was supposed to come down after 20 years
+  shared: 1889
+
+nf-w5-mix.json [LOOKING UP TO IT] the Eiffel Tower
+  NEW: Opened in 1889, this structure stood as the world's tallest until New York's Chrysler Building passed it in 1930
+  OLD (Fresh double / REACH FOR THE SKY): Maupassant reputedly lunched in this 1889 landmark daily, the only place in Paris he couldn't see it
+  shared: 1889
+
+nf-w5-mix.json [LOOKING UP TO IT] the Eiffel Tower
+  NEW: Opened in 1889, this structure stood as the world's tallest until New York's Chrysler Building passed it in 1930
+  OLD (Fresh final / SAVED BY THE SIGNAL): Its 1889 World's Fair permit ran only 20 years; what saved it from the scrap heap was its usefulness as a radio antenna
+  shared: 1889
+
+nf-w5-mix.json [LOOKING UP TO IT] the Eiffel Tower
+  NEW: Opened in 1889, this structure stood as the world's tallest until New York's Chrysler Building passed it in 1930
+  OLD (Easy jeopardy / SPRINGTIME IN PARIS): Built as a temporary exhibit for the 1889 fair, this iron landmark never came down
+  shared: 1889
+
+nf-w5-mix.json [LOOKING UP TO IT] the Eiffel Tower
+  NEW: Opened in 1889, this structure stood as the world's tallest until New York's Chrysler Building passed it in 1930
+  OLD (Easy double / POSTCARDS FROM PARIS): Built for an 1889 fair and once called an eyesore, it's now the very symbol of Paris
+  shared: 1889
+
+nf-w5-mix.json [LOOKING UP TO IT] the Eiffel Tower
+  NEW: Opened in 1889, this structure stood as the world's tallest until New York's Chrysler Building passed it in 1930
+  OLD (Easy final / CITY OF LIGHT): Built for an 1889 Paris fair and meant to come down after 20 years, this iron landmark still towers over the Seine.
+  shared: 1889
+

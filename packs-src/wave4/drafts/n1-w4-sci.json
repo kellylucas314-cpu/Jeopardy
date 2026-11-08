@@ -1,0 +1,362 @@
+[
+  {
+    "name": "BEASTLY HABITS",
+    "clues": [
+      {
+        "clue": "Black-and-white warning stripes tell predators this critter can spray a foul-smelling mist",
+        "response": "a skunk",
+        "value": 200
+      },
+      {
+        "clue": "So slow that algae grows in its fur, this rainforest mammal spends most of its life upside down",
+        "response": "a sloth",
+        "value": 400
+      },
+      {
+        "clue": "Living almost entirely on eucalyptus leaves, this Australian marsupial sleeps most of the day",
+        "response": "a koala",
+        "value": 600
+      },
+      {
+        "clue": "No other marsupial lives wild north of Mexico, and this one may 'play dead' when threatened",
+        "response": "an opossum",
+        "value": 800
+      },
+      {
+        "clue": "A nine-banded female of this armored mammal usually gives birth to identical quadruplets",
+        "response": "an armadillo",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "AN INSIDE JOB",
+    "clues": [
+      {
+        "clue": "Tucked behind your ribs, these spongy paired organs swap carbon dioxide for oxygen",
+        "response": "the lungs",
+        "value": 200
+      },
+      {
+        "clue": "Surgeons often remove this small pouch off the large intestine when it becomes inflamed",
+        "response": "the appendix",
+        "value": 400
+      },
+      {
+        "clue": "Foie gras is the fattened version of this organ, taken from a duck or goose",
+        "response": "the liver",
+        "value": 600
+      },
+      {
+        "clue": "Bile stored in this pear-shaped pouch under the liver can harden into painful stones",
+        "response": "the gallbladder",
+        "value": 800
+      },
+      {
+        "clue": "Swallowing tips this leaf-shaped lid of cartilage down over the entrance to your voice box",
+        "response": "the epiglottis",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "OVER THE MOONS",
+    "clues": [
+      {
+        "clue": "Phobos and Deimos, named for sons of the war god Ares, circle this planet",
+        "response": "Mars",
+        "value": 200
+      },
+      {
+        "clue": "Galileo spotted four big moons, Io and Europa among them, orbiting this planet in 1610",
+        "response": "Jupiter",
+        "value": 400
+      },
+      {
+        "clue": "Icy geysers on the moon Enceladus feed one of the outer rings of this planet",
+        "response": "Saturn",
+        "value": 600
+      },
+      {
+        "clue": "Its moons Titania, Oberon and Miranda are named for characters from Shakespeare",
+        "response": "Uranus",
+        "value": 800
+      },
+      {
+        "clue": "Math predicted this planet before anyone saw it, and its big moon Triton orbits it backward",
+        "response": "Neptune",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "DRAWER POWER",
+    "clues": [
+      {
+        "clue": "Short-order cooks flip burgers and pancakes with this flat-bladed tool",
+        "response": "a spatula",
+        "value": 200
+      },
+      {
+        "clue": "Its looped wires beat air into egg whites until they stand up in stiff peaks",
+        "response": "a whisk",
+        "value": 400
+      },
+      {
+        "clue": "A Mexican molcajete, used for mashing guacamole, is a stone version of this grinding pair",
+        "response": "a mortar and pestle",
+        "value": 600
+      },
+      {
+        "clue": "Pie bakers cut cold butter into flour using this handheld tool of curved wires",
+        "response": "a pastry blender (pastry cutter)",
+        "value": 800
+      },
+      {
+        "clue": "Its name is one letter off a stringed instrument, and this slicer cuts vegetables paper-thin",
+        "response": "a mandoline",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "PERIODIC TABLE MANNERS",
+    "clues": [
+      {
+        "clue": "U.S. pennies were once mostly this reddish metal, but since 1982 they just wear a thin coat",
+        "response": "copper",
+        "value": 200
+      },
+      {
+        "clue": "With the symbol Na, this soft metal makes up about 40 percent of table salt by weight",
+        "response": "sodium",
+        "value": 400
+      },
+      {
+        "clue": "Gently warm crystals of this element, symbol I, and they give off a striking violet vapor",
+        "response": "iodine",
+        "value": 600
+      },
+      {
+        "clue": "Its name is Swedish for 'heavy stone,' fitting for a metal nearly as dense as gold",
+        "response": "tungsten",
+        "value": 800
+      },
+      {
+        "clue": "Fittingly, the Greek word for 'stench' gave this fuming red-brown halogen its name",
+        "response": "bromine",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "FORECAST YOUR VOTE",
+    "clues": [
+      {
+        "clue": "The U.S. gets more of these twisters than any other country, over 1,000 in a typical year",
+        "response": "tornadoes",
+        "value": 200
+      },
+      {
+        "clue": "Once air cools to this temperature, its water vapor condenses into beads on the morning grass",
+        "response": "the dew point",
+        "value": 400
+      },
+      {
+        "clue": "In 1943 a blast of this warm, dry wind lifted Spearfish, South Dakota, 49 degrees in two minutes",
+        "response": "a chinook",
+        "value": 600
+      },
+      {
+        "clue": "Peruvian fishermen named this Pacific warming for the Christ child, as it comes near Christmas",
+        "response": "El Nino",
+        "value": 800
+      },
+      {
+        "clue": "Evangelista Torricelli is credited with inventing this mercury-filled pressure gauge in 1643",
+        "response": "the barometer",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "PASSPORT PLATES",
+    "clues": [
+      {
+        "clue": "Wrapped in corn husks and steamed, these masa parcels are a Mexican Christmas favorite",
+        "response": "tamales",
+        "value": 200
+      },
+      {
+        "clue": "Slices of raw fish served without rice are this, so don't call it sushi",
+        "response": "sashimi",
+        "value": 400
+      },
+      {
+        "clue": "Eggplant and spiced lamb bake under a thick blanket of bechamel in this Greek casserole",
+        "response": "moussaka",
+        "value": 600
+      },
+      {
+        "clue": "Peruvians 'cook' raw fish in lime juice with chili and red onion to make this dish",
+        "response": "ceviche",
+        "value": 800
+      },
+      {
+        "clue": "Ethiopian stews are scooped up with this spongy, sour flatbread made from teff flour",
+        "response": "injera",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "IDEA FACTORY",
+    "clues": [
+      {
+        "clue": "Marvin Stone's 1888 patent swapped hollow rye grass stems for wound paper in this sipping tube",
+        "response": "the drinking straw",
+        "value": 200
+      },
+      {
+        "clue": "Salesman King C. Gillette made a fortune pairing this shaving tool with cheap, disposable blades",
+        "response": "the safety razor",
+        "value": 400
+      },
+      {
+        "clue": "Willis Carrier's 1902 system to tame humidity at a Brooklyn printing plant led to this",
+        "response": "air conditioning",
+        "value": 600
+      },
+      {
+        "clue": "Dayton saloonkeeper James Ritty patented this sales-tallying machine to keep bartenders honest",
+        "response": "the cash register",
+        "value": 800
+      },
+      {
+        "clue": "Garrett Morgan's 1923 patent added an all-way 'stop' position to this street-corner device",
+        "response": "the traffic signal (traffic light)",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "NUMBER CRUNCH TIME",
+    "clues": [
+      {
+        "clue": "Its digits never end or repeat, and this Greek letter's value starts 3.14159",
+        "response": "pi",
+        "value": 200
+      },
+      {
+        "clue": "On a flat page, the three interior angles of any triangle add up to this many degrees",
+        "response": "180",
+        "value": 400
+      },
+      {
+        "clue": "Edward Kasner's nine-year-old nephew coined this name for 10 to the 100th power",
+        "response": "a googol",
+        "value": 600
+      },
+      {
+        "clue": "Twelve pentagons form the faces of this Platonic solid, the classic shape of a 12-sided die",
+        "response": "a dodecahedron",
+        "value": 800
+      },
+      {
+        "clue": "A puzzle about breeding rabbits in his 1202 'Liber Abaci' brought this Italian's famous sequence to Europe",
+        "response": "Fibonacci",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "SIP CODE",
+    "clues": [
+      {
+        "clue": "Lattes, cappuccinos and Americanos all start with a shot of this strong coffee",
+        "response": "espresso",
+        "value": 200
+      },
+      {
+        "clue": "Mojitos and daiquiris both start with this spirit distilled from sugarcane",
+        "response": "rum",
+        "value": 400
+      },
+      {
+        "clue": "Brewed from polished rice, this Japanese drink is often served warm from a small ceramic flask",
+        "response": "sake",
+        "value": 600
+      },
+      {
+        "clue": "Oil from the rind of this citrus fruit gives Earl Grey tea its perfume",
+        "response": "bergamot",
+        "value": 800
+      },
+      {
+        "clue": "Nicknamed 'the green fairy,' this anise-flavored spirit was banned in the U.S. for nearly a century",
+        "response": "absinthe",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "GREEN THUMB DRIVE",
+    "clues": [
+      {
+        "clue": "Ottawa's spring festival of these flowers grew from bulbs the Dutch sent in thanks after WWII",
+        "response": "tulips",
+        "value": 200
+      },
+      {
+        "clue": "Chlorophyll soaks up red and blue light but reflects green during this sugar-making process",
+        "response": "photosynthesis",
+        "value": 400
+      },
+      {
+        "clue": "Hyperion, a California giant more than 115 meters tall, is the coast species of this tree",
+        "response": "a redwood",
+        "value": 600
+      },
+      {
+        "clue": "Vanilla beans are the cured seed pods of a climbing member of this flower family",
+        "response": "orchids",
+        "value": 800
+      },
+      {
+        "clue": "Called a 'living fossil,' this tree with fan-shaped leaves has relatives from the dinosaur age",
+        "response": "the ginkgo",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "AFTERS PARTY",
+    "clues": [
+      {
+        "clue": "Churned slowly with less air than ice cream, this dense frozen treat is an Italian favorite",
+        "response": "gelato",
+        "value": 200
+      },
+      {
+        "clue": "Spain and Mexico both love this caramel-topped custard, turned out of its mold upside down",
+        "response": "flan",
+        "value": 400
+      },
+      {
+        "clue": "Paper-thin phyllo, chopped nuts and honey syrup layer up in this Ottoman-era pastry",
+        "response": "baklava",
+        "value": 600
+      },
+      {
+        "clue": "In German it's Schwarzwälder Kirschtorte, chocolate sponge layered with kirsch, cherries and cream",
+        "response": "Black Forest cake",
+        "value": 800
+      },
+      {
+        "clue": "Caramelized apples bake under the crust of this upside-down French tart named for two sisters",
+        "response": "tarte Tatin",
+        "value": 1000
+      }
+    ]
+  }
+]
