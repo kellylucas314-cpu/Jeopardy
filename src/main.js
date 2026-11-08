@@ -213,7 +213,7 @@ function renderSetup() {
   const playerCount = prefs.playerCount || 2;
   const gameMode = prefs.gameMode || 'turns';
   const gameLength = prefs.gameLength || 'full';
-  const pack = ['archive', 'easy'].includes(prefs.pack) ? prefs.pack : 'fresh';
+  const pack = prefs.pack === 'easy' ? 'easy' : 'fresh';
   const playStyle = prefs.playStyle === 'campaign' ? 'campaign' : 'free';
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
   prevLeader = null;
@@ -290,10 +290,6 @@ function renderSetup() {
             <button class="btn-mode btn-pack ${pack === 'easy' ? 'selected' : ''}" data-pack="easy">
               <span class="mode-name">Easy Breezy</span>
               <span class="mode-desc">Gentler questions, classics &amp; nostalgia</span>
-            </button>
-            <button class="btn-mode btn-pack ${pack === 'archive' ? 'selected' : ''}" data-pack="archive">
-              <span class="mode-name">Deep Archive</span>
-              <span class="mode-desc">460,000+ clues &middot; tough &amp; twisty</span>
             </button>
           </div>
           <div id="mode-section">
@@ -791,7 +787,7 @@ function showHowTo() {
         <li><strong>Waterloo Wagers</strong> hide on the board and let you bet your winnings. Then it's <strong>Waterloo</strong> — one clue, secret wagers, winner takes the night.</li>
         <li>The table is the judge: hit <strong>"The Emperor accepts it"</strong> if a close answer got marked wrong.</li>
         <li><strong>Playing solo?</strong> Chase a Rank — S is Grand Champion — and beat your personal best.</li>
-        <li><strong>Question packs:</strong> Fresh Pack is written just for this game, Easy Breezy is gentler for casual and older players, and the Deep Archive holds 460k+ tough classics. The game remembers what you've played — no repeat categories until you've seen a whole pack.</li>
+        <li><strong>Question packs:</strong> Fresh Pack is written just for this game, and Easy Breezy is gentler for casual and older players. The game remembers what you've played — no repeat categories until you've seen a whole pack.</li>
         <li><strong>The Campaign:</strong> Napoleon's life in 15 chapters, from cadet to Saint Helena. Each chapter is one game with a category about that year and one about Napoleon himself; the rest of the board climbs in difficulty as the chapters do. Reach the chapter's score target and the Empire on your ledger grows — exactly as history did, peaking in 1811. Three right answers in the chapter category earn the <strong>Légion d'honneur</strong> bonus.</li>
       </ul>
       <div class="modal-actions">

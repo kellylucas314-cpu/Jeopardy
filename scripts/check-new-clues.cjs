@@ -98,7 +98,7 @@ const archiveShingles = new Set();
 const archiveByResponse = new Map();
 let archiveCount = 0;
 for (const dir of ['jeopardy', 'double', 'final']) {
-  for (const it of readChunks(path.join(DATA, dir))) {
+  for (const it of readChunks(path.join(ROOT, 'archive-data', dir))) {
     archiveNames.add(norm(it.name).toUpperCase());
     for (const row of flatten([it], 'archive')) {
       archiveCount++;

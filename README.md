@@ -12,13 +12,14 @@ Share that link with friends and play on any device.
   Helena. Each chapter is one game with a category about that year and one about
   Napoleon himself, a rising difficulty tier, and a score target; win and the Empire on
   your ledger grows exactly as history's did (see `CAMPAIGN.md`)
-- **Three question packs:**
+- **Two question packs, all original:**
   - ✨ **Fresh Pack** (default) — original clues written for Ring In: smart, doable
     difficulty curve, zero copyright worries, safe to share anywhere
   - 🌷 **Easy Breezy** — gentler original questions built around classics and nostalgia,
     perfect for casual players and grandparents
-  - 📼 **Deep Archive** — ~460,000 classic clues from trivia history for marathon replay value
-    (unofficial archive of televised material; kept for personal game nights — the tough one)
+  - The old Deep Archive of televised clues is no longer part of the site (Nov 2026). Its
+    data sits in `archive-data/`, unserved, only so `scripts/check-new-clues.cjs` can make sure
+    new clues never copy a televised one.
 - **No repeat categories** — the game remembers every category you've played (per pack, on your
   device) and won't serve it again until you've cycled the whole pack
 - **Solo mode with Ranks** — play alone and chase a report card from D to S (Grand Champion),

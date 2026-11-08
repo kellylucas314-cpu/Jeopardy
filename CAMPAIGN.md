@@ -50,8 +50,7 @@ zenith; 600,000+ men crossed the Niemen in 1812.
 - **Difficulty ramp.** Tiers 1–5 set the recipe for the other five categories, the
   clue timer (35s → 22s), and the score target. Recipes are relative to the pack the
   table chose: Easy Breezy tables climb from all-easy to an easy/Fresh mix; Fresh
-  tables from an easy-tinged board to Round-2 material; Deep Archive tables into the
-  archive. See `chapterRecipe` in `src/campaign.js`.
+  tables from an easy-tinged board to Round-2 material. See `chapterRecipe` in `src/campaign.js`.
 - **Targets.** Full games: $2,500 / $4,000 / $5,500 / $7,000 / $9,000 by tier; Quick
   games: $1,200 / $2,000 / $2,800 / $3,600 / $4,500. The top score at the table must
   reach the target. After two setbacks on a chapter the target eases one tier, so a

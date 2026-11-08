@@ -1,11 +1,11 @@
 /**
  * Data loading — fetches random chunks from the question packs.
  *
- * Three packs ship with the game:
- *  - 'fresh'   → data/original/…  Original clues written for the game (default).
- *  - 'easy'    → data/easy/…      Gentler original clues, nostalgia-friendly.
- *  - 'archive' → data/…           A large unofficial archive of televised clues,
- *                                 kept as an opt-in for personal play.
+ * Two packs ship with the game, both written for it:
+ *  - 'fresh' → data/original/…  Original clues (default).
+ *  - 'easy'  → data/easy/…      Gentler original clues, nostalgia-friendly.
+ * (The old Deep Archive of televised clues is no longer served; it lives in
+ * archive-data/ only so scripts/check-new-clues.cjs can guard against copying.)
  *
  * Repeat avoidance: every category you actually get on a board is remembered in
  * localStorage (per pack + round). Boards never reuse a remembered category
@@ -42,7 +42,7 @@ function shuffle(arr) {
 
 export function currentPack() {
   const p = loadPrefs().pack;
-  return p === 'archive' || p === 'easy' ? p : 'fresh';
+  return p === 'easy' ? 'easy' : 'fresh';
 }
 
 /** The archive was scraped with literal backslash-escapes baked into ~20% of rows. */
@@ -76,7 +76,7 @@ async function loadChunk(baseDir, roundDir, chunkIndex) {
 const ROUND_DIRS = { 1: 'jeopardy', 2: 'double', final: 'final' };
 const ROUND_VALUES = { jeopardy: [200, 400, 600, 800, 1000], double: [400, 800, 1200, 1600, 2000] };
 
-/** Chunk-count + base dir for a pack's round directory, falling back to the archive. */
+/** Chunk-count + base dir for a pack's round directory (anything unknown plays as Fresh). */
 async function packInfoFor(pack, dir) {
   const m = await loadManifest();
   if (pack === 'fresh' && m.original && m.original[dir] > 0) {
@@ -85,7 +85,7 @@ async function packInfoFor(pack, dir) {
   if (pack === 'easy' && m.easy && m.easy[dir] > 0) {
     return { pack, base: 'easy/', dir, total: m.easy[dir] };
   }
-  return { pack: 'archive', base: '', dir, total: m[dir] };
+  return { pack: 'fresh', base: 'original/', dir, total: m.original[dir] };
 }
 
 /** Pack info for the active pack and a round number (1, 2, or 'final'). */
