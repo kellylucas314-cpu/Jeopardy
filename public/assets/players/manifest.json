@@ -1,0 +1,155 @@
+{
+  "game": "Clue d’État",
+  "artwork": "Character roster · palace library facial planes",
+  "canvas": {
+    "width": 640,
+    "height": 960,
+    "format": "Transparent WebP",
+    "baseline": 928
+  },
+  "characters": [
+    {
+      "id": "george-washington",
+      "name": "George Washington",
+      "tone": "#d5ded0",
+      "portrait": "george-washington/portrait.webp",
+      "poses": {
+        "ready": "george-washington/ready.webp",
+        "thinking": "george-washington/thinking.webp",
+        "victory": "george-washington/victory.webp"
+      }
+    },
+    {
+      "id": "cleopatra",
+      "name": "Cleopatra",
+      "tone": "#ecd9b7",
+      "portrait": "cleopatra/portrait.webp",
+      "poses": {
+        "ready": "cleopatra/ready.webp",
+        "thinking": "cleopatra/thinking.webp",
+        "victory": "cleopatra/victory.webp"
+      }
+    },
+    {
+      "id": "nikola-tesla",
+      "name": "Nikola Tesla",
+      "tone": "#d6e2e3",
+      "portrait": "nikola-tesla/portrait.webp",
+      "poses": {
+        "ready": "nikola-tesla/ready.webp",
+        "thinking": "nikola-tesla/thinking.webp",
+        "victory": "nikola-tesla/victory.webp"
+      }
+    },
+    {
+      "id": "frida-kahlo",
+      "name": "Frida Kahlo",
+      "tone": "#ebdbce",
+      "portrait": "frida-kahlo/portrait.webp",
+      "poses": {
+        "ready": "frida-kahlo/ready.webp",
+        "thinking": "frida-kahlo/thinking.webp",
+        "victory": "frida-kahlo/victory.webp"
+      }
+    },
+    {
+      "id": "julius-caesar",
+      "name": "Julius Caesar",
+      "tone": "#d9d4cd",
+      "portrait": "julius-caesar/portrait.webp",
+      "poses": {
+        "ready": "julius-caesar/ready.webp",
+        "thinking": "julius-caesar/thinking.webp",
+        "victory": "julius-caesar/victory.webp"
+      }
+    },
+    {
+      "id": "marie-curie",
+      "name": "Marie Curie",
+      "tone": "#d6dfdf",
+      "portrait": "marie-curie/portrait.webp",
+      "poses": {
+        "ready": "marie-curie/ready.webp",
+        "thinking": "marie-curie/thinking.webp",
+        "victory": "marie-curie/victory.webp"
+      }
+    },
+    {
+      "id": "amelia-earhart",
+      "name": "Amelia Earhart",
+      "tone": "#e3d7c8",
+      "portrait": "amelia-earhart/portrait.webp",
+      "poses": {
+        "ready": "amelia-earhart/ready.webp",
+        "thinking": "amelia-earhart/thinking.webp",
+        "victory": "amelia-earhart/victory.webp"
+      }
+    },
+    {
+      "id": "genghis-khan",
+      "name": "Genghis Khan",
+      "tone": "#dddcc8",
+      "portrait": "genghis-khan/portrait.webp",
+      "poses": {
+        "ready": "genghis-khan/ready.webp",
+        "thinking": "genghis-khan/thinking.webp",
+        "victory": "genghis-khan/victory.webp"
+      }
+    },
+    {
+      "id": "albert-einstein",
+      "name": "Albert Einstein",
+      "tone": "#e2d9c8",
+      "portrait": "albert-einstein/portrait.webp",
+      "poses": {
+        "ready": "albert-einstein/ready.webp",
+        "thinking": "albert-einstein/thinking.webp",
+        "victory": "albert-einstein/victory.webp"
+      }
+    },
+    {
+      "id": "ada-lovelace",
+      "name": "Ada Lovelace",
+      "tone": "#e1d7df",
+      "portrait": "ada-lovelace/portrait.webp",
+      "poses": {
+        "ready": "ada-lovelace/ready.webp",
+        "thinking": "ada-lovelace/thinking.webp",
+        "victory": "ada-lovelace/victory.webp"
+      }
+    },
+    {
+      "id": "leonardo-da-vinci",
+      "name": "Leonardo da Vinci",
+      "tone": "#d8dfd3",
+      "portrait": "leonardo-da-vinci/portrait.webp",
+      "poses": {
+        "ready": "leonardo-da-vinci/ready.webp",
+        "thinking": "leonardo-da-vinci/thinking.webp",
+        "victory": "leonardo-da-vinci/victory.webp"
+      }
+    },
+    {
+      "id": "thomas-edison",
+      "name": "Thomas Edison",
+      "tone": "#dddedf",
+      "portrait": "thomas-edison/portrait.webp",
+      "poses": {
+        "ready": "thomas-edison/ready.webp",
+        "thinking": "thomas-edison/thinking.webp",
+        "victory": "thomas-edison/victory.webp"
+      }
+    },
+    {
+      "id": "elon-musk",
+      "name": "Elon Musk",
+      "tone": "#d6dfdb",
+      "portrait": "elon-musk/portrait.webp",
+      "poses": {
+        "ready": "elon-musk/ready.webp",
+        "thinking": "elon-musk/thinking.webp",
+        "victory": "elon-musk/victory.webp"
+      }
+    }
+  ]
+}

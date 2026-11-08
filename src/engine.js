@@ -20,8 +20,8 @@ let seenCategories = new Set();
 export const LEGION_BONUS = 500;
 export const LEGION_CLUES = 3;
 
-function newPlayer(name, avatar) {
-  return { name, avatar, score: 0, correct: 0, wrong: 0, streak: 0, bestStreak: 0, chapterCorrect: 0, decorated: false };
+function newPlayer(name, avatar, character = null) {
+  return { name, avatar, character, score: 0, correct: 0, wrong: 0, streak: 0, bestStreak: 0, chapterCorrect: 0, decorated: false };
 }
 
 /**
@@ -35,10 +35,10 @@ export function streakBonus(streak) {
 /**
  * Start a new game with the given player names and mode ('turns' | 'buzz').
  */
-export async function startGame(playerNames, gameMode = 'turns', avatars = [], gameLength = 'full', campaign = null) {
+export async function startGame(playerNames, gameMode = 'turns', avatars = [], gameLength = 'full', campaign = null, characterIds = []) {
   seenCategories = new Set();
   setState({
-    players: playerNames.map((name, i) => newPlayer(name, avatars[i] || String(i + 1))),
+    players: playerNames.map((name, i) => newPlayer(name, avatars[i] || String(i + 1), characterIds[i] || null)),
     gameMode: playerNames.length > 1 ? gameMode : 'turns',
     gameLength,
     campaign: campaign && campaign.chapter ? { chapter: campaign.chapter, basePack: campaign.basePack || 'fresh' } : null,

@@ -2,8 +2,6 @@
  * Main entry — renders all screens based on game state.
  */
 
-import '@fontsource-variable/manrope';
-import '@fontsource/ibm-plex-mono/400.css';
 
 import { getState, setState, subscribe, resetForNewGame, loadPrefs, savePrefs, loadRecords, recordGame } from './state.js';
 import {
@@ -17,6 +15,13 @@ import {
   chapterTimer, tierLabel, empireHoldings, empireLosses, empireMax, statusLabel,
 } from './campaign.js';
 import * as sounds from './sounds.js';
+import { loadCharacters, characters, characterById, portraitUrl, poseUrl } from './characters.js';
+import { shape } from './shapes.js';
+
+loadCharacters();
+
+// Dev-only handle for screenshots and debugging; stripped from production builds.
+if (import.meta.env.DEV) window.__cde = { getState, setState };
 
 const app = document.getElementById('app');
 let timerInterval = null;
@@ -40,6 +45,38 @@ function monogram(name, i = 0) {
   const ch = trimmed.match(/[\p{L}\p{N}]/u);
   return ch ? ch[0].toUpperCase() : ROMAN[i] || String(i + 1);
 }
+
+/** A player's face: their character's portrait when they picked one, else the monogram seal. */
+function avatarHtml(p, i = 0) {
+  const url = portraitUrl(p.character);
+  return url
+    ? `<img class="avatar-portrait" src="${url}" alt="">`
+    : escapeHtml(p.avatar || monogram(p.name, i));
+}
+
+/** A full-figure pose (ready, thinking, victory) for a player, or '' without a character. */
+function poseHtml(p, pose, cls = '') {
+  const url = poseUrl(p.character, pose);
+  const c = characterById(p.character);
+  return url ? `<img class="player-pose ${cls}" src="${url}" alt="${escapeHtml(p.name)} as ${escapeHtml(c.name)}">` : '';
+}
+
+/** A few big flat shapes behind an in-between screen, like a poster's. */
+const SCENES = {
+  chapter: [['sun', 'sc-sun sc-tr'], ['quat', 'sc-jade sc-bl'], ['ast', 'sc-terra sc-ml']],
+  wager: [['sun', 'sc-sun sc-center'], ['plus', 'sc-terra sc-tl'], ['squig', 'sc-jade sc-br']],
+  round: [['arch', 'sc-jade-tint sc-br'], ['sun', 'sc-sun sc-tl'], ['ast', 'sc-terra sc-mr']],
+  final: [['circle', 'sc-terra-tint sc-tr'], ['squig', 'sc-jade sc-bl'], ['quat', 'sc-brass sc-ml']],
+  results: [['quat', 'sc-jade-tint sc-tl'], ['ast', 'sc-terra sc-tr'], ['plus', 'sc-brass sc-bl']],
+  loading: [['quat', 'sc-jade-tint sc-br'], ['plus', 'sc-terra sc-tl']],
+};
+function sceneShapes(name) {
+  return `<div class="scene-shapes" aria-hidden="true">${(SCENES[name] || []).map(([s, c]) => shape(s, c)).join('')}</div>`;
+}
+
+// The table's character picks on setup, kept across player-count changes.
+const DEFAULT_CHARACTERS = ['cleopatra', 'leonardo-da-vinci', 'marie-curie'];
+let setupCharacters = null;
 let prevScores = []; // for score-bump animation on the board
 let prevLeader = null; // for lead-change announcements
 
@@ -215,6 +252,9 @@ function renderSetup() {
   const prefs = loadPrefs();
   const savedNames = prefs.names || [];
   const savedAvatars = prefs.avatars || [];
+  // New tables start with the three guests; older saves keep their monograms until someone picks.
+  setupCharacters = Array.isArray(prefs.characters) ? [...prefs.characters]
+    : prefs.names ? [] : [...DEFAULT_CHARACTERS];
   const playerCount = prefs.playerCount || 2;
   const gameMode = prefs.gameMode || 'turns';
   const gameLength = prefs.gameLength || 'full';
@@ -241,6 +281,7 @@ function renderSetup() {
         </div>
         <figure class="title-stage" role="img"
                 aria-label="Low-poly Napoleon tips his hat as he rises out of a folded map of Europe">
+          ${shape('sun', 'title-sun')}
           <img class="title-map title-map-back" src="./assets/napoleon-map-back.webp" alt=""
                width="1485" height="546" decoding="async">
           <video class="title-napoleon" muted loop playsinline preload="metadata"
@@ -335,7 +376,8 @@ function renderSetup() {
       document.querySelectorAll('.btn-player-count:not(.btn-length)').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       const count = parseInt(btn.dataset.count);
-      renderPlayerInputs(count, savedNames, savedAvatars);
+      const typed = Array.from(document.querySelectorAll('.player-name-input')).map(el => el.value);
+      renderPlayerInputs(count, typed.concat(savedNames.slice(typed.length)), savedAvatars);
       updateModeVisibility(count);
     });
   });
@@ -398,19 +440,20 @@ function renderSetup() {
       input.value.trim() || `Player ${i + 1}`
     );
     const avatars = names.map((n, i) => monogram(n, i));
+    const chars = names.map((_, i) => (characterById(setupCharacters[i]) ? setupCharacters[i] : null));
     const mode = document.querySelector('.btn-mode.selected:not(.btn-pack)')?.dataset.mode || 'turns';
     const length = document.querySelector('.btn-length.selected')?.dataset.length || 'full';
     const packSel = document.querySelector('.btn-pack.selected')?.dataset.pack || 'fresh';
     const style = document.querySelector('.btn-style.selected')?.dataset.style || 'free';
-    savePrefs({ names, avatars, playerCount: names.length, gameMode: mode, gameLength: length, pack: packSel, playStyle: style, sound: sounds.isEnabled() });
+    savePrefs({ names, avatars, characters: setupCharacters.slice(0, 3), playerCount: names.length, gameMode: mode, gameLength: length, pack: packSel, playStyle: style, sound: sounds.isEnabled() });
     sounds.playSelect();
     if (style === 'campaign') {
       const number = selectedChapterNumber();
       loadCampaign().then(() => {
-        startGame(names, mode, avatars, length, { chapter: getChapter(number), basePack: packSel });
+        startGame(names, mode, avatars, length, { chapter: getChapter(number), basePack: packSel }, chars);
       }).catch(() => setState({ screen: 'error', errorContext: 'campaign' }));
     } else {
-      startGame(names, mode, avatars, length);
+      startGame(names, mode, avatars, length, null, chars);
     }
   });
 }
@@ -562,28 +605,85 @@ function updateModeVisibility(count) {
 
 function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
   const container = document.getElementById('player-names');
+  if (!container) return;
+  const roster = characters();
+  const sealFor = (i, name) => {
+    const c = characterById(setupCharacters[i]);
+    return c ? `<img src="${c.portraitUrl}" alt="">` : escapeHtml(monogram(name, i));
+  };
   let html = '';
   for (let i = 0; i < count; i++) {
     const value = savedNames[i] || `Player ${i + 1}`;
+    const c = characterById(setupCharacters[i]);
     html += `
       <div class="name-input-group">
-        <span class="player-seal" data-index="${i}" style="--pc: ${PLAYER_COLORS[i]}"
-              aria-hidden="true">${escapeHtml(monogram(value, i))}</span>
-        <label>Player ${i + 1}</label>
-        <input type="text" class="player-name-input" placeholder="Enter name"
+        <button type="button" class="player-seal ${c ? 'has-portrait' : ''}" data-index="${i}"
+                style="--pc: ${PLAYER_COLORS[i]}" aria-expanded="false" aria-controls="char-picker-${i}"
+                aria-label="Choose a character for player ${i + 1}${c ? `, now ${escapeHtml(c.name)}` : ''}"
+                title="Choose a character">${sealFor(i, value)}</button>
+        <label for="player-name-${i}">Player ${i + 1}</label>
+        <input type="text" class="player-name-input" placeholder="Enter name" id="player-name-${i}"
                value="${escapeHtml(value)}" data-index="${i}"
                style="--pc: ${PLAYER_COLORS[i]}">
       </div>
+      ${roster.length ? `
+      <div class="char-picker" id="char-picker-${i}" role="radiogroup" aria-label="Character for player ${i + 1}" hidden>
+        ${roster.map(rc => `
+          <button type="button" class="char-option" role="radio" data-index="${i}" data-id="${rc.id}"
+                  aria-checked="${rc.id === setupCharacters[i]}" style="--tone: ${rc.tone}">
+            <img src="${rc.portraitUrl}" alt="" loading="lazy">
+            <span>${escapeHtml(rc.name)}</span>
+          </button>`).join('')}
+        <button type="button" class="char-option char-none" role="radio" data-index="${i}" data-id=""
+                aria-checked="${!c}"><span class="char-none-seal" aria-hidden="true">${escapeHtml(monogram(value, i))}</span><span>Initials</span></button>
+      </div>` : ''}
     `;
   }
+  if (roster.length) html += '<p class="char-hint">Tap a face to play as one of 13 historical characters.</p>';
   container.innerHTML = html;
 
-  // The seal restrikes itself as the name is typed
+  // The roster loads once per visit; draw the faces as soon as it arrives.
+  if (!roster.length) {
+    loadCharacters().then(list => {
+      if (list.length && getState().screen === 'setup' && document.getElementById('player-names') === container) {
+        const typed = Array.from(container.querySelectorAll('.player-name-input')).map(el => el.value);
+        renderPlayerInputs(count, typed, savedAvatars);
+      }
+    });
+  }
+
+  // The seal restrikes itself as the name is typed (when no face is chosen)
   container.querySelectorAll('.player-name-input').forEach(input => {
     input.addEventListener('input', () => {
       const i = Number(input.dataset.index);
+      if (characterById(setupCharacters[i])) return;
       const seal = container.querySelector(`.player-seal[data-index="${i}"]`);
       if (seal) seal.textContent = monogram(input.value, i);
+    });
+  });
+
+  container.querySelectorAll('.player-seal').forEach(seal => {
+    seal.addEventListener('click', () => {
+      const picker = document.getElementById(`char-picker-${seal.dataset.index}`);
+      if (!picker) return;
+      const open = picker.hidden;
+      container.querySelectorAll('.char-picker').forEach(pk => { pk.hidden = true; });
+      container.querySelectorAll('.player-seal').forEach(sl => sl.setAttribute('aria-expanded', 'false'));
+      picker.hidden = !open;
+      seal.setAttribute('aria-expanded', String(open));
+      if (open) (picker.querySelector('[aria-checked="true"]') || picker.querySelector('.char-option'))?.focus();
+    });
+  });
+
+  container.querySelectorAll('.char-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      const i = Number(opt.dataset.index);
+      setupCharacters[i] = opt.dataset.id || null;
+      savePrefs({ characters: setupCharacters.slice(0, 3) });
+      sounds.playSelect();
+      const typed = Array.from(container.querySelectorAll('.player-name-input')).map(el => el.value);
+      renderPlayerInputs(count, typed, savedAvatars);
+      container.querySelector(`.player-seal[data-index="${i}"]`)?.focus();
     });
   });
 }
@@ -594,10 +694,11 @@ function renderLoading() {
   const { campaign } = getState();
   const ch = campaign && campaign.chapter;
   app.innerHTML = `
+    ${sceneShapes('loading')}
     <div class="loading-screen">
       <div class="logo">Clue d&rsquo;&Eacute;tat</div>
       ${ch ? `<div class="chapter-kicker">Chapter ${ch.number} &middot; ${escapeHtml(ch.title)}</div>` : ''}
-      <div class="loading-spinner"></div>
+      ${shape('sun', 'loading-sun')}
       <div class="loading-text">${ch ? 'Drawing up the order of battle&hellip;' : 'Loading clues...'}</div>
     </div>
   `;
@@ -610,6 +711,7 @@ function renderChapterIntro() {
   if (!ch) { beginChapter(); return; }
   const target = chapterTarget(ch, gameLength);
   app.innerHTML = `
+    ${sceneShapes('chapter')}
     <div class="chapter-intro-screen">
       <div class="chapter-kicker">Chapter ${ch.number} of ${chapterCount()} &middot; ${escapeHtml(ch.years)}</div>
       <h1 class="chapter-title">${escapeHtml(ch.title)}</h1>
@@ -675,7 +777,7 @@ function renderBoard() {
         <div class="scoreboard">
           ${players.map((p, i) => `
             <div class="player-score ${i === activePlayer ? 'active' : ''}" style="--pc: ${PLAYER_COLORS[i]}">
-              <div class="player-avatar">${escapeHtml(p.avatar || monogram(p.name))}</div>
+              <div class="player-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}">${avatarHtml(p, i)}</div>
               <div class="player-meta">
                 <div class="player-name">${escapeHtml(p.name)}${p.streak >= 2 ? ` <span class="streak">&times;${p.streak}</span>` : ''}</div>
                 <div class="player-amount ${p.score < 0 ? 'negative' : ''}" data-index="${i}">$${formatMoney(p.score)}</div>
@@ -1022,6 +1124,7 @@ function renderTurnsClue() {
 
   app.innerHTML = clueShell(`
     <div class="clue-player">
+      ${portraitUrl(players[answeringPlayer].character) ? `<span class="clue-player-face">${avatarHtml(players[answeringPlayer], answeringPlayer)}</span>` : ''}
       ${players.length > 1 ? `<span>${escapeHtml(players[answeringPlayer].name)}'s ${currentClue.isDailyDouble && gameMode === 'buzz' ? 'Waterloo Wager' : 'turn'}</span>` : ''}
     </div>
     <div class="clue-answer-area">
@@ -1032,7 +1135,7 @@ function renderTurnsClue() {
         <button class="btn-skip" id="btn-skip">Pass</button>
       </div>
     </div>
-  `);
+  `) + poseHtml(players[answeringPlayer], 'thinking', 'clue-pose');
 
   startTimer(getState().clueSeconds || 30, handleTimeExpired);
 
@@ -1368,6 +1471,7 @@ function renderDailyDouble() {
   const maxWager = Math.max(player.score, currentClue.value * 2);
 
   app.innerHTML = `
+    ${sceneShapes('wager')}
     <div class="daily-double-screen">
       <div class="dd-flash">
         <div class="dd-title">WATERLOO<br>WAGER</div>
@@ -1429,9 +1533,10 @@ function renderRoundTransition() {
   const lowest = players.reduce((minI, p, i, arr) => (p.score < arr[minI].score ? i : minI), 0);
 
   app.innerHTML = `
+    ${sceneShapes('round')}
     <div class="transition-screen">
       <div class="transition-scores">
-        <h3>${getState().campaign ? 'End of Round I' : 'End of Campaign I'}</h3>
+        <h3>End of Round I</h3>
         ${players.map(p => `
           <div class="transition-player">
             <span>${escapeHtml(p.name)}</span>
@@ -1439,7 +1544,7 @@ function renderRoundTransition() {
           </div>
         `).join('')}
       </div>
-      <div class="transition-title">${getState().campaign ? 'Round II' : 'Campaign II'}</div>
+      <div class="transition-title">Round II</div>
       <div class="transition-subtitle">All values are doubled!${getState().campaign ? ' Napoleon\'s own chapter joins the board.' : ''}</div>
       ${players.length > 1 ? `<div class="transition-note"><strong>${escapeHtml(players[lowest].name)}</strong> is trailing and gets first pick</div>` : ''}
       <button class="btn-continue" id="btn-continue">March On</button>
@@ -1466,6 +1571,7 @@ function renderFinalCategory() {
   const { finalClue, players } = getState();
 
   app.innerHTML = `
+    ${sceneShapes('final')}
     <div class="final-screen">
       <div class="final-header">${finalHeader()}</div>
       <div class="final-scores">
@@ -1496,10 +1602,11 @@ function renderFinalCategory() {
 function passCover(playerIdx, sub, onReady) {
   const p = getState().players[playerIdx];
   app.innerHTML = `
+    ${sceneShapes('final')}
     <div class="final-screen">
       <div class="final-header">${finalHeader()}</div>
       <div class="pass-card">
-        <div class="pass-avatar" style="--pc: ${PLAYER_COLORS[playerIdx]}">${escapeHtml(p.avatar || monogram(p.name))}</div>
+        <div class="pass-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}" style="--pc: ${PLAYER_COLORS[playerIdx]}">${avatarHtml(p, playerIdx)}</div>
         <div class="pass-name">Pass the device to ${escapeHtml(p.name)}</div>
         <div class="pass-sub">${sub}</div>
         <button class="btn-cta pass-go" id="pass-go">I'm ${escapeHtml(p.name)} — Ready</button>
@@ -1531,7 +1638,8 @@ function renderFinalWager() {
     const p = players[idx];
     const maxW = Math.max(0, p.score);
     app.innerHTML = `
-      <div class="final-screen">
+      ${sceneShapes('final')}
+    <div class="final-screen">
         <div class="final-header">${finalHeader()}</div>
         <div class="final-subtitle" style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)} — you have $${formatMoney(p.score)}</div>
         <div class="dd-wager-area" style="max-width:380px;width:100%">
@@ -1575,6 +1683,7 @@ function renderFinalClue() {
 
   // Everyone reads the clue together, think music playing.
   app.innerHTML = `
+    ${sceneShapes('final')}
     <div class="final-screen">
       <div class="final-header">${finalHeader()}</div>
       <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
@@ -1598,7 +1707,8 @@ function renderFinalClue() {
     function answerEntry(idx) {
       const p = players[idx];
       app.innerHTML = `
-        <div class="final-screen">
+        ${sceneShapes('final')}
+    <div class="final-screen">
           <div class="final-header">${finalHeader()}</div>
           <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
           <div class="final-clue-text" style="font-size:1.3rem">${escapeHtml(finalClue.clue)}</div>
@@ -1625,6 +1735,7 @@ function renderFinalAnswer() {
   const { finalClue, finalAnswers, finalWagers, players } = getState();
 
   app.innerHTML = `
+    ${sceneShapes('final')}
     <div class="final-screen">
       <div class="final-header">${finalHeader()}</div>
       <div class="final-correct-response">
@@ -1738,6 +1849,7 @@ function renderResults() {
   const medal = ['I', 'II', 'III'];
 
   app.innerHTML = `
+    ${sceneShapes('results')}
     <div class="results-screen">
       <div class="results-title">${solo
         ? `Rank ${rank.letter} — ${rank.title}`
@@ -1748,7 +1860,7 @@ function renderResults() {
       ${chapterOutcomeHtml()}
       ${solo ? `
       <div class="solo-scorecard" style="--pc: ${PLAYER_COLORS[0]}">
-        <div class="podium-avatar">${escapeHtml(winner.avatar || monogram(winner.name))}</div>
+        ${poseHtml(winner, winner.score > 0 ? 'victory' : 'ready', 'results-pose') ? `<div class="pose-stage">${shape('sun', 'pose-sun')}${poseHtml(winner, winner.score > 0 ? 'victory' : 'ready', 'results-pose')}</div>` : `<div class="podium-avatar">${escapeHtml(winner.avatar || monogram(winner.name))}</div>`}
         <div class="solo-score-money ${winner.score < 0 ? 'negative' : ''}">${money(winner.score)}</div>
         <div class="solo-score-sub">${escapeHtml(winner.name)}'s winnings</div>
       </div>
@@ -1758,7 +1870,9 @@ function renderResults() {
           const place = ranked.indexOf(p) + 1;
           return `
             <div class="podium-col rank-${place}" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">
-              <div class="podium-avatar">${escapeHtml(p.avatar || monogram(p.name))}</div>
+              ${p.score === ranked[0].score && poseUrl(p.character, 'victory')
+                ? `<div class="pose-stage">${shape('sun', 'pose-sun')}${poseHtml(p, 'victory', 'results-pose')}</div>`
+                : `<div class="podium-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}">${avatarHtml(p, p.originalIndex)}</div>`}
               <div class="podium-name">${escapeHtml(p.name)}</div>
               <div class="podium-money ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
               <div class="podium-block">${medal[place - 1]}</div>
