@@ -47,27 +47,27 @@
         "name": "MEANWHILE, 1785",
         "clues": [
           {
-            "clue": "The 1783 Treaty of Paris ended this war, with Britain recognizing 13 former colonies as independent",
+            "clue": "Britain's 1783 Treaty of Paris recognized 13 former colonies as independent, ending this war",
             "response": "the American Revolution (Revolutionary War)",
             "value": 200
           },
           {
-            "clue": "In 1783 the Montgolfier brothers sent the first human passengers aloft in one of these",
+            "clue": "The Montgolfier brothers sent the first human passengers aloft in one of these in 1783",
             "response": "a hot-air balloon",
             "value": 400
           },
           {
-            "clue": "William Herschel discovered this seventh planet in 1781, the first found with a telescope",
+            "clue": "William Herschel found this seventh planet in 1781, the first discovered with a telescope",
             "response": "Uranus",
             "value": 600
           },
           {
-            "clue": "'The Marriage of Figaro', an opera drawn from a banned French play, premiered in Vienna in 1786 with music by this man",
+            "clue": "A banned French play became 'The Marriage of Figaro', premiered in Vienna in 1786 with this man's music",
             "response": "Mozart",
             "value": 800
           },
           {
-            "clue": "Succeeding Franklin in 1785, this future president was U.S. minister to France until the Revolution's first summer",
+            "clue": "He succeeded Franklin as U.S. minister to France in 1785 and stayed until the Revolution's first summer",
             "response": "Thomas Jefferson",
             "value": 1000
           }
@@ -77,27 +77,27 @@
         "name": "THE CADET FROM CORSICA",
         "clues": [
           {
-            "clue": "Napoleon was born in 1769 in Ajaccio, on this Mediterranean island that had been French for barely a year",
-            "response": "Corsica",
+            "clue": "At 9 he was sent to school at Autun to learn this language, which he spoke with a Corsican accent all his life",
+            "response": "French",
             "value": 200
           },
           {
-            "clue": "At the military school of Brienne the boy excelled at this subject, the artilleryman's essential science",
+            "clue": "At the Brienne military school the boy shone at this subject, the artilleryman's essential science",
             "response": "mathematics (math)",
             "value": 400
           },
           {
-            "clue": "In 1785 he was commissioned a second lieutenant in this branch of the army, the one that serves the cannons",
+            "clue": "His 1785 commission put the teenager in this army branch, the one that works the cannons",
             "response": "the artillery",
             "value": 600
           },
           {
-            "clue": "Napoleon's parents, Carlo and Letizia, bore this Italian form of the family name; he later dropped a letter from it",
+            "clue": "Carlo and Letizia spelled the family name this Italian way; their son later dropped a letter",
             "response": "Buonaparte",
             "value": 800
           },
           {
-            "clue": "Posted to the La Fère regiment at Valence, the 16-year-old lieutenant lived beside this great river of southern France",
+            "clue": "The 16-year-old lieutenant joined the La Fère regiment at Valence, on the banks of this great river",
             "response": "the Rhône",
             "value": 1000
           }
@@ -105,7 +105,7 @@
       },
       "final": {
         "name": "THE LIEUTENANT'S LIBRARY",
-        "clue": "As a bookish young officer Napoleon devoured the works of this Geneva-born philosopher of 'The Social Contract'",
+        "clue": "As a bookish young officer Napoleon devoured the works of this Geneva-born author of 'The Social Contract'",
         "response": "Jean-Jacques Rousseau"
       }
     },
@@ -162,18 +162,18 @@
         "name": "PARIS UNDER THE TERROR",
         "clues": [
           {
-            "clue": "On January 21, 1793 this king of France went to the guillotine in the Place de la Révolution",
+            "clue": "January 21, 1793: this king of France goes to the guillotine in the Place de la Révolution",
             "response": "Louis XVI (Louis the Sixteenth)",
             "value": 200
           },
           {
-            "clue": "In July 1793 Charlotte Corday stabbed this radical journalist to death in his bathtub",
+            "clue": "Charlotte Corday stabbed this radical journalist to death in his bathtub in July 1793",
             "response": "Jean-Paul Marat",
             "value": 400
           },
           {
-            "clue": "The republican calendar of 1793 renamed the months; the 'fog' month would later host Napoleon's coup",
-            "response": "Brumaire",
+            "clue": "One ten-millionth of the distance from pole to equator: France defined this unit of length in 1793",
+            "response": "the meter (metre)",
             "value": 600
           },
           {
@@ -182,8 +182,8 @@
             "value": 800
           },
           {
-            "clue": "Defined in 1793 as one ten-millionth of the distance from the North Pole to the equator, it became France's base unit of length",
-            "response": "the meter (metre)",
+            "clue": "In the republican calendar of 1793, the 'fog' month was this one, later the date of Napoleon's coup",
+            "response": "Brumaire",
             "value": 1000
           }
         ]
@@ -192,27 +192,27 @@
         "name": "TOULON, 1793",
         "clues": [
           {
-            "clue": "Toulon's royalists handed the port and its fleet to Spain and this island nation, France's great naval rival",
+            "clue": "Toulon's royalists handed the port and its fleet to Spain and this island nation, France's naval rival",
             "response": "Britain (England, the UK)",
             "value": 200
           },
           {
-            "clue": "Napoleon arrived at the siege holding this artillery rank, the same word used for a ship's commander",
+            "clue": "Napoleon reached the siege holding this artillery rank, the same word used for a ship's commander",
             "response": "captain",
             "value": 400
           },
           {
-            "clue": "His plan ignored the walls and targeted a hill the British called Little Gibraltar; it fell in this month, just before Christmas",
+            "clue": "His guns took 'Little Gibraltar', the key to the harbor, on the 17th of this month in 1793",
             "response": "December",
             "value": 600
           },
           {
-            "clue": "For Toulon the 24-year-old was jumped to this lowest general's rank, named for a formation of a few regiments",
+            "clue": "For Toulon the 24-year-old jumped to this lowest general's rank, named for a formation of a few regiments",
             "response": "brigadier general",
             "value": 800
           },
           {
-            "clue": "This younger brother of the Terror's most feared man was at Toulon and wrote home praising Bonaparte's 'transcendent merit'",
+            "clue": "The Terror's most feared man had this younger brother, who praised Bonaparte's 'transcendent merit' at Toulon",
             "response": "Augustin Robespierre",
             "value": 1000
           }
@@ -283,7 +283,7 @@
         "name": "AROUND THE GLOBE, 1796",
         "clues": [
           {
-            "clue": "In 1796 this first U.S. president published a farewell address warning against permanent foreign alliances",
+            "clue": "This first U.S. president's 1796 farewell address warned against permanent foreign alliances",
             "response": "George Washington",
             "value": 200
           },
@@ -303,7 +303,7 @@
             "value": 800
           },
           {
-            "clue": "Haydn wrote 'God Save Emperor Francis' in 1797; his melody later became the national anthem of this country, though not Austria",
+            "clue": "Haydn's 1797 hymn for Emperor Francis is the tune of this country's national anthem, and it isn't Austria",
             "response": "Germany",
             "value": 1000
           }
@@ -318,22 +318,22 @@
             "value": 200
           },
           {
-            "clue": "He was defending this legislature, whose name means 'assembly'; it had just written a new constitution",
+            "clue": "His guns protected this legislature, ruler of France since 1792, in its final weeks before the Directory",
             "response": "the National Convention",
             "value": 400
           },
           {
-            "clue": "His reward came in March 1796: command of this army, named for the country it would invade across the Alps",
+            "clue": "March 1796 brought his reward: command of this force, named for the land it would invade",
             "response": "the Army of Italy",
             "value": 600
           },
           {
-            "clue": "Two days before leaving for that command, Napoleon married this widow of a guillotined viscount",
+            "clue": "Two days before leaving for that command, he married this widow of a guillotined viscount",
             "response": "Joséphine de Beauharnais",
             "value": 800
           },
           {
-            "clue": "This Directory member, the day's political winner, had handed Bonaparte the command; he had also been Bonaparte's bride's lover",
+            "clue": "The Directory's strongman, he handed Bonaparte the Italian command and had earlier been Joséphine's lover",
             "response": "Paul Barras",
             "value": 1000
           }
@@ -422,7 +422,7 @@
         "name": "THE WIDER WORLD, 1797",
         "clues": [
           {
-            "clue": "In March 1797 this Massachusetts man became the second U.S. president",
+            "clue": "The second U.S. president, this Massachusetts man took office in March 1797",
             "response": "John Adams",
             "value": 200
           },
@@ -432,18 +432,18 @@
             "value": 400
           },
           {
-            "clue": "In 1797 the Bank of England stopped paying out this metal for its notes, a 'restriction' that lasted 24 years",
-            "response": "gold",
+            "clue": "In 1797 André-Jacques Garnerin leapt from a balloon over Paris and drifted down beneath one of these",
+            "response": "a parachute",
             "value": 600
           },
           {
-            "clue": "The frigate USS Constitution, 'Old Ironsides', was launched in October 1797 in this New England city",
+            "clue": "'Old Ironsides', the frigate USS Constitution, slid into the water in October 1797 in this New England city",
             "response": "Boston",
             "value": 800
           },
           {
-            "clue": "In October 1797 André-Jacques Garnerin jumped from a balloon over Paris and floated down with the first of these",
-            "response": "a parachute",
+            "clue": "From 1797 the Bank of England refused to redeem its notes in this metal, a pause that lasted 24 years",
+            "response": "gold",
             "value": 1000
           }
         ]
@@ -452,8 +452,8 @@
         "name": "THE ITALIAN CAMPAIGN",
         "clues": [
           {
-            "clue": "In 1796 the Army of Italy crossed these mountains to strike Austria's forces on the plain of the Po",
-            "response": "the Alps",
+            "clue": "The ragged Army of Italy got its new commander in March 1796 at this Riviera resort city",
+            "response": "Nice",
             "value": 200
           },
           {
@@ -462,17 +462,17 @@
             "value": 400
           },
           {
-            "clue": "Legend says he grabbed a flag and led a charge onto the bridge at this November 1796 battle in the marshes",
+            "clue": "Legend has him seizing a flag to lead the charge across a bridge at this marshy November 1796 battle",
             "response": "Arcole",
             "value": 600
           },
           {
-            "clue": "The 1797 Treaty of Campo Formio handed this old maritime republic to Austria, ending 1,100 years of independence",
+            "clue": "Campo Formio's 1797 treaty handed this maritime republic to Austria, ending 1,100 years of independence",
             "response": "Venice",
             "value": 800
           },
           {
-            "clue": "The same treaty recognized the Cisalpine Republic, with its capital in this city whose cathedral later saw Napoleon crowned King of Italy",
+            "clue": "The Cisalpine Republic's capital was this city, in whose cathedral Napoleon was later crowned King of Italy",
             "response": "Milan",
             "value": 1000
           }
@@ -595,7 +595,7 @@
             "value": 400
           },
           {
-            "clue": "Alessandro Volta announced this invention in 1800: a stack of zinc and copper discs giving a steady electric current",
+            "clue": "Zinc and copper discs stacked by Alessandro Volta in 1800 became the first of these electrical devices",
             "response": "the battery (voltaic pile)",
             "value": 600
           },
@@ -605,7 +605,7 @@
             "value": 800
           },
           {
-            "clue": "In 1799 Alexander von Humboldt sailed off for five years exploring this continent's jungles, rivers, and volcanoes",
+            "clue": "Alexander von Humboldt sailed in 1799 for five years among this continent's jungles, rivers and volcanoes",
             "response": "South America",
             "value": 1000
           }
@@ -615,7 +615,7 @@
         "name": "THE EGYPTIAN EXPEDITION",
         "clues": [
           {
-            "clue": "In July 1798, with these monuments in view, Napoleon told his troops that 'forty centuries look down upon you'",
+            "clue": "'Forty centuries look down upon you,' he told his troops in 1798, in the shadow of these monuments",
             "response": "the pyramids",
             "value": 200
           },
@@ -625,7 +625,7 @@
             "value": 400
           },
           {
-            "clue": "In July 1799 soldiers rebuilding a fort near the town of Rashid unearthed this three-script slab",
+            "clue": "Soldiers rebuilding a fort near the town of Rashid in 1799 unearthed this slab carved in three scripts",
             "response": "the Rosetta Stone",
             "value": 600
           },
@@ -635,7 +635,7 @@
             "value": 800
           },
           {
-            "clue": "Napoleon's 1799 push into Syria stalled at this coastal fortress, held by the Ottomans with British naval support",
+            "clue": "His 1799 push into Syria stalled at this coastal fortress, held by Ottomans with British naval support",
             "response": "Acre",
             "value": 1000
           }
@@ -747,12 +747,12 @@
             "value": 200
           },
           {
-            "clue": "To pay for the war with France, Prime Minister Pitt introduced this tax on personal earnings in Britain in 1799",
+            "clue": "Pitt introduced this tax on personal earnings in Britain in 1799 to pay for the war with France",
             "response": "income tax",
             "value": 400
           },
           {
-            "clue": "In 1799 Eli Whitney won a U.S. contract for 10,000 muskets, promoting this idea of components that fit any unit",
+            "clue": "Eli Whitney's 1798 contract for 10,000 muskets pushed this idea: components that fit any unit",
             "response": "interchangeable parts",
             "value": 600
           },
@@ -762,7 +762,7 @@
             "value": 800
           },
           {
-            "clue": "In 1799 the world's first great multinational, the Dutch East India Company, was dissolved; its Dutch initials were these",
+            "clue": "Dissolved in 1799, the Dutch East India Company, the first great multinational, went by these three initials",
             "response": "VOC",
             "value": 1000
           }
@@ -777,7 +777,7 @@
             "value": 200
           },
           {
-            "clue": "Napoleon became the first of three of these officials, a title borrowed from the ancient Roman republic",
+            "clue": "Napoleon became the First of these three officials, a title borrowed from the Roman republic",
             "response": "consul",
             "value": 400
           },
@@ -787,12 +787,12 @@
             "value": 600
           },
           {
-            "clue": "The decisive scene played out not in Paris but at this château west of the city, where the councils had been moved",
+            "clue": "The decisive scene played out at this château west of Paris, where the councils had been moved",
             "response": "Saint-Cloud (St-Cloud)",
             "value": 800
           },
           {
-            "clue": "When deputies mobbed Napoleon, this brother, presiding over the Council of Five Hundred, called in the grenadiers",
+            "clue": "As president of the Council of Five Hundred, this brother summoned grenadiers when deputies mobbed Napoleon",
             "response": "Lucien Bonaparte",
             "value": 1000
           }
@@ -800,8 +800,8 @@
       },
       "final": {
         "name": "ROMAN ECHOES",
-        "clue": "Like 'consul', the title Napoleon took in 1804 came from ancient Rome, where it first honored a victorious general",
-        "response": "emperor (imperator)"
+        "clue": "Napoleon's 1804 title descends from this Latin word, the salute Roman legions gave a victorious general",
+        "response": "imperator (emperor)"
       }
     },
     {
@@ -904,7 +904,7 @@
             "value": 200
           },
           {
-            "clue": "On New Year's Day 1801 Giuseppe Piazzi found Ceres, the first known of these small bodies between Mars and Jupiter",
+            "clue": "Ceres, found on New Year's Day 1801, was the first known of these small bodies between Mars and Jupiter",
             "response": "asteroids",
             "value": 400
           },
@@ -914,12 +914,12 @@
             "value": 600
           },
           {
-            "clue": "Richard Trevithick's 1801 'Puffing Devil' carried passengers up a Cornish hill, the first road vehicle driven by this",
+            "clue": "Richard Trevithick's 'Puffing Devil' carried passengers up a Cornish hill in 1801, powered by this",
             "response": "steam",
             "value": 800
           },
           {
-            "clue": "In 1801 Toussaint Louverture proclaimed a constitution for this French colony, the future Haiti",
+            "clue": "Toussaint Louverture proclaimed an 1801 constitution for this French colony, the future Haiti",
             "response": "Saint-Domingue",
             "value": 1000
           }
@@ -934,12 +934,12 @@
             "value": 200
           },
           {
-            "clue": "On June 14, 1800 Napoleon beat the Austrians at this Piedmont village, later the namesake of a chicken dish",
+            "clue": "Napoleon beat the Austrians on June 14, 1800 at this Piedmont village, namesake of a chicken dish",
             "response": "Marengo",
             "value": 400
           },
           {
-            "clue": "In May 1802 Napoleon founded this order of merit with its five-armed white cross, awarded to soldiers and civilians alike",
+            "clue": "Napoleon founded this order of merit in 1802; soldiers and civilians alike may wear its white cross",
             "response": "the Légion d'honneur (Legion of Honor)",
             "value": 600
           },
@@ -949,7 +949,7 @@
             "value": 800
           },
           {
-            "clue": "Marengo was rescued by the late arrival of this general, killed at the moment of triumph",
+            "clue": "Marengo was saved by the late arrival of this general, killed at the moment of triumph",
             "response": "Louis Desaix",
             "value": 1000
           }
@@ -1062,17 +1062,17 @@
         "name": "MEANWHILE, 1804",
         "clues": [
           {
-            "clue": "In 1804 Lewis and Clark left St. Louis and headed up this river on their way toward the Pacific",
+            "clue": "Lewis and Clark left St. Louis in 1804 and headed up this river on their way toward the Pacific",
             "response": "the Missouri",
             "value": 200
           },
           {
-            "clue": "In July 1804 Vice President Aaron Burr shot and killed this former Treasury secretary in a duel",
+            "clue": "Vice President Aaron Burr shot this former Treasury secretary dead in a July 1804 duel",
             "response": "Alexander Hamilton",
             "value": 400
           },
           {
-            "clue": "On January 1, 1804 this Caribbean nation declared independence, the first republic founded by formerly enslaved people",
+            "clue": "Declared on January 1, 1804, this Caribbean nation was the first republic founded by former slaves",
             "response": "Haiti",
             "value": 600
           },
@@ -1097,17 +1097,17 @@
             "value": 200
           },
           {
-            "clue": "The pope came to bless the ceremony, but Napoleon placed the crown on his own head and then on this woman's",
+            "clue": "The pope came to bless the rite, but Napoleon crowned himself, then crowned this woman",
             "response": "Joséphine",
             "value": 400
           },
           {
-            "clue": "In 1803 the First Consul sold this vast North American territory to the United States for about $15 million",
+            "clue": "The First Consul sold this vast North American territory to the U.S. in 1803 for about $15 million",
             "response": "Louisiana",
             "value": 600
           },
           {
-            "clue": "In 1804 Napoleon promulgated a unified body of civil law, known by this name, later copied from Italy to Japan",
+            "clue": "Issued in 1804, this unified body of civil law was later copied from Italy to Japan",
             "response": "the Napoleonic Code (Civil Code)",
             "value": 800
           },
@@ -1120,7 +1120,7 @@
       },
       "final": {
         "name": "ALL THE EMPEROR'S MEN",
-        "clue": "In 1804 Napoleon created 18 of these top military ranks, a title revived from the old monarchy; Ney and Murat were among the first",
+        "clue": "Napoleon revived this old royal military title in 1804, naming 18 men including Ney and Murat",
         "response": "Marshal of France (marshal)"
       }
     },
@@ -1242,18 +1242,18 @@
             "value": 200
           },
           {
-            "clue": "Beethoven's only opera, about a wife who rescues her husband from a political prison, premiered in 1805 as this",
-            "response": "Fidelio",
+            "clue": "Born in Odense in 1805, this Dane grew up to write 'The Ugly Duckling'",
+            "response": "Hans Christian Andersen",
             "value": 400
           },
           {
-            "clue": "In 1805 Muhammad Ali became Ottoman governor of this country and founded a dynasty that lasted until 1952",
+            "clue": "Ottoman governor of this country from 1805, Muhammad Ali founded a dynasty that ruled until 1952",
             "response": "Egypt",
             "value": 600
           },
           {
-            "clue": "Born in Odense in 1805, this Dane grew up to write 'The Ugly Duckling'",
-            "response": "Hans Christian Andersen",
+            "clue": "A wife rescues her husband from a political prison in this 1805 work, Beethoven's only opera",
+            "response": "Fidelio",
             "value": 800
           },
           {
@@ -1267,8 +1267,8 @@
         "name": "THE SUN OF AUSTERLITZ",
         "clues": [
           {
-            "clue": "On December 2, 1805 Napoleon crushed a Russo-Austrian army at Austerlitz, in what is now this country",
-            "response": "the Czech Republic (Czechia)",
+            "clue": "In October 1805 Nelson smashed the French and Spanish fleets off this Spanish cape, dying in victory",
+            "response": "Trafalgar",
             "value": 200
           },
           {
@@ -1277,17 +1277,17 @@
             "value": 400
           },
           {
-            "clue": "Weeks earlier Nelson had smashed the French and Spanish fleets off this Spanish cape, dying in victory",
-            "response": "Trafalgar",
+            "clue": "Austerlitz, site of Napoleon's crushing victory of December 2, 1805, lies in this country today",
+            "response": "the Czech Republic (Czechia)",
             "value": 600
           },
           {
-            "clue": "Napoleon feigned weakness to lure the allies down off these heights, which his troops then stormed",
-            "response": "the Pratzen Heights",
+            "clue": "Napoleon feigned weakness to lure the allies down off this plateau, which his troops then stormed",
+            "response": "the Pratzen Heights (Pratzen Plateau)",
             "value": 800
           },
           {
-            "clue": "Before Austerlitz, Napoleon's army encircled and captured an entire Austrian army at this Danube city on October 20, 1805",
+            "clue": "On October 20, 1805 Napoleon bagged an entire Austrian army at this Danube city, a prelude to Austerlitz",
             "response": "Ulm",
             "value": 1000
           }
@@ -1435,12 +1435,12 @@
             "value": 200
           },
           {
-            "clue": "An 1807 act of Parliament banned British ships from carrying enslaved Africans across the Atlantic, abolishing this 'trade'",
+            "clue": "Parliament's 1807 act barred British ships from carrying enslaved Africans, abolishing this 'trade'",
             "response": "the slave trade",
             "value": 400
           },
           {
-            "clue": "This German philosopher finished 'The Phenomenology of Spirit' in 1806 as Napoleon's guns thundered at Jena",
+            "clue": "This philosopher finished 'The Phenomenology of Spirit' as Napoleon's guns thundered at Jena in 1806",
             "response": "Hegel",
             "value": 600
           },
@@ -1465,12 +1465,12 @@
             "value": 200
           },
           {
-            "clue": "On October 14, 1806 Napoleon shattered the army of this German kingdom at Jena, while Davout won at Auerstedt",
+            "clue": "At Jena on October 14, 1806, Napoleon shattered the army of this German kingdom in a single day",
             "response": "Prussia",
             "value": 400
           },
           {
-            "clue": "The Berlin Decree of 1806 banned British goods from Europe's ports, a blockade known as this 'Continental' scheme",
+            "clue": "The 1806 Berlin Decree shut Europe's ports to British goods, a blockade known by this two-word name",
             "response": "the Continental System",
             "value": 600
           },
@@ -1684,7 +1684,7 @@
             "value": 200
           },
           {
-            "clue": "In September 1810 Father Hidalgo's 'Grito de Dolores' launched this country's war of independence from Spain",
+            "clue": "Father Hidalgo's 1810 'Grito de Dolores' launched this country's fight for independence from Spain",
             "response": "Mexico",
             "value": 400
           },
@@ -1694,13 +1694,13 @@
             "value": 600
           },
           {
-            "clue": "Washington Irving's 1809 comic 'History of New York' appeared under this pen name, later a nickname for Manhattanites",
-            "response": "Diedrich Knickerbocker",
+            "clue": "Goethe's 'Faust, Part One' appeared in 1808; the devil who bargains for Faust's soul goes by this name",
+            "response": "Mephistopheles (Mephisto)",
             "value": 800
           },
           {
-            "clue": "Goethe's 'Faust, Part One' appeared in 1808; the devil who bargains for Faust's soul goes by this name",
-            "response": "Mephistopheles (Mephisto)",
+            "clue": "Washington Irving's comic 1809 'History of New York' bore this pen name, later a nickname for New Yorkers",
+            "response": "Diedrich Knickerbocker",
             "value": 1000
           }
         ]
@@ -1709,7 +1709,7 @@
         "name": "THE ZENITH OF EMPIRE",
         "clues": [
           {
-            "clue": "In 1808 Napoleon made his brother Joseph king of this country, sparking a guerrilla war he called his 'ulcer'",
+            "clue": "Brother Joseph got this country's crown in 1808, starting the guerrilla war Napoleon called his 'ulcer'",
             "response": "Spain",
             "value": 200
           },
@@ -1719,7 +1719,7 @@
             "value": 400
           },
           {
-            "clue": "In July 1809 Napoleon beat Austria at this battle near Vienna, the last of his great victories over that empire",
+            "clue": "Napoleon's last great victory over Austria came at this battle near Vienna in July 1809",
             "response": "Wagram",
             "value": 600
           },
@@ -1737,7 +1737,7 @@
       },
       "final": {
         "name": "A DYNASTIC MATCH",
-        "clue": "Napoleon's 1810 bride Marie-Louise was the great-niece of this queen who was guillotined in 1793",
+        "clue": "Napoleon's Austrian bride of 1810 was the great-niece of this queen, guillotined in 1793",
         "response": "Marie Antoinette"
       }
     },
@@ -1927,22 +1927,22 @@
         "name": "1812: THE WORLD BEYOND RUSSIA",
         "clues": [
           {
-            "clue": "In June 1812 the United States declared war on this country, a conflict that gave us 'The Star-Spangled Banner'",
+            "clue": "The U.S. declared war on this country in June 1812; the fight gave us 'The Star-Spangled Banner'",
             "response": "Britain (England, the UK)",
             "value": 200
           },
           {
-            "clue": "In 1812 two German brothers published the first volume of their collected fairy tales",
+            "clue": "Two German brothers published the first volume of their collected fairy tales in 1812",
             "response": "the Brothers Grimm",
             "value": 400
           },
           {
-            "clue": "Lord Byron 'awoke one morning and found himself famous' in 1812 after publishing this pilgrimage poem",
-            "response": "Childe Harold's Pilgrimage",
+            "clue": "Lord Byron 'awoke one morning and found himself famous' in 1812 on publishing the first cantos of this poem",
+            "response": "Childe Harold's Pilgrimage (Childe Harold)",
             "value": 600
           },
           {
-            "clue": "In 1812 Massachusetts governor Elbridge Gerry signed a salamander-shaped district into law, giving us this word",
+            "clue": "Elbridge Gerry's salamander-shaped Massachusetts district of 1812 gave the language this word",
             "response": "gerrymander",
             "value": 800
           },
@@ -1962,12 +1962,12 @@
             "value": 200
           },
           {
-            "clue": "The bloodiest single day of the Napoleonic Wars came on September 7, 1812 at this village west of Moscow",
+            "clue": "September 7, 1812 at this village west of Moscow was the bloodiest single day of the Napoleonic Wars",
             "response": "Borodino",
             "value": 400
           },
           {
-            "clue": "This one-eyed Russian field marshal gave up Moscow rather than lose his army, then harried the French retreat",
+            "clue": "This one-eyed Russian field marshal gave up Moscow to save his army, then harried the French retreat",
             "response": "Kutuzov",
             "value": 600
           },
@@ -1977,15 +1977,15 @@
             "value": 800
           },
           {
-            "clue": "'The Emperor's health has never been better': the infamous closing line of the 29th of these official war reports",
-            "response": "bulletin",
+            "clue": "'The Emperor's health has never been better' infamously closed the 29th of these official war reports",
+            "response": "bulletins (bulletin)",
             "value": 1000
           }
         ]
       },
       "final": {
         "name": "OVERTURE TO DISASTER",
-        "clue": "Tchaikovsky's '1812 Overture' represents the invading French with this anthem, though it wasn't the Empire's official song in 1812",
+        "clue": "Tchaikovsky's '1812 Overture' gives the invading French this anthem, which Napoleon's Empire had actually dropped",
         "response": "La Marseillaise"
       }
     },
@@ -2079,7 +2079,7 @@
         "name": "MEANWHILE, 1814",
         "clues": [
           {
-            "clue": "Francis Scott Key wrote 'The Star-Spangled Banner' in 1814 after watching the British bombard this Baltimore fort",
+            "clue": "Francis Scott Key penned 'The Star-Spangled Banner' watching the British shell this Baltimore fort",
             "response": "Fort McHenry",
             "value": 200
           },
@@ -2094,12 +2094,12 @@
             "value": 600
           },
           {
-            "clue": "In 1814 George Stephenson built 'Blücher', his first of these machines, for a colliery railway",
+            "clue": "In 1814 George Stephenson built his first of these machines to haul coal at Killingworth colliery",
             "response": "a locomotive (steam locomotive)",
             "value": 800
           },
           {
-            "clue": "The Treaty of Ghent ended the War of 1812 in December 1814, but the news arrived too late to stop this January 1815 battle",
+            "clue": "Peace was signed at Ghent in December 1814, but word came too late to stop this January 1815 battle",
             "response": "the Battle of New Orleans",
             "value": 1000
           }
@@ -2114,22 +2114,22 @@
             "value": 200
           },
           {
-            "clue": "The October 1813 'Battle of the Nations', Europe's largest before World War I, was fought at this Saxon city",
+            "clue": "The 1813 'Battle of the Nations', Europe's biggest before World War I, raged around this Saxon city",
             "response": "Leipzig",
             "value": 400
           },
           {
-            "clue": "In mid-battle the troops of this German kingdom, Napoleon's ally, switched sides to the Coalition",
+            "clue": "In mid-battle the troops of this German kingdom, Napoleon's ally and the battle's host, switched sides",
             "response": "Saxony",
             "value": 600
           },
           {
-            "clue": "Napoleon bade farewell to his Old Guard in the courtyard of this palace south of Paris, kissing its eagle standard",
+            "clue": "He kissed the eagle standard and bade his Old Guard farewell in the courtyard of this palace south of Paris",
             "response": "Fontainebleau",
             "value": 800
           },
           {
-            "clue": "In the Six Days' Campaign of February 1814 Napoleon won four battles in four days against this Prussian field marshal",
+            "clue": "The Six Days' Campaign of February 1814 saw Napoleon beat this Prussian field marshal four times in four days",
             "response": "Blücher",
             "value": 1000
           }
@@ -2137,7 +2137,7 @@
       },
       "final": {
         "name": "THE ISLAND SOVEREIGN",
-        "clue": "Napoleon kept a title, a tiny army, and a flag of his own design on Elba: white with a red stripe and three of these insects",
+        "clue": "Napoleon's own flag for Elba was white with a red stripe and three of these golden insects",
         "response": "bees"
       }
     },
@@ -2189,22 +2189,22 @@
         "name": "1815: THE WORLD IN WATERLOO'S YEAR",
         "clues": [
           {
-            "clue": "Waterloo lies in this kingdom, which didn't exist in 1815; it won independence from the Netherlands in 1830",
+            "clue": "Waterloo lies in this kingdom, which didn't exist in 1815; it broke from the Netherlands in 1830",
             "response": "Belgium",
             "value": 200
           },
           {
-            "clue": "In April 1815 Mount Tambora erupted in this present-day country, causing 1816's 'year without a summer'",
+            "clue": "Mount Tambora's April 1815 eruption in this present-day country caused 1816's 'year without a summer'",
             "response": "Indonesia",
             "value": 400
           },
           {
-            "clue": "The Congress of Vienna's final act in 1815 guaranteed the permanent neutrality of this Alpine country",
+            "clue": "The Congress of Vienna's 1815 final act guaranteed the permanent neutrality of this Alpine country",
             "response": "Switzerland",
             "value": 600
           },
           {
-            "clue": "In 1815 Humphry Davy invented a safety lamp for these workers, whose open flames had been igniting gas underground",
+            "clue": "Humphry Davy's 1815 safety lamp protected these workers, whose open flames had been igniting gas underground",
             "response": "miners",
             "value": 800
           },
@@ -2219,22 +2219,22 @@
         "name": "THE HUNDRED DAYS",
         "clues": [
           {
-            "clue": "Escaping Elba, Napoleon ruled France again for roughly this many days, as the episode's name says",
-            "response": "100 (one hundred)",
-            "value": 200
-          },
-          {
             "clue": "On June 18, 1815 Napoleon met his final defeat at this village south of Brussels",
             "response": "Waterloo",
-            "value": 400
+            "value": 200
           },
           {
             "clue": "The British commander at Waterloo, this 'Iron Duke', had already driven the French out of Spain",
             "response": "the Duke of Wellington",
+            "value": 400
+          },
+          {
+            "clue": "As Napoleon marched on Paris in March 1815 this Bourbon king, restored only the year before, fled to Ghent",
+            "response": "Louis XVIII (Louis the Eighteenth)",
             "value": 600
           },
           {
-            "clue": "Marshal Ney promised King Louis XVIII to bring Napoleon back to Paris in one of these, then joined him instead",
+            "clue": "Marshal Ney vowed to bring Napoleon back to Louis XVIII in one of these, then joined his old master instead",
             "response": "an iron cage",
             "value": 800
           },
@@ -2247,7 +2247,7 @@
       },
       "final": {
         "name": "THE LAST WORD",
-        "clue": "Called on to lay down arms at Waterloo, General Cambronne is said to have replied 'The Guard dies, it does not' do this, or with one short vulgar word",
+        "clue": "At Waterloo General Cambronne supposedly answered a call to lay down arms with 'The Guard dies, it does not' do this",
         "response": "surrender"
       }
     },
@@ -2298,22 +2298,22 @@
             "value": 200
           },
           {
-            "clue": "In 1819 this steamship, named for a Georgia port, made the first Atlantic crossing partly under steam",
+            "clue": "Named for a Georgia port, this ship made the first partly steam-powered Atlantic crossing in 1819",
             "response": "the Savannah",
             "value": 400
           },
           {
-            "clue": "The 1820 Missouri Compromise admitted Missouri as a slave state and this New England state as a free one",
+            "clue": "The 1820 Missouri Compromise balanced slave-state Missouri with this free New England state",
             "response": "Maine",
             "value": 600
           },
           {
-            "clue": "In 1819 cavalry charged a reform rally in Manchester; the massacre was nicknamed after Napoleon's last battle",
+            "clue": "Cavalry charged a Manchester reform rally in 1819; the massacre got a nickname echoing Napoleon's last battle",
             "response": "Peterloo",
             "value": 800
           },
           {
-            "clue": "Champollion cracked hieroglyphs in 1822 using the Rosetta Stone, which had gone to this country's national museum after 1801",
+            "clue": "Champollion cracked hieroglyphs in 1822 from copies of the Rosetta Stone, which this nation had seized in 1801",
             "response": "Britain (England, the British Museum)",
             "value": 1000
           }
@@ -2323,12 +2323,12 @@
         "name": "SAINT HELENA & THE LEGEND",
         "clues": [
           {
-            "clue": "Napoleon died on May 5, 1821 on this remote island in the South Atlantic",
-            "response": "Saint Helena (St. Helena)",
+            "clue": "Napoleon died on May 5, 1821; the autopsy blamed a cancer of this organ, which had also killed his father",
+            "response": "the stomach",
             "value": 200
           },
           {
-            "clue": "In 1840 his remains came home to Paris and were laid beneath the golden dome of this military complex",
+            "clue": "His remains came home to Paris in 1840 and lie beneath the golden dome of this military complex",
             "response": "Les Invalides",
             "value": 400
           },
@@ -2343,7 +2343,7 @@
             "value": 800
           },
           {
-            "clue": "The British governor whose petty restrictions embittered the exile on Saint Helena was this general",
+            "clue": "Petty restrictions by this British governor, a general, embittered Napoleon's years on Saint Helena",
             "response": "Sir Hudson Lowe",
             "value": 1000
           }

@@ -175,3 +175,25 @@ filter that legitimately protects against media-dependent archive content.
 **Verification:** checker sweep OK (66 files, 655 categories, 3,275 board clues,
 78 finals, zero problems); 115-game no-repeat simulation clean on both packs;
 `npm run build` green; Playwright smoke green on both packs.
+
+## 2026-11-07 — Polish pass over every original clue
+
+Goal: bring all 6,812 original clues (Fresh 4,970 · Easy Breezy 1,677 · Campaign 165) up to
+real-show standard. Baseline audit against the archive showed our clues were accurate and
+hook-rich but ~15% longer than televised clues (92→102 chars across the board vs ~80 flat),
+opened with "This …" 90%+ of the time (show: ~65%), and carried a handful of factual slips.
+
+- **Pipeline:** 22 editor agents (one per ~70 categories or ~70 finals) rewrote from
+  `packs-src/polish-pass/EDITOR-BRIEF.md`; 22 independent checkers fact-checked every revised
+  batch per `CHECKER-BRIEF.md` and fixed in place. Campaign edited by hand, then checked.
+  Per-batch notes (facts corrected, swaps, judgment calls) are in `packs-src/polish-pass/`.
+- **Result:** 4,865 of 6,647 pack clue texts changed, 374 responses changed (duplicate answers
+  across paired categories, singular/plural agreement, fuzzy-matcher alternates). Fresh now
+  averages 87–96 chars by row, Easy 74–84, "This" openers ≈10%; zero banned phrases, zero
+  em dashes, no duplicate Final responses within a pack.
+- **Facts fixed** (examples): Tagore "first non-European laureate" (Roosevelt 1906),
+  Eli Whitney's musket contract (1798), Army of Italy "crossed the Alps" in 1796, Forrest
+  Gump's bench (Savannah, not Alabama), Shakespeare baptized (not born) at Holy Trinity,
+  Noor Inayat Khan Moscow-born, Pont du Gard fed one city, PayPal not an eBay spinoff.
+- Source of truth remains the compiled chunks under `public/data/original`, `public/data/easy`
+  and `public/data/campaign/chapters.json` (packs-src only holds the wave-3 drafts).
