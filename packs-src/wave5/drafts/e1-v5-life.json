@@ -1,0 +1,362 @@
+[
+  {
+    "name": "STACKED AND PACKED",
+    "clues": [
+      {
+        "clue": "Loose ground beef in a sweet tomato sauce, spooned onto a bun, makes this sandwich",
+        "response": "a Sloppy Joe",
+        "value": 200
+      },
+      {
+        "clue": "Fried peanut butter and banana sandwiches were a favorite of this rock 'n' roll king",
+        "response": "Elvis Presley",
+        "value": 400
+      },
+      {
+        "clue": "Chunks of Maine's favorite shellfish piled into a buttered, toasted hot dog bun",
+        "response": "a lobster roll",
+        "value": 600
+      },
+      {
+        "clue": "Peanut butter and marshmallow creme make this sandwich, beloved in Massachusetts",
+        "response": "a Fluffernutter",
+        "value": 800
+      },
+      {
+        "clue": "Cheddar, mayo and red peppers make this Southern spread, a Masters golf sandwich",
+        "response": "pimento cheese",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "SUNDAY DRIVE",
+    "clues": [
+      {
+        "clue": "On sunny Sunday drives, Dad folded down the roof of this kind of car",
+        "response": "a convertible",
+        "value": 200
+      },
+      {
+        "clue": "GIs bounced over the roads of World War II in this rugged little four-wheel drive",
+        "response": "a Jeep",
+        "value": 400
+      },
+      {
+        "clue": "The 1959 Eldorado from this luxury carmaker wore sky-high tail fins",
+        "response": "Cadillac",
+        "value": 600
+      },
+      {
+        "clue": "Surfers loved station wagons with wood side panels, nicknamed these",
+        "response": "woodies",
+        "value": 800
+      },
+      {
+        "clue": "'Ask the man who owns one,' said ads for this luxury car",
+        "response": "Packard",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "FAMILY GAME TABLE",
+    "clues": [
+      {
+        "clue": "Drop red and yellow discs into an upright grid in this Milton Bradley game",
+        "response": "Connect Four",
+        "value": 200
+      },
+      {
+        "clue": "Press the 'Pop-O-Matic' bubble to roll the die in this race-home game",
+        "response": "Trouble",
+        "value": 400
+      },
+      {
+        "clue": "Four plastic river beasts gobble marbles as fast as kids can work the levers",
+        "response": "Hungry Hungry Hippos",
+        "value": 600
+      },
+      {
+        "clue": "Players build a wacky contraption to catch the other mice in this 1963 game",
+        "response": "Mouse Trap",
+        "value": 800
+      },
+      {
+        "clue": "'Does your person wear glasses?' players ask in this flip-down face game",
+        "response": "Guess Who?",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "FLOWER SHOW",
+    "clues": [
+      {
+        "clue": "Pasadena's New Year's Day parade is called the Tournament of these flowers",
+        "response": "roses",
+        "value": 200
+      },
+      {
+        "clue": "The Welsh wear this yellow trumpet-shaped flower on St. David's Day",
+        "response": "the daffodil",
+        "value": 400
+      },
+      {
+        "clue": "This climbing vine's blooms open with the sunrise and close by afternoon",
+        "response": "the morning glory",
+        "value": 600
+      },
+      {
+        "clue": "Alaska's state flower is this tiny blue bloom with a sentimental name",
+        "response": "the forget-me-not",
+        "value": 800
+      },
+      {
+        "clue": "Named for its look of a pioneer woman's hat, this blue bloom is Texas's state flower",
+        "response": "the bluebonnet",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "THE EQUIPMENT ROOM",
+    "clues": [
+      {
+        "clue": "Golfers use this flat-faced club to tap the ball into the cup",
+        "response": "a putter",
+        "value": 200
+      },
+      {
+        "clue": "Hockey officials keep this rubber disk frozen before games so it won't bounce",
+        "response": "a puck",
+        "value": 400
+      },
+      {
+        "clue": "A tennis serve that clips this and still lands in is called a 'let' and played over",
+        "response": "the net",
+        "value": 600
+      },
+      {
+        "clue": "Archers pull their arrows from this case slung on the back or hip",
+        "response": "a quiver",
+        "value": 800
+      },
+      {
+        "clue": "Cricket bats are traditionally carved from the wood of this tree",
+        "response": "the willow",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "SLOGAN TIME",
+    "clues": [
+      {
+        "clue": "'M'm! M'm! Good!' sang the ads for this company's canned soups",
+        "response": "Campbell's",
+        "value": 200
+      },
+      {
+        "clue": "Ads for this paper towel brand promised a 'quicker picker-upper' for kitchen spills",
+        "response": "Bounty",
+        "value": 400
+      },
+      {
+        "clue": "Ads by John Cameron Swayze said this watch 'takes a licking and keeps on ticking'",
+        "response": "Timex",
+        "value": 600
+      },
+      {
+        "clue": "Second place in car rentals, this company told customers 'We try harder'",
+        "response": "Avis",
+        "value": 800
+      },
+      {
+        "clue": "'Fly the friendly skies,' invited this airline's ads from 1965 on",
+        "response": "United (United Airlines)",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "PLEASE AND THANK YOU",
+    "clues": [
+      {
+        "clue": "Mother always said to keep these off the dinner table",
+        "response": "elbows",
+        "value": 200
+      },
+      {
+        "clue": "In a proper table setting, this utensil goes to the left of the plate",
+        "response": "the fork",
+        "value": 400
+      },
+      {
+        "clue": "After a gift arrives, good manners call for this handwritten card",
+        "response": "a thank-you note",
+        "value": 600
+      },
+      {
+        "clue": "Her 1922 book 'Etiquette' made her name a byword for good manners",
+        "response": "Emily Post",
+        "value": 800
+      },
+      {
+        "clue": "Judith Martin answered etiquette questions for decades under this pen name",
+        "response": "Miss Manners",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "HOMETOWN PLATES",
+    "clues": [
+      {
+        "clue": "Clam chowder in a sourdough bread bowl is a Fisherman's Wharf treat in this city",
+        "response": "San Francisco",
+        "value": 200
+      },
+      {
+        "clue": "Fiery, cayenne-coated 'hot chicken' is a famous specialty of this Tennessee city",
+        "response": "Nashville",
+        "value": 400
+      },
+      {
+        "clue": "Crispy 'burnt ends' of smoked brisket are a barbecue specialty of this Missouri metropolis",
+        "response": "Kansas City",
+        "value": 600
+      },
+      {
+        "clue": "Crab cakes seasoned with Old Bay are a specialty of this Maryland city",
+        "response": "Baltimore",
+        "value": 800
+      },
+      {
+        "clue": "Frank Pepe's white clam pie makes pizza a point of pride in this Connecticut city",
+        "response": "New Haven",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "SAYINGS ON THE MENU",
+    "clues": [
+      {
+        "clue": "A lazy TV watcher who never leaves the sofa is a 'couch' this",
+        "response": "potato",
+        "value": 200
+      },
+      {
+        "clue": "To earn the family's living is to 'bring home' this breakfast meat",
+        "response": "bacon",
+        "value": 400
+      },
+      {
+        "clue": "Two look-alikes are said to be like two peas in one of these",
+        "response": "a pod",
+        "value": 600
+      },
+      {
+        "clue": "High society is nicknamed the 'upper' this, like the top of a loaf or a pie",
+        "response": "crust",
+        "value": 800
+      },
+      {
+        "clue": "Something flying off the shelves is said to be 'selling like' these griddle treats",
+        "response": "hotcakes",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "HAVE BAGS, WILL TRAVEL",
+    "clues": [
+      {
+        "clue": "'Wish you were here!' is the classic line scribbled on these",
+        "response": "postcards",
+        "value": 200
+      },
+      {
+        "clue": "Arriving in Honolulu, visitors may be greeted with this flower necklace",
+        "response": "a lei",
+        "value": 400
+      },
+      {
+        "clue": "American Express introduced these in 1891 so tourists needn't carry cash",
+        "response": "traveler's checks",
+        "value": 600
+      },
+      {
+        "clue": "This sturdy luggage brand took its name from the Bible's famous strongman",
+        "response": "Samsonite",
+        "value": 800
+      },
+      {
+        "clue": "Low and flat to slide under a cabin berth, this travel case was named for the ships it sailed on",
+        "response": "a steamer trunk",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "PINS AND NEEDLES",
+    "clues": [
+      {
+        "clue": "Many a seamstress wears this measuring tool draped around her neck",
+        "response": "a tape measure",
+        "value": 200
+      },
+      {
+        "clue": "Simplicity and Butterick sold these tissue-paper guides for cutting a dress",
+        "response": "patterns",
+        "value": 400
+      },
+      {
+        "clue": "Seamstresses use these saw-toothed scissors so a cut edge won't unravel",
+        "response": "pinking shears",
+        "value": 600
+      },
+      {
+        "clue": "This small, forked tool with a tiny blade undoes stitches sewn by mistake",
+        "response": "a seam ripper",
+        "value": 800
+      },
+      {
+        "clue": "This wavy, zigzag braid trim brightened many an apron hem",
+        "response": "rickrack",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "AT THE LUNCH COUNTER",
+    "clues": [
+      {
+        "clue": "A 'cup of joe' at the diner counter is a mug of this hot drink",
+        "response": "coffee",
+        "value": 200
+      },
+      {
+        "clue": "At the diner, the bargain meal of the day was this 'special', named for the color of its dish",
+        "response": "the blue plate special",
+        "value": 400
+      },
+      {
+        "clue": "Many old diners were built to look like these railroad restaurant coaches",
+        "response": "dining cars",
+        "value": 600
+      },
+      {
+        "clue": "Diner slang for 'we're all out of it' is this two-digit number",
+        "response": "86",
+        "value": 800
+      },
+      {
+        "clue": "Diner slang 'Adam's ale' means a glass of this free drink",
+        "response": "water",
+        "value": 1000
+      }
+    ]
+  }
+]

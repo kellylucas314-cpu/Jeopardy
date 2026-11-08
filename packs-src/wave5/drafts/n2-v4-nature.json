@@ -1,0 +1,362 @@
+[
+  {
+    "name": "SUM BODY",
+    "clues": [
+      {
+        "clue": "Every right triangle obeys the theorem named for this Greek from the island of Samos",
+        "response": "Pythagoras",
+        "value": 400
+      },
+      {
+        "clue": "Around 1637 he noted that a margin was too small for his proof, starting a centuries-long hunt",
+        "response": "Pierre de Fermat (Fermat)",
+        "value": 800
+      },
+      {
+        "clue": "His solution to the Seven Bridges of Konigsberg puzzle laid the groundwork for graph theory",
+        "response": "Leonhard Euler (Euler)",
+        "value": 1200
+      },
+      {
+        "clue": "Chatting with G.H. Hardy, this Indian prodigy noted 1729 is the smallest sum of two cubes two ways",
+        "response": "Srinivasa Ramanujan (Ramanujan)",
+        "value": 1600
+      },
+      {
+        "clue": "As a teen, he proved a regular 17-sided polygon can be built with just compass and straightedge",
+        "response": "Carl Friedrich Gauss (Gauss)",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "MINERAL RIGHTS",
+    "clues": [
+      {
+        "clue": "Its brassy gleam tricked many a prospector, so iron pyrite earned this nickname",
+        "response": "fool's gold",
+        "value": 400
+      },
+      {
+        "clue": "Rating a 1, this mineral behind baby powder is the softest on the Mohs scale",
+        "response": "talc",
+        "value": 800
+      },
+      {
+        "clue": "'Game of Thrones' heroes slay White Walkers with 'dragonglass', the show's name for this",
+        "response": "obsidian",
+        "value": 1200
+      },
+      {
+        "clue": "Sprinkle rock salt on an icy walk and you're spreading this mineral, the natural form of NaCl",
+        "response": "halite",
+        "value": 1600
+      },
+      {
+        "clue": "Emery, the gritty rock on old-fashioned nail files, is made mostly of this mineral",
+        "response": "corundum",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "PROBE-ABLE CAUSE",
+    "clues": [
+      {
+        "clue": "After this U.S. space station fell in 1979, an Australian town fined NASA $400 for littering",
+        "response": "Skylab",
+        "value": 400
+      },
+      {
+        "clue": "This orbiting observatory's 1995 'Pillars of Creation' image of the Eagle Nebula became iconic",
+        "response": "the Hubble Space Telescope (Hubble)",
+        "value": 800
+      },
+      {
+        "clue": "Russian for 'peace' or 'world', this space station orbited from 1986 until its 2001 plunge",
+        "response": "Mir",
+        "value": 1200
+      },
+      {
+        "clue": "Its Huygens probe dropped onto Titan in 2005, and in 2017 this spacecraft dove into Saturn",
+        "response": "Cassini",
+        "value": 1600
+      },
+      {
+        "clue": "Built for a 90-day mission, this rover, twin of Spirit, kept exploring Mars for over 14 years",
+        "response": "Opportunity",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "SCRUB IN",
+    "clues": [
+      {
+        "clue": "Physicians have long sworn versions of an oath named for this Greek 'father of medicine'",
+        "response": "Hippocrates",
+        "value": 400
+      },
+      {
+        "clue": "In 1854 he had the handle taken off a London water pump to halt a cholera outbreak",
+        "response": "John Snow",
+        "value": 800
+      },
+      {
+        "clue": "In 1871 this antiseptic pioneer lanced an abscess in Queen Victoria's armpit",
+        "response": "Joseph Lister (Lister)",
+        "value": 1200
+      },
+      {
+        "clue": "Rejecting evidence that clashes with old beliefs is called the 'reflex' of this mocked Hungarian doctor",
+        "response": "Ignaz Semmelweis (Semmelweis)",
+        "value": 1600
+      },
+      {
+        "clue": "Later physician to Emperor Charles V, this Fleming once took a skeleton from a gallows to study",
+        "response": "Andreas Vesalius (Vesalius)",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "SENSE-ATIONAL ANIMALS",
+    "clues": [
+      {
+        "clue": "Vampire bats find warm blood vessels near the skin using nose sensors tuned to this",
+        "response": "infrared (heat)",
+        "value": 400
+      },
+      {
+        "clue": "Honeybees see this light, invisible to us, which reveals 'landing strips' on flowers",
+        "response": "ultraviolet (UV)",
+        "value": 800
+      },
+      {
+        "clue": "Robins and other migrating birds may steer by sensing this, with help from their eyes",
+        "response": "Earth's magnetic field (magnetism)",
+        "value": 1200
+      },
+      {
+        "clue": "A platypus hunts with eyes, ears and nostrils shut, finding prey with electroreceptors in this",
+        "response": "its bill",
+        "value": 1600
+      },
+      {
+        "clue": "Sharks sense prey's electric fields through jelly-filled pores named for this 1600s Italian",
+        "response": "Stefano Lorenzini (Lorenzini)",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "LOGGED ON",
+    "clues": [
+      {
+        "clue": "In 2021 the Bank of England put this WWII codebreaker on its 50-pound note",
+        "response": "Alan Turing",
+        "value": 400
+      },
+      {
+        "clue": "'This is for everyone', he typed at the 2012 London Olympics opening ceremony",
+        "response": "Tim Berners-Lee",
+        "value": 800
+      },
+      {
+        "clue": "A Pentagon coding language bears her first name, and its standard number is her birth year",
+        "response": "Ada Lovelace",
+        "value": 1200
+      },
+      {
+        "clue": "His never-finished Difference Engine No. 2 was finally built by London's Science Museum in 1991",
+        "response": "Charles Babbage",
+        "value": 1600
+      },
+      {
+        "clue": "A Finnish student's 1991 hobby kernel grew into this open-source operating system",
+        "response": "Linux",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "CHEMICAL ALIASES",
+    "clues": [
+      {
+        "clue": "'Dry ice' is the frozen form of this gas, which skips the liquid stage as it warms",
+        "response": "carbon dioxide",
+        "value": 400
+      },
+      {
+        "clue": "Soak in Epsom salt and you're bathing in this compound, MgSO4",
+        "response": "magnesium sulfate",
+        "value": 800
+      },
+      {
+        "clue": "Lye, the harsh ingredient in old-time soapmaking, is often this compound, NaOH",
+        "response": "sodium hydroxide",
+        "value": 1200
+      },
+      {
+        "clue": "Plaster of Paris comes from heating gypsum, a hydrated form of this compound, CaSO4",
+        "response": "calcium sulfate",
+        "value": 1600
+      },
+      {
+        "clue": "Alchemists called this corrosive liquid 'oil of vitriol', and car batteries still run on it",
+        "response": "sulfuric acid",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "GONE FOR GOOD",
+    "clues": [
+      {
+        "clue": "Lewis Carroll, born Charles Dodgson, may have cast himself as this bird in 'Alice'",
+        "response": "the dodo",
+        "value": 400
+      },
+      {
+        "clue": "The eastern U.S.'s only native parrot, this green-and-yellow bird died out in the 20th century",
+        "response": "the Carolina parakeet",
+        "value": 800
+      },
+      {
+        "clue": "Shaggy elephant kin on Russia's Wrangel Island were still alive when Egypt's pyramids went up",
+        "response": "woolly mammoths (mammoths)",
+        "value": 1200
+      },
+      {
+        "clue": "Also called the Tasmanian tiger, this striped marsupial's last known member died in 1936",
+        "response": "the thylacine",
+        "value": 1600
+      },
+      {
+        "clue": "The last of these wild ancestors of today's cattle died in a Polish forest in 1627",
+        "response": "aurochs",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "SKY WRITING",
+    "clues": [
+      {
+        "clue": "Solar particles hitting the upper atmosphere paint Alaska's winter sky with this display",
+        "response": "the aurora borealis (northern lights)",
+        "value": 400
+      },
+      {
+        "clue": "Sailors took the eerie blue glow of this on their masts during storms as a sign of protection",
+        "response": "St. Elmo's fire",
+        "value": 800
+      },
+      {
+        "clue": "Also called parhelia, these bright spots flanking our star come from ice crystals in cirrus",
+        "response": "sun dogs",
+        "value": 1200
+      },
+      {
+        "clue": "Watch a sea sunset in clear air and you may catch this brief emerald blip on the top edge",
+        "response": "the green flash",
+        "value": 1600
+      },
+      {
+        "clue": "Kentucky's Cumberland Falls is famed for this nighttime arc, lit by a full moon",
+        "response": "a moonbow (lunar rainbow)",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "STEEL AND STONE",
+    "clues": [
+      {
+        "clue": "The Navy once wanted this San Francisco span painted with black and yellow stripes",
+        "response": "the Golden Gate Bridge",
+        "value": 400
+      },
+      {
+        "clue": "Summer heat makes this iron Paris landmark grow by as much as six inches",
+        "response": "the Eiffel Tower",
+        "value": 800
+      },
+      {
+        "clue": "In 1884 P.T. Barnum marched 21 elephants, Jumbo among them, across this span",
+        "response": "the Brooklyn Bridge",
+        "value": 1200
+      },
+      {
+        "clue": "Crews digging from Britain and France met beneath the sea in 1990, joining the halves of this",
+        "response": "the Channel Tunnel (Chunnel)",
+        "value": 1600
+      },
+      {
+        "clue": "Romans lightened this temple's dome with pumice near the top, and it still stands unreinforced",
+        "response": "the Pantheon",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "GENE POOL PARTY",
+    "clues": [
+      {
+        "clue": "Edinburgh's National Museum of Scotland displays this famous cloned sheep, stuffed",
+        "response": "Dolly",
+        "value": 400
+      },
+      {
+        "clue": "Elected abbot in 1868, the father of genetics had little time left for his plant experiments",
+        "response": "Gregor Mendel",
+        "value": 800
+      },
+      {
+        "clue": "She died at 37 in 1958, four years before Watson, Crick and Wilkins won the Nobel for DNA",
+        "response": "Rosalind Franklin",
+        "value": 1200
+      },
+      {
+        "clue": "Guanine, cytosine and thymine join this fourth base in DNA's genetic alphabet",
+        "response": "adenine",
+        "value": 1600
+      },
+      {
+        "clue": "Studying corn, she found 'jumping genes' and won an unshared 1983 Nobel Prize",
+        "response": "Barbara McClintock",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "HIVE MINDS",
+    "clues": [
+      {
+        "clue": "Every worker in a honeybee hive, from nurse to forager, is this sex",
+        "response": "female",
+        "value": 400
+      },
+      {
+        "clue": "Male honeybees, these can't sting and exist mainly to mate with a queen",
+        "response": "drones",
+        "value": 800
+      },
+      {
+        "clue": "Fed nothing but this rich secretion, a female larva develops into a queen",
+        "response": "royal jelly",
+        "value": 1200
+      },
+      {
+        "clue": "Leafcutter ants don't eat the leaves they haul home: they use them to farm this",
+        "response": "fungus",
+        "value": 1600
+      },
+      {
+        "clue": "Bees seal cracks in their hive with this resin-based 'bee glue'",
+        "response": "propolis",
+        "value": 2000
+      }
+    ]
+  }
+]

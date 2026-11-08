@@ -1,0 +1,362 @@
+[
+ {
+  "name": "HAIL, CAESARS",
+  "clues": [
+   {
+    "clue": "Legend says he fiddled while Rome burned in A.D. 64, though the fiddle hadn't been invented yet",
+    "response": "Nero",
+    "value": 400
+   },
+   {
+    "clue": "This emperor's 73-mile wall ran coast to coast across northern Britain",
+    "response": "Hadrian",
+    "value": 800
+   },
+   {
+    "clue": "Under this soldier-emperor from Spain, the Roman Empire reached its greatest extent in A.D. 117",
+    "response": "Trajan",
+    "value": 1200
+   },
+   {
+    "clue": "His bronze statue on horseback survived the Middle Ages because Romans mistook it for Constantine",
+    "response": "Marcus Aurelius",
+    "value": 1600
+   },
+   {
+    "clue": "Urged to return to power, this retired emperor reportedly preferred tending cabbages at his Adriatic palace",
+    "response": "Diocletian",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "IRON CURTAIN CALL",
+  "clues": [
+   {
+    "clue": "Checkpoint Charlie was the most famous crossing point for foreigners through this barrier",
+    "response": "the Berlin Wall",
+    "value": 400
+   },
+   {
+    "clue": "Its name is Russian for 'fellow traveler,' and it burned up on reentry after three months in orbit",
+    "response": "Sputnik",
+    "value": 800
+   },
+   {
+    "clue": "This Soviet-led military alliance formally dissolved in July 1991, months before the USSR itself did",
+    "response": "the Warsaw Pact",
+    "value": 1200
+   },
+   {
+    "clue": "Alexander Dubček's 'socialism with a human face' flowered in this 1968 season until Soviet tanks rolled in",
+    "response": "the Prague Spring",
+    "value": 1600
+   },
+   {
+    "clue": "Francis Gary Powers was flying this high-altitude CIA spy plane when the Soviets shot him down in 1960",
+    "response": "the U-2",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "WATERFRONT CAPITALS",
+  "clues": [
+   {
+    "clue": "The 25 de Abril Bridge, a red lookalike of the Golden Gate, spans the Tagus at this capital",
+    "response": "Lisbon",
+    "value": 400
+   },
+   {
+    "clue": "Thor Heyerdahl's Kon-Tiki raft and the polar ship Fram are museum pieces in this Nordic capital",
+    "response": "Oslo",
+    "value": 800
+   },
+   {
+    "clue": "Spread over 14 islands where Lake Mälaren meets the Baltic, this capital hosts the Nobel banquet",
+    "response": "Stockholm",
+    "value": 1200
+   },
+   {
+    "clue": "A folk tale says this capital's name began as a Portuguese lookout's cry of 'I see a mountain'",
+    "response": "Montevideo",
+    "value": 1600
+   },
+   {
+    "clue": "On a bend of the Mekong, this low-rise Southeast Asian capital looks across the river at Thailand",
+    "response": "Vientiane",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "CROWNS & CHRONICLES",
+  "clues": [
+   {
+    "clue": "Crécy, Poitiers and Agincourt were all English victories in this long Anglo-French struggle",
+    "response": "the Hundred Years' War",
+    "value": 400
+   },
+   {
+    "clue": "Einhard says this Frankish emperor kept writing tablets under his pillow but never quite learned to write",
+    "response": "Charlemagne",
+    "value": 800
+   },
+   {
+    "clue": "Halley's Comet makes a cameo in this 224-foot embroidered account of the Norman Conquest",
+    "response": "the Bayeux Tapestry",
+    "value": 1200
+   },
+   {
+    "clue": "Before she was England's queen, she joined France's Louis VII, her first husband, on the Second Crusade",
+    "response": "Eleanor of Aquitaine",
+    "value": 1600
+   },
+   {
+    "clue": "Rebels of England's 1381 Peasants' Revolt followed this man, slain at Smithfield before the boy king",
+    "response": "Wat Tyler",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "HIGH AND MIGHTY",
+  "clues": [
+   {
+    "clue": "Kibo is the tallest of the three volcanic cones that make up this Tanzanian giant",
+    "response": "Kilimanjaro",
+    "value": 400
+   },
+   {
+    "clue": "Turkey's highest peak, it looms over Yerevan and appears on Armenia's coat of arms",
+    "response": "Mount Ararat",
+    "value": 800
+   },
+   {
+    "clue": "Four of Edward Whymper's party fell to their deaths after the first ascent of this Alp in 1865",
+    "response": "the Matterhorn",
+    "value": 1200
+   },
+   {
+    "clue": "In 1985 climbers found a 500-year-old Inca child mummy high on this Argentine peak",
+    "response": "Aconcagua",
+    "value": 1600
+   },
+   {
+    "clue": "Topping Mont Blanc by over half a mile, this dormant Russian volcano is often called Europe's highest peak",
+    "response": "Mount Elbrus",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "THE OTHER PRESIDENTS",
+  "clues": [
+   {
+    "clue": "Catching cold around his long 1841 inauguration was blamed for this president's death a month later",
+    "response": "William Henry Harrison",
+    "value": 400
+   },
+   {
+    "clue": "Just 103 days after leaving office, he died of cholera, the shortest retirement of any ex-president",
+    "response": "James K. Polk",
+    "value": 800
+   },
+   {
+    "clue": "Grandsons of this president, who was born in 1790, were still alive in the 21st century",
+    "response": "John Tyler",
+    "value": 1200
+   },
+   {
+    "clue": "'Old Rough and Ready' won the Battle of Buena Vista, then died in the White House in 1850",
+    "response": "Zachary Taylor",
+    "value": 1600
+   },
+   {
+    "clue": "A liquor ban at White House functions under this president later earned his wife the nickname 'Lemonade Lucy'",
+    "response": "Rutherford B. Hayes",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "THIRST QUARTERS",
+  "clues": [
+   {
+    "clue": "Only about a quarter of this vast North African desert is actually covered in sand dunes",
+    "response": "the Sahara",
+    "value": 400
+   },
+   {
+    "clue": "Frost and even snow dust the dunes of this cold desert spanning southern Mongolia",
+    "response": "the Gobi",
+    "value": 800
+   },
+   {
+    "clue": "Rare rains bring the 'desierto florido,' a sudden carpet of wildflowers, to this Chilean desert",
+    "response": "the Atacama",
+    "value": 1200
+   },
+   {
+    "clue": "The red dunes of Sossusvlei rise in this coastal desert, which gave its name to a whole nation",
+    "response": "the Namib",
+    "value": 1600
+   },
+   {
+    "clue": "In 1931 Bertram Thomas became the first Westerner to cross this vast sand sea of southern Arabia",
+    "response": "Rub' al Khali (Empty Quarter)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "OLD REGIMES, NEW REGIMES",
+  "clues": [
+   {
+    "clue": "Only seven prisoners were found inside this Paris fortress when revolutionaries took it in 1789",
+    "response": "the Bastille",
+    "value": 400
+   },
+   {
+    "clue": "Lenin's Bolsheviks seized power in this month of 1917 by Russia's old calendar, November by ours",
+    "response": "October",
+    "value": 800
+   },
+   {
+    "clue": "A former slave turned general, he took a surname meaning 'the opening' and led Haiti's revolt",
+    "response": "Toussaint Louverture",
+    "value": 1200
+   },
+   {
+    "clue": "England's nearly bloodless 1688 ouster of James II earned this proud name",
+    "response": "the Glorious Revolution",
+    "value": 1600
+   },
+   {
+    "clue": "Robespierre fell on the 9th of this 'heat' month of France's revolutionary calendar",
+    "response": "Thermidor",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "LAKE EFFECT",
+  "clues": [
+   {
+    "clue": "Europe's longest river, the Volga, empties into this landlocked body of salty water",
+    "response": "the Caspian Sea",
+    "value": 400
+   },
+   {
+    "clue": "The Uros people build floating reed islands on these high Andean waters shared by Peru and Bolivia",
+    "response": "Lake Titicaca",
+    "value": 800
+   },
+   {
+    "clue": "Nerpa seals, found nowhere else on Earth, swim in the fresh water of this deep Siberian rift",
+    "response": "Lake Baikal",
+    "value": 1200
+   },
+   {
+    "clue": "Soviet cotton irrigation shrank this Central Asian lake, leaving rusting fishing boats on dry land",
+    "response": "the Aral Sea",
+    "value": 1600
+   },
+   {
+    "clue": "Stanley found Livingstone at Ujiji, on the eastern shore of this deep Rift Valley body of water",
+    "response": "Lake Tanganyika",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SHE RULED",
+  "clues": [
+   {
+    "clue": "Anne Boleyn's daughter, she ruled England for 44 years and never married",
+    "response": "Elizabeth I",
+    "value": 400
+   },
+   {
+    "clue": "This Russian empress bought Denis Diderot's library, then paid him to keep it as her librarian",
+    "response": "Catherine the Great",
+    "value": 800
+   },
+   {
+    "clue": "This Iceni queen led a revolt that burned Roman Londinium around A.D. 60",
+    "response": "Boudicca",
+    "value": 1200
+   },
+   {
+    "clue": "China's empress dowager is said to have spent navy funds restoring the Summer Palace, marble boat and all",
+    "response": "Cixi",
+    "value": 1600
+   },
+   {
+    "clue": "A onetime actress, this wife of Justinian gazes out from glittering mosaics in Ravenna's San Vitale",
+    "response": "Theodora",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ALL HANDS ON DECK",
+  "clues": [
+   {
+    "clue": "It took just 18 minutes for this Cunard liner to sink off Ireland's Old Head of Kinsale in 1915",
+    "response": "the Lusitania",
+    "value": 400
+   },
+   {
+    "clue": "Breadfruit seedlings from Tahiti were the cargo of this ship when its crew mutinied in 1789",
+    "response": "HMS Bounty",
+    "value": 800
+   },
+   {
+    "clue": "Captain James Cook charted New Zealand and Australia's east coast aboard this ship",
+    "response": "the Endeavour",
+    "value": 1200
+   },
+   {
+    "clue": "Henry VIII watched this warship sink off Portsmouth in 1545, and its hull was raised in 1982",
+    "response": "the Mary Rose",
+    "value": 1600
+   },
+   {
+    "clue": "Built to race tea home from China, this 1869 clipper ship sits in dry dock at Greenwich",
+    "response": "the Cutty Sark",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "THE MANDATE OF HEAVEN",
+  "clues": [
+   {
+    "clue": "An army of terracotta soldiers guards the tomb of this short-lived dynasty's first emperor",
+    "response": "Qin",
+    "value": 400
+   },
+   {
+    "clue": "Emperors of this dynasty built Beijing's Forbidden City in the early 1400s",
+    "response": "Ming",
+    "value": 800
+   },
+   {
+    "clue": "Envoy Zhang Qian's travels west helped open the Silk Road under this dynasty's Emperor Wu",
+    "response": "Han",
+    "value": 1200
+   },
+   {
+    "clue": "Kublai Khan proclaimed this Mongol-led dynasty in 1271 and built its capital on the site of modern Beijing",
+    "response": "Yuan",
+    "value": 1600
+   },
+   {
+    "clue": "Poets Li Bai and Du Fu flourished under this dynasty, often called China's golden age",
+    "response": "Tang",
+    "value": 2000
+   }
+  ]
+ }
+]

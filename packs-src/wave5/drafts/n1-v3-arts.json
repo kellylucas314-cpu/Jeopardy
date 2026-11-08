@@ -1,0 +1,362 @@
+[
+ {
+  "name": "SCULPT FICTION",
+  "clues": [
+   {
+    "clue": "Michelangelo carved this 17-foot giant-slayer from a marble block others had abandoned",
+    "response": "David (Michelangelo's David)",
+    "value": 200
+   },
+   {
+    "clue": "A farmer on an Aegean island dug up this armless marble goddess in 1820",
+    "response": "the Venus de Milo",
+    "value": 400
+   },
+   {
+    "clue": "Chicagoans nicknamed Anish Kapoor's mirrored 'Cloud Gate' for this kidney-shaped legume",
+    "response": "the Bean",
+    "value": 600
+   },
+   {
+    "clue": "This Romanian's 'Endless Column', nearly 100 feet of stacked iron modules, rises in Târgu Jiu",
+    "response": "Constantin Brancusi (Brâncuși)",
+    "value": 800
+   },
+   {
+    "clue": "Fired from Georgia's Stone Mountain carving in 1925, this sculptor moved on to Mount Rushmore",
+    "response": "Gutzon Borglum",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BUILT DIFFERENT",
+  "clues": [
+   {
+    "clue": "Irish-born architect James Hoban won the 1792 design contest for this Washington mansion",
+    "response": "the White House",
+    "value": 200
+   },
+   {
+    "clue": "Michelangelo designed the giant one that crowns St. Peter's Basilica in Rome",
+    "response": "a dome",
+    "value": 400
+   },
+   {
+    "clue": "Cleveland's rock music hall, a glass tent beside Lake Erie, was designed by this architect",
+    "response": "I. M. Pei",
+    "value": 600
+   },
+   {
+    "clue": "This Catalan architect gave Barcelona's Casa Batlló a roof like a dragon's scaly back",
+    "response": "Antoni Gaudí (Gaudi)",
+    "value": 800
+   },
+   {
+    "clue": "A goldsmith by training, he engineered the herringbone-brick dome of Florence's cathedral",
+    "response": "Filippo Brunelleschi",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BRAVO, BRAVISSIMO",
+  "clues": [
+   {
+    "clue": "Bullfighter Escamillo swaggers through the 'Toreador Song' in this 1875 Bizet opera",
+    "response": "Carmen",
+    "value": 200
+   },
+   {
+    "clue": "Clara's lullaby 'Summertime' opens this Gershwin opera set on Charleston's Catfish Row",
+    "response": "Porgy and Bess",
+    "value": 400
+   },
+   {
+    "clue": "The statue of a murdered Commendatore drags this Mozart opera's title seducer to hell",
+    "response": "Don Giovanni",
+    "value": 600
+   },
+   {
+    "clue": "A jealous clown stabs his wife mid-performance in this Leoncavallo opera",
+    "response": "Pagliacci",
+    "value": 800
+   },
+   {
+    "clue": "Puccini's diva heroine sings 'Vissi d'arte', or 'I lived for art', in this opera set in Rome",
+    "response": "Tosca",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "POINTE TAKEN",
+  "clues": [
+   {
+    "clue": "Toy soldiers battle the Mouse King on Christmas Eve in this Tchaikovsky holiday ballet",
+    "response": "The Nutcracker",
+    "value": 200
+   },
+   {
+    "clue": "One ballerina usually dances both white Odette and black Odile in this Tchaikovsky classic",
+    "response": "Swan Lake",
+    "value": 400
+   },
+   {
+    "clue": "Disney's 'Fantasia' set its dinosaurs stomping to this Stravinsky ballet score",
+    "response": "The Rite of Spring",
+    "value": 600
+   },
+   {
+    "clue": "In 1961 this Kirov star slipped away from his KGB minders at a Paris airport and defected",
+    "response": "Rudolf Nureyev",
+    "value": 800
+   },
+   {
+    "clue": "A peasant girl dead of heartbreak rises among the vengeful ghostly Wilis in this 1841 ballet",
+    "response": "Giselle",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "WHERE THE SHOW CAME FROM",
+  "clues": [
+   {
+    "clue": "Gaston Leroux's novel about a masked genius under the Palais Garnier became this smash",
+    "response": "The Phantom of the Opera",
+    "value": 200
+   },
+   {
+    "clue": "Puccini's 'Madama Butterfly' moved to the Vietnam War in this Boublil and Schönberg musical",
+    "response": "Miss Saigon",
+    "value": 400
+   },
+   {
+    "clue": "James Michener's Pulitzer-winning wartime stories became this 1949 Rodgers and Hammerstein hit",
+    "response": "South Pacific",
+    "value": 600
+   },
+   {
+    "clue": "Christopher Isherwood's tales of 1930s Berlin became this Kander and Ebb musical",
+    "response": "Cabaret",
+    "value": 800
+   },
+   {
+    "clue": "Jerry Herman turned Thornton Wilder's 'The Matchmaker' into this musical about a meddling widow",
+    "response": "Hello, Dolly!",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "NOT THE TITLE ON THE BOOK",
+  "clues": [
+   {
+    "clue": "Rosalind Wiseman's parenting guide 'Queen Bees and Wannabes' inspired this Tina Fey comedy",
+    "response": "Mean Girls",
+    "value": 200
+   },
+   {
+    "clue": "W. P. Kinsella's novel 'Shoeless Joe' became this 1989 Kevin Costner baseball fantasy",
+    "response": "Field of Dreams",
+    "value": 400
+   },
+   {
+    "clue": "A 1961 Ben E. King hit gave its title to the film of Stephen King's novella 'The Body'",
+    "response": "Stand by Me",
+    "value": 600
+   },
+   {
+    "clue": "Dick King-Smith's novel 'The Sheep-Pig' became this 1995 Best Picture nominee",
+    "response": "Babe",
+    "value": 800
+   },
+   {
+    "clue": "Roderick Thorp's novel 'Nothing Lasts Forever' became this 1988 Christmas Eve action film",
+    "response": "Die Hard",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "INK AND CAPES",
+  "clues": [
+   {
+    "clue": "Two Cleveland teens created this hero, who hoists a car on the cover of a 1938 comic",
+    "response": "Superman",
+    "value": 200
+   },
+   {
+    "clue": "His 1962 debut came in Amazing Fantasy #15, the last gasp of a canceled comic",
+    "response": "Spider-Man",
+    "value": 400
+   },
+   {
+    "clue": "Psychologist William Moulton Marston gave this Amazon heroine a lasso that forces the truth",
+    "response": "Wonder Woman",
+    "value": 600
+   },
+   {
+    "clue": "Captain Haddock and a white terrier named Snowy travel the globe with this boy reporter",
+    "response": "Tintin",
+    "value": 800
+   },
+   {
+    "clue": "Art Spiegelman drew Jews as mice and Nazis as cats in this Pulitzer-honored Holocaust memoir",
+    "response": "Maus",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "DRAWN THAT WAY",
+  "clues": [
+   {
+    "clue": "Whistling at a riverboat's wheel in 1928's 'Steamboat Willie,' this rodent became a star",
+    "response": "Mickey Mouse",
+    "value": 200
+   },
+   {
+    "clue": "Mel Blanc voiced this carrot-chomping rabbit, who first asked 'What's up, Doc?' in 1940",
+    "response": "Bugs Bunny",
+    "value": 400
+   },
+   {
+    "clue": "In 'The Wrong Trousers' this clay inventor and his dog chase a penguin jewel thief",
+    "response": "Wallace and Gromit",
+    "value": 600
+   },
+   {
+    "clue": "The cuddly forest spirit Totoro is the emblem of this animation house co-founded by Miyazaki",
+    "response": "Studio Ghibli",
+    "value": 800
+   },
+   {
+    "clue": "Winsor McCay's 1914 cartoon star Gertie, who did tricks on command, was this kind of creature",
+    "response": "a dinosaur",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "FLASH CARDS",
+  "clues": [
+   {
+    "clue": "Paul Simon begged 'Mama, don't take my Kodachrome away', a film made by this company",
+    "response": "Kodak",
+    "value": 200
+   },
+   {
+    "clue": "This photographer's black-and-white views of Half Dome defined the look of the American West",
+    "response": "Ansel Adams",
+    "value": 400
+   },
+   {
+    "clue": "Alfred Eisenstaedt caught a sailor kissing a nurse in this Manhattan spot on V-J Day",
+    "response": "Times Square",
+    "value": 600
+   },
+   {
+    "clue": "Joe Rosenthal's Pulitzer-winning photo shows Marines raising a flag on this island in 1945",
+    "response": "Iwo Jima",
+    "value": 800
+   },
+   {
+    "clue": "Blurry frames of Omaha Beach by this Hungarian-born photographer became the iconic D-Day images",
+    "response": "Robert Capa",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BEFORE THE REMOTE",
+  "clues": [
+   {
+    "clue": "The Professor could build a radio from coconuts but never fix the S.S. Minnow on this sitcom",
+    "response": "Gilligan's Island",
+    "value": 200
+   },
+   {
+    "clue": "Young Ron Howard played Opie, the sheriff's son, on this Mayberry sitcom",
+    "response": "The Andy Griffith Show",
+    "value": 400
+   },
+   {
+    "clue": "A bookworm finally has time to read, then breaks his glasses, on this Rod Serling series",
+    "response": "The Twilight Zone",
+    "value": 600
+   },
+   {
+    "clue": "Corporal Klinger wore dresses hoping for a psychiatric discharge on this Korean War sitcom",
+    "response": "M*A*S*H",
+    "value": 800
+   },
+   {
+    "clue": "Kimble's long hunt for the one-armed man ended in this series' record-setting 1967 finale",
+    "response": "The Fugitive",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "WIRELESS WONDERS",
+  "clues": [
+   {
+    "clue": "This masked rider galloped onto Detroit radio station WXYZ in 1933, and Tonto soon joined him",
+    "response": "The Lone Ranger",
+    "value": 200
+   },
+   {
+    "clue": "This gravel-voiced, howling DJ played himself in George Lucas's 'American Graffiti'",
+    "response": "Wolfman Jack",
+    "value": 400
+   },
+   {
+    "clue": "Before his Martian broadcast, Orson Welles voiced this crime fighter who clouded men's minds",
+    "response": "The Shadow",
+    "value": 600
+   },
+   {
+    "clue": "Garrison Keillor brought listeners the news from Lake Wobegon on this variety show",
+    "response": "A Prairie Home Companion",
+    "value": 800
+   },
+   {
+    "clue": "Billed as 'the Songbird of the South', this singer greeted radio fans with 'Hello, everybody!'",
+    "response": "Kate Smith",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "WET PAINT",
+  "clues": [
+   {
+    "clue": "Leutze's 21-foot-wide canvas of Washington crossing this waterway hangs in New York's Met",
+    "response": "the Delaware River",
+    "value": 200
+   },
+   {
+    "clue": "A green apple hovers before a bowler-hatted man's face in 'The Son of Man' by this Belgian",
+    "response": "René Magritte",
+    "value": 400
+   },
+   {
+    "clue": "Fewer than 40 paintings survive by this Delft master of quiet rooms like 'The Milkmaid'",
+    "response": "Johannes Vermeer",
+    "value": 600
+   },
+   {
+    "clue": "A stretched-out skull slants across the floor in this German's 1533 portrait 'The Ambassadors'",
+    "response": "Hans Holbein (the Younger)",
+    "value": 800
+   },
+   {
+    "clue": "This Frenchman studied corpses in Paris morgues while painting 'The Raft of the Medusa'",
+    "response": "Théodore Géricault",
+    "value": 1000
+   }
+  ]
+ }
+]

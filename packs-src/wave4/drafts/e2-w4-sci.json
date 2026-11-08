@@ -1,0 +1,362 @@
+[
+ {
+  "name": "WHO'S A GOOD DOG?",
+  "clues": [
+   {
+    "clue": "Charlie Brown's dog Snoopy belongs to this floppy-eared breed",
+    "response": "a beagle",
+    "value": 400
+   },
+   {
+    "clue": "Puppies of this spotted breed are born pure white and get their spots later",
+    "response": "a Dalmatian",
+    "value": 800
+   },
+   {
+    "clue": "Fancy haircuts aside, this curly breed was first bred to fetch ducks out of the water",
+    "response": "a poodle",
+    "value": 1200
+   },
+   {
+    "clue": "Monks in the snowy Alps kept this huge breed to find lost travelers",
+    "response": "a St. Bernard",
+    "value": 1600
+   },
+   {
+    "clue": "A droopy-eared one of these dogs became the face of Hush Puppies shoes",
+    "response": "a basset hound",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SUNDAY SUPPER",
+  "clues": [
+   {
+    "clue": "Stuffed and roasted, this big bird is the star of the Thanksgiving table",
+    "response": "a turkey",
+    "value": 400
+   },
+   {
+    "clue": "Yorkshire pudding is traditionally served beside this Sunday joint of meat",
+    "response": "roast beef",
+    "value": 800
+   },
+   {
+    "clue": "Mint jelly is the classic partner for a leg of this meat",
+    "response": "lamb",
+    "value": 1200
+   },
+   {
+    "clue": "The heart, liver and gizzard packed inside a holiday bird are called these",
+    "response": "giblets",
+    "value": 1600
+   },
+   {
+    "clue": "A glazed Easter ham is often studded with these little nail-shaped spices",
+    "response": "cloves",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "WHITE COAT WONDERS",
+  "clues": [
+   {
+    "clue": "His three laws of motion made this Englishman a giant of physics",
+    "response": "Isaac Newton",
+    "value": 400
+   },
+   {
+    "clue": "Before the big 1954 trial, he gave his polio vaccine to himself, his wife and sons",
+    "response": "Jonas Salk",
+    "value": 800
+   },
+   {
+    "clue": "A voyage aboard HMS Beagle led this naturalist to his theory of evolution",
+    "response": "Charles Darwin",
+    "value": 1200
+   },
+   {
+    "clue": "'Trust yourself,' this pediatrician told new parents in his 1946 baby book",
+    "response": "Benjamin Spock (Dr. Spock)",
+    "value": 1600
+   },
+   {
+    "clue": "A Florence museum displays a preserved finger of this Italian astronomer",
+    "response": "Galileo",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "WE ALL SCREAM",
+  "clues": [
+   {
+    "clue": "Chocolate, vanilla and strawberry sit side by side in this ice cream brick",
+    "response": "Neapolitan",
+    "value": 400
+   },
+   {
+    "clue": "A warm, thick chocolate sauce poured over a sundae goes by this two-word name",
+    "response": "hot fudge",
+    "value": 800
+   },
+   {
+    "clue": "Rocky road ice cream mixes chocolate with nuts and chunks of these",
+    "response": "marshmallows",
+    "value": 1200
+   },
+   {
+    "clue": "Baskin-Robbins built its name on offering this many flavors, one per day",
+    "response": "31",
+    "value": 1600
+   },
+   {
+    "clue": "Ben & Jerry's opened its first scoop shop in a gas station in this Vermont city",
+    "response": "Burlington",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "TREE-MENDOUS",
+  "clues": [
+   {
+    "clue": "Squirrels bury the acorns that fall from this sturdy tree",
+    "response": "the oak",
+    "value": 400
+   },
+   {
+    "clue": "Kids call the spinning winged seeds of this tree 'helicopters'",
+    "response": "maple",
+    "value": 800
+   },
+   {
+    "clue": "Fuzzy gray catkins open each spring on the 'pussy' kind of this tree",
+    "response": "the willow",
+    "value": 1200
+   },
+   {
+    "clue": "Washington, D.C.'s famous cherry trees were a 1912 gift from this nation",
+    "response": "Japan",
+    "value": 1600
+   },
+   {
+    "clue": "Its white, papery bark made this tree a favorite for building canoes",
+    "response": "the birch",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "LITTLE ONES",
+  "clues": [
+   {
+    "clue": "Baby bears, lions and tigers all share this short name",
+    "response": "cubs",
+    "value": 400
+   },
+   {
+    "clue": "Bambi was one of these, a baby deer with white spots on its back",
+    "response": "a fawn",
+    "value": 800
+   },
+   {
+    "clue": "Kangaroos, koalas and wombats all call their babies by this name",
+    "response": "a joey",
+    "value": 1200
+   },
+   {
+    "clue": "Mother Goose would call her fluffy yellow baby one of these",
+    "response": "a gosling",
+    "value": 1600
+   },
+   {
+    "clue": "Baby beavers, rabbits and ferrets can all be called by this three-letter name",
+    "response": "a kit",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SEA CREATURE COMFORTS",
+  "clues": [
+   {
+    "clue": "Ringo Starr wished to be 'under the sea in an' this creature's 'garden'",
+    "response": "an octopus",
+    "value": 400
+   },
+   {
+    "clue": "This little fish swims upright and curls its tail around seagrass to hold on",
+    "response": "the seahorse",
+    "value": 800
+   },
+   {
+    "clue": "Just the tongue of this ocean giant can match a full-grown elephant on the scale",
+    "response": "the blue whale",
+    "value": 1200
+   },
+   {
+    "clue": "Blue-blooded and big-clawed, this New England shellfish turns bright red only when cooked",
+    "response": "a lobster",
+    "value": 1600
+   },
+   {
+    "clue": "Named for an old sailing warship, this blue stinger isn't a true jellyfish",
+    "response": "the Portuguese man-of-war",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "THE HOLIDAY TABLE",
+  "clues": [
+   {
+    "clue": "Children leave these and a glass of milk out for Santa",
+    "response": "cookies",
+    "value": 400
+   },
+   {
+    "clue": "A cross is cut into the tops of buns baked for this solemn day in Holy Week",
+    "response": "Good Friday",
+    "value": 800
+   },
+   {
+    "clue": "Hoppin' John, made with black-eyed peas, brings luck when eaten on this day",
+    "response": "New Year's Day",
+    "value": 1200
+   },
+   {
+    "clue": "Crispy potato latkes are fried in oil for this eight-night holiday",
+    "response": "Hanukkah",
+    "value": 1600
+   },
+   {
+    "clue": "Set aflame at British holiday feasts, this steamed dessert lacks its namesake fruit",
+    "response": "plum pudding (Christmas pudding)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "PUSH-BUTTON LIVING",
+  "clues": [
+   {
+    "clue": "Charles Strite's pop-up version of this appliance made breakfast easy",
+    "response": "the toaster",
+    "value": 400
+   },
+   {
+    "clue": "Reddi-wip has squirted whipped cream from this kind of push-button can since 1948",
+    "response": "an aerosol can (aerosol)",
+    "value": 800
+   },
+   {
+    "clue": "Dow's clingy plastic film for covering leftovers reached kitchens in 1953 as this",
+    "response": "Saran Wrap",
+    "value": 1200
+   },
+   {
+    "clue": "3M engineer Richard Drew gave us this clear, sticky roll in 1930",
+    "response": "Scotch tape",
+    "value": 1600
+   },
+   {
+    "clue": "In 1963 Bell's push-button phones, sold under this name, began replacing rotary dials",
+    "response": "Touch-Tone",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "PROVERBIAL PANTRY",
+  "clues": [
+   {
+    "clue": "'Don't cry over spilled' this, as Mother used to say",
+    "response": "milk",
+    "value": 400
+   },
+   {
+    "clue": "The old saying warns that too many cooks will spoil this soupy dish",
+    "response": "the broth",
+    "value": 800
+   },
+   {
+    "clue": "'You can't have your cake and' do this too, so the old saying goes",
+    "response": "eat it",
+    "value": 1200
+   },
+   {
+    "clue": "'The proof of the pudding is in' this, the saying goes",
+    "response": "the eating",
+    "value": 1600
+   },
+   {
+    "clue": "'Half a loaf is better than' this, so take what you can get",
+    "response": "none (no bread)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "WEATHER-WISE",
+  "clues": [
+   {
+    "clue": "Irish legend puts a leprechaun's pot of gold where this colorful arc touches down",
+    "response": "a rainbow",
+    "value": 400
+   },
+   {
+    "clue": "Contrary to the saying, it strikes the Empire State Building about two dozen times a year",
+    "response": "lightning",
+    "value": 800
+   },
+   {
+    "clue": "Ben Franklin flew one of these in a storm to show lightning is electricity",
+    "response": "a kite",
+    "value": 1200
+   },
+   {
+    "clue": "Hurricanes in the western Pacific near Asia go by this name",
+    "response": "typhoons",
+    "value": 1600
+   },
+   {
+    "clue": "Every five seconds between flash and thunder puts the storm about one of these away",
+    "response": "miles",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "A PINCH OF THIS",
+  "clues": [
+   {
+    "clue": "Snickerdoodles get rolled in sugar mixed with this sweet spice",
+    "response": "cinnamon",
+    "value": 400
+   },
+   {
+    "clue": "This feathery herb lends its name to a favorite kind of pickle",
+    "response": "dill",
+    "value": 800
+   },
+   {
+    "clue": "Grate a little of this brown seed over your holiday eggnog",
+    "response": "nutmeg",
+    "value": 1200
+   },
+   {
+    "clue": "Deli rye bread is often flecked with the little seeds of this spice",
+    "response": "caraway",
+    "value": 1600
+   },
+   {
+    "clue": "Curry powder gets its sunny yellow color from this ground root",
+    "response": "turmeric",
+    "value": 2000
+   }
+  ]
+ }
+]

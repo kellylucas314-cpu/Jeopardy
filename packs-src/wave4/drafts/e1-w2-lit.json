@@ -1,0 +1,362 @@
+[
+  {
+    "name": "BOYS BETWEEN THE COVERS",
+    "clues": [
+      {
+        "clue": "He and Becky Thatcher get lost in a cave in Mark Twain's 1876 novel",
+        "response": "Tom Sawyer",
+        "value": 200
+      },
+      {
+        "clue": "This wooden puppet's nose grows a little longer with every fib",
+        "response": "Pinocchio",
+        "value": 400
+      },
+      {
+        "clue": "In 'Treasure Island,' this cabin boy sails off with Long John Silver",
+        "response": "Jim Hawkins",
+        "value": 600
+      },
+      {
+        "clue": "He fakes his own death, then rafts down the Mississippi with Jim",
+        "response": "Huckleberry Finn (Huck Finn)",
+        "value": 800
+      },
+      {
+        "clue": "Dickens' orphan in 'Great Expectations,' he meets a convict in a graveyard",
+        "response": "Pip",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "POOR RICHARD SAYS",
+    "clues": [
+      {
+        "clue": "'God helps them that help' this, Poor Richard told colonial readers",
+        "response": "themselves",
+        "value": 200
+      },
+      {
+        "clue": "'Fish and' these 'stink in three days,' Ben Franklin warned the hosts of his day",
+        "response": "visitors (guests)",
+        "value": 400
+      },
+      {
+        "clue": "Franklin's yearly 'Poor Richard' booklet of weather and wit was this kind",
+        "response": "an almanac",
+        "value": 600
+      },
+      {
+        "clue": "'Little strokes fell great' these trees, Poor Richard counseled patience",
+        "response": "oaks",
+        "value": 800
+      },
+      {
+        "clue": "'Well done is better than well' this, Franklin advised readers",
+        "response": "said",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "FAIRY TALE PROP ROOM",
+    "clues": [
+      {
+        "clue": "Snow White falls into a deep sleep after one bite of this poisoned fruit",
+        "response": "an apple",
+        "value": 200
+      },
+      {
+        "clue": "Hansel and Gretel nibble at a witch's house, often said to be built of this",
+        "response": "gingerbread",
+        "value": 400
+      },
+      {
+        "clue": "Up the beanstalk, Jack carries off the giant's hen that lays these",
+        "response": "golden eggs",
+        "value": 600
+      },
+      {
+        "clue": "Sleeping Beauty pricks her finger on this pointy part of a spinning wheel",
+        "response": "a spindle",
+        "value": 800
+      },
+      {
+        "clue": "A frog fishes this shiny lost plaything out of a well for a princess",
+        "response": "a golden ball (ball)",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "COUNTING BY THE GOOD BOOK",
+    "clues": [
+      {
+        "clue": "Rain fell on Noah's ark for this many days and nights",
+        "response": "40 (forty)",
+        "value": 200
+      },
+      {
+        "clue": "God made the world in this many days, then rested on the seventh",
+        "response": "6 (six)",
+        "value": 400
+      },
+      {
+        "clue": "Jacob had this many sons, fathers of the tribes of Israel",
+        "response": "12 (twelve)",
+        "value": 600
+      },
+      {
+        "clue": "With five loaves and this many fish, Jesus fed a crowd of 5,000",
+        "response": "2 (two)",
+        "value": 800
+      },
+      {
+        "clue": "Noah's grandfather Methuselah outlived everyone in the Bible, reaching this age",
+        "response": "969",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "IT STARTS WITH 'BOOK'",
+    "clues": [
+      {
+        "clue": "Slip this between the pages so you won't lose your place",
+        "response": "a bookmark",
+        "value": 200
+      },
+      {
+        "clue": "It's an avid reader, or a little insect larva that munches pages",
+        "response": "a bookworm",
+        "value": 400
+      },
+      {
+        "clue": "A heavy matched pair of these keeps a row of novels standing up",
+        "response": "bookends",
+        "value": 600
+      },
+      {
+        "clue": "This word for an accountant has three double letters in a row",
+        "response": "a bookkeeper",
+        "value": 800
+      },
+      {
+        "clue": "Small rural towns used to cheer when this library on wheels pulled in",
+        "response": "a bookmobile",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "HOLIDAY READING",
+    "clues": [
+      {
+        "clue": "This Seuss character's small heart grew three sizes one Christmas Day",
+        "response": "the Grinch",
+        "value": 200
+      },
+      {
+        "clue": "In 'A Visit from St. Nicholas,' the reindeer roll call ends with Donder and him",
+        "response": "Blitzen",
+        "value": 400
+      },
+      {
+        "clue": "Della sells her hair to buy Jim a watch chain in this O. Henry story",
+        "response": "'The Gift of the Magi'",
+        "value": 600
+      },
+      {
+        "clue": "A reformed Scrooge sends a prize turkey to this clerk's family on Christmas morning",
+        "response": "Bob Cratchit",
+        "value": 800
+      },
+      {
+        "clue": "'Yes, Virginia, there is a Santa Claus' ran in 1897 in this Manhattan daily",
+        "response": "The Sun (The New York Sun)",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "GREEK GODS, ROMAN NAMES",
+    "clues": [
+      {
+        "clue": "Eros, the winged little archer of love, goes by this name in Rome",
+        "response": "Cupid",
+        "value": 200
+      },
+      {
+        "clue": "Aphrodite, born from the sea foam, was this goddess to the Romans",
+        "response": "Venus",
+        "value": 400
+      },
+      {
+        "clue": "Poseidon's trident passed to this Roman god of the sea",
+        "response": "Neptune",
+        "value": 600
+      },
+      {
+        "clue": "Hermes, the speedy messenger in winged sandals, was this Roman god",
+        "response": "Mercury",
+        "value": 800
+      },
+      {
+        "clue": "Hephaestus, the blacksmith of the gods, was called this in Rome",
+        "response": "Vulcan",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "INITIALLY SPEAKING",
+    "clues": [
+      {
+        "clue": "Added below your signature in a letter, P.S. stands for this",
+        "response": "postscript",
+        "value": 200
+      },
+      {
+        "clue": "A soldier who's gone AWOL is this, spelled out in four words",
+        "response": "absent without leave",
+        "value": 400
+      },
+      {
+        "clue": "Carved on many an old tombstone, R.I.P. stands for these three words",
+        "response": "rest in peace",
+        "value": 600
+      },
+      {
+        "clue": "'E.g.' abbreviates the Latin 'exempli gratia,' meaning this",
+        "response": "for example",
+        "value": 800
+      },
+      {
+        "clue": "Times before noon get 'a.m.,' short for this Latin phrase",
+        "response": "ante meridiem",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "SEUSS ON THE LOOSE",
+    "clues": [
+      {
+        "clue": "Thing One and Thing Two tag along with this tall-hatted rainy-day troublemaker",
+        "response": "The Cat in the Hat",
+        "value": 200
+      },
+      {
+        "clue": "'I speak for the trees,' says this small, mustached Seuss creature",
+        "response": "The Lorax",
+        "value": 400
+      },
+      {
+        "clue": "This faithful elephant protects a speck of dust full of tiny Whos",
+        "response": "Horton",
+        "value": 600
+      },
+      {
+        "clue": "Some have stars upon thars and some don't in this Seuss tale",
+        "response": "The Sneetches",
+        "value": 800
+      },
+      {
+        "clue": "Dr. Seuss won a bet by writing this book with only 50 different words",
+        "response": "Green Eggs and Ham",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "MOTHER GOOSE'S PANTRY",
+    "clues": [
+      {
+        "clue": "Little Miss Muffet was eating this lumpy dairy snack when the spider came",
+        "response": "curds and whey",
+        "value": 200
+      },
+      {
+        "clue": "The Queen of Hearts baked these, all on a summer's day",
+        "response": "tarts",
+        "value": 400
+      },
+      {
+        "clue": "'One a penny, two a penny,' street sellers cried of these Easter treats",
+        "response": "hot cross buns",
+        "value": 600
+      },
+      {
+        "clue": "Polly put the kettle on, so they'll all have this, the rhyme promises",
+        "response": "tea",
+        "value": 800
+      },
+      {
+        "clue": "Simple Simon met this traveling tradesman on his way to the fair",
+        "response": "a pieman",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "TWIST YOUR TONGUE",
+    "clues": [
+      {
+        "clue": "'How much wood would a' this burrowing critter 'chuck' if he could?",
+        "response": "a woodchuck",
+        "value": 200
+      },
+      {
+        "clue": "Betty Botter bought some butter, 'but,' she said, 'the butter's' this",
+        "response": "bitter",
+        "value": 400
+      },
+      {
+        "clue": "'She sells' these 'by the seashore,' if you can say it fast",
+        "response": "seashells",
+        "value": 600
+      },
+      {
+        "clue": "Fuzzy Wuzzy was a bear, but Fuzzy Wuzzy had none of this",
+        "response": "hair",
+        "value": 800
+      },
+      {
+        "clue": "Try saying 'rubber baby buggy' these five times fast",
+        "response": "bumpers",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "READ IT BEFORE YOU SAW IT",
+    "clues": [
+      {
+        "clue": "Peter Benchley's 1974 novel about a great white shark stalking a Long Island resort",
+        "response": "Jaws",
+        "value": 200
+      },
+      {
+        "clue": "Ryan O'Neal and Ali MacGraw wept through the 1970 film of this Erich Segal bestseller",
+        "response": "Love Story",
+        "value": 400
+      },
+      {
+        "clue": "Winston Groom's 1986 novel follows a simple Alabama man through history",
+        "response": "Forrest Gump",
+        "value": 600
+      },
+      {
+        "clue": "Maria von Trapp's family memoir inspired this Rodgers and Hammerstein show",
+        "response": "The Sound of Music",
+        "value": 800
+      },
+      {
+        "clue": "Felix Salten's 1923 novel about a young deer became a 1942 Disney classic",
+        "response": "Bambi",
+        "value": 1000
+      }
+    ]
+  }
+]

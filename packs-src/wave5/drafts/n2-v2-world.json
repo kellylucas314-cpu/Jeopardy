@@ -1,0 +1,362 @@
+[
+ {
+  "name": "THE RUSSIAN SHELF",
+  "clues": [
+   {
+    "clue": "Tolstoy opens this epic at a St. Petersburg soirée in 1805, with the guests chatting in French",
+    "response": "War and Peace",
+    "value": 400
+   },
+   {
+    "clue": "Smuggled out of the USSR, Pasternak's novel of a poet-physician first appeared in Italian in 1957",
+    "response": "Doctor Zhivago",
+    "value": 800
+   },
+   {
+    "clue": "A St. Petersburg official's nose runs off and struts about town in a satire by this author of 'The Overcoat'",
+    "response": "Nikolai Gogol",
+    "value": 1200
+   },
+   {
+    "clue": "Racing a publisher's deadline, he dictated 'The Gambler' in under a month to the stenographer he later wed",
+    "response": "Fyodor Dostoevsky (Dostoyevsky)",
+    "value": 1600
+   },
+   {
+    "clue": "'One Day in the Life of Ivan Denisovich' drew on this writer's own years in a Soviet labor camp",
+    "response": "Aleksandr Solzhenitsyn",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "LAND OF THE RISING FUN",
+  "clues": [
+   {
+    "clue": "For over a millennium Japan's emperors lived in this city of temples, later struck off the A-bomb list",
+    "response": "Kyoto",
+    "value": 400
+   },
+   {
+    "clue": "Founded by a woman, this flamboyant theater form has cast only men, even in female roles, since 1629",
+    "response": "kabuki",
+    "value": 800
+   },
+   {
+    "clue": "His haiku of a frog leaping into an old pond made this 17th-century poet immortal",
+    "response": "Matsuo Basho (Bashō)",
+    "value": 1200
+   },
+   {
+    "clue": "Nitobe Inazo's English-language book introduced Western readers to this samurai code of honor",
+    "response": "bushido",
+    "value": 1600
+   },
+   {
+    "clue": "Only in 2008 did Japan's parliament formally recognize this Hokkaido people as indigenous",
+    "response": "the Ainu",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "CROWNS OF AFRICA",
+  "clues": [
+   {
+    "clue": "A 1375 Catalan map shows this Mali emperor on his throne, holding up a gold nugget",
+    "response": "Mansa Musa",
+    "value": 400
+   },
+   {
+    "clue": "This early-19th-century king forged the Zulu into a feared military power in southern Africa",
+    "response": "Shaka",
+    "value": 800
+   },
+   {
+    "clue": "Rastafarians revere this Ethiopian emperor, who was known as Ras Tafari before his coronation",
+    "response": "Haile Selassie",
+    "value": 1200
+   },
+   {
+    "clue": "In the 1820s Moshoeshoe I forged the Basotho into a nation, now this mountain kingdom ringed by South Africa",
+    "response": "Lesotho",
+    "value": 1600
+   },
+   {
+    "clue": "With Empress Taytu, this emperor founded Addis Ababa as Ethiopia's new capital in 1886",
+    "response": "Menelik II (Menelik)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "LIBERATORS & LAST EMPERORS",
+  "clues": [
+   {
+    "clue": "Born in Caracas, this general crossed the Andes in 1819 to beat the Spanish at Boyacá",
+    "response": "Simón Bolívar",
+    "value": 400
+   },
+   {
+    "clue": "This Aztec emperor welcomed Hernán Cortés to Tenochtitlan in 1519 and was dead within a year",
+    "response": "Montezuma (Moctezuma II)",
+    "value": 800
+   },
+   {
+    "clue": "Brazil's monarchy ended with an 1889 coup that exiled this emperor, who had reigned since age 5",
+    "response": "Pedro II (Dom Pedro II)",
+    "value": 1200
+   },
+   {
+    "clue": "A Zapotec who rose to lead Mexico, he defeated the French-backed emperor Maximilian in 1867",
+    "response": "Benito Juárez",
+    "value": 1600
+   },
+   {
+    "clue": "Pizarro took a room filled with gold as ransom for this Inca emperor, then executed him anyway",
+    "response": "Atahualpa (Atahuallpa)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "PERSIAN RUGGED VERSE",
+  "clues": [
+   {
+    "clue": "The whirling dervishes of the Mevlevi order follow the teachings of this 13th-century poet",
+    "response": "Rumi",
+    "value": 400
+   },
+   {
+    "clue": "Before his quatrains won fame abroad, this Persian astronomer helped devise the precise Jalali calendar",
+    "response": "Omar Khayyam",
+    "value": 800
+   },
+   {
+    "clue": "Iranians open a book by this beloved poet of Shiraz at random to tell their fortunes",
+    "response": "Hafez (Hafiz)",
+    "value": 1200
+   },
+   {
+    "clue": "This poet wrote his 'Book of Kings' in nearly pure Persian, with very few borrowed Arabic words",
+    "response": "Ferdowsi (Firdausi)",
+    "value": 1600
+   },
+   {
+    "clue": "In this poet's 'The Conference of the Birds', a flock flies off in search of the Simurgh",
+    "response": "Attar (Farid ud-Din Attar)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "AFTER DARK IN BAGHDAD",
+  "clues": [
+   {
+    "clue": "The vizier's daughter, she volunteers to wed a king who kills each new bride after one night",
+    "response": "Scheherazade (Shahrazad)",
+    "value": 400
+   },
+   {
+    "clue": "A clever slave girl named Morgiana foils the forty thieves in this woodcutter's tale",
+    "response": "Ali Baba",
+    "value": 800
+   },
+   {
+    "clue": "Setting out from Basra, this merchant of Baghdad survives seven perilous voyages",
+    "response": "Sinbad (Sindbad)",
+    "value": 1200
+   },
+   {
+    "clue": "In the original 'Nights' tale, Aladdin's hometown lies in this far-off country",
+    "response": "China",
+    "value": 1600
+   },
+   {
+    "clue": "This real Abbasid caliph often roams Baghdad's streets in disguise in the 'Nights'",
+    "response": "Harun al-Rashid",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "EAST OF THE ELBE",
+  "clues": [
+   {
+    "clue": "Opened in 1896, the oldest subway line on the European continent runs beneath this Hungarian capital",
+    "response": "Budapest",
+    "value": 400
+   },
+   {
+    "clue": "An astronomical clock installed in 1410 still ticks on the Old Town Hall in this capital",
+    "response": "Prague",
+    "value": 800
+   },
+   {
+    "clue": "Legend says a dragon lived in a cave beneath Wawel Castle in this former Polish capital",
+    "response": "Kraków (Cracow)",
+    "value": 1200
+   },
+   {
+    "clue": "'Game of Thrones' shot many of its King's Landing scenes in this Adriatic port in Croatia",
+    "response": "Dubrovnik",
+    "value": 1600
+   },
+   {
+    "clue": "German merchants knew this Hanseatic port as Reval, and it became Estonia's capital",
+    "response": "Tallinn",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "MIDDLE KINGDOM MATTERS",
+  "clues": [
+   {
+    "clue": "Jesuit missionaries Latinized 'Kong Fuzi', meaning 'Master Kong', into this name",
+    "response": "Confucius",
+    "value": 400
+   },
+   {
+    "clue": "'All warfare is based on deception', advises this general's 'The Art of War'",
+    "response": "Sun Tzu (Sunzi)",
+    "value": 800
+   },
+   {
+    "clue": "Only about one in ten of the soldiers who set out on this 1934-35 Red Army retreat reached its end",
+    "response": "the Long March",
+    "value": 1200
+   },
+   {
+    "clue": "China's first emperor, he is said to have ordered books burned and scholars buried alive",
+    "response": "Qin Shi Huang (Shi Huangdi)",
+    "value": 1600
+   },
+   {
+    "clue": "Shang kings had these cracked with heat to foretell events, leaving China's earliest known writing",
+    "response": "oracle bones",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "LATIN LETTERS",
+  "clues": [
+   {
+    "clue": "In this Paulo Coelho novel, the shepherd Santiago treks to Egypt's pyramids in search of treasure",
+    "response": "The Alchemist",
+    "value": 400
+   },
+   {
+    "clue": "Born Ricardo Reyes, this Chilean poet is thought to have borrowed his pen name from a Czech writer",
+    "response": "Pablo Neruda",
+    "value": 800
+   },
+   {
+    "clue": "This writer of 'The Library of Babel' ran Argentina's National Library even as he went blind",
+    "response": "Jorge Luis Borges",
+    "value": 1200
+   },
+   {
+    "clue": "This 17th-century Mexican nun defended a woman's right to learn in her 'Reply to Sister Philotea'",
+    "response": "Sor Juana Inés de la Cruz",
+    "value": 1600
+   },
+   {
+    "clue": "'The Labyrinth of Solitude' examines Mexican identity, written by this 1990 Nobel laureate",
+    "response": "Octavio Paz",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "WORD TRAVELERS",
+  "clues": [
+   {
+    "clue": "Arabic 'makhazin', meaning storehouses, gave English this word for a glossy periodical",
+    "response": "magazine",
+    "value": 400
+   },
+   {
+    "clue": "From Persian words for 'leg' and 'garment', these sleep clothes reached English via British India",
+    "response": "pajamas",
+    "value": 800
+   },
+   {
+    "clue": "Persian 'qand', meaning cane sugar, is the source of this sweet English word",
+    "response": "candy",
+    "value": 1200
+   },
+   {
+    "clue": "Arabic 'sifr', meaning 'empty', gave English both 'cipher' and this number word",
+    "response": "zero",
+    "value": 1600
+   },
+   {
+    "clue": "Captain Cook's journals introduced English to this Tongan word for something forbidden",
+    "response": "taboo",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SUBCONTINENTAL DRIFT",
+  "clues": [
+   {
+    "clue": "Called East Pakistan until 1971, it won independence in a war that year",
+    "response": "Bangladesh",
+    "value": 400
+   },
+   {
+    "clue": "The 24-spoked wheel at the center of India's flag is named for this Mauryan emperor",
+    "response": "Ashoka (Asoka)",
+    "value": 800
+   },
+   {
+    "clue": "This Mughal emperor, a grandson of Babur, hosted debates among Hindus, Muslims, Jains and Christians",
+    "response": "Akbar (Akbar the Great)",
+    "value": 1200
+   },
+   {
+    "clue": "A relic said to be the Buddha's tooth draws pilgrims to Kandy, the last royal capital of this island nation",
+    "response": "Sri Lanka",
+    "value": 1600
+   },
+   {
+    "clue": "Called the Tiger of Mysore, he died defending his capital against the British in 1799",
+    "response": "Tipu Sultan (Tippu Sultan)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "MONSOON SEASON",
+  "clues": [
+   {
+    "clue": "Expelled from Malaysia in 1965, this island at the Malay Peninsula's tip became a city-state",
+    "response": "Singapore",
+    "value": 400
+   },
+   {
+    "clue": "Eugène Dubois unearthed a famous Homo erectus fossil in 1891 on this island, Indonesia's most populous",
+    "response": "Java",
+    "value": 800
+   },
+   {
+    "clue": "Most people on this island are Hindu, unlike the mostly Muslim rest of Indonesia",
+    "response": "Bali",
+    "value": 1200
+   },
+   {
+    "clue": "Thousands of limestone islets rise from this Vietnamese bay whose name means 'descending dragon'",
+    "response": "Ha Long Bay (Halong Bay)",
+    "value": 1600
+   },
+   {
+    "clue": "The Istana Nurul Iman, said to be the world's largest residential palace, houses this oil-rich nation's sultan",
+    "response": "Brunei",
+    "value": 2000
+   }
+  ]
+ }
+]

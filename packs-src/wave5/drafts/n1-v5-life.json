@@ -1,0 +1,362 @@
+[
+  {
+    "name": "A WHEEL GOOD TIME",
+    "clues": [
+      {
+        "clue": "Caprese salad layers tomato slices and basil leaves with this soft, fresh Italian cheese",
+        "response": "mozzarella",
+        "value": 200
+      },
+      {
+        "clue": "This soft French cheese with a bloomy white rind shares its name with a region east of Paris",
+        "response": "Brie",
+        "value": 400
+      },
+      {
+        "clue": "Bubbles of carbon dioxide from busy bacteria blow the cherry-sized holes in this Swiss cheese",
+        "response": "Emmental (Emmentaler)",
+        "value": 600
+      },
+      {
+        "clue": "Curdled with lemon juice, not rennet, this firm Indian cheese holds its shape in saag",
+        "response": "paneer",
+        "value": 800
+      },
+      {
+        "clue": "Swiss fondue's classic 'moitié-moitié' blends Vacherin Fribourgeois with this cheese",
+        "response": "Gruyère (Gruyere)",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "HOW THE GAME BEGAN",
+    "clues": [
+      {
+        "clue": "Legend says schoolboy William Webb Ellis invented this sport by running with the ball in 1823",
+        "response": "rugby",
+        "value": 200
+      },
+      {
+        "clue": "A Gloucestershire estate of the Dukes of Beaufort lent its name to this racket sport",
+        "response": "badminton",
+        "value": 400
+      },
+      {
+        "clue": "French observers gave its name to this stick-and-ball game played by the Haudenosaunee",
+        "response": "lacrosse",
+        "value": 600
+      },
+      {
+        "clue": "William G. Morgan first called his 1895 Holyoke, Massachusetts, invention 'Mintonette'",
+        "response": "volleyball",
+        "value": 800
+      },
+      {
+        "clue": "British army officers stationed in India are credited with devising this cue sport in the 1870s",
+        "response": "snooker",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "NAMEPLATE SPECIAL",
+    "clues": [
+      {
+        "clue": "Named for a Serbian-American inventor, this electric carmaker rolled out its first Roadster in 2008",
+        "response": "Tesla",
+        "value": 200
+      },
+      {
+        "clue": "Emil Jellinek gave his daughter's first name to this Daimler car brand, first raced in 1901",
+        "response": "Mercedes (Mercedes-Benz)",
+        "value": 400
+      },
+      {
+        "clue": "Latin for 'I roll', this Swedish carmaker's name began as a ball-bearing trademark",
+        "response": "Volvo",
+        "value": 600
+      },
+      {
+        "clue": "Miura, Diablo, Murciélago: this Italian carmaker named its models after fighting bulls",
+        "response": "Lamborghini",
+        "value": 800
+      },
+      {
+        "clue": "Named partly for founder Jujiro Matsuda, this carmaker also honors a Zoroastrian god of wisdom",
+        "response": "Mazda",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "LOST IN PASTA TRANSLATION",
+    "clues": [
+      {
+        "clue": "From the Italian for 'little strings', this pasta also named a genre of Italian-made Westerns",
+        "response": "spaghetti",
+        "value": 200
+      },
+      {
+        "clue": "Italian for 'quills' or 'pens', this short tube pasta has its ends cut on the diagonal",
+        "response": "penne",
+        "value": 400
+      },
+      {
+        "clue": "Alfredo sauce famously coats this flat pasta whose name means 'little ribbons'",
+        "response": "fettuccine",
+        "value": 600
+      },
+      {
+        "clue": "Flat and narrow, this pasta often tossed with clam sauce is named for 'little tongues'",
+        "response": "linguine",
+        "value": 800
+      },
+      {
+        "clue": "Puglia's signature pasta, often served with broccoli rabe, is named for 'little ears'",
+        "response": "orecchiette",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "PASSPORT PROTOCOL",
+    "clues": [
+      {
+        "clue": "Palms pressed together with a slight bow, 'namaste' is a classic greeting in this country",
+        "response": "India (Nepal)",
+        "value": 200
+      },
+      {
+        "clue": "It's rude in Thailand to touch someone on this part of the body, seen as the most sacred",
+        "response": "the head",
+        "value": 400
+      },
+      {
+        "clue": "In East Asia it's taboo to stand these upright in a bowl of rice, as that evokes funeral incense",
+        "response": "chopsticks",
+        "value": 600
+      },
+      {
+        "clue": "A daily break called 'fika' brings coffee and cinnamon buns to workplaces across this country",
+        "response": "Sweden",
+        "value": 800
+      },
+      {
+        "clue": "Japanese etiquette says never to scribble on these or stuff them in a back pocket",
+        "response": "business cards (meishi)",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "SHAKER HEIGHTS",
+    "clues": [
+      {
+        "clue": "Puerto Rico named this blend of rum, pineapple juice and coconut cream its national drink",
+        "response": "a piña colada (pina colada)",
+        "value": 200
+      },
+      {
+        "clue": "A celery stalk often garnishes this vodka and tomato juice brunch favorite",
+        "response": "a Bloody Mary",
+        "value": 400
+      },
+      {
+        "clue": "Gin, Campari and sweet vermouth in equal parts make this cocktail tied to a Florentine count",
+        "response": "a Negroni",
+        "value": 600
+      },
+      {
+        "clue": "Trader Vic claimed this rum drink, its name from the Tahitian for 'good'",
+        "response": "a Mai Tai",
+        "value": 800
+      },
+      {
+        "clue": "A frothy cap of egg white tops this brandy cocktail claimed by both Peru and Chile",
+        "response": "a pisco sour",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "GAME NIGHT DEEP CUTS",
+    "clues": [
+      {
+        "clue": "A one-minute sand timer runs while you sketch for your teammates in this guessing game",
+        "response": "Pictionary",
+        "value": 200
+      },
+      {
+        "clue": "Shake 16 lettered dice into a grid, then race a three-minute timer to find words in this game",
+        "response": "Boggle",
+        "value": 400
+      },
+      {
+        "clue": "British murder victim Dr. Black became Mr. Boddy when this game crossed the Atlantic",
+        "response": "Clue (Cluedo)",
+        "value": 600
+      },
+      {
+        "clue": "Players collect colored train cards to claim railway routes between cities in this 2004 game",
+        "response": "Ticket to Ride",
+        "value": 800
+      },
+      {
+        "clue": "A 'river' splits the board and each general must stay inside his palace in this centuries-old game",
+        "response": "xiangqi (Chinese chess)",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "RUNWAY ORIGINS",
+    "clues": [
+      {
+        "clue": "Marilyn Monroe said she wore only a few drops of this perfume to bed",
+        "response": "Chanel No. 5",
+        "value": 200
+      },
+      {
+        "clue": "This French tennis star's nickname, 'the Crocodile', became the logo on his own polo shirts",
+        "response": "René Lacoste (Lacoste)",
+        "value": 400
+      },
+      {
+        "clue": "Her jersey wrap dress of 1974 made this Belgian-born designer a household name",
+        "response": "Diane von Furstenberg",
+        "value": 600
+      },
+      {
+        "clue": "Red soles on his stilettos began, he said, when he grabbed an assistant's red nail polish",
+        "response": "Christian Louboutin",
+        "value": 800
+      },
+      {
+        "clue": "London's Savoy Hotel, where its founder once worked, inspired this Florentine house's luggage",
+        "response": "Gucci",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "ARTS AND CRAFTINESS",
+    "clues": [
+      {
+        "clue": "Its name is French for 'chewed paper', and it's built up from newspaper strips dipped in paste",
+        "response": "papier-mâché (papier-mache)",
+        "value": 200
+      },
+      {
+        "clue": "From the French for 'cutting out', this craft seals paper cutouts onto objects under varnish",
+        "response": "decoupage",
+        "value": 400
+      },
+      {
+        "clue": "Hot wax resists the dye in this fabric art made famous on the island of Java",
+        "response": "batik",
+        "value": 600
+      },
+      {
+        "clue": "Bored whalers etched and inked whale teeth and bone to create this folk art",
+        "response": "scrimshaw",
+        "value": 800
+      },
+      {
+        "clue": "Using a small hand shuttle, crafters tie knots and loops to make this durable lace",
+        "response": "tatting",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "THE GREEN SCENE",
+    "clues": [
+      {
+        "clue": "Its Japanese name means 'tray planting,' and its little potted trees can live for centuries",
+        "response": "bonsai",
+        "value": 200
+      },
+      {
+        "clue": "Gardeners 'harden off' these young plants by setting them outdoors a little longer each day",
+        "response": "seedlings",
+        "value": 400
+      },
+      {
+        "clue": "Edward Scissorhands showed off this art of clipping hedges into dinosaurs and swans",
+        "response": "topiary",
+        "value": 600
+      },
+      {
+        "clue": "Corn, beans and squash, planted together by many Native American farmers, are called this trio",
+        "response": "the Three Sisters",
+        "value": 800
+      },
+      {
+        "clue": "Pear trees trained flat against a wall in a candelabra shape are an example of this technique",
+        "response": "espalier",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "RHYME FOR DINNER",
+    "clues": [
+      {
+        "clue": "Pilfering the tart green citrus for a Key West pie is this rhyming offense",
+        "response": "a lime crime",
+        "value": 200
+      },
+      {
+        "clue": "The county-fair official who decides which squares of chocolate candy win a ribbon",
+        "response": "a fudge judge",
+        "value": 400
+      },
+      {
+        "clue": "A sacred pilgrimage site devoted to cabernet, merlot and pinot noir",
+        "response": "a wine shrine",
+        "value": 600
+      },
+      {
+        "clue": "A sideways shuffling dance step honoring a prized and pricey underground fungus",
+        "response": "a truffle shuffle",
+        "value": 800
+      },
+      {
+        "clue": "A military unit of about 30 soldiers made up entirely of coconut cookies",
+        "response": "a macaroon platoon",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "THE WORD ON THE FIELD",
+    "clues": [
+      {
+        "clue": "Oxford student slang shortened 'association' football into this word that Americans favor",
+        "response": "soccer",
+        "value": 200
+      },
+      {
+        "clue": "Three goals by one player earn this name, from a cricket bowler once rewarded with headwear",
+        "response": "a hat trick",
+        "value": 400
+      },
+      {
+        "clue": "Irish riders racing from church tower to church tower gave this obstacle race its name",
+        "response": "a steeplechase",
+        "value": 600
+      },
+      {
+        "clue": "Named from the Greek for 'naked', this training hall saw ancient athletes exercise unclothed",
+        "response": "a gymnasium",
+        "value": 800
+      },
+      {
+        "clue": "A borrowing of the French 'cadet', or younger son, this word names a golfer's bag carrier",
+        "response": "a caddie",
+        "value": 1000
+      }
+    ]
+  }
+]

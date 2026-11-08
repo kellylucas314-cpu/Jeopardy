@@ -1,0 +1,362 @@
+[
+ {
+  "name": "OPUS ONE-LINERS",
+  "clues": [
+   {
+    "clue": "Strings play the boy and three French horns play the predator in this 1936 Prokofiev tale",
+    "response": "Peter and the Wolf",
+    "value": 400
+   },
+   {
+    "clue": "A clarinet's wailing upward glissando opens this 1924 Gershwin showpiece",
+    "response": "Rhapsody in Blue",
+    "value": 800
+   },
+   {
+    "clue": "Kubrick's '2001' opens with the sunrise fanfare of this Richard Strauss tone poem",
+    "response": "Also sprach Zarathustra",
+    "value": 1200
+   },
+   {
+    "clue": "Sibelius's patriotic tone poem was played under decoy titles to slip past czarist censors",
+    "response": "Finlandia",
+    "value": 1600
+   },
+   {
+    "clue": "Two mountain springs merge into a river flowing through Prague in this Smetana tone poem",
+    "response": "The Moldau (Vltava)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "BLUEPRINT BIGWIGS",
+  "clues": [
+   {
+    "clue": "After London's Great Fire, this astronomer-turned-architect rebuilt dozens of its churches",
+    "response": "Christopher Wren",
+    "value": 400
+   },
+   {
+    "clue": "This Finnish-American, son of architect Eliel, designed Dulles Airport's swooping terminal",
+    "response": "Eero Saarinen",
+    "value": 800
+   },
+   {
+    "clue": "This visionary inventor's geodesic dome housed the U.S. pavilion at Montreal's Expo 67",
+    "response": "Buckminster Fuller",
+    "value": 1200
+   },
+   {
+    "clue": "This Brazilian's swooping concrete curves define the government buildings of Brasília",
+    "response": "Oscar Niemeyer",
+    "value": 1600
+   },
+   {
+    "clue": "With Richard Rogers, this Italian put the Pompidou Centre's pipes and escalators on the outside",
+    "response": "Renzo Piano",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "BRUSH-UP COURSE",
+  "clues": [
+   {
+    "clue": "Wheelchair-bound late in life, this Fauvist 'painted with scissors' in vivid paper cutouts",
+    "response": "Henri Matisse",
+    "value": 400
+   },
+   {
+    "clue": "This Dutchman's 'Broadway Boogie Woogie' turned his primary-color grid into Manhattan streets",
+    "response": "Piet Mondrian",
+    "value": 800
+   },
+   {
+    "clue": "Dark, hovering color fields line the walls of this abstract painter's chapel in Houston",
+    "response": "Mark Rothko",
+    "value": 1200
+   },
+   {
+    "clue": "Albrecht Dürer never saw this animal, yet his 1515 woodcut of one shaped how Europe imagined it",
+    "response": "a rhinoceros",
+    "value": 1600
+   },
+   {
+    "clue": "This Russian-born painter of floating lovers and fiddlers painted the Paris Opéra's ceiling",
+    "response": "Marc Chagall",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "GALLERY GOERS",
+  "clues": [
+   {
+    "clue": "Before it was this Paris museum of Impressionism, its building was a Beaux-Arts railway station",
+    "response": "the Musée d'Orsay",
+    "value": 400
+   },
+   {
+    "clue": "London's Tate Modern took over one of these on the Thames, keeping its vast Turbine Hall",
+    "response": "a power station",
+    "value": 800
+   },
+   {
+    "clue": "Goya's 'Black Paintings' were peeled off his house walls and moved to this Madrid museum",
+    "response": "the Prado",
+    "value": 1200
+   },
+   {
+    "clue": "Catherine the Great's art collection grew into this St. Petersburg museum in the Winter Palace",
+    "response": "the Hermitage",
+    "value": 1600
+   },
+   {
+    "clue": "The Medici built this Florence museum as government offices, which is what its name means",
+    "response": "the Uffizi",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "STEP RIGHT UP",
+  "clues": [
+   {
+    "clue": "A 1952 Pearl Bailey hit claimed you need two people to do this sultry Argentine dance",
+    "response": "the tango",
+    "value": 400
+   },
+   {
+    "clue": "This choreographer's style meant bowler hats, turned-in knees and splayed 'jazz hands'",
+    "response": "Bob Fosse",
+    "value": 800
+   },
+   {
+    "clue": "Handclaps called palmas and the Roma traditions of Andalusia shaped this fiery Spanish art",
+    "response": "flamenco",
+    "value": 1200
+   },
+   {
+    "clue": "A long silk scarf caught in a car's wheel killed this barefoot pioneer of modern dance in 1927",
+    "response": "Isadora Duncan",
+    "value": 1600
+   },
+   {
+    "clue": "Alvin Ailey's signature work, set to spirituals like 'Wade in the Water,' is this 1960 piece",
+    "response": "Revelations",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "GHOST LIGHT DISTRICT",
+  "clues": [
+   {
+    "clue": "Superstitious actors call it 'the Scottish play' to avoid saying its title backstage",
+    "response": "Macbeth",
+    "value": 400
+   },
+   {
+    "clue": "Actors who speak straight to the audience are said to break this imaginary barrier",
+    "response": "the fourth wall",
+    "value": 800
+   },
+   {
+    "clue": "Harlequin and the miserly Pantalone are stock characters of this Italian improvised comedy",
+    "response": "commedia dell'arte",
+    "value": 1200
+   },
+   {
+    "clue": "Broadway's top honors are nicknamed for this actress and producer, who died in 1946",
+    "response": "Antoinette Perry",
+    "value": 1600
+   },
+   {
+    "clue": "Masked, all-male and stately, this Japanese drama form is centuries older than kabuki",
+    "response": "Noh",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FIRST, IT WAS A NOVEL",
+  "clues": [
+   {
+    "clue": "This author co-wrote the screenplays for the films made from his 1969 Mafia best seller",
+    "response": "Mario Puzo",
+    "value": 400
+   },
+   {
+    "clue": "He worked nights as a psychiatric aide before writing 'One Flew Over the Cuckoo's Nest'",
+    "response": "Ken Kesey",
+    "value": 800
+   },
+   {
+    "clue": "This Frenchman wrote both 'The Bridge over the River Kwai' and 'Planet of the Apes'",
+    "response": "Pierre Boulle",
+    "value": 1200
+   },
+   {
+    "clue": "His novels gave Hollywood both 'Rosemary's Baby' and 'The Stepford Wives'",
+    "response": "Ira Levin",
+    "value": 1600
+   },
+   {
+    "clue": "This Union general finished 'Ben-Hur' while governor of the New Mexico Territory",
+    "response": "Lew Wallace",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FUNNY PAGES FINE PRINT",
+  "clues": [
+   {
+    "clue": "A Reformation theologian and an English philosopher lent names to this strip's boy and tiger",
+    "response": "Calvin and Hobbes",
+    "value": 400
+   },
+   {
+    "clue": "Garfield shares his house with this hapless cartoonist owner, who also owns Odie",
+    "response": "Jon Arbuckle",
+    "value": 800
+   },
+   {
+    "clue": "Walt Kelly's comic strip set in the Okefenokee Swamp starred this gentle, philosophical possum",
+    "response": "Pogo",
+    "value": 1200
+   },
+   {
+    "clue": "In 1975 Garry Trudeau's strip became the first comic strip to win a Pulitzer Prize",
+    "response": "Doonesbury",
+    "value": 1600
+   },
+   {
+    "clue": "Popeye first showed up in 1929 in this E. C. Segar strip, originally about Olive Oyl's family",
+    "response": "Thimble Theatre",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ANIMATED DISCUSSION",
+  "clues": [
+   {
+    "clue": "Blue Meanies menace Pepperland in this 1968 animated Beatles film",
+    "response": "Yellow Submarine",
+    "value": 400
+   },
+   {
+    "clue": "Chuck Jones's rules said this Acme-loving predator must always be more humiliated than harmed",
+    "response": "Wile E. Coyote",
+    "value": 800
+   },
+   {
+    "clue": "Boris Badenov and Natasha Fatale spied for this made-up country on 'Rocky and Bullwinkle'",
+    "response": "Pottsylvania",
+    "value": 1200
+   },
+   {
+    "clue": "Max Fleischer patented this technique of tracing cartoons over live-action film frames",
+    "response": "rotoscoping",
+    "value": 1600
+   },
+   {
+    "clue": "Raymond Briggs's wordless book became this 1982 British cartoon featuring 'Walking in the Air'",
+    "response": "The Snowman",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "DEVELOPING STORY",
+  "clues": [
+   {
+    "clue": "Hailed as the father of photojournalism, this man's studio documented Civil War battlefields",
+    "response": "Mathew Brady",
+    "value": 400
+   },
+   {
+    "clue": "Lewis Hine's photos of kids in mills and mines helped build the case against this practice",
+    "response": "child labor",
+    "value": 800
+   },
+   {
+    "clue": "This Frenchman's phrase 'the decisive moment' came to define street photography",
+    "response": "Henri Cartier-Bresson",
+    "value": 1200
+   },
+   {
+    "clue": "He shot the piercing green-eyed 'Afghan Girl' for a 1985 National Geographic cover",
+    "response": "Steve McCurry",
+    "value": 1600
+   },
+   {
+    "clue": "A Fort Peck Dam photo by Margaret Bourke-White fronted the 1936 debut issue of this weekly",
+    "response": "Life",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SPUN OFF",
+  "clues": [
+   {
+    "clue": "Matt LeBlanc moved his 'Friends' character to Los Angeles in this 2004 spin-off",
+    "response": "Joey",
+    "value": 400
+   },
+   {
+    "clue": "Elevator operator Harriette Winslow left 'Perfect Strangers' to lead this Chicago sitcom",
+    "response": "Family Matters",
+    "value": 800
+   },
+   {
+    "clue": "Ed Asner's gruff newsman left a sitcom for this hour-long drama about a Los Angeles paper",
+    "response": "Lou Grant",
+    "value": 1200
+   },
+   {
+    "clue": "Robert Guillaume's sharp-tongued butler left 'Soap' to run a governor's household in this show",
+    "response": "Benson",
+    "value": 1600
+   },
+   {
+    "clue": "Gary and Valene Ewing left Texas for a California cul-de-sac in this 'Dallas' spin-off",
+    "response": "Knots Landing",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "LIBRETTO LOTTO",
+  "clues": [
+   {
+    "clue": "'Love is a rebellious bird,' the title temptress sings in this aria from 'Carmen'",
+    "response": "the Habanera",
+    "value": 400
+   },
+   {
+    "clue": "Helicopters attack to this Wagner music in Francis Ford Coppola's 'Apocalypse Now'",
+    "response": "Ride of the Valkyries",
+    "value": 800
+   },
+   {
+    "clue": "Emma Bovary is swept away by a Rouen performance of this Donizetti opera in Flaubert's novel",
+    "response": "Lucia di Lammermoor",
+    "value": 1200
+   },
+   {
+    "clue": "Oscar Wilde's play about a biblical princess became this scandalous 1905 Richard Strauss opera",
+    "response": "Salome",
+    "value": 1600
+   },
+   {
+    "clue": "Monteverdi's 1607 tale of a singer descending to Hades is one of the oldest operas still staged",
+    "response": "L'Orfeo (Orfeo)",
+    "value": 2000
+   }
+  ]
+ }
+]

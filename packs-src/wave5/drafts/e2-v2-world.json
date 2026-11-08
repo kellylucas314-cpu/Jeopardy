@@ -1,0 +1,86 @@
+[
+  { "name": "BEFORE COLUMBUS CAME", "clues": [
+    { "clue": "Hernán Cortés and his Spanish soldiers toppled this Mexican empire in 1521", "response": "the Aztecs", "value": 400 },
+    { "clue": "Peruvians still reweave a grass rope bridge each year, just as this Andean empire did", "response": "the Incas (the Inca)", "value": 800 },
+    { "clue": "In the Yucatan, these people built step pyramids and played ball through stone hoops", "response": "the Maya", "value": 1200 },
+    { "clue": "Inca legend says this mountain capital in Peru was planned in the shape of a puma", "response": "Cusco (Cuzco)", "value": 1600 },
+    { "clue": "Said to be a distant cousin of Cortés, this Spaniard led the conquest of the Incas", "response": "Francisco Pizarro", "value": 2000 }
+  ]},
+  { "name": "INCREDIBLE INDIA", "clues": [
+    { "clue": "India makes a national holiday of October 2, this peaceful leader's birthday", "response": "Mahatma Gandhi", "value": 400 },
+    { "clue": "From the Sanskrit for 'union', it's a practice of stretching poses and calm breathing", "response": "yoga", "value": 800 },
+    { "clue": "Mumbai's big, song-filled movie industry goes by this nickname", "response": "Bollywood", "value": 1200 },
+    { "clue": "India stunned the mighty West Indies at Lord's to win this sport's 1983 World Cup", "response": "cricket", "value": 1600 },
+    { "clue": "This small Indian state on the Arabian Sea was a Portuguese colony until 1961", "response": "Goa", "value": 2000 }
+  ]},
+  { "name": "CARAVAN TO THE EAST", "clues": [
+    { "clue": "Heroes of the 'Arabian Nights' soar over rooftops on one of these", "response": "a magic carpet (flying carpet)", "value": 400 },
+    { "clue": "The Bactrian kind of this desert animal has two humps instead of one", "response": "the camel", "value": 800 },
+    { "clue": "Its founding caliph called this future Iraqi capital the 'City of Peace'", "response": "Baghdad", "value": 1200 },
+    { "clue": "In 1935 the shah asked the world to say Iran instead of this older name for his land", "response": "Persia", "value": 1600 },
+    { "clue": "A shepherd boy found ancient scrolls in caves near this salty lake in the 1940s", "response": "the Dead Sea", "value": 2000 }
+  ]},
+  { "name": "ONCE UPON A CZAR", "clues": [
+    { "clue": "Meg Ryan voiced this lost Russian princess in a 1997 cartoon musical", "response": "Anastasia", "value": 400 },
+    { "clue": "Alexander III's first Easter gift of this kind hid a golden hen inside a gold yolk", "response": "a Fabergé egg", "value": 800 },
+    { "clue": "The last czarina trusted this bearded 'mad monk' to heal her ailing son", "response": "Rasputin", "value": 1200 },
+    { "clue": "Her favorite, Prince Potemkin, helped this 18th-century empress rule Russia", "response": "Catherine the Great", "value": 1600 },
+    { "clue": "Two years before Lincoln's Emancipation Proclamation, Czar Alexander II freed these peasants", "response": "the serfs", "value": 2000 }
+  ]},
+  { "name": "ISLAND HOPPERS", "clues": [
+    { "clue": "Painter Paul Gauguin sailed off to this French island of the South Pacific", "response": "Tahiti", "value": 400 },
+    { "clue": "Women in this country won the vote in 1893, years ahead of most of the world", "response": "New Zealand", "value": 800 },
+    { "clue": "Honeymooners love the overwater bungalows on this lagoon-ringed South Seas isle", "response": "Bora Bora", "value": 1200 },
+    { "clue": "Blue-footed boobies nest on these volcanic isles that Darwin visited", "response": "the Galápagos Islands", "value": 1600 },
+    { "clue": "Mutineers from HMS Bounty hid out on this tiny speck in the Pacific in 1790", "response": "Pitcairn Island", "value": 2000 }
+  ]},
+  { "name": "CAPITAL CITY CHARMS", "clues": [
+    { "clue": "Tiananmen Square lies at the heart of this Chinese capital", "response": "Beijing", "value": 400 },
+    { "clue": "Over 7,000 feet up, this capital has more Spanish speakers than any other on Earth", "response": "Mexico City", "value": 800 },
+    { "clue": "Vietnam's capital, this city grew up along the banks of the Red River", "response": "Hanoi", "value": 1200 },
+    { "clue": "'Out of Africa' author Karen Blixen ran a coffee farm outside this Kenyan capital", "response": "Nairobi", "value": 1600 },
+    { "clue": "The 1979 hostage crisis began at the American embassy in this capital", "response": "Tehran", "value": 2000 }
+  ]},
+  { "name": "LEGENDS FROM AFAR", "clues": [
+    { "clue": "Robin Williams voiced the fast-talking blue one of these in Disney's 1992 'Aladdin'", "response": "a genie", "value": 400 },
+    { "clue": "Cadillac named a sleek 1950s luxury car for this legendary city of gold", "response": "El Dorado", "value": 800 },
+    { "clue": "FDR joked that the 1942 Doolittle raid on Tokyo flew from this mythical paradise", "response": "Shangri-La", "value": 1200 },
+    { "clue": "Olivia Newton-John's 1980 roller-disco movie is named for this fabled 'pleasure-dome' city", "response": "Xanadu", "value": 1600 },
+    { "clue": "In Browning's poem, the Pied Piper's lost children resurface in this part of Romania", "response": "Transylvania", "value": 2000 }
+  ]},
+  { "name": "CROWNS AND CONQUERORS", "clues": [
+    { "clue": "Born Temujin, this Mongol warrior built a vast empire on horseback", "response": "Genghis Khan (Chinggis Khan)", "value": 400 },
+    { "clue": "Nearly seven feet tall, this Russian czar made his nobles shave their beards", "response": "Peter the Great", "value": 800 },
+    { "clue": "Called the 'Scourge of God', this warrior king invaded the Roman Empire in the 400s", "response": "Attila the Hun (Attila)", "value": 1200 },
+    { "clue": "This Muslim sultan won Jerusalem back from the Crusaders in 1187", "response": "Saladin", "value": 1600 },
+    { "clue": "Japan's emperor in World War II, he announced the surrender by radio in 1945", "response": "Hirohito", "value": 2000 }
+  ]},
+  { "name": "OLD COUNTRY KITCHEN", "clues": [
+    { "clue": "Polish immigrants brought this smoked, garlicky sausage to America", "response": "kielbasa", "value": 400 },
+    { "clue": "Sour cream, mushrooms and egg noodles made beef this a 1950s dinner party hit", "response": "Stroganoff (beef Stroganoff)", "value": 800 },
+    { "clue": "Melted butter spurts out of this breaded dish named for a Ukrainian city", "response": "chicken Kiev (chicken Kyiv)", "value": 1200 },
+    { "clue": "Russia's famous sturgeon eggs, this salty luxury often tops little blini", "response": "caviar", "value": 1600 },
+    { "clue": "Czech settlers brought these fruit-filled pastries to small towns in Texas", "response": "kolaches", "value": 2000 }
+  ]},
+  { "name": "SOUTH AMERICAN WAYS", "clues": [
+    { "clue": "Carmen Miranda, famous for her fruit-piled hats, grew up in this country", "response": "Brazil", "value": 400 },
+    { "clue": "Argentina's gaucho cowboys ride these vast, grassy plains", "response": "the Pampas", "value": 800 },
+    { "clue": "A homely deep-water toothfish sells far better as a 'sea bass' named for this country", "response": "Chile", "value": 1200 },
+    { "clue": "Butch Cassidy and the Sundance Kid once ranched in this windswept region of southern Argentina", "response": "Patagonia", "value": 1600 },
+    { "clue": "A giant hummingbird and a monkey are etched into Peru's desert among these", "response": "the Nazca Lines", "value": 2000 }
+  ]},
+  { "name": "MAP OF THE MIGHTY", "clues": [
+    { "clue": "Mount Everest crowns this mountain range whose Sanskrit name means 'abode of snow'", "response": "the Himalayas", "value": 400 },
+    { "clue": "Only about 50 miles of water separate Russia from Alaska across this narrow passage", "response": "the Bering Strait", "value": 800 },
+    { "clue": "Meerkats scurry across this desert of southern Africa, largely in Botswana", "response": "the Kalahari", "value": 1200 },
+    { "clue": "This huge trench runs thousands of miles through East Africa", "response": "the Great Rift Valley", "value": 1600 },
+    { "clue": "Western Asia's longest river, it flows from Turkey through Syria into Iraq", "response": "the Euphrates", "value": 2000 }
+  ]},
+  { "name": "THE POLISH-UP", "clues": [
+    { "clue": "Born Karol Wojtyla, he became the first Polish pope in 1978", "response": "John Paul II", "value": 400 },
+    { "clue": "French novelist George Sand was this Polish composer's companion for nine years", "response": "Chopin (Frédéric Chopin)", "value": 800 },
+    { "clue": "The Royal Castle and a rebuilt Old Town stand in this Polish capital", "response": "Warsaw", "value": 1200 },
+    { "clue": "Lech Walesa led this Polish trade union that helped topple communism", "response": "Solidarity", "value": 1600 },
+    { "clue": "Born in Toruń, this Polish astronomer is the namesake of a lunar crater", "response": "Copernicus (Nicolaus Copernicus)", "value": 2000 }
+  ]}
+]

@@ -122,7 +122,7 @@ export function chapterTimer(chapter) {
  * Which packs feed the five non-themed categories on each round's board.
  * The ramp is relative to the pack the table chose on the setup screen:
  * Easy Breezy tables climb from all-easy to a Fresh mix, Fresh tables from
- * easy-tinged to Round-2 fare, Deep Archive tables into archive material.
+ * easy-tinged to Round-2 fare.
  * Each entry is { pack, dir, count }; counts sum to 5.
  */
 export function chapterRecipe(chapter, round, basePack = 'fresh') {
@@ -130,7 +130,6 @@ export function chapterRecipe(chapter, round, basePack = 'fresh') {
   const r2 = round === 2;
   const easy = (dir, count) => ({ pack: 'easy', dir, count });
   const fresh = (dir, count) => ({ pack: 'fresh', dir, count });
-  const arch = (dir, count) => ({ pack: 'archive', dir, count });
 
   if (basePack === 'easy') {
     const ladder = {
@@ -139,16 +138,6 @@ export function chapterRecipe(chapter, round, basePack = 'fresh') {
       3: r2 ? [easy('double', 4), fresh('jeopardy', 1)] : [easy('jeopardy', 4), fresh('jeopardy', 1)],
       4: r2 ? [easy('double', 3), fresh('jeopardy', 2)] : [easy('jeopardy', 3), fresh('jeopardy', 2)],
       5: r2 ? [easy('double', 2), fresh('jeopardy', 3)] : [easy('jeopardy', 3), fresh('jeopardy', 2)],
-    };
-    return ladder[t];
-  }
-  if (basePack === 'archive') {
-    const ladder = {
-      1: r2 ? [fresh('double', 5)] : [fresh('jeopardy', 5)],
-      2: r2 ? [fresh('double', 4), arch('double', 1)] : [fresh('jeopardy', 4), arch('jeopardy', 1)],
-      3: r2 ? [fresh('double', 3), arch('double', 2)] : [fresh('jeopardy', 3), arch('jeopardy', 2)],
-      4: r2 ? [fresh('double', 2), arch('double', 3)] : [fresh('jeopardy', 2), arch('jeopardy', 3)],
-      5: r2 ? [arch('double', 5)] : [arch('jeopardy', 5)],
     };
     return ladder[t];
   }

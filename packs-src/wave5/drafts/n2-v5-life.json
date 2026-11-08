@@ -1,0 +1,362 @@
+[
+  {
+    "name": "THEY USED TO SELL WHAT?",
+    "clues": [
+      {
+        "clue": "Before it built cars, the founding Toyoda family of this company made automatic looms",
+        "response": "Toyota",
+        "value": 400
+      },
+      {
+        "clue": "A Chicago seller of soap and baking powder found that his free giveaway gum was the real hit",
+        "response": "Wrigley (William Wrigley Jr.)",
+        "value": 800
+      },
+      {
+        "clue": "Long before cell phones, this Finnish company got its start in 1865 as a pulp mill",
+        "response": "Nokia",
+        "value": 1200
+      },
+      {
+        "clue": "In 1938 this Korean firm began as a trading company selling dried fish, vegetables and noodles",
+        "response": "Samsung",
+        "value": 1600
+      },
+      {
+        "clue": "Book salesman David McConnell's free perfume samples outsold his books, so he founded this firm",
+        "response": "Avon",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "SPICE ROUTES",
+    "clues": [
+      {
+        "clue": "Pickled pink and served beside sushi, this knobby root is a spice-trade classic",
+        "response": "ginger",
+        "value": 400
+      },
+      {
+        "clue": "Indonesia's kretek cigarettes, named for their crackle, blend tobacco with this spice",
+        "response": "cloves",
+        "value": 800
+      },
+      {
+        "clue": "Middle Eastern cooks dust kebabs and fattoush with the tart, crimson ground berries of this shrub",
+        "response": "sumac",
+        "value": 1200
+      },
+      {
+        "clue": "Eight-pointed pods of this Chinese spice long supplied the key raw material for the flu drug Tamiflu",
+        "response": "star anise",
+        "value": 1600
+      },
+      {
+        "clue": "Jamaicans call this berry 'pimento', and its English name reflects its blend of flavors",
+        "response": "allspice",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "JARGON GAMES",
+    "clues": [
+      {
+        "clue": "Competitors salute, then attack along a long strip called the piste in this sport",
+        "response": "fencing",
+        "value": 400
+      },
+      {
+        "clue": "Getting out without scoring a single run earns a batsman a 'duck' in this sport",
+        "response": "cricket",
+        "value": 800
+      },
+      {
+        "clue": "Riders swap ponies between the periods, called chukkers, of this sport",
+        "response": "polo",
+        "value": 1200
+      },
+      {
+        "clue": "A clean throw scores ippon and ends the bout in this martial art founded by Kano Jigoro",
+        "response": "judo",
+        "value": 1600
+      },
+      {
+        "clue": "Its Basque name means 'merry festival', and Florida frontons took bets on this fast court game",
+        "response": "jai alai",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "WORLDLY SPIRITS",
+    "clues": [
+      {
+        "clue": "Fortified wine from the Douro Valley takes this short name from the city at the river's mouth",
+        "response": "port",
+        "value": 400
+      },
+      {
+        "clue": "Italians distill the grape skins, seeds and stems left over from winemaking into this brandy",
+        "response": "grappa",
+        "value": 800
+      },
+      {
+        "clue": "Pine resin flavors this Greek white wine, a taste dating back to sealing ancient amphorae",
+        "response": "retsina",
+        "value": 1200
+      },
+      {
+        "clue": "White wine and blackcurrant liqueur make this aperitif, named for a priest who was mayor of Dijon",
+        "response": "kir",
+        "value": 1600
+      },
+      {
+        "clue": "Hungary's national anthem praises the nectar dripping from the vines of this sweet-wine region",
+        "response": "Tokaj (Tokaji)",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "BREAKFAST ABROAD",
+    "clues": [
+      {
+        "clue": "Australians spread this salty yeast-extract paste on buttered toast, thinly if they're wise",
+        "response": "Vegemite",
+        "value": 400
+      },
+      {
+        "clue": "Fried tortilla pieces simmered in salsa and topped with eggs make this Mexican breakfast",
+        "response": "chilaquiles",
+        "value": 800
+      },
+      {
+        "clue": "Cantonese cooks call it jook, but this rice porridge's English name comes from Tamil",
+        "response": "congee",
+        "value": 1200
+      },
+      {
+        "clue": "Ful medames, Egypt's beloved breakfast stew, is built on these slow-cooked legumes",
+        "response": "fava beans",
+        "value": 1600
+      },
+      {
+        "clue": "Victorian Britons adapted India's khichri into this breakfast of rice, smoked fish and eggs",
+        "response": "kedgeree",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "WOVEN ON THE MAP",
+    "clues": [
+      {
+        "clue": "Fishermen's sweaters from a Channel Island gave their name to this stretchy knit fabric",
+        "response": "jersey",
+        "value": 400
+      },
+      {
+        "clue": "Named for the Indian port where Vasco da Gama landed in 1498, this is a plain cotton cloth",
+        "response": "calico",
+        "value": 800
+      },
+      {
+        "clue": "Woven with reversible patterns, this fabric takes its name from the capital of Syria",
+        "response": "damask",
+        "value": 1200
+      },
+      {
+        "clue": "Ballet tutus are made of this fine netting, named for a town in France's Corrèze region",
+        "response": "tulle",
+        "value": 1600
+      },
+      {
+        "clue": "A Norfolk village gave its name to this smooth yarn of long-combed wool, and the cloth woven from it",
+        "response": "worsted",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "ORDER-UP ORIGINS",
+    "clues": [
+      {
+        "clue": "Dave Thomas named this square-patty chain for his daughter Melinda, by her childhood nickname",
+        "response": "Wendy's",
+        "value": 400
+      },
+      {
+        "clue": "Fred DeLuca and Peter Buck opened 'Pete's Super Submarines' in 1965, the seed of this chain",
+        "response": "Subway",
+        "value": 800
+      },
+      {
+        "clue": "The three dots on this pizza chain's domino were meant to stand for its first three stores",
+        "response": "Domino's",
+        "value": 1200
+      },
+      {
+        "clue": "William Rosenberg's Quincy, Massachusetts, shop the Open Kettle got this new name in 1950",
+        "response": "Dunkin' Donuts (Dunkin')",
+        "value": 1600
+      },
+      {
+        "clue": "Both White Castle and Pizza Hut opened their very first restaurants in this Kansas city",
+        "response": "Wichita",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "TROPHY HUNTING",
+    "clues": [
+      {
+        "clue": "Each player on the winning NHL team traditionally gets a day to spend with this trophy",
+        "response": "the Stanley Cup",
+        "value": 400
+      },
+      {
+        "clue": "The Open Championship's winner lifts this silver trophy, styled as a vessel for serving Bordeaux",
+        "response": "the Claret Jug",
+        "value": 800
+      },
+      {
+        "clue": "The first pilot to cross the Mediterranean nonstop, he lends his name to the French Open's home",
+        "response": "Roland Garros",
+        "value": 1200
+      },
+      {
+        "clue": "This Harvard student, later Secretary of War, donated tennis's international team trophy in 1900",
+        "response": "Dwight Davis (Dwight F. Davis)",
+        "value": 1600
+      },
+      {
+        "clue": "Melted-down silver rupees went into this rugby trophy contested by England and Scotland",
+        "response": "the Calcutta Cup",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "HEAD GAMES",
+    "clues": [
+      {
+        "clue": "At commencement, graduates move the tassel on this flat, square-topped cap",
+        "response": "a mortarboard",
+        "value": 400
+      },
+      {
+        "clue": "Walter White's 'Heisenberg' wore this flat-topped hat, named for a meat-filled pastry",
+        "response": "a pork pie hat",
+        "value": 800
+      },
+      {
+        "clue": "Robert Burns' poem about a drunken farmer's wild night named this woolly Scots bonnet",
+        "response": "a tam-o'-shanter (tam)",
+        "value": 1200
+      },
+      {
+        "clue": "Named for a Moroccan city, this brimless red hat was outlawed by Turkey's 1925 Hat Law",
+        "response": "a fez",
+        "value": 1600
+      },
+      {
+        "clue": "Edward VII popularized this stiff felt hat named for a German spa town near Frankfurt",
+        "response": "a Homburg",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "SWEET NAMESAKES",
+    "clues": [
+      {
+        "clue": "Its name comes from Baker's employee Samuel, not a country: it's frosted with coconut and pecans",
+        "response": "German chocolate cake",
+        "value": 400
+      },
+      {
+        "clue": "Strawberries, cream and broken meringue make this dessert named for an English school",
+        "response": "Eton mess",
+        "value": 800
+      },
+      {
+        "clue": "Brennan's in New Orleans flambéed this dessert for a city crime commission chairman",
+        "response": "Bananas Foster",
+        "value": 1200
+      },
+      {
+        "clue": "This marzipan-wrapped, pink-and-yellow checkerboard sponge shares a name with the later Mountbattens",
+        "response": "Battenberg (Battenberg cake)",
+        "value": 1600
+      },
+      {
+        "clue": "Sponge squares dipped in chocolate and coconut share their name with an 1890s governor of Queensland",
+        "response": "lamingtons",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "BALL'S IN YOUR COURT",
+    "clues": [
+      {
+        "clue": "Swedes serve these with lingonberry jam, creamy gravy and mashed potatoes",
+        "response": "meatballs",
+        "value": 400
+      },
+      {
+        "clue": "Whiskey and soda in a tall glass is the classic version of this drink",
+        "response": "a highball",
+        "value": 800
+      },
+      {
+        "clue": "Jewish cooks argue 'floaters or sinkers' about these dumplings in chicken soup",
+        "response": "matzo balls",
+        "value": 1200
+      },
+      {
+        "clue": "Baseball banned this saliva-doctored pitch in 1920 but let 17 named pitchers keep throwing it",
+        "response": "the spitball",
+        "value": 1600
+      },
+      {
+        "clue": "Venetians voted by dropping small balls into urns, giving us this word for a voting slip",
+        "response": "a ballot",
+        "value": 2000
+      }
+    ]
+  },
+  {
+    "name": "THE GRAND TOURISTS",
+    "clues": [
+      {
+        "clue": "'Leave the driving to us,' promised this intercity bus line named for a speedy dog",
+        "response": "Greyhound",
+        "value": 400
+      },
+      {
+        "clue": "A French tire company launched this book in 1900 to get more motorists out on the road",
+        "response": "the Michelin Guide",
+        "value": 800
+      },
+      {
+        "clue": "Tony and Maureen Wheeler's 1973 'Across Asia on the Cheap' launched this travel publisher",
+        "response": "Lonely Planet",
+        "value": 1200
+      },
+      {
+        "clue": "A Baptist preacher, he organized a temperance group's 1841 rail outing and built a travel empire",
+        "response": "Thomas Cook",
+        "value": 1600
+      },
+      {
+        "clue": "His 1957 'Europe on $5 a Day' launched a long line of budget travel guides",
+        "response": "Arthur Frommer",
+        "value": 2000
+      }
+    ]
+  }
+]
