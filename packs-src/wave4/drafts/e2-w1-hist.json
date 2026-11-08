@@ -43,13 +43,13 @@
     "value": 800
    },
    {
-    "clue": "Hanged as a spy in 1776, he reportedly regretted having but one life to lose",
-    "response": "Nathan Hale",
+    "clue": "Ordered out of the Philippines in 1942, this general vowed he would return, and he did",
+    "response": "Douglas MacArthur",
     "value": 1200
    },
    {
-    "clue": "Ordered out of the Philippines in 1942, this general vowed he would return, and he did",
-    "response": "Douglas MacArthur",
+    "clue": "Hanged as a spy in 1776, he reportedly regretted having but one life to lose",
+    "response": "Nathan Hale",
     "value": 1600
    },
    {
@@ -133,13 +133,13 @@
     "value": 800
    },
    {
-    "clue": "Clara Barton tended wounded soldiers near a cornfield at this 1862 Maryland battle",
-    "response": "Antietam",
+    "clue": "Before guiding others north, she escaped slavery in Maryland herself in 1849",
+    "response": "Harriet Tubman",
     "value": 1200
    },
    {
-    "clue": "Before guiding others north, she escaped slavery in Maryland herself in 1849",
-    "response": "Harriet Tubman",
+    "clue": "Clara Barton tended wounded soldiers near a cornfield at this 1862 Maryland battle",
+    "response": "Antietam",
     "value": 1600
    },
    {
@@ -258,13 +258,13 @@
     "value": 1200
    },
    {
-    "clue": "'Friends, Romans, countrymen, lend me your ears' begins this Roman's famous speech",
-    "response": "Mark Antony",
+    "clue": "This Macedonian conqueror named cities after himself, including a famous one in Egypt",
+    "response": "Alexander the Great",
     "value": 1600
    },
    {
-    "clue": "This Macedonian conqueror named cities after himself, including a famous one in Egypt",
-    "response": "Alexander the Great",
+    "clue": "'Friends, Romans, countrymen, lend me your ears' begins this Roman's famous speech",
+    "response": "Mark Antony",
     "value": 2000
    }
   ]
@@ -293,7 +293,7 @@
     "value": 1600
    },
    {
-    "clue": "Rows of look-alike houses rose in this Long Island suburb built by William Levitt",
+    "clue": "Rows of look-alike houses rose in this postwar suburb built by William Levitt",
     "response": "Levittown",
     "value": 2000
    }
@@ -303,8 +303,8 @@
   "name": "PASSPORT STAMPS",
   "clues": [
    {
-    "clue": "Sydney's sail-roofed Opera House is a landmark of this country",
-    "response": "Australia",
+    "clue": "The Great Wall winds for thousands of miles across this country",
+    "response": "China",
     "value": 400
    },
    {
@@ -313,8 +313,8 @@
     "value": 800
    },
    {
-    "clue": "The Great Wall winds for thousands of miles across this country",
-    "response": "China",
+    "clue": "Sydney's sail-roofed Opera House is a landmark of this country",
+    "response": "Australia",
     "value": 1200
    },
    {
@@ -348,7 +348,7 @@
     "value": 1200
    },
    {
-    "clue": "Ben & Jerry's first scooped ice cream in a converted gas station in this state",
+    "clue": "The real von Trapp family of 'The Sound of Music' settled in Stowe in this state",
     "response": "Vermont",
     "value": 1600
    },

@@ -1,362 +1,362 @@
 [
- {
-  "name": "PAWS-IDENTIAL PETS",
-  "clues": [
-   {
-    "clue": "The Clintons' black-and-white cat had a name you'd also pull onto your feet",
-    "response": "Socks",
-    "value": 200
-   },
-   {
-    "clue": "Nixon's 1952 TV address was named for a little dog given to his daughters",
-    "response": "Checkers",
-    "value": 400
-   },
-   {
-    "clue": "FDR's Scottish terrier sits beside him in bronze at the Roosevelt memorial",
-    "response": "Fala",
-    "value": 600
-   },
-   {
-    "clue": "Barbara Bush 'helped' this springer spaniel write a best-selling book",
-    "response": "Millie",
-    "value": 800
-   },
-   {
-    "clue": "LBJ caused a stir by lifting these two pet beagles by their ears",
-    "response": "Him and Her",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "GREETINGS FROM...",
-  "clues": [
-   {
-    "clue": "Our biggest state joined the Union in January 1959, months before Hawaii",
-    "response": "Alaska",
-    "value": 200
-   },
-   {
-    "clue": "Shaped like a mitten, this state touches four of the five Great Lakes",
-    "response": "Michigan",
-    "value": 400
-   },
-   {
-    "clue": "Despite its name, the smallest state sits mostly on the mainland",
-    "response": "Rhode Island",
-    "value": 600
-   },
-   {
-    "clue": "Seven presidents, from Grant to Harding, were born in this Buckeye State",
-    "response": "Ohio",
-    "value": 800
-   },
-   {
-    "clue": "Before statehood in 1791, this Green Mountain State was its own little republic",
-    "response": "Vermont",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "PICK A DAY, ANY DAY",
-  "clues": [
-   {
-    "clue": "Cupid, candy hearts and red roses all belong to this February holiday",
-    "response": "Valentine's Day",
-    "value": 200
-   },
-   {
-    "clue": "Picnics on the first Monday of September honor America's working folks",
-    "response": "Labor Day",
-    "value": 400
-   },
-   {
-    "clue": "First called Decoration Day, it honors those who died in military service",
-    "response": "Memorial Day",
-    "value": 600
-   },
-   {
-    "clue": "Every June 14, this day salutes the Stars and Stripes",
-    "response": "Flag Day",
-    "value": 800
-   },
-   {
-    "clue": "Plant a sapling on the last Friday in April to celebrate this day",
-    "response": "Arbor Day",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "OLD GREEK TALES",
-  "clues": [
-   {
-    "clue": "Greek soldiers hid inside this big wooden gift to sneak into Troy",
-    "response": "the Trojan horse",
-    "value": 200
-   },
-   {
-    "clue": "One look at this snake-haired Gorgon could turn a man to stone",
-    "response": "Medusa",
-    "value": 400
-   },
-   {
-    "clue": "Daedalus warned this son not to fly too high on his homemade wings",
-    "response": "Icarus",
-    "value": 600
-   },
-   {
-    "clue": "Odysseus and his men escaped this one-eyed giant's cave by clinging under his sheep",
-    "response": "the Cyclops (Polyphemus)",
-    "value": 800
-   },
-   {
-    "clue": "The daffodil's botanical name comes from this vain youth of myth",
-    "response": "Narcissus",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "PATRIOTIC PLAYLIST",
-  "clues": [
-   {
-    "clue": "Ballgames begin with this anthem, which opens 'O say can you see'",
-    "response": "The Star-Spangled Banner",
-    "value": 200
-   },
-   {
-    "clue": "In this ditty, a fellow sticks a feather in his cap and calls it macaroni",
-    "response": "Yankee Doodle",
-    "value": 400
-   },
-   {
-    "clue": "Irving Berlin wrote this tune in 1918, then tucked it away for 20 years",
-    "response": "God Bless America",
-    "value": 600
-   },
-   {
-    "clue": "Woody Guthrie's folk anthem runs 'from California to the New York island'",
-    "response": "This Land Is Your Land",
-    "value": 800
-   },
-   {
-    "clue": "'For purple mountain majesties above the fruited plain' comes from this hymn",
-    "response": "America the Beautiful",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "MADE IN TOWN",
-  "clues": [
-   {
-    "clue": "This Pennsylvania town grew up around a candy factory and has a Chocolate Avenue",
-    "response": "Hershey",
-    "value": 200
-   },
-   {
-    "clue": "Big wooden 'Sluggers' for baseball stars have come from this Kentucky city since 1884",
-    "response": "Louisville",
-    "value": 400
-   },
-   {
-    "clue": "C.W. Post cooked up Grape-Nuts in this Michigan city, nicknamed Cereal City",
-    "response": "Battle Creek",
-    "value": 600
-   },
-   {
-    "clue": "Xerox began in 1906 as the Haloid Company, making photo paper in this New York city",
-    "response": "Rochester",
-    "value": 800
-   },
-   {
-    "clue": "Aetna and Travelers made this Connecticut capital the 'Insurance Capital'",
-    "response": "Hartford",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "BIG CITY LIGHTS",
-  "clues": [
-   {
-    "clue": "A plumbers' union dyes this city's river green each year for St. Patrick's Day",
-    "response": "Chicago",
-    "value": 200
-   },
-   {
-    "clue": "Elvis married Priscilla in 1967 in this Nevada city of casinos",
-    "response": "Las Vegas",
-    "value": 400
-   },
-   {
-    "clue": "This city's basketball 76ers are named for its big year, 1776",
-    "response": "Philadelphia",
-    "value": 600
-   },
-   {
-    "clue": "Cable cars clang up and down the steep hills of this city by the bay",
-    "response": "San Francisco",
-    "value": 800
-   },
-   {
-    "clue": "Boats full of tourists glide along the River Walk in this Texas city",
-    "response": "San Antonio",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "CHURCH BULLETIN",
-  "clues": [
-   {
-    "clue": "White lilies and sunrise services mark this spring holiday",
-    "response": "Easter",
-    "value": 200
-   },
-   {
-    "clue": "Congregations wave fronds on this day, one week before Easter",
-    "response": "Palm Sunday",
-    "value": 400
-   },
-   {
-    "clue": "A wreath of four candles counts down the Sundays of this season before Christmas",
-    "response": "Advent",
-    "value": 600
-   },
-   {
-    "clue": "Church pancake suppers are a tradition on this day before Ash Wednesday",
-    "response": "Shrove Tuesday (Fat Tuesday)",
-    "value": 800
-   },
-   {
-    "clue": "Held on January 6, this feast remembers the Wise Men's visit",
-    "response": "Epiphany (Three Kings Day)",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "FOUNDING FATHER KNOWS BEST",
-  "clues": [
-   {
-    "clue": "This Philadelphia printer invented a cast-iron stove that still carries his name",
-    "response": "Benjamin Franklin",
-    "value": 200
-   },
-   {
-    "clue": "He was just 33 when he wrote the first draft of the Declaration",
-    "response": "Thomas Jefferson",
-    "value": 400
-   },
-   {
-    "clue": "The first Treasury secretary, he also founded the New York Post",
-    "response": "Alexander Hamilton",
-    "value": 600
-   },
-   {
-    "clue": "Called the Father of the Constitution, he stood just 5 feet 4",
-    "response": "James Madison",
-    "value": 800
-   },
-   {
-    "clue": "George Washington picked this New Yorker as the first chief justice",
-    "response": "John Jay",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "PARKS AND RECOLLECTION",
-  "clues": [
-   {
-    "clue": "Grizzlies and bison roam this park, which spills from Wyoming into Montana and Idaho",
-    "response": "Yellowstone",
-    "value": 200
-   },
-   {
-    "clue": "Gatlinburg, Tennessee, is the gateway town to this misty national park",
-    "response": "Great Smoky Mountains",
-    "value": 400
-   },
-   {
-    "clue": "Twenty-mule teams hauled borax out of this scorching California desert park",
-    "response": "Death Valley",
-    "value": 600
-   },
-   {
-    "clue": "Bats swirl out at dusk from the huge caves of this New Mexico park",
-    "response": "Carlsbad Caverns",
-    "value": 800
-   },
-   {
-    "clue": "Oregon's only national park is named for the deep blue water filling a sunken volcano",
-    "response": "Crater Lake",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "CARVED IN STONE",
-  "clues": [
-   {
-    "clue": "The Pilgrims are said to have stepped ashore on this Massachusetts boulder",
-    "response": "Plymouth Rock",
-    "value": 200
-   },
-   {
-    "clue": "Abe's Gettysburg Address is carved into a wall of this Washington landmark",
-    "response": "the Lincoln Memorial",
-    "value": 400
-   },
-   {
-    "clue": "An elevator whisks visitors 500 feet up this marble obelisk for the first president",
-    "response": "the Washington Monument",
-    "value": 600
-   },
-   {
-    "clue": "Cherry blossoms frame this domed tribute on the Tidal Basin",
-    "response": "the Jefferson Memorial",
-    "value": 800
-   },
-   {
-    "clue": "Begun in 1948, a giant South Dakota mountain carving honors this Lakota leader",
-    "response": "Crazy Horse",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "DAY JOBS",
-  "clues": [
-   {
-    "clue": "Named for the sun, it is the day many families head off to church",
-    "response": "Sunday",
-    "value": 200
-   },
-   {
-    "clue": "The Roman god who also names the ringed planet gives us this weekend day",
-    "response": "Saturday",
-    "value": 400
-   },
-   {
-    "clue": "Long ago, folks called this first workday 'Moon's day'",
-    "response": "Monday",
-    "value": 600
-   },
-   {
-    "clue": "Named for Frigg, wife of Odin, it's the last day of the workweek",
-    "response": "Friday",
-    "value": 800
-   },
-   {
-    "clue": "Tyr, a one-handed Norse god of war, gives his name to this day",
-    "response": "Tuesday",
-    "value": 1000
-   }
-  ]
- }
+  {
+    "name": "PAWS-IDENTIAL PETS",
+    "clues": [
+      {
+        "clue": "The Clintons' black-and-white cat had a name you'd also pull onto your feet",
+        "response": "Socks",
+        "value": 200
+      },
+      {
+        "clue": "Nixon's 1952 TV address was named for a little dog given to his daughters",
+        "response": "Checkers",
+        "value": 400
+      },
+      {
+        "clue": "FDR's Scottish terrier sits beside him in bronze at the Roosevelt memorial",
+        "response": "Fala",
+        "value": 600
+      },
+      {
+        "clue": "Barbara Bush 'helped' this springer spaniel write a best-selling book",
+        "response": "Millie",
+        "value": 800
+      },
+      {
+        "clue": "LBJ caused a stir by lifting one of these two pet beagles by the ears",
+        "response": "Him and Her",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "GREETINGS FROM...",
+    "clues": [
+      {
+        "clue": "Our biggest state joined the Union in January 1959, months before Hawaii",
+        "response": "Alaska",
+        "value": 200
+      },
+      {
+        "clue": "Shaped like a mitten, this state touches four of the five Great Lakes",
+        "response": "Michigan",
+        "value": 400
+      },
+      {
+        "clue": "Despite its name, the smallest state sits mostly on the mainland",
+        "response": "Rhode Island",
+        "value": 600
+      },
+      {
+        "clue": "Seven presidents, from Grant to Harding, were born in this Midwestern state",
+        "response": "Ohio",
+        "value": 800
+      },
+      {
+        "clue": "Independent since 1777, it minted its own coins before becoming the 14th state in 1791",
+        "response": "Vermont",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "PICK A DAY, ANY DAY",
+    "clues": [
+      {
+        "clue": "Cupid, candy hearts and red roses all belong to this February holiday",
+        "response": "Valentine's Day",
+        "value": 200
+      },
+      {
+        "clue": "Picnics on the first Monday of September honor America's working folks",
+        "response": "Labor Day",
+        "value": 400
+      },
+      {
+        "clue": "First called Decoration Day, it honors those who died in military service",
+        "response": "Memorial Day",
+        "value": 600
+      },
+      {
+        "clue": "Every June 14, this day salutes the Stars and Stripes",
+        "response": "Flag Day",
+        "value": 800
+      },
+      {
+        "clue": "Plant a sapling on the last Friday in April to celebrate this day",
+        "response": "Arbor Day",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "OLD GREEK TALES",
+    "clues": [
+      {
+        "clue": "Greek soldiers hid inside this big wooden gift to sneak into Troy",
+        "response": "the Trojan horse",
+        "value": 200
+      },
+      {
+        "clue": "One look at this snake-haired Gorgon could turn a man to stone",
+        "response": "Medusa",
+        "value": 400
+      },
+      {
+        "clue": "Daedalus warned this son not to fly too high on his homemade wings",
+        "response": "Icarus",
+        "value": 600
+      },
+      {
+        "clue": "Odysseus and his men escaped this one-eyed giant's cave by clinging under his sheep",
+        "response": "the Cyclops (Polyphemus)",
+        "value": 800
+      },
+      {
+        "clue": "Daffodils share their botanical name with this vain youth who fell for his own reflection",
+        "response": "Narcissus",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "PATRIOTIC PLAYLIST",
+    "clues": [
+      {
+        "clue": "Ballgames begin with this anthem, which opens 'O say can you see'",
+        "response": "The Star-Spangled Banner",
+        "value": 200
+      },
+      {
+        "clue": "In this ditty, a fellow sticks a feather in his cap and calls it macaroni",
+        "response": "Yankee Doodle",
+        "value": 400
+      },
+      {
+        "clue": "Irving Berlin wrote this tune in 1918, then tucked it away for 20 years",
+        "response": "God Bless America",
+        "value": 600
+      },
+      {
+        "clue": "Woody Guthrie's folk anthem runs 'from California to the New York island'",
+        "response": "This Land Is Your Land",
+        "value": 800
+      },
+      {
+        "clue": "'For purple mountain majesties above the fruited plain' comes from this hymn",
+        "response": "America the Beautiful",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "MADE IN TOWN",
+    "clues": [
+      {
+        "clue": "This Pennsylvania town grew up around a candy factory and has a Chocolate Avenue",
+        "response": "Hershey",
+        "value": 200
+      },
+      {
+        "clue": "Big wooden 'Sluggers' for baseball stars have come from this Kentucky city since 1884",
+        "response": "Louisville",
+        "value": 400
+      },
+      {
+        "clue": "C.W. Post cooked up Grape-Nuts in this Michigan city, nicknamed Cereal City",
+        "response": "Battle Creek",
+        "value": 600
+      },
+      {
+        "clue": "Xerox began in 1906 as the Haloid Company, making photo paper in this New York city",
+        "response": "Rochester",
+        "value": 800
+      },
+      {
+        "clue": "Aetna and Travelers made this Connecticut capital the 'Insurance Capital'",
+        "response": "Hartford",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "BIG CITY LIGHTS",
+    "clues": [
+      {
+        "clue": "A plumbers' union dyes this city's river green each year for St. Patrick's Day",
+        "response": "Chicago",
+        "value": 200
+      },
+      {
+        "clue": "Cable cars clang up and down the steep hills of this city by the bay",
+        "response": "San Francisco",
+        "value": 400
+      },
+      {
+        "clue": "This city's basketball 76ers are named for its big year, 1776",
+        "response": "Philadelphia",
+        "value": 600
+      },
+      {
+        "clue": "Elvis married Priscilla in 1967 at the Aladdin hotel in this Nevada city",
+        "response": "Las Vegas",
+        "value": 800
+      },
+      {
+        "clue": "Boats full of tourists glide along the River Walk in this Texas city",
+        "response": "San Antonio",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "CHURCH BULLETIN",
+    "clues": [
+      {
+        "clue": "White lilies and sunrise services mark this spring holiday",
+        "response": "Easter",
+        "value": 200
+      },
+      {
+        "clue": "Congregations wave fronds on this day, one week before Easter",
+        "response": "Palm Sunday",
+        "value": 400
+      },
+      {
+        "clue": "A wreath of four candles counts down the Sundays of this season before Christmas",
+        "response": "Advent",
+        "value": 600
+      },
+      {
+        "clue": "Church pancake suppers are a tradition on this day before Ash Wednesday",
+        "response": "Shrove Tuesday (Fat Tuesday)",
+        "value": 800
+      },
+      {
+        "clue": "Held on January 6, this feast remembers the Wise Men's visit",
+        "response": "Epiphany (Three Kings Day)",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "FOUNDING FATHER KNOWS BEST",
+    "clues": [
+      {
+        "clue": "This Philadelphia printer invented a cast-iron stove that still carries his name",
+        "response": "Benjamin Franklin",
+        "value": 200
+      },
+      {
+        "clue": "He was just 33 when he wrote the first draft of the Declaration",
+        "response": "Thomas Jefferson",
+        "value": 400
+      },
+      {
+        "clue": "The first Treasury secretary, he also founded the New York Post",
+        "response": "Alexander Hamilton",
+        "value": 600
+      },
+      {
+        "clue": "Called the Father of the Constitution, he stood just 5 feet 4",
+        "response": "James Madison",
+        "value": 800
+      },
+      {
+        "clue": "George Washington picked this New Yorker as the first chief justice",
+        "response": "John Jay",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "PARKS AND RECOLLECTION",
+    "clues": [
+      {
+        "clue": "Grizzlies and bison roam this park, which spills from Wyoming into Montana and Idaho",
+        "response": "Yellowstone",
+        "value": 200
+      },
+      {
+        "clue": "Gatlinburg, Tennessee, is the gateway town to this misty national park",
+        "response": "Great Smoky Mountains",
+        "value": 400
+      },
+      {
+        "clue": "Twenty-mule teams hauled borax out of this scorching California desert park",
+        "response": "Death Valley",
+        "value": 600
+      },
+      {
+        "clue": "Bats swirl out at dusk from the huge caves of this New Mexico park",
+        "response": "Carlsbad Caverns",
+        "value": 800
+      },
+      {
+        "clue": "Oregon's only national park is named for the deep blue water filling a sunken volcano",
+        "response": "Crater Lake",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "CARVED IN STONE",
+    "clues": [
+      {
+        "clue": "The Pilgrims are said to have stepped ashore on this Massachusetts boulder",
+        "response": "Plymouth Rock",
+        "value": 200
+      },
+      {
+        "clue": "Abe's Gettysburg Address is carved into a wall of this Washington landmark",
+        "response": "the Lincoln Memorial",
+        "value": 400
+      },
+      {
+        "clue": "An elevator whisks visitors 500 feet up this marble obelisk for the first president",
+        "response": "the Washington Monument",
+        "value": 600
+      },
+      {
+        "clue": "Cherry blossoms frame this domed tribute on the Tidal Basin",
+        "response": "the Jefferson Memorial",
+        "value": 800
+      },
+      {
+        "clue": "Begun in 1948, a giant South Dakota mountain carving honors this Lakota leader",
+        "response": "Crazy Horse",
+        "value": 1000
+      }
+    ]
+  },
+  {
+    "name": "DAY JOBS",
+    "clues": [
+      {
+        "clue": "Named for the sun, it is the day many families head off to church",
+        "response": "Sunday",
+        "value": 200
+      },
+      {
+        "clue": "The Roman god who also names the ringed planet gives us this weekend day",
+        "response": "Saturday",
+        "value": 400
+      },
+      {
+        "clue": "Long ago, folks called this first workday 'Moon's day'",
+        "response": "Monday",
+        "value": 600
+      },
+      {
+        "clue": "Named for Frigg, wife of Odin, it's the last day of the workweek",
+        "response": "Friday",
+        "value": 800
+      },
+      {
+        "clue": "Tyr, a one-handed Norse god of war, gives his name to this day",
+        "response": "Tuesday",
+        "value": 1000
+      }
+    ]
+  }
 ]

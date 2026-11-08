@@ -68,8 +68,8 @@
     "value": 200
    },
    {
-    "clue": "In the 1939 film, Dorothy clicks the heels of these sparkly red shoes",
-    "response": "ruby slippers",
+    "clue": "Dorothy Gale lived on her aunt and uncle's farm in this state",
+    "response": "Kansas",
     "value": 400
    },
    {
@@ -78,8 +78,8 @@
     "value": 600
    },
    {
-    "clue": "Dorothy Gale lived on her aunt and uncle's farm in this state",
-    "response": "Kansas",
+    "clue": "In the 1939 film, Dorothy clicks the heels of these sparkly red shoes",
+    "response": "ruby slippers",
     "value": 800
    },
    {
@@ -108,13 +108,13 @@
     "value": 600
    },
    {
-    "clue": "Sinatra swung through 'Fly Me to the Moon' in 1964 with this bandleader's orchestra",
-    "response": "Count Basie",
+    "clue": "Tommy and Jimmy were the bandleading brothers with this last name",
+    "response": "Dorsey",
     "value": 800
    },
    {
-    "clue": "Tommy and Jimmy were the bandleading brothers with this last name",
-    "response": "Dorsey",
+    "clue": "Sinatra swung through 'Fly Me to the Moon' in 1964 with this bandleader's orchestra",
+    "response": "Count Basie",
     "value": 1000
    }
   ]
@@ -313,8 +313,8 @@
     "value": 400
    },
    {
-    "clue": "In 1940 she ran a mock campaign for president with the Surprise Party",
-    "response": "Gracie Allen",
+    "clue": "Dean and Jerry made 16 films together as this comedy team",
+    "response": "Martin and Lewis",
     "value": 600
    },
    {
@@ -323,8 +323,8 @@
     "value": 800
    },
    {
-    "clue": "Dean and Jerry made 16 films together as this comedy team",
-    "response": "Martin and Lewis",
+    "clue": "In 1940 she ran a mock campaign for president with the Surprise Party",
+    "response": "Gracie Allen",
     "value": 1000
    }
   ]

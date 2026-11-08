@@ -25,7 +25,7 @@
     { "clue": "'Sir Duke' and 'I Wish' were both 1977 No. 1s for this harmonica-playing Motown star", "response": "Stevie Wonder", "value": 400 },
     { "clue": "At the 1983 NBA All-Star Game, this Motown star gave the national anthem a slow, soulful groove", "response": "Marvin Gaye", "value": 600 },
     { "clue": "David Ruffin, Eddie Kendricks and Dennis Edwards all sang lead for this sharp-dressed Motown quintet", "response": "the Temptations", "value": 800 },
-    { "clue": "Smokey Robinson fronted this Motown group on 'The Tracks of My Tears'", "response": "the Miracles", "value": 1000 }
+    { "clue": "'Shop Around,' a 1960 single by this group, became the Motown company's first million-seller", "response": "the Miracles", "value": 1000 }
   ] },
   { "name": "HITCH IN THE PLOT", "clues": [
     { "clue": "Robert Bloch's 1959 novel, inspired by killer Ed Gein, became this 1960 Hitchcock shocker", "response": "Psycho", "value": 200 },
@@ -63,15 +63,15 @@
     { "clue": "Stroked with a cello bow, this bent carpenter's tool makes an eerie vaudeville wail", "response": "a musical saw", "value": 1000 }
   ] },
   { "name": "BOOTS AND BALLADS", "clues": [
-    { "clue": "Born in Butcher Hollow, Kentucky, she married at 15 and became a queen of country music", "response": "Loretta Lynn", "value": 200 },
-    { "clue": "This 'Man in Black' married June Carter in 1968 and sang 'Jackson' with her", "response": "Johnny Cash", "value": 400 },
+    { "clue": "This 'Man in Black' married June Carter in 1968 and sang 'Jackson' with her", "response": "Johnny Cash", "value": 200 },
+    { "clue": "Born in Butcher Hollow, Kentucky, she married at 15 and became a queen of country music", "response": "Loretta Lynn", "value": 400 },
     { "clue": "His 1975 concept album 'Red Headed Stranger' made a superstar of this braided Texan", "response": "Willie Nelson", "value": 600 },
     { "clue": "'Hey, Good Lookin'' and 'I'm So Lonesome I Could Cry' came from this honky-tonk legend", "response": "Hank Williams", "value": 800 },
     { "clue": "'Mama Tried,' his 1968 country No. 1, nods to this Bakersfield Sound star's own wayward youth", "response": "Merle Haggard", "value": 1000 }
   ] },
   { "name": "CALL THE SHOTS", "clues": [
     { "clue": "'E.T.' and 'Jurassic Park' were both directed by this filmmaker", "response": "Steven Spielberg", "value": 200 },
-    { "clue": "This director brought all three 'Godfather' films to the screen", "response": "Francis Ford Coppola", "value": 400 },
+    { "clue": "He cast his infant daughter Sofia as the baby baptized in 'The Godfather'", "response": "Francis Ford Coppola", "value": 400 },
     { "clue": "Jack Nicholson axed his way through a door in 'The Shining' for this exacting director", "response": "Stanley Kubrick", "value": 600 },
     { "clue": "George Lucas has credited this director's 'The Hidden Fortress' as an inspiration for 'Star Wars'", "response": "Akira Kurosawa", "value": 800 },
     { "clue": "A knight plays chess with Death in 'The Seventh Seal,' a film by this Swede", "response": "Ingmar Bergman", "value": 1000 }

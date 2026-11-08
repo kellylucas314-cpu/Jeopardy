@@ -10,7 +10,7 @@
     { "clue": "India makes a national holiday of October 2, this peaceful leader's birthday", "response": "Mahatma Gandhi", "value": 400 },
     { "clue": "From the Sanskrit for 'union', it's a practice of stretching poses and calm breathing", "response": "yoga", "value": 800 },
     { "clue": "Mumbai's big, song-filled movie industry goes by this nickname", "response": "Bollywood", "value": 1200 },
-    { "clue": "Fans across India go wild for this bat-and-ball game they learned from the British", "response": "cricket", "value": 1600 },
+    { "clue": "India stunned the mighty West Indies at Lord's to win this sport's 1983 World Cup", "response": "cricket", "value": 1600 },
     { "clue": "This small Indian state on the Arabian Sea was a Portuguese colony until 1961", "response": "Goa", "value": 2000 }
   ]},
   { "name": "CARAVAN TO THE EAST", "clues": [
@@ -45,7 +45,7 @@
     { "clue": "Robin Williams voiced the fast-talking blue one of these in Disney's 1992 'Aladdin'", "response": "a genie", "value": 400 },
     { "clue": "Cadillac named a sleek 1950s luxury car for this legendary city of gold", "response": "El Dorado", "value": 800 },
     { "clue": "FDR joked that the 1942 Doolittle raid on Tokyo flew from this mythical paradise", "response": "Shangri-La", "value": 1200 },
-    { "clue": "This ape hero of Chinese legend can somersault thousands of miles on a cloud", "response": "the Monkey King (Sun Wukong)", "value": 1600 },
+    { "clue": "Olivia Newton-John's 1980 roller-disco movie is named for this fabled 'pleasure-dome' city", "response": "Xanadu", "value": 1600 },
     { "clue": "In Browning's poem, the Pied Piper's lost children resurface in this part of Romania", "response": "Transylvania", "value": 2000 }
   ]},
   { "name": "CROWNS AND CONQUERORS", "clues": [
@@ -65,8 +65,8 @@
   { "name": "SOUTH AMERICAN WAYS", "clues": [
     { "clue": "Carmen Miranda, famous for her fruit-piled hats, grew up in this country", "response": "Brazil", "value": 400 },
     { "clue": "Argentina's gaucho cowboys ride these vast, grassy plains", "response": "the Pampas", "value": 800 },
-    { "clue": "Sellers renamed the Patagonian toothfish a 'sea bass' named for this country", "response": "Chile", "value": 1200 },
-    { "clue": "Penguins and glaciers dot this windswept southern tip of Argentina and Chile", "response": "Patagonia", "value": 1600 },
+    { "clue": "A homely deep-water toothfish sells far better as a 'sea bass' named for this country", "response": "Chile", "value": 1200 },
+    { "clue": "Butch Cassidy and the Sundance Kid once ranched in this windswept region of southern Argentina", "response": "Patagonia", "value": 1600 },
     { "clue": "A giant hummingbird and a monkey are etched into Peru's desert among these", "response": "the Nazca Lines", "value": 2000 }
   ]},
   { "name": "MAP OF THE MIGHTY", "clues": [

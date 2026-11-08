@@ -23,15 +23,15 @@
   { "name": "MUSEUM MILE", "clues": [
     { "clue": "Dorothy's ruby slippers and the Hope Diamond belong to this Washington institution", "response": "the Smithsonian", "value": 400 },
     { "clue": "Egypt's Temple of Dendur sits in a glass-walled wing of this Fifth Avenue landmark", "response": "the Met (Metropolitan Museum of Art)", "value": 800 },
-    { "clue": "The Norman Rockwell Museum sits in this Massachusetts town where the artist lived", "response": "Stockbridge", "value": 1200 },
+    { "clue": "A cartoonist's 1918 panel of oddities grew into this chain of 'Odditorium' museums", "response": "Ripley's Believe It or Not (Ripley's)", "value": 1200 },
     { "clue": "Marie Tussaud made death masks in the Revolution, then founded this London wax museum", "response": "Madame Tussauds", "value": 1600 },
     { "clue": "Warhol's 'Campbell's Soup Cans' belong to this four-letter Manhattan collection", "response": "MoMA (the Museum of Modern Art)", "value": 2000 }
   ] },
   { "name": "OLD MASTERS, NEW FRIENDS", "clues": [
-    { "clue": "Leonardo drew this nude man with arms outstretched inside a circle and a square", "response": "Vitruvian Man", "value": 400 },
-    { "clue": "Van Gogh painted vases of these yellow blooms to brighten Gauguin's room in Arles", "response": "sunflowers", "value": 800 },
-    { "clue": "Rembrandt's huge 'The Night Watch' is the pride of this Dutch city's Rijksmuseum", "response": "Amsterdam", "value": 1200 },
-    { "clue": "Leonardo da Vinci filled his notebooks with this backward handwriting", "response": "mirror writing", "value": 1600 },
+    { "clue": "Van Gogh painted vases of these yellow blooms to brighten Gauguin's room in Arles", "response": "sunflowers", "value": 400 },
+    { "clue": "Rembrandt's huge 'The Night Watch' is the pride of this Dutch city's Rijksmuseum", "response": "Amsterdam", "value": 800 },
+    { "clue": "Leonardo drew this nude man with arms outstretched inside a circle and a square", "response": "Vitruvian Man", "value": 1200 },
+    { "clue": "Leonardo wrote his notes right to left, so one of these makes his pages easy to read", "response": "a mirror", "value": 1600 },
     { "clue": "Thomas Gainsborough dressed this young sitter in a shimmering satin suit", "response": "The Blue Boy", "value": 2000 }
   ] },
   { "name": "KIDDIE TV", "clues": [
@@ -42,10 +42,10 @@
     { "clue": "Puppets Kukla and Ollie shared their show's title with this warm human hostess", "response": "Fran Allison (Fran)", "value": 2000 }
   ] },
   { "name": "SNAPSHOTS IN TIME", "clues": [
-    { "clue": "A famous 1965 photo shows this boxer snarling over a fallen Sonny Liston", "response": "Muhammad Ali", "value": 400 },
-    { "clue": "Apollo 8's crew snapped our blue planet rising over the Moon in this 1968 photo", "response": "Earthrise", "value": 800 },
-    { "clue": "Ironworkers eat on a steel beam high over Manhattan in this famous 1932 photo", "response": "Lunch atop a Skyscraper", "value": 1200 },
-    { "clue": "This genius stuck out his tongue for a photographer on his 72nd birthday", "response": "Albert Einstein", "value": 1600 },
+    { "clue": "This genius stuck out his tongue for a photographer on his 72nd birthday", "response": "Albert Einstein", "value": 400 },
+    { "clue": "A famous 1965 photo shows this boxer snarling over a fallen Sonny Liston", "response": "Muhammad Ali", "value": 800 },
+    { "clue": "Yousuf Karsh plucked away his cigar to get this British leader's famous 1941 scowl", "response": "Winston Churchill", "value": 1200 },
+    { "clue": "Apollo 8's crew snapped our blue planet rising over the Moon in this 1968 photo", "response": "Earthrise", "value": 1600 },
     { "clue": "Neil Armstrong held the camera, so most famous Moon-walk photos show this astronaut", "response": "Buzz Aldrin", "value": 2000 }
   ] },
   { "name": "IT'S NOT EASY BEING GREEN", "clues": [
@@ -71,10 +71,10 @@
   ] },
   { "name": "PIANO LESSON FAVORITES", "clues": [
     { "clue": "Parents hum Johannes Brahms's 'Wiegenlied,' better known as this, at bedtime", "response": "Lullaby (Cradle Song)", "value": 400 },
-    { "clue": "Beethoven dedicated this little piano piece to a mystery woman", "response": "'Für Elise' (Fur Elise)", "value": 800 },
-    { "clue": "Chopin's speedy waltz shares its nickname with this unit of time, but takes longer", "response": "a minute", "value": 1200 },
-    { "clue": "A critic's image of Lake Lucerne at night gave this Beethoven piano work its nickname", "response": "the Moonlight Sonata", "value": 1600 },
-    { "clue": "Rimsky-Korsakov's frantic interlude depicts the flight of this buzzing insect", "response": "a bumblebee", "value": 2000 }
+    { "clue": "Rimsky-Korsakov's frantic interlude depicts the flight of this buzzing insect", "response": "a bumblebee", "value": 800 },
+    { "clue": "Beethoven dedicated this little piano piece to a mystery woman", "response": "'Für Elise' (Fur Elise)", "value": 1200 },
+    { "clue": "Chopin's speedy waltz shares its nickname with this unit of time, but takes longer", "response": "a minute", "value": 1600 },
+    { "clue": "A critic's image of Lake Lucerne at night gave this Beethoven piano work its nickname", "response": "the Moonlight Sonata", "value": 2000 }
   ] },
   { "name": "HOMES WITH A HISTORY", "clues": [
     { "clue": "A ladies' association saved George Washington's Potomac River estate in the 1850s", "response": "Mount Vernon", "value": 400 },

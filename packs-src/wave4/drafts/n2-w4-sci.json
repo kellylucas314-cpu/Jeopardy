@@ -1,362 +1,86 @@
 [
-  {
-    "name": "WILD CARDS",
-    "clues": [
-      {
-        "clue": "Many of them hunt by echolocation, and these night fliers are the only mammals capable of true flight",
-        "response": "bats",
-        "value": 400
-      },
-      {
-        "clue": "A narwhal's spiraling 'tusk' is actually one of these, grown long enough to pierce the lip",
-        "response": "a tooth",
-        "value": 800
-      },
-      {
-        "clue": "Their name means 'single opening,' and these egg-laying mammals include the duck-billed platypus",
-        "response": "monotremes",
-        "value": 1200
-      },
-      {
-        "clue": "Mexico's axolotl, which keeps its feathery gills into adulthood, is a type of this amphibian",
-        "response": "a salamander",
-        "value": 1600
-      },
-      {
-        "clue": "Dried out into a shriveled 'tun,' these micro-animals can revive after years without water",
-        "response": "tardigrades",
-        "value": 2000
-      }
-    ]
-  },
-  {
-    "name": "BODY OF WORK",
-    "clues": [
-      {
-        "clue": "Harder even than bone, this glossy outer layer of each tooth is the hardest tissue you have",
-        "response": "enamel",
-        "value": 400
-      },
-      {
-        "clue": "Hair and fingernails are built mostly from this tough protein, also found in hooves and horns",
-        "response": "keratin",
-        "value": 800
-      },
-      {
-        "clue": "The body's thickest and strongest of its kind, this heel cord can still snap during a sprint",
-        "response": "the Achilles tendon",
-        "value": 1200
-      },
-      {
-        "clue": "Freckles and suntans both come from cells pumping out extra amounts of this pigment",
-        "response": "melanin",
-        "value": 1600
-      },
-      {
-        "clue": "Its name is Latin for 'little brain,' and it sits at the back of the skull coordinating balance",
-        "response": "the cerebellum",
-        "value": 2000
-      }
-    ]
-  },
-  {
-    "name": "MISSION CONTROL FREAKS",
-    "clues": [
-      {
-        "clue": "Neil Armstrong's 'one small step' came off the ladder of this lunar module",
-        "response": "the Eagle",
-        "value": 400
-      },
-      {
-        "clue": "Ken Mattingly was bumped from this 1970 mission days before launch after a German measles exposure",
-        "response": "Apollo 13",
-        "value": 800
-      },
-      {
-        "clue": "Each carrying a golden record of earthly sounds, these twin probes left Earth in 1977",
-        "response": "Voyager (Voyager 1 and 2)",
-        "value": 1200
-      },
-      {
-        "clue": "Radioing under the call sign 'Chaika,' or 'Seagull,' she became the first woman in orbit in 1963",
-        "response": "Valentina Tereshkova",
-        "value": 1600
-      },
-      {
-        "clue": "When New Horizons flew past Pluto in 2015, it carried some ashes of this man who found it",
-        "response": "Clyde Tombaugh",
-        "value": 2000
-      }
-    ]
-  },
-  {
-    "name": "FORCE OF HABIT",
-    "clues": [
-      {
-        "clue": "You'd weigh about a sixth as much on the moon thanks to its much weaker pull of this",
-        "response": "gravity",
-        "value": 400
-      },
-      {
-        "clue": "Physics says this can't be created or destroyed, only changed from one form into another",
-        "response": "energy",
-        "value": 800
-      },
-      {
-        "clue": "An alarm clock ringing inside a jar goes silent once the air is pumped out, leaving this",
-        "response": "a vacuum",
-        "value": 1200
-      },
-      {
-        "clue": "Pools look shallower than they really are because of this bending of light at the surface",
-        "response": "refraction",
-        "value": 1600
-      },
-      {
-        "clue": "Police radar guns clock speeders by measuring this shift in the frequency of returning waves",
-        "response": "the Doppler effect",
-        "value": 2000
-      }
-    ]
-  },
-  {
-    "name": "WHOSE FOOD IS IT ANYWAY?",
-    "clues": [
-      {
-        "clue": "Beef Stroganoff takes its name from a family of nobles in this country",
-        "response": "Russia",
-        "value": 400
-      },
-      {
-        "clue": "Peach Melba honors Nellie Melba, an opera soprano from this country",
-        "response": "Australia",
-        "value": 800
-      },
-      {
-        "clue": "Antoine's restaurant in this city named its rich Oysters Rockefeller for the era's richest man",
-        "response": "New Orleans",
-        "value": 1200
-      },
-      {
-        "clue": "Caesar Cardini is credited with tossing the first Caesar salad at his restaurant in this Mexican city",
-        "response": "Tijuana",
-        "value": 1600
-      },
-      {
-        "clue": "Legend says Pizza Margherita was named in 1889 for Queen Margherita, wife of this Italian king",
-        "response": "Umberto I",
-        "value": 2000
-      }
-    ]
-  },
-  {
-    "name": "THE CHEMISTRY SET",
-    "clues": [
-      {
-        "clue": "Its formula, H2O2, adds just one oxygen atom to water's, and it can bleach hair blond",
-        "response": "hydrogen peroxide",
-        "value": 400
-      },
-      {
-        "clue": "Cows burp out vast amounts of this greenhouse gas, CH4, the main part of natural gas",
-        "response": "methane",
-        "value": 800
-      },
-      {
-        "clue": "Chemists call baking soda this compound, NaHCO3, which fizzes up when it meets vinegar",
-        "response": "sodium bicarbonate",
-        "value": 1200
-      },
-      {
-        "clue": "Dentists call it laughing gas, but chemists know it as N2O, this compound",
-        "response": "nitrous oxide",
-        "value": 1600
-      },
-      {
-        "clue": "Three parts of it to one part nitric make aqua regia, the 'royal water' that dissolves gold",
-        "response": "hydrochloric acid",
-        "value": 2000
-      }
-    ]
-  },
-  {
-    "name": "THAT ROCKS!",
-    "clues": [
-      {
-        "clue": "Called magma while it's underground, molten rock gets this name once it pours out",
-        "response": "lava",
-        "value": 400
-      },
-      {
-        "clue": "Talc sits at 1 on the Mohs hardness scale, and this gem sits at the top at 10",
-        "response": "diamond",
-        "value": 800
-      },
-      {
-        "clue": "Alfred Wegener named this ancient supercontinent that later split into Laurasia and Gondwana",
-        "response": "Pangaea",
-        "value": 1200
-      },
-      {
-        "clue": "Heat and pressure transform this sedimentary rock, often packed with fossil shells, into marble",
-        "response": "limestone",
-        "value": 1600
-      },
-      {
-        "clue": "Hawaii's Mauna Loa is this broad, gently sloping type, named for a warrior's gear",
-        "response": "a shield volcano",
-        "value": 2000
-      }
-    ]
-  },
-  {
-    "name": "KITCHEN FRENCH",
-    "clues": [
-      {
-        "clue": "Cooks pour brandy over crêpes Suzette and set it alight to serve them this way",
-        "response": "flambé (flambe)",
-        "value": 400
-      },
-      {
-        "clue": "Butter and flour cooked together make this thickener, the starting point of a gumbo",
-        "response": "roux",
-        "value": 800
-      },
-      {
-        "clue": "Carrots cut into matchstick-thin strips have been given this cut",
-        "response": "julienne",
-        "value": 1200
-      },
-      {
-        "clue": "From the French for 'rags,' this cut turns rolled-up basil leaves into thin ribbons",
-        "response": "chiffonade",
-        "value": 1600
-      },
-      {
-        "clue": "Anthony Bourdain called this French term for kitchen prep 'the religion of all good line cooks'",
-        "response": "mise en place",
-        "value": 2000
-      }
-    ]
-  },
-  {
-    "name": "SHE MADE IT",
-    "clues": [
-      {
-        "clue": "In 1997 Massachusetts honored this Ruth Wakefield treat with official state status",
-        "response": "the chocolate chip cookie",
-        "value": 400
-      },
-      {
-        "clue": "Riding a New York streetcar in sleet inspired Mary Anderson's 1903 patent for this",
-        "response": "the windshield wiper",
-        "value": 800
-      },
-      {
-        "clue": "Margaret Knight's 1871 machine folded and glued flat-bottomed versions of these grocery staples",
-        "response": "paper bags",
-        "value": 1200
-      },
-      {
-        "clue": "Bank secretary Bette Nesmith Graham whipped up this white correction fluid in her kitchen",
-        "response": "Liquid Paper",
-        "value": 1600
-      },
-      {
-        "clue": "DuPont chemist Stephanie Kwolek invented this fiber, five times stronger than steel by weight",
-        "response": "Kevlar",
-        "value": 2000
-      }
-    ]
-  },
-  {
-    "name": "WHEY TO GO",
-    "clues": [
-      {
-        "clue": "EU rules let only Greece sell this cheese, made mostly from sheep's milk, under its name",
-        "response": "feta",
-        "value": 400
-      },
-      {
-        "clue": "Dots spelling out its name are pressed into the rind of this hard Italian 'king of cheeses'",
-        "response": "Parmigiano-Reggiano (Parmesan)",
-        "value": 800
-      },
-      {
-        "clue": "Often paired with port at Christmas, this blue is nicknamed the 'King of English Cheeses'",
-        "response": "Stilton",
-        "value": 1200
-      },
-      {
-        "clue": "Named for a town near Milan, this Italian blue comes in a creamy 'dolce' style and a sharper 'piccante'",
-        "response": "Gorgonzola",
-        "value": 1600
-      },
-      {
-        "clue": "Sheep of La Mancha supply the milk for this Spanish cheese, its rind stamped with a woven pattern",
-        "response": "Manchego",
-        "value": 2000
-      }
-    ]
-  },
-  {
-    "name": "UNITED UNITS",
-    "clues": [
-      {
-        "clue": "Runners in a marathon cover 42.195 of these metric units, a little over 26 miles",
-        "response": "kilometers",
-        "value": 400
-      },
-      {
-        "clue": "Car engines are rated in this unit, with each one equal to about 746 watts",
-        "response": "horsepower",
-        "value": 800
-      },
-      {
-        "clue": "Han Solo bragged that the Millennium Falcon made the Kessel Run in less than 12 of these",
-        "response": "parsecs",
-        "value": 1200
-      },
-      {
-        "clue": "Mark Twain's pen name came from a riverboat call meaning a depth of two of these",
-        "response": "fathoms",
-        "value": 1600
-      },
-      {
-        "clue": "Jewelers weigh gems in carats, and each carat equals this many milligrams",
-        "response": "200",
-        "value": 2000
-      }
-    ]
-  },
-  {
-    "name": "THE FRUIT BOWL GAME",
-    "clues": [
-      {
-        "clue": "Its plant's 'trunk' is rolled leaves, not wood, so this yellow fruit really comes from a giant herb",
-        "response": "the banana",
-        "value": 400
-      },
-      {
-        "clue": "An enzyme in this fuzzy brown fruit keeps gelatin desserts from setting",
-        "response": "kiwi (kiwifruit)",
-        "value": 800
-      },
-      {
-        "clue": "Eating seeds of this fruit doomed Persephone to spend part of every year in the underworld",
-        "response": "the pomegranate",
-        "value": 1200
-      },
-      {
-        "clue": "Malaysia's prized Musang King is a variety of this spiky, notoriously smelly fruit",
-        "response": "the durian",
-        "value": 1600
-      },
-      {
-        "clue": "Brazilians eat the fleshy 'apple' that hangs above this nut, which is always sold shelled",
-        "response": "the cashew",
-        "value": 2000
-      }
-    ]
-  }
+  { "name": "WILD CARDS", "clues": [
+    { "clue": "Many of them hunt by echolocation, and these night fliers are the only mammals capable of true flight", "response": "bats", "value": 400 },
+    { "clue": "A narwhal's spiraling 'tusk' is actually one of these, grown long enough to pierce the lip", "response": "a tooth", "value": 800 },
+    { "clue": "Their name means 'single opening,' and these egg-laying mammals include the duck-billed platypus", "response": "monotremes", "value": 1200 },
+    { "clue": "Mexico's axolotl, which keeps its feathery gills into adulthood, is a type of this amphibian", "response": "a salamander", "value": 1600 },
+    { "clue": "Dried out into a shriveled 'tun,' these micro-animals can revive after years without water", "response": "tardigrades", "value": 2000 }
+  ] },
+  { "name": "BODY OF WORK", "clues": [
+    { "clue": "Harder even than bone, this glossy outer layer of each tooth is the hardest tissue you have", "response": "enamel", "value": 400 },
+    { "clue": "The body's thickest and strongest of its kind, this heel cord can still snap during a sprint", "response": "the Achilles tendon", "value": 800 },
+    { "clue": "Hair and fingernails are built mostly from this tough protein, also found in hooves and horns", "response": "keratin", "value": 1200 },
+    { "clue": "Freckles and suntans both come from cells pumping out extra amounts of this pigment", "response": "melanin", "value": 1600 },
+    { "clue": "Its name is Latin for 'little brain,' and it sits at the back of the skull coordinating balance", "response": "the cerebellum", "value": 2000 }
+  ] },
+  { "name": "MISSION CONTROL FREAKS", "clues": [
+    { "clue": "Neil Armstrong's 'one small step' came off the ladder of this lunar module", "response": "the Eagle", "value": 400 },
+    { "clue": "Ken Mattingly was bumped from this 1970 mission days before launch after a German measles exposure", "response": "Apollo 13", "value": 800 },
+    { "clue": "Each carrying a golden record of earthly sounds, these twin probes left Earth in 1977", "response": "Voyager (Voyager 1 and 2)", "value": 1200 },
+    { "clue": "Radioing under the call sign 'Chaika,' or 'Seagull,' she became the first woman in orbit in 1963", "response": "Valentina Tereshkova", "value": 1600 },
+    { "clue": "When New Horizons flew past Pluto in 2015, it carried some ashes of this man who found it", "response": "Clyde Tombaugh", "value": 2000 }
+  ] },
+  { "name": "FORCE OF HABIT", "clues": [
+    { "clue": "You'd weigh about a sixth as much on the moon thanks to its much weaker pull of this", "response": "gravity", "value": 400 },
+    { "clue": "Physics says this can't be created or destroyed, only changed from one form into another", "response": "energy", "value": 800 },
+    { "clue": "An alarm clock ringing inside a jar goes silent once the air is pumped out, leaving this", "response": "a vacuum", "value": 1200 },
+    { "clue": "Pools look shallower than they really are because of this bending of light at the surface", "response": "refraction", "value": 1600 },
+    { "clue": "Police radar guns clock speeders by measuring this shift in the frequency of returning waves", "response": "the Doppler effect", "value": 2000 }
+  ] },
+  { "name": "WHOSE FOOD IS IT ANYWAY?", "clues": [
+    { "clue": "Beef Stroganoff takes its name from a family of nobles in this country", "response": "Russia", "value": 400 },
+    { "clue": "Peach Melba honors Nellie Melba, an opera soprano from this country", "response": "Australia", "value": 800 },
+    { "clue": "Antoine's restaurant in this city named its rich Oysters Rockefeller for the era's richest man", "response": "New Orleans", "value": 1200 },
+    { "clue": "Caesar Cardini is credited with tossing the first Caesar salad at his restaurant in this Mexican city", "response": "Tijuana", "value": 1600 },
+    { "clue": "Legend says Pizza Margherita was named in 1889 for Queen Margherita, wife of this Italian king", "response": "Umberto I", "value": 2000 }
+  ] },
+  { "name": "THE CHEMISTRY SET", "clues": [
+    { "clue": "Its formula, H2O2, adds just one oxygen atom to water's, and it can bleach hair blond", "response": "hydrogen peroxide", "value": 400 },
+    { "clue": "Cows burp out vast amounts of this greenhouse gas, CH4, the main part of natural gas", "response": "methane", "value": 800 },
+    { "clue": "Chemists call baking soda this compound, NaHCO3, which fizzes up when it meets vinegar", "response": "sodium bicarbonate", "value": 1200 },
+    { "clue": "Dentists call it laughing gas, but chemists know it as N2O, this compound", "response": "nitrous oxide", "value": 1600 },
+    { "clue": "Three parts of it to one part nitric make aqua regia, the 'royal water' that dissolves gold", "response": "hydrochloric acid", "value": 2000 }
+  ] },
+  { "name": "THAT ROCKS!", "clues": [
+    { "clue": "Called magma while it's underground, molten rock gets this name once it pours out", "response": "lava", "value": 400 },
+    { "clue": "Talc sits at 1 on the Mohs hardness scale, and this gem sits at the top at 10", "response": "diamond", "value": 800 },
+    { "clue": "Alfred Wegener named this ancient supercontinent that later split into Laurasia and Gondwana", "response": "Pangaea", "value": 1200 },
+    { "clue": "Heat and pressure transform this sedimentary rock, often packed with fossil shells, into marble", "response": "limestone", "value": 1600 },
+    { "clue": "Hawaii's Mauna Loa is this broad, gently sloping type, named for a warrior's gear", "response": "a shield volcano", "value": 2000 }
+  ] },
+  { "name": "KITCHEN FRENCH", "clues": [
+    { "clue": "Cooks pour brandy over crêpes Suzette and set it alight to serve them this way", "response": "flambé (flambe)", "value": 400 },
+    { "clue": "Butter and flour cooked together make this thickener, the starting point of a gumbo", "response": "roux", "value": 800 },
+    { "clue": "Carrots cut into matchstick-thin strips have been given this cut", "response": "julienne", "value": 1200 },
+    { "clue": "From the French for 'rags,' this cut turns rolled-up basil leaves into thin ribbons", "response": "chiffonade", "value": 1600 },
+    { "clue": "Anthony Bourdain called this French term for kitchen prep 'the religion of all good line cooks'", "response": "mise en place", "value": 2000 }
+  ] },
+  { "name": "SHE MADE IT", "clues": [
+    { "clue": "In 1997 Massachusetts honored this Ruth Wakefield treat with official state status", "response": "the chocolate chip cookie", "value": 400 },
+    { "clue": "Riding a New York streetcar in sleet inspired Mary Anderson's 1903 patent for this", "response": "the windshield wiper", "value": 800 },
+    { "clue": "Margaret Knight's 1871 machine folded and glued flat-bottomed versions of these grocery staples", "response": "paper bags", "value": 1200 },
+    { "clue": "Bank secretary Bette Nesmith Graham whipped up this white correction fluid in her kitchen", "response": "Liquid Paper", "value": 1600 },
+    { "clue": "DuPont chemist Stephanie Kwolek invented this fiber, five times stronger than steel by weight", "response": "Kevlar", "value": 2000 }
+  ] },
+  { "name": "WHEY TO GO", "clues": [
+    { "clue": "EU rules let only Greece sell this cheese, made mostly from sheep's milk, under its name", "response": "feta", "value": 400 },
+    { "clue": "Dots spelling out its name are pressed into the rind of this hard Italian 'king of cheeses'", "response": "Parmigiano-Reggiano (Parmesan)", "value": 800 },
+    { "clue": "Often paired with port at Christmas, this blue is nicknamed the 'King of English Cheeses'", "response": "Stilton", "value": 1200 },
+    { "clue": "Named for a town near Milan, this Italian blue comes in a creamy 'dolce' style and a sharper 'piccante'", "response": "Gorgonzola", "value": 1600 },
+    { "clue": "Sheep of La Mancha supply the milk for this Spanish cheese, its rind stamped with a woven pattern", "response": "Manchego", "value": 2000 }
+  ] },
+  { "name": "UNITED UNITS", "clues": [
+    { "clue": "Runners in a marathon cover 42.195 of these metric units, a little over 26 miles", "response": "kilometers", "value": 400 },
+    { "clue": "Car engines are rated in this unit, with each one equal to about 746 watts", "response": "horsepower", "value": 800 },
+    { "clue": "Han Solo bragged that the Millennium Falcon made the Kessel Run in less than 12 of these", "response": "parsecs", "value": 1200 },
+    { "clue": "Mark Twain's pen name came from a riverboat call meaning a depth of two of these", "response": "fathoms", "value": 1600 },
+    { "clue": "Jewelers weigh gems in carats, and each carat equals this many milligrams", "response": "200", "value": 2000 }
+  ] },
+  { "name": "THE FRUIT BOWL GAME", "clues": [
+    { "clue": "Its plant's 'trunk' is rolled leaves, not wood, so this yellow fruit really comes from a giant herb", "response": "the banana", "value": 400 },
+    { "clue": "An enzyme in this fuzzy brown fruit keeps gelatin desserts from setting", "response": "kiwi (kiwifruit)", "value": 800 },
+    { "clue": "Eating seeds of this fruit doomed Persephone to spend part of every year in the underworld", "response": "the pomegranate", "value": 1200 },
+    { "clue": "Malaysia's prized Musang King is a variety of this spiky, notoriously smelly fruit", "response": "the durian", "value": 1600 },
+    { "clue": "Brazilians eat the fleshy 'apple' that hangs above this nut, which is always sold shelled", "response": "the cashew", "value": 2000 }
+  ] }
 ]

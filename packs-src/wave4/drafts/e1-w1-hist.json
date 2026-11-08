@@ -144,7 +144,7 @@
    },
    {
     "clue": "A golden spike finished the first transcontinental railroad at this Utah spot in 1869",
-    "response": "Promontory Summit",
+    "response": "Promontory Summit (Promontory Point)",
     "value": 1000
    }
   ]
@@ -228,8 +228,8 @@
     "value": 600
    },
    {
-    "clue": "General Eisenhower gave the final go-ahead for this June 1944 landing in France",
-    "response": "D-Day",
+    "clue": "Wardens patrolled to make sure no window glowed during these wartime lights-out drills",
+    "response": "blackouts",
     "value": 800
    },
    {
@@ -273,8 +273,8 @@
   "name": "GREAT LAKES, GREAT TIMES",
   "clues": [
    {
-    "clue": "Schoolchildren remember their names with the handy word HOMES",
-    "response": "the Great Lakes",
+    "clue": "In HOMES, the handy word for remembering all five, the H stands for this one",
+    "response": "Huron (Lake Huron)",
     "value": 200
    },
    {
@@ -348,8 +348,8 @@
     "value": 600
    },
    {
-    "clue": "Myth says a goddess won this city's naming rights by giving it an olive tree",
-    "response": "Athens",
+    "clue": "The Spanish Riding School's white Lipizzaner stallions perform in this capital, not Madrid",
+    "response": "Vienna",
     "value": 800
    },
    {

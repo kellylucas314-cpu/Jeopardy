@@ -98,13 +98,13 @@
         "value": 200
       },
       {
-        "clue": "'Rain before seven, clear by' this hour, the old weather rhyme promises",
-        "response": "eleven",
+        "clue": "The blustery weeks of this month are said to go from lion to lamb",
+        "response": "March",
         "value": 400
       },
       {
-        "clue": "The blustery weeks of this month are said to go from lion to lamb",
-        "response": "March",
+        "clue": "'Rain before seven, clear by' this hour, the old weather rhyme promises",
+        "response": "eleven",
         "value": 600
       },
       {
@@ -128,8 +128,8 @@
         "value": 200
       },
       {
-        "clue": "Shearing this woolly animal each spring gives us yarn for sweaters",
-        "response": "a sheep",
+        "clue": "Folks who can't sleep are told to count these woolly animals jumping a fence",
+        "response": "sheep",
         "value": 400
       },
       {
@@ -138,7 +138,7 @@
         "value": 600
       },
       {
-        "clue": "Mother horses are called this, and their babies are foals",
+        "clue": "It's a mother horse, and put 'night' in front of it for a bad dream",
         "response": "a mare",
         "value": 800
       },
@@ -193,8 +193,8 @@
         "value": 400
       },
       {
-        "clue": "Key lime pie is the official pie of this sunny state",
-        "response": "Florida",
+        "clue": "Mashed potatoes, not pastry, top this meat pie named for a sheep-tending job",
+        "response": "shepherd's pie",
         "value": 600
       },
       {
@@ -293,7 +293,7 @@
         "value": 800
       },
       {
-        "clue": "A full English breakfast often includes this dark sausage made with blood",
+        "clue": "A full English breakfast often includes this dark sausage whose name sounds like a dessert",
         "response": "black pudding",
         "value": 1000
       }
@@ -348,8 +348,8 @@
         "value": 600
       },
       {
-        "clue": "This Atlanta pharmacist first mixed up Coca-Cola in 1886",
-        "response": "John Pemberton",
+        "clue": "Maine's official soft drink, this bitter old brand gave English a word for nerve",
+        "response": "Moxie",
         "value": 800
       },
       {

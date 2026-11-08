@@ -113,7 +113,7 @@
     "value": 1600
    },
    {
-    "clue": "Abolitionists gave this cracked Philadelphia icon its famous name",
+    "clue": "Abolitionists, not the Founders, gave this Philadelphia icon its famous name",
     "response": "the Liberty Bell",
     "value": 2000
    }
@@ -133,13 +133,13 @@
     "value": 800
    },
    {
-    "clue": "Hungry Israelites gathered this 'bread from heaven' each morning in the desert",
-    "response": "manna",
+    "clue": "God spoke to Moses from this plant, which blazed but was not consumed",
+    "response": "a burning bush",
     "value": 1200
    },
    {
-    "clue": "God spoke to Moses from this plant, which blazed but was not consumed",
-    "response": "a burning bush",
+    "clue": "Hungry Israelites gathered this 'bread from heaven' each morning in the desert",
+    "response": "manna",
     "value": 1600
    },
    {
@@ -183,8 +183,8 @@
   "name": "STORE-Y TIME",
   "clues": [
    {
-    "clue": "The 1960 Greensboro sit-ins began at this chain's lunch counter",
-    "response": "Woolworth's",
+    "clue": "Shoppers raced to the flashing 'Blue Light Special' at this discount chain",
+    "response": "Kmart",
     "value": 400
    },
    {
@@ -203,8 +203,8 @@
     "value": 1600
    },
    {
-    "clue": "Shoppers raced to the flashing 'Blue Light Special' at this discount chain",
-    "response": "Kmart",
+    "clue": "The 1960 Greensboro sit-ins began at this chain's lunch counter",
+    "response": "Woolworth's",
     "value": 2000
    }
   ]
@@ -253,7 +253,7 @@
     "value": 800
    },
    {
-    "clue": "This Frenchman painted 'Luncheon of the Boating Party'",
+    "clue": "This Frenchman's future wife plays with a little dog in his 'Luncheon of the Boating Party'",
     "response": "Pierre-Auguste Renoir",
     "value": 1200
    },
@@ -353,7 +353,7 @@
     "value": 1600
    },
    {
-    "clue": "Josephine Cochrane patented this kitchen machine in 1886",
+    "clue": "Tired of servants chipping her china, Josephine Cochrane patented this machine in 1886",
     "response": "the dishwasher",
     "value": 2000
    }

@@ -228,13 +228,13 @@
         "value": 600
       },
       {
-        "clue": "Times before noon get 'a.m.,' short for this Latin phrase",
-        "response": "ante meridiem",
+        "clue": "'E.g.' abbreviates the Latin 'exempli gratia,' meaning this",
+        "response": "for example",
         "value": 800
       },
       {
-        "clue": "'E.g.' abbreviates the Latin 'exempli gratia,' meaning this",
-        "response": "for example",
+        "clue": "Times before noon get 'a.m.,' short for this Latin phrase",
+        "response": "ante meridiem",
         "value": 1000
       }
     ]
@@ -338,8 +338,8 @@
         "value": 200
       },
       {
-        "clue": "Truman Capote's novella introduced the charming party girl Holly Golightly",
-        "response": "Breakfast at Tiffany's",
+        "clue": "Ryan O'Neal and Ali MacGraw wept through the 1970 film of this Erich Segal bestseller",
+        "response": "Love Story",
         "value": 400
       },
       {

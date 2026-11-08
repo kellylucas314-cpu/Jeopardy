@@ -1,362 +1,86 @@
 [
- {
-  "name": "CHECKMATES",
-  "clues": [
-   {
-    "clue": "Moving in an L shape, this chess piece can hop right over anything in its path",
-    "response": "the knight",
-    "value": 400
-   },
-   {
-    "clue": "The fastest possible checkmate, it can end a game after only two moves apiece",
-    "response": "fool's mate",
-    "value": 800
-   },
-   {
-    "clue": "This IBM computer beat world champion Garry Kasparov in a six-game match in 1997",
-    "response": "Deep Blue",
-    "value": 1200
-   },
-   {
-    "clue": "Bobby Fischer took the world chess title from this Soviet in Reykjavík in 1972",
-    "response": "Boris Spassky",
-    "value": 1600
-   },
-   {
-    "clue": "Chess ratings bear the name of this Hungarian-born physics professor from Milwaukee",
-    "response": "Arpad Elo",
-    "value": 2000
-   }
-  ]
- },
- {
-  "name": "ART MOVES",
-  "clues": [
-   {
-    "clue": "Monet, Renoir and Degas hung works at Nadar's old Paris studio in 1874, the debut of this movement",
-    "response": "Impressionism",
-    "value": 400
-   },
-   {
-    "clue": "Analytic and Synthetic are the two phases of this movement, the second bringing in collage",
-    "response": "Cubism",
-    "value": 800
-   },
-   {
-    "clue": "Matisse's 'Woman with a Hat' caused an uproar at the 1905 Salon d'Automne, debut of this movement",
-    "response": "Fauvism",
-    "value": 1200
-   },
-   {
-    "clue": "Signed 'R. Mutt,' Duchamp's urinal titled 'Fountain' is an icon of this anti-art movement",
-    "response": "Dada",
-    "value": 1600
-   },
-   {
-    "clue": "Gerrit Rietveld's angular Red and Blue Chair is a 3-D icon of this Dutch art movement",
-    "response": "De Stijl",
-    "value": 2000
-   }
-  ]
- },
- {
-  "name": "TORCHBEARING TOWNS",
-  "clues": [
-   {
-    "clue": "The 1988 Summer Olympics were held in this South Korean capital",
-    "response": "Seoul",
-    "value": 400
-   },
-   {
-    "clue": "Mark Spitz won seven swimming golds at the 1972 Summer Games in this city",
-    "response": "Munich",
-    "value": 800
-   },
-   {
-    "clue": "Norway's Winter Games of 1994 went to this small lakeside town north of Oslo",
-    "response": "Lillehammer",
-    "value": 1200
-   },
-   {
-    "clue": "Quarantine rules sent the 1956 equestrian events to Stockholm, far from this host city",
-    "response": "Melbourne",
-    "value": 1600
-   },
-   {
-    "clue": "This resort in Italy's Dolomites hosted the 1956 Winter Games and co-hosted with Milan in 2026",
-    "response": "Cortina d'Ampezzo",
-    "value": 2000
-   }
-  ]
- },
- {
-  "name": "STRUCTURAL INTEGRITY",
-  "clues": [
-   {
-    "clue": "Before it became a palace and museum, this Paris landmark began as a 12th-century fortress",
-    "response": "the Louvre",
-    "value": 400
-   },
-   {
-    "clue": "Pope Benedict XVI consecrated this Gaudí church in Barcelona as a basilica in 2010",
-    "response": "the Sagrada Família",
-    "value": 800
-   },
-   {
-    "clue": "Its architect quit in 1966 and never came back to see this harborside landmark completed",
-    "response": "the Sydney Opera House",
-    "value": 1200
-   },
-   {
-    "clue": "A whisper carries clear around the dome's Whispering Gallery in this Wren landmark in London",
-    "response": "St. Paul's Cathedral",
-    "value": 1600
-   },
-   {
-    "clue": "Mies van der Rohe's bronze-toned 1958 tower on Park Avenue was built for this liquor company",
-    "response": "Seagram",
-    "value": 2000
-   }
-  ]
- },
- {
-  "name": "FAITH-BASED FACTS",
-  "clues": [
-   {
-    "clue": "Families open the door for the prophet Elijah during the Seder of this holiday",
-    "response": "Passover",
-    "value": 400
-   },
-   {
-    "clue": "Many Christians get a smudged cross on the forehead to mark this first day of Lent",
-    "response": "Ash Wednesday",
-    "value": 800
-   },
-   {
-    "clue": "Hindus keep bottled water from this holy river at home, and drops of it are given to the dying",
-    "response": "the Ganges",
-    "value": 1200
-   },
-   {
-    "clue": "Its fire temples keep sacred flames lit, and its dead were traditionally left on 'towers of silence'",
-    "response": "Zoroastrianism",
-    "value": 1600
-   },
-   {
-    "clue": "These gates, often painted vermilion, mark the entrance to a Shinto shrine",
-    "response": "torii",
-    "value": 2000
-   }
-  ]
- },
- {
-  "name": "IN THE FAST LANE",
-  "clues": [
-   {
-    "clue": "France's famed 24-hour endurance race is traditionally run in June at this town",
-    "response": "Le Mans",
-    "value": 400
-   },
-   {
-    "clue": "Called 'The Great American Race', this NASCAR classic is run in Florida each February",
-    "response": "the Daytona 500",
-    "value": 800
-   },
-   {
-    "clue": "Winners of this race at the Brickyard traditionally swig a bottle of milk in Victory Lane",
-    "response": "the Indianapolis 500 (Indy 500)",
-    "value": 1200
-   },
-   {
-    "clue": "Ferrari's badge shows this rearing animal on a yellow shield",
-    "response": "a horse (prancing horse)",
-    "value": 1600
-   },
-   {
-    "clue": "Scotsman Jackie Stewart nicknamed Germany's forested Nürburgring circuit this",
-    "response": "the Green Hell",
-    "value": 2000
-   }
-  ]
- },
- {
-  "name": "PLAYING YOUR CARDS RIGHT",
-  "clues": [
-   {
-    "clue": "Ohio barber Merle Robbins dreamed up this card game in 1971, and Mattel later bought it",
-    "response": "Uno",
-    "value": 400
-   },
-   {
-    "clue": "Off screen, Egyptian film star Omar Sharif was a world-class player of this card game",
-    "response": "bridge",
-    "value": 800
-   },
-   {
-    "clue": "In Texas hold 'em, the first three community cards are dealt together as this",
-    "response": "the flop",
-    "value": 1200
-   },
-   {
-    "clue": "The joker first joined the deck as a top trump in this trick-taking Midwestern favorite",
-    "response": "euchre",
-    "value": 1600
-   },
-   {
-    "clue": "Before fortune-tellers took up this deck, it was used for a game in 15th-century Italy",
-    "response": "tarot",
-    "value": 2000
-   }
-  ]
- },
- {
-  "name": "DIAMOND MINDS",
-  "clues": [
-   {
-    "clue": "The 'Green Monster' looms over left field at this Boston ballpark",
-    "response": "Fenway Park",
-    "value": 400
-   },
-   {
-    "clue": "This Chicago ballpark didn't install lights for night games until 1988",
-    "response": "Wrigley Field",
-    "value": 800
-   },
-   {
-    "clue": "This Pirates star died in a 1972 plane crash while flying relief supplies to Nicaragua",
-    "response": "Roberto Clemente",
-    "value": 1200
-   },
-   {
-    "clue": "Old-time announcers call an easy, lazy fly ball 'a can of' this",
-    "response": "corn",
-    "value": 1600
-   },
-   {
-    "clue": "Credited to Dennis Eckersley, this term describes a homer that ends the game on the spot",
-    "response": "walk-off",
-    "value": 2000
-   }
-  ]
- },
- {
-  "name": "PLAYER ONE",
-  "clues": [
-   {
-    "clue": "Its creator imagined a pizza missing a slice when he designed this ghost-gobbling hero",
-    "response": "Pac-Man",
-    "value": 400
-   },
-   {
-    "clue": "Swedish programmer Markus Persson created this block-building game, later bought by Microsoft",
-    "response": "Minecraft",
-    "value": 800
-   },
-   {
-    "clue": "The name Pokémon is a shortened form of these two English words",
-    "response": "pocket monsters",
-    "value": 1200
-   },
-   {
-    "clue": "Nolan Bushnell co-founded this company, which hit it big with 'Pong'",
-    "response": "Atari",
-    "value": 1600
-   },
-   {
-    "clue": "Shigeru Miyamoto named this Nintendo princess after F. Scott Fitzgerald's wife",
-    "response": "Zelda",
-    "value": 2000
-   }
-  ]
- },
- {
-  "name": "SELF-MADE",
-  "clues": [
-   {
-    "clue": "Childless, this chocolate maker founded a school for orphans in 1909 and later gave it his fortune",
-    "response": "Milton Hershey",
-    "value": 400
-   },
-   {
-    "clue": "To lure crowds at Chicago's 1893 fair, this Pittsburgh food maker handed out little pickle pins",
-    "response": "Heinz (H.J. Heinz)",
-    "value": 800
-   },
-   {
-    "clue": "Top sellers of her Dallas cosmetics company won pink Cadillacs",
-    "response": "Mary Kay Ash",
-    "value": 1200
-   },
-   {
-    "clue": "In 1962 this Bentonville five-and-dime owner opened his first discount store in Rogers, Arkansas",
-    "response": "Sam Walton",
-    "value": 1600
-   },
-   {
-    "clue": "Before teaming with Alvah Roebuck, Richard Sears got his start selling these by mail",
-    "response": "watches",
-    "value": 2000
-   }
-  ]
- },
- {
-  "name": "CUSTOM-MADE",
-  "clues": [
-   {
-    "clue": "Children get money in red envelopes during this holiday, also called the Spring Festival",
-    "response": "Chinese New Year (Lunar New Year)",
-    "value": 400
-   },
-   {
-    "clue": "Blindfolded kids swing a stick at this candy-filled papier-mâché figure",
-    "response": "a piñata",
-    "value": 800
-   },
-   {
-    "clue": "Professor Maulana Karenga created this seven-day African American holiday in 1966",
-    "response": "Kwanzaa",
-    "value": 1200
-   },
-   {
-    "clue": "Japanese friends picnic under cherry blossoms in this springtime custom",
-    "response": "hanami",
-    "value": 1600
-   },
-   {
-    "clue": "Mexican neighbors reenact Mary and Joseph's search for lodging in this Christmas tradition",
-    "response": "Las Posadas",
-    "value": 2000
-   }
-  ]
- },
- {
-  "name": "TEE-RIFFIC",
-  "clues": [
-   {
-    "clue": "A friendly do-over shot in a casual round of golf goes by this Irish surname",
-    "response": "a mulligan",
-    "value": 400
-   },
-   {
-    "clue": "The winner of the Masters slips on this famous article of clothing",
-    "response": "the green jacket",
-    "value": 800
-   },
-   {
-    "clue": "Apollo 14's Alan Shepard swung a makeshift six-iron and hit golf balls here in 1971",
-    "response": "the Moon",
-    "value": 1200
-   },
-   {
-    "clue": "First played in 1860 at Prestwick in Scotland, it's the oldest of golf's four majors",
-    "response": "the Open Championship (British Open)",
-    "value": 1600
-   },
-   {
-    "clue": "Three under par on a single hole is called this rare seabird",
-    "response": "an albatross (double eagle)",
-    "value": 2000
-   }
-  ]
- }
+  { "name": "CHECKMATES", "clues": [
+    { "clue": "Moving in an L shape, this chess piece can hop right over anything in its path", "response": "the knight", "value": 400 },
+    { "clue": "The fastest possible checkmate, it can end a game after only two moves apiece", "response": "fool's mate", "value": 800 },
+    { "clue": "This IBM computer beat world champion Garry Kasparov in a six-game match in 1997", "response": "Deep Blue", "value": 1200 },
+    { "clue": "Bobby Fischer took the world chess title from this Soviet in Reykjavík in 1972", "response": "Boris Spassky", "value": 1600 },
+    { "clue": "Chess ratings bear the name of this Hungarian-born physics professor from Milwaukee", "response": "Arpad Elo", "value": 2000 }
+  ] },
+  { "name": "ART MOVES", "clues": [
+    { "clue": "Monet, Renoir and Degas hung works at Nadar's old Paris studio in 1874, the debut of this movement", "response": "Impressionism", "value": 400 },
+    { "clue": "Analytic and Synthetic are the two phases of this movement, the second bringing in collage", "response": "Cubism", "value": 800 },
+    { "clue": "Matisse's 'Woman with a Hat' caused an uproar at the 1905 Salon d'Automne, debut of this movement", "response": "Fauvism", "value": 1200 },
+    { "clue": "Signed 'R. Mutt,' Duchamp's urinal titled 'Fountain' is an icon of this anti-art movement", "response": "Dada", "value": 1600 },
+    { "clue": "Gerrit Rietveld's angular Red and Blue Chair is a 3-D icon of this Dutch art movement", "response": "De Stijl", "value": 2000 }
+  ] },
+  { "name": "TORCHBEARING TOWNS", "clues": [
+    { "clue": "The 1988 Summer Olympics were held in this South Korean capital", "response": "Seoul", "value": 400 },
+    { "clue": "Mark Spitz won seven swimming golds at the 1972 Summer Games in this city", "response": "Munich", "value": 800 },
+    { "clue": "Norway's Winter Games of 1994 went to this small lakeside town north of Oslo", "response": "Lillehammer", "value": 1200 },
+    { "clue": "Quarantine rules sent the 1956 equestrian events to Stockholm, far from this host city", "response": "Melbourne", "value": 1600 },
+    { "clue": "This resort in Italy's Dolomites hosted the 1956 Winter Games and co-hosted with Milan in 2026", "response": "Cortina d'Ampezzo", "value": 2000 }
+  ] },
+  { "name": "STRUCTURAL INTEGRITY", "clues": [
+    { "clue": "Before it became a palace and museum, this Paris landmark began as a 12th-century fortress", "response": "the Louvre", "value": 400 },
+    { "clue": "Pope Benedict XVI consecrated this Gaudí church in Barcelona as a basilica in 2010", "response": "the Sagrada Família", "value": 800 },
+    { "clue": "Its architect quit in 1966 and never came back to see this harborside landmark completed", "response": "the Sydney Opera House", "value": 1200 },
+    { "clue": "A whisper carries clear around the dome's Whispering Gallery in this Wren landmark in London", "response": "St. Paul's Cathedral", "value": 1600 },
+    { "clue": "Mies van der Rohe's bronze-toned 1958 tower on Park Avenue was built for this liquor company", "response": "Seagram", "value": 2000 }
+  ] },
+  { "name": "FAITH-BASED FACTS", "clues": [
+    { "clue": "Families open the door for the prophet Elijah during the Seder of this holiday", "response": "Passover", "value": 400 },
+    { "clue": "Many Christians get a smudged cross on the forehead to mark this first day of Lent", "response": "Ash Wednesday", "value": 800 },
+    { "clue": "Hindus keep bottled water from this holy river at home, and drops of it are given to the dying", "response": "the Ganges", "value": 1200 },
+    { "clue": "Its fire temples keep sacred flames lit, and its dead were traditionally left on 'towers of silence'", "response": "Zoroastrianism", "value": 1600 },
+    { "clue": "These gates, often painted vermilion, mark the entrance to a Shinto shrine", "response": "torii", "value": 2000 }
+  ] },
+  { "name": "IN THE FAST LANE", "clues": [
+    { "clue": "France's famed 24-hour endurance race is traditionally run in June at this town", "response": "Le Mans", "value": 400 },
+    { "clue": "Called 'The Great American Race', this NASCAR classic is run in Florida each February", "response": "the Daytona 500", "value": 800 },
+    { "clue": "Winners of this race at the Brickyard traditionally swig a bottle of milk in Victory Lane", "response": "the Indianapolis 500 (Indy 500)", "value": 1200 },
+    { "clue": "Born in Italy, this American won at Indianapolis in 1969 and took the 1978 Formula One title", "response": "Mario Andretti", "value": 1600 },
+    { "clue": "Scotsman Jackie Stewart nicknamed Germany's forested Nürburgring circuit this", "response": "the Green Hell", "value": 2000 }
+  ] },
+  { "name": "PLAYING YOUR CARDS RIGHT", "clues": [
+    { "clue": "Ohio barber Merle Robbins dreamed up this card game in 1971, and Mattel later bought it", "response": "Uno", "value": 400 },
+    { "clue": "Off screen, Egyptian film star Omar Sharif was a world-class player of this card game", "response": "bridge", "value": 800 },
+    { "clue": "In Texas hold 'em, the first three community cards are dealt together as this", "response": "the flop", "value": 1200 },
+    { "clue": "The joker first joined the deck as a top trump in this trick-taking Midwestern favorite", "response": "euchre", "value": 1600 },
+    { "clue": "Before fortune-tellers took up this deck, it was used for a game in 15th-century Italy", "response": "tarot", "value": 2000 }
+  ] },
+  { "name": "DIAMOND MINDS", "clues": [
+    { "clue": "The 'Green Monster' looms over left field at this Boston ballpark", "response": "Fenway Park", "value": 400 },
+    { "clue": "This Chicago ballpark didn't install lights for night games until 1988", "response": "Wrigley Field", "value": 800 },
+    { "clue": "This Pirates star died in a 1972 plane crash while flying relief supplies to Nicaragua", "response": "Roberto Clemente", "value": 1200 },
+    { "clue": "Old-time announcers call an easy, lazy fly ball 'a can of' this", "response": "corn", "value": 1600 },
+    { "clue": "Credited to Dennis Eckersley, this term describes a homer that ends the game on the spot", "response": "walk-off", "value": 2000 }
+  ] },
+  { "name": "PLAYER ONE", "clues": [
+    { "clue": "Its creator imagined a pizza missing a slice when he designed this ghost-gobbling hero", "response": "Pac-Man", "value": 400 },
+    { "clue": "Swedish programmer Markus Persson created this block-building game, later bought by Microsoft", "response": "Minecraft", "value": 800 },
+    { "clue": "The name Pokémon is a shortened form of these two English words", "response": "pocket monsters", "value": 1200 },
+    { "clue": "Nolan Bushnell co-founded this company, which hit it big with 'Pong'", "response": "Atari", "value": 1600 },
+    { "clue": "Shigeru Miyamoto named this Nintendo princess after F. Scott Fitzgerald's wife", "response": "Zelda", "value": 2000 }
+  ] },
+  { "name": "SELF-MADE", "clues": [
+    { "clue": "Childless, this chocolate maker founded a school for orphans in 1909 and later gave it his fortune", "response": "Milton Hershey", "value": 400 },
+    { "clue": "To lure crowds at Chicago's 1893 fair, this Pittsburgh food maker handed out little pickle pins", "response": "Heinz (H.J. Heinz)", "value": 800 },
+    { "clue": "Top sellers of her Dallas cosmetics company won pink Cadillacs", "response": "Mary Kay Ash", "value": 1200 },
+    { "clue": "In 1962 this Bentonville five-and-dime owner opened his first discount store in Rogers, Arkansas", "response": "Sam Walton", "value": 1600 },
+    { "clue": "Before teaming with Alvah Roebuck, Richard Sears got his start selling these by mail", "response": "watches", "value": 2000 }
+  ] },
+  { "name": "CUSTOM-MADE", "clues": [
+    { "clue": "Children get money in red envelopes during this holiday, also called the Spring Festival", "response": "Chinese New Year (Lunar New Year)", "value": 400 },
+    { "clue": "Blindfolded kids swing a stick at this candy-filled papier-mâché figure", "response": "a piñata", "value": 800 },
+    { "clue": "Professor Maulana Karenga created this seven-day African American holiday in 1966", "response": "Kwanzaa", "value": 1200 },
+    { "clue": "Japanese friends picnic under cherry blossoms in this springtime custom", "response": "hanami", "value": 1600 },
+    { "clue": "Mexican neighbors reenact Mary and Joseph's search for lodging in this Christmas tradition", "response": "Las Posadas", "value": 2000 }
+  ] },
+  { "name": "TEE-RIFFIC", "clues": [
+    { "clue": "A friendly do-over shot in a casual round of golf goes by this Irish surname", "response": "a mulligan", "value": 400 },
+    { "clue": "The winner of the Masters slips on this famous article of clothing", "response": "the green jacket", "value": 800 },
+    { "clue": "Apollo 14's Alan Shepard swung a makeshift six-iron and hit golf balls here in 1971", "response": "the Moon", "value": 1200 },
+    { "clue": "First played in 1860 at Prestwick in Scotland, it's the oldest of golf's four majors", "response": "the Open Championship (British Open)", "value": 1600 },
+    { "clue": "Three under par on a single hole is called this rare seabird", "response": "an albatross (double eagle)", "value": 2000 }
+  ] }
 ]

@@ -198,8 +198,8 @@
     "value": 1200
    },
    {
-    "clue": "If a starfish loses one of these, it can grow a new one",
-    "response": "an arm",
+    "clue": "Blue-blooded and big-clawed, this New England shellfish turns bright red only when cooked",
+    "response": "a lobster",
     "value": 1600
    },
    {
@@ -258,13 +258,13 @@
     "value": 1200
    },
    {
-    "clue": "In 1963 Bell's push-button phones, sold under this name, began replacing rotary dials",
-    "response": "Touch-Tone",
+    "clue": "3M engineer Richard Drew gave us this clear, sticky roll in 1930",
+    "response": "Scotch tape",
     "value": 1600
    },
    {
-    "clue": "3M engineer Richard Drew gave us this clear, sticky roll in 1930",
-    "response": "Scotch tape",
+    "clue": "In 1963 Bell's push-button phones, sold under this name, began replacing rotary dials",
+    "response": "Touch-Tone",
     "value": 2000
    }
   ]
@@ -308,7 +308,7 @@
     "value": 400
    },
    {
-    "clue": "Thunder is the sound made by this bright flash in a storm",
+    "clue": "Contrary to the saying, it strikes the Empire State Building about two dozen times a year",
     "response": "lightning",
     "value": 800
    },

@@ -163,18 +163,18 @@
     "value": 800
    },
    {
-    "clue": "Its 435 seats are divided among the states by population",
+    "clue": "Every ten years the census reshuffles this body's 435 seats among the states",
     "response": "the House of Representatives",
     "value": 1200
    },
    {
-    "clue": "Every U.S. senator is elected to a term of this many years",
-    "response": "six",
+    "clue": "A candidate needs 270 votes from this body to win the White House",
+    "response": "the Electoral College",
     "value": 1600
    },
    {
-    "clue": "A candidate needs 270 votes from this body to win the White House",
-    "response": "the Electoral College",
+    "clue": "Just a third of the Senate faces voters at a time, since each term runs this many years",
+    "response": "six",
     "value": 2000
    }
   ]
@@ -318,8 +318,8 @@
     "value": 1200
    },
    {
-    "clue": "Thomas Nast's Civil War-era drawings gave this jolly gift-giver his modern look",
-    "response": "Santa Claus",
+    "clue": "This Harper's Weekly cartoonist gave Santa his round belly, fur suit and North Pole home",
+    "response": "Thomas Nast",
     "value": 1600
    },
    {

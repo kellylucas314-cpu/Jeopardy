@@ -218,13 +218,13 @@
     "value": 200
    },
    {
-    "clue": "Dwarves forged this hammer for Thor, but Loki, disguised as a fly, made them botch its handle",
-    "response": "Mjolnir",
+    "clue": "As a prank, this shape-shifting trickster cut off all the golden hair of Thor's wife, Sif",
+    "response": "Loki",
     "value": 400
    },
    {
-    "clue": "As a prank, this shape-shifting trickster cut off all the golden hair of Thor's wife, Sif",
-    "response": "Loki",
+    "clue": "Dwarves forged this hammer for Thor, but Loki, disguised as a fly, made them botch its handle",
+    "response": "Mjolnir",
     "value": 600
    },
    {

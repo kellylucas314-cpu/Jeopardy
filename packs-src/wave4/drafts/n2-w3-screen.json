@@ -4,7 +4,7 @@
     { "clue": "Cio-Cio-San waits in vain at Nagasaki for her American naval officer in this Puccini opera", "response": "Madama Butterfly", "value": 800 },
     { "clue": "Condemned as a traitor, Radamès is entombed alive with his secret love as this Verdi opera ends", "response": "Aida", "value": 1200 },
     { "clue": "Brünnhilde rides into Siegfried's funeral pyre at the end of this last opera of Wagner's 'Ring'", "response": "Götterdämmerung (Twilight of the Gods)", "value": 1600 },
-    { "clue": "Maria Callas sang this Bellini title role 89 times, more than any other part", "response": "Norma", "value": 2000 }
+    { "clue": "Maria Callas sang this Bellini title role more often than any other, her signature part", "response": "Norma", "value": 2000 }
   ] },
   { "name": "DRAMA SCHOOLED", "clues": [
     { "clue": "Bryan Cranston went from a sitcom dad to a meth kingpin on this series", "response": "Breaking Bad", "value": 400 },
@@ -29,8 +29,8 @@
   ] },
   { "name": "CLASSIC ROCK ROLL CALL", "clues": [
     { "clue": "'Whole Lotta Love' and 'Kashmir' are anthems of this band of Jimmy Page and Robert Plant", "response": "Led Zeppelin", "value": 400 },
-    { "clue": "An inflatable pig floated over London's Battersea Power Station for this band's 1977 'Animals' cover", "response": "Pink Floyd", "value": 800 },
-    { "clue": "Don Henley and Glenn Frey checked into 'Hotel California' with this band", "response": "the Eagles", "value": 1200 },
+    { "clue": "Don Henley and Glenn Frey checked into 'Hotel California' with this band", "response": "the Eagles", "value": 800 },
+    { "clue": "An inflatable pig floated over London's Battersea Power Station for this band's 1977 'Animals' cover", "response": "Pink Floyd", "value": 1200 },
     { "clue": "This Jacksonville band's misspelled name poked fun at a gym teacher who hated long hair", "response": "Lynyrd Skynyrd", "value": 1600 },
     { "clue": "Walter Becker and Donald Fagen named their band after a gadget in William Burroughs' 'Naked Lunch'", "response": "Steely Dan", "value": 2000 }
   ] },
@@ -43,15 +43,15 @@
   ] },
   { "name": "BROADWAY BYLINES", "clues": [
     { "clue": "Disney's 'Encanto' and 'Moana' got songs from this Broadway writer-star", "response": "Lin-Manuel Miranda", "value": 400 },
-    { "clue": "'Cats,' 'Evita' and 'The Phantom of the Opera' all came from this English composer", "response": "Andrew Lloyd Webber", "value": 800 },
+    { "clue": "This English composer's 'Jesus Christ Superstar' was a hit album a year before it hit Broadway", "response": "Andrew Lloyd Webber", "value": 800 },
     { "clue": "'I Get a Kick Out of You' and 'Begin the Beguine' came from this Yale-educated songwriter", "response": "Cole Porter", "value": 1200 },
     { "clue": "Mentored as a teen by Oscar Hammerstein II, he later wrote words and music for 'Into the Woods'", "response": "Stephen Sondheim", "value": 1600 },
-    { "clue": "This songwriting team gave Broadway both 'Cabaret' and 'Chicago'", "response": "Kander and Ebb", "value": 2000 }
+    { "clue": "Broadway's 'Chicago' team wrote 'New York, New York' for Liza Minnelli, two years before Sinatra cut it", "response": "Kander and Ebb", "value": 2000 }
   ] },
   { "name": "CATCHPHRASE CRAZE", "clues": [
     { "clue": "'Nanu nanu' was the Orkan greeting of Robin Williams' alien on this sitcom", "response": "Mork & Mindy", "value": 400 },
     { "clue": "'Dy-no-mite!' was J.J. Evans' trademark yell on this 1970s sitcom", "response": "Good Times", "value": 800 },
-    { "clue": "'You bet your bippy!' and 'Here come de judge!' were catchphrases on this 1960s sketch show", "response": "Laugh-In", "value": 1200 },
+    { "clue": "'You bet your sweet bippy!' and 'Here come de judge!' were catchphrases on this 1960s sketch show", "response": "Laugh-In", "value": 1200 },
     { "clue": "'Kiss my grits!' was waitress Flo's favorite retort on this diner sitcom", "response": "Alice", "value": 1600 },
     { "clue": "'Up your nose with a rubber hose!' was Vinnie Barbarino's taunt on this sitcom", "response": "Welcome Back, Kotter", "value": 2000 }
   ] },
@@ -59,8 +59,8 @@
     { "clue": "Themes for a shark, a Jedi and a boy wizard all came from this composer", "response": "John Williams", "value": 400 },
     { "clue": "This composer's slinky saxophone theme backed the cartoon titles of 'The Pink Panther'", "response": "Henry Mancini", "value": 800 },
     { "clue": "This Italian finally won a competitive Oscar for scoring Tarantino's 'The Hateful Eight'", "response": "Ennio Morricone", "value": 1200 },
-    { "clue": "Twin theremins gave an eerie wail to this composer's score for 'The Day the Earth Stood Still'", "response": "Bernard Herrmann", "value": 1600 },
-    { "clue": "This Greek's synthesizer score for 'Chariots of Fire' won the Oscar", "response": "Vangelis", "value": 2000 }
+    { "clue": "This Greek's synthesizer score for 'Chariots of Fire' won the Oscar", "response": "Vangelis", "value": 1600 },
+    { "clue": "Twin theremins gave an eerie wail to this composer's score for 'The Day the Earth Stood Still'", "response": "Bernard Herrmann", "value": 2000 }
   ] },
   { "name": "LONG-PLAYING BEATLES", "clues": [
     { "clue": "George Harrison's 'Something' and 'Here Comes the Sun' both appear on this 1969 album", "response": "Abbey Road", "value": 400 },

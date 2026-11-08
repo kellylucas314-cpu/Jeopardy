@@ -108,13 +108,13 @@
         "value": 600
       },
       {
-        "clue": "Before it grows legs and loses its tail, a baby frog is called this",
-        "response": "a tadpole (polliwog)",
+        "clue": "Robins tug these up from lawns after a rain, and they breathe through their skin",
+        "response": "earthworms",
         "value": 800
       },
       {
-        "clue": "Robins tug these up from lawns after a rain, and they breathe through their skin",
-        "response": "earthworms",
+        "clue": "Grandma warned that handling this warty garden hopper would give you warts, which it won't",
+        "response": "the toad",
         "value": 1000
       }
     ]
@@ -203,8 +203,8 @@
         "value": 800
       },
       {
-        "clue": "Doctors tap just below your kneecap with a little rubber hammer to test these",
-        "response": "reflexes",
+        "clue": "Kids grimaced at a daily spoonful of this fishy oil, given for its vitamins A and D",
+        "response": "cod liver oil",
         "value": 1000
       }
     ]
@@ -258,8 +258,8 @@
         "value": 600
       },
       {
-        "clue": "Scotland's tiny Shetland is a famous breed of this small horse",
-        "response": "a pony",
+        "clue": "Secretariat, Seabiscuit and every Kentucky Derby winner belong to this racing breed",
+        "response": "a Thoroughbred",
         "value": 800
       },
       {

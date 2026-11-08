@@ -173,8 +173,8 @@
         "value": 800
       },
       {
-        "clue": "'Let your fingers do the walking,' said ads for this business phone directory",
-        "response": "the Yellow Pages",
+        "clue": "'Fly the friendly skies,' invited this airline's ads from 1965 on",
+        "response": "United (United Airlines)",
         "value": 1000
       }
     ]
@@ -258,13 +258,13 @@
         "value": 600
       },
       {
-        "clue": "In a tight spot? Then you're said to be 'in a' this",
-        "response": "a pickle",
+        "clue": "High society is nicknamed the 'upper' this, like the top of a loaf or a pie",
+        "response": "crust",
         "value": 800
       },
       {
-        "clue": "The very best of the bunch is called 'the cream of the' this",
-        "response": "crop",
+        "clue": "Something flying off the shelves is said to be 'selling like' these griddle treats",
+        "response": "hotcakes",
         "value": 1000
       }
     ]
@@ -293,8 +293,8 @@
         "value": 800
       },
       {
-        "clue": "Before jets, the Queen Mary and other grand ships of this kind crossed the Atlantic",
-        "response": "ocean liners",
+        "clue": "Low and flat to slide under a cabin berth, this travel case was named for the ships it sailed on",
+        "response": "a steamer trunk",
         "value": 1000
       }
     ]
@@ -338,7 +338,7 @@
         "value": 200
       },
       {
-        "clue": "The cheap daily meal, served on a sectioned dish of a certain color, was this",
+        "clue": "At the diner, the bargain meal of the day was this 'special', named for the color of its dish",
         "response": "the blue plate special",
         "value": 400
       },
