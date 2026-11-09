@@ -16,7 +16,7 @@ import {
 } from './campaign.js';
 import * as sounds from './sounds.js';
 import { loadCharacters, characters, characterById, portraitUrl, poseUrl } from './characters.js';
-import { shape } from './shapes.js';
+import { shape, compassLoader } from './shapes.js';
 
 loadCharacters();
 
@@ -54,24 +54,36 @@ function avatarHtml(p, i = 0) {
     : escapeHtml(p.avatar || monogram(p.name, i));
 }
 
-/** A full-figure pose (ready, thinking, victory) for a player, or '' without a character. */
-function poseHtml(p, pose, cls = '') {
-  const url = poseUrl(p.character, pose);
-  const c = characterById(p.character);
-  return url ? `<img class="player-pose ${cls}" src="${url}" alt="${escapeHtml(p.name)} as ${escapeHtml(c.name)}">` : '';
+/** Napoleon is the one big figure: thinking while you answer, triumphant at the end. */
+const NAPOLEON = {
+  neutral: './assets/napoleon-lowpoly-full.webp',
+  thinking: './assets/napoleon-thinking.webp',
+  victory: './assets/napoleon-victory.webp',
+  face: './assets/napoleon-lowpoly-bust.webp',
+};
+
+/** A remark from the table. Napoleon's own lines carry his face; anyone else's carry their name. */
+function hostLine(text, by = 'Napoleon') {
+  const his = /^(Napoleon|The Emperor)/.test(by);
+  const credit = by === 'Napoleon' ? '' : `<span class="host-attrib">${escapeHtml(by)}</span>`;
+  return `<figure class="host-line${his ? ' is-napoleon' : ''}">
+      ${his ? `<img class="host-face" src="${NAPOLEON.face}" alt="Napoleon">` : ''}
+      <figcaption><span class="host-words">${escapeHtml(text)}</span>${credit}</figcaption>
+    </figure>`;
 }
 
-/** A few big flat shapes behind an in-between screen, like a poster's. */
+/** Map pieces behind an in-between screen: a compass rose, the Légion star, a route, a facet. */
 const SCENES = {
-  chapter: [['sun', 'sc-sun sc-tr'], ['quat', 'sc-jade sc-bl'], ['ast', 'sc-terra sc-ml']],
-  wager: [['sun', 'sc-sun sc-center'], ['plus', 'sc-terra sc-tl'], ['squig', 'sc-jade sc-br']],
-  round: [['arch', 'sc-jade-tint sc-br'], ['sun', 'sc-sun sc-tl'], ['ast', 'sc-terra sc-mr']],
-  final: [['circle', 'sc-terra-tint sc-tr'], ['squig', 'sc-jade sc-bl'], ['quat', 'sc-brass sc-ml']],
-  results: [['quat', 'sc-jade-tint sc-tl'], ['ast', 'sc-terra sc-tr'], ['plus', 'sc-brass sc-bl']],
-  loading: [['quat', 'sc-jade-tint sc-br'], ['plus', 'sc-terra sc-tl']],
+  chapter: [['compass', 'sc-brass sc-tr'], ['route', 'sc-terra sc-bl']],
+  wager: [['star', 'sc-terra sc-tl'], ['compass', 'sc-brass sc-br']],
+  round: [['compass', 'sc-brass sc-tl'], ['facet', 'sc-jade sc-br']],
+  final: [['star', 'sc-terra sc-tr'], ['route', 'sc-brass sc-bl']],
+  results: [['facet', 'sc-jade sc-tl'], ['star', 'sc-brass sc-br']],
+  loading: [['compass', 'sc-brass sc-br']],
+  clue: [],
 };
 function sceneShapes(name) {
-  return `<div class="scene-shapes" aria-hidden="true">${(SCENES[name] || []).map(([s, c]) => shape(s, c)).join('')}</div>`;
+  return `<div class="scene-shapes" aria-hidden="true">${(SCENES[name] || []).map(([sh, c]) => shape(sh, c)).join('')}</div>`;
 }
 
 // The table's character picks on setup, kept across player-count changes.
@@ -84,10 +96,10 @@ let prevLeader = null; // for lead-change announcements
 // The Emperor's table talk — witty, dry, confident, lightly theatrical.
 const CORRECT_LINES = ['The Emperor accepts this answer.', 'A triumph worthy of the Grande Armée.', 'Précisément. Take the spoils.', 'History favors the prepared.', 'A conquest, cleanly executed.', 'The Emperor is… impressed.', 'Vive la victoire!'];
 const WRONG_LINES = ['A tactical retreat.', 'The Emperor regrets to decline.', 'Not even my cavalry could save that one.', 'Bold. Doomed, but bold.', 'We shall not speak of this again.', 'Every campaign has its setbacks.'];
-const TIMEOUT_LINES = ['Time waits for no emperor.', 'The clock has outflanked you.', 'Hesitation — the one enemy I never forgave.'];
+const TIMEOUT_LINES = ['Time waits for no emperor.', 'The clock has outflanked you.', 'Hesitation, the one enemy I never forgave.'];
 const NOBUZZ_LINES = ['No volunteers? Cowardice.', 'The salon falls silent…', 'Even my old guard would not charge at this one.', 'Very well. The board keeps its secret.'];
-const STEAL_LINES = ['The spoils lie unclaimed!', 'An open flank — who will take it?', 'Seize it, or regret it.'];
-const BOARD_LINES = ['Choose your battlefield.', 'The board awaits your command.', 'Pick your ground — history is watching.', 'Retreat is unavailable. Pick a category.', 'Every square hides a small war.'];
+const STEAL_LINES = ['The spoils lie unclaimed!', 'An open flank. Who will take it?', 'Seize it, or regret it.'];
+const BOARD_LINES = ['Choose your battlefield.', 'The board awaits your command.', 'Pick your ground. History is watching.', 'Retreat is unavailable. Pick a category.', 'Every square hides a small war.'];
 
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -281,7 +293,7 @@ function renderSetup() {
         </div>
         <figure class="title-stage" role="img"
                 aria-label="Low-poly Napoleon tips his hat as he rises out of a folded map of Europe">
-          ${shape('sun', 'title-sun')}
+          ${shape('compass', 'title-compass')}
           <img class="title-map title-map-back" src="./assets/napoleon-map-back.webp" alt=""
                width="1485" height="546" decoding="async">
           <video class="title-napoleon" muted loop playsinline preload="metadata"
@@ -353,7 +365,7 @@ function renderSetup() {
               </button>
             </div>
           </div>
-          <button class="btn-start" id="btn-start-game">${playStyle === 'campaign' ? 'March on' : 'Open the Board'}</button>
+          <button class="btn-start" id="btn-start-game">${playStyle === 'campaign' ? 'March on' : 'Open the board'}</button>
         </div>
         <div class="setup-footer">
           <label class="sound-toggle">
@@ -401,7 +413,7 @@ function renderSetup() {
       const card = document.getElementById('chapter-card');
       if (card) card.hidden = style !== 'campaign';
       const start = document.getElementById('btn-start-game');
-      if (start && style !== 'campaign') start.textContent = 'Open the Board';
+      if (start && style !== 'campaign') start.textContent = 'Open the board';
       renderChapterCard();
     });
   });
@@ -698,8 +710,8 @@ function renderLoading() {
     <div class="loading-screen">
       <div class="logo">Clue d&rsquo;&Eacute;tat</div>
       ${ch ? `<div class="chapter-kicker">Chapter ${ch.number} &middot; ${escapeHtml(ch.title)}</div>` : ''}
-      ${shape('sun', 'loading-sun')}
-      <div class="loading-text">${ch ? 'Drawing up the order of battle&hellip;' : 'Loading clues...'}</div>
+      ${compassLoader('loading-compass')}
+      <div class="loading-text">${ch ? 'Drawing up the order of battle&hellip;' : 'Loading clues&hellip;'}</div>
     </div>
   `;
 }
@@ -717,7 +729,7 @@ function renderChapterIntro() {
       <h1 class="chapter-title">${escapeHtml(ch.title)}</h1>
       <div class="chapter-stage">${escapeHtml(ch.stage)} &middot; ${escapeHtml(ch.place)}</div>
       <p class="chapter-blurb">${escapeHtml(ch.blurb)}</p>
-      <div class="host-line">${escapeHtml(ch.quote.text)}<span class="host-attrib">${escapeHtml(ch.quote.by)}</span></div>
+      ${hostLine(ch.quote.text, ch.quote.by)}
       <div class="chapter-intro-facts">
         <span>Target ${money(target)}</span>
         <span>${chapterTimer(ch)}s per clue</span>
@@ -741,7 +753,7 @@ function renderError() {
       <div class="error-box">
         <div class="error-title">Couldn't load the clues</div>
         <div class="error-body">Check your connection and try again.</div>
-        <button class="btn-cta" id="btn-error-retry">Back to Menu</button>
+        <button class="btn-cta" id="btn-error-retry">Back to menu</button>
       </div>
     </div>
   `;
@@ -790,7 +802,7 @@ function renderBoard() {
         <div class="game-board" id="game-board">
           ${categories.map((cat, ci) => `
             <div class="board-category ${cat.themed ? 'themed' : ''}" data-cat="${ci}">
-              <div class="category-header" ${cat.themed ? 'title="This chapter\'s category — three right answers earn the Légion d\'honneur"' : ''}>${escapeHtml(cat.name)}</div>
+              <div class="category-header" ${cat.themed ? 'title="This chapter\'s category: three right answers earn the Légion d\'honneur"' : ''}>${escapeHtml(cat.name)}</div>
               ${cat.clues.map((clue, cli) => `
                 <div class="board-clue ${clue.answered ? 'answered' : ''}"
                      data-cat="${ci}" data-clue="${cli}">
@@ -806,7 +818,7 @@ function renderBoard() {
       </div>
       <div class="board-footer">
         <div class="host-dock">
-          <div class="host-monogram" aria-hidden="true">N</div>
+          <div class="host-monogram has-face" aria-hidden="true"><img src="${NAPOLEON.face}" alt=""></div>
           <div class="host-plaque" aria-live="polite">${players.length > 1
             ? `<strong style="color: ${PLAYER_COLORS[activePlayer]}">${escapeHtml(players[activePlayer].name)}</strong>, choose your battlefield.`
             : pick(BOARD_LINES)}</div>
@@ -817,11 +829,6 @@ function renderBoard() {
             ${totalClues - cluesAnswered} clues left${chapter ? ` &nbsp;&middot;&nbsp; target ${money(chapterTarget(chapter, gameLength))}` : ''}
             ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
           </div>
-        </div>
-        <div class="guest-panel" aria-label="Tonight's historical guests: Cleopatra, Leonardo da Vinci, and Marie Curie">
-          <div class="guest-title">Tonight&rsquo;s guests</div>
-          <img class="guest-strip" src="./assets/historical-guests.webp" alt="Cleopatra, Leonardo da Vinci, and Marie Curie">
-          <div class="guest-names"><span>Cleopatra</span><span>Leonardo da Vinci</span><span>Marie Curie</span></div>
         </div>
       </div>
     </div>
@@ -889,15 +896,15 @@ function showHowTo() {
     <div class="modal how-to" role="dialog" aria-modal="true" aria-label="How to play">
       <div class="modal-title">How to play</div>
       <ul class="how-to-list">
-        <li><strong>Pick a clue</strong> from the board — higher rows are worth more.</li>
+        <li><strong>Pick a clue</strong> from the board. Higher rows are worth more.</li>
         <li><strong>Answer</strong> in plain words. Spelling and phrasing are forgiven, and you don't need "What is…".</li>
-        <li><strong>Right</strong> adds the value; <strong>wrong</strong> subtracts it. Get 3 right in a row for <strong>Campaign Momentum</strong> — a growing bonus.</li>
+        <li><strong>Right</strong> adds the value; <strong>wrong</strong> subtracts it. Get 3 right in a row for <strong>Campaign Momentum</strong>, a growing bonus.</li>
         <li><strong>Buzz In! mode:</strong> race to ring in with your key (or tap) once the clue is read. Buzz too early and you're locked out briefly.</li>
-        <li><strong>Waterloo Wagers</strong> hide on the board and let you bet your winnings. Then it's <strong>Waterloo</strong> — one clue, secret wagers, winner takes the night.</li>
+        <li><strong>Waterloo Wagers</strong> hide on the board and let you bet your winnings. Then it's <strong>Waterloo</strong>: one clue, secret wagers, winner takes the night.</li>
         <li>The table is the judge: hit <strong>"The Emperor accepts it"</strong> if a close answer got marked wrong.</li>
-        <li><strong>Playing solo?</strong> Chase a Rank — S is Grand Champion — and beat your personal best.</li>
-        <li><strong>Question packs:</strong> Fresh Pack is written just for this game, and Easy Breezy is gentler for casual and older players. The game remembers what you've played — no repeat categories until you've seen a whole pack.</li>
-        <li><strong>The Campaign:</strong> Napoleon's life in 15 chapters, from cadet to Saint Helena. Each chapter is one game with a category about that year and one about Napoleon himself; the rest of the board climbs in difficulty as the chapters do. Reach the chapter's score target and the Empire on your ledger grows — exactly as history did, peaking in 1811. Three right answers in the chapter category earn the <strong>Légion d'honneur</strong> bonus.</li>
+        <li><strong>Playing solo?</strong> Chase a Rank (S is Grand Champion) and beat your personal best.</li>
+        <li><strong>Question packs:</strong> Fresh Pack is written just for this game, and Easy Breezy is gentler for casual and older players. The game remembers what you've played, so no categories repeat until you've seen a whole pack.</li>
+        <li><strong>The Campaign:</strong> Napoleon's life in 15 chapters, from cadet to Saint Helena. Each chapter is one game with a category about that year and one about Napoleon himself; the rest of the board climbs in difficulty as the chapters do. Reach the chapter's score target and the Empire on your ledger grows, exactly as history did, peaking in 1811. Three right answers in the chapter category earn the <strong>Légion d'honneur</strong> bonus.</li>
       </ul>
       <div class="modal-actions">
         <button class="btn-cta modal-cancel">Got it</button>
@@ -921,8 +928,8 @@ function confirmQuit() {
       <div class="modal-title">Leave this game?</div>
       <div class="modal-body">Your scores won't be saved.</div>
       <div class="modal-actions">
-        <button class="btn-quiet modal-cancel">Keep Playing</button>
-        <button class="btn-danger modal-confirm">Leave Game</button>
+        <button class="btn-quiet modal-cancel">Keep playing</button>
+        <button class="btn-danger modal-confirm">Leave game</button>
       </div>
     </div>
   `;
@@ -1076,6 +1083,7 @@ function clueShell(extraHtml) {
   const displayValue = isDailyDouble ? getState().wagerAmount : currentClue.value;
 
   return `
+    ${sceneShapes('clue')}
     <div class="clue-screen">
       <div class="clue-header">
         <span class="clue-category">${escapeHtml(currentClue.categoryName)}</span>
@@ -1091,6 +1099,7 @@ function clueShell(extraHtml) {
       ${extraHtml}
       <div class="clue-feedback" id="clue-feedback" role="status" aria-live="polite"></div>
     </div>
+    <img class="clue-host" id="clue-host" src="${NAPOLEON.thinking}" alt="">
   `;
 }
 
@@ -1103,6 +1112,8 @@ function showFeedback(html) {
 
 /** Brief full-screen tint for a juicy correct/wrong beat. */
 function flashScreen(kind) {
+  const host = document.getElementById('clue-host');
+  if (host && kind === 'correct') host.src = NAPOLEON.victory;
   const el = document.createElement('div');
   el.className = `screen-flash ${kind}`;
   document.body.appendChild(el);
@@ -1129,13 +1140,13 @@ function renderTurnsClue() {
     </div>
     <div class="clue-answer-area">
       <input type="text" id="answer-input" class="answer-input"
-             placeholder="What is..." autocomplete="off">
+             placeholder="What is…" autocomplete="off">
       <div class="clue-buttons">
         <button class="btn-submit" id="btn-submit">Submit</button>
         <button class="btn-skip" id="btn-skip">Pass</button>
       </div>
     </div>
-  `) + poseHtml(players[answeringPlayer], 'thinking', 'clue-pose');
+  `);
 
   startTimer(getState().clueSeconds || 30, handleTimeExpired);
 
@@ -1230,7 +1241,7 @@ function renderBuzzClue() {
     <div class="clue-answer-area" id="answer-area" style="display:none">
       <div class="clue-player" id="answering-name"></div>
       <input type="text" id="answer-input" class="answer-input"
-             placeholder="What is..." autocomplete="off">
+             placeholder="What is…" autocomplete="off">
       <div class="clue-buttons">
         <button class="btn-submit" id="btn-submit">Submit</button>
       </div>
@@ -1399,7 +1410,7 @@ function resolveBuzzAnswer(answer, timedOut) {
         ${header}
         <div class="correct-response">${pick(STEAL_LINES)} ${result.remaining} player${result.remaining > 1 ? 's' : ''} can buzz.</div>
         <div class="feedback-actions">
-          <button class="btn-feedback-continue" id="btn-fb-continue">Open Buzzers</button>
+          <button class="btn-feedback-continue" id="btn-fb-continue">Open buzzers</button>
           ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it</button>`}
         </div>
       </div>
@@ -1474,15 +1485,15 @@ function renderDailyDouble() {
     ${sceneShapes('wager')}
     <div class="daily-double-screen">
       <div class="dd-flash">
-        <div class="dd-title">WATERLOO<br>WAGER</div>
-        <div class="host-line">A bold wager. I approve of nothing less.<span class="host-attrib">The Emperor</span></div>
+        <div class="dd-title">Waterloo<br>Wager</div>
+        ${hostLine('A bold wager. I approve of nothing less.')}
       </div>
       <div class="dd-content">
         <div class="dd-category">${escapeHtml(currentClue.categoryName)}</div>
         <div class="dd-player">${escapeHtml(player.name)}</div>
         <div class="dd-score">Current score: $${formatMoney(player.score)}</div>
         <div class="dd-wager-area">
-          <label>Your wager:</label>
+          <label for="wager-input">Your wager</label>
           <div class="wager-input-row">
             <span class="wager-dollar">$</span>
             <input type="number" id="wager-input" class="wager-input"
@@ -1493,9 +1504,9 @@ function renderDailyDouble() {
             <button class="btn-preset" data-amount="500">$500</button>
             <button class="btn-preset" data-amount="1000">$1,000</button>
             <button class="btn-preset" data-amount="${Math.floor(maxWager / 2)}">Half</button>
-            <button class="btn-preset" data-amount="${maxWager}">All In</button>
+            <button class="btn-preset" data-amount="${maxWager}">All in</button>
           </div>
-          <button class="btn-wager-submit" id="btn-wager">Lock In Wager</button>
+          <button class="btn-wager-submit" id="btn-wager">Lock in wager</button>
         </div>
       </div>
     </div>
@@ -1547,7 +1558,7 @@ function renderRoundTransition() {
       <div class="transition-title">Round II</div>
       <div class="transition-subtitle">All values are doubled!${getState().campaign ? ' Napoleon\'s own chapter joins the board.' : ''}</div>
       ${players.length > 1 ? `<div class="transition-note"><strong>${escapeHtml(players[lowest].name)}</strong> is trailing and gets first pick</div>` : ''}
-      <button class="btn-continue" id="btn-continue">March On</button>
+      <button class="btn-continue" id="btn-continue">March on</button>
     </div>
   `;
 
@@ -1583,11 +1594,11 @@ function renderFinalCategory() {
         `).join('')}
       </div>
       <div class="final-category-reveal">
-        <div class="final-category-label">The final battlefield:</div>
+        <div class="final-category-label">The final battlefield</div>
         <div class="final-category-name">${escapeHtml(finalClue.name)}</div>
-        <div class="host-line">Waterloo. Where everything is decided.<span class="host-attrib">The Emperor</span></div>
+        ${hostLine('Waterloo. Where everything is decided.')}
       </div>
-      <button class="btn-continue" id="btn-final-wager">Place Wagers</button>
+      <button class="btn-continue" id="btn-final-wager">Place wagers</button>
     </div>
   `;
 
@@ -1609,7 +1620,7 @@ function passCover(playerIdx, sub, onReady) {
         <div class="pass-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}" style="--pc: ${PLAYER_COLORS[playerIdx]}">${avatarHtml(p, playerIdx)}</div>
         <div class="pass-name">Pass the device to ${escapeHtml(p.name)}</div>
         <div class="pass-sub">${sub}</div>
-        <button class="btn-cta pass-go" id="pass-go">I'm ${escapeHtml(p.name)} — Ready</button>
+        <button class="btn-cta pass-go" id="pass-go">I'm ${escapeHtml(p.name)}, ready</button>
       </div>
     </div>
   `;
@@ -1641,7 +1652,7 @@ function renderFinalWager() {
       ${sceneShapes('final')}
     <div class="final-screen">
         <div class="final-header">${finalHeader()}</div>
-        <div class="final-subtitle" style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)} — you have $${formatMoney(p.score)}</div>
+        <div class="final-subtitle" style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)}, you have $${formatMoney(p.score)}</div>
         <div class="dd-wager-area" style="max-width:380px;width:100%">
           <label>Your secret wager</label>
           <div class="wager-input-row">
@@ -1652,9 +1663,9 @@ function renderFinalWager() {
           <div class="wager-presets">
             <button class="btn-preset" data-amount="0">Nothing</button>
             <button class="btn-preset" data-amount="${Math.floor(maxW / 2)}">Half</button>
-            <button class="btn-preset" data-amount="${maxW}">All In</button>
+            <button class="btn-preset" data-amount="${maxW}">All in</button>
           </div>
-          <button class="btn-wager-submit" id="btn-lock">${qi < queue.length - 1 ? 'Lock In &amp; Pass' : 'Lock In Wager'}</button>
+          <button class="btn-wager-submit" id="btn-lock">${qi < queue.length - 1 ? 'Lock in and pass' : 'Lock in wager'}</button>
         </div>
       </div>
     `;
@@ -1714,10 +1725,10 @@ function renderFinalClue() {
           <div class="final-clue-text" style="font-size:1.3rem">${escapeHtml(finalClue.clue)}</div>
           <div class="final-answer-form">
             <div class="final-answer-player">
-              <label style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)} — your response</label>
+              <label style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)}, your response</label>
               <input type="text" id="final-answer-input" class="answer-input" placeholder="What is…" autocomplete="off">
             </div>
-            <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock In &amp; Pass' : 'Reveal Answers'}</button>
+            <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock in and pass' : 'Reveal answers'}</button>
           </div>
         </div>
       `;
@@ -1757,7 +1768,7 @@ function renderFinalAnswer() {
           </div>
         `).join('')}
       </div>
-      <button class="btn-continue" id="btn-show-results">Final Scores</button>
+      <button class="btn-continue" id="btn-show-results">Final scores</button>
     </div>
   `;
 
@@ -1815,15 +1826,15 @@ function chapterOutcomeHtml() {
     if (!parts.length) parts.push('The Empire holds its ground.');
     body = parts.join(' ');
   } else {
-    body = `The table needed ${money(o.target)} and reached ${money(o.topScore)}. Regroup and refight this chapter${o.attempts >= 2 ? '' : ' — after two setbacks the target eases'}.`;
+    body = `The table needed ${money(o.target)} and reached ${money(o.topScore)}. Regroup and refight this chapter${o.attempts >= 2 ? '' : '. After two setbacks the target eases'}.`;
   }
   return `
     <div class="chapter-outcome ${o.won ? 'won' : 'lost'}">
       <div class="chapter-kicker">Chapter ${ch.number} &middot; ${escapeHtml(ch.title)} &middot; ${escapeHtml(ch.years)}</div>
-      <div class="co-title">${o.won ? 'Victory — the Campaign advances' : 'Setback — the chapter holds'}</div>
+      <div class="co-title">${o.won ? 'Victory: the Campaign advances' : 'Setback: the chapter holds'}</div>
       <div class="co-body">${body}</div>
       ${o.won && o.next ? `<div class="co-next">Next: Chapter ${o.next.number} &middot; ${escapeHtml(o.next.title)} (${escapeHtml(o.next.years)})</div>` : ''}
-      ${o.campaignComplete ? '<div class="co-next">The Campaign is complete — from Ajaccio to Saint Helena. Replay any chapter from the setup screen.</div>' : ''}
+      ${o.campaignComplete ? '<div class="co-next">The Campaign is complete, from Ajaccio to Saint Helena. Replay any chapter from the setup screen.</div>' : ''}
     </div>
   `;
 }
@@ -1852,15 +1863,16 @@ function renderResults() {
     ${sceneShapes('results')}
     <div class="results-screen">
       <div class="results-title">${solo
-        ? `Rank ${rank.letter} — ${rank.title}`
+        ? `Rank ${rank.letter}: ${rank.title}`
         : isTie ? "It's a Tie!" : `${escapeHtml(winner.name)} Wins!`}</div>
       ${newBest ? '<div class="solo-best-callout">New personal best!</div>' : ''}
       ${solo && rank.next ? `<div class="solo-next-hint">${rank.next}</div>` : ''}
-      ${!solo && !isTie ? `<div class="host-line">Not since Austerlitz have I seen such form.<span class="host-attrib">The Emperor</span></div>` : ''}
+      ${!solo && !isTie ? hostLine('Not since Austerlitz have I seen such form.') : ''}
       ${chapterOutcomeHtml()}
+      <div class="results-stage">
       ${solo ? `
       <div class="solo-scorecard" style="--pc: ${PLAYER_COLORS[0]}">
-        ${poseHtml(winner, winner.score > 0 ? 'victory' : 'ready', 'results-pose') ? `<div class="pose-stage">${shape('sun', 'pose-sun')}${poseHtml(winner, winner.score > 0 ? 'victory' : 'ready', 'results-pose')}</div>` : `<div class="podium-avatar">${escapeHtml(winner.avatar || monogram(winner.name))}</div>`}
+        <div class="podium-avatar ${portraitUrl(winner.character) ? 'has-portrait' : ''}">${avatarHtml(winner, 0)}</div>
         <div class="solo-score-money ${winner.score < 0 ? 'negative' : ''}">${money(winner.score)}</div>
         <div class="solo-score-sub">${escapeHtml(winner.name)}'s winnings</div>
       </div>
@@ -1870,9 +1882,7 @@ function renderResults() {
           const place = ranked.indexOf(p) + 1;
           return `
             <div class="podium-col rank-${place}" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">
-              ${p.score === ranked[0].score && poseUrl(p.character, 'victory')
-                ? `<div class="pose-stage">${shape('sun', 'pose-sun')}${poseHtml(p, 'victory', 'results-pose')}</div>`
-                : `<div class="podium-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}">${avatarHtml(p, p.originalIndex)}</div>`}
+              <div class="podium-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}">${avatarHtml(p, p.originalIndex)}</div>
               <div class="podium-name">${escapeHtml(p.name)}</div>
               <div class="podium-money ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
               <div class="podium-block">${medal[place - 1]}</div>
@@ -1881,6 +1891,8 @@ function renderResults() {
         }).join('')}
       </div>
       `}
+      <img class="results-host" src="${solo && winner.score <= 0 ? NAPOLEON.neutral : NAPOLEON.victory}" alt="Napoleon ${solo && winner.score <= 0 ? 'stands at ease' : 'raises a fist in triumph'}">
+      </div>
       <div class="results-stats-list">
         ${ranked.map(p => {
           const attempts = p.correct + p.wrong;
@@ -1899,9 +1911,9 @@ function renderResults() {
         }).join('')}
       </div>
       <div class="results-actions">
-        <button class="btn-play-again" id="btn-play-again">${campaign && getState().chapterOutcome?.won && !getState().chapterOutcome?.campaignComplete ? 'Next Chapter' : 'Play Again'}</button>
+        <button class="btn-play-again" id="btn-play-again">${campaign && getState().chapterOutcome?.won && !getState().chapterOutcome?.campaignComplete ? 'Next chapter' : 'Play again'}</button>
         ${campaign ? '<button class="btn-quiet" id="btn-results-empire">The Empire</button>' : ''}
-        <button class="btn-quiet btn-share" id="btn-share">Share Result</button>
+        <button class="btn-quiet btn-share" id="btn-share">Share result</button>
       </div>
     </div>
   `;
@@ -1925,14 +1937,14 @@ function renderResults() {
 function shareResult(ranked, isTie) {
   const medals = ['I', 'II', 'III'];
   const solo = ranked.length === 1;
-  const lines = ranked.map((p, i) => `${medals[i] || '•'} ${p.name} — ${money(p.score)}`);
+  const lines = ranked.map((p, i) => `${medals[i] || '•'} ${p.name}: ${money(p.score)}`);
   const rank = solo ? soloRank(ranked[0], getState().gameLength) : null;
   const { campaign, chapterOutcome } = getState();
-  const chapterNote = campaign ? ` — Chapter ${campaign.chapter.number}, ${campaign.chapter.title}${chapterOutcome?.won ? ', won' : ''}` : '';
+  const chapterNote = campaign ? `, Chapter ${campaign.chapter.number}, ${campaign.chapter.title}${chapterOutcome?.won ? ', won' : ''}` : '';
   const header = solo ? `${ranked[0].name} hit Rank ${rank.letter} (${rank.title}) on Clue d'État${chapterNote}!`
     : isTie ? `It's a tie on Clue d'État${chapterNote}!` : `${ranked[0].name} won Clue d'État${chapterNote}!`;
   const text = `${header}\n${lines.join('\n')}\n\nPlay: https://kellylucas314-cpu.github.io/Jeopardy/`;
-  const done = () => showToast('Result copied — go brag!', 'var(--brass)');
+  const done = () => showToast('Result copied. Go brag!', 'var(--brass)');
   if (navigator.clipboard?.writeText) {
     navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
   } else {
