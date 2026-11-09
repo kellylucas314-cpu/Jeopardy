@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('/assets/fonts/InstrumentSans-Variable.woff2') format('woff2');
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DM Mono';
+  src: url('/assets/fonts/DMMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
 /* ============================================================
    CLUE D'ÉTAT — "The Emperor's Trivia Salon"
    Creative North Star: a parlor-game evening in a Napoleonic
@@ -51,10 +64,11 @@
 
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1); /* confident ease-out, no overshoot */
 
-  --font-display: 'Manrope Variable', Manrope, system-ui, -apple-system, sans-serif;
-  --font-ui: 'Manrope Variable', Manrope, system-ui, -apple-system, sans-serif;
-  --font-board: 'Manrope Variable', Manrope, system-ui, -apple-system, sans-serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  /* kellylucas.dev's type: Instrument Sans for everything, DM Mono for small labels */
+  --font-display: 'Instrument Sans', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --font-ui: 'Instrument Sans', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --font-board: 'Instrument Sans', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -2003,7 +2017,6 @@ input { caret-color: var(--terracotta-deep); }
 
 .eyebrow,
 .setup-panel-kicker,
-.title-film-label,
 .guest-title,
 .guest-names,
 .round-name,
@@ -2032,33 +2045,44 @@ input { caret-color: var(--terracotta-deep); }
   line-height: 1.55;
 }
 
-.title-film {
+/* Napoleon rises out of a folded map: map back, the hat-tip film, map front.
+   The film's white ground multiplies away into the stage, so there is no box. */
+.title-stage {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: #ffffff;
-  box-shadow: var(--shadow);
+  max-width: 980px;
+  aspect-ratio: 1485 / 883;
+  margin: 0;
+  background: var(--ink);
+  isolation: isolate;
 }
 
-.title-video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.title-film-label {
+.title-map {
   position: absolute;
-  left: 18px;
-  bottom: 18px;
-  padding: 9px 14px;
-  border-radius: 999px;
-  background: rgba(34, 34, 34, 0.9);
-  color: #ffffff;
-  font-size: 0.64rem;
+  left: 0;
+  top: 38.16%;
+  width: 100%;
+  height: 61.84%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.title-map-back { z-index: 0; }
+.title-map-front { z-index: 2; }
+
+.title-napoleon {
+  position: absolute;
+  z-index: 1;
+  left: 11.25%;
+  top: 0;
+  width: 74.14%;
+  height: 70.1%;
+  object-fit: fill;
+  mix-blend-mode: multiply;
+  filter: brightness(1.05);
+  /* the hat brushes the top of the film when he lifts it: let it fade, not slice */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 7%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 7%);
 }
 
 .setup-hero .hall-of-fame {
@@ -2070,10 +2094,10 @@ input { caret-color: var(--terracotta-deep); }
   min-height: 0;
   overflow-y: auto;
   padding: clamp(22px, 2.6vw, 38px);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: rgba(255, 253, 250, 0.96);
-  box-shadow: var(--shadow);
+  border: 0;
+  border-radius: 28px;
+  background: #f6ede1;
+  box-shadow: none;
 }
 
 .setup-panel-heading { margin-bottom: 24px; }
@@ -2397,6 +2421,9 @@ input { caret-color: var(--terracotta-deep); }
     min-height: 100dvh;
     grid-template-columns: 1fr;
     overflow: visible;
+    /* #app centres its child; a tall setup page must start at the top, or its
+       title overflows above the scroll origin where nobody can reach it */
+    align-self: flex-start;
   }
   .setup-hero { justify-content: flex-start; }
   .setup-panel { overflow: visible; }
@@ -2419,7 +2446,6 @@ input { caret-color: var(--terracotta-deep); }
 @media (max-width: 560px) {
   .setup-screen { padding: 14px; }
   .setup-panel { padding: 18px; }
-  .title-film { border-radius: 18px; }
   .board-host { display: none; }
   .board-stage { grid-template-columns: 1fr; }
   .board-footer { display: flex; flex-direction: column; align-items: stretch; }
@@ -2649,3 +2675,530 @@ input { caret-color: var(--terracotta-deep); }
   .empire-list li { grid-template-columns: 1fr; }
   .eh-status { white-space: normal; }
 }
+
+/* ============================================================
+   POSTER PASS (Nov 2026): the rules that make kellylucas.dev and
+   the HelioFlux site feel calm, applied to the board and clues.
+   One quiet frame, flat fills, no borders or shadows, round shapes,
+   big type at a regular weight. Napoleonic palette unchanged.
+   ============================================================ */
+
+/* A calmer table: the faceted hills stay, washed back toward paper */
+.board-screen {
+  background:
+    linear-gradient(rgba(255, 249, 243, 0.62), rgba(255, 249, 243, 0.62)),
+    var(--ink) url('/assets/board-faceted-bg.webp') center / cover no-repeat;
+}
+
+/* The wordmark already owns the title page; on the board it is a header */
+.board-title { font-size: clamp(2rem, 3.4vw, 3.3rem); font-weight: 500; }
+.round-name { color: var(--jade-deep); }
+
+.btn-menu,
+.player-score,
+.host-monogram,
+.host-plaque {
+  border: 0;
+  background: var(--surface-1);
+}
+.btn-menu { border-radius: 999px; }
+.player-score { border-radius: 999px; padding-right: 20px; }
+.player-score.active { background: var(--surface-1); box-shadow: inset 0 0 0 2px var(--pc); }
+.player-avatar { border-radius: 999px; }
+.host-monogram { border-radius: 999px; color: var(--brass-bright); }
+.host-plaque { border-radius: 999px; padding: 12px 20px; }
+
+/* The grid: flat tiles on a flat tray, rows that line up at any width */
+.game-board {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: auto repeat(5, minmax(0, 1fr));
+  border: 0;
+  border-radius: 24px;
+  background: rgba(243, 231, 216, 0.82);
+  backdrop-filter: none;
+  box-shadow: none;
+}
+.board-category {
+  display: grid;
+  grid-row: 1 / -1;
+  grid-template-rows: subgrid;
+}
+.category-header {
+  border: 0;
+  border-radius: 16px;
+  background: #b4532f; /* deep terracotta: white text clears 4.5:1 */
+  font-weight: 600;
+}
+.board-category.themed .category-header { box-shadow: none; background: var(--jade-deep); }
+
+.board-clue {
+  border: 0;
+  border-radius: 16px;
+  background: var(--surface-1);
+  font-weight: 430;
+  box-shadow: none;
+}
+.board-clue:hover:not(.answered),
+.board-clue.cursor {
+  border: 0;
+  background: var(--jade-deep);
+  transform: none;
+}
+.board-clue.answered {
+  border: 0;
+  background: rgba(255, 253, 250, 0.38);
+}
+
+.board-host img { filter: none; }
+
+.guest-title { color: var(--jade-deep); font-size: 0.66rem; }
+.guest-names { font-size: 0.6rem; color: var(--cream); }
+
+/* The clue: the sentence is the poster; controls are pills */
+.answer-input,
+.btn-submit,
+.btn-skip { border-radius: 999px; }
+.answer-input { padding-left: 24px; padding-right: 24px; }
+
+@media (max-width: 560px) {
+  .game-board { border-radius: 18px; }
+  .category-header,
+  .board-clue { border-radius: 12px; }
+  .category-header { padding: 6px 2px; hyphens: auto; overflow-wrap: anywhere; }
+  .player-score { padding-right: 14px; }
+}
+
+
+/* ============================================================
+   THE CAST AND THE SHAPES (Nov 2026): the 13 player characters,
+   and kellylucas.dev's chunky flat shapes on every in-between
+   screen. Big regular-weight type, pills, no shadows.
+   ============================================================ */
+
+:root {
+  --honey: #edbd5a;       /* the game's brass, warmed into a poster sun */
+  --terra-tint: #f6d3c1;
+  --jade-tint: #d3e1d6;
+}
+
+.logo,
+.board-title,
+.chapter-title,
+.transition-title,
+.final-category-name,
+.results-title,
+.dd-title { font-weight: 500; letter-spacing: -0.035em; }
+
+/* — Shapes — */
+.shape { display: block; flex: none; }
+.scene-shapes {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.scene-shapes .shape { position: absolute; }
+.scene-shapes ~ * { position: relative; z-index: 1; }
+.sc-brass { color: var(--brass); }
+.sc-terra { color: var(--terracotta); }
+.sc-jade { color: var(--jade-bright); }
+.sc-terra-tint { color: var(--terra-tint); }
+.sc-jade-tint { color: var(--jade-tint); }
+.sc-tr { width: clamp(180px, 26vw, 380px); top: -6vw; right: -5vw; }
+.sc-tl { width: clamp(150px, 20vw, 300px); top: -4vw; left: -4vw; }
+.sc-br { width: clamp(180px, 26vw, 400px); bottom: -7vw; right: -5vw; }
+.sc-bl { width: clamp(120px, 16vw, 240px); bottom: -3vw; left: -3vw; }
+.sc-ml { width: clamp(44px, 5vw, 76px); top: 46%; left: 6vw; }
+.sc-mr { width: clamp(44px, 5vw, 76px); top: 38%; right: 7vw; }
+.sc-center { width: min(78vmin, 640px); top: 50%; left: 50%; translate: -50% -50%; opacity: 0.55; }
+
+
+/* — The cast on setup — */
+.name-input-group .player-seal {
+  cursor: pointer;
+  border-radius: 999px;
+  overflow: hidden;
+  padding: 0;
+}
+.player-seal.has-portrait { background: #fff; border-color: var(--pc); }
+.player-seal img,
+.avatar-portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.char-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
+  gap: 8px;
+  margin: 2px 0 14px;
+  padding: 12px;
+  border-radius: 22px;
+  background: var(--surface-1);
+}
+.char-picker[hidden] { display: none; }
+.char-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 2px;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  color: var(--cream-dim);
+  font: 400 0.7rem/1.15 var(--font-ui);
+  text-align: center;
+  cursor: pointer;
+}
+.char-option img,
+.char-none-seal {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  object-fit: cover;
+  object-position: center 20%;
+  background: var(--tone, var(--surface-3));
+}
+.char-none-seal {
+  display: grid;
+  place-items: center;
+  font: 400 1.2rem var(--font-mono);
+  color: var(--cream-dim);
+}
+.char-option:hover { background: var(--surface-3); color: var(--cream); }
+.char-option[aria-checked="true"] { background: var(--jade-tint); color: var(--jade-deep); }
+.char-option[aria-checked="true"] img,
+.char-option[aria-checked="true"] .char-none-seal { box-shadow: 0 0 0 3px var(--jade-deep); }
+
+/* — The cast in play — */
+.player-avatar.has-portrait,
+.podium-avatar.has-portrait,
+.pass-avatar.has-portrait { overflow: hidden; padding: 0; background: #fff; }
+.player-avatar.has-portrait { border-radius: 999px; }
+.pass-avatar.has-portrait { border-radius: 999px; }
+.podium-avatar.has-portrait { border-radius: 999px; }
+
+.clue-player { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.clue-player-face {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+  flex: none;
+}
+
+
+/* — In-between screens: big type, pills, flat — */
+.btn-continue,
+.btn-start,
+.btn-play-again,
+.btn-wager-submit,
+.btn-cta,
+.btn-quiet,
+.btn-preset,
+.wager-input,
+.btn-feedback-continue { border-radius: 999px; box-shadow: none; }
+.btn-start { font-weight: 600; letter-spacing: 0; }
+.transition-scores,
+.final-scores,
+.pass-card,
+.results-stats-list,
+.chapter-outcome { border: 0; box-shadow: none; }
+.dd-title { line-height: 0.92; }
+
+/* tall in-between screens start at the top instead of clipping their title */
+.results-screen,
+.daily-double-screen,
+.transition-screen,
+.final-screen,
+.chapter-intro-screen { justify-content: safe center; }
+@media (max-width: 560px) {
+  .sc-tr, .sc-tl, .sc-br, .sc-bl { width: 112px; }
+  .sc-tr { top: -34px; right: -34px; }
+  .sc-tl { top: -30px; left: -30px; }
+  .sc-br { bottom: -40px; right: -34px; }
+  .sc-bl { bottom: -28px; left: -28px; }
+}
+.char-hint { margin: -2px 0 12px; color: var(--cream-faint); font-size: 0.78rem; }
+
+
+/* ============================================================
+   THE MAP PASS (Nov 9 2026): Kelly's notes. The suns and blobs
+   go; the game's own language takes over: the faceted hills of
+   the board behind every screen, a compass rose, the Légion
+   star and a dotted campaign route. Napoleon is the one big
+   figure; the players are small portraits. No glow rings, no
+   ornaments, no em dashes.
+   ============================================================ */
+
+:root {
+  --paper: #fff9f3;
+  --hills: linear-gradient(rgba(255, 249, 243, 0.7), rgba(255, 249, 243, 0.7)),
+           #fff9f3 url('/assets/board-faceted-bg.webp') center bottom / cover no-repeat;
+}
+
+/* — One backdrop for every screen after the title: the board's faceted hills — */
+.scene-shapes { background: var(--hills); }
+.clue-screen,
+.daily-double-screen,
+.transition-screen,
+.final-screen,
+.results-screen,
+.chapter-intro-screen,
+.loading-screen { background: transparent; }
+
+/* — Map pieces, quiet: they sit in the hills, they don't shout — */
+.scene-shapes .shape { opacity: 0.32; }
+.scene-shapes .sc-terra { opacity: 0.26; }
+.sc-tr { width: clamp(200px, 24vw, 340px); top: -60px; right: -60px; }
+.sc-tl { width: clamp(180px, 20vw, 300px); top: -50px; left: -50px; }
+.sc-br { width: clamp(200px, 24vw, 340px); bottom: -60px; right: -60px; }
+.sc-bl { width: clamp(220px, 26vw, 380px); bottom: 4vh; left: -40px; }
+.sc-brass { color: var(--brass); }
+.sc-terra { color: var(--terracotta); }
+.sc-jade { color: var(--jade); }
+@media (max-width: 560px) {
+  .sc-tr, .sc-tl, .sc-br { width: 150px; }
+  .sc-bl { width: 180px; bottom: 2vh; }
+  .sc-tr { top: -44px; right: -44px; }
+  .sc-tl { top: -40px; left: -40px; }
+  .sc-br { bottom: -44px; right: -44px; }
+}
+
+/* the title: a map's compass rose in the far corner, still */
+.title-compass {
+  position: absolute;
+  z-index: 0;
+  right: 3%;
+  top: 6%;
+  width: 17%;
+  color: var(--brass);
+  opacity: 0.55;
+}
+
+/* loading: the rose holds still, the needle swings and settles */
+.loading-compass { width: 84px; margin: 20px auto; }
+.compass-rose { color: var(--brass); opacity: 0.45; }
+.needle-north { fill: var(--terracotta-deep, #b4532f); }
+.needle-south { fill: var(--cream); }
+.needle-pin { fill: var(--paper); }
+.compass-needle { transform-origin: 0 0; animation: needleSettle 2.4s var(--ease) infinite; }
+@keyframes needleSettle {
+  0% { rotate: -70deg; }
+  45% { rotate: 24deg; }
+  70% { rotate: -9deg; }
+  85%, 100% { rotate: 0deg; }
+}
+@media (prefers-reduced-motion: reduce) { .compass-needle { animation: none; } }
+
+/* — Napoleon's remarks: his face and his words, nothing else — */
+.host-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 520px;
+  margin: 16px auto 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  text-align: left;
+}
+.host-line::before,
+.host-line::after { content: none; }
+.host-face {
+  width: 46px;
+  height: 46px;
+  flex: none;
+  border-radius: 999px;
+  object-fit: cover;
+  object-position: center 8%;
+  background: #f1e3cf;
+}
+.host-line figcaption { display: flex; flex-direction: column; gap: 3px; }
+.host-words { font-size: 1.05rem; font-weight: 400; font-style: italic; color: var(--cream); line-height: 1.35; }
+.host-attrib {
+  margin: 0;
+  font: 400 0.74rem/1.3 var(--font-mono);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--cream-faint);
+}
+.host-line:not(.is-napoleon) { text-align: center; }
+.host-line:not(.is-napoleon) figcaption { align-items: center; }
+
+/* — Answers are written, not boxed: a line to write on — */
+.answer-input,
+.final-answer-input {
+  padding: 12px 2px 10px;
+  border: 0;
+  border-bottom: 2px solid var(--cream);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+  font-weight: 400;
+  color: var(--cream);
+  transition: border-color 0.15s var(--ease);
+}
+.answer-input:focus,
+.final-answer-input:focus,
+.answer-input:focus-visible,
+.final-answer-input:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border-bottom-color: var(--terracotta-deep, #b4532f);
+  border-bottom-width: 3px;
+  padding-bottom: 9px;
+}
+.answer-input::placeholder,
+.final-answer-input::placeholder { color: var(--cream-faint); font-style: italic; }
+.clue-answer-area { margin-top: 6px; }
+.clue-answer-area .answer-input { margin-bottom: 18px; }
+
+.wager-input {
+  border: 0;
+  border-radius: 18px;
+  background: #f4eadc;
+  box-shadow: none;
+  font-weight: 500;
+  -moz-appearance: textfield;
+}
+.wager-input::-webkit-outer-spin-button,
+.wager-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.wager-input:focus,
+.wager-input:focus-visible { outline: none; box-shadow: none; background: #efe1cc; }
+.wager-dollar { font-weight: 500; }
+
+/* selected text: brass, not pink */
+::selection { background: rgba(176, 132, 58, 0.28); color: inherit; }
+
+/* keyboard focus: one plain ink ring, never a double glow */
+button:focus-visible,
+select:focus-visible,
+[role="radio"]:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+
+/* — The wager: no card, no shadow — */
+.dd-content { background: transparent; border: 0; box-shadow: none; padding: 8px 0 0; }
+.dd-title { color: var(--oxblood); text-shadow: none; line-height: 0.95; }
+.dd-category { font-weight: 500; letter-spacing: 0.02em; }
+.dd-player { font-weight: 500; }
+.dd-wager-area label { font: 400 0.8rem var(--font-mono); letter-spacing: 0; text-transform: none; }
+.btn-preset { border: 0; background: #f1e5d3; }
+.btn-preset:hover { background: #ead9c0; }
+
+/* — Napoleon thinks beside every clue — */
+.clue-host {
+  position: fixed;
+  z-index: 2;
+  right: clamp(16px, 4vw, 72px);
+  bottom: 0;
+  height: min(58vh, 470px);
+  width: auto;
+  pointer-events: none;
+  animation: hostIn 0.4s var(--ease) 0.1s backwards;
+}
+@keyframes hostIn { from { opacity: 0; translate: 0 14px; } }
+@media (max-width: 1099px) { .clue-host { display: none; } }
+@media (prefers-reduced-motion: reduce) { .clue-host { animation: none; } }
+
+/* — Board: Napoleon's face in the host dock — */
+.host-monogram.has-face { padding: 0; overflow: hidden; border: 0; border-radius: 999px; background: #f1e3cf; }
+.host-monogram.has-face img { width: 100%; height: 100%; object-fit: cover; object-position: center 8%; }
+.board-footer { grid-template-columns: minmax(0, 1fr) auto; }
+
+/* — Results: the players on the podium, Napoleon beside them — */
+.results-stage {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(16px, 4vw, 56px);
+}
+.results-host {
+  height: clamp(220px, 34vh, 400px);
+  width: auto;
+  flex: none;
+}
+.podium-avatar { box-shadow: none; }
+.podium-avatar.has-portrait { border-width: 3px; }
+.podium-col.rank-1 .podium-avatar { width: 92px; height: 92px; }
+.podium-block {
+  border: 0;
+  border-radius: 18px 18px 0 0;
+  background: rgba(255, 253, 250, 0.7);
+  font: 400 1.3rem var(--font-mono);
+  color: var(--cream-dim);
+}
+.podium-col.rank-1 .podium-block { background: #f0dfbf; border: 0; box-shadow: none; color: var(--cream); }
+.result-stats-row { border: 0; background: rgba(255, 253, 250, 0.72); border-radius: 999px; }
+.solo-scorecard { background: transparent; border: 0; box-shadow: none; }
+.solo-scorecard .podium-avatar { width: 96px; height: 96px; }
+@media (max-width: 560px) {
+  .results-host { height: 170px; }
+  .results-stage { gap: 10px; }
+  .podium-col.rank-1 .podium-avatar { width: 72px; height: 72px; }
+}
+
+/* confetti: little facets of the map, not paper rectangles */
+.confetti { clip-path: polygon(50% 0, 100% 100%, 0 70%); border-radius: 0; }
+
+/* — Setup: plain labels, a filled choice instead of a tinted box — */
+.setup-card h2 {
+  font: 400 0.82rem/1.3 var(--font-mono);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--cream-dim);
+}
+.setup-card h2::after { content: none; }
+.btn-mode { border: 0; background: rgba(255, 255, 255, 0.75); }
+.btn-mode:hover { border: 0; background: #ffffff; }
+.btn-mode.selected { border: 0; background: #222222; color: #f6ede1; }
+.btn-mode.selected .mode-name { color: #ffffff; }
+.btn-mode.selected .mode-desc,
+.btn-mode.selected small,
+.btn-mode.selected p { color: rgba(255, 255, 255, 0.78); }
+.name-input-group input { border: 0; border-radius: 14px; }
+.name-input-group input:focus { outline: 2px solid var(--cream); outline-offset: 0; box-shadow: none; }
+
+/* — Sentence case everywhere but the category names (a quiz-show convention) — */
+.btn-start,
+.btn-wager-submit,
+.btn-continue,
+.btn-play-again,
+.btn-cta,
+.btn-submit,
+.btn-skip,
+.btn-quiet,
+.btn-preset,
+.reroll-btn,
+.pass-go {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+.logo-subtitle,
+.transition-scores h3,
+.final-category-label,
+.ci-label,
+.eyebrow,
+.setup-panel-kicker,
+.round-name,
+.clues-remaining,
+.chapter-kicker,
+.empire-meta,
+.eh-status {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.transition-note { border: 0; background: rgba(255, 253, 250, 0.72); }
