@@ -800,70 +800,109 @@ function updateModeVisibility(count) {
   if (section) section.style.display = count > 1 ? '' : 'none';
 }
 
+// Whose turn it is at the shared cast on the setup screen
+let castTurn = 0;
+
 function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
   const container = document.getElementById('player-names');
   if (!container) return;
   const roster = characters();
+  const turn = Math.min(castTurn, count - 1);
+  const nameOf = i => savedNames[i] || `Player ${i + 1}`;
   const sealFor = (i, name) => {
     const c = characterById(setupCharacters[i]);
     return c ? `<img src="${c.portraitUrl}" alt="">` : escapeHtml(monogram(name, i));
   };
+  // every player's numbered tag sits on the face they hold
+  const tagsFor = id => (count > 1
+    ? Array.from({ length: count }, (_, j) => j)
+      .filter(j => (characterById(setupCharacters[j]) ? setupCharacters[j] : '') === id)
+      .map(j => `<span class="cast-tag" style="--pc: ${PLAYER_COLORS[j]}">${j + 1}</span>`).join('')
+    : '');
+
   let html = '';
   for (let i = 0; i < count; i++) {
-    const value = savedNames[i] || `Player ${i + 1}`;
     const c = characterById(setupCharacters[i]);
     html += `
       <div class="player-row">
         <div class="name-input-group">
-          <div class="player-seal ${c ? 'has-portrait' : ''}" data-index="${i}"
-               style="--pc: ${PLAYER_COLORS[i]}" aria-hidden="true">${sealFor(i, value)}</div>
+          <button type="button" class="player-seal ${c ? 'has-portrait' : ''}" data-index="${i}"
+                  style="--pc: ${PLAYER_COLORS[i]}"
+                  aria-label="Pick a character for player ${i + 1}${c ? `, now ${escapeHtml(c.name)}` : ''}"
+                  title="Pick a character">${sealFor(i, nameOf(i))}</button>
           <label for="player-name-${i}">Player ${i + 1}</label>
           <input type="text" class="player-name-input" placeholder="Enter name" id="player-name-${i}"
-                 value="${escapeHtml(value)}" data-index="${i}"
+                 value="${escapeHtml(nameOf(i))}" data-index="${i}"
                  style="--pc: ${PLAYER_COLORS[i]}">
         </div>
-        ${roster.length ? `
-        <div class="cast" id="char-picker-${i}" role="radiogroup" aria-label="Character for player ${i + 1}">
-          <p class="cast-line">${c ? `Playing as <strong>${escapeHtml(c.name)}</strong>` : 'Playing with initials'}</p>
-          <div class="cast-faces">
-            ${roster.map(rc => `
-              <button type="button" class="char-option" role="radio" data-index="${i}" data-id="${rc.id}"
-                      aria-checked="${rc.id === setupCharacters[i]}" aria-label="${escapeHtml(rc.name)}"
-                      title="${escapeHtml(rc.name)}" style="--tone: ${rc.tone}">
-                <img src="${rc.portraitUrl}" alt="" loading="lazy">
-              </button>`).join('')}
-            <button type="button" class="char-option char-none" role="radio" data-index="${i}" data-id=""
-                    aria-checked="${!c}" aria-label="Initials only" title="Initials only"><span class="char-none-seal" aria-hidden="true">${escapeHtml(monogram(value, i))}</span></button>
-          </div>
+      </div>
+    `;
+  }
+
+  // One cast for the whole table: the faces appear once and the players take turns at them
+  if (roster.length) {
+    const mine = characterById(setupCharacters[turn]);
+    html += `
+      <div class="cast">
+        ${count > 1 ? `
+        <div class="cast-tabs" role="group" aria-label="Who is picking a character">
+          ${Array.from({ length: count }, (_, i) => `
+            <button type="button" class="cast-tab" data-index="${i}" aria-pressed="${i === turn}"
+                    style="--pc: ${PLAYER_COLORS[i]}"><span class="cast-tab-dot" aria-hidden="true">${i + 1}</span><span class="cast-tab-name">${escapeHtml(nameOf(i))}</span></button>`).join('')}
         </div>` : ''}
+        <p class="cast-line">${mine ? `Playing as <strong>${escapeHtml(mine.name)}</strong>` : 'Playing with initials'}</p>
+        <div class="cast-faces" role="radiogroup" aria-label="Character for ${escapeHtml(nameOf(turn))}">
+          ${roster.map(rc => `
+            <button type="button" class="char-option" role="radio" data-id="${rc.id}"
+                    aria-checked="${rc.id === setupCharacters[turn]}" aria-label="${escapeHtml(rc.name)}"
+                    title="${escapeHtml(rc.name)}" style="--tone: ${rc.tone}">
+              <img src="${rc.portraitUrl}" alt="" loading="lazy">${tagsFor(rc.id)}
+            </button>`).join('')}
+          <button type="button" class="char-option char-none" role="radio" data-id=""
+                  aria-checked="${!mine}" aria-label="Initials only" title="Initials only"><span class="char-none-seal" aria-hidden="true">Aa</span>${tagsFor('')}</button>
+        </div>
       </div>
     `;
   }
   container.innerHTML = html;
 
+  const typedNames = () => Array.from(container.querySelectorAll('.player-name-input')).map(el => el.value);
+  const redraw = () => renderPlayerInputs(count, typedNames(), savedAvatars);
+
   // The roster loads once per visit; draw the faces as soon as it arrives.
   if (!roster.length) {
     loadCharacters().then(list => {
-      if (list.length && getState().screen === 'setup' && document.getElementById('player-names') === container) {
-        const typed = Array.from(container.querySelectorAll('.player-name-input')).map(el => el.value);
-        renderPlayerInputs(count, typed, savedAvatars);
-      }
+      if (list.length && getState().screen === 'setup' && document.getElementById('player-names') === container) redraw();
     });
   }
 
-  // The seal restrikes itself as the name is typed (when no face is chosen)
+  // A name restrikes its seal (when no face is chosen) and its tab as it is typed
   container.querySelectorAll('.player-name-input').forEach(input => {
     input.addEventListener('input', () => {
       const i = Number(input.dataset.index);
+      const tab = container.querySelector(`.cast-tab[data-index="${i}"] .cast-tab-name`);
+      if (tab) tab.textContent = input.value.trim() || `Player ${i + 1}`;
       if (characterById(setupCharacters[i])) return;
       const seal = container.querySelector(`.player-seal[data-index="${i}"]`);
       if (seal) seal.textContent = monogram(input.value, i);
     });
   });
 
-  // The cast is on show from the start. Its line names whoever the pointer or focus is on.
-  container.querySelectorAll('.cast').forEach(cast => {
+  // A player's seal or tab hands the cast to that player
+  container.querySelectorAll('.player-seal, .cast-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      castTurn = Number(btn.dataset.index);
+      redraw();
+      (document.querySelector(`.cast-tab[data-index="${castTurn}"]`)
+        || document.querySelector('.cast-faces [aria-checked="true"]'))?.focus({ preventScroll: true });
+    });
+  });
+
+  // The line under the tabs names whoever the pointer or focus is on
+  const cast = container.querySelector('.cast');
+  if (cast) {
     const line = cast.querySelector('.cast-line');
+    const faces = cast.querySelector('.cast-faces');
     const chosen = line.innerHTML;
     const name = e => {
       const opt = e.target.closest('.char-option');
@@ -873,21 +912,23 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
         : `Pick <strong>${escapeHtml(opt.title)}</strong>`;
     };
     const rest = () => { line.innerHTML = chosen; };
-    cast.addEventListener('pointerover', name);
-    cast.addEventListener('focusin', name);
-    cast.addEventListener('pointerleave', rest);
-    cast.addEventListener('focusout', rest);
-  });
+    faces.addEventListener('pointerover', name);
+    faces.addEventListener('focusin', name);
+    faces.addEventListener('pointerleave', rest);
+    faces.addEventListener('focusout', rest);
+  }
 
   container.querySelectorAll('.char-option').forEach(opt => {
     opt.addEventListener('click', () => {
-      const i = Number(opt.dataset.index);
-      setupCharacters[i] = opt.dataset.id || null;
+      const id = opt.dataset.id || null;
+      // one face per player: taking someone else's hands them yours
+      const holder = id ? setupCharacters.findIndex((cid, j) => j !== turn && j < count && cid === id) : -1;
+      if (holder >= 0) setupCharacters[holder] = setupCharacters[turn];
+      setupCharacters[turn] = id;
       savePrefs({ characters: setupCharacters.slice(0, 3) });
       sounds.playSelect();
-      const typed = Array.from(container.querySelectorAll('.player-name-input')).map(el => el.value);
-      renderPlayerInputs(count, typed, savedAvatars);
-      container.querySelector(`#char-picker-${i} [aria-checked="true"]`)?.focus({ preventScroll: true });
+      redraw();
+      document.querySelector('.cast-faces [aria-checked="true"]')?.focus({ preventScroll: true });
     });
   });
 }

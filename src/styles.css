@@ -3686,28 +3686,64 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   .dd-content { padding: 20px 18px 22px; border-width: 8px; border-radius: 34px; }
 }
 
-/* — The cast is on show from the start: a row of faces under each name, the chosen one ringed in jade — */
-.cast { margin: 6px 0 4px; }
-.cast-line { min-height: 1.3em; margin: 0 0 12px 66px; color: var(--cream-dim); font: 400 0.84rem/1.3 var(--font-ui); }
+/* — One cast for the whole table: the faces appear once, in a soft tray under the names.
+     The players take turns at it (the tabs); each player's numbered tag sits on their face,
+     and the one whose turn it is has theirs ringed in jade. — */
+.cast { margin: 14px 0 2px; padding: 12px 14px 16px; border-radius: 22px; background: var(--inset); }
+.cast-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px -4px; }
+.cast-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  max-width: 100%;
+  padding: 5px 16px 5px 6px;
+  border: 0;
+  border-radius: 200px;
+  background: transparent;
+  color: var(--cream-dim);
+  font: 500 0.86rem/1.2 var(--font-ui);
+  cursor: pointer;
+}
+.cast-tab:hover { color: var(--cream); }
+.cast-tab[aria-pressed="true"] { background: #ffffff; color: var(--cream); box-shadow: inset 0 0 0 2px var(--jade-deep); }
+.cast-tab-dot,
+.cast-tag {
+  display: grid;
+  place-items: center;
+  flex: none;
+  border-radius: 999px;
+  background: var(--pc);
+  color: #ffffff;
+  font: 500 0.7rem/1 var(--font-mono);
+}
+.cast-tab-dot { width: 26px; height: 26px; }
+.cast-tab-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cast-line { min-height: 1.3em; margin: 0 0 12px 4px; color: var(--cream-dim); font: 400 0.84rem/1.3 var(--font-ui); }
 .cast-line strong { color: var(--cream); font-weight: 600; }
 /* fourteen choices: two even rows of seven */
-.cast-faces { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px 8px; }
+.cast-faces { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px 8px; }
 .cast .char-option,
 .cast .char-option:hover,
-.cast .char-option[aria-checked="true"] { padding: 0; border-radius: 999px; background: none; aspect-ratio: 1; }
+.cast .char-option[aria-checked="true"] { position: relative; padding: 0; border-radius: 999px; background: none; aspect-ratio: 1; }
 .cast .char-option img,
-.cast .char-none-seal { width: 100%; height: 100%; opacity: 0.72; filter: saturate(0.75); transition: opacity 0.15s, filter 0.15s, transform 0.15s; }
-.cast .char-none-seal { background: var(--inset); font-size: 0.9rem; }
+.cast .char-none-seal { width: 100%; height: 100%; opacity: 0.66; filter: saturate(0.7); transition: opacity 0.15s, filter 0.15s, transform 0.15s; }
+.cast .char-none-seal { background: #ffffff; font-size: 0.9rem; }
 .cast .char-option:hover img,
 .cast .char-option:hover .char-none-seal,
 .cast .char-option:focus-visible img,
 .cast .char-option:focus-visible .char-none-seal { opacity: 1; filter: none; transform: scale(1.08); }
+.cast .char-option:has(.cast-tag) img,
+.cast .char-option:has(.cast-tag) .char-none-seal { opacity: 1; filter: none; }
 .cast .char-option[aria-checked="true"] img,
-.cast .char-option[aria-checked="true"] .char-none-seal { opacity: 1; filter: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--jade-deep); }
+.cast .char-option[aria-checked="true"] .char-none-seal { opacity: 1; filter: none; box-shadow: 0 0 0 2px var(--inset), 0 0 0 4px var(--jade-deep); }
 .cast .char-option:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 5px; }
-div.player-seal { cursor: default; }
+.cast-tag { position: absolute; right: -4px; bottom: -4px; width: 20px; height: 20px; box-shadow: 0 0 0 2px var(--inset); }
+.cast-tag + .cast-tag { right: 12px; }
+.cast-tag + .cast-tag + .cast-tag { right: 28px; }
 @media (max-width: 560px) {
-  .cast-faces { gap: 8px 6px; }
+  .cast { padding: 10px 10px 14px; }
+  .cast-faces { gap: 10px 6px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .cast .char-option img, .cast .char-none-seal { transition: none; }

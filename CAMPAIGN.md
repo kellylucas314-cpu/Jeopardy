@@ -99,4 +99,6 @@ Done on Nov 10 2026 (the title page):
   `public/assets/host/welcome-tip.mp4`, cut from `art-src/napoleon-hat-tip.mp4` by
   `scripts/build-hat-tip.py`. If the welcome pose is ever redrawn, the film has to be made
   again from the new picture, or the two will not line up.
-- Each player's character choices are on show from the start, as a row of faces under the name.
+- The cast is on show from the start, once for the whole table: two rows of faces under the
+  names. The players take turns at it with the tabs, each player's numbered tag sits on their
+  face, and taking a face someone else holds swaps the two.
