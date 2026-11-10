@@ -90,6 +90,8 @@ function sceneShapes(name) {
 // The table's character picks on setup, kept across player-count changes.
 const DEFAULT_CHARACTERS = ['cleopatra', 'leonardo-da-vinci', 'marie-curie'];
 let setupCharacters = null;
+// Which half of the start is showing: the title (Napoleon and Play) or the table (who is playing)
+let setupStep = 'title';
 let prevScores = []; // for score-bump animation on the board
 let prevLeader = null; // for lead-change announcements
 
@@ -427,12 +429,26 @@ function renderSetup() {
       ${records.best ? `<span class="hof-item">Best: <strong>${escapeHtml(records.best.name)}</strong> · ${money(records.best.score)}</span>` : ''}
     </div>` : '';
 
+  const seg = (cls, key, value, picked, label, note = '') => `
+              <button type="button" class="seg-btn ${cls} ${value === picked ? 'selected' : ''}" data-${key}="${value}"
+                      aria-pressed="${value === picked}"${note ? ` data-note="${note}"` : ''}>${label}</button>`;
+
   app.innerHTML = `
-    <div class="setup-screen">
+    <div class="setup-screen" data-step="${setupStep}">
       <section class="setup-hero" aria-labelledby="game-title">
         <div class="setup-brand">
           <h1 class="logo" id="game-title">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></h1>
           <p class="setup-deck">A trivia coup hosted by Napoleon. History is watching.</p>
+          <button type="button" class="btn-start btn-play" id="btn-play">Play</button>
+          ${hof}
+          <div class="setup-footer">
+            <label class="sound-toggle">
+              <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
+              <span>Sound Effects</span>
+            </label>
+            <button class="link-btn" id="btn-how-to">How to play</button>
+            <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
+          </div>
         </div>
         <figure class="title-stage" role="img"
                 aria-label="Napoleon stands on a folded map of Europe and welcomes you to the table">
@@ -441,82 +457,61 @@ function renderSetup() {
                width="1485" height="546" decoding="async">
           ${hostFigure('welcome', 'title-fig')}
         </figure>
-        ${hof}
       </section>
-      <section class="setup-panel">
-        <div class="setup-panel-heading">
-          <h2>Prepare the table<span class="logo-dot" aria-hidden="true">.</span></h2>
-        </div>
-        <div class="setup-card">
-         <div class="tray-card">
-          <h2>How many players?</h2>
-          <div class="player-count-buttons">
-            ${[1, 2, 3].map(n => `
-              <button class="btn-player-count ${n === playerCount ? 'selected' : ''}" data-count="${n}">
-                ${n} Player${n > 1 ? 's' : ''}
-              </button>
-            `).join('')}
-          </div>
+      <section class="table" aria-labelledby="table-title">
+        <div class="table-cast">
+          <header class="table-head">
+            <button type="button" class="table-back" id="btn-back" aria-label="Back to the title">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <h2 id="table-title" tabindex="-1">Who&rsquo;s playing<span class="logo-dot" aria-hidden="true">?</span></h2>
+            <div class="seg seg-count" role="group" aria-label="How many players">
+              ${[1, 2, 3].map(n => `
+              <button type="button" class="seg-btn btn-count ${n === playerCount ? 'selected' : ''}" data-count="${n}"
+                      aria-pressed="${n === playerCount}">${n} player${n > 1 ? 's' : ''}</button>`).join('')}
+            </div>
+          </header>
           <div id="player-names"></div>
-         </div>
-         <div class="tray-card">
-          <h2 class="mode-title">Play style</h2>
-          <div class="mode-buttons style-buttons">
-            <button class="btn-mode btn-style ${playStyle === 'free' ? 'selected' : ''}" data-style="free">
-              <span class="mode-name">Free Play</span>
-              <span class="mode-desc">A fresh board every night, from the pack you choose</span>
-            </button>
-            <button class="btn-mode btn-style ${playStyle === 'campaign' ? 'selected' : ''}" data-style="campaign">
-              <span class="mode-name">The Campaign</span>
-              <span class="mode-desc">Napoleon's life in 15 chapters. Win a chapter and the Empire grows</span>
-            </button>
-          </div>
-          <div id="chapter-card" class="chapter-card" ${playStyle === 'campaign' ? '' : 'hidden'}></div>
-          <h2 class="mode-title">Game length</h2>
-          <div class="player-count-buttons length-buttons">
-            <button class="btn-player-count btn-length ${gameLength === 'quick' ? 'selected' : ''}" data-length="quick">
-              Quick &middot; ~20 min
-            </button>
-            <button class="btn-player-count btn-length ${gameLength === 'full' ? 'selected' : ''}" data-length="full">
-              Full &middot; ~45 min
-            </button>
-          </div>
-         </div>
-         <div class="tray-card">
-          <h2 class="mode-title">Questions</h2>
-          <div class="mode-buttons pack-buttons">
-            <button class="btn-mode btn-pack ${pack === 'fresh' ? 'selected' : ''}" data-pack="fresh">
-              <span class="mode-name">Fresh Pack</span>
-              <span class="mode-desc">6,200+ original clues written for this game</span>
-            </button>
-            <button class="btn-mode btn-pack ${pack === 'easy' ? 'selected' : ''}" data-pack="easy">
-              <span class="mode-name">Easy Breezy</span>
-              <span class="mode-desc">Gentler questions, classics &amp; nostalgia</span>
-            </button>
-          </div>
-          <div id="mode-section">
-            <h2 class="mode-title">Game mode</h2>
-            <div class="mode-buttons">
-              <button class="btn-mode ${gameMode === 'turns' ? 'selected' : ''}" data-mode="turns">
-                <span class="mode-name">Take Turns</span>
-                <span class="mode-desc">Pass the keyboard, answer one at a time</span>
-              </button>
-              <button class="btn-mode ${gameMode === 'buzz' ? 'selected' : ''}" data-mode="buzz">
-                <span class="mode-name">Buzz In!</span>
-                <span class="mode-desc">Race to the buzzer, salon-style</span>
-              </button>
+        </div>
+        <div class="table-game">
+          <div class="tray-card game-card">
+            <h2>The game</h2>
+            <div class="opt-row">
+              <h3 class="opt-label" id="opt-style">Play style</h3>
+              <div class="seg" role="group" aria-labelledby="opt-style">
+                ${seg('btn-style', 'style', 'free', playStyle, 'Free Play', 'A fresh board every night, from the pack you choose.')}
+                ${seg('btn-style', 'style', 'campaign', playStyle, 'The Campaign', 'Napoleon&rsquo;s life in 15 chapters. Win a chapter and the Empire grows.')}
+              </div>
+              <p class="opt-note"></p>
+            </div>
+            <div id="chapter-card" class="chapter-card" ${playStyle === 'campaign' ? '' : 'hidden'}></div>
+            <div class="opt-row">
+              <h3 class="opt-label" id="opt-length">Length</h3>
+              <div class="seg" role="group" aria-labelledby="opt-length">
+                ${seg('btn-length', 'length', 'quick', gameLength, 'Quick &middot; ~20 min')}
+                ${seg('btn-length', 'length', 'full', gameLength, 'Full &middot; ~45 min')}
+              </div>
+            </div>
+            <div class="opt-row">
+              <h3 class="opt-label" id="opt-pack">Questions</h3>
+              <div class="seg" role="group" aria-labelledby="opt-pack">
+                ${seg('btn-pack', 'pack', 'fresh', pack, 'Fresh Pack', '6,200+ original clues written for this game.')}
+                ${seg('btn-pack', 'pack', 'easy', pack, 'Easy Breezy', 'Gentler questions, classics and nostalgia.')}
+              </div>
+              <p class="opt-note"></p>
+            </div>
+            <div class="opt-row" id="mode-section">
+              <h3 class="opt-label" id="opt-mode">Answering</h3>
+              <div class="seg" role="group" aria-labelledby="opt-mode">
+                ${seg('btn-answer', 'mode', 'turns', gameMode, 'Take Turns', 'Pass the keyboard and answer one at a time.')}
+                ${seg('btn-answer', 'mode', 'buzz', gameMode, 'Buzz In', 'Race to the buzzer, salon-style.')}
+              </div>
+              <p class="opt-note"></p>
             </div>
           </div>
-         </div>
-          <button class="btn-start" id="btn-start-game">${playStyle === 'campaign' ? 'March on' : 'Open the board'}</button>
         </div>
-        <div class="setup-footer">
-          <label class="sound-toggle">
-            <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
-            <span>Sound Effects</span>
-          </label>
-          <button class="link-btn" id="btn-how-to">How to play</button>
-          <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
+        <div class="table-go">
+          <button class="btn-start" id="btn-start-game">${playStyle === 'campaign' ? 'March on' : 'Open the board'}</button>
         </div>
       </section>
     </div>
@@ -526,67 +521,74 @@ function renderSetup() {
   updateModeVisibility(playerCount);
 
   // He steps onto the map, then tips his hat. A tap on him asks for an encore.
+  const screen = app.querySelector('.setup-screen');
   const titleFig = app.querySelector('.title-fig');
   const titleImg = titleFig?.querySelector('.host-img');
-  if (titleImg && !prefersReducedMotion()) {
-    animate(titleImg, { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, ease: EXPO, delay: 0.15 });
-    setTimeout(() => tipHat(titleFig), 950);
+  const calm = prefersReducedMotion();
+  if (titleImg && !calm) {
+    if (setupStep === 'title') {
+      animate(titleImg, { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, ease: EXPO, delay: 0.15 });
+      setTimeout(() => { if (screen.dataset.step === 'title') tipHat(titleFig); }, 950);
+    }
     titleFig.addEventListener('click', () => tipHat(titleFig));
   }
 
-  // Player count buttons
-  document.querySelectorAll('.btn-player-count:not(.btn-length)').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-player-count:not(.btn-length)').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      const count = parseInt(btn.dataset.count);
-      const typed = Array.from(document.querySelectorAll('.player-name-input')).map(el => el.value);
-      renderPlayerInputs(count, typed.concat(savedNames.slice(typed.length)), savedAvatars);
-      updateModeVisibility(count);
-    });
-  });
+  // Two steps, one page: the title, then the table. Nothing is re-rendered, so every choice survives a trip back.
+  const goTo = step => {
+    setupStep = step;
+    screen.dataset.step = step;
+    window.scrollTo(0, 0);
+    screen.scrollTop = 0;
+    app.scrollTop = 0;
+    if (step === 'table') {
+      if (!calm) {
+        animate(screen.querySelectorAll('.table-head, .seat, .cast, .table-game, .table-go'),
+          { opacity: [0, 1], y: [16, 0] }, { duration: 0.42, ease: EXPO, delay: stagger(0.05) });
+      }
+      document.getElementById('table-title')?.focus({ preventScroll: true });
+    } else {
+      if (titleImg && !calm) animate(titleImg, { opacity: [0, 1], y: [18, 0] }, { duration: 0.5, ease: EXPO });
+      document.getElementById('btn-play')?.focus({ preventScroll: true });
+    }
+  };
+  document.getElementById('btn-play').addEventListener('click', () => { sounds.playSelect(); goTo('table'); });
+  document.getElementById('btn-back').addEventListener('click', () => goTo('title'));
 
-  // Game length buttons
-  document.querySelectorAll('.btn-length').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-length').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      renderChapterCard(); // the chapter's target depends on game length
-    });
-  });
+  // A row of choices: one is always picked, and its note (when it has one) sits under the row
+  const wire = (selector, onPick) => {
+    const btns = Array.from(document.querySelectorAll(selector));
+    const sync = () => {
+      const on = btns.find(b => b.classList.contains('selected'));
+      const note = on?.closest('.opt-row')?.querySelector('.opt-note');
+      if (note) note.textContent = on.dataset.note || '';
+    };
+    btns.forEach(btn => btn.addEventListener('click', () => {
+      btns.forEach(b => { b.classList.toggle('selected', b === btn); b.setAttribute('aria-pressed', String(b === btn)); });
+      sync();
+      onPick?.(btn);
+    }));
+    sync();
+  };
 
-  // Play style buttons
-  document.querySelectorAll('.btn-style').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-style').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      const style = btn.dataset.style;
-      savePrefs({ playStyle: style });
-      const card = document.getElementById('chapter-card');
-      if (card) card.hidden = style !== 'campaign';
-      const start = document.getElementById('btn-start-game');
-      if (start && style !== 'campaign') start.textContent = 'Open the board';
-      renderChapterCard();
-    });
+  wire('.btn-count', btn => {
+    const count = parseInt(btn.dataset.count);
+    const typed = Array.from(document.querySelectorAll('.player-name-input')).map(el => el.value);
+    renderPlayerInputs(count, typed.concat(savedNames.slice(typed.length)), savedAvatars);
+    updateModeVisibility(count);
+  });
+  wire('.btn-length', () => renderChapterCard()); // the chapter's target depends on game length
+  wire('.btn-style', btn => {
+    const style = btn.dataset.style;
+    savePrefs({ playStyle: style });
+    const card = document.getElementById('chapter-card');
+    if (card) card.hidden = style !== 'campaign';
+    const start = document.getElementById('btn-start-game');
+    if (start && style !== 'campaign') start.textContent = 'Open the board';
+    renderChapterCard();
   });
   renderChapterCard();
-
-  // Mode buttons
-  document.querySelectorAll('#mode-section .btn-mode').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('#mode-section .btn-mode').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-    });
-  });
-
-  // Question pack buttons
-  document.querySelectorAll('.btn-pack').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-pack').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      savePrefs({ pack: btn.dataset.pack });
-    });
-  });
+  wire('.btn-answer');
+  wire('.btn-pack', btn => savePrefs({ pack: btn.dataset.pack }));
 
   // Sound toggle
   document.getElementById('sound-checkbox').addEventListener('change', (e) => {
@@ -605,12 +607,13 @@ function renderSetup() {
     );
     const avatars = names.map((n, i) => monogram(n, i));
     const chars = names.map((_, i) => (characterById(setupCharacters[i]) ? setupCharacters[i] : null));
-    const mode = document.querySelector('#mode-section .btn-mode.selected')?.dataset.mode || 'turns';
+    const mode = document.querySelector('.btn-answer.selected')?.dataset.mode || 'turns';
     const length = document.querySelector('.btn-length.selected')?.dataset.length || 'full';
     const packSel = document.querySelector('.btn-pack.selected')?.dataset.pack || 'fresh';
     const style = document.querySelector('.btn-style.selected')?.dataset.style || 'free';
     savePrefs({ names, avatars, characters: setupCharacters.slice(0, 3), playerCount: names.length, gameMode: mode, gameLength: length, pack: packSel, playStyle: style, sound: sounds.isEnabled() });
     sounds.playSelect();
+    setupStep = 'table'; // a rematch comes back to the table, not the title
     if (style === 'campaign') {
       const number = selectedChapterNumber();
       loadCampaign().then(() => {
@@ -803,63 +806,65 @@ function updateModeVisibility(count) {
 // Whose turn it is at the shared cast on the setup screen
 let castTurn = 0;
 
+/**
+ * The table: every player stands at it full length, with their name underneath, and one shared
+ * cast sits below. A tap on a player hands them the cast; a tap on a face makes it theirs.
+ */
 function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
   const container = document.getElementById('player-names');
   if (!container) return;
   const roster = characters();
   const turn = Math.min(castTurn, count - 1);
   const nameOf = i => savedNames[i] || `Player ${i + 1}`;
-  const sealFor = (i, name) => {
-    const c = characterById(setupCharacters[i]);
-    return c ? `<img src="${c.portraitUrl}" alt="">` : escapeHtml(monogram(name, i));
-  };
+  const held = i => characterById(setupCharacters[i]);
   // every player's numbered tag sits on the face they hold
   const tagsFor = id => (count > 1
     ? Array.from({ length: count }, (_, j) => j)
-      .filter(j => (characterById(setupCharacters[j]) ? setupCharacters[j] : '') === id)
+      .filter(j => (held(j) ? setupCharacters[j] : '') === id)
       .map(j => `<span class="cast-tag" style="--pc: ${PLAYER_COLORS[j]}">${j + 1}</span>`).join('')
     : '');
 
-  let html = '';
+  let html = `<div class="seats" data-count="${count}">`;
   for (let i = 0; i < count; i++) {
-    const c = characterById(setupCharacters[i]);
+    const c = held(i);
     html += `
-      <div class="player-row">
-        <div class="name-input-group">
-          <button type="button" class="player-seal ${c ? 'has-portrait' : ''}" data-index="${i}"
-                  style="--pc: ${PLAYER_COLORS[i]}"
-                  aria-label="Pick a character for player ${i + 1}${c ? `, now ${escapeHtml(c.name)}` : ''}"
-                  title="Pick a character">${sealFor(i, nameOf(i))}</button>
-          <label for="player-name-${i}">Player ${i + 1}</label>
-          <input type="text" class="player-name-input" placeholder="Enter name" id="player-name-${i}"
-                 value="${escapeHtml(nameOf(i))}" data-index="${i}"
-                 style="--pc: ${PLAYER_COLORS[i]}">
+      <div class="seat ${count > 1 && i === turn ? 'is-picking' : ''}" data-index="${i}" style="--pc: ${PLAYER_COLORS[i]}">
+        <button type="button" class="seat-fig" data-index="${i}"${count > 1 ? ` aria-pressed="${i === turn}"` : ''}
+                aria-label="${count > 1 ? `Choose a character for player ${i + 1}` : 'Your character'}${c ? `, now ${escapeHtml(c.name)}` : ''}">
+          <img class="seat-img" src="${c ? c.poseUrls.ready : ''}" alt="" ${c ? '' : 'hidden'}>
+          <span class="seat-seal" ${c ? 'hidden' : ''}>${escapeHtml(monogram(nameOf(i), i))}</span>
+        </button>
+        <p class="seat-as">${c ? escapeHtml(c.name) : 'Initials only'}</p>
+        <div class="seat-name">
+          <span class="seat-num" aria-hidden="true">${i + 1}</span>
+          <input type="text" class="player-name-input" placeholder="Name" id="player-name-${i}"
+                 aria-label="Player ${i + 1} name" value="${escapeHtml(nameOf(i))}" data-index="${i}"
+                 maxlength="24" autocomplete="off" spellcheck="false">
         </div>
       </div>
     `;
   }
+  html += '</div>';
 
   // One cast for the whole table: the faces appear once and the players take turns at them
   if (roster.length) {
-    const mine = characterById(setupCharacters[turn]);
+    const mine = held(turn);
     html += `
-      <div class="cast">
-        ${count > 1 ? `
-        <div class="cast-tabs" role="group" aria-label="Who is picking a character">
-          ${Array.from({ length: count }, (_, i) => `
-            <button type="button" class="cast-tab" data-index="${i}" aria-pressed="${i === turn}"
-                    style="--pc: ${PLAYER_COLORS[i]}"><span class="cast-tab-dot" aria-hidden="true">${i + 1}</span><span class="cast-tab-name">${escapeHtml(nameOf(i))}</span></button>`).join('')}
-        </div>` : ''}
-        <p class="cast-line">${mine ? `Playing as <strong>${escapeHtml(mine.name)}</strong>` : 'Playing with initials'}</p>
+      <div class="tray-card cast">
+        <p class="cast-line">${count > 1
+          ? `<span class="cast-for">Choosing for <strong class="cast-who" style="--pc: ${PLAYER_COLORS[turn]}">${escapeHtml(nameOf(turn))}</strong></span><span class="cast-hint">Tap a player to switch</span>`
+          : '<span class="cast-for">Choose your character</span>'}</p>
         <div class="cast-faces" role="radiogroup" aria-label="Character for ${escapeHtml(nameOf(turn))}">
           ${roster.map(rc => `
             <button type="button" class="char-option" role="radio" data-id="${rc.id}"
-                    aria-checked="${rc.id === setupCharacters[turn]}" aria-label="${escapeHtml(rc.name)}"
-                    title="${escapeHtml(rc.name)}" style="--tone: ${rc.tone}">
-              <img src="${rc.portraitUrl}" alt="" loading="lazy">${tagsFor(rc.id)}
+                    aria-checked="${rc.id === setupCharacters[turn]}" style="--tone: ${rc.tone}">
+              <span class="cast-face"><img src="${rc.portraitUrl}" alt="" loading="lazy">${tagsFor(rc.id)}</span>
+              <span class="cast-name">${escapeHtml(rc.name)}</span>
             </button>`).join('')}
-          <button type="button" class="char-option char-none" role="radio" data-id=""
-                  aria-checked="${!mine}" aria-label="Initials only" title="Initials only"><span class="char-none-seal" aria-hidden="true">Aa</span>${tagsFor('')}</button>
+          <button type="button" class="char-option char-none" role="radio" data-id="" aria-checked="${!mine}">
+            <span class="cast-face"><span class="char-none-seal" aria-hidden="true">Aa</span>${tagsFor('')}</span>
+            <span class="cast-name">Initials only</span>
+          </button>
         </div>
       </div>
     `;
@@ -869,51 +874,53 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
   const typedNames = () => Array.from(container.querySelectorAll('.player-name-input')).map(el => el.value);
   const redraw = () => renderPlayerInputs(count, typedNames(), savedAvatars);
 
-  // The roster loads once per visit; draw the faces as soon as it arrives.
+  // The roster loads once per visit; draw the cast as soon as it arrives.
   if (!roster.length) {
     loadCharacters().then(list => {
       if (list.length && getState().screen === 'setup' && document.getElementById('player-names') === container) redraw();
     });
   }
 
-  // A name restrikes its seal (when no face is chosen) and its tab as it is typed
+  // A name restrikes its seal (when no face is chosen) and the line over the cast as it is typed
   container.querySelectorAll('.player-name-input').forEach(input => {
     input.addEventListener('input', () => {
       const i = Number(input.dataset.index);
-      const tab = container.querySelector(`.cast-tab[data-index="${i}"] .cast-tab-name`);
-      if (tab) tab.textContent = input.value.trim() || `Player ${i + 1}`;
-      if (characterById(setupCharacters[i])) return;
-      const seal = container.querySelector(`.player-seal[data-index="${i}"]`);
+      const who = container.querySelector('.cast-who');
+      if (who && i === turn) who.textContent = input.value.trim() || `Player ${i + 1}`;
+      const seal = container.querySelector(`.seat[data-index="${i}"] .seat-seal`);
       if (seal) seal.textContent = monogram(input.value, i);
     });
   });
 
-  // A player's seal or tab hands the cast to that player
-  container.querySelectorAll('.player-seal, .cast-tab').forEach(btn => {
+  // A tap on a player hands the cast to that player
+  container.querySelectorAll('.seat-fig').forEach(btn => {
     btn.addEventListener('click', () => {
+      if (count === 1) { container.querySelector('.cast-faces [aria-checked="true"]')?.focus(); return; }
       castTurn = Number(btn.dataset.index);
       redraw();
-      (document.querySelector(`.cast-tab[data-index="${castTurn}"]`)
-        || document.querySelector('.cast-faces [aria-checked="true"]'))?.focus({ preventScroll: true });
+      document.querySelector(`.seat-fig[data-index="${castTurn}"]`)?.focus({ preventScroll: true });
     });
   });
 
-  // The line under the tabs names whoever the pointer or focus is on
-  const cast = container.querySelector('.cast');
-  if (cast) {
-    const line = cast.querySelector('.cast-line');
-    const faces = cast.querySelector('.cast-faces');
-    const chosen = line.innerHTML;
-    const name = e => {
+  // Whoever the pointer or focus is on tries the seat on for size before anyone commits
+  const seat = container.querySelector(`.seat[data-index="${turn}"]`);
+  const faces = container.querySelector('.cast-faces');
+  const wear = id => {
+    const c = characterById(id);
+    const img = seat.querySelector('.seat-img');
+    if (c && img.getAttribute('src') !== c.poseUrls.ready) img.src = c.poseUrls.ready;
+    img.hidden = !c;
+    seat.querySelector('.seat-seal').hidden = !!c;
+    seat.querySelector('.seat-as').textContent = c ? c.name : 'Initials only';
+  };
+  if (faces && seat) {
+    const tryOn = e => {
       const opt = e.target.closest('.char-option');
-      if (!opt) return;
-      line.innerHTML = opt.getAttribute('aria-checked') === 'true'
-        ? chosen
-        : `Pick <strong>${escapeHtml(opt.title)}</strong>`;
+      if (opt && !(e.pointerType && e.pointerType !== 'mouse')) wear(opt.dataset.id);
     };
-    const rest = () => { line.innerHTML = chosen; };
-    faces.addEventListener('pointerover', name);
-    faces.addEventListener('focusin', name);
+    const rest = () => wear(setupCharacters[turn]);
+    faces.addEventListener('pointerover', tryOn);
+    faces.addEventListener('focusin', tryOn);
     faces.addEventListener('pointerleave', rest);
     faces.addEventListener('focusout', rest);
   }
@@ -929,6 +936,11 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
       sounds.playSelect();
       redraw();
       document.querySelector('.cast-faces [aria-checked="true"]')?.focus({ preventScroll: true });
+      // the new arrival steps up to the table
+      const arrived = document.querySelector(`.seat[data-index="${turn}"] .seat-fig`);
+      if (arrived && !prefersReducedMotion()) {
+        animate(arrived, { opacity: [0.35, 1], y: [14, 0] }, { duration: 0.36, ease: EXPO });
+      }
     });
   });
 }

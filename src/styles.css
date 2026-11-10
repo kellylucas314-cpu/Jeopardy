@@ -3686,69 +3686,6 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   .dd-content { padding: 20px 18px 22px; border-width: 8px; border-radius: 34px; }
 }
 
-/* — One cast for the whole table: the faces appear once, in a soft tray under the names.
-     The players take turns at it (the tabs); each player's numbered tag sits on their face,
-     and the one whose turn it is has theirs ringed in jade. — */
-.cast { margin: 14px 0 2px; padding: 12px 14px 16px; border-radius: 22px; background: var(--inset); }
-.cast-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px -4px; }
-.cast-tab {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 40px;
-  max-width: 100%;
-  padding: 5px 16px 5px 6px;
-  border: 0;
-  border-radius: 200px;
-  background: transparent;
-  color: var(--cream-dim);
-  font: 500 0.86rem/1.2 var(--font-ui);
-  cursor: pointer;
-}
-.cast-tab:hover { color: var(--cream); }
-.cast-tab[aria-pressed="true"] { background: #ffffff; color: var(--cream); box-shadow: inset 0 0 0 2px var(--jade-deep); }
-.cast-tab-dot,
-.cast-tag {
-  display: grid;
-  place-items: center;
-  flex: none;
-  border-radius: 999px;
-  background: var(--pc);
-  color: #ffffff;
-  font: 500 0.7rem/1 var(--font-mono);
-}
-.cast-tab-dot { width: 26px; height: 26px; }
-.cast-tab-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.cast-line { min-height: 1.3em; margin: 0 0 12px 4px; color: var(--cream-dim); font: 400 0.84rem/1.3 var(--font-ui); }
-.cast-line strong { color: var(--cream); font-weight: 600; }
-/* fourteen choices: two even rows of seven */
-.cast-faces { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px 8px; }
-.cast .char-option,
-.cast .char-option:hover,
-.cast .char-option[aria-checked="true"] { position: relative; padding: 0; border-radius: 999px; background: none; aspect-ratio: 1; }
-.cast .char-option img,
-.cast .char-none-seal { width: 100%; height: 100%; opacity: 0.66; filter: saturate(0.7); transition: opacity 0.15s, filter 0.15s, transform 0.15s; }
-.cast .char-none-seal { background: #ffffff; font-size: 0.9rem; }
-.cast .char-option:hover img,
-.cast .char-option:hover .char-none-seal,
-.cast .char-option:focus-visible img,
-.cast .char-option:focus-visible .char-none-seal { opacity: 1; filter: none; transform: scale(1.08); }
-.cast .char-option:has(.cast-tag) img,
-.cast .char-option:has(.cast-tag) .char-none-seal { opacity: 1; filter: none; }
-.cast .char-option[aria-checked="true"] img,
-.cast .char-option[aria-checked="true"] .char-none-seal { opacity: 1; filter: none; box-shadow: 0 0 0 2px var(--inset), 0 0 0 4px var(--jade-deep); }
-.cast .char-option:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 5px; }
-.cast-tag { position: absolute; right: -4px; bottom: -4px; width: 20px; height: 20px; box-shadow: 0 0 0 2px var(--inset); }
-.cast-tag + .cast-tag { right: 12px; }
-.cast-tag + .cast-tag + .cast-tag { right: 28px; }
-@media (max-width: 560px) {
-  .cast { padding: 10px 10px 14px; }
-  .cast-faces { gap: 10px 6px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .cast .char-option img, .cast .char-none-seal { transition: none; }
-}
-
 /* — The hat tip: a film cut to his outline, drawn on a canvas, takes the still picture's place
      and then hands back. The film's box is 1.0489 times the still picture's height (room for the
      lifted hat) and shares its centre and its feet, so the two register (scripts/build-hat-tip.py). — */
@@ -3769,4 +3706,330 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 .title-fig .host-img { animation: none; }
 @media (prefers-reduced-motion: reduce) {
   .title-fig { animation: none; cursor: default; }
+}
+
+
+/* ============================================================
+   THE START IN TWO (Nov 10 2026)
+   Kelly: "split it in 2 ... they should get a bit more real estate."
+   - Step one is the title: Napoleon, the name and one Play button.
+   - Step two is the table. Every player stands at it full length with
+     their name underneath; a tap on a player hands them the cast.
+   - The cast appears once, in full colour, with names. A numbered tag
+     marks a held face and a jade ring marks the one being chosen.
+   - The game's four choices keep to one quiet card of pill rows.
+   Both steps live in one page (data-step on .setup-screen), so nothing
+   is lost on the way back.
+   ============================================================ */
+.setup-screen { display: block; }
+.setup-screen[data-step="title"] .table,
+.setup-screen[data-step="table"] .setup-hero { display: none; }
+@media (min-width: 841px) {
+  .setup-screen { overflow-y: auto; }
+  .setup-screen[data-step="table"] { padding-block: clamp(14px, 2.6vh, 40px); }
+}
+
+/* — Step one: the title — */
+.setup-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 72px);
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.setup-brand { display: flex; flex-direction: column; align-items: flex-start; max-width: none; }
+.setup-hero .title-stage { justify-self: center; }
+.btn-play {
+  width: auto;
+  min-width: 230px;
+  min-height: 72px;
+  margin: 36px 0 0;
+  padding: 0 48px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.setup-hero .hall-of-fame { margin: 24px 0 0; }
+.setup-hero .setup-footer { justify-content: flex-start; flex-wrap: wrap; margin: 26px 0 0; }
+
+/* — Step two: the table — */
+.table {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(350px, 0.6fr);
+  grid-template-rows: auto 1fr;
+  gap: 14px clamp(16px, 2vw, 28px);
+  min-height: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.table-cast,
+.table-game { padding: 14px; border-radius: 40px; background: var(--tray); }
+.table-cast { grid-row: 1 / span 2; display: flex; flex-direction: column; min-width: 0; }
+.table-game { grid-column: 2; min-width: 0; }
+.table-go { grid-column: 2; align-self: start; }
+.table-go .btn-start { width: 100%; min-height: 62px; margin: 0; font-size: 1.12rem; }
+
+.table-head { display: flex; align-items: center; gap: 12px; margin: 8px 8px 4px 6px; }
+.table-head h2 {
+  flex: 1;
+  min-width: 0;
+  font: 560 clamp(1.7rem, 2.7vw, 2.5rem)/1.1 var(--font-display);
+  letter-spacing: -0.035em;
+  color: var(--cream);
+  outline: none;
+}
+.table-back {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--cream);
+}
+.table-back:hover { background: var(--inset); }
+
+/* a row of pills: the picked one is white paper with a jade line */
+.seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4px; padding: 4px; border-radius: 999px; background: var(--inset); }
+.seg-btn {
+  min-height: 42px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: none;
+  color: var(--text-dim);
+  font: 500 0.9rem/1.1 var(--font-ui);
+  white-space: nowrap;
+}
+.seg-btn:hover { color: var(--cream); }
+.seg-btn.selected { background: #ffffff; color: var(--cream); box-shadow: inset 0 0 0 2px var(--jade-deep); }
+.seg-count { flex: none; background: rgba(255, 255, 255, 0.6); }
+.seg-count .seg-btn { padding: 0 16px; }
+
+/* the players, standing at the table */
+.seats {
+  flex: 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 330px);
+  justify-content: center;
+  align-items: end;
+  gap: 8px;
+  padding: 10px 2px 12px;
+  /* as tall as the window allows once the heading, the names and the cast have their room */
+  --h: clamp(150px, calc(100vh - 570px), 380px);
+}
+.seat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 16px 12px 12px;
+  border-radius: 28px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.seat.is-picking { background: #ffffff; box-shadow: var(--molded); }
+.seat-fig {
+  position: relative;
+  width: 100%;
+  height: var(--h);
+  padding: 0;
+  border-radius: 20px;
+  background: none;
+  transition: translate 0.2s;
+}
+.seat-fig::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: calc(var(--h) * 0.56);
+  max-width: 96%;
+  height: 16px;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(58, 40, 22, 0.26), rgba(58, 40, 22, 0));
+}
+.seat:not(.is-picking) .seat-fig[aria-pressed]:hover { translate: 0 -4px; }
+.seat-fig:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 4px; }
+/* the art is 640 by 960 with the feet at 928 and the tallest head near 110: fill the seat with the figure */
+.seat-img {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--h) * -0.039);
+  height: calc(var(--h) * 1.17);
+  width: auto;
+  max-width: none;
+  translate: -50% 0;
+  pointer-events: none;
+  user-select: none;
+}
+.seat-seal {
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  display: grid;
+  place-items: center;
+  width: calc(var(--h) * 0.6);
+  max-width: 92%;
+  aspect-ratio: 1;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: var(--pc);
+  color: #ffffff;
+  font: 500 calc(var(--h) * 0.24)/1 var(--font-ui);
+}
+.seat-img[hidden],
+.seat-seal[hidden] { display: none; }
+.seat-as { min-height: 1.25em; margin: 14px 0 8px; color: var(--text-dim); font: 500 0.84rem/1.25 var(--font-ui); text-align: center; }
+.seat-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 250px;
+  padding: 5px 14px 5px 5px;
+  border-radius: 999px;
+  background: #ffffff;
+}
+.seat.is-picking .seat-name { background: var(--inset); }
+.seat-name:focus-within { box-shadow: inset 0 0 0 2px var(--jade-deep); }
+.seat-num {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--pc);
+  color: #ffffff;
+  font: 500 0.82rem/1 var(--font-mono);
+}
+.seat-name input {
+  flex: 1;
+  min-width: 0;
+  padding: 5px 0;
+  border: 0;
+  outline: none;
+  background: none;
+  color: var(--cream);
+  font: 500 1rem/1.2 var(--font-ui);
+}
+.seats[data-count="1"] .seat-num { display: none; }
+.seats[data-count="1"] .seat-name { padding-left: 18px; }
+.seats[data-count="1"] .seat-name input { text-align: center; }
+
+/* the cast: once, for the whole table */
+.cast { margin: 0; padding: 16px 18px 18px; }
+.cast-line { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 2px 14px; color: var(--cream); font: 600 0.95rem/1.3 var(--font-ui); }
+.cast-who { color: var(--pc); font-weight: 600; }
+.cast-hint { color: var(--text-dim); font-weight: 400; font-size: 0.82rem; }
+.cast-faces { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 14px 6px; }
+.cast .char-option,
+.cast .char-option:hover,
+.cast .char-option[aria-checked="true"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  padding: 0;
+  border-radius: 14px;
+  background: none;
+  color: var(--text-dim);
+  font: 500 0.76rem/1.15 var(--font-ui);
+}
+.cast-face { position: relative; width: min(100%, 74px); aspect-ratio: 1; border-radius: 50%; transition: scale 0.15s; }
+.cast .char-option img,
+.cast .char-none-seal { width: 100%; height: 100%; border-radius: 50%; }
+.cast .char-none-seal { background: var(--inset); font-size: 1rem; }
+.cast .char-option:hover .cast-face,
+.cast .char-option:focus-visible .cast-face { scale: 1.07; }
+.cast .char-option:hover .cast-name { color: var(--cream); }
+.cast .char-option[aria-checked="true"] img,
+.cast .char-option[aria-checked="true"] .char-none-seal { box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px var(--jade-deep); }
+.cast .char-option[aria-checked="true"] .cast-name { color: var(--jade-deep); font-weight: 600; }
+.cast .char-option:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 6px; }
+.cast-name { max-width: 100%; text-align: center; text-wrap: balance; }
+.cast-tag {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--pc);
+  color: #ffffff;
+  font: 500 0.74rem/1 var(--font-mono);
+  box-shadow: 0 0 0 2px #ffffff;
+}
+.cast-tag + .cast-tag { right: 15px; }
+.cast-tag + .cast-tag + .cast-tag { right: 35px; }
+
+/* the game: four quiet rows */
+.game-card { margin: 0; }
+.game-card > h2 { margin: 0 0 4px 4px; color: var(--cream); font: 600 1.08rem/1.3 var(--font-ui); }
+.opt-row { margin-top: 16px; }
+.opt-label { margin: 0 0 7px 6px; color: var(--text-dim); font: 500 0.82rem/1.2 var(--font-ui); }
+.opt-note { margin: 8px 6px 0; color: var(--text-dim); font: 400 0.82rem/1.4 var(--font-ui); }
+.opt-note:empty { display: none; }
+.game-card .chapter-card { margin: 14px 0 0; }
+
+@media (max-width: 840px) {
+  /* the title, stacked: name, Napoleon, Play */
+  .setup-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    height: auto;
+    min-height: calc(100dvh - 28px);
+    text-align: center;
+  }
+  .setup-brand { display: contents; }
+  .setup-screen .logo { text-align: center; }
+  .setup-deck { margin-top: 10px; }
+  .setup-hero .title-stage { order: 1; margin-top: 6px; }
+  .btn-play { order: 2; width: min(100%, 320px); min-height: 66px; margin-top: 18px; }
+  .setup-hero .hall-of-fame { order: 3; justify-content: center; margin-top: 18px; }
+  .setup-hero .setup-footer { order: 4; justify-content: center; margin-top: 18px; }
+
+  /* the table, stacked, with the way in always in reach */
+  .table { display: block; min-height: 0; padding-bottom: 92px; }
+  .table-cast,
+  .table-game { padding: 10px; border-radius: 32px; }
+  .table-game { margin-top: 12px; }
+  .table-go {
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 18px 14px calc(14px + env(safe-area-inset-bottom));
+    background: linear-gradient(rgba(255, 249, 243, 0), var(--paper) 38%);
+  }
+  .table-head { flex-wrap: wrap; gap: 10px 12px; margin: 6px 4px 2px; }
+  .seg-count { flex: 1 0 100%; }
+  .seats { gap: 2px; padding: 8px 0 10px; --h: clamp(130px, 21vh, 190px); }
+  .seats[data-count="1"] { --h: clamp(160px, 27vh, 230px); }
+  .seat { padding: 12px 5px 8px; border-radius: 22px; }
+  .seat-as { margin: 12px 0 7px; font-size: 0.76rem; }
+  .seat-name { gap: 5px; padding: 4px 8px 4px 4px; }
+  .seat-num { width: 26px; height: 26px; font-size: 0.74rem; }
+  .seat-name input { font-size: 1rem; }
+  .cast { padding: 14px 12px 16px; }
+  .cast-faces { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px 4px; }
+  .cast .char-option,
+  .cast .char-option:hover,
+  .cast .char-option[aria-checked="true"] { font-size: 0.66rem; }
+  .cast-tag { width: 21px; height: 21px; font-size: 0.68rem; }
+  .cast-tag + .cast-tag { right: 12px; }
+  .cast-tag + .cast-tag + .cast-tag { right: 29px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .seat, .seat-fig, .cast-face { transition: none; }
 }

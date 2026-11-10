@@ -99,6 +99,10 @@ Done on Nov 10 2026 (the title page):
   `public/assets/host/welcome-tip.mp4`, cut from `art-src/napoleon-hat-tip.mp4` by
   `scripts/build-hat-tip.py`. If the welcome pose is ever redrawn, the film has to be made
   again from the new picture, or the two will not line up.
-- The cast is on show from the start, once for the whole table: two rows of faces under the
-  names. The players take turns at it with the tabs, each player's numbered tag sits on their
-  face, and taking a face someone else holds swaps the two.
+- The start is two steps on one page (`data-step` on `.setup-screen`, so nothing is lost on
+  the way back). Step one is the title: Napoleon, the name and one Play button. Step two is
+  the table, "Who's playing?": every player stands at it full length (the `ready` pose) with
+  their name underneath, the cast sits below them once with names, and the game's four choices
+  (play style, length, questions, answering) keep to one card of pill rows. A tap on a player
+  hands them the cast, each player's numbered tag sits on their face, and taking a face someone
+  else holds swaps the two. A rematch comes back to the table, not the title.
