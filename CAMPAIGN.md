@@ -92,3 +92,11 @@ Done on Nov 10 2026 (the live host pass):
   wager and the results, and change with the game (`src/host.js`, cut by
   `scripts/build-host-poses.py`).
 - Each chapter's board opens with a host line of its own (`CHAPTER_LINES` in `src/main.js`).
+
+Done on Nov 10 2026 (the title page):
+
+- Napoleon tips his hat on the title, and again when tapped. The film is
+  `public/assets/host/welcome-tip.mp4`, cut from `art-src/napoleon-hat-tip.mp4` by
+  `scripts/build-hat-tip.py`. If the welcome pose is ever redrawn, the film has to be made
+  again from the new picture, or the two will not line up.
+- Each player's character choices are on show from the start, as a row of faces under the name.

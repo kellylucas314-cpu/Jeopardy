@@ -3685,3 +3685,52 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 @media (max-width: 560px) {
   .dd-content { padding: 20px 18px 22px; border-width: 8px; border-radius: 34px; }
 }
+
+/* — The cast is on show from the start: a row of faces under each name, the chosen one ringed in jade — */
+.cast { margin: 6px 0 4px; }
+.cast-line { min-height: 1.3em; margin: 0 0 12px 66px; color: var(--cream-dim); font: 400 0.84rem/1.3 var(--font-ui); }
+.cast-line strong { color: var(--cream); font-weight: 600; }
+/* fourteen choices: two even rows of seven */
+.cast-faces { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px 8px; }
+.cast .char-option,
+.cast .char-option:hover,
+.cast .char-option[aria-checked="true"] { padding: 0; border-radius: 999px; background: none; aspect-ratio: 1; }
+.cast .char-option img,
+.cast .char-none-seal { width: 100%; height: 100%; opacity: 0.72; filter: saturate(0.75); transition: opacity 0.15s, filter 0.15s, transform 0.15s; }
+.cast .char-none-seal { background: var(--inset); font-size: 0.9rem; }
+.cast .char-option:hover img,
+.cast .char-option:hover .char-none-seal,
+.cast .char-option:focus-visible img,
+.cast .char-option:focus-visible .char-none-seal { opacity: 1; filter: none; transform: scale(1.08); }
+.cast .char-option[aria-checked="true"] img,
+.cast .char-option[aria-checked="true"] .char-none-seal { opacity: 1; filter: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--jade-deep); }
+.cast .char-option:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 5px; }
+div.player-seal { cursor: default; }
+@media (max-width: 560px) {
+  .cast-faces { gap: 8px 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cast .char-option img, .cast .char-none-seal { transition: none; }
+}
+
+/* — The hat tip: a film cut to his outline, drawn on a canvas, takes the still picture's place
+     and then hands back. The film's box is 1.0489 times the still picture's height (room for the
+     lifted hat) and shares its centre and its feet, so the two register (scripts/build-hat-tip.py). — */
+.host-tip {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  translate: -50% 0;
+  height: calc(100% * var(--k, 1) * 1.0489);
+  width: auto;
+  max-width: none;
+  user-select: none;
+  pointer-events: none;
+}
+.host-fig.is-tipping .host-img { visibility: hidden; }
+/* on the title the whole figure breathes, so the still picture and the film breathe as one */
+.title-fig { pointer-events: auto; cursor: pointer; transform-origin: 50% 100%; animation: hostBreathe 3.8s ease-in-out infinite alternate; }
+.title-fig .host-img { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .title-fig { animation: none; cursor: default; }
+}

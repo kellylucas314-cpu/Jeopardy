@@ -98,3 +98,109 @@ export function preloadHost(faces = []) {
   if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 2500 });
   else setTimeout(load, 600);
 }
+
+/* — The hat tip on the title page — */
+
+const TIP_SRC = './assets/host/welcome-tip.mp4';
+const TIP_SIZE = [528, 756];   // one half of the stacked film (scripts/build-hat-tip.py)
+let tip = null;                // the film and its canvas, made on first use
+let tipping = false;
+
+/**
+ * The film has no see-through background of its own: his colours are in the top
+ * half and his outline is a white mask in the bottom half. A small shader puts
+ * the two back together on a canvas the size of one half.
+ */
+function tipStage() {
+  const canvas = document.createElement('canvas');
+  [canvas.width, canvas.height] = TIP_SIZE;
+  canvas.className = 'host-tip';
+  canvas.setAttribute('aria-hidden', 'true');
+  const gl = canvas.getContext('webgl', { premultipliedAlpha: true, antialias: false });
+  if (!gl) return null;
+
+  const shader = (type, source) => {
+    const sh = gl.createShader(type);
+    gl.shaderSource(sh, source);
+    gl.compileShader(sh);
+    return sh;
+  };
+  const program = gl.createProgram();
+  gl.attachShader(program, shader(gl.VERTEX_SHADER, `
+    attribute vec2 p;
+    varying vec2 uv;
+    void main() { uv = p * 0.5 + 0.5; gl_Position = vec4(p, 0.0, 1.0); }`));
+  gl.attachShader(program, shader(gl.FRAGMENT_SHADER, `
+    precision mediump float;
+    uniform sampler2D film;
+    varying vec2 uv;
+    void main() {
+      // stay a hair inside each half so one never bleeds into the other
+      vec3 colour = texture2D(film, vec2(uv.x, clamp(0.5 + uv.y * 0.5, 0.5015, 0.9985))).rgb;
+      float mask = texture2D(film, vec2(uv.x, clamp(uv.y * 0.5, 0.0015, 0.4985))).r;
+      float a = clamp((mask - 0.06) / 0.86, 0.0, 1.0);
+      gl_FragColor = vec4(colour * a, a);
+    }`));
+  gl.linkProgram(program);
+  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) return null;
+  gl.useProgram(program);
+
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+  const p = gl.getAttribLocation(program, 'p');
+  gl.enableVertexAttribArray(p);
+  gl.vertexAttribPointer(p, 2, gl.FLOAT, false, 0, 0);
+
+  gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
+  gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+
+  const video = document.createElement('video');
+  video.muted = true;
+  video.playsInline = true;
+  video.preload = 'auto';
+  video.src = TIP_SRC;
+
+  const draw = () => {
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, video);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  };
+  return { canvas, video, draw };
+}
+
+/**
+ * He tips his hat, then the still picture takes over again. If the film cannot
+ * play (no WebGL, autoplay refused, data saver on) he simply stands there, hat on.
+ */
+export function tipHat(fig) {
+  if (!fig || tipping || reduced() || navigator.connection?.saveData) return;
+  try { tip ||= tipStage(); } catch { tip = null; }
+  if (!tip) return;
+  const { canvas, video, draw } = tip;
+  tipping = true;
+
+  const finish = () => {
+    video.pause();
+    fig.classList.remove('is-tipping');
+    canvas.remove();
+    tipping = false;
+  };
+  const frame = () => {
+    if (!tipping) return;
+    if (video.ended || !fig.isConnected) return finish();
+    if (video.readyState >= 2 && video.currentTime > 0) {
+      try { draw(); } catch { return finish(); }
+      if (!canvas.isConnected) {
+        fig.append(canvas);
+        fig.classList.add('is-tipping');
+      }
+    }
+    requestAnimationFrame(frame);
+  };
+
+  video.currentTime = 0;
+  video.play().then(() => requestAnimationFrame(frame), () => { tipping = false; });
+}
