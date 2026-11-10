@@ -19,12 +19,13 @@ import { loadCharacters, characters, characterById, portraitUrl, poseUrl } from 
 import { shape, compassLoader } from './shapes.js';
 import { animate, stagger } from 'motion';
 import 'number-flow';
-import { hostFigure, hostReact, faceSrc, setFace, preloadHost } from './host.js';
+import { hostFigure, hostReact, hostSay, hostMove, poseSrc, faceSrc, setFace, preloadHost } from './host.js';
+import { empireMap, statusMark, pointAt } from './empire.js';
 
 loadCharacters();
 
 // Dev-only handle for screenshots and debugging; stripped from production builds.
-if (import.meta.env.DEV) window.__cde = { getState, setState };
+if (import.meta.env.DEV) window.__cde = { getState, setState, empire: async n => { await loadCampaign(); showEmpire(getChapter(n)); } };
 
 const app = document.getElementById('app');
 let timerInterval = null;
@@ -101,6 +102,18 @@ const NOBUZZ_LINES = ['No volunteers? Cowardice.', 'The salon falls silent…', 
 const STEAL_LINES = ['The spoils lie unclaimed!', 'An open flank. Who will take it?', 'Seize it, or regret it.'];
 const BOARD_LINES = ['Choose your battlefield.', 'The board awaits your command.', 'Pick your ground. History is watching.', 'Retreat is unavailable. Pick a category.', 'Every square hides a small war.'];
 
+const STREAK_LINES = {
+  2: ['Twice in a row. A pattern forms.', 'Two for two. Continue.'],
+  3: ['Three in a row. Now you are dangerous.', 'Three. The enemy begins to worry.'],
+  4: ['Four. They are in full retreat.', 'Four in a row. Keep marching.'],
+  5: ['Five in a row. I have made marshals for less.', 'Unstoppable. I know the feeling.'],
+};
+const FAST_LINES = ['Before I had finished the sentence.', 'Quick as a cavalry charge.', 'No hesitation. Good.'];
+const STREAK_BROKEN_LINES = ['And there the advance ends.', 'Every great march meets its winter.'];
+const WAGER_WON_LINES = ['A wager won. That is how empires are made.', 'Fortune favors the bold. Today.'];
+const WAGER_LOST_LINES = ['Waterloo. I know the feeling.', 'A bold wager. A costly one.'];
+const BIG_PICK_LINES = ['The heavy guns. Good.', 'Straight for the big prize.', 'Ambitious. I approve.'];
+const LAST_CLUE_LINES = ['The last square. Make it count.', 'One left. Finish it.'];
 const PASS_LINES = ['A strategic withdrawal. Noted.', 'You decline the field. Very well.', 'Discretion. I have heard of it.'];
 const URGENT_LINES = ['Tick, tock.', 'Decide, general.', 'The clock is not your ally.', 'Any moment now.'];
 const AFTER_CORRECT = ['Good. Press the advantage.', 'Momentum, general. Use it.', 'Again. Just like that.'];
@@ -136,6 +149,7 @@ const REACTIONS = {
 let lastOutcome = null; // how the last clue went, for his stance back at the board
 let stanceTurn = 0; // so a late 'back to pointing' never lands on a newer board
 let lastPicked = null; // the tile just played, so the board can show it being spent
+let clueShownAt = 0; // to notice a quick answer
 
 const MONEY_FMT = { style: 'currency', currency: 'USD', maximumFractionDigits: 0 };
 const EXPO = [0.16, 1, 0.3, 1];
@@ -148,12 +162,29 @@ const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
  */
 function verdict(kind, line) {
   const r = REACTIONS[kind];
+  const pose = pick(r.poses);
   lastOutcome = kind === 'pardon' ? 'correct' : kind;
-  hostReact(pick(r.poses), { move: r.move, say: line });
+  hostReact(pose, { move: r.move, say: line });
+  if (kind === 'correct' || kind === 'pardon') navigator.vibrate?.(18);
+  else if (kind === 'wrong' || kind === 'timeout') navigator.vibrate?.([36, 50, 36]);
   return `<figure class="verdict">
-      <img class="verdict-face" src="${faceSrc(r.face)}" alt="">
+      <span class="verdict-fig" data-move="${r.move}"><img src="${poseSrc(pose)}" alt=""></span>
       <figcaption>${escapeHtml(line)}</figcaption>
     </figure>`;
+}
+
+/** The line for a right answer: he notices a streak, a quick answer, a wager won. */
+function correctLine(result, { wager = false, seconds = 99 } = {}) {
+  if (wager) return pick(WAGER_WON_LINES);
+  if (result.streak >= 2) return pick(STREAK_LINES[Math.min(result.streak, 5)]);
+  if (seconds < 6) return pick(FAST_LINES);
+  return pick(CORRECT_LINES);
+}
+/** ...and for a wrong one: a lost wager, or a good run cut short. */
+function wrongLine({ wager = false, streakBefore = 0 } = {}) {
+  if (wager) return pick(WAGER_LOST_LINES);
+  if (streakBefore >= 3) return pick(STREAK_BROKEN_LINES);
+  return pick(WRONG_LINES);
 }
 
 /** Fill every <number-flow data-to> on screen. One that carries data-from rolls up (or down) from there. */
@@ -692,24 +723,31 @@ function showEmpire(chapter) {
     emp.peopleMillions ? `about ${emp.peopleMillions} million people` : '',
   ].filter(Boolean).join(' · ');
 
+  const present = STATUS_ORDER.filter(st => holdings.some(h => h.status === st));
   const overlay = document.createElement('div');
   overlay.className = 'modal-overlay';
   overlay.innerHTML = `
     <div class="modal empire" role="dialog" aria-modal="true" aria-label="The Empire">
       <div class="modal-title">The Empire &middot; Chapter ${chapter.number} &middot; ${escapeHtml(chapter.years)}</div>
-      <div class="empire-headline">${escapeHtml(emp.headline)}</div>
-      <div class="empire-note">${escapeHtml(emp.note || '')}</div>
-      <div class="empire-bar" role="img" aria-label="Empire size ${size} of ${max}"><div class="empire-bar-fill" style="--fill:${size / max}"></div></div>
-      <div class="empire-meta">${escapeHtml(meta)}</div>
-      <ul class="empire-list">
-        ${holdings.map(h => `
-          <li class="status-${h.status}">
-            <span class="eh-name">${escapeHtml(h.name)}</span>
-            <span class="eh-status">${escapeHtml(statusLabel(h.status))}${h.since ? ` &middot; ${escapeHtml(h.since)}` : ''}</span>
-            ${h.note ? `<span class="eh-note">${escapeHtml(h.note)}</span>` : ''}
-          </li>
-        `).join('')}
-      </ul>
+      <div class="empire-body">
+        <div class="empire-side">
+          <div class="empire-headline">${escapeHtml(emp.headline)}</div>
+          <div class="empire-note">${escapeHtml(emp.note || '')}</div>
+          <div class="empire-map-wrap">${empireMap(holdings, `Map of Europe with ${holdings.length} places marked. They are listed below.`)}</div>
+          <div class="empire-legend">${present.map(st => `<span>${statusMark(st)}${escapeHtml(statusLabel(st))}</span>`).join('')}</div>
+          <div class="empire-meta">${escapeHtml(meta)}</div>
+        </div>
+        <ul class="empire-list">
+          ${holdings.map((h, i) => `
+            <li class="status-${h.status}" data-pin="${i}" tabindex="0">
+              ${statusMark(h.status)}
+              <span class="eh-name">${escapeHtml(h.name)}</span>
+              <span class="eh-status">${escapeHtml(statusLabel(h.status))}${h.since ? ` &middot; ${escapeHtml(h.since)}` : ''}</span>
+              ${h.note ? `<span class="eh-note">${escapeHtml(h.note)}</span>` : ''}
+            </li>
+          `).join('')}
+        </ul>
+      </div>
       <div class="modal-actions">
         <button class="btn-cta modal-cancel">Close</button>
       </div>
@@ -719,7 +757,33 @@ function showEmpire(chapter) {
   const close = () => overlay.remove();
   overlay.querySelector('.modal-cancel').addEventListener('click', close);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
-  overlay.querySelector('.modal-cancel').focus();
+  overlay.querySelector('.modal-cancel').focus({ preventScroll: true });
+
+  // A row and its pin point at each other
+  const svg = overlay.querySelector('.empire-map');
+  const rows = overlay.querySelectorAll('.empire-list li');
+  const point = (i) => {
+    rows.forEach(r => r.classList.toggle('is-on', Number(r.dataset.pin) === i));
+    pointAt(svg, i, i === null ? '' : holdings[i].name);
+  };
+  rows.forEach(row => {
+    const i = Number(row.dataset.pin);
+    row.addEventListener('pointerenter', () => point(i));
+    row.addEventListener('focus', () => point(i));
+    row.addEventListener('click', () => point(i));
+  });
+  svg.querySelectorAll('.em-pin').forEach(pin => {
+    const i = Number(pin.dataset.pin);
+    pin.addEventListener('pointerenter', () => point(i));
+    pin.addEventListener('click', () => { point(i); rows[i].scrollIntoView({ block: 'nearest', behavior: prefersReducedMotion() ? 'auto' : 'smooth' }); });
+  });
+  svg.addEventListener('pointerleave', () => point(null));
+
+  // The Empire assembles: France first, then each ring of holdings
+  if (!prefersReducedMotion()) {
+    animate(svg.querySelectorAll('.em-shape'), { scale: [0, 1], opacity: [0, 1] },
+      { type: 'spring', stiffness: 380, damping: 18, delay: stagger(0.055, { startDelay: 0.25 }) });
+  }
 }
 
 function updateModeVisibility(count) {
@@ -916,7 +980,7 @@ function renderBoard() {
             <div class="player-score ${i === activePlayer ? 'active' : ''}" style="--pc: ${PLAYER_COLORS[i]}">
               <div class="player-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}">${avatarHtml(p, i)}</div>
               <div class="player-meta">
-                <div class="player-name">${escapeHtml(p.name)}${p.streak >= 2 ? ` <span class="streak">&times;${p.streak}</span>` : ''}</div>
+                <div class="player-name">${escapeHtml(p.name)}${p.streak >= 2 ? ` <span class="streak${p.streak >= 3 ? ' is-hot' : ''}">&times;${p.streak}</span>` : ''}</div>
                 <div class="player-amount ${p.score < 0 ? 'negative' : ''}" data-index="${i}">${flowMoney(p.score, prevScores[i])}</div>
               </div>
             </div>
@@ -985,6 +1049,12 @@ function renderBoard() {
       { duration: 1.9, times: [0, 0.14, 0.78, 1], ease: 'easeOut', delay: 0.25 }).then(() => chip.remove());
   });
   prevScores = players.map(p => p.score);
+  if (outcome && !prefersReducedMotion()) {
+    const dockFace = document.querySelector('.host-monogram.has-face');
+    if (dockFace) animate(dockFace, { scale: [0.7, 1] }, { type: 'spring', stiffness: 420, damping: 14 });
+    const badge = document.querySelector('.player-score .streak');
+    if (badge && outcome === 'correct') animate(badge, { scale: [0, 1.25, 1] }, { duration: 0.5, ease: EXPO, delay: 0.5 });
+  }
 
   // After his reaction, he goes back to pointing at the board
   preloadHost(['delighted', 'frustrated', 'annoyed', 'puzzled', 'smirk', 'surprised', 'suspicious']);
@@ -1256,6 +1326,8 @@ function showFeedback(html) {
   if (prefersReducedMotion()) return;
   const parts = feedback.querySelectorAll('.verdict, .verdict-score, .streak-callout, .correct-response, .feedback-actions');
   if (parts.length) animate(parts, { opacity: [0, 1], y: [10, 0] }, { duration: 0.32, ease: EXPO, delay: stagger(0.07) });
+  const fig = feedback.querySelector('.verdict-fig');
+  if (fig) hostMove(fig.querySelector('img'), fig.dataset.move);
   const score = feedback.querySelector('.verdict-score span');
   if (score) animate(score, { scale: [0.6, 1] }, { type: 'spring', stiffness: 520, damping: 17, delay: 0.07 });
 }
@@ -1307,6 +1379,17 @@ function renderTurnsClue() {
   `);
 
   startTimer(getState().clueSeconds || 30, handleTimeExpired);
+  clueShownAt = Date.now();
+
+  // He remarks on the pick, briefly, then lets you think
+  const { cluesAnswered, totalClues, categories } = getState();
+  const top = Math.max(...categories.flatMap(c => c.clues.map(cl => cl.value)));
+  const remark = totalClues - cluesAnswered === 1 ? pick(LAST_CLUE_LINES)
+    : !currentClue.isDailyDouble && currentClue.value === top ? pick(BIG_PICK_LINES) : '';
+  if (remark) {
+    hostSay(remark);
+    setTimeout(() => { if (shownScreen === 'clue' && !document.querySelector('#clue-feedback.show') && !urgentShown) hostSay(''); }, 2400);
+  }
 
   const input = document.getElementById('answer-input');
   setTimeout(() => input.focus(), 50);
@@ -1321,7 +1404,7 @@ function renderTurnsClue() {
 
 function handleSubmitAnswer() {
   const input = document.getElementById('answer-input');
-  if (!input) return;
+  if (!input || input.disabled) return;
   const answer = input.value.trim();
   if (!answer) return;
 
@@ -1330,35 +1413,55 @@ function handleSubmitAnswer() {
   document.getElementById('btn-submit').disabled = true;
   document.getElementById('btn-skip').disabled = true;
 
-  const result = submitAnswer(answer);
-  if (!result) return;
-  flashScreen(result.correct ? "correct" : "wrong");
+  const { currentClue, players, answeringPlayer } = getState();
+  const wager = !!currentClue.isDailyDouble;
+  const streakBefore = players[answeringPlayer].streak;
+  const seconds = (Date.now() - clueShownAt) / 1000;
 
-  if (result.correct) {
-    showFeedback(`
-      <div class="feedback-correct">
-        ${verdict('correct', pick(CORRECT_LINES))}
-        <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
-        ${bonusHtml(result)}
-      </div>
-    `);
-    scheduleReturn(result.bonus ? 2400 : 2000);
-  } else {
-    showFeedback(`
-      <div class="feedback-wrong">
-        ${verdict('wrong', pick(WRONG_LINES))}
-        <div class="verdict-score">${icon('cross')}<span>-$${formatMoney(result.value)}</span></div>
-        <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
-        <div class="feedback-actions">
-          <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
-          <button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it</button>
+  const judge = () => {
+    if (shownScreen !== 'clue') return;
+    const result = submitAnswer(answer);
+    if (!result) return;
+    flashScreen(result.correct ? "correct" : "wrong");
+
+    if (result.correct) {
+      showFeedback(`
+        <div class="feedback-correct">
+          ${verdict('correct', correctLine(result, { wager, seconds }))}
+          <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
+          ${bonusHtml(result)}
         </div>
-      </div>
-    `);
-    document.getElementById('btn-fb-continue').addEventListener('click', () => {
-      lastScreen = null; returnToBoard();
-    });
-    document.getElementById('btn-fb-accept').addEventListener('click', handleOverride);
+      `);
+      scheduleReturn(result.bonus ? 2400 : 2000);
+    } else {
+      showFeedback(`
+        <div class="feedback-wrong">
+          ${verdict('wrong', wrongLine({ wager, streakBefore }))}
+          <div class="verdict-score">${icon('cross')}<span>-$${formatMoney(result.value)}</span></div>
+          <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
+          <div class="feedback-actions">
+            <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
+            <button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it</button>
+          </div>
+        </div>
+      `);
+      document.getElementById('btn-fb-continue').addEventListener('click', () => {
+        lastScreen = null; returnToBoard();
+      });
+      document.getElementById('btn-fb-accept').addEventListener('click', handleOverride);
+    }
+  };
+
+  // A wager is a big moment, and a big moment gets a windup: he weighs the answer first
+  if (wager && !prefersReducedMotion()) {
+    hostReact('suspicious', { move: 'lean', say: 'Hm.' });
+    showFeedback(`<figure class="verdict">
+        <span class="verdict-fig" data-move="lean"><img src="${poseSrc('suspicious')}" alt=""></span>
+        <figcaption>Hm.</figcaption>
+      </figure>`);
+    setTimeout(judge, 750);
+  } else {
+    judge();
   }
 }
 
@@ -1552,7 +1655,7 @@ function resolveBuzzAnswer(answer, timedOut) {
     buzzPhase = 'done';
     showFeedback(`
       <div class="feedback-correct">
-        ${verdict('correct', pick(CORRECT_LINES))}
+        ${verdict('correct', correctLine(result))}
         <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
         ${bonusHtml(result)}
       </div>
@@ -1969,7 +2072,12 @@ function renderFinalAnswer() {
   `;
   hostReact(finalAnswers.some(a => a.correct) ? 'victory' : 'defeated', { move: finalAnswers.some(a => a.correct) ? 'hop' : 'settle' });
 
-  flowNumbers(500);
+  // The reveal, one player at a time
+  const revealRows = document.querySelectorAll('.final-result-player');
+  if (!prefersReducedMotion() && revealRows.length) {
+    animate(revealRows, { opacity: [0, 1], y: [16, 0] }, { duration: 0.4, ease: EXPO, delay: stagger(0.45, { startDelay: 0.35 }) });
+  }
+  flowNumbers(500 + 450 * Math.max(0, revealRows.length - 1));
 
   document.querySelectorAll('.btn-final-override').forEach(btn => {
     btn.addEventListener('click', () => {

@@ -36,8 +36,13 @@ export function hostFigure(pose, cls = '', { say = false, alt = '' } = {}) {
 /** One short move after a pose change. All transforms; nothing here touches layout. */
 const MOVES = {
   settle: img => animate(img, { y: [7, 0], scaleY: [0.965, 1] }, { duration: 0.35, ease: EXPO }),
-  hop: img => animate(img, { y: [0, -26, 0], scaleY: [0.94, 1.03, 1] }, { duration: 0.6, times: [0, 0.42, 1], ease: ['easeOut', 'easeIn'] }),
-  recoil: img => animate(img, { x: [-20, 0], rotate: [-3.5, 0] }, { type: 'spring', stiffness: 420, damping: 16 }),
+  // Timings below were set against a frame-by-frame reading of his box on screen.
+  // A hop has a windup and a landing: he dips, leaves the ground, and lands with a little give.
+  hop: img => animate(img, { y: [0, 6, -36, 0, 0], scaleY: [1, 0.9, 1.05, 0.96, 1] },
+    { duration: 0.82, times: [0, 0.17, 0.5, 0.82, 1], ease: ['easeOut', 'easeOut', 'easeIn', 'easeOut'] }),
+  // A recoil is thrown back fast and comes forward slowly, or it is over before the eye catches it.
+  recoil: img => animate(img, { x: [0, -28, -23, 0], rotate: [0, -4, -3.2, 0] },
+    { duration: 0.66, times: [0, 0.15, 0.45, 1], ease: ['easeOut', 'linear', 'easeInOut'] }),
   lean: img => animate(img, { x: [10, 0], scale: [0.97, 1] }, { duration: 0.4, ease: EXPO }),
   refuse: img => animate(img, { rotate: [0, -1.6, 1.4, 0] }, { duration: 0.5, ease: 'easeInOut' }),
   march: img => animate(img, { x: [90, 0], opacity: [0, 1] }, { duration: 0.7, ease: EXPO }),
@@ -59,6 +64,11 @@ export function hostReact(pose, { move = 'settle', say } = {}) {
   }
   if (say !== undefined) hostSay(say);
   if (!reduced() && MOVES[move]) MOVES[move](img);
+}
+
+/** Play one of the moves on any picture of him (the phone's verdict figure uses this). */
+export function hostMove(img, move) {
+  if (img && !reduced() && MOVES[move]) MOVES[move](img);
 }
 
 /** Put words in his speech bubble (wide screens only; CSS hides it elsewhere). */

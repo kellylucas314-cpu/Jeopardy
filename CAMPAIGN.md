@@ -73,8 +73,18 @@ accepts natural answers.
 
 ## Next steps (front-end pass)
 
-- A real map: the ledger's holdings are the data; an SVG of Europe with the annexed /
-  satellite / allied layers per chapter would make "the Empire grows" visible.
+- Real borders on the map. Today a holding is a pin at its capital; drawing the borders of
+  1800 needs a historical boundary dataset, which the ledger does not have.
+
+Done on Nov 10 2026 (the weak-spots pass):
+
+- The map. "The Empire" dialog draws a faceted Europe with one mark per holding, shaped and
+  coloured by status; a row and its pin point at each other (`src/empire.js`; the coast and
+  the pin positions are written by `scripts/build-empire-map.mjs` into `src/empire-map.js`).
+  A new holding in `chapters.json` needs a line in that script's `PLACES`, or the build stops.
+- Napoleon's figure and his line show on phones after every answer.
+- He answers specific play: streaks, quick answers, a won or lost Waterloo Wager, a run cut
+  short, the top-value square, the last square.
 
 Done on Nov 10 2026 (the live host pass):
 

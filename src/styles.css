@@ -2579,28 +2579,14 @@ input { caret-color: var(--terracotta-deep); }
 .co-next { font-size: 0.85rem; font-weight: 600; color: var(--jade-deep); }
 
 .modal.empire {
-  max-width: 580px;
-  width: min(580px, 94vw);
-  max-height: 88dvh;
+  max-width: 1000px;
+  width: min(1000px, 94vw);
+  max-height: 90dvh;
   overflow-y: auto;
   text-align: left;
 }
 .empire-headline { font-weight: 700; font-size: 1.05rem; color: var(--cream); }
 .empire-note { font-size: 0.88rem; color: var(--cream-dim); margin: 2px 0 10px; line-height: 1.5; }
-.empire-bar {
-  height: 8px;
-  border-radius: 999px;
-  background: var(--surface-3);
-  overflow: hidden;
-  margin: 6px 0;
-}
-.empire-bar-fill {
-  height: 100%;
-  width: calc(var(--fill, 0) * 100%);
-  background: var(--brass);
-  border-radius: 999px;
-  transition: width 0.4s var(--ease);
-}
 .empire-meta {
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -2609,23 +2595,20 @@ input { caret-color: var(--terracotta-deep); }
   color: var(--cream-faint);
   margin-bottom: 12px;
 }
-.empire-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+.empire-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 0 0 18px; padding: 0; }
 .empire-list li {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2px 12px;
-  padding: 8px 10px;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2px 10px;
+  padding: 8px 12px;
   border-radius: 10px;
   background: var(--surface-2);
-  border-left: 3px solid var(--line-strong);
+  cursor: default;
 }
-.empire-list li.status-core { border-left-color: var(--jade-deep); }
-.empire-list li.status-annexed { border-left-color: var(--jade); }
-.empire-list li.status-satellite { border-left-color: var(--brass); }
-.empire-list li.status-allied { border-left-color: var(--terracotta); }
-.empire-list li.status-occupied { border-left-color: var(--p1); }
-.empire-list li.status-lost { border-left-color: var(--wrong); opacity: 0.72; }
-.empire-list li.status-exile { border-left-color: var(--cream-faint); }
+.empire-list li.status-lost { opacity: 0.72; }
+.empire-list li.is-on,
+.empire-list li:focus-visible { background: var(--surface-3); outline: none; }
 .eh-name { font-weight: 700; font-size: 0.92rem; color: var(--cream); }
 .eh-status {
   font-size: 0.68rem;
@@ -2636,13 +2619,13 @@ input { caret-color: var(--terracotta-deep); }
   white-space: nowrap;
   align-self: center;
 }
-.eh-note { grid-column: 1 / -1; font-size: 0.82rem; line-height: 1.45; color: var(--cream-dim); }
+.eh-note { grid-column: 2 / -1; font-size: 0.82rem; line-height: 1.45; color: var(--cream-dim); }
 
 @media (max-width: 640px) {
   .style-buttons { flex-direction: column; }
   .chapter-facts, .chapter-intro-facts { font-size: 0.74rem; }
-  .empire-list li { grid-template-columns: 1fr; }
-  .eh-status { white-space: normal; }
+  .empire-list li { grid-template-columns: auto 1fr; }
+  .eh-status { white-space: normal; grid-column: 2; }
 }
 
 /* ============================================================
@@ -3237,20 +3220,44 @@ select:focus-visible,
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   max-width: 440px;
-  margin: 0 auto 14px;
+  margin: 0 auto 12px;
   text-align: left;
 }
-.verdict-face {
-  width: 54px;
-  height: 54px;
+.verdict-fig {
   flex: none;
-  border-radius: 999px;
-  object-fit: cover;
-  background: #f1e3cf;
+  width: 124px;
+  height: 132px;
+  overflow: hidden;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  -webkit-mask-image: linear-gradient(#000 74%, transparent);
+  mask-image: linear-gradient(#000 74%, transparent);
 }
-.verdict figcaption { font: italic 400 1.05rem/1.35 var(--font-ui); color: var(--cream); }
+.verdict-fig img { height: 268px; width: auto; max-width: none; margin-top: 6px; transform-origin: 50% 60%; }
+.verdict figcaption {
+  position: relative;
+  padding: 11px 15px;
+  border-radius: 16px;
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  font: italic 400 1.02rem/1.35 var(--font-ui);
+  color: var(--cream);
+}
+.verdict figcaption::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 26px;
+  width: 11px;
+  height: 11px;
+  rotate: 45deg;
+  background: inherit;
+  border-left: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 @media (min-width: 1240px) {
   .clue-screen .verdict {
     position: absolute;
@@ -3349,4 +3356,86 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 @media (prefers-reduced-motion: reduce) {
   .host-img { animation: none; }
   .board-clue .spent { display: none; }
+}
+
+
+/* ============================================================
+   THE WEAK-SPOTS PASS (Nov 10 2026)
+   The map of the Empire, his figure on phones, streaks.
+   ============================================================ */
+
+/* — The map: a faceted Europe, one mark per holding — */
+.empire-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  background: #dbe7e0;
+  overflow: hidden;
+  user-select: none;
+}
+.em-land { fill: #ead9bd; }
+.em-f0 { fill: #f6ead6; }
+.em-f1 { fill: #f1e2c8; }
+.em-f2 { fill: #ebd9ba; }
+.em-f3 { fill: #e5d0ad; }
+.em-f4 { fill: #dfc8a2; }
+.em-pin { cursor: pointer; }
+.em-shape { transform-box: fill-box; transform-origin: center; transition: scale 0.18s var(--ease-expo); }
+.em-pin.is-on .em-shape { scale: 1.55; }
+.em-shape > *,
+.em-mark > * { fill: currentColor; stroke: var(--paper); stroke-width: 2.2; paint-order: stroke; stroke-linejoin: round; }
+.em-shape > .em-hollow,
+.em-mark > .em-hollow { fill: var(--paper); stroke: currentColor; stroke-width: 2.8; }
+.em-shape > .em-cross,
+.em-mark > .em-cross { fill: none; stroke: currentColor; stroke-width: 3.2; stroke-linecap: round; }
+.status-core { color: var(--jade-deep); }
+.status-annexed { color: var(--jade-bright); }
+.status-satellite { color: var(--brass-bright); }
+.status-allied { color: var(--terracotta-deep); }
+.status-occupied { color: var(--p1); }
+.status-lost { color: var(--wrong); }
+.status-exile { color: var(--cream-faint); }
+.empire-list li { color: inherit; }
+.em-edge { font: 400 11px var(--font-mono); fill: var(--cream-dim); }
+.em-label { pointer-events: none; }
+.em-label rect { fill: var(--cream); }
+.em-label text { fill: var(--paper); font: 600 13px var(--font-ui); }
+.em-mark { width: 16px; height: 16px; flex: none; }
+.empire-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  color: var(--cream-dim);
+}
+.empire-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.empire-list .eh-name { color: var(--cream); }
+
+/* — Streaks — */
+.streak { display: inline-block; }
+.streak.is-hot { padding: 1px 7px; border-radius: 999px; background: var(--wrong); color: var(--paper); }
+
+/* — Phones: a bigger face in the dock, so his mood reads at a glance — */
+@media (max-width: 560px) {
+  .host-monogram.has-face { width: 52px; height: 52px; }
+  .verdict { align-items: flex-start; }
+  .verdict figcaption { margin-top: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .em-shape { transition: none; }
+}
+
+/* — The Empire dialog: the map stays in view while the ledger scrolls — */
+.empire-map-wrap { padding: 4px 0 10px; background: var(--surface-1); }
+@media (min-width: 900px) {
+  .empire-body { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+  .empire-list { max-height: min(64dvh, 600px); overflow-y: auto; padding-right: 6px; overscroll-behavior: contain; }
+}
+@media (max-width: 899px) {
+  .modal.empire { padding: 20px 18px; }
+  .empire-body, .empire-side { display: contents; }
+  .empire-map-wrap { position: sticky; top: 0; z-index: 2; padding-top: 10px; }
 }
