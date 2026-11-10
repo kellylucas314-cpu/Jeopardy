@@ -431,7 +431,7 @@ function renderSetup() {
     <div class="setup-screen">
       <section class="setup-hero" aria-labelledby="game-title">
         <div class="setup-brand">
-          <h1 class="logo" id="game-title">Clue d&rsquo;&Eacute;tat</h1>
+          <h1 class="logo" id="game-title">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></h1>
           <p class="setup-deck">A trivia coup hosted by Napoleon. History is watching.</p>
         </div>
         <figure class="title-stage" role="img"
@@ -445,9 +445,10 @@ function renderSetup() {
       </section>
       <section class="setup-panel">
         <div class="setup-panel-heading">
-          <h2>Prepare the table</h2>
+          <h2>Prepare the table<span class="logo-dot" aria-hidden="true">.</span></h2>
         </div>
         <div class="setup-card">
+         <div class="tray-card">
           <h2>How many players?</h2>
           <div class="player-count-buttons">
             ${[1, 2, 3].map(n => `
@@ -457,6 +458,8 @@ function renderSetup() {
             `).join('')}
           </div>
           <div id="player-names"></div>
+         </div>
+         <div class="tray-card">
           <h2 class="mode-title">Play style</h2>
           <div class="mode-buttons style-buttons">
             <button class="btn-mode btn-style ${playStyle === 'free' ? 'selected' : ''}" data-style="free">
@@ -478,6 +481,8 @@ function renderSetup() {
               Full &middot; ~45 min
             </button>
           </div>
+         </div>
+         <div class="tray-card">
           <h2 class="mode-title">Questions</h2>
           <div class="mode-buttons pack-buttons">
             <button class="btn-mode btn-pack ${pack === 'fresh' ? 'selected' : ''}" data-pack="fresh">
@@ -502,6 +507,7 @@ function renderSetup() {
               </button>
             </div>
           </div>
+         </div>
           <button class="btn-start" id="btn-start-game">${playStyle === 'campaign' ? 'March on' : 'Open the board'}</button>
         </div>
         <div class="setup-footer">
@@ -892,7 +898,7 @@ function renderLoading() {
   app.innerHTML = `
     ${sceneShapes('loading')}
     <div class="loading-screen">
-      <div class="logo">Clue d&rsquo;&Eacute;tat</div>
+      <div class="logo">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></div>
       ${compassLoader('loading-compass')}
       <div class="loading-text">${ch ? 'Drawing up the order of battle&hellip;' : 'Loading clues&hellip;'}</div>
       ${ch ? `<div class="chapter-meta">Chapter ${ch.number} &middot; ${escapeHtml(ch.title)}</div>` : ''}
@@ -934,7 +940,7 @@ function renderChapterIntro() {
 function renderError() {
   app.innerHTML = `
     <div class="loading-screen">
-      <div class="logo">Clue d&rsquo;&Eacute;tat</div>
+      <div class="logo">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></div>
       <div class="error-box">
         <div class="error-title">Couldn't load the clues</div>
         <div class="error-body">Check your connection and try again.</div>
@@ -977,7 +983,7 @@ function renderBoard() {
           <i class="ph ph-list" aria-hidden="true"></i>
         </button>
         <div class="board-brand">
-          <div class="board-title">Clue d&rsquo;&Eacute;tat</div>
+          <div class="board-title">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></div>
           <div class="round-meta">
             <div class="round-name">${roundName}</div>
             <div class="round-progress"><div class="round-progress-fill" style="--fill:${progress / 100}"></div></div>
@@ -1308,6 +1314,7 @@ function clueShell(extraHtml) {
   return `
     ${sceneShapes('clue')}
     <div class="clue-screen">
+     <div class="clue-panel">
       <div class="clue-header">
         <span class="clue-category">${escapeHtml(currentClue.categoryName)}</span>
         <span class="clue-value">${isDailyDouble ? 'DD ' : ''}$${formatMoney(displayValue)}</span>
@@ -1321,6 +1328,7 @@ function clueShell(extraHtml) {
       <div class="clue-text">${escapeHtml(currentClue.clue)}</div>
       ${extraHtml}
       <div class="clue-feedback" id="clue-feedback" role="status" aria-live="polite"></div>
+     </div>
     </div>
     ${stageHost('thinking', true)}
   `;

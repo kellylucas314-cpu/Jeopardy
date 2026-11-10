@@ -3572,3 +3572,116 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 .board-category.themed .category-header { background: var(--jade-tint); color: var(--jade-deep); }
 .reroll-btn { border: 1px solid var(--jade-deep); background: transparent; color: var(--jade-deep); }
 .reroll-btn:hover { background: #ffffff; }
+
+
+/* ============================================================
+   THE MOLDED PASS (Nov 10 2026)
+   From the style guide Kelly chose (Refero, "illustrated industrial
+   optimism"), in our colours and our font. What it takes from it:
+   - A warm tray cradles white panels: a small white radius nested
+     in a larger tan one, instead of outlines.
+   - White panels carry one soft, layered shadow, so they feel molded.
+   - The page is flat paper. Colour lives in the illustrations and in
+     small terracotta punctuation: a full stop, a label.
+   - Jade stays the one colour for "chosen" and "go".
+   ============================================================ */
+:root {
+  --tray: #efe5d8;
+  --inset: #f8f2ea;
+  --accent: #cf5a33;
+  --accent-ink: #9c421f;
+  --accent-wash: #fbeae1;
+  --molded:
+    0 0.7px 0.7px -0.4px rgba(70, 48, 24, 0.04),
+    0 1.8px 1.8px -0.8px rgba(70, 48, 24, 0.04),
+    0 3.6px 3.6px -1.3px rgba(70, 48, 24, 0.04),
+    0 6.9px 6.9px -1.7px rgba(70, 48, 24, 0.04),
+    0 13.6px 13.6px -2.1px rgba(70, 48, 24, 0.035),
+    0 30px 30px -2.5px rgba(70, 48, 24, 0.03);
+  /* flat paper up top; the hills are an illustration along the foot of the screen, with a
+     glow above them, instead of a tint over all of it */
+  --hills:
+    linear-gradient(var(--paper) 44%, rgba(255, 249, 243, 0) 68%),
+    linear-gradient(rgba(255, 249, 243, 0.16), rgba(255, 249, 243, 0.16)),
+    var(--paper) url('/assets/board-faceted-bg.webp') center bottom / cover no-repeat;
+}
+.board-screen { background: var(--hills); }
+
+/* — A full stop in terracotta: the one spark on a headline — */
+.logo-dot { color: var(--accent); }
+
+/* — The table: a tan tray holding white panels — */
+.setup-panel { padding: 14px; border: 0; border-radius: 40px; background: var(--tray); }
+.setup-panel-heading { margin: 16px 14px 18px; }
+.tray-card { margin-bottom: 10px; padding: 22px; border-radius: 28px; background: #ffffff; box-shadow: var(--molded); }
+.tray-card > h2:first-child { margin-top: 0; }
+.tray-card > :last-child { margin-bottom: 0; }
+.btn-player-count { border: 0; background: var(--inset); }
+.btn-player-count:hover { background: #f1e8db; }
+.btn-player-count.selected { box-shadow: inset 0 0 0 2px var(--jade-deep); }
+.btn-mode,
+.btn-mode:hover { border: 0; background: var(--inset); }
+.btn-mode:hover { background: #f1e8db; }
+.btn-mode.selected { border: 0; box-shadow: inset 0 0 0 2px var(--jade-deep); background: #ffffff; }
+.name-input-group input { border-color: transparent; background: var(--inset); }
+.chapter-card { border: 0; border-radius: 20px; background: var(--inset); }
+.char-picker { border: 0; background: var(--inset); }
+.btn-start { min-height: 54px; margin: 6px 0 0; border-radius: 200px; }
+.setup-footer { margin: 14px 0 8px; }
+
+/* — The board: white squares in a tray — */
+.game-board { padding: 12px; border-radius: 32px; background: var(--tray); }
+.board-clue { border-radius: 18px; background: #ffffff; box-shadow: var(--molded); }
+.board-clue.answered { background: rgba(255, 255, 255, 0.4); box-shadow: none; }
+.category-header { border-radius: 18px; background: var(--accent-wash); color: var(--accent-ink); }
+
+/* — The clue: one white panel with a thick tan rim — */
+.clue-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(900px, 100%);
+  padding: 34px 44px 30px;
+  border: 12px solid var(--tray);
+  border-radius: 48px;
+  background: #ffffff;
+  box-shadow: var(--molded);
+}
+.clue-category {
+  padding: 8px 16px;
+  border-radius: 70px;
+  background: var(--accent-wash);
+  color: var(--accent-ink);
+  font: 600 0.86rem/1.3 var(--font-ui);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.clue-panel .verdict figcaption { border: 0; background: var(--inset); }
+.clue-panel .verdict figcaption::before { border: 0; }
+
+@media (max-width: 840px) {
+  .setup-panel { padding: 10px; border-radius: 32px; }
+  .tray-card { padding: 18px; border-radius: 24px; }
+}
+@media (max-width: 560px) {
+  .game-board { padding: 8px; border-radius: 24px; }
+  .board-clue, .category-header { border-radius: 14px; }
+  .clue-screen { padding: 14px; }
+  .clue-panel { padding: 22px 18px 20px; border-width: 8px; border-radius: 36px; }
+}
+
+/* — The wager: the same white panel as a clue; the footer notes stay readable on the hills — */
+.dd-content {
+  max-width: 460px;
+  padding: 26px 32px 28px;
+  border: 12px solid var(--tray);
+  border-radius: 44px;
+  background: #ffffff;
+  box-shadow: var(--molded);
+}
+.dd-flash { margin-bottom: 18px; }
+.reroll-btn { background: #ffffff; }
+.clues-remaining { padding: 5px 12px; border-radius: 70px; background: rgba(255, 249, 243, 0.86); color: var(--text-dim); }
+@media (max-width: 560px) {
+  .dd-content { padding: 20px 18px 22px; border-width: 8px; border-radius: 34px; }
+}
