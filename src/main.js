@@ -435,17 +435,11 @@ function renderSetup() {
           <p class="setup-deck">A trivia coup hosted by Napoleon. History is watching.</p>
         </div>
         <figure class="title-stage" role="img"
-                aria-label="Low-poly Napoleon tips his hat as he rises out of a folded map of Europe">
+                aria-label="Napoleon stands on a folded map of Europe and welcomes you to the table">
           ${shape('compass', 'title-compass')}
-          <img class="title-map title-map-back" src="./assets/napoleon-map-back.webp" alt=""
+          <img class="title-map" src="./assets/title-map.webp" alt=""
                width="1485" height="546" decoding="async">
-          <video class="title-napoleon" muted loop playsinline preload="metadata"
-                 ${prefersReducedMotion() ? '' : 'autoplay'}
-                 poster="./assets/napoleon-title-poster.webp" aria-hidden="true">
-            <source src="./assets/napoleon-title.mp4" type="video/mp4">
-          </video>
-          <img class="title-map title-map-front" src="./assets/napoleon-map-front.webp" alt=""
-               width="1485" height="546" decoding="async">
+          ${hostFigure('welcome', 'title-fig')}
         </figure>
         ${hof}
       </section>
@@ -525,6 +519,13 @@ function renderSetup() {
   renderPlayerInputs(playerCount, savedNames, savedAvatars);
   updateModeVisibility(playerCount);
 
+  // He steps onto the map and leans into his welcome, hat firmly on
+  const titleFig = app.querySelector('.title-fig .host-img');
+  if (titleFig && !prefersReducedMotion()) {
+    animate(titleFig, { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, ease: EXPO, delay: 0.15 });
+    animate(titleFig, { rotate: [0, -3, 0] }, { duration: 1.1, ease: 'easeInOut', delay: 0.8 });
+  }
+
   // Player count buttons
   document.querySelectorAll('.btn-player-count:not(.btn-length)').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -563,9 +564,9 @@ function renderSetup() {
   renderChapterCard();
 
   // Mode buttons
-  document.querySelectorAll('.btn-mode:not(.btn-pack)').forEach(btn => {
+  document.querySelectorAll('#mode-section .btn-mode').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-mode:not(.btn-pack)').forEach(b => b.classList.remove('selected'));
+      document.querySelectorAll('#mode-section .btn-mode').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
     });
   });
@@ -596,7 +597,7 @@ function renderSetup() {
     );
     const avatars = names.map((n, i) => monogram(n, i));
     const chars = names.map((_, i) => (characterById(setupCharacters[i]) ? setupCharacters[i] : null));
-    const mode = document.querySelector('.btn-mode.selected:not(.btn-pack)')?.dataset.mode || 'turns';
+    const mode = document.querySelector('#mode-section .btn-mode.selected')?.dataset.mode || 'turns';
     const length = document.querySelector('.btn-length.selected')?.dataset.length || 'full';
     const packSel = document.querySelector('.btn-pack.selected')?.dataset.pack || 'fresh';
     const style = document.querySelector('.btn-style.selected')?.dataset.style || 'free';
@@ -804,30 +805,35 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
     const value = savedNames[i] || `Player ${i + 1}`;
     const c = characterById(setupCharacters[i]);
     html += `
-      <div class="name-input-group">
-        <button type="button" class="player-seal ${c ? 'has-portrait' : ''}" data-index="${i}"
-                style="--pc: ${PLAYER_COLORS[i]}" aria-expanded="false" aria-controls="char-picker-${i}"
-                aria-label="Choose a character for player ${i + 1}${c ? `, now ${escapeHtml(c.name)}` : ''}"
-                title="Choose a character">${sealFor(i, value)}</button>
-        <label for="player-name-${i}">Player ${i + 1}</label>
-        <input type="text" class="player-name-input" placeholder="Enter name" id="player-name-${i}"
-               value="${escapeHtml(value)}" data-index="${i}"
-               style="--pc: ${PLAYER_COLORS[i]}">
+      <div class="player-row">
+        <div class="name-input-group">
+          <button type="button" class="player-seal ${c ? 'has-portrait' : ''}" data-index="${i}"
+                  style="--pc: ${PLAYER_COLORS[i]}" aria-expanded="false" aria-controls="char-picker-${i}"
+                  aria-label="Choose a character for player ${i + 1}${c ? `, now ${escapeHtml(c.name)}` : ''}"
+                  title="Choose a character">${sealFor(i, value)}</button>
+          <label for="player-name-${i}">Player ${i + 1}</label>
+          <input type="text" class="player-name-input" placeholder="Enter name" id="player-name-${i}"
+                 value="${escapeHtml(value)}" data-index="${i}"
+                 style="--pc: ${PLAYER_COLORS[i]}">
+        </div>
+        ${roster.length ? `
+        <button type="button" class="char-change" data-index="${i}" aria-expanded="false" aria-controls="char-picker-${i}">
+          <span>${c ? `Playing as <strong>${escapeHtml(c.name)}</strong>` : 'Playing with initials'}</span>
+          <span class="char-change-cta">${c ? 'Change character' : 'Choose a character'}</span>
+        </button>
+        <div class="char-picker" id="char-picker-${i}" role="radiogroup" aria-label="Character for player ${i + 1}" hidden>
+          ${roster.map(rc => `
+            <button type="button" class="char-option" role="radio" data-index="${i}" data-id="${rc.id}"
+                    aria-checked="${rc.id === setupCharacters[i]}" style="--tone: ${rc.tone}">
+              <img src="${rc.portraitUrl}" alt="" loading="lazy">
+              <span>${escapeHtml(rc.name)}</span>
+            </button>`).join('')}
+          <button type="button" class="char-option char-none" role="radio" data-index="${i}" data-id=""
+                  aria-checked="${!c}"><span class="char-none-seal" aria-hidden="true">${escapeHtml(monogram(value, i))}</span><span>Initials</span></button>
+        </div>` : ''}
       </div>
-      ${roster.length ? `
-      <div class="char-picker" id="char-picker-${i}" role="radiogroup" aria-label="Character for player ${i + 1}" hidden>
-        ${roster.map(rc => `
-          <button type="button" class="char-option" role="radio" data-index="${i}" data-id="${rc.id}"
-                  aria-checked="${rc.id === setupCharacters[i]}" style="--tone: ${rc.tone}">
-            <img src="${rc.portraitUrl}" alt="" loading="lazy">
-            <span>${escapeHtml(rc.name)}</span>
-          </button>`).join('')}
-        <button type="button" class="char-option char-none" role="radio" data-index="${i}" data-id=""
-                aria-checked="${!c}"><span class="char-none-seal" aria-hidden="true">${escapeHtml(monogram(value, i))}</span><span>Initials</span></button>
-      </div>` : ''}
     `;
   }
-  if (roster.length) html += '<p class="char-hint">Tap a face to play as one of 13 historical characters.</p>';
   container.innerHTML = html;
 
   // The roster loads once per visit; draw the faces as soon as it arrives.
@@ -850,16 +856,18 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
     });
   });
 
-  container.querySelectorAll('.player-seal').forEach(seal => {
-    seal.addEventListener('click', () => {
-      const picker = document.getElementById(`char-picker-${seal.dataset.index}`);
+  // The face and the "Change character" line both open that player's cast
+  container.querySelectorAll('.player-seal, .char-change').forEach(opener => {
+    opener.addEventListener('click', () => {
+      const i = opener.dataset.index;
+      const picker = document.getElementById(`char-picker-${i}`);
       if (!picker) return;
       const open = picker.hidden;
       container.querySelectorAll('.char-picker').forEach(pk => { pk.hidden = true; });
-      container.querySelectorAll('.player-seal').forEach(sl => sl.setAttribute('aria-expanded', 'false'));
+      container.querySelectorAll('.player-seal, .char-change').forEach(el => el.setAttribute('aria-expanded', 'false'));
       picker.hidden = !open;
-      seal.setAttribute('aria-expanded', String(open));
-      if (open) (picker.querySelector('[aria-checked="true"]') || picker.querySelector('.char-option'))?.focus();
+      container.querySelectorAll(`.player-seal[data-index="${i}"], .char-change[data-index="${i}"]`).forEach(el => el.setAttribute('aria-expanded', String(open)));
+      if (open) (picker.querySelector('[aria-checked="true"]') || picker.querySelector('.char-option'))?.focus({ preventScroll: true });
     });
   });
 

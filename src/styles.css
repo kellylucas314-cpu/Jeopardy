@@ -3439,3 +3439,136 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   .empire-body, .empire-side { display: contents; }
   .empire-map-wrap { position: sticky; top: 0; z-index: 2; padding-top: 10px; }
 }
+
+
+/* ============================================================
+   THE LIGHT PASS (Nov 10 2026)
+   Kelly: lighter, less heavy, keep the tans, and let colour point at
+   what matters. The rules this section sets:
+   - Paper and hairlines carry the structure. No drop shadows.
+   - Nothing selected is ever a black slab: a choice is white paper
+     with a jade line and a jade tick.
+   - Jade means "chosen" or "go". One solid button per screen.
+   - Labels are Instrument Sans, not mono.
+   ============================================================ */
+
+/* — The title: Napoleon stands on the map, hat on, nothing cut off — */
+.title-stage {
+  aspect-ratio: 10 / 7;
+  max-width: 820px;
+  background: none;
+  isolation: auto;
+  container-type: size;
+}
+.title-map { left: 5%; top: auto; bottom: 0; width: 90%; height: auto; z-index: 0; }
+.title-fig {
+  position: absolute;
+  z-index: 1;
+  left: 55%;
+  bottom: 15cqh;
+  translate: -50% 0;
+  --host-h: 82cqh;
+}
+/* where his boots meet the map */
+.title-fig::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -2.4cqh;
+  width: 64%;
+  height: 6cqh;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(58, 40, 22, 0.36), rgba(58, 40, 22, 0));
+}
+.title-compass { right: 1%; top: 3%; width: 14%; }
+
+/* — The table: tan paper, thin lines — */
+.setup-panel { border: 1px solid var(--line); }
+.setup-card h2 { font: 600 0.88rem/1.3 var(--font-ui); color: var(--cream); margin-bottom: 10px; }
+.mode-title { margin-top: 26px; }
+
+.player-count-buttons { gap: 8px; padding: 0; background: transparent; border-radius: 0; margin-bottom: 20px; }
+.btn-player-count {
+  padding: 11px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cream-dim);
+  font-weight: 500;
+}
+.btn-player-count:hover { background: rgba(255, 255, 255, 0.65); color: var(--cream); }
+.btn-player-count.selected {
+  border-color: var(--jade-deep);
+  box-shadow: inset 0 0 0 1px var(--jade-deep);
+  background: #ffffff;
+  color: var(--jade-deep);
+  font-weight: 650;
+}
+
+.btn-mode {
+  position: relative;
+  padding: 14px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  background: transparent;
+}
+.btn-mode:hover { border: 1px solid var(--line-strong); background: rgba(255, 255, 255, 0.65); }
+.btn-mode.selected {
+  border: 1px solid var(--jade-deep);
+  box-shadow: inset 0 0 0 1px var(--jade-deep);
+  background: #ffffff;
+  color: var(--cream);
+}
+.btn-mode.selected .mode-name { color: var(--jade-deep); padding-right: 24px; }
+.btn-mode.selected .mode-desc,
+.btn-mode.selected p { color: var(--cream-dim); }
+.btn-mode.selected::after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--jade-deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.4l2.6 2.6L13 6.4' fill='none' stroke='%23fff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 18px no-repeat;
+}
+
+/* — Players and their characters — */
+.player-row { margin-bottom: 14px; }
+.player-row .name-input-group { margin-bottom: 4px; gap: 12px; }
+.name-input-group .player-seal { width: 54px; height: 54px; }
+.name-input-group input { border: 1px solid var(--line-strong); border-radius: 12px; background: #ffffff; }
+.name-input-group input:focus { border-color: var(--jade-deep); outline: 2px solid var(--jade-deep); outline-offset: 0; }
+.char-change {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  width: calc(100% - 66px);
+  margin-left: 66px;
+  padding: 4px 2px;
+  border: 0;
+  background: none;
+  color: var(--cream-dim);
+  font: 400 0.84rem/1.3 var(--font-ui);
+  text-align: left;
+  cursor: pointer;
+}
+.char-change strong { color: var(--cream); font-weight: 600; }
+.char-change-cta { flex: none; color: var(--jade-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.char-change:hover .char-change-cta { color: var(--jade-bright); }
+.char-picker { margin: 8px 0 4px; border: 1px solid var(--line); border-radius: 16px; background: #ffffff; }
+.chapter-card { border: 1px solid var(--line); background: #ffffff; }
+
+@media (max-width: 840px) {
+  .title-stage { aspect-ratio: 10 / 8.4; }
+  .title-map { left: 0; width: 100%; }
+  .title-fig { bottom: 12cqh; --host-h: 86cqh; }
+}
+
+/* — The board: the headers step back, so the square you are on is the loudest thing — */
+.category-header { background: #f6dccd; color: #7a3519; }
+.board-category.themed .category-header { background: var(--jade-tint); color: var(--jade-deep); }
+.reroll-btn { border: 1px solid var(--jade-deep); background: transparent; color: var(--jade-deep); }
+.reroll-btn:hover { background: #ffffff; }
