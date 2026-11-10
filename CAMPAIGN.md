@@ -75,5 +75,10 @@ accepts natural answers.
 
 - A real map: the ledger's holdings are the data; an SVG of Europe with the annexed /
   satellite / allied layers per chapter would make "the Empire grows" visible.
-- Chapter art from the Napoleon character sheets on the intro and results screens.
-- Host lines that reference the chapter ("Forty centuries look down upon you…").
+
+Done on Nov 10 2026 (the live host pass):
+
+- Napoleon's poses from the character sheets stand on the intro, the board, the clue, the
+  wager and the results, and change with the game (`src/host.js`, cut by
+  `scripts/build-host-poses.py`).
+- Each chapter's board opens with a host line of its own (`CHAPTER_LINES` in `src/main.js`).

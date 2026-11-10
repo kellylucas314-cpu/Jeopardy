@@ -17,6 +17,9 @@ import {
 import * as sounds from './sounds.js';
 import { loadCharacters, characters, characterById, portraitUrl, poseUrl } from './characters.js';
 import { shape, compassLoader } from './shapes.js';
+import { animate, stagger } from 'motion';
+import 'number-flow';
+import { hostFigure, hostReact, faceSrc, setFace, preloadHost } from './host.js';
 
 loadCharacters();
 
@@ -54,22 +57,19 @@ function avatarHtml(p, i = 0) {
     : escapeHtml(p.avatar || monogram(p.name, i));
 }
 
-/** Napoleon is the one big figure: thinking while you answer, triumphant at the end. */
-const NAPOLEON = {
-  neutral: './assets/napoleon-lowpoly-full.webp',
-  thinking: './assets/napoleon-thinking.webp',
-  victory: './assets/napoleon-victory.webp',
-  face: './assets/napoleon-lowpoly-bust.webp',
-};
-
-/** A remark from the table. Napoleon's own lines carry his face; anyone else's carry their name. */
-function hostLine(text, by = 'Napoleon') {
+/** A remark from the table. Napoleon's own lines carry his face (in the mood of the moment); anyone else's carry their name. */
+function hostLine(text, by = 'Napoleon', mood = 'neutral') {
   const his = /^(Napoleon|The Emperor)/.test(by);
   const credit = by === 'Napoleon' ? '' : `<span class="host-attrib">${escapeHtml(by)}</span>`;
   return `<figure class="host-line${his ? ' is-napoleon' : ''}">
-      ${his ? `<img class="host-face" src="${NAPOLEON.face}" alt="Napoleon">` : ''}
+      ${his ? `<img class="host-face" src="${faceSrc(mood)}" alt="Napoleon">` : ''}
       <figcaption><span class="host-words">${escapeHtml(text)}</span>${credit}</figcaption>
     </figure>`;
+}
+
+/** Napoleon standing at the right of an in-between screen (wide screens only). */
+function stageHost(pose, say = false) {
+  return hostFigure(pose, 'stage-host', { say });
 }
 
 /** Map pieces behind an in-between screen: a compass rose, the Légion star, a route, a facet. */
@@ -101,7 +101,94 @@ const NOBUZZ_LINES = ['No volunteers? Cowardice.', 'The salon falls silent…', 
 const STEAL_LINES = ['The spoils lie unclaimed!', 'An open flank. Who will take it?', 'Seize it, or regret it.'];
 const BOARD_LINES = ['Choose your battlefield.', 'The board awaits your command.', 'Pick your ground. History is watching.', 'Retreat is unavailable. Pick a category.', 'Every square hides a small war.'];
 
+const PASS_LINES = ['A strategic withdrawal. Noted.', 'You decline the field. Very well.', 'Discretion. I have heard of it.'];
+const URGENT_LINES = ['Tick, tock.', 'Decide, general.', 'The clock is not your ally.', 'Any moment now.'];
+const AFTER_CORRECT = ['Good. Press the advantage.', 'Momentum, general. Use it.', 'Again. Just like that.'];
+const AFTER_WRONG = ['Regroup. Choose again.', 'A setback. The campaign continues.', 'Shake it off. Pick your ground.'];
+
+/** His opening remark on each chapter's board, in campaign mode. */
+const CHAPTER_LINES = {
+  1: 'A small island, a large appetite. Begin.',
+  2: 'Give me the guns and the high ground. You take the clues.',
+  3: 'Paris is restless tonight. Be quick and be certain.',
+  4: 'Italy lies ahead. March fast and answer faster.',
+  5: 'Forty centuries look down upon you. Do not embarrass them.',
+  6: 'A government falls in two days. A board falls faster.',
+  7: 'Marengo was lost in the afternoon and won by evening. Never concede early.',
+  8: 'I placed the crown on my own head. Take your points the same way.',
+  9: 'The sun is rising over Austerlitz. Make it a good day.',
+  10: 'Prussia lasted a single afternoon. Let us see how long you last.',
+  11: 'An empire at its height has the most to lose. Choose with care.',
+  12: 'Moscow is a long walk, and the way back is longer.',
+  13: 'All of Europe is on the field against us. Hold your ground.',
+  14: 'A hundred days. Waste none of them.',
+  15: 'On this rock I have only memory. Let us see how yours holds up.',
+};
+
+/** How he takes each outcome: a pose and a move for the big figure, a face for the small one. */
+const REACTIONS = {
+  correct: { poses: ['victory'], face: 'delighted', move: 'hop' },
+  wrong: { poses: ['stepping-back', 'shocked', 'defeated'], face: 'frustrated', move: 'recoil' },
+  timeout: { poses: ['arms-crossed'], face: 'annoyed', move: 'refuse' },
+  pass: { poses: ['shrug'], face: 'puzzled', move: 'settle' },
+  pardon: { poses: ['welcome'], face: 'smirk', move: 'settle' },
+};
+let lastOutcome = null; // how the last clue went, for his stance back at the board
+let stanceTurn = 0; // so a late 'back to pointing' never lands on a newer board
+let lastPicked = null; // the tile just played, so the board can show it being spent
+
+const MONEY_FMT = { style: 'currency', currency: 'USD', maximumFractionDigits: 0 };
+const EXPO = [0.16, 1, 0.3, 1];
+
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+/**
+ * Napoleon's verdict on an answer. On a wide screen the big figure takes the
+ * pose and speaks the line; on a phone his face and the line sit in the feedback.
+ */
+function verdict(kind, line) {
+  const r = REACTIONS[kind];
+  lastOutcome = kind === 'pardon' ? 'correct' : kind;
+  hostReact(pick(r.poses), { move: r.move, say: line });
+  return `<figure class="verdict">
+      <img class="verdict-face" src="${faceSrc(r.face)}" alt="">
+      <figcaption>${escapeHtml(line)}</figcaption>
+    </figure>`;
+}
+
+/** Fill every <number-flow data-to> on screen. One that carries data-from rolls up (or down) from there. */
+function flowNumbers(delay = 320) {
+  app.querySelectorAll('number-flow[data-to]').forEach(el => {
+    el.format = MONEY_FMT;
+    el.locales = 'en-US';
+    const to = Number(el.dataset.to);
+    const from = el.dataset.from === undefined ? to : Number(el.dataset.from);
+    if (from === to || prefersReducedMotion()) { el.update(to); return; }
+    el.update(from);
+    setTimeout(() => { if (el.isConnected) el.update(to); }, delay);
+  });
+}
+const flowMoney = (to, from) => `<number-flow data-to="${to}"${from === undefined ? '' : ` data-from="${from}"`} aria-label="${money(to)}"></number-flow>`;
+
+/** Break a long word where a reader would: between syllables, so a narrow column never splits it mid-letter. */
+function softHyphenate(text) {
+  return text.replace(/[A-Za-zÀ-ÿ]{6,}/g, (word) => {
+    const cluster = /^(th|ch|sh|ph|wh|qu|ck)/i;
+    const vowel = c => /[aeiouyà-ÿ]/i.test(c);
+    let out = '';
+    for (let i = 0; i < word.length; i++) {
+      out += word[i];
+      const left = i + 1, rest = word.length - left;
+      if (left < 3 || rest < 3) continue;
+      const a = word[i], b = word[i + 1], c = word[i + 2];
+      const vcv = vowel(a) && !vowel(b) && vowel(c);                     // ta|ble: V|CV
+      const vccv = !vowel(a) && !vowel(b) && vowel(c) && vowel(word[i - 1]) && !cluster.test(a + b); // VC|CV
+      const beforeCluster = cluster.test(b + c) && rest >= 4 && vowel(word[i + 3] || ''); // mean|while, ma|chine
+      if ((vcv && !cluster.test(word[i - 1] + a)) || vccv || beforeCluster) out += '\u00AD';
+    }
+    return out;
+  });
+}
 
 // Buzz-mode bookkeeping (imperative, within the clue screen)
 const BUZZ_KEYS = ['q', 'p', 'b']; // player 1, 2, 3
@@ -112,12 +199,16 @@ let buzzKeyHandler = null;
 
 // ——— Screen Router ———
 
+let shownScreen = null;
+
 function render() {
   const state = getState();
 
   // Avoid re-rendering when only the timer ticked (no screen change)
   if (state.screen === lastScreen && state.screen === 'clue') return;
   lastScreen = state.screen;
+  const from = shownScreen;
+  shownScreen = state.screen;
 
   // Stop any running timer when leaving the clue screen
   if (state.screen !== 'clue') cleanupClue();
@@ -130,20 +221,33 @@ function render() {
   // Board keyboard nav only lives on the board
   if (state.screen !== 'board') detachBoardKeys();
 
-  switch (state.screen) {
-    case 'setup': renderSetup(); break;
-    case 'loading': renderLoading(); break;
-    case 'chapter-intro': renderChapterIntro(); break;
-    case 'error': renderError(); break;
-    case 'board': renderBoard(); break;
-    case 'clue': renderClue(); break;
-    case 'daily-double': renderDailyDouble(); break;
-    case 'round-transition': renderRoundTransition(); break;
-    case 'final-category': renderFinalCategory(); break;
-    case 'final-wager': renderFinalWager(); break;
-    case 'final-clue': renderFinalClue(); break;
-    case 'final-answer': renderFinalAnswer(); break;
-    case 'results': renderResults(); break;
+  const draw = () => {
+    switch (state.screen) {
+      case 'setup': renderSetup(); break;
+      case 'loading': renderLoading(); break;
+      case 'chapter-intro': renderChapterIntro(); break;
+      case 'error': renderError(); break;
+      case 'board': renderBoard(); break;
+      case 'clue': renderClue(); break;
+      case 'daily-double': renderDailyDouble(); break;
+      case 'round-transition': renderRoundTransition(); break;
+      case 'final-category': renderFinalCategory(); break;
+      case 'final-wager': renderFinalWager(); break;
+      case 'final-clue': renderFinalClue(); break;
+      case 'final-answer': renderFinalAnswer(); break;
+      case 'results': renderResults(); break;
+    }
+  };
+
+  // One screen hands over to the next, and Napoleon is carried across (see
+  // `view-transition-name: host`). Opening a tile has its own move instead.
+  const tileOpens = from === 'board' && (state.screen === 'clue' || state.screen === 'daily-double');
+  if (from && from !== state.screen && !tileOpens && document.startViewTransition && !prefersReducedMotion()) {
+    const t = document.startViewTransition(draw);
+    t.ready.catch(() => {});
+    t.finished.catch(() => {});
+  } else {
+    draw();
   }
 }
 
@@ -151,8 +255,11 @@ subscribe(render);
 
 // ——— Timer ———
 
+let urgentShown = false;
+
 function startTimer(totalSeconds, onExpire) {
   clearInterval(timerInterval);
+  urgentShown = false;
   let seconds = totalSeconds;
   updateTimerDisplay(seconds, totalSeconds);
 
@@ -171,6 +278,11 @@ function startTimer(totalSeconds, onExpire) {
 
 function updateTimerDisplay(seconds, total) {
   const urgent = seconds <= 5;
+  // The last five seconds: he leans in
+  if (urgent && seconds > 0 && seconds < total && !urgentShown) {
+    urgentShown = true;
+    hostReact('leaning', { move: 'lean', say: pick(URGENT_LINES) });
+  }
   const timerEl = document.getElementById('timer-bar');
   if (timerEl) {
     timerEl.style.setProperty('--fill', Math.max(0, seconds) / total);
@@ -245,8 +357,8 @@ function handleTimeExpired() {
 
   showFeedback(`
     <div class="feedback-wrong">
-      <div class="feedback-icon">${icon('clock')}</div>
-      <div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>
+      ${verdict('timeout', pick(TIMEOUT_LINES))}
+      <div class="verdict-score">${icon('clock')}<span>-$${formatMoney(result.value)}</span></div>
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
@@ -709,9 +821,9 @@ function renderLoading() {
     ${sceneShapes('loading')}
     <div class="loading-screen">
       <div class="logo">Clue d&rsquo;&Eacute;tat</div>
-      ${ch ? `<div class="chapter-kicker">Chapter ${ch.number} &middot; ${escapeHtml(ch.title)}</div>` : ''}
       ${compassLoader('loading-compass')}
       <div class="loading-text">${ch ? 'Drawing up the order of battle&hellip;' : 'Loading clues&hellip;'}</div>
+      ${ch ? `<div class="chapter-meta">Chapter ${ch.number} &middot; ${escapeHtml(ch.title)}</div>` : ''}
     </div>
   `;
 }
@@ -725,8 +837,8 @@ function renderChapterIntro() {
   app.innerHTML = `
     ${sceneShapes('chapter')}
     <div class="chapter-intro-screen">
-      <div class="chapter-kicker">Chapter ${ch.number} of ${chapterCount()} &middot; ${escapeHtml(ch.years)}</div>
       <h1 class="chapter-title">${escapeHtml(ch.title)}</h1>
+      <div class="chapter-meta">Chapter ${ch.number} of ${chapterCount()} &middot; ${escapeHtml(ch.years)}</div>
       <div class="chapter-stage">${escapeHtml(ch.stage)} &middot; ${escapeHtml(ch.place)}</div>
       <p class="chapter-blurb">${escapeHtml(ch.blurb)}</p>
       ${hostLine(ch.quote.text, ch.quote.by)}
@@ -739,6 +851,7 @@ function renderChapterIntro() {
       <button class="btn-continue" id="btn-begin-chapter">To the board</button>
       <button class="link-btn" id="btn-intro-empire">The Empire at this point</button>
     </div>
+    ${stageHost('welcome')}
   `;
   const go = document.getElementById('btn-begin-chapter');
   go.focus();
@@ -773,6 +886,18 @@ function renderBoard() {
     : round === 1 ? 'Round I' : 'Round II · Doubled';
   const progress = Math.round((cluesAnswered / totalClues) * 100);
 
+  // He comes back to the board the way the last clue left him, then points at it again.
+  const outcome = lastOutcome;
+  lastOutcome = null;
+  const stance = { correct: 'hands-on-hips', wrong: 'arms-crossed', timeout: 'arms-crossed', pass: 'shrug' }[outcome]
+    || (cluesAnswered === 0 ? 'welcome' : 'choose');
+  const mood = { correct: 'delighted', wrong: 'annoyed', timeout: 'annoyed', pass: 'puzzled' }[outcome] || 'neutral';
+  const spent = lastPicked;
+  lastPicked = null;
+  const opening = chapter && cluesAnswered === 0 && round === 1 && CHAPTER_LINES[chapter.number];
+  const remark = opening
+    || (outcome === 'correct' ? pick(AFTER_CORRECT) : outcome && outcome !== 'pass' ? pick(AFTER_WRONG) : pick(BOARD_LINES));
+
   app.innerHTML = `
     <div class="board-screen">
       <div class="board-header">
@@ -792,7 +917,7 @@ function renderBoard() {
               <div class="player-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}">${avatarHtml(p, i)}</div>
               <div class="player-meta">
                 <div class="player-name">${escapeHtml(p.name)}${p.streak >= 2 ? ` <span class="streak">&times;${p.streak}</span>` : ''}</div>
-                <div class="player-amount ${p.score < 0 ? 'negative' : ''}" data-index="${i}">$${formatMoney(p.score)}</div>
+                <div class="player-amount ${p.score < 0 ? 'negative' : ''}" data-index="${i}">${flowMoney(p.score, prevScores[i])}</div>
               </div>
             </div>
           `).join('')}
@@ -802,26 +927,28 @@ function renderBoard() {
         <div class="game-board" id="game-board">
           ${categories.map((cat, ci) => `
             <div class="board-category ${cat.themed ? 'themed' : ''}" data-cat="${ci}">
-              <div class="category-header" ${cat.themed ? 'title="This chapter\'s category: three right answers earn the Légion d\'honneur"' : ''}>${escapeHtml(cat.name)}</div>
-              ${cat.clues.map((clue, cli) => `
-                <div class="board-clue ${clue.answered ? 'answered' : ''}"
+              <div class="category-header" ${cat.themed ? 'title="This chapter\'s category: three right answers earn the Légion d\'honneur"' : ''}>${escapeHtml(softHyphenate(cat.name))}</div>
+              ${cat.clues.map((clue, cli) => {
+                const justSpent = clue.answered && spent && spent.ci === ci && spent.cli === cli;
+                return `
+                <div class="board-clue ${clue.answered ? 'answered' : ''} ${justSpent ? 'just-spent' : ''}"
                      data-cat="${ci}" data-clue="${cli}">
-                  ${clue.answered ? '' : '$' + clue.value}
+                  ${clue.answered ? (justSpent ? `<span class="spent" aria-hidden="true">$${clue.value}</span>` : '') : '$' + clue.value}
                 </div>
-              `).join('')}
+              `; }).join('')}
             </div>
           `).join('')}
         </div>
         <aside class="board-host" aria-label="Napoleon, your host">
-          <img src="./assets/napoleon-lowpoly-full.webp" alt="Low-poly Napoleon standing at the game board">
+          ${hostFigure(stance, 'board-fig', { alt: 'Napoleon, standing by the board' })}
         </aside>
       </div>
       <div class="board-footer">
         <div class="host-dock">
-          <div class="host-monogram has-face" aria-hidden="true"><img src="${NAPOLEON.face}" alt=""></div>
-          <div class="host-plaque" aria-live="polite">${players.length > 1
+          <div class="host-monogram has-face" aria-hidden="true"><img src="${faceSrc(mood)}" alt=""></div>
+          <div class="host-plaque" aria-live="polite">${players.length > 1 && !opening
             ? `<strong style="color: ${PLAYER_COLORS[activePlayer]}">${escapeHtml(players[activePlayer].name)}</strong>, choose your battlefield.`
-            : pick(BOARD_LINES)}</div>
+            : escapeHtml(remark)}</div>
         </div>
         <div class="board-footer-info">
           ${cluesAnswered === 0 ? '<button class="reroll-btn" id="btn-reroll">Redraw the map</button>' : ''}
@@ -842,14 +969,31 @@ function renderBoard() {
     setTimeout(() => board.classList.remove('revealing'), 800);
   }
 
-  // Pulse any score that changed since the last board render
+  // A score that changed rolls to its new value, and the difference lifts off the pill
+  flowNumbers();
   players.forEach((p, i) => {
-    if (prevScores[i] !== undefined && prevScores[i] !== p.score) {
-      const el = document.querySelector(`.player-amount[data-index="${i}"]`);
-      if (el) el.classList.add('bump');
-    }
+    if (prevScores[i] === undefined || prevScores[i] === p.score) return;
+    const pill = document.querySelector(`.player-amount[data-index="${i}"]`)?.closest('.player-score');
+    if (!pill) return;
+    const diff = p.score - prevScores[i];
+    const chip = document.createElement('span');
+    chip.className = `score-delta ${diff > 0 ? 'up' : 'down'}`;
+    chip.textContent = `${diff > 0 ? '+' : '-'}$${formatMoney(Math.abs(diff))}`;
+    pill.appendChild(chip);
+    if (prefersReducedMotion()) setTimeout(() => chip.remove(), 1800);
+    else animate(chip, { opacity: [0, 1, 1, 0], y: [-6, 0, 0, 10], scale: [0.8, 1, 1, 1] },
+      { duration: 1.9, times: [0, 0.14, 0.78, 1], ease: 'easeOut', delay: 0.25 }).then(() => chip.remove());
   });
   prevScores = players.map(p => p.score);
+
+  // After his reaction, he goes back to pointing at the board
+  preloadHost(['delighted', 'frustrated', 'annoyed', 'puzzled', 'smirk', 'surprised', 'suspicious']);
+  const turn = ++stanceTurn;
+  if (stance !== 'choose') {
+    setTimeout(() => {
+      if (turn === stanceTurn && shownScreen === 'board') hostReact('choose');
+    }, cluesAnswered === 0 ? 2600 : 1700);
+  }
 
   // Lead-change announcement — keeps the race dramatic and visible
   if (players.length > 1) {
@@ -870,6 +1014,7 @@ function renderBoard() {
   const openClue = (el) => {
     const ci = parseInt(el.dataset.cat);
     const cli = parseInt(el.dataset.clue);
+    lastPicked = { ci, cli };
     zoomFromCell(el, () => selectClue(ci, cli));
   };
 
@@ -1099,7 +1244,7 @@ function clueShell(extraHtml) {
       ${extraHtml}
       <div class="clue-feedback" id="clue-feedback" role="status" aria-live="polite"></div>
     </div>
-    <img class="clue-host" id="clue-host" src="${NAPOLEON.thinking}" alt="">
+    ${stageHost('thinking', true)}
   `;
 }
 
@@ -1108,12 +1253,25 @@ function showFeedback(html) {
   if (!feedback) return;
   feedback.innerHTML = html;
   feedback.classList.add('show');
+  if (prefersReducedMotion()) return;
+  const parts = feedback.querySelectorAll('.verdict, .verdict-score, .streak-callout, .correct-response, .feedback-actions');
+  if (parts.length) animate(parts, { opacity: [0, 1], y: [10, 0] }, { duration: 0.32, ease: EXPO, delay: stagger(0.07) });
+  const score = feedback.querySelector('.verdict-score span');
+  if (score) animate(score, { scale: [0.6, 1] }, { type: 'spring', stiffness: 520, damping: 17, delay: 0.07 });
+}
+
+/** The answer line itself says how it went: jade when right, a shake and red when wrong. */
+function markAnswer(correct) {
+  const input = document.getElementById('answer-input');
+  if (!input) return;
+  input.classList.remove('is-right', 'is-wrong');
+  input.classList.add(correct ? 'is-right' : 'is-wrong');
+  if (!correct && !prefersReducedMotion()) animate(input, { x: [0, -9, 8, -6, 4, 0] }, { duration: 0.4, ease: 'easeOut' });
 }
 
 /** Brief full-screen tint for a juicy correct/wrong beat. */
 function flashScreen(kind) {
-  const host = document.getElementById('clue-host');
-  if (host && kind === 'correct') host.src = NAPOLEON.victory;
+  markAnswer(kind === 'correct');
   const el = document.createElement('div');
   el.className = `screen-flash ${kind}`;
   document.body.appendChild(el);
@@ -1179,8 +1337,8 @@ function handleSubmitAnswer() {
   if (result.correct) {
     showFeedback(`
       <div class="feedback-correct">
-        <div class="feedback-icon">${icon('check')}</div>
-        <div>${pick(CORRECT_LINES)} +$${formatMoney(result.value)}</div>
+        ${verdict('correct', pick(CORRECT_LINES))}
+        <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
         ${bonusHtml(result)}
       </div>
     `);
@@ -1188,8 +1346,8 @@ function handleSubmitAnswer() {
   } else {
     showFeedback(`
       <div class="feedback-wrong">
-        <div class="feedback-icon">${icon('cross')}</div>
-        <div>${pick(WRONG_LINES)} -$${formatMoney(result.value)}</div>
+        ${verdict('wrong', pick(WRONG_LINES))}
+        <div class="verdict-score">${icon('cross')}<span>-$${formatMoney(result.value)}</span></div>
         <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
         <div class="feedback-actions">
           <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
@@ -1207,10 +1365,12 @@ function handleSubmitAnswer() {
 function handleOverride() {
   const result = overrideCorrect();
   if (!result) return;
+  markAnswer(true);
   showFeedback(`
     <div class="feedback-correct">
-      <div class="feedback-icon">${icon('check')}</div>
-      <div>We'll accept it! +$${formatMoney(result.value)} (penalty refunded)</div>
+      ${verdict('pardon', 'Very well. The Emperor accepts it.')}
+      <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
+      <div class="correct-response">Penalty refunded</div>
       ${bonusHtml(result)}
     </div>
   `);
@@ -1224,7 +1384,7 @@ function handleSkip() {
 
   showFeedback(`
     <div class="feedback-skip">
-      <div>Passed</div>
+      ${verdict('pass', pick(PASS_LINES))}
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
@@ -1310,6 +1470,7 @@ function openBuzzers() {
     status.innerHTML = 'BUZZ IN!';
     status.classList.add('open');
   }
+  hostReact('welcome', { say: 'Well? Who dares?' });
   sounds.playBuzzersOpen();
 
   // Nobody buzzes within the window → reveal the answer, no penalty
@@ -1341,6 +1502,7 @@ function tryBuzz(playerIndex) {
   buzzIn(playerIndex);
 
   const { players } = getState();
+  hostReact('choose', { move: 'lean', say: `${players[playerIndex].name}. Speak.` });
 
   // Highlight who buzzed, hide the rest
   const status = document.getElementById('buzz-status');
@@ -1390,8 +1552,8 @@ function resolveBuzzAnswer(answer, timedOut) {
     buzzPhase = 'done';
     showFeedback(`
       <div class="feedback-correct">
-        <div class="feedback-icon">${icon('check')}</div>
-        <div>${pick(CORRECT_LINES)} +$${formatMoney(result.value)}</div>
+        ${verdict('correct', pick(CORRECT_LINES))}
+        <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
         ${bonusHtml(result)}
       </div>
     `);
@@ -1401,8 +1563,8 @@ function resolveBuzzAnswer(answer, timedOut) {
 
   // Wrong (or silent) — maybe others can still steal it
   const header = timedOut
-    ? `<div class="feedback-icon">${icon('clock')}</div><div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>`
-    : `<div class="feedback-icon">${icon('cross')}</div><div>${pick(WRONG_LINES)} -$${formatMoney(result.value)}</div>`;
+    ? `${verdict('timeout', pick(TIMEOUT_LINES))}<div class="verdict-score">${icon('clock')}<span>-$${formatMoney(result.value)}</span></div>`
+    : `${verdict('wrong', pick(WRONG_LINES))}<div class="verdict-score">${icon('cross')}<span>-$${formatMoney(result.value)}</span></div>`;
 
   if (result.canRebuzz) {
     showFeedback(`
@@ -1441,6 +1603,7 @@ function resolveBuzzAnswer(answer, timedOut) {
 function reopenBuzzers() {
   const feedback = document.getElementById('clue-feedback');
   if (feedback) { feedback.innerHTML = ''; feedback.classList.remove('show'); }
+  document.getElementById('answer-input')?.classList.remove('is-right', 'is-wrong');
 
   const area = document.getElementById('answer-area');
   if (area) {
@@ -1467,7 +1630,7 @@ function handleNoBuzz() {
 
   showFeedback(`
     <div class="feedback-skip">
-      <div>${pick(NOBUZZ_LINES)}</div>
+      ${verdict('pass', pick(NOBUZZ_LINES))}
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
@@ -1486,7 +1649,7 @@ function renderDailyDouble() {
     <div class="daily-double-screen">
       <div class="dd-flash">
         <div class="dd-title">Waterloo<br>Wager</div>
-        ${hostLine('A bold wager. I approve of nothing less.')}
+        ${hostLine('Name your stake. I am watching.', 'Napoleon', 'suspicious')}
       </div>
       <div class="dd-content">
         <div class="dd-category">${escapeHtml(currentClue.categoryName)}</div>
@@ -1510,15 +1673,40 @@ function renderDailyDouble() {
         </div>
       </div>
     </div>
+    ${stageHost('suspicious')}
   `;
 
   const input = document.getElementById('wager-input');
   input.focus();
   input.select();
 
+  // He has an opinion about the size of the stake
+  const TAKES = {
+    all: ['shocked', 'surprised', 'recoil', 'All of it? Even I kept a reserve.'],
+    bold: ['hands-on-hips', 'smirk', 'settle', 'Now that is a wager.'],
+    small: ['arms-crossed', 'annoyed', 'refuse', 'A skirmish, then. Very well.'],
+  };
+  let take = null;
+  const react = () => {
+    const amount = parseInt(input.value) || 0;
+    const next = amount >= maxWager ? 'all' : amount >= maxWager / 2 ? 'bold' : 'small';
+    if (next === take) return;
+    take = next;
+    const [pose, face, move, line] = TAKES[next];
+    hostReact(pose, { move });
+    setFace(document.querySelector('.dd-flash .host-face'), face);
+    const words = document.querySelector('.dd-flash .host-words');
+    if (words) {
+      words.textContent = line;
+      if (!prefersReducedMotion()) animate(words, { opacity: [0, 1], y: [6, 0] }, { duration: 0.25, ease: EXPO });
+    }
+  };
+  input.addEventListener('input', react);
+
   document.querySelectorAll('.btn-preset').forEach(btn => {
     btn.addEventListener('click', () => {
       input.value = btn.dataset.amount;
+      react();
     });
   });
 
@@ -1560,7 +1748,9 @@ function renderRoundTransition() {
       ${players.length > 1 ? `<div class="transition-note"><strong>${escapeHtml(players[lowest].name)}</strong> is trailing and gets first pick</div>` : ''}
       <button class="btn-continue" id="btn-continue">March on</button>
     </div>
+    ${stageHost('marching')}
   `;
+  hostReact('marching', { move: 'march' });
 
   sounds.playRoundTransition();
 
@@ -1600,6 +1790,7 @@ function renderFinalCategory() {
       </div>
       <button class="btn-continue" id="btn-final-wager">Place wagers</button>
     </div>
+    ${stageHost('hands-on-hips')}
   `;
 
   sounds.playFanfare();
@@ -1623,6 +1814,7 @@ function passCover(playerIdx, sub, onReady) {
         <button class="btn-cta pass-go" id="pass-go">I'm ${escapeHtml(p.name)}, ready</button>
       </div>
     </div>
+    ${stageHost('pivot')}
   `;
   const go = document.getElementById('pass-go');
   go.focus();
@@ -1668,6 +1860,7 @@ function renderFinalWager() {
           <button class="btn-wager-submit" id="btn-lock">${qi < queue.length - 1 ? 'Lock in and pass' : 'Lock in wager'}</button>
         </div>
       </div>
+      ${stageHost('suspicious')}
     `;
     const input = document.getElementById('wager-input');
     input.focus(); input.select();
@@ -1701,9 +1894,10 @@ function renderFinalClue() {
       <div class="final-clue-text">${escapeHtml(finalClue.clue)}</div>
       <div class="think-music-note">&#9835; Think music playing…</div>
       <button class="btn-submit" id="btn-begin-answers" style="max-width:340px">
-        ${solo ? 'Enter Answer' : 'Enter Answers'}
+        ${solo ? 'Enter answer' : 'Enter answers'}
       </button>
     </div>
+    ${stageHost('thinking')}
   `;
 
   document.getElementById('btn-begin-answers').addEventListener('click', () => {
@@ -1731,6 +1925,7 @@ function renderFinalClue() {
             <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock in and pass' : 'Reveal answers'}</button>
           </div>
         </div>
+        ${stageHost('thinking')}
       `;
       const input = document.getElementById('final-answer-input');
       input.focus();
@@ -1759,7 +1954,7 @@ function renderFinalAnswer() {
             <div class="frp-name">${escapeHtml(p.name)}</div>
             <div class="frp-answer">"${escapeHtml(finalAnswers[i].answer || '(no answer)')}"</div>
             <div class="frp-wager">${finalAnswers[i].correct ? '+' : '-'}$${formatMoney(finalWagers[i])}</div>
-            <div class="frp-total">$${formatMoney(p.score)}</div>
+            <div class="frp-total">${flowMoney(p.score, p.score + (finalAnswers[i].correct ? -1 : 1) * finalWagers[i])}</div>
             ${finalWagers[i] > 0 || finalAnswers[i].answer ? `
               <button class="btn-final-override" data-player="${i}">
                 ${finalAnswers[i].correct ? 'Mark wrong' : 'The Emperor accepts it'}
@@ -1770,7 +1965,11 @@ function renderFinalAnswer() {
       </div>
       <button class="btn-continue" id="btn-show-results">Final scores</button>
     </div>
+    ${stageHost(finalAnswers.some(a => a.correct) ? 'victory' : 'defeated')}
   `;
+  hostReact(finalAnswers.some(a => a.correct) ? 'victory' : 'defeated', { move: finalAnswers.some(a => a.correct) ? 'hop' : 'settle' });
+
+  flowNumbers(500);
 
   document.querySelectorAll('.btn-final-override').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1858,6 +2057,7 @@ function renderResults() {
     : ranked.length === 2 ? [ranked[1], ranked[0]]
     : [ranked[0]];
   const medal = ['I', 'II', 'III'];
+  const hostPose = solo && winner.score <= 0 ? 'shrug' : isTie ? 'welcome' : 'victory';
 
   app.innerHTML = `
     ${sceneShapes('results')}
@@ -1867,13 +2067,13 @@ function renderResults() {
         : isTie ? "It's a Tie!" : `${escapeHtml(winner.name)} Wins!`}</div>
       ${newBest ? '<div class="solo-best-callout">New personal best!</div>' : ''}
       ${solo && rank.next ? `<div class="solo-next-hint">${rank.next}</div>` : ''}
-      ${!solo && !isTie ? hostLine('Not since Austerlitz have I seen such form.') : ''}
+      ${!solo && !isTie ? hostLine('Not since Austerlitz have I seen such form.', 'Napoleon', 'delighted') : ''}
       ${chapterOutcomeHtml()}
       <div class="results-stage">
       ${solo ? `
       <div class="solo-scorecard" style="--pc: ${PLAYER_COLORS[0]}">
         <div class="podium-avatar ${portraitUrl(winner.character) ? 'has-portrait' : ''}">${avatarHtml(winner, 0)}</div>
-        <div class="solo-score-money ${winner.score < 0 ? 'negative' : ''}">${money(winner.score)}</div>
+        <div class="solo-score-money ${winner.score < 0 ? 'negative' : ''}">${flowMoney(winner.score, 0)}</div>
         <div class="solo-score-sub">${escapeHtml(winner.name)}'s winnings</div>
       </div>
       ` : `
@@ -1884,14 +2084,14 @@ function renderResults() {
             <div class="podium-col rank-${place}" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">
               <div class="podium-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}">${avatarHtml(p, p.originalIndex)}</div>
               <div class="podium-name">${escapeHtml(p.name)}</div>
-              <div class="podium-money ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
+              <div class="podium-money ${p.score < 0 ? 'negative' : ''}">${flowMoney(p.score, 0)}</div>
               <div class="podium-block">${medal[place - 1]}</div>
             </div>
           `;
         }).join('')}
       </div>
       `}
-      <img class="results-host" src="${solo && winner.score <= 0 ? NAPOLEON.neutral : NAPOLEON.victory}" alt="Napoleon ${solo && winner.score <= 0 ? 'stands at ease' : 'raises a fist in triumph'}">
+      ${hostFigure(hostPose, 'results-host', { alt: hostPose === 'victory' ? 'Napoleon raises a fist in triumph' : hostPose === 'shrug' ? 'Napoleon shrugs' : 'Napoleon opens a hand to the table' })}
       </div>
       <div class="results-stats-list">
         ${ranked.map(p => {
@@ -1920,6 +2120,8 @@ function renderResults() {
 
   sounds.playFanfare();
   if (!isTie || ranked[0].score > 0) spawnConfetti();
+  flowNumbers(450);
+  if (hostPose === 'victory') setTimeout(() => { if (shownScreen === 'results') hostReact('victory', { move: 'hop' }); }, 700);
 
   document.getElementById('btn-play-again').addEventListener('click', () => {
     lastScreen = null;

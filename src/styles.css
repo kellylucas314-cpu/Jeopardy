@@ -873,19 +873,6 @@ input { font-family: var(--font-ui); }
 .feedback-wrong { color: var(--wrong); font-size: 1.3rem; font-weight: 700; }
 .feedback-skip { color: var(--cream-dim); font-size: 1.05rem; font-weight: 500; }
 
-.feedback-icon {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto 10px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-.feedback-correct .feedback-icon { background: rgba(60, 122, 84, 0.12); border: 1px solid var(--correct); }
-.feedback-wrong .feedback-icon { background: rgba(166, 61, 41, 0.1); border: 1px solid var(--wrong); }
 
 .correct-response { font-size: 0.95rem; margin-top: 8px; color: var(--cream-dim); font-weight: 400; }
 .correct-response strong { color: var(--cream); font-weight: 700; }
@@ -1765,12 +1752,6 @@ input { font-family: var(--font-ui); }
 @keyframes riseIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes popIn { from { opacity: 0; transform: scale(0.82); } to { opacity: 1; transform: scale(1); } }
 
-.player-amount.bump { animation: scoreBump 0.5s var(--ease); }
-@keyframes scoreBump {
-  0% { transform: scale(1); }
-  40% { transform: scale(1.14); color: var(--brass-bright); }
-  100% { transform: scale(1); }
-}
 
 /* ============================================================
    RESPONSIVE
@@ -1977,7 +1958,6 @@ input { font-family: var(--font-ui); }
   vertical-align: -0.125em;
   flex-shrink: 0;
 }
-.feedback-icon .icon { width: 1.35rem; height: 1.35rem; }
 .stat-good .icon, .stat-bad .icon { width: 0.9em; height: 0.9em; margin-right: 0.3em; }
 .buzzer-key .icon { width: 0.95em; height: 0.95em; vertical-align: -0.1em; }
 
@@ -2311,17 +2291,6 @@ input { caret-color: var(--terracotta-deep); }
   align-items: flex-end;
   justify-content: center;
   overflow: visible;
-}
-.board-host img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
-  transform: scale(1.55);
-  transform-origin: center bottom;
-  filter: drop-shadow(0 16px 18px rgba(37, 49, 40, 0.13));
 }
 
 .board-footer {
@@ -2749,7 +2718,6 @@ input { caret-color: var(--terracotta-deep); }
   background: rgba(255, 253, 250, 0.38);
 }
 
-.board-host img { filter: none; }
 
 .guest-title { color: var(--jade-deep); font-size: 0.66rem; }
 .guest-names { font-size: 0.6rem; color: var(--cream); }
@@ -3017,7 +2985,7 @@ input { caret-color: var(--terracotta-deep); }
   flex: none;
   border-radius: 999px;
   object-fit: cover;
-  object-position: center 8%;
+  object-position: center;
   background: #f1e3cf;
 }
 .host-line figcaption { display: flex; flex-direction: column; gap: 3px; }
@@ -3096,24 +3064,9 @@ select:focus-visible,
 .btn-preset { border: 0; background: #f1e5d3; }
 .btn-preset:hover { background: #ead9c0; }
 
-/* — Napoleon thinks beside every clue — */
-.clue-host {
-  position: fixed;
-  z-index: 2;
-  right: clamp(16px, 4vw, 72px);
-  bottom: 0;
-  height: min(58vh, 470px);
-  width: auto;
-  pointer-events: none;
-  animation: hostIn 0.4s var(--ease) 0.1s backwards;
-}
-@keyframes hostIn { from { opacity: 0; translate: 0 14px; } }
-@media (max-width: 1099px) { .clue-host { display: none; } }
-@media (prefers-reduced-motion: reduce) { .clue-host { animation: none; } }
-
 /* — Board: Napoleon's face in the host dock — */
 .host-monogram.has-face { padding: 0; overflow: hidden; border: 0; border-radius: 999px; background: #f1e3cf; }
-.host-monogram.has-face img { width: 100%; height: 100%; object-fit: cover; object-position: center 8%; }
+.host-monogram.has-face img { width: 100%; height: 100%; object-fit: cover; }
 .board-footer { grid-template-columns: minmax(0, 1fr) auto; }
 
 /* — Results: the players on the podium, Napoleon beside them — */
@@ -3123,11 +3076,7 @@ select:focus-visible,
   justify-content: center;
   gap: clamp(16px, 4vw, 56px);
 }
-.results-host {
-  height: clamp(220px, 34vh, 400px);
-  width: auto;
-  flex: none;
-}
+.results-host { --host-h: clamp(220px, 34vh, 400px); }
 .podium-avatar { box-shadow: none; }
 .podium-avatar.has-portrait { border-width: 3px; }
 .podium-col.rank-1 .podium-avatar { width: 92px; height: 92px; }
@@ -3143,7 +3092,7 @@ select:focus-visible,
 .solo-scorecard { background: transparent; border: 0; box-shadow: none; }
 .solo-scorecard .podium-avatar { width: 96px; height: 96px; }
 @media (max-width: 560px) {
-  .results-host { height: 170px; }
+  .results-host { --host-h: 170px; }
   .results-stage { gap: 10px; }
   .podium-col.rank-1 .podium-avatar { width: 72px; height: 72px; }
 }
@@ -3202,3 +3151,202 @@ select:focus-visible,
   text-transform: none;
 }
 .transition-note { border: 0; background: rgba(255, 253, 250, 0.72); }
+
+
+/* ============================================================
+   THE LIVE HOST PASS (Nov 10 2026): the game answers back.
+   One authored idea: Napoleon is a live host. His pose, his face
+   and his words follow the game. Around him, three quiet helpers:
+   scores that roll, screens that hand over to each other, and an
+   answer line that says how it went. Everything here moves with
+   transform and opacity only, and all of it stands still under
+   prefers-reduced-motion (the poses and words still change).
+   ============================================================ */
+
+:root { --ease-expo: cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* — The figure: a slot of fixed size; each pose stands in it at its own height — */
+.host-fig {
+  position: relative;
+  flex: none;
+  height: var(--host-h, 420px);
+  width: calc(var(--host-h, 420px) * 0.6);
+  pointer-events: none;
+  view-transition-name: host;
+}
+.host-img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  translate: -50% 0;
+  height: calc(100% * var(--k, 1));
+  width: auto;
+  max-width: none;
+  transform-origin: 50% 100%;
+  user-select: none;
+  animation: hostBreathe 3.8s ease-in-out infinite alternate;
+}
+@keyframes hostBreathe { to { scale: 1 1.012; } }
+
+/* beside the clue, the wager and the in-between screens: wide screens only */
+.stage-host {
+  position: fixed;
+  z-index: 2;
+  right: clamp(20px, 4vw, 80px);
+  bottom: 0;
+  --host-h: min(56vh, 470px);
+}
+@media (max-width: 1239px) { .stage-host { display: none; } }
+
+/* at the board: he fills his column, and a wide pose may reach over its edge */
+.board-host { container-type: size; }
+.board-fig { --host-h: min(96cqh, 200cqw, 560px); translate: -16px 0; }
+
+/* his words, on a wide screen */
+.host-say {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% * var(--k, 1) + 16px);
+  translate: -50% 0;
+  width: max-content;
+  max-width: 250px;
+  padding: 12px 18px;
+  border-radius: 20px;
+  background: #fffdfa;
+  color: var(--cream);
+  font: italic 400 1.02rem/1.35 var(--font-ui);
+  text-align: center;
+  text-wrap: balance;
+  transform-origin: 50% 100%;
+}
+.host-say::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 1px);
+  width: 18px;
+  height: 11px;
+  translate: -50% 0;
+  background: inherit;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.host-say[hidden] { display: none; }
+
+/* — The verdict: his face and line on a phone; on a wide screen the figure says it — */
+.verdict {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 440px;
+  margin: 0 auto 14px;
+  text-align: left;
+}
+.verdict-face {
+  width: 54px;
+  height: 54px;
+  flex: none;
+  border-radius: 999px;
+  object-fit: cover;
+  background: #f1e3cf;
+}
+.verdict figcaption { font: italic 400 1.05rem/1.35 var(--font-ui); color: var(--cream); }
+@media (min-width: 1240px) {
+  .clue-screen .verdict {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+.verdict-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font: 600 1.9rem/1 var(--font-ui);
+  font-variant-numeric: tabular-nums;
+}
+.verdict-score span { display: inline-block; transform-origin: 0 50%; }
+.verdict-score .icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  font-size: 1.15rem;
+  color: var(--paper);
+  background: currentColor;
+}
+.feedback-correct .verdict-score .icon { background: var(--correct); }
+.feedback-wrong .verdict-score .icon { background: var(--wrong); }
+.feedback-correct,
+.feedback-wrong { font-weight: 400; }
+.feedback-skip .verdict { margin-bottom: 6px; }
+.feedback-correct .correct-response { margin-top: 10px; }
+
+/* the line you wrote on says how it went */
+.answer-input.is-right { border-bottom-color: var(--correct); color: var(--correct); opacity: 1; }
+.answer-input.is-wrong {
+  border-bottom-color: var(--wrong);
+  color: var(--wrong);
+  opacity: 1;
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+/* — Scores roll; the difference lifts off the pill — */
+number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2em; }
+.player-score { position: relative; }
+.score-delta {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 6px);
+  translate: -50% 0;
+  z-index: 6;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font: 500 0.82rem/1 var(--font-mono);
+  color: var(--paper);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.score-delta.up { background: var(--correct); }
+.score-delta.down { background: var(--wrong); }
+
+/* the tile just played gives up its value */
+.board-clue .spent { display: inline-block; animation: spent 0.7s var(--ease-expo) 0.4s both; }
+@keyframes spent { to { opacity: 0; scale: 0.55; } }
+
+/* — One screen hands over to the next; Napoleon is carried across — */
+@keyframes handOut { to { opacity: 0; } }
+@keyframes handIn { from { opacity: 0; translate: 0 10px; } }
+::view-transition-old(root) { animation: 150ms ease-in both handOut; }
+::view-transition-new(root) { animation: 340ms var(--ease-expo) 70ms both handIn; }
+::view-transition-group(host) { animation-duration: 440ms; animation-timing-function: var(--ease-expo); }
+::view-transition-old(host),
+::view-transition-new(host) { height: 100%; width: 100%; object-fit: contain; object-position: 50% 100%; }
+
+/* — Chapter facts sit under the title, never above it — */
+.chapter-meta {
+  font: 400 0.82rem/1.4 var(--font-mono);
+  color: var(--cream-dim);
+}
+.loading-screen .chapter-meta { margin-top: 10px; }
+
+/* on a phone there is no room for the figure, so his face and his line host the board */
+@media (max-width: 560px) {
+  .host-dock { align-items: center; }
+  .host-plaque { display: block; flex: 1; min-width: 0; font-size: 0.84rem; padding: 10px 16px; }
+  /* a chapter's long round line wraps under the title instead of pushing it off the screen */
+  .board-brand { min-width: 0; max-width: 100%; }
+  .round-meta { width: auto; flex-wrap: wrap; justify-content: center; row-gap: 4px; }
+  .round-name { text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .host-img { animation: none; }
+  .board-clue .spent { display: none; }
+}
