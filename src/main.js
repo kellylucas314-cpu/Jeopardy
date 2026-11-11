@@ -97,29 +97,212 @@ let prevLeader = null; // for lead-change announcements
 
 // Personality — the game reacts like a host, not a spreadsheet
 // The Emperor's table talk — witty, dry, confident, lightly theatrical.
-const CORRECT_LINES = ['The Emperor accepts this answer.', 'A triumph worthy of the Grande Armée.', 'Précisément. Take the spoils.', 'History favors the prepared.', 'A conquest, cleanly executed.', 'The Emperor is… impressed.', 'Vive la victoire!'];
-const WRONG_LINES = ['A tactical retreat.', 'The Emperor regrets to decline.', 'Not even my cavalry could save that one.', 'Bold. Doomed, but bold.', 'We shall not speak of this again.', 'Every campaign has its setbacks.'];
-const TIMEOUT_LINES = ['Time waits for no emperor.', 'The clock has outflanked you.', 'Hesitation, the one enemy I never forgave.'];
-const NOBUZZ_LINES = ['No volunteers? Cowardice.', 'The salon falls silent…', 'Even my old guard would not charge at this one.', 'Very well. The board keeps its secret.'];
-const STEAL_LINES = ['The spoils lie unclaimed!', 'An open flank. Who will take it?', 'Seize it, or regret it.'];
-const BOARD_LINES = ['Choose your battlefield.', 'The board awaits your command.', 'Pick your ground. History is watching.', 'Retreat is unavailable. Pick a category.', 'Every square hides a small war.'];
+const CORRECT_LINES = [
+  'The Emperor accepts this answer.',
+  'A triumph worthy of the Grande Armée.',
+  'Précisément. Take the spoils.',
+  'History favors the prepared.',
+  'A conquest, cleanly executed.',
+  'The Emperor is… impressed.',
+  'Vive la victoire!',
+  'Correct. I am almost surprised.',
+  'Exactement.',
+  'You may keep your head. And the points.',
+  'Well struck.',
+  'That is how one takes a hill.',
+  'I would have said the same. Naturally.',
+  'Correct. Do not let it go to your head.',
+  'A clean victory. I allow it.',
+  'Bien joué.',
+  'The field is yours.',
+  'So you do read. Good.',
+  'There is a marshal’s baton in your knapsack.',
+  'Correct. France is pleased.',
+  'Even Talleyrand could not twist that one.',
+  'Add it to the treasury.',
+  'Magnifique. Carry on.',
+  'An answer with good posture.',
+  'Right. I expected less, frankly.',
+  'Victory. Small, but I collect those too.',
+  'You have studied. It shows.',
+  'Correct. Josephine would be charmed.',
+  'The Emperor nods. That is rare.',
+  'Flawless. Suspiciously so.',
+  'Take the points. You earned them.',
+  'Oui. Next.',
+];
+const WRONG_LINES = [
+  'A tactical retreat.',
+  'The Emperor regrets to decline.',
+  'Not even my cavalry could save that one.',
+  'Bold. Doomed, but bold.',
+  'We shall not speak of this again.',
+  'Every campaign has its setbacks.',
+  'No. But said with confidence.',
+  'Wrong. Magnificently wrong.',
+  'My horse Marengo would have known that.',
+  'A fine answer. To a different question.',
+  'Non.',
+  'I admire the courage. Only the courage.',
+  'That answer has been exiled.',
+  'Close. The way Moscow is close to Paris.',
+  'History will be kind and forget this.',
+  'A brave charge into the wrong valley.',
+  'Incorrect. I say this with affection.',
+  'The Emperor winces.',
+  'You marched north. The answer was south.',
+  'Alas. The points desert you.',
+  'Wrong. I once misjudged a winter myself.',
+  'That is not it. Onward.',
+  'I shall pretend I did not hear that.',
+  'A loss. I have survived worse.',
+  'Not today, general.',
+  'An answer only a Bourbon could love.',
+  'Mon Dieu.',
+  'The treasury takes back its coins.',
+  'Wellington sends his thanks.',
+  'That one goes in the memoirs. As a warning.',
+  'Strike that from the record.',
+  'Nearly. In the loosest sense of nearly.',
+  'Confidence is not the same as accuracy.',
+  'Even emperors miss. Rarely, in my case.',
+];
+const TIMEOUT_LINES = [
+  'Time waits for no emperor.',
+  'The clock has outflanked you.',
+  'Hesitation, the one enemy I never forgave.',
+  'The clock wins. It usually does.',
+  'Too slow. Armies starve at that pace.',
+  'Ask me for anything but time.',
+  'The moment has marched on without you.',
+  'You were still thinking. The clock was not.',
+  'Late. So was Grouchy at Waterloo.',
+  'A fine silence. A costly one.',
+  'The sand has run out, general.',
+  'Speed wins wars. Remember that.',
+];
+const NOBUZZ_LINES = [
+  'No volunteers? Cowardice.',
+  'The salon falls silent…',
+  'Even my old guard would not charge at this one.',
+  'Very well. The board keeps its secret.',
+  'Nobody? I am surrounded by diplomats.',
+  'Not one of you. Remarkable.',
+  'The clue retires undefeated.',
+];
+const STEAL_LINES = [
+  'The spoils lie unclaimed!',
+  'An open flank. Who will take it?',
+  'Seize it, or regret it.',
+  'The prize is on the table. Take it.',
+  'Their loss. Perhaps your gain.',
+];
+const BOARD_LINES = [
+  'Choose your battlefield.',
+  'The board awaits your command.',
+  'Pick your ground. History is watching.',
+  'Retreat is unavailable. Pick a category.',
+  'Every square hides a small war.',
+  'Where shall we march next?',
+  'Name your ground, general.',
+  'The map is open. Choose.',
+  'I am waiting. I do not do that well.',
+  'Pick boldly. I will judge quietly.',
+];
 
 const STREAK_LINES = {
-  2: ['Twice in a row. A pattern forms.', 'Two for two. Continue.'],
-  3: ['Three in a row. Now you are dangerous.', 'Three. The enemy begins to worry.'],
-  4: ['Four. They are in full retreat.', 'Four in a row. Keep marching.'],
-  5: ['Five in a row. I have made marshals for less.', 'Unstoppable. I know the feeling.'],
+  2: ['Twice in a row. A pattern forms.', 'Two for two. Continue.', 'Two. Do not get comfortable.', 'Twice. Luck, or the start of something.'],
+  3: ['Three in a row. Now you are dangerous.', 'Three. The enemy begins to worry.', 'Three. I begin to take notes.', 'Three straight. The line holds.'],
+  4: ['Four. They are in full retreat.', 'Four in a row. Keep marching.', 'Four. Who taught you this?', 'Four in a row. Europe trembles.'],
+  5: ['Five in a row. I have made marshals for less.', 'Unstoppable. I know the feeling.', 'Five. Shall I fetch you a crown?', 'This is becoming an empire.'],
 };
-const FAST_LINES = ['Before I had finished the sentence.', 'Quick as a cavalry charge.', 'No hesitation. Good.'];
-const STREAK_BROKEN_LINES = ['And there the advance ends.', 'Every great march meets its winter.'];
-const WAGER_WON_LINES = ['A wager won. That is how empires are made.', 'Fortune favors the bold. Today.'];
-const WAGER_LOST_LINES = ['Waterloo. I know the feeling.', 'A bold wager. A costly one.'];
-const BIG_PICK_LINES = ['The heavy guns. Good.', 'Straight for the big prize.', 'Ambitious. I approve.'];
-const LAST_CLUE_LINES = ['The last square. Make it count.', 'One left. Finish it.'];
-const PASS_LINES = ['A strategic withdrawal. Noted.', 'You decline the field. Very well.', 'Discretion. I have heard of it.'];
-const URGENT_LINES = ['Tick, tock.', 'Decide, general.', 'The clock is not your ally.', 'Any moment now.'];
-const AFTER_CORRECT = ['Good. Press the advantage.', 'Momentum, general. Use it.', 'Again. Just like that.'];
-const AFTER_WRONG = ['Regroup. Choose again.', 'A setback. The campaign continues.', 'Shake it off. Pick your ground.'];
+const FAST_LINES = [
+  'Before I had finished the sentence.',
+  'Quick as a cavalry charge.',
+  'No hesitation. Good.',
+  'Faster than a courier from Paris.',
+  'Instant. I like a decisive mind.',
+  'You did not even blink.',
+  'Swift. The best victories are.',
+];
+const STREAK_BROKEN_LINES = [
+  'And there the advance ends.',
+  'Every great march meets its winter.',
+  'The run ends. They always do.',
+  'A fine streak, now a memory.',
+  'So. You are mortal after all.',
+];
+const WAGER_WON_LINES = [
+  'A wager won. That is how empires are made.',
+  'Fortune favors the bold. Today.',
+  'You bet like an emperor. And won.',
+  'The gamble pays. Remember this feeling.',
+  'A bold stake, handsomely repaid.',
+];
+const WAGER_LOST_LINES = [
+  'Waterloo. I know the feeling.',
+  'A bold wager. A costly one.',
+  'You bet the army and lost the army.',
+  'The dice were not with you.',
+  'An expensive lesson. I have had several.',
+];
+const BIG_PICK_LINES = [
+  'The heavy guns. Good.',
+  'Straight for the big prize.',
+  'Ambitious. I approve.',
+  'The top of the hill. Naturally.',
+  'No small skirmishes for you.',
+];
+const LAST_CLUE_LINES = [
+  'The last square. Make it count.',
+  'One left. Finish it.',
+  'The final square. End it well.',
+];
+const PASS_LINES = [
+  'A strategic withdrawal. Noted.',
+  'You decline the field. Very well.',
+  'Discretion. I have heard of it.',
+  'Silence. The safest answer of all.',
+  'A wise general knows which hill to skip.',
+  'You keep your powder dry. Fine.',
+  'No shot fired, no points lost.',
+  'Retreat in good order. I respect it.',
+  'Prudence. How very unlike me.',
+  'We march around this one.',
+  'You live to fight another clue.',
+  'Not every battle must be fought.',
+  'A shrug. I have seen diplomats do worse.',
+  'Very well. The clue wins this round.',
+  'Passing. My ministers would be proud.',
+  'Caution today, glory tomorrow.',
+];
+const URGENT_LINES = [
+  'Tick, tock.',
+  'Decide, general.',
+  'The clock is not your ally.',
+  'Any moment now.',
+  'The drums are getting louder.',
+  'Now, general.',
+  'Seconds, not minutes.',
+];
+const AFTER_CORRECT = [
+  'Good. Press the advantage.',
+  'Momentum, general. Use it.',
+  'Again. Just like that.',
+  'You hold the field. Choose the next.',
+  'Keep the pressure on.',
+  'They are wavering. Go on.',
+  'Good. Now do it again.',
+];
+const AFTER_WRONG = [
+  'Regroup. Choose again.',
+  'A setback. The campaign continues.',
+  'Shake it off. Pick your ground.',
+  'Forget it. Next square.',
+  'Reform the line. Pick again.',
+  'One lost skirmish. Choose.',
+  'On to the next. Chin up.',
+];
 
 /** His opening remark on each chapter's board, in campaign mode. */
 const CHAPTER_LINES = {
@@ -156,7 +339,27 @@ let clueShownAt = 0; // to notice a quick answer
 const MONEY_FMT = { style: 'currency', currency: 'USD', maximumFractionDigits: 0 };
 const EXPO = [0.16, 1, 0.3, 1];
 
-const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+// Each list is dealt like a deck: nothing comes round again until the rest of the list has
+// been used, and a fresh deal never opens with the line just heard. The decks last for the
+// visit, so a second game does not start over on the same remarks.
+const decks = new Map();
+function pick(arr) {
+  if (arr.length < 2) return arr[0];
+  let deck = decks.get(arr);
+  if (!deck || !deck.left.length) {
+    const left = arr.slice();
+    for (let i = left.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [left[i], left[j]] = [left[j], left[i]];
+    }
+    // the next one out is the end of the array: keep the line just heard away from it
+    if (deck && left[left.length - 1] === deck.last) [left[0], left[left.length - 1]] = [left[left.length - 1], left[0]];
+    deck = { left, last: deck && deck.last };
+    decks.set(arr, deck);
+  }
+  deck.last = deck.left.pop();
+  return deck.last;
+}
 
 /**
  * Napoleon's verdict on an answer. On a wide screen the big figure takes the
@@ -190,11 +393,23 @@ function verdictFig(bust, pose, move, play = true) {
     : `<span class="verdict-fig" data-move="${move}"><img src="${poseSrc(pose)}" alt=""></span>`;
 }
 
+/**
+ * After a right answer the card still says what the answer was, small: a loose spelling can be
+ * accepted, and the player should see the proper one (Kelly, Nov 11 2026).
+ */
+function answerKey(result) {
+  return result.correctResponse
+    ? `<div class="answer-key">Answer: <strong>${escapeHtml(result.correctResponse)}</strong></div>`
+    : '';
+}
+
 /** The line for a right answer: he notices a streak, a quick answer, a wager won. */
 function correctLine(result, { wager = false, seconds = 99 } = {}) {
   if (wager) return pick(WAGER_WON_LINES);
-  if (result.streak >= 2) return pick(STREAK_LINES[Math.min(result.streak, 5)]);
-  if (seconds < 6) return pick(FAST_LINES);
+  // he calls out a run as it builds; past five in a row he mentions it only now and then,
+  // and a quick answer is remarked on some of the time, so neither becomes the only thing he says
+  if (result.streak >= 2 && (result.streak <= 5 || Math.random() < 0.3)) return pick(STREAK_LINES[Math.min(result.streak, 5)]);
+  if (seconds < 6 && Math.random() < 0.4) return pick(FAST_LINES);
   return pick(CORRECT_LINES);
 }
 /** ...and for a wrong one: a lost wager, or a good run cut short. */
@@ -1495,7 +1710,7 @@ function showFeedback(html) {
   const last = feedback.querySelector('.feedback-actions') || feedback;
   requestAnimationFrame(() => last.scrollIntoView?.({ block: 'nearest', behavior: prefersReducedMotion() ? 'auto' : 'smooth' }));
   if (prefersReducedMotion()) return;
-  const parts = feedback.querySelectorAll('.verdict, .verdict-score, .streak-callout, .correct-response, .feedback-actions');
+  const parts = feedback.querySelectorAll('.verdict, .verdict-score, .answer-key, .streak-callout, .correct-response, .feedback-actions');
   if (parts.length) animate(parts, { opacity: [0, 1], y: [10, 0] }, { duration: 0.32, ease: EXPO, delay: stagger(0.07) });
   const fig = feedback.querySelector('.verdict-fig');
   // on a phone his face reacts in the verdict picture; without a film the still pose makes its move
@@ -1601,10 +1816,11 @@ function handleSubmitAnswer() {
         <div class="feedback-correct">
           ${verdict('correct', correctLine(result, { wager, seconds }), { big: wager || result.streak >= 3 })}
           <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
+          ${answerKey(result)}
           ${bonusHtml(result)}
         </div>
       `);
-      scheduleReturn(result.bonus ? 2400 : 2000);
+      scheduleReturn(result.bonus ? 3000 : 2600);
     } else {
       showFeedback(`
         <div class="feedback-wrong">
@@ -1831,10 +2047,11 @@ function resolveBuzzAnswer(answer, timedOut) {
       <div class="feedback-correct">
         ${verdict('correct', correctLine(result), { big: result.streak >= 3 })}
         <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
+        ${answerKey(result)}
         ${bonusHtml(result)}
       </div>
     `);
-    scheduleReturn(result.bonus ? 2400 : 2000);
+    scheduleReturn(result.bonus ? 3000 : 2600);
     return;
   }
 

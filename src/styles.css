@@ -4369,3 +4369,17 @@ body:has(> .category-intro) .host-fig { view-transition-name: none; }
    and beside the clue Napoleon's boots sat on the bottom edge of the window. */
 @media (max-width: 720px) { .board-brand { padding-top: 6px; } }
 .stage-host { bottom: 14px; }
+
+/* After a right answer the card still names the answer, small (Kelly, Nov 11 2026): a loose
+   spelling can be accepted and the proper one should be on show. It sits under the score and
+   never competes with it, unlike the large correct response after a miss. */
+.clue-feedback .answer-key {
+  order: 2;
+  margin-top: 6px;
+  max-width: 34ch;
+  font: 400 1rem/1.4 var(--font-ui);
+  color: var(--text-dim);
+  text-align: center;
+  text-wrap: balance;
+}
+.clue-feedback .answer-key strong { font-weight: 600; color: var(--cream); }
