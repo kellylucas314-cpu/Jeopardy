@@ -23,13 +23,27 @@ function metrics(pose) {
 }
 
 /**
- * The figure. `cls` places it (stage-host, board-host-fig, results-host);
- * `say` adds the speech bubble he uses on wide screens.
+ * The figure. `cls` places it (stage-host, board-fig, results-host); `say` adds
+ * the speech bubble he uses on wide screens.
+ *
+ * Where films can play he is live: he stands with his arms crossed and watches
+ * the player, shifts his weight every few seconds, and reacts in film (see the
+ * foot of this file). The cut-out poses are for reduced motion, data saver and
+ * browsers without WebGL.
  */
 export function hostFigure(pose, cls = '', { say = false, alt = '' } = {}) {
+  const bubble = say ? '<div class="host-say" aria-hidden="true" hidden></div>' : '';
+  if (isLive()) {
+    const { k, drop, dx } = FILMS['watch-a'];
+    watch();
+    return `<div class="host-fig is-live ${cls}" data-pose="watch" style="--fk:${k};--fdrop:${drop};--fdx:${dx}">
+      ${bubble}
+      <div class="host-body"><img class="host-img" src="${WATCH_STILL}" alt="${alt ? 'Napoleon, arms crossed, watching you' : ''}" draggable="false"></div>
+    </div>`;
+  }
   const name = POSES[pose] ? pose : 'neutral';
   return `<div class="host-fig ${cls}" data-pose="${name}" style="${metrics(name)}">
-      ${say ? '<div class="host-say" aria-hidden="true" hidden></div>' : ''}
+      ${bubble}
       <img class="host-img" src="${poseSrc(name)}" alt="${alt}" draggable="false">
     </div>`;
 }
@@ -50,29 +64,27 @@ const MOVES = {
 };
 
 /**
- * Change the pose of the figure on screen, with a move and, optionally, a line.
- * Safe to call when no figure is showing. With `film`, one of Kelly's reaction
- * clips plays in place of the still pose and holds its last frame; if the film
- * cannot play, the still pose and its move stand in. With `until` (seconds) the
- * film hands back to the still pose at that point instead of holding.
+ * He reacts, and optionally says a line. Safe to call when no figure is showing.
+ * Live: `film` plays one of Kelly's reaction clips, and he goes back to watching
+ * afterwards; without a film he simply keeps watching. Not live: the cut-out
+ * pose changes, with one short move.
  */
-export function hostReact(pose, { move = 'settle', say, film, until } = {}) {
+export function hostReact(pose, { move = 'settle', say, film } = {}) {
   const fig = document.querySelector('.host-fig');
   if (!fig) return;
+  if (say !== undefined) hostSay(say);
+  if (fig.classList.contains('is-live')) {
+    if (film && fig.offsetWidth > 0) playFilm(fig, film, { hold: 1100 });
+    return;
+  }
   const img = fig.querySelector('.host-img');
   const name = POSES[pose] ? pose : 'neutral';
-  const stand = () => {
-    if (fig.dataset.pose === name) return;
+  if (fig.dataset.pose !== name) {
     fig.dataset.pose = name;
     fig.setAttribute('style', metrics(name));
     img.src = poseSrc(name);
-  };
-  const still = () => { stand(); if (!reduced() && MOVES[move]) MOVES[move](img); };
-  if (say !== undefined) hostSay(say);
-  stopFilm();
-  // the pose under the film changes only once the film covers it, so the old pose never flashes
-  if (film && fig.offsetWidth > 0 && playFilm(fig, film, { until, onShow: stand, onFail: still })) return;
-  still();
+  }
+  if (!reduced() && MOVES[move]) MOVES[move](img);
 }
 
 /** Play one of the moves on any picture of him (the phone's verdict figure uses this). */
@@ -95,13 +107,13 @@ export function setFace(el, mood) {
   if (el) el.src = faceSrc(mood);
 }
 
-/** Fetch every pose and face once the game is under way, so a reaction never waits on the network. */
+/** Fetch his faces (and, where he is not live, every pose) once the game is under way, so a reaction never waits on the network. */
 let preloaded = false;
 export function preloadHost(faces = []) {
   if (preloaded) return;
   preloaded = true;
   const load = () => {
-    for (const name of Object.keys(POSES)) new Image().src = poseSrc(name);
+    if (!isLive()) for (const name of Object.keys(POSES)) new Image().src = poseSrc(name);
     for (const mood of faces) new Image().src = faceSrc(mood);
   };
   if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 2500 });
@@ -216,17 +228,44 @@ export function tipHat(fig) {
 }
 
 /* — Kelly's reaction clips (Nov 11 2026): short films of him cut to his outline, stacked the same
-     way as the hat tip (scripts/build-host-films.py). A figure film plays over the standing host;
-     a face film plays in the small verdict picture on a phone. One canvas and one video serve
-     them all. A film holds its last frame until the next pose, the next film or the next screen. — */
+     way as the hat tip (scripts/build-host-films.py). One canvas and one video serve them all.
+
+     The standing host is live. Under everything is one still frame, the one where he looks at
+     the player. Every few seconds an idle film leaves that frame and comes back to it. A reaction
+     film plays over it, holds its last frame for a moment and fades back to the still. If the
+     screen changes mid-film the film moves to the new screen's figure, so he never snaps.
+
+     A face film plays in the small verdict picture on a phone and holds its last frame. — */
+
+const WATCH_STILL = './assets/host/films/watch.webp';
+const IDLES = ['watch-a', 'watch-a', 'watch-b', 'watch-c'];   // the plain shift of weight comes up most
+export const bustSrc = name => `./assets/host/films/${name}.webp`;
 
 const filmUrl = {};   // name -> a local address, once the film has been fetched
-let player = null;    // the shared canvas and video, made on first use
-let playing = null;   // { el } while a film is on screen or about to be
+let player = null;    // the shared canvas and video: null until tried, false if this browser cannot
+let playing = null;   // { el, name, shown, fading, timer } while a film is on screen or about to be
+let live;             // decided once: can he be live here?
+let idleFig = null;   // the figure the idle clock was last set for
+let idleAt = 0;       // when he may fidget next
+let lastIdle = '';
+let watching = false;
+
+function stage() {
+  if (player === null) {
+    try { player = filmStage([480, 656], 'host-film') || false; } catch { player = false; }
+  }
+  return player || null;
+}
+
+/** Films can play here, so the standing host is the live one. */
+export function isLive() {
+  live ??= !reduced() && !navigator.connection?.saveData && !!stage();
+  return live;
+}
 
 /** Fetch films ahead of time, in order of need. A film that has not arrived is simply not played. */
 export function preloadFilms(names) {
-  if (reduced() || navigator.connection?.saveData) return;
+  if (!isLive()) return;
   const wanted = names.filter(n => FILMS[n] && !(n in filmUrl));
   for (const n of wanted) filmUrl[n] = null;
   const next = () => {
@@ -240,52 +279,120 @@ export function preloadFilms(names) {
   next();
 }
 
-/** Take the film off the screen; the still picture under it shows again. */
+/** Fetch the still he stands on and his idle films. Called from the title page, so he is ready by the first board. */
+export function preloadLive() {
+  if (!isLive()) return;
+  new Image().src = WATCH_STILL;
+  preloadFilms(['watch-a', 'watch-b', 'watch-c']);
+}
+
+/** Take the film off the screen at once; the still picture under it shows again. */
 export function stopFilm() {
   if (!playing) return;
-  const { el } = playing;
+  const run = playing;
   playing = null;
+  clearTimeout(run.timer);
   player.video.pause();
-  el.classList.remove('is-filming');
+  player.canvas.getAnimations?.().forEach(a => a.cancel());
+  run.el.classList.remove('is-filming');
   player.canvas.remove();
+}
+
+/** The screen changed under a film of the standing host: move it to the new screen's figure. */
+function adopt() {
+  const run = playing;
+  const fig = run && FILMS[run.name].k && document.querySelector('.host-fig.is-live');
+  if (!fig || fig.offsetWidth === 0) return false;
+  run.el = fig;
+  if (run.shown) {
+    fig.querySelector('.host-body').append(player.canvas);
+    if (!run.fading) fig.classList.add('is-filming');
+    try { player.draw(); } catch { /* the last frame stays as it was */ }
+  }
+  return true;
+}
+
+/** Call right after a screen is drawn, so a film in flight is on the new figure before anyone sees the still. */
+export function hostCarry() {
+  if (playing && !playing.el.isConnected && !adopt()) stopFilm();
+}
+
+/** The film gives way to the still under it. */
+function settle(run) {
+  if (playing !== run) return;
+  if (!run.el.isConnected && !adopt()) return stopFilm();
+  run.fading = true;
+  run.el.classList.remove('is-filming');
+  const end = () => { if (playing === run) { stopFilm(); idleAt = performance.now() + 1700 + Math.random() * 2600; } };
+  const fade = player.canvas.animate?.({ opacity: [1, 0] }, { duration: 170, easing: 'ease-out' });
+  if (fade) fade.onfinish = end; else end();
 }
 
 /**
  * Play a film inside `el` (the standing host, or the verdict picture). Returns
  * false at once if it cannot (not fetched yet, reduced motion, no WebGL), so the
  * caller can fall back to the still picture. `onShow` runs as the first frame
- * appears; `onFail` if the film never gets that far. `until` (seconds) takes the
- * film off at that point; without it the last frame holds.
+ * appears; `onFail` if the film never gets that far. With `hold` (ms) the last
+ * frame stays that long and then gives way to the still; without it, it stays.
  */
-export function playFilm(el, name, { until, onShow, onFail } = {}) {
+export function playFilm(el, name, { hold, onShow, onFail } = {}) {
   const meta = FILMS[name];
-  if (!el || !meta || !filmUrl[name] || reduced()) return false;
-  try { player ||= filmStage([meta.w, meta.h], 'host-film'); } catch { player = null; }
-  if (!player) return false;
-  stopFilm();
+  if (!el || !meta || !filmUrl[name] || reduced() || !stage()) return false;
   const { canvas, video, draw } = player;
-  canvas.width = meta.w;
-  canvas.height = meta.h;
-  canvas.setAttribute('aria-hidden', 'true');
-  canvas.style.cssText = meta.k ? `--fk:${meta.k};--fdrop:${meta.drop};--fdx:${meta.dx}` : '';
-  const run = playing = { el };
+  // a film already on this figure stays up until the new one has a frame to show
+  if (playing && playing.el === el && playing.shown && !playing.fading) {
+    clearTimeout(playing.timer);
+    video.pause();
+  } else {
+    stopFilm();
+  }
+  const run = playing = { el, name, shown: false, fading: false, timer: 0 };
   const fail = () => { if (playing === run) { stopFilm(); onFail?.(); } };
+  const show = () => {
+    if (!run.shown) {
+      if (canvas.width !== meta.w) canvas.width = meta.w;
+      if (canvas.height !== meta.h) canvas.height = meta.h;
+      canvas.style.cssText = meta.k ? `--fk:${meta.k};--fdrop:${meta.drop};--fdx:${meta.dx}` : '';
+    }
+    draw();
+    if (run.shown) return;
+    run.shown = true;
+    const home = run.el.querySelector('.host-body') || run.el;
+    if (canvas.parentNode !== home) home.append(canvas);
+    run.el.classList.add('is-filming');
+    onShow?.();
+  };
   const frame = () => {
     if (playing !== run) return;
-    if (!el.isConnected) return stopFilm();
+    if (!run.el.isConnected && !adopt()) return stopFilm();
     if (video.readyState >= 2 && video.currentTime > 0) {
-      try { draw(); } catch { return fail(); }
-      if (!canvas.isConnected) {
-        el.append(canvas);
-        el.classList.add('is-filming');
-        onShow?.();
-      }
+      try { show(); } catch { return fail(); }
     }
-    if (until && video.currentTime >= until) return stopFilm();
-    if (!video.ended) requestAnimationFrame(frame);
+    if (!video.ended) return requestAnimationFrame(frame);
+    if (!run.shown) return fail();
+    if (hold !== undefined) run.timer = setTimeout(() => settle(run), hold);
   };
   video.src = filmUrl[name];
   video.play().then(() => requestAnimationFrame(frame), fail);
-  setTimeout(() => { if (playing === run && !canvas.isConnected) fail(); }, 700);
+  setTimeout(() => { if (playing === run && !run.shown) fail(); }, 900);
   return true;
+}
+
+/** The idle clock: when he has stood still long enough, he fidgets. */
+function watch() {
+  if (watching) return;
+  watching = true;
+  preloadLive();
+  setInterval(() => {
+    const fig = document.querySelector('.host-fig.is-live');
+    const now = performance.now();
+    // a figure that has just come on screen fidgets soon, so he is seen to be alive
+    if (fig !== idleFig) { idleFig = fig; idleAt = now + 900 + Math.random() * 900; }
+    if (!fig || playing || now < idleAt || fig.offsetWidth === 0 || document.hidden) return;
+    const ready = IDLES.filter(n => n !== lastIdle && filmUrl[n]);
+    idleAt = now + 2500;   // if the film does not start, try again shortly
+    if (!ready.length) return;
+    lastIdle = ready[Math.floor(Math.random() * ready.length)];
+    playFilm(fig, lastIdle, { hold: 0 });
+  }, 250);
 }

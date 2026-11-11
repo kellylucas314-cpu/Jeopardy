@@ -19,7 +19,7 @@ import { loadCharacters, characters, characterById, portraitUrl, poseUrl } from 
 import { shape, compassLoader } from './shapes.js';
 import { animate, stagger } from 'motion';
 import 'number-flow';
-import { hostFigure, hostReact, hostSay, hostMove, poseSrc, faceSrc, setFace, preloadHost, preloadFilms, playFilm } from './host.js';
+import { hostFigure, hostReact, hostSay, hostMove, hostCarry, isLive, poseSrc, faceSrc, bustSrc, setFace, preloadHost, preloadFilms, preloadLive, playFilm } from './host.js';
 import { empireMap, statusMark, pointAt } from './empire.js';
 
 loadCharacters();
@@ -142,11 +142,11 @@ const CHAPTER_LINES = {
 
 /** How he takes each outcome: a pose and a move for the big figure, a face for the small one. */
 const REACTIONS = {
-  correct: { poses: ['victory'], face: 'delighted', move: 'hop', films: ['pleased', 'attention'], big: 'fist', bust: 'face-smirk', bigBust: 'face-grin' },
+  correct: { poses: ['victory'], face: 'delighted', move: 'hop', films: ['pleased'], big: 'fist', bust: 'face-smirk', bigBust: 'face-grin' },
   wrong: { poses: ['stepping-back', 'shocked', 'defeated'], face: 'frustrated', move: 'recoil', films: ['shrug'], big: 'yell', bust: 'face-startled' },
   timeout: { poses: ['arms-crossed'], face: 'annoyed', move: 'refuse', films: ['stomp'], bust: 'face-stern' },
-  pass: { poses: ['shrug'], face: 'puzzled', move: 'settle' },
-  pardon: { poses: ['welcome'], face: 'smirk', move: 'settle' },
+  pass: { poses: ['shrug'], face: 'puzzled', move: 'settle', bust: 'face-stern' },
+  pardon: { poses: ['welcome'], face: 'smirk', move: 'settle', bust: 'face-smirk' },
 };
 let lastOutcome = null; // how the last clue went, for his stance back at the board
 let stanceTurn = 0; // so a late 'back to pointing' never lands on a newer board
@@ -174,9 +174,20 @@ function verdict(kind, line, { big = false } = {}) {
   if (kind === 'correct' || kind === 'pardon') navigator.vibrate?.(18);
   else if (kind === 'wrong' || kind === 'timeout') navigator.vibrate?.([36, 50, 36]);
   return `<figure class="verdict">
-      <span class="verdict-fig" data-move="${r.move}"${bust ? ` data-film="${bust}"` : ''}><img src="${poseSrc(pose)}" alt=""></span>
+      ${verdictFig(bust, pose, r.move)}
       <figcaption>${escapeHtml(line)}</figcaption>
     </figure>`;
+}
+
+/**
+ * The small picture beside his verdict on a phone. Where films play it is his head and
+ * shoulders from one of the face clips, which then plays in place (`play`); otherwise it
+ * is the top of a cut-out pose, which makes one short move.
+ */
+function verdictFig(bust, pose, move, play = true) {
+  return isLive() && bust
+    ? `<span class="verdict-fig is-bust"${play ? ` data-film="${bust}"` : ''}><img src="${bustSrc(bust)}" alt=""></span>`
+    : `<span class="verdict-fig" data-move="${move}"><img src="${poseSrc(pose)}" alt=""></span>`;
 }
 
 /** The line for a right answer: he notices a streak, a quick answer, a wager won. */
@@ -287,6 +298,8 @@ function render() {
       case 'final-answer': renderFinalAnswer(); break;
       case 'results': renderResults(); break;
     }
+    // a reaction clip still playing moves over to the new screen's Napoleon
+    hostCarry();
   };
 
   // One screen hands over to the next, and Napoleon is carried across (see
@@ -438,6 +451,7 @@ function renderSetup() {
   prevLeader = null;
   prevScores = [];
   recordedThisGame = false;
+  preloadLive(); // the still he stands on in play and his idle films, so he is ready by the first board
 
   const records = loadRecords();
   const hof = records.lastWinner ? `
@@ -502,6 +516,14 @@ function renderSetup() {
               <p class="opt-note"></p>
             </div>
             <div id="chapter-card" class="chapter-card" ${playStyle === 'campaign' ? '' : 'hidden'}></div>
+            <div class="opt-row">
+              <h3 class="opt-label" id="opt-pack">Questions</h3>
+              <div class="seg" role="group" aria-labelledby="opt-pack">
+                ${seg('btn-pack', 'pack', 'easy', pack, 'Easy Breezy', 'Gentler questions: classics, nostalgia, things you half remember.')}
+                ${seg('btn-pack', 'pack', 'fresh', pack, 'Fresh Pack', 'The full challenge: trickier clues and more wordplay.')}
+              </div>
+              <p class="opt-note"></p>
+            </div>
             <details class="opt-more">
               <summary><span class="opt-more-sum"></span><span class="opt-more-change">Change</span></summary>
               <div class="opt-row">
@@ -510,14 +532,6 @@ function renderSetup() {
                   ${seg('btn-length', 'length', 'quick', gameLength, 'Quick &middot; ~20 min')}
                   ${seg('btn-length', 'length', 'full', gameLength, 'Full &middot; ~45 min')}
                 </div>
-              </div>
-              <div class="opt-row">
-                <h3 class="opt-label" id="opt-pack">Questions</h3>
-                <div class="seg" role="group" aria-labelledby="opt-pack">
-                  ${seg('btn-pack', 'pack', 'fresh', pack, 'Fresh Pack', '6,200+ clues written for this game.')}
-                  ${seg('btn-pack', 'pack', 'easy', pack, 'Easy Breezy', 'Gentler questions, classics and nostalgia.')}
-                </div>
-                <p class="opt-note"></p>
               </div>
             </details>
             <div class="opt-row" id="mode-section">
@@ -629,13 +643,13 @@ function renderSetup() {
     renderPlayerInputs(count, typed.concat(savedNames.slice(typed.length)), savedAvatars);
     updateModeVisibility(count);
   });
-  // Length and questions live folded under one line that says what is picked
+  // Length lives folded under one line that says what is picked. The questions used to sit there
+  // too; they are out in the open now, because how hard the game is should be a choice you can see.
   const sumMore = () => {
     const el = app.querySelector('.opt-more-sum');
     if (!el) return;
-    const len = app.querySelector('.btn-length.selected')?.dataset.length === 'quick' ? 'Quick game' : 'Full game';
-    const pk = app.querySelector('.btn-pack.selected')?.dataset.pack === 'easy' ? 'Easy Breezy' : 'Fresh Pack';
-    el.textContent = `${len} \u00b7 ${pk}`;
+    el.textContent = app.querySelector('.btn-length.selected')?.dataset.length === 'quick'
+      ? 'Quick game \u00b7 about 20 min' : 'Full game \u00b7 about 45 min';
   };
   sumMore();
   wire('.btn-length', () => { sumMore(); renderChapterCard(); }); // the chapter's target depends on game length
@@ -650,7 +664,7 @@ function renderSetup() {
   });
   renderChapterCard();
   wire('.btn-answer');
-  wire('.btn-pack', btn => { savePrefs({ pack: btn.dataset.pack }); sumMore(); });
+  wire('.btn-pack', btn => savePrefs({ pack: btn.dataset.pack }));
 
   // Sound toggle
   document.getElementById('sound-checkbox').addEventListener('change', (e) => {
@@ -1122,7 +1136,7 @@ function renderBoard() {
         <div class="game-board" id="game-board">
           ${categories.map((cat, ci) => `
             <div class="board-category ${cat.themed ? 'themed' : ''}" data-cat="${ci}">
-              <div class="category-header" ${cat.themed ? 'title="This chapter\'s category: three right answers earn the Légion d\'honneur"' : ''}>${escapeHtml(softHyphenate(cat.name))}</div>
+              <div class="category-header" ${cat.themed ? 'title="This chapter\'s category: three right answers earn the Légion d\'honneur"' : ''}><span class="cat-name">${escapeHtml(softHyphenate(cat.name))}</span>${cat.note ? `<span class="cat-note">${escapeHtml(cat.note)}</span>` : ''}</div>
               ${cat.clues.map((clue, cli) => {
                 const justSpent = clue.answered && spent && spent.ci === ci && spent.cli === cli;
                 return `
@@ -1187,27 +1201,21 @@ function renderBoard() {
     if (badge && outcome === 'correct') animate(badge, { scale: [0, 1.25, 1] }, { duration: 0.5, ease: EXPO, delay: 0.5 });
   }
 
-  // After his reaction, he goes back to pointing at the board
   preloadHost(['delighted', 'frustrated', 'annoyed', 'puzzled', 'smirk', 'surprised', 'suspicious']);
-  // Kelly's reaction clips: only the ones this screen size shows
-  const standing = document.querySelector('.board-fig')?.offsetWidth > 0;
+  // Kelly's reaction clips: only the ones this screen size shows. (His idle films are fetched
+  // from the title page on.)
   preloadFilms([
-    ...(standing ? ['point'] : []),
     ...(window.matchMedia('(min-width: 1240px)').matches
-      ? ['pleased', 'shrug', 'attention', 'stomp', 'fist', 'yell']
+      ? ['pleased', 'shrug', 'stomp', 'fist', 'yell']
       : ['face-smirk', 'face-startled', 'face-stern', 'face-grin']),
     'bow',
   ]);
+  // Where he is not live, he goes back to pointing at the board after his reaction
   const turn = ++stanceTurn;
   if (stance !== 'choose') {
-    const point = () => {
-      if (turn !== stanceTurn || shownScreen !== 'board') return;
-      // on a fresh board he waits for the categories to be read out, then throws a hand at it;
-      // the clip hands back to the pointing pose while his arm is still out
-      if (document.querySelector('.category-intro')) { setTimeout(point, 300); return; }
-      hostReact('choose', cluesAnswered === 0 ? { film: 'point', until: 1.2 } : {});
-    };
-    setTimeout(point, cluesAnswered === 0 ? 2600 : 1700);
+    setTimeout(() => {
+      if (turn === stanceTurn && shownScreen === 'board') hostReact('choose');
+    }, 1700);
   }
 
   // Lead-change announcement — keeps the race dramatic and visible
@@ -1396,25 +1404,34 @@ function playCategoryIntro(categories) {
   overlay.className = 'category-intro';
   overlay.innerHTML = `
     <div class="ci-label">Tonight&rsquo;s battlefields&hellip;</div>
-    <div class="ci-name" id="ci-name"></div>
+    <div class="ci-card" id="ci-card">
+      <div class="ci-name" id="ci-name"></div>
+      <div class="ci-note" id="ci-note"></div>
+    </div>
     <div class="ci-skip">tap to skip</div>
   `;
   // Mounted on <body> so board re-renders can't wipe it mid-sequence
   document.body.appendChild(overlay);
 
+  const card = overlay.querySelector('#ci-card');
   const nameEl = overlay.querySelector('#ci-name');
+  const noteEl = overlay.querySelector('#ci-note');
   let i = 0;
   let timeout = null;
 
+  // Each category is read out with its one-line explainer, the way a quiz host says what a
+  // category is about. A name with an explainer stays up long enough to read both.
   function showNext() {
     if (i >= categories.length) { finish(); return; }
-    nameEl.textContent = categories[i].name;
-    nameEl.classList.remove('pop');
-    void nameEl.offsetWidth; // restart animation
-    nameEl.classList.add('pop');
+    const { name, note } = categories[i];
+    nameEl.textContent = name;
+    noteEl.textContent = note || '';
+    card.classList.remove('pop');
+    void card.offsetWidth; // restart animation
+    card.classList.add('pop');
     sounds.playCategoryBlip();
     i++;
-    timeout = setTimeout(showNext, 1100);
+    timeout = setTimeout(showNext, note ? 1100 + Math.min(900, note.length * 22) : 1100);
   }
 
   function finish() {
@@ -1453,6 +1470,7 @@ function clueShell(extraHtml) {
         <span class="clue-category">${escapeHtml(currentClue.categoryName)}</span>
         <span class="clue-value">${isDailyDouble ? '<span class="clue-value-tag">Wager</span> ' : ''}$${formatMoney(displayValue)}</span>
       </div>
+      ${currentClue.categoryNote ? `<p class="clue-note">${escapeHtml(currentClue.categoryNote)}</p>` : ''}
       <div class="clue-timer">
         <div class="timer-bar-bg">
           <div class="timer-bar" id="timer-bar"></div>
@@ -1610,7 +1628,7 @@ function handleSubmitAnswer() {
   if (wager && !prefersReducedMotion()) {
     hostReact('suspicious', { move: 'lean', say: 'Hm.' });
     showFeedback(`<figure class="verdict">
-        <span class="verdict-fig" data-move="lean"><img src="${poseSrc('suspicious')}" alt=""></span>
+        ${verdictFig('face-stern', 'suspicious', 'lean', false)}
         <figcaption>Hm.</figcaption>
       </figure>`);
     setTimeout(judge, 750);
@@ -1911,7 +1929,7 @@ function renderDailyDouble() {
         ${hostLine('Name your stake. I am watching.', 'Napoleon', 'suspicious')}
       </div>
       <div class="dd-content">
-        <div class="dd-category">${escapeHtml(currentClue.categoryName)}</div>
+        <div class="dd-category">${escapeHtml(currentClue.categoryName)}${currentClue.categoryNote ? `<span class="dd-note">${escapeHtml(currentClue.categoryNote)}</span>` : ''}</div>
         <div class="dd-player">${escapeHtml(player.name)}</div>
         <div class="dd-score">Current score: $${formatMoney(player.score)}</div>
         <div class="dd-wager-area">
@@ -2226,7 +2244,8 @@ function renderFinalAnswer() {
     </div>
     ${stageHost(finalAnswers.some(a => a.correct) ? 'victory' : 'defeated')}
   `;
-  hostReact(finalAnswers.some(a => a.correct) ? 'victory' : 'defeated', { move: finalAnswers.some(a => a.correct) ? 'hop' : 'settle' });
+  const finalWon = finalAnswers.some(a => a.correct);
+  hostReact(finalWon ? 'victory' : 'defeated', { move: finalWon ? 'hop' : 'settle', film: finalWon ? 'fist' : 'shrug' });
 
   // The reveal, one player at a time
   const revealRows = document.querySelectorAll('.final-result-player');
@@ -2393,7 +2412,11 @@ function renderResults() {
   sounds.playFanfare();
   if (!isTie || ranked[0].score > 0) spawnConfetti();
   flowNumbers(450);
-  if (hostPose === 'victory') setTimeout(() => { if (shownScreen === 'results') hostReact('victory', { move: 'hop', film: 'bow' }); }, 700);
+  // he bows to a winner and shrugs at a solo game that ended in the red, then goes back to watching
+  preloadFilms([hostPose === 'victory' ? 'bow' : 'shrug']);
+  if (hostPose !== 'welcome') setTimeout(() => {
+    if (shownScreen === 'results') hostReact(hostPose, { move: hostPose === 'victory' ? 'hop' : 'settle', film: hostPose === 'victory' ? 'bow' : 'shrug' });
+  }, 700);
 
   document.getElementById('btn-play-again').addEventListener('click', () => {
     lastScreen = null;

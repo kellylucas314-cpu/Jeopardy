@@ -230,6 +230,7 @@ async function drawCategories({ pack, base, dir, total }, count, seen) {
 function toBoardCategory(cat, values) {
   return {
     name: clean(cat.name),
+    note: clean(cat.note), // the one-line explainer (scripts/apply-category-notes.cjs)
     clues: cat.clues.map((c, i) => ({
       clue: clean(c.clue),
       response: clean(c.response),

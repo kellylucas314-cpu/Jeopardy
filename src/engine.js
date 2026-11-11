@@ -175,6 +175,7 @@ export function selectClue(catIndex, clueIndex) {
     value: clue.value,
     isDailyDouble: clue.isDailyDouble,
     categoryName: cat.name,
+    categoryNote: cat.note || '',
     themed: !!cat.themed,
   };
 

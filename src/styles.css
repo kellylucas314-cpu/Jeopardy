@@ -4218,7 +4218,7 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 /* beside the clue he gets his own room: the card no longer slides under him and his words no
    longer cover the clue */
 @media (min-width: 1240px) {
-  .clue-screen { padding-right: calc(clamp(20px, 4vw, 80px) + min(56vh, 470px) * 0.6 + 8px); }
+  .clue-screen { padding-right: calc(clamp(20px, 4vw, 80px) + var(--stage-h) * 0.6 + 8px); }
 }
 /* buzzing in: the buzzers sit dimmed while the clue is read and light up when they open, so
    nobody rings early by mistake (an early ring still locks that player out for a moment) */
@@ -4230,7 +4230,7 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
      and he stands --fdx of its width off its middle (scripts/build-host-films.py measures all
      three). A face film fills the small verdict picture on a phone. — */
 .host-film { position: absolute; pointer-events: none; user-select: none; }
-.host-fig > .host-film {
+.host-fig .host-film {
   left: 50%;
   bottom: 0;
   height: calc(100% * var(--fk, 1.08));
@@ -4267,3 +4267,105 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 }
 /* his words clear the film's raised fist and its taller first frame */
 .host-fig.is-filming .host-say { bottom: calc(104% + 14px); }
+
+/* — The start of a board (Nov 11 2026): Kelly saw Napoleon flash on screen for a moment before
+     the category roll call. Two causes. The roll call faded in over the freshly drawn board; its
+     cover is there from the first frame now and only its words fade in. And screens hand Napoleon
+     across in a layer of his own, which is drawn above everything, the cover included; while the
+     roll call is up he is not handed across. — */
+.category-intro { animation: none; }
+.category-intro > * { animation: fadeIn 0.3s ease both; }
+body:has(> .category-intro) .host-fig { view-transition-name: none; }
+
+/* — Napoleon live in play (Nov 11 2026). Kelly: "i want him to be watching me i dont want still
+     like that ... should be like the fron tpage where he movevs and then he sorta is idle", and
+     "make the animatuions smaller bc they seem not super hkgh qual". Where films can play, the
+     standing host is one drawing throughout: a still frame of him with his arms crossed, looking
+     at the player, in the same box as the films that play over it (see the foot of src/host.js).
+     He is shown no taller than 400px, which is close to the size the clips were drawn at. The
+     cut-out poses remain for reduced motion and data saver. — */
+:root { --stage-h: min(48vh, 400px); }
+.stage-host { --host-h: var(--stage-h); }
+.board-fig { --host-h: min(92cqh, 200cqw, 400px); }
+.host-body {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 100%;
+  animation: hostBreathe 3.8s ease-in-out infinite alternate;
+}
+.host-fig.is-live .host-img {
+  height: calc(100% * var(--fk, 1.15));
+  translate: calc(-50% - var(--fdx, 0) * 100%) calc(var(--fdrop, 0) * 100%);
+  animation: none;
+}
+/* his words sit clear of his hat and of a raised fist, and do not move when a film starts */
+.host-fig.is-live .host-say { bottom: calc(104% + 14px); }
+/* on a phone the verdict picture is his head and shoulders, the first frame of the face clip
+   that then plays over it */
+.verdict-fig.is-bust img,
+.clue-feedback .verdict-fig.is-bust img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .host-body { animation: none; }
+}
+
+/* ——— Category explainers (Nov 11 2026) ———
+   Every category carries one plain line saying what it is about, the way a quiz
+   host explains a punny title. It is read out in the roll call, sits under the
+   category on the clue card and the wager screen, and under the name on the
+   board where there is room for it. */
+.clue-header:has(+ .clue-note) { margin-bottom: 6px; }
+.clue-note {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 0 14px;
+  font: 400 0.95rem/1.4 var(--font-ui);
+  color: var(--text-dim);
+  text-align: left;
+  text-wrap: pretty;
+}
+.dd-note {
+  display: block;
+  margin-top: 6px;
+  font: 400 0.95rem/1.4 var(--font-ui);
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-dim);
+}
+.ci-card { display: grid; justify-items: center; gap: 14px; max-width: 84vw; }
+.ci-card.pop { animation: popIn 0.4s var(--ease); }
+.ci-card .ci-name.pop { animation: none; }
+.ci-note {
+  min-height: 1.4em;
+  max-width: 34ch;
+  font: 400 clamp(1.1rem, 2.4vw, 1.5rem)/1.4 var(--font-ui);
+  color: var(--text-dim);
+  text-align: center;
+  text-wrap: balance;
+}
+.category-header { flex-direction: column; gap: 3px; }
+.cat-note { display: none; }
+@media (min-width: 1100px) and (min-height: 700px) {
+  .cat-note {
+    display: block;
+    font: 400 0.75rem/1.3 var(--font-ui);
+    text-transform: none;
+    letter-spacing: 0;
+    text-wrap: balance;
+    opacity: 0.92;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ci-card.pop { animation: none; }
+}
+
+/* Check pass, Nov 11 2026: the É of the board title cleared the top edge of a phone by nothing,
+   and beside the clue Napoleon's boots sat on the bottom edge of the window. */
+@media (max-width: 720px) { .board-brand { padding-top: 6px; } }
+.stage-host { bottom: 14px; }
