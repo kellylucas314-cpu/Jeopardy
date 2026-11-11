@@ -101,8 +101,10 @@ Done on Nov 10 2026 (the title page):
   again from the new picture, or the two will not line up.
 - The start is two steps on one page (`data-step` on `.setup-screen`, so nothing is lost on
   the way back). Step one is the title: Napoleon, the name and one Play button. Step two is
-  the table, "Who's playing?": every player stands at it full length (the `ready` pose) with
-  their name underneath, the cast sits below them once with names, and the game's four choices
+  the table, "Who's playing?": the players sit along the top as name cards, the whole cast
+  stands below them full length (the `ready` pose) with names, and the game's four choices
   (play style, length, questions, answering) keep to one card of pill rows. A tap on a player
-  hands them the cast, each player's numbered tag sits on their face, and taking a face someone
-  else holds swaps the two. A rematch comes back to the table, not the title.
+  hands them the cast, each player's numbered tag sits on their figure, and taking a figure
+  someone else holds swaps the two. A rematch comes back to the table, not the title.
+- Elon Musk left the cast on Nov 11 (the only living person in it, Kelly's call). His art is
+  kept in `art-src/retired-players/`; an old save that picked him falls back to initials.

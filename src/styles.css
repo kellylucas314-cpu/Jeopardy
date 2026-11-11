@@ -3713,10 +3713,11 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
    THE START IN TWO (Nov 10 2026)
    Kelly: "split it in 2 ... they should get a bit more real estate."
    - Step one is the title: Napoleon, the name and one Play button.
-   - Step two is the table. Every player stands at it full length with
-     their name underneath; a tap on a player hands them the cast.
-   - The cast appears once, in full colour, with names. A numbered tag
-     marks a held face and a jade ring marks the one being chosen.
+   - Step two is the table. The players sit along the top as name cards;
+     a tap on a player hands them the cast.
+   - Kelly, Nov 11: "it should be full body". The cast stands below them
+     full length, once, with names. A numbered tag marks a held figure and
+     a white tile with a jade line marks the one being chosen.
    - The game's four choices keep to one quiet card of pill rows.
    Both steps live in one page (data-step on .setup-screen), so nothing
    is lost on the way back.
@@ -3807,155 +3808,156 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 .seg-count { flex: none; background: rgba(255, 255, 255, 0.6); }
 .seg-count .seg-btn { padding: 0 16px; }
 
-/* the players, standing at the table */
-.seats {
-  flex: 1;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(0, 330px);
-  justify-content: center;
-  align-items: end;
-  gap: 8px;
-  padding: 10px 2px 12px;
-  /* as tall as the window allows once the heading, the names and the cast have their room */
-  --h: clamp(150px, calc(100vh - 570px), 380px);
-}
+/* the players: one name card each along the top */
+.seats { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 290px); justify-content: start; gap: 8px; padding: 10px 0 12px; }
 .seat {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 12px;
   min-width: 0;
-  padding: 16px 12px 12px;
-  border-radius: 28px;
+  padding: 8px 14px 8px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
   transition: background 0.2s, box-shadow 0.2s;
 }
-.seat.is-picking { background: #ffffff; box-shadow: var(--molded); }
-.seat-fig {
+.seat.is-picking { background: #ffffff; box-shadow: var(--molded), inset 0 0 0 2px var(--pc); }
+.seat-face {
   position: relative;
-  width: 100%;
-  height: var(--h);
+  flex: none;
+  width: 52px;
+  height: 52px;
   padding: 0;
-  border-radius: 20px;
-  background: none;
-  transition: translate 0.2s;
-}
-.seat-fig::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -7px;
-  width: calc(var(--h) * 0.56);
-  max-width: 96%;
-  height: 16px;
-  translate: -50% 0;
   border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(58, 40, 22, 0.26), rgba(58, 40, 22, 0));
+  background: var(--inset);
 }
-.seat:not(.is-picking) .seat-fig[aria-pressed]:hover { translate: 0 -4px; }
-.seat-fig:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 4px; }
-/* the art is 640 by 960 with the feet at 928 and the tallest head near 110: fill the seat with the figure */
-.seat-img {
-  position: absolute;
-  left: 50%;
-  bottom: calc(var(--h) * -0.039);
-  height: calc(var(--h) * 1.17);
-  width: auto;
-  max-width: none;
-  translate: -50% 0;
-  pointer-events: none;
-  user-select: none;
-}
+.seat-face:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 3px; }
+.seat-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 20%; }
 .seat-seal {
-  position: absolute;
-  left: 50%;
-  bottom: 12%;
   display: grid;
   place-items: center;
-  width: calc(var(--h) * 0.6);
-  max-width: 92%;
-  aspect-ratio: 1;
-  translate: -50% 0;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background: var(--pc);
   color: #ffffff;
-  font: 500 calc(var(--h) * 0.24)/1 var(--font-ui);
+  font: 500 1.3rem/1 var(--font-ui);
 }
 .seat-img[hidden],
 .seat-seal[hidden] { display: none; }
-.seat-as { min-height: 1.25em; margin: 14px 0 8px; color: var(--text-dim); font: 500 0.84rem/1.25 var(--font-ui); text-align: center; }
-.seat-name {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  max-width: 250px;
-  padding: 5px 14px 5px 5px;
-  border-radius: 999px;
-  background: #ffffff;
-}
-.seat.is-picking .seat-name { background: var(--inset); }
-.seat-name:focus-within { box-shadow: inset 0 0 0 2px var(--jade-deep); }
 .seat-num {
-  flex: none;
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: var(--pc);
   color: #ffffff;
-  font: 500 0.82rem/1 var(--font-mono);
+  font: 500 0.7rem/1 var(--font-mono);
+  box-shadow: 0 0 0 2px #ffffff;
 }
-.seat-name input {
-  flex: 1;
+.seat-text { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.seat-text input {
+  width: 100%;
   min-width: 0;
-  padding: 5px 0;
+  padding: 2px 0;
   border: 0;
+  border-bottom: 1px solid transparent;
   outline: none;
   background: none;
   color: var(--cream);
-  font: 500 1rem/1.2 var(--font-ui);
+  font: 600 1.02rem/1.2 var(--font-ui);
 }
-.seats[data-count="1"] .seat-num { display: none; }
-.seats[data-count="1"] .seat-name { padding-left: 18px; }
-.seats[data-count="1"] .seat-name input { text-align: center; }
+.seat-text input:focus { border-bottom-color: var(--jade-deep); }
+.seat-as { overflow: hidden; color: var(--text-dim); font: 400 0.8rem/1.3 var(--font-ui); text-overflow: ellipsis; white-space: nowrap; }
 
-/* the cast: once, for the whole table */
-.cast { margin: 0; padding: 16px 18px 18px; }
-.cast-line { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 2px 14px; color: var(--cream); font: 600 0.95rem/1.3 var(--font-ui); }
+/* the cast: the whole line-up, full length, once for the table */
+.cast { margin: 0; padding: 16px 16px 18px; }
+.cast-line { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 4px 12px; }
+.cast-for { color: var(--cream); font: 600 0.98rem/1.3 var(--font-ui); }
 .cast-who { color: var(--pc); font-weight: 600; }
-.cast-hint { color: var(--text-dim); font-weight: 400; font-size: 0.82rem; }
-.cast-faces { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 14px 6px; }
+.cast-none {
+  position: relative;
+  flex: none;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--inset);
+  color: var(--text-dim);
+  font: 500 0.82rem/1 var(--font-ui);
+}
+.cast-none:hover { color: var(--cream); }
+.cast-none.selected { background: #ffffff; color: var(--jade-deep); box-shadow: inset 0 0 0 2px var(--jade-deep); }
+.cast-none .cast-tag { top: -8px; right: -6px; bottom: auto; }
+.cast-figures {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px 8px;
+  /* each figure as tall as the window allows: two rows under the heading and the name cards */
+  --fh: clamp(130px, calc((100vh - 360px) / 2 - 44px), 260px);
+}
 .cast .char-option,
 .cast .char-option:hover,
 .cast .char-option[aria-checked="true"] {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 7px;
   min-width: 0;
-  padding: 0;
-  border-radius: 14px;
-  background: none;
+  padding: 12px 4px 10px;
+  border-radius: 22px;
+  /* each character's own soft tone, the same one behind their face in play */
+  background: color-mix(in srgb, var(--tone, var(--inset)) 45%, #ffffff);
   color: var(--text-dim);
-  font: 500 0.76rem/1.15 var(--font-ui);
+  font: 500 0.8rem/1.2 var(--font-ui);
+  transition: background 0.15s, box-shadow 0.15s;
 }
-.cast-face { position: relative; width: min(100%, 74px); aspect-ratio: 1; border-radius: 50%; transition: scale 0.15s; }
-.cast .char-option img,
-.cast .char-none-seal { width: 100%; height: 100%; border-radius: 50%; }
-.cast .char-none-seal { background: var(--inset); font-size: 1rem; }
-.cast .char-option:hover .cast-face,
-.cast .char-option:focus-visible .cast-face { scale: 1.07; }
-.cast .char-option:hover .cast-name { color: var(--cream); }
-.cast .char-option[aria-checked="true"] img,
-.cast .char-option[aria-checked="true"] .char-none-seal { box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px var(--jade-deep); }
-.cast .char-option[aria-checked="true"] .cast-name { color: var(--jade-deep); font-weight: 600; }
-.cast .char-option:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 6px; }
-.cast-name { max-width: 100%; text-align: center; text-wrap: balance; }
+.cast .char-option:hover { background: color-mix(in srgb, var(--tone, var(--inset)) 80%, #ffffff); color: var(--cream); }
+.cast .char-option[aria-checked="true"] { background: #ffffff; color: var(--jade-deep); box-shadow: var(--molded), inset 0 0 0 2px var(--jade-deep); }
+.cast .char-option[aria-checked="true"] .cast-name { font-weight: 600; }
+.cast .char-option:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 3px; }
+/* the art is 640 by 960 with the feet at 928 and the tallest head near 110: fill the box with the figure */
+.cast-fig { position: relative; display: block; width: 100%; height: var(--fh); }
+.cast-fig::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: calc(var(--fh) * 0.42);
+  max-width: 90%;
+  height: 10px;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(58, 40, 22, 0.24), rgba(58, 40, 22, 0));
+}
+.cast .cast-fig img {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: calc(var(--fh) * -0.039);
+  height: calc(var(--fh) * 1.17);
+  width: calc(var(--fh) * 0.78);
+  max-width: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+  translate: -50% 0;
+  transition: translate 0.18s;
+  pointer-events: none;
+  user-select: none;
+}
+.cast .char-option:hover .cast-fig img { translate: -50% -4px; scale: 1; }
+.cast-name { max-width: 100%; margin-top: 12px; text-align: center; text-wrap: balance; }
 .cast-tag {
   position: absolute;
-  right: -5px;
-  bottom: -5px;
+  z-index: 2;
+  top: 8px;
+  right: 8px;
   display: grid;
   place-items: center;
   width: 24px;
@@ -3966,8 +3968,8 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   font: 500 0.74rem/1 var(--font-mono);
   box-shadow: 0 0 0 2px #ffffff;
 }
-.cast-tag + .cast-tag { right: 15px; }
-.cast-tag + .cast-tag + .cast-tag { right: 35px; }
+.cast-tag + .cast-tag { right: 28px; }
+.cast-tag + .cast-tag + .cast-tag { right: 48px; }
 
 /* the game: four quiet rows */
 .game-card { margin: 0; }
@@ -4014,22 +4016,23 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   }
   .table-head { flex-wrap: wrap; gap: 10px 12px; margin: 6px 4px 2px; }
   .seg-count { flex: 1 0 100%; }
-  .seats { gap: 2px; padding: 8px 0 10px; --h: clamp(130px, 21vh, 190px); }
-  .seats[data-count="1"] { --h: clamp(160px, 27vh, 230px); }
-  .seat { padding: 12px 5px 8px; border-radius: 22px; }
-  .seat-as { margin: 12px 0 7px; font-size: 0.76rem; }
-  .seat-name { gap: 5px; padding: 4px 8px 4px 4px; }
-  .seat-num { width: 26px; height: 26px; font-size: 0.74rem; }
-  .seat-name input { font-size: 1rem; }
-  .cast { padding: 14px 12px 16px; }
-  .cast-faces { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px 4px; }
+  .seats { grid-auto-columns: minmax(0, 1fr); justify-content: stretch; gap: 6px; padding: 8px 0 10px; }
+  .seats[data-count="1"] { grid-auto-columns: minmax(0, 320px); justify-content: center; }
+  .seats:not([data-count="1"]) .seat { flex-direction: column; gap: 6px; padding: 10px 6px 8px; border-radius: 22px; text-align: center; }
+  .seats:not([data-count="1"]) .seat-text input { text-align: center; font-size: 1rem; }
+  .seat-face { width: 46px; height: 46px; }
+  .seat-as { font-size: 0.72rem; }
+  .cast { padding: 14px 10px 14px; }
+  .cast-line { flex-wrap: wrap; gap: 8px; margin: 0 4px 10px; }
+  .cast-figures { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px 6px; --fh: clamp(118px, 19vh, 160px); }
   .cast .char-option,
   .cast .char-option:hover,
-  .cast .char-option[aria-checked="true"] { font-size: 0.66rem; }
-  .cast-tag { width: 21px; height: 21px; font-size: 0.68rem; }
-  .cast-tag + .cast-tag { right: 12px; }
-  .cast-tag + .cast-tag + .cast-tag { right: 29px; }
+  .cast .char-option[aria-checked="true"] { padding: 10px 2px 8px; border-radius: 18px; font-size: 0.68rem; }
+  .cast-name { margin-top: 10px; }
+  .cast-tag { top: 5px; right: 5px; width: 20px; height: 20px; font-size: 0.66rem; }
+  .cast-tag + .cast-tag { right: 22px; }
+  .cast-tag + .cast-tag + .cast-tag { right: 39px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .seat, .seat-fig, .cast-face { transition: none; }
+  .seat, .cast .char-option, .cast-fig img { transition: none; }
 }
