@@ -224,7 +224,20 @@ function softHyphenate(text) {
 }
 
 // Buzz-mode bookkeeping (imperative, within the clue screen)
-const BUZZ_KEYS = ['q', 'p', 'b']; // player 1, 2, 3
+// Buzz in: two players share one keyboard. Player 1 owns the left half and Player 2 the right
+// half, so any key on your side rings in (Kelly, Nov 11). Codes are physical keys, so this holds
+// on any keyboard layout. Space stays shared: it skips the reading beat.
+const BUZZ_LEFT = new Set(['Backquote', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5',
+  'Tab', 'KeyQ', 'KeyW', 'KeyE', 'KeyR', 'KeyT', 'CapsLock', 'KeyA', 'KeyS', 'KeyD', 'KeyF', 'KeyG',
+  'ShiftLeft', 'IntlBackslash', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'ControlLeft', 'AltLeft', 'MetaLeft']);
+const BUZZ_RIGHT = new Set(['Digit6', 'Digit7', 'Digit8', 'Digit9', 'Digit0', 'Minus', 'Equal', 'Backspace',
+  'KeyY', 'KeyU', 'KeyI', 'KeyO', 'KeyP', 'BracketLeft', 'BracketRight', 'Backslash',
+  'KeyH', 'KeyJ', 'KeyK', 'KeyL', 'Semicolon', 'Quote', 'Enter',
+  'KeyN', 'KeyM', 'Comma', 'Period', 'Slash', 'ShiftRight', 'AltRight', 'MetaRight', 'ControlRight',
+  'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown']);
+const buzzSide = (code) => (BUZZ_LEFT.has(code) ? 0 : BUZZ_RIGHT.has(code) ? 1 : -1);
+const BUZZ_HINTS = ['left half', 'right half'];
+const touchOnly = () => window.matchMedia?.('(hover: none)').matches;
 let buzzPhase = null; // 'reading' | 'open' | 'answering' | 'done'
 let buzzLockedUntil = [];
 let buzzTimeouts = [];
@@ -412,7 +425,7 @@ function renderSetup() {
   // New tables start with the three guests; older saves keep their monograms until someone picks.
   setupCharacters = Array.isArray(prefs.characters) ? [...prefs.characters]
     : prefs.names ? [] : [...DEFAULT_CHARACTERS];
-  const playerCount = prefs.playerCount || 2;
+  const playerCount = Math.min(prefs.playerCount || 1, 2); // a new table starts solo; two at most for now
   const gameMode = prefs.gameMode || 'turns';
   const gameLength = prefs.gameLength || 'full';
   const pack = prefs.pack === 'easy' ? 'easy' : 'fresh';
@@ -464,7 +477,7 @@ function renderSetup() {
             </button>
             <h2 id="table-title" tabindex="-1">Who&rsquo;s playing<span class="logo-dot" aria-hidden="true">?</span></h2>
             <div class="seg seg-count" role="group" aria-label="How many players">
-              ${[1, 2, 3].map(n => `
+              ${[1, 2].map(n => `
               <button type="button" class="seg-btn btn-count ${n === playerCount ? 'selected' : ''}" data-count="${n}"
                       aria-pressed="${n === playerCount}">${n} player${n > 1 ? 's' : ''}</button>`).join('')}
             </div>
@@ -477,32 +490,35 @@ function renderSetup() {
             <div class="opt-row">
               <h3 class="opt-label" id="opt-style">Play style</h3>
               <div class="seg" role="group" aria-labelledby="opt-style">
-                ${seg('btn-style', 'style', 'free', playStyle, 'Free Play', 'A fresh board every night, from the pack you choose.')}
+                ${seg('btn-style', 'style', 'free', playStyle, 'Free Play', 'A fresh board every time.')}
                 ${seg('btn-style', 'style', 'campaign', playStyle, 'The Campaign', 'Napoleon&rsquo;s life in 15 chapters. Win a chapter and the Empire grows.')}
               </div>
               <p class="opt-note"></p>
             </div>
             <div id="chapter-card" class="chapter-card" ${playStyle === 'campaign' ? '' : 'hidden'}></div>
-            <div class="opt-row">
-              <h3 class="opt-label" id="opt-length">Length</h3>
-              <div class="seg" role="group" aria-labelledby="opt-length">
-                ${seg('btn-length', 'length', 'quick', gameLength, 'Quick &middot; ~20 min')}
-                ${seg('btn-length', 'length', 'full', gameLength, 'Full &middot; ~45 min')}
+            <details class="opt-more">
+              <summary><span class="opt-more-sum"></span><span class="opt-more-change">Change</span></summary>
+              <div class="opt-row">
+                <h3 class="opt-label" id="opt-length">Length</h3>
+                <div class="seg" role="group" aria-labelledby="opt-length">
+                  ${seg('btn-length', 'length', 'quick', gameLength, 'Quick &middot; ~20 min')}
+                  ${seg('btn-length', 'length', 'full', gameLength, 'Full &middot; ~45 min')}
+                </div>
               </div>
-            </div>
-            <div class="opt-row">
-              <h3 class="opt-label" id="opt-pack">Questions</h3>
-              <div class="seg" role="group" aria-labelledby="opt-pack">
-                ${seg('btn-pack', 'pack', 'fresh', pack, 'Fresh Pack', '6,200+ original clues written for this game.')}
-                ${seg('btn-pack', 'pack', 'easy', pack, 'Easy Breezy', 'Gentler questions, classics and nostalgia.')}
+              <div class="opt-row">
+                <h3 class="opt-label" id="opt-pack">Questions</h3>
+                <div class="seg" role="group" aria-labelledby="opt-pack">
+                  ${seg('btn-pack', 'pack', 'fresh', pack, 'Fresh Pack', '6,200+ clues written for this game.')}
+                  ${seg('btn-pack', 'pack', 'easy', pack, 'Easy Breezy', 'Gentler questions, classics and nostalgia.')}
+                </div>
+                <p class="opt-note"></p>
               </div>
-              <p class="opt-note"></p>
-            </div>
+            </details>
             <div class="opt-row" id="mode-section">
-              <h3 class="opt-label" id="opt-mode">Answering</h3>
+              <h3 class="opt-label" id="opt-mode">How you answer</h3>
               <div class="seg" role="group" aria-labelledby="opt-mode">
-                ${seg('btn-answer', 'mode', 'turns', gameMode, 'Take Turns', 'Pass the keyboard and answer one at a time.')}
-                ${seg('btn-answer', 'mode', 'buzz', gameMode, 'Buzz In', 'Race to the buzzer, salon-style.')}
+                ${seg('btn-answer', 'mode', 'turns', gameMode, 'Take turns', 'Each clue goes to the next player.')}
+                ${seg('btn-answer', 'mode', 'buzz', gameMode, 'Buzz in', 'Race to ring in: Player 1 hits any key on the left half of the keyboard, Player 2 any key on the right.')}
               </div>
               <p class="opt-note"></p>
             </div>
@@ -581,7 +597,16 @@ function renderSetup() {
     renderPlayerInputs(count, typed.concat(savedNames.slice(typed.length)), savedAvatars);
     updateModeVisibility(count);
   });
-  wire('.btn-length', () => renderChapterCard()); // the chapter's target depends on game length
+  // Length and questions live folded under one line that says what is picked
+  const sumMore = () => {
+    const el = app.querySelector('.opt-more-sum');
+    if (!el) return;
+    const len = app.querySelector('.btn-length.selected')?.dataset.length === 'quick' ? 'Quick game' : 'Full game';
+    const pk = app.querySelector('.btn-pack.selected')?.dataset.pack === 'easy' ? 'Easy Breezy' : 'Fresh Pack';
+    el.textContent = `${len} \u00b7 ${pk}`;
+  };
+  sumMore();
+  wire('.btn-length', () => { sumMore(); renderChapterCard(); }); // the chapter's target depends on game length
   wire('.btn-style', btn => {
     const style = btn.dataset.style;
     savePrefs({ playStyle: style });
@@ -593,7 +618,7 @@ function renderSetup() {
   });
   renderChapterCard();
   wire('.btn-answer');
-  wire('.btn-pack', btn => savePrefs({ pack: btn.dataset.pack }));
+  wire('.btn-pack', btn => { savePrefs({ pack: btn.dataset.pack }); sumMore(); });
 
   // Sound toggle
   document.getElementById('sound-checkbox').addEventListener('change', (e) => {
@@ -1092,7 +1117,7 @@ function renderBoard() {
           ${cluesAnswered === 0 ? '<button class="reroll-btn" id="btn-reroll">Redraw the map</button>' : ''}
           <div class="clues-remaining">
             ${totalClues - cluesAnswered} clues left${chapter ? ` &nbsp;&middot;&nbsp; target ${money(chapterTarget(chapter, gameLength))}` : ''}
-            ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
+            ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${touchOnly() ? 'tap' : BUZZ_HINTS[i] || ''}</span>`).join(' ')}` : ''}
           </div>
         </div>
       </div>
@@ -1188,7 +1213,7 @@ function showHowTo() {
         <li><strong>Pick a clue</strong> from the board. Higher rows are worth more.</li>
         <li><strong>Answer</strong> in plain words. Spelling and phrasing are forgiven, and you don't need "What is…".</li>
         <li><strong>Right</strong> adds the value; <strong>wrong</strong> subtracts it. Get 3 right in a row for <strong>Campaign Momentum</strong>, a growing bonus.</li>
-        <li><strong>Buzz In! mode:</strong> race to ring in with your key (or tap) once the clue is read. Buzz too early and you're locked out briefly.</li>
+        <li><strong>Playing together?</strong> Everyone plays around one screen. <strong>Take turns</strong> passes each clue to the next player. In <strong>Buzz in</strong>, Napoleon reads the clue and then everyone races to ring in. Player 1 can hit any key on the left half of the keyboard, Player 2 any key on the right half, or tap your buzzer on a phone. Buzz too early and you're locked out briefly.</li>
         <li><strong>Waterloo Wagers</strong> hide on the board and let you bet your winnings. Then it's <strong>Waterloo</strong>: one clue, secret wagers, winner takes the night.</li>
         <li>The table is the judge: hit <strong>"The Emperor accepts it"</strong> if a close answer got marked wrong.</li>
         <li><strong>Playing solo?</strong> Chase a Rank (S is Grand Champion) and beat your personal best.</li>
@@ -1399,6 +1424,9 @@ function showFeedback(html) {
   if (!feedback) return;
   feedback.innerHTML = html;
   feedback.classList.add('show');
+  // the result must never sit below the fold: bring Continue into view
+  const last = feedback.querySelector('.feedback-actions') || feedback;
+  requestAnimationFrame(() => last.scrollIntoView?.({ block: 'nearest', behavior: prefersReducedMotion() ? 'auto' : 'smooth' }));
   if (prefersReducedMotion()) return;
   const parts = feedback.querySelectorAll('.verdict, .verdict-score, .streak-callout, .correct-response, .feedback-actions');
   if (parts.length) animate(parts, { opacity: [0, 1], y: [10, 0] }, { duration: 0.32, ease: EXPO, delay: stagger(0.07) });
@@ -1612,7 +1640,7 @@ function renderBuzzerRow() {
     <button class="btn-buzzer ${buzzAttempted[i] ? 'out' : ''}" data-player="${i}"
             style="--pc: ${PLAYER_COLORS[i]}" ${buzzAttempted[i] ? 'disabled' : ''}>
       <span class="buzzer-name">${escapeHtml(p.name)}</span>
-      <span class="buzzer-key">${buzzAttempted[i] ? icon('cross') : BUZZ_KEYS[i].toUpperCase()}</span>
+      <span class="buzzer-key">${buzzAttempted[i] ? icon('cross') : touchOnly() ? 'Tap' : `Any key, ${BUZZ_HINTS[i] || ''}`}</span>
     </button>
   `).join('');
 
@@ -1631,7 +1659,8 @@ function attachBuzzKeys() {
       openBuzzers();
       return;
     }
-    const idx = BUZZ_KEYS.indexOf(e.key.toLowerCase());
+    if (e.metaKey || e.ctrlKey) return; // leave browser shortcuts alone
+    const idx = buzzSide(e.code);
     if (idx >= 0 && idx < getState().players.length) {
       e.preventDefault();
       tryBuzz(idx);

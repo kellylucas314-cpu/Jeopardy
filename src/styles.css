@@ -1,4 +1,12 @@
 @font-face {
+  /* Sacred Empires (Envato licence, Kelly's): cut down to the few letters the logo and the
+     table title use, so the file is small and is not a usable copy of the font. */
+  font-family: 'Sacred Empires';
+  src: url('/assets/fonts/SacredEmpires-logo.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
   font-family: 'Instrument Sans';
   src: url('/assets/fonts/InstrumentSans-Variable.woff2') format('woff2');
   font-weight: 400 700;
@@ -4089,3 +4097,91 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 @media (prefers-reduced-motion: reduce) {
   .title-film { cursor: default; }
 }
+
+/* — The name, the walk-in and a calmer table (Nov 11 2026). Kelly brought Sacred Empires, an
+     engraved serif, for the name. It is set only on the name (title, board, results) and on "Who's playing?", at sizes
+     where its engraving reads; everything read or tapped stays Instrument Sans. Napoleon enters
+     the film from its right edge, so on wide screens the film runs to the window's right edge
+     with no fade there and he walks in from off screen. The table asks for less: one player to
+     begin, the answering choice only for two or more, length and questions folded into one line. — */
+.logo,
+.board-title,
+.table-head h2 {
+  font-family: 'Sacred Empires', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-synthesis: none;
+  letter-spacing: 0;
+}
+.setup-screen .logo { line-height: 0.92; }
+.table-head h2 { font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1; }
+.title-video {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 3%), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 3%), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
+}
+/* stacked sizes: the film spans the whole window */
+@media (max-width: 1079px) {
+  .setup-hero .title-film { width: 100vw; margin-inline: calc(50% - 50vw); }
+}
+/* wide screens: the name and Play on the left, the film running off the right edge */
+@media (min-width: 1080px) {
+  .setup-hero { flex-direction: row; align-items: center; justify-content: flex-start; text-align: left; }
+  .setup-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 0 clamp(320px, 29vw, 460px);
+    position: relative;
+    z-index: 1;
+  }
+  .setup-screen .logo { text-align: left; white-space: normal; font-size: clamp(4.4rem, 6.6vw, 7rem); line-height: 1.1; }
+  .setup-deck { margin-top: 14px; }
+  .setup-deck { max-width: 22ch; text-align: left; }
+  .btn-play { margin-top: 26px; }
+  .setup-hero .hall-of-fame, .setup-hero .setup-footer { justify-content: flex-start; }
+  .setup-hero .title-film {
+    flex: none;
+    width: min(calc((100dvh - 120px) * 1.716), calc(100vw - clamp(320px, 29vw, 460px) + 2vw));
+    margin: 0 calc(50% - 50vw) 0 -6vw;
+  }
+}
+/* length and questions, folded */
+.opt-more { margin-top: 14px; }
+.opt-more > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: var(--inset);
+  color: var(--cream);
+  font: 500 0.95rem/1.2 var(--font-ui);
+  cursor: pointer;
+  list-style: none;
+}
+.opt-more > summary::-webkit-details-marker { display: none; }
+.opt-more-change { color: var(--jade-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.opt-more[open] .opt-more-change { text-decoration: none; }
+.opt-more[open] > summary { margin-bottom: 4px; }
+.opt-more > summary:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 2px; }
+
+/* — The result comes first (Kelly, Nov 11: "the answer should be prominent and Napoleon's
+     judgement should be below that... smaller"). Once an answer is judged the Submit and Pass
+     buttons step aside, the correct response leads in large type, then the score and Continue,
+     and his remark follows small. The result scrolls itself into view, so Continue is never
+     below the fold. — */
+.clue-panel:has(.clue-feedback.show) .clue-buttons { display: none; }
+.feedback-correct, .feedback-wrong, .feedback-skip { display: flex; flex-direction: column; align-items: center; }
+.clue-feedback .correct-response { order: 1; margin: 4px 0 12px; font: 400 clamp(1.15rem, 2vw, 1.4rem)/1.3 var(--font-ui); color: var(--text-dim); }
+.clue-feedback .correct-response strong { display: block; margin-top: 4px; font: 600 clamp(1.7rem, 3.4vw, 2.5rem)/1.15 var(--font-ui); color: var(--cream); }
+.clue-feedback .verdict-score { order: 2; font-size: 1.5rem; }
+.clue-feedback .verdict-score .icon { width: 30px; height: 30px; font-size: 1rem; }
+.clue-feedback .streak-callout { order: 3; }
+.clue-feedback .feedback-actions { order: 4; margin-top: 16px; }
+.clue-feedback .verdict { order: 5; margin: 16px auto 0; gap: 8px; }
+.clue-feedback .verdict-fig { width: 64px; height: 68px; }
+.clue-feedback .verdict-fig img { height: 138px; margin-top: 3px; }
+.clue-feedback .verdict figcaption { padding: 8px 12px; font-size: 0.9rem; }
+.clue-feedback .verdict figcaption::before { top: 15px; }
+.feedback-correct .verdict-score { margin-top: 2px; }

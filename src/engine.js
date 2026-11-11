@@ -382,10 +382,13 @@ export function noBuzz() {
  * Called when the answer result has been shown and we return to the board.
  */
 export function returnToBoard() {
-  const { cluesAnswered, totalClues, round, players, lastCorrectPlayer, gameLength } = getState();
+  const { cluesAnswered, totalClues, round, players, lastCorrectPlayer, gameLength, gameMode, activePlayer } = getState();
 
-  // The last player to answer correctly picks the next clue
-  const nextPlayer = players.length > 1 ? lastCorrectPlayer : 0;
+  // Take turns: the board passes to the next player after every clue, right or wrong.
+  // Buzz in: whoever last answered correctly picks the next clue.
+  const nextPlayer = players.length < 2 ? 0
+    : gameMode === 'turns' ? (activePlayer + 1) % players.length
+    : lastCorrectPlayer;
 
   if (cluesAnswered >= totalClues) {
     // Round is complete
