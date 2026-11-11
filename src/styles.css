@@ -4112,36 +4112,39 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   font-synthesis: none;
   letter-spacing: 0;
 }
+/* the engraving is filled in solid (Kelly: "can we make it solid and filled in"): a thin stroke
+   in the letter's own colour closes the inline cuts and leaves a slightly hand-cut edge */
+.logo, .board-title, .table-head h2 { -webkit-text-stroke: 0.018em currentColor; paint-order: stroke fill; }
 .setup-screen .logo { line-height: 0.92; }
 .table-head h2 { font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1; }
 .title-video {
   -webkit-mask-image: linear-gradient(to right, transparent, #000 3%), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 3%), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
 }
-/* stacked sizes: the film spans the whole window */
-@media (max-width: 1079px) {
+/* stacked sizes (phones, tablets held upright): the film spans the whole window */
+@media (max-width: 639px), (max-aspect-ratio: 1/1) {
   .setup-hero .title-film { width: 100vw; margin-inline: calc(50% - 50vw); }
 }
-/* wide screens: the name and Play on the left, the film running off the right edge */
-@media (min-width: 1080px) {
-  .setup-hero { flex-direction: row; align-items: center; justify-content: flex-start; text-align: left; }
+/* landscape screens, from a small laptop window up: the name big on the left with Play under
+   it, and a smaller film coming in from the window's right edge (Kelly, Nov 11) */
+@media (min-width: 640px) and (min-aspect-ratio: 1/1) {
+  .setup-hero { flex-direction: row; align-items: center; justify-content: space-between; gap: 2vw; text-align: left; }
   .setup-brand {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex: 0 0 clamp(320px, 29vw, 460px);
+    flex: 0 0 clamp(260px, 34vw, 480px);
     position: relative;
     z-index: 1;
   }
-  .setup-screen .logo { text-align: left; white-space: normal; font-size: clamp(4.4rem, 6.6vw, 7rem); line-height: 1.1; }
-  .setup-deck { margin-top: 14px; }
-  .setup-deck { max-width: 22ch; text-align: left; }
-  .btn-play { margin-top: 26px; }
+  .setup-screen .logo { text-align: left; white-space: normal; font-size: clamp(3.4rem, min(9vw, 13vh), 7.4rem); line-height: 1.24; }
+  .setup-deck { max-width: 24ch; margin-top: 14px; text-align: left; }
+  .btn-play { margin-top: clamp(16px, 3vh, 30px); }
   .setup-hero .hall-of-fame, .setup-hero .setup-footer { justify-content: flex-start; }
   .setup-hero .title-film {
     flex: none;
-    width: min(calc((100dvh - 120px) * 1.716), calc(100vw - clamp(320px, 29vw, 460px) + 2vw));
-    margin: 0 calc(50% - 50vw) 0 -6vw;
+    width: min(calc((100dvh - 120px) * 1.716), calc(100vw - clamp(260px, 34vw, 480px) - 6vw), 60vw);
+    margin: 0 calc(50% - 50vw) 0 0;
   }
 }
 /* length and questions, folded */
