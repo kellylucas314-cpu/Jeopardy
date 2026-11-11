@@ -4112,9 +4112,7 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   font-synthesis: none;
   letter-spacing: 0;
 }
-/* the engraving is filled in solid (Kelly: "can we make it solid and filled in"): a thin stroke
-   in the letter's own colour closes the inline cuts and leaves a slightly hand-cut edge */
-.logo, .board-title, .table-head h2 { -webkit-text-stroke: 0.018em currentColor; paint-order: stroke fill; }
+/* Kelly tried it filled in solid (a same-colour stroke) and chose the engraved original, Nov 11 */
 .setup-screen .logo { line-height: 0.92; }
 .table-head h2 { font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1; }
 .title-video {
