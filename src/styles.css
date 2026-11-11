@@ -4120,6 +4120,18 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   -webkit-mask-image: linear-gradient(to right, transparent, #000 3%), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 3%), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
 }
+/* the fidget: a second, short clip that sits exactly on the film and shows only while it plays */
+.title-fidget {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  /* only the part of the frame he moves in, which is also clear of the film's faded edges */
+  -webkit-mask-image: none;
+  mask-image: none;
+  clip-path: inset(6% 14.9% 4% 55.5%);
+}
+.title-fidget.on { opacity: 1; }
 /* stacked sizes (phones, tablets held upright): the film spans the whole window */
 @media (max-width: 639px), (max-aspect-ratio: 1/1) {
   .setup-hero .title-film { width: 100vw; margin-inline: calc(50% - 50vw); }

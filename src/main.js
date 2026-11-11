@@ -467,6 +467,8 @@ function renderSetup() {
                 aria-label="Napoleon strides up to a throne, shoves the question card and the crown off it, and takes his place beside it">
           <video class="title-video" src="./assets/title/throne.mp4" poster="./assets/title/throne-last.webp"
                  width="1280" height="746" muted playsinline preload="auto" aria-hidden="true"></video>
+          <video class="title-video title-fidget" src="./assets/title/throne-fidget.mp4"
+                 width="1280" height="746" muted playsinline preload="none" aria-hidden="true"></video>
         </figure>
       </section>
       <section class="table" aria-labelledby="table-title">
@@ -542,8 +544,26 @@ function renderSetup() {
   const film = app.querySelector('.title-video');
   const stage = app.querySelector('.title-film');
   const still = () => { film.poster = './assets/title/throne-last.webp'; };
+  // Once the film is over he does not freeze: every so often he turns his head to look at you,
+  // then looks away again (Kelly, Nov 11: "very subtle movement"). The fidget clip starts and
+  // ends on the film's last frame, so it sits on top of the film and nothing jumps.
+  const fidget = app.querySelector('.title-fidget');
+  let fidgetTimer = 0;
+  const rest = () => { clearTimeout(fidgetTimer); fidgetTimer = 0; };
+  const settle = () => { rest(); if (fidget) { fidget.pause(); fidget.classList.remove('on'); } };
+  const idle = (first = false) => {
+    rest();
+    if (!fidget || calm || navigator.connection?.saveData) return;
+    fidgetTimer = setTimeout(() => {
+      if (!fidget.isConnected) return;
+      if (document.hidden || setupStep !== 'title' || !film.ended) { idle(); return; }
+      fidget.currentTime = 0;
+      fidget.play()?.then(() => fidget.classList.add('on')).catch(() => {});
+    }, first ? 2600 + Math.random() * 1400 : 6000 + Math.random() * 6000);
+  };
   const roll = () => {
     if (!film || calm || navigator.connection?.saveData) return;
+    settle();
     film.poster = './assets/title/throne-first.webp';
     film.currentTime = 0;
     film.play()?.catch(() => { film.removeAttribute('src'); film.load(); still(); });
@@ -552,6 +572,8 @@ function renderSetup() {
     if (calm || navigator.connection?.saveData) film.preload = 'none';
     if (setupStep === 'title') roll();
     stage.addEventListener('click', () => { if (film.paused || film.ended) roll(); });
+    film.addEventListener('ended', () => { if (fidget) fidget.preload = 'auto'; idle(true); });
+    fidget?.addEventListener('ended', () => { fidget.classList.remove('on'); idle(); });
   }
 
   // Two steps, one page: the title, then the table. Nothing is re-rendered, so every choice survives a trip back.
@@ -567,8 +589,12 @@ function renderSetup() {
           { opacity: [0, 1], y: [16, 0] }, { duration: 0.42, ease: EXPO, delay: stagger(0.05) });
       }
       if (film && !film.paused) film.pause();
+      settle();
       document.getElementById('table-title')?.focus({ preventScroll: true });
     } else {
+      // back at the title: pick the film up where it stopped, or let him fidget again
+      if (film?.ended) idle(true);
+      else if (film && film.paused && film.currentTime > 0 && !calm) film.play()?.catch(() => {});
       document.getElementById('btn-play')?.focus({ preventScroll: true });
     }
   };
