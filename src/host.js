@@ -8,6 +8,7 @@
  */
 import { animate } from 'motion';
 import { POSES } from './host-poses.js';
+import { FILMS } from './host-films.js';
 
 export const poseSrc = name => `./assets/host/${name}.webp`;
 export const faceSrc = mood => `./assets/host/face-${mood}.webp`;
@@ -50,20 +51,28 @@ const MOVES = {
 
 /**
  * Change the pose of the figure on screen, with a move and, optionally, a line.
- * Safe to call when no figure is showing.
+ * Safe to call when no figure is showing. With `film`, one of Kelly's reaction
+ * clips plays in place of the still pose and holds its last frame; if the film
+ * cannot play, the still pose and its move stand in. With `until` (seconds) the
+ * film hands back to the still pose at that point instead of holding.
  */
-export function hostReact(pose, { move = 'settle', say } = {}) {
+export function hostReact(pose, { move = 'settle', say, film, until } = {}) {
   const fig = document.querySelector('.host-fig');
   if (!fig) return;
   const img = fig.querySelector('.host-img');
   const name = POSES[pose] ? pose : 'neutral';
-  if (fig.dataset.pose !== name) {
+  const stand = () => {
+    if (fig.dataset.pose === name) return;
     fig.dataset.pose = name;
     fig.setAttribute('style', metrics(name));
     img.src = poseSrc(name);
-  }
+  };
+  const still = () => { stand(); if (!reduced() && MOVES[move]) MOVES[move](img); };
   if (say !== undefined) hostSay(say);
-  if (!reduced() && MOVES[move]) MOVES[move](img);
+  stopFilm();
+  // the pose under the film changes only once the film covers it, so the old pose never flashes
+  if (film && fig.offsetWidth > 0 && playFilm(fig, film, { until, onShow: stand, onFail: still })) return;
+  still();
 }
 
 /** Play one of the moves on any picture of him (the phone's verdict figure uses this). */
@@ -111,10 +120,10 @@ let tipping = false;
  * half and his outline is a white mask in the bottom half. A small shader puts
  * the two back together on a canvas the size of one half.
  */
-function tipStage() {
+function filmStage(size, cls) {
   const canvas = document.createElement('canvas');
-  [canvas.width, canvas.height] = TIP_SIZE;
-  canvas.className = 'host-tip';
+  [canvas.width, canvas.height] = size;
+  canvas.className = cls;
   canvas.setAttribute('aria-hidden', 'true');
   const gl = canvas.getContext('webgl', { premultipliedAlpha: true, antialias: false });
   if (!gl) return null;
@@ -162,9 +171,9 @@ function tipStage() {
   video.muted = true;
   video.playsInline = true;
   video.preload = 'auto';
-  video.src = TIP_SRC;
 
   const draw = () => {
+    gl.viewport(0, 0, canvas.width, canvas.height);
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, video);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
   };
@@ -177,9 +186,10 @@ function tipStage() {
  */
 export function tipHat(fig) {
   if (!fig || tipping || reduced() || navigator.connection?.saveData) return;
-  try { tip ||= tipStage(); } catch { tip = null; }
+  try { tip ||= filmStage(TIP_SIZE, 'host-tip'); } catch { tip = null; }
   if (!tip) return;
   const { canvas, video, draw } = tip;
+  if (!video.src) video.src = TIP_SRC;
   tipping = true;
 
   const finish = () => {
@@ -203,4 +213,79 @@ export function tipHat(fig) {
 
   video.currentTime = 0;
   video.play().then(() => requestAnimationFrame(frame), () => { tipping = false; });
+}
+
+/* — Kelly's reaction clips (Nov 11 2026): short films of him cut to his outline, stacked the same
+     way as the hat tip (scripts/build-host-films.py). A figure film plays over the standing host;
+     a face film plays in the small verdict picture on a phone. One canvas and one video serve
+     them all. A film holds its last frame until the next pose, the next film or the next screen. — */
+
+const filmUrl = {};   // name -> a local address, once the film has been fetched
+let player = null;    // the shared canvas and video, made on first use
+let playing = null;   // { el } while a film is on screen or about to be
+
+/** Fetch films ahead of time, in order of need. A film that has not arrived is simply not played. */
+export function preloadFilms(names) {
+  if (reduced() || navigator.connection?.saveData) return;
+  const wanted = names.filter(n => FILMS[n] && !(n in filmUrl));
+  for (const n of wanted) filmUrl[n] = null;
+  const next = () => {
+    const n = wanted.shift();
+    if (!n) return;
+    fetch(`./assets/host/films/${n}.mp4`)
+      .then(r => (r.ok ? r.blob() : Promise.reject()))
+      .then(blob => { filmUrl[n] = URL.createObjectURL(blob); }, () => { delete filmUrl[n]; })
+      .then(next);
+  };
+  next();
+}
+
+/** Take the film off the screen; the still picture under it shows again. */
+export function stopFilm() {
+  if (!playing) return;
+  const { el } = playing;
+  playing = null;
+  player.video.pause();
+  el.classList.remove('is-filming');
+  player.canvas.remove();
+}
+
+/**
+ * Play a film inside `el` (the standing host, or the verdict picture). Returns
+ * false at once if it cannot (not fetched yet, reduced motion, no WebGL), so the
+ * caller can fall back to the still picture. `onShow` runs as the first frame
+ * appears; `onFail` if the film never gets that far. `until` (seconds) takes the
+ * film off at that point; without it the last frame holds.
+ */
+export function playFilm(el, name, { until, onShow, onFail } = {}) {
+  const meta = FILMS[name];
+  if (!el || !meta || !filmUrl[name] || reduced()) return false;
+  try { player ||= filmStage([meta.w, meta.h], 'host-film'); } catch { player = null; }
+  if (!player) return false;
+  stopFilm();
+  const { canvas, video, draw } = player;
+  canvas.width = meta.w;
+  canvas.height = meta.h;
+  canvas.setAttribute('aria-hidden', 'true');
+  canvas.style.cssText = meta.k ? `--fk:${meta.k};--fdrop:${meta.drop};--fdx:${meta.dx}` : '';
+  const run = playing = { el };
+  const fail = () => { if (playing === run) { stopFilm(); onFail?.(); } };
+  const frame = () => {
+    if (playing !== run) return;
+    if (!el.isConnected) return stopFilm();
+    if (video.readyState >= 2 && video.currentTime > 0) {
+      try { draw(); } catch { return fail(); }
+      if (!canvas.isConnected) {
+        el.append(canvas);
+        el.classList.add('is-filming');
+        onShow?.();
+      }
+    }
+    if (until && video.currentTime >= until) return stopFilm();
+    if (!video.ended) requestAnimationFrame(frame);
+  };
+  video.src = filmUrl[name];
+  video.play().then(() => requestAnimationFrame(frame), fail);
+  setTimeout(() => { if (playing === run && !canvas.isConnected) fail(); }, 700);
+  return true;
 }

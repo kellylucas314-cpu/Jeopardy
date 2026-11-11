@@ -19,7 +19,7 @@ import { loadCharacters, characters, characterById, portraitUrl, poseUrl } from 
 import { shape, compassLoader } from './shapes.js';
 import { animate, stagger } from 'motion';
 import 'number-flow';
-import { hostFigure, hostReact, hostSay, hostMove, poseSrc, faceSrc, setFace, preloadHost } from './host.js';
+import { hostFigure, hostReact, hostSay, hostMove, poseSrc, faceSrc, setFace, preloadHost, preloadFilms, playFilm } from './host.js';
 import { empireMap, statusMark, pointAt } from './empire.js';
 
 loadCharacters();
@@ -142,9 +142,9 @@ const CHAPTER_LINES = {
 
 /** How he takes each outcome: a pose and a move for the big figure, a face for the small one. */
 const REACTIONS = {
-  correct: { poses: ['victory'], face: 'delighted', move: 'hop' },
-  wrong: { poses: ['stepping-back', 'shocked', 'defeated'], face: 'frustrated', move: 'recoil' },
-  timeout: { poses: ['arms-crossed'], face: 'annoyed', move: 'refuse' },
+  correct: { poses: ['victory'], face: 'delighted', move: 'hop', films: ['pleased', 'attention'], big: 'fist', bust: 'face-smirk', bigBust: 'face-grin' },
+  wrong: { poses: ['stepping-back', 'shocked', 'defeated'], face: 'frustrated', move: 'recoil', films: ['shrug'], big: 'yell', bust: 'face-startled' },
+  timeout: { poses: ['arms-crossed'], face: 'annoyed', move: 'refuse', films: ['stomp'], bust: 'face-stern' },
   pass: { poses: ['shrug'], face: 'puzzled', move: 'settle' },
   pardon: { poses: ['welcome'], face: 'smirk', move: 'settle' },
 };
@@ -162,15 +162,19 @@ const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
  * Napoleon's verdict on an answer. On a wide screen the big figure takes the
  * pose and speaks the line; on a phone his face and the line sit in the feedback.
  */
-function verdict(kind, line) {
+function verdict(kind, line, { big = false } = {}) {
   const r = REACTIONS[kind];
   const pose = pick(r.poses);
   lastOutcome = kind === 'pardon' ? 'correct' : kind;
-  hostReact(pose, { move: r.move, say: line });
+  // One of Kelly's reaction clips where there is one: the whole of him on a wide screen,
+  // his face in the verdict picture on a phone. The still pose is the fallback for both.
+  const film = (big && r.big) || (r.films && pick(r.films));
+  const bust = (big && r.bigBust) || r.bust;
+  hostReact(pose, { move: r.move, say: line, film });
   if (kind === 'correct' || kind === 'pardon') navigator.vibrate?.(18);
   else if (kind === 'wrong' || kind === 'timeout') navigator.vibrate?.([36, 50, 36]);
   return `<figure class="verdict">
-      <span class="verdict-fig" data-move="${r.move}"><img src="${poseSrc(pose)}" alt=""></span>
+      <span class="verdict-fig" data-move="${r.move}"${bust ? ` data-film="${bust}"` : ''}><img src="${poseSrc(pose)}" alt=""></span>
       <figcaption>${escapeHtml(line)}</figcaption>
     </figure>`;
 }
@@ -451,7 +455,7 @@ function renderSetup() {
       <section class="setup-hero" aria-labelledby="game-title">
         <div class="setup-brand">
           <h1 class="logo" id="game-title">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></h1>
-          <p class="setup-deck">A trivia coup hosted by Napoleon. History is watching.</p>
+          <p class="setup-deck"><span>A trivia coup hosted by Napoleon.</span> <span>History is watching.</span></p>
           <button type="button" class="btn-start btn-play" id="btn-play">Play</button>
           ${hof}
           <div class="setup-footer">
@@ -559,7 +563,7 @@ function renderSetup() {
       if (document.hidden || setupStep !== 'title' || !film.ended) { idle(); return; }
       fidget.currentTime = 0;
       fidget.play()?.then(() => fidget.classList.add('on')).catch(() => {});
-    }, first ? 2600 + Math.random() * 1400 : 6000 + Math.random() * 6000);
+    }, first ? 900 + Math.random() * 400 : 6000 + Math.random() * 6000);
   };
   const roll = () => {
     if (!film || calm || navigator.connection?.saveData) return;
@@ -572,6 +576,8 @@ function renderSetup() {
     if (calm || navigator.connection?.saveData) film.preload = 'none';
     if (setupStep === 'title') roll();
     stage.addEventListener('click', () => { if (film.paused || film.ended) roll(); });
+    // the fidget is fetched while the film plays, so it is ready the moment the film ends
+    film.addEventListener('playing', () => { if (fidget && !navigator.connection?.saveData) fidget.preload = 'auto'; }, { once: true });
     film.addEventListener('ended', () => { if (fidget) fidget.preload = 'auto'; idle(true); });
     fidget?.addEventListener('ended', () => { fidget.classList.remove('on'); idle(); });
   }
@@ -1183,11 +1189,25 @@ function renderBoard() {
 
   // After his reaction, he goes back to pointing at the board
   preloadHost(['delighted', 'frustrated', 'annoyed', 'puzzled', 'smirk', 'surprised', 'suspicious']);
+  // Kelly's reaction clips: only the ones this screen size shows
+  const standing = document.querySelector('.board-fig')?.offsetWidth > 0;
+  preloadFilms([
+    ...(standing ? ['point'] : []),
+    ...(window.matchMedia('(min-width: 1240px)').matches
+      ? ['pleased', 'shrug', 'attention', 'stomp', 'fist', 'yell']
+      : ['face-smirk', 'face-startled', 'face-stern', 'face-grin']),
+    'bow',
+  ]);
   const turn = ++stanceTurn;
   if (stance !== 'choose') {
-    setTimeout(() => {
-      if (turn === stanceTurn && shownScreen === 'board') hostReact('choose');
-    }, cluesAnswered === 0 ? 2600 : 1700);
+    const point = () => {
+      if (turn !== stanceTurn || shownScreen !== 'board') return;
+      // on a fresh board he waits for the categories to be read out, then throws a hand at it;
+      // the clip hands back to the pointing pose while his arm is still out
+      if (document.querySelector('.category-intro')) { setTimeout(point, 300); return; }
+      hostReact('choose', cluesAnswered === 0 ? { film: 'point', until: 1.2 } : {});
+    };
+    setTimeout(point, cluesAnswered === 0 ? 2600 : 1700);
   }
 
   // Lead-change announcement — keeps the race dramatic and visible
@@ -1460,7 +1480,8 @@ function showFeedback(html) {
   const parts = feedback.querySelectorAll('.verdict, .verdict-score, .streak-callout, .correct-response, .feedback-actions');
   if (parts.length) animate(parts, { opacity: [0, 1], y: [10, 0] }, { duration: 0.32, ease: EXPO, delay: stagger(0.07) });
   const fig = feedback.querySelector('.verdict-fig');
-  if (fig) hostMove(fig.querySelector('img'), fig.dataset.move);
+  // on a phone his face reacts in the verdict picture; without a film the still pose makes its move
+  if (fig && !(fig.offsetWidth > 1 && fig.dataset.film && playFilm(fig, fig.dataset.film))) hostMove(fig.querySelector('img'), fig.dataset.move);
   const score = feedback.querySelector('.verdict-score span');
   if (score) animate(score, { scale: [0.6, 1] }, { type: 'spring', stiffness: 520, damping: 17, delay: 0.07 });
 }
@@ -1560,7 +1581,7 @@ function handleSubmitAnswer() {
     if (result.correct) {
       showFeedback(`
         <div class="feedback-correct">
-          ${verdict('correct', correctLine(result, { wager, seconds }))}
+          ${verdict('correct', correctLine(result, { wager, seconds }), { big: wager || result.streak >= 3 })}
           <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
           ${bonusHtml(result)}
         </div>
@@ -1569,7 +1590,7 @@ function handleSubmitAnswer() {
     } else {
       showFeedback(`
         <div class="feedback-wrong">
-          ${verdict('wrong', wrongLine({ wager, streakBefore }))}
+          ${verdict('wrong', wrongLine({ wager, streakBefore }), { big: wager || streakBefore >= 3 })}
           <div class="verdict-score">${icon('cross')}<span>-$${formatMoney(result.value)}</span></div>
           <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
           <div class="feedback-actions">
@@ -1790,7 +1811,7 @@ function resolveBuzzAnswer(answer, timedOut) {
     buzzPhase = 'done';
     showFeedback(`
       <div class="feedback-correct">
-        ${verdict('correct', correctLine(result))}
+        ${verdict('correct', correctLine(result), { big: result.streak >= 3 })}
         <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
         ${bonusHtml(result)}
       </div>
@@ -2372,7 +2393,7 @@ function renderResults() {
   sounds.playFanfare();
   if (!isTie || ranked[0].score > 0) spawnConfetti();
   flowNumbers(450);
-  if (hostPose === 'victory') setTimeout(() => { if (shownScreen === 'results') hostReact('victory', { move: 'hop' }); }, 700);
+  if (hostPose === 'victory') setTimeout(() => { if (shownScreen === 'results') hostReact('victory', { move: 'hop', film: 'bow' }); }, 700);
 
   document.getElementById('btn-play-again').addEventListener('click', () => {
     lastScreen = null;

@@ -4224,3 +4224,46 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
    nobody rings early by mistake (an early ring still locks that player out for a moment) */
 .buzzer-row.waiting .btn-buzzer { opacity: 0.45; }
 .buzzer-row .btn-buzzer { transition: opacity 0.2s ease; }
+
+/* — Kelly's reaction clips (Nov 11 2026). A figure film stands exactly where the still pose
+     stands: its box is --fk standing-heights tall, runs --fdrop of its height below his feet,
+     and he stands --fdx of its width off its middle (scripts/build-host-films.py measures all
+     three). A face film fills the small verdict picture on a phone. — */
+.host-film { position: absolute; pointer-events: none; user-select: none; }
+.host-fig > .host-film {
+  left: 50%;
+  bottom: 0;
+  height: calc(100% * var(--fk, 1.08));
+  width: auto;
+  max-width: none;
+  translate: calc(-50% - var(--fdx, 0) * 100%) calc(var(--fdrop, 0) * 100%);
+}
+.host-fig.is-filming .host-img { visibility: hidden; }
+.verdict-fig { position: relative; }
+.verdict-fig > .host-film { left: 0; bottom: 0; width: 100%; height: auto; }
+.verdict-fig.is-filming img { visibility: hidden; }
+
+/* — The entry screen's spacing (Nov 11 2026, Kelly: "the spacing is a little off"). Wide: the
+     name sat 3vw from the left edge while Napoleon stood 13vw from the right one. The name moves
+     in and the film slides further off the right edge (he walks in from there anyway), so both
+     sides breathe the same. Stacked: the drawing was 40px left of centre, because the film keeps
+     empty paper on its right for the walk-in. The film is now wider than the window and placed
+     so the throne and Napoleon sit in the middle. The tagline breaks between its sentences. — */
+.setup-screen[data-step="title"] { overflow-x: clip; }
+.setup-deck span { display: inline-block; }
+@media (max-width: 639px), (max-aspect-ratio: 1/1) {
+  .setup-deck { margin-top: 12px; }
+  .setup-hero .title-film {
+    --fw: min(118vw, calc((100dvh - 380px) * 1.716));
+    align-self: flex-start;
+    width: var(--fw);
+    /* the drawing's middle is 39.7% across the film */
+    margin-inline: calc(50% - 0.397 * var(--fw)) 0;
+  }
+}
+@media (min-width: 640px) and (min-aspect-ratio: 1/1) {
+  .setup-brand { margin-left: 4vw; }
+  .setup-hero .title-film { margin-right: calc(50% - 56vw); }
+}
+/* his words clear the film's raised fist and its taller first frame */
+.host-fig.is-filming .host-say { bottom: calc(104% + 14px); }
