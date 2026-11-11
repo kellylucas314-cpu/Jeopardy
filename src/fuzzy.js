@@ -21,6 +21,15 @@ const STOPWORDS = new Set([
 const LEADING_ARTICLE = /^(a|an|the|his|her|their|its|your|my|our)\s+/;
 const QUESTION_PREFIX = /^(what|who|where|when|why|how)(?:'s|s)?\s+(is|are|was|were|did|do|does|it'?s)\s+/;
 
+const NUMBER_WORDS = {
+  zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10,
+  eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17,
+  eighteen: 18, nineteen: 19, twenty: 20, thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70,
+  eighty: 80, ninety: 90,
+  // regnal and war numbers: "Henry 8" for "Henry VIII", "World War 2" for "World War II"
+  ii: 2, iii: 3, iv: 4, vi: 6, vii: 7, viii: 8, ix: 9, xii: 12, xiii: 13, xiv: 14, xv: 15, xvi: 16,
+};
+
 function stripDiacritics(s) {
   return s.normalize('NFD').replace(/[̀-ͯ]/g, '');
 }
@@ -31,6 +40,7 @@ function clean(str) {
   s = s.replace(QUESTION_PREFIX, '');
   s = s.replace(/[^a-z0-9\s]/g, ' ');   // drop punctuation
   s = s.replace(/\s+/g, ' ').trim();
+  s = s.split(' ').map(w => (w in NUMBER_WORDS ? String(NUMBER_WORDS[w]) : w)).join(' ');
   // Strip leading articles/possessives, possibly stacked ("the a" is rare but cheap)
   let prev;
   do { prev = s; s = s.replace(LEADING_ARTICLE, ''); } while (s !== prev);
@@ -102,9 +112,19 @@ function sim(a, b) {
   return 1 - levenshtein(a, b) / maxLen;
 }
 
+const digits = s => (s.match(/\d+/g) || []).join(' ');
+
 /** Are two single words the same allowing for a small typo? */
 function tokenMatch(a, b) {
   if (a === b) return true;
+  // Numbers are never typos: 1888 is not 1889.
+  if (/\d/.test(a) || /\d/.test(b)) return false;
+  // Short words are too close to each other to forgive a letter ("five" / "fire", "cat" / "car"):
+  // only a plural is let through ("bee" / "bees").
+  if (Math.min(a.length, b.length) <= 4) {
+    const [short, long] = a.length <= b.length ? [a, b] : [b, a];
+    return long === short + 's' || long === short + 'es';
+  }
   const d = levenshtein(a, b);
   if (a.length <= 5 || b.length <= 5) return d <= 1;
   return d <= 2;
@@ -121,7 +141,8 @@ export function checkAnswer(userAnswer, correctResponse) {
   const userTokens = tokens(user);
   const userSig = userTokens.filter(significant);
   // Did the user type at least one real word (not just articles like "of")?
-  const userMeaningful = userTokens.some(t => t.length >= 3 && !STOPWORDS.has(t));
+  const userMeaningful = userTokens.some(t => (t.length >= 3 && !STOPWORDS.has(t)) || /\d/.test(t));
+  const userDigits = digits(user);
   const cands = candidates(correctResponse);
 
   let best = 0;
@@ -136,9 +157,16 @@ export function checkAnswer(userAnswer, correctResponse) {
     const s = sim(user, c);
     best = Math.max(best, s);
     const threshold = Math.max(c.length, user.length) <= 6 ? 0.78 : 0.72;
-    if (s >= threshold) return { correct: true, similarity: s };
+    // a near miss in the spelling counts, but the numbers in it must be the same numbers,
+    // and a short answer must be the same word
+    const sameNumbers = digits(user) === digits(c);
+    const shortWord = Math.max(c.length, user.length) <= 4;
+    if (s >= threshold && sameNumbers && !shortWord) return { correct: true, similarity: s };
 
     const cTokens = tokens(c);
+    // From here on a fragment can count, but never with a different number in it
+    // ("Apollo 13" is not "Apollo 11").
+    if (userDigits && userDigits !== digits(c)) continue;
 
     // 3. Subset: everything the user typed appears in the answer (or vice-versa),
     //    as long as a meaningful word is involved ("gatsby" → "the great gatsby").

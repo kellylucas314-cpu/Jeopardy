@@ -4199,3 +4199,28 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 .clue-feedback .verdict figcaption { padding: 8px 12px; font-size: 0.9rem; }
 .clue-feedback .verdict figcaption::before { top: 15px; }
 .feedback-correct .verdict-score { margin-top: 2px; }
+
+/* — The play audit (Nov 11 2026): three whole games played through on a phone and a laptop,
+     and what they turned up. — */
+/* Waterloo: "Enter answer" grew to fill the whole column (it carried the clue card's flex: 2) */
+.final-screen .btn-submit { flex: none; width: min(340px, 100%); }
+.final-answer-form .btn-submit { width: 100%; margin-top: 18px; }
+/* the wager clue names itself in words */
+.clue-value-tag { font-size: 0.72em; font-weight: 600; letter-spacing: 0.02em; }
+/* the score on the results page was the one number left in a serif */
+.solo-score-money { font-family: var(--font-display); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+/* everything tapped is at least a fingertip tall */
+.btn-preset { min-height: 44px; }
+.btn-final-override { min-height: 40px; padding-inline: 16px; }
+.results-actions .btn-quiet, #btn-reroll { min-height: 44px; }
+.cast-none { min-height: 40px; }
+.setup-footer .link-btn { display: inline-flex; align-items: center; min-height: 44px; }
+/* beside the clue he gets his own room: the card no longer slides under him and his words no
+   longer cover the clue */
+@media (min-width: 1240px) {
+  .clue-screen { padding-right: calc(clamp(20px, 4vw, 80px) + min(56vh, 470px) * 0.6 + 8px); }
+}
+/* buzzing in: the buzzers sit dimmed while the clue is read and light up when they open, so
+   nobody rings early by mistake (an early ring still locks that player out for a moment) */
+.buzzer-row.waiting .btn-buzzer { opacity: 0.45; }
+.buzzer-row .btn-buzzer { transition: opacity 0.2s ease; }

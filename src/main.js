@@ -382,7 +382,7 @@ function scheduleReturn(ms) {
         && !hint.querySelector('.feedback-actions')) {
       const el = document.createElement('div');
       el.className = 'tap-hint';
-      el.textContent = 'tap or press space to continue';
+      el.textContent = touchOnly() ? 'tap to continue' : 'click or press space to continue';
       hint.appendChild(el);
     }
   }, 350);
@@ -1142,7 +1142,7 @@ function renderBoard() {
         <div class="board-footer-info">
           ${cluesAnswered === 0 ? '<button class="reroll-btn" id="btn-reroll">Redraw the map</button>' : ''}
           <div class="clues-remaining">
-            ${totalClues - cluesAnswered} clues left${chapter ? ` &nbsp;&middot;&nbsp; target ${money(chapterTarget(chapter, gameLength))}` : ''}
+            ${totalClues - cluesAnswered === 1 ? '1 clue left' : `${totalClues - cluesAnswered} clues left`}${chapter ? ` &nbsp;&middot;&nbsp; target ${money(chapterTarget(chapter, gameLength))}` : ''}
             ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${touchOnly() ? 'tap' : BUZZ_HINTS[i] || ''}</span>`).join(' ')}` : ''}
           </div>
         </div>
@@ -1306,6 +1306,7 @@ window.addEventListener('keydown', (e) => {
 let boardKeyHandler = null;
 let boardCursor = { c: 0, r: 0 };
 
+let boardKeysUsed = false; // the cursor tile appears once someone steers with the keyboard
 function detachBoardKeys() {
   if (boardKeyHandler) { window.removeEventListener('keydown', boardKeyHandler); boardKeyHandler = null; }
 }
@@ -1327,6 +1328,8 @@ function attachBoardKeys(openClue) {
     if (getState().screen !== 'board') return;
     if (document.querySelector('.modal-overlay, .category-intro')) return;
     let handled = true;
+    // the first arrow only shows the cursor where it stands
+    if (!boardKeysUsed && e.key.startsWith('Arrow')) { e.preventDefault(); boardKeysUsed = true; paint(); return; }
     if (e.key === 'ArrowLeft') boardCursor.c = (boardCursor.c + 5) % 6;
     else if (e.key === 'ArrowRight') boardCursor.c = (boardCursor.c + 1) % 6;
     else if (e.key === 'ArrowUp') boardCursor.r = (boardCursor.r + 4) % 5;
@@ -1336,10 +1339,10 @@ function attachBoardKeys(openClue) {
       if (el && !el.classList.contains('answered')) { detachBoardKeys(); openClue(el); }
       handled = true;
     } else handled = false;
-    if (handled) { e.preventDefault(); paint(); }
+    if (handled) { e.preventDefault(); boardKeysUsed = true; paint(); }
   };
   window.addEventListener('keydown', boardKeyHandler);
-  paint();
+  if (boardKeysUsed) paint();
 }
 
 /** TV-chyron style announcement banner. */
@@ -1428,7 +1431,7 @@ function clueShell(extraHtml) {
      <div class="clue-panel">
       <div class="clue-header">
         <span class="clue-category">${escapeHtml(currentClue.categoryName)}</span>
-        <span class="clue-value">${isDailyDouble ? 'DD ' : ''}$${formatMoney(displayValue)}</span>
+        <span class="clue-value">${isDailyDouble ? '<span class="clue-value-tag">Wager</span> ' : ''}$${formatMoney(displayValue)}</span>
       </div>
       <div class="clue-timer">
         <div class="timer-bar-bg">
@@ -1495,7 +1498,7 @@ function renderTurnsClue() {
 
   app.innerHTML = clueShell(`
     <div class="clue-player">
-      ${portraitUrl(players[answeringPlayer].character) ? `<span class="clue-player-face">${avatarHtml(players[answeringPlayer], answeringPlayer)}</span>` : ''}
+      ${players.length > 1 && portraitUrl(players[answeringPlayer].character) ? `<span class="clue-player-face">${avatarHtml(players[answeringPlayer], answeringPlayer)}</span>` : ''}
       ${players.length > 1 ? `<span>${escapeHtml(players[answeringPlayer].name)}'s ${currentClue.isDailyDouble && gameMode === 'buzz' ? 'Waterloo Wager' : 'turn'}</span>` : ''}
     </div>
     <div class="clue-answer-area">
@@ -1630,7 +1633,7 @@ function renderBuzzClue() {
   const { currentClue } = getState();
 
   app.innerHTML = clueShell(`
-    <div class="buzz-status" id="buzz-status" title="Space to open buzzers">Read the clue&hellip; <span class="buzz-skip-hint">(space to ring in)</span></div>
+    <div class="buzz-status" id="buzz-status" title="Space to open buzzers">Read the clue&hellip; <span class="buzz-skip-hint">${touchOnly() ? '(tap here to open the buzzers)' : '(space opens the buzzers)'}</span></div>
     <div class="clue-answer-area" id="answer-area" style="display:none">
       <div class="clue-player" id="answering-name"></div>
       <input type="text" id="answer-input" class="answer-input"
@@ -1639,7 +1642,7 @@ function renderBuzzClue() {
         <button class="btn-submit" id="btn-submit">Submit</button>
       </div>
     </div>
-    <div class="buzzer-row" id="buzzer-row"></div>
+    <div class="buzzer-row waiting" id="buzzer-row"></div>
   `);
 
   buzzPhase = 'reading';
@@ -1704,6 +1707,7 @@ function openBuzzers() {
     status.innerHTML = 'BUZZ IN!';
     status.classList.add('open');
   }
+  document.getElementById('buzzer-row')?.classList.remove('waiting');
   hostReact('welcome', { say: 'Well? Who dares?' });
   sounds.playBuzzersOpen();
 
@@ -2022,7 +2026,7 @@ function renderFinalCategory() {
         <div class="final-category-name">${escapeHtml(finalClue.name)}</div>
         ${hostLine('Waterloo. Where everything is decided.')}
       </div>
-      <button class="btn-continue" id="btn-final-wager">Place wagers</button>
+      <button class="btn-continue" id="btn-final-wager">${getState().players.length === 1 ? "Place your wager" : "Place wagers"}</button>
     </div>
     ${stageHost('hands-on-hips')}
   `;
@@ -2080,7 +2084,7 @@ function renderFinalWager() {
         <div class="final-header">${finalHeader()}</div>
         <div class="final-subtitle" style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)}, you have $${formatMoney(p.score)}</div>
         <div class="dd-wager-area" style="max-width:380px;width:100%">
-          <label>Your secret wager</label>
+          <label>${players.length === 1 ? "Your wager" : "Your secret wager"}</label>
           <div class="wager-input-row">
             <span class="wager-dollar">$</span>
             <input type="number" id="wager-input" class="wager-input" min="0" max="${maxW}" value="${Math.min(1000, maxW)}" step="100">
@@ -2127,7 +2131,7 @@ function renderFinalClue() {
       <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
       <div class="final-clue-text">${escapeHtml(finalClue.clue)}</div>
       <div class="think-music-note">&#9835; Think music playing…</div>
-      <button class="btn-submit" id="btn-begin-answers" style="max-width:340px">
+      <button class="btn-submit" id="btn-begin-answers">
         ${solo ? 'Enter answer' : 'Enter answers'}
       </button>
     </div>
@@ -2156,7 +2160,7 @@ function renderFinalClue() {
               <label style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)}, your response</label>
               <input type="text" id="final-answer-input" class="answer-input" placeholder="What is…" autocomplete="off">
             </div>
-            <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock in and pass' : 'Reveal answers'}</button>
+            <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock in and pass' : solo ? 'Reveal answer' : 'Reveal answers'}</button>
           </div>
         </div>
         ${stageHost('thinking')}
@@ -2186,8 +2190,8 @@ function renderFinalAnswer() {
         ${players.map((p, i) => `
           <div class="final-result-player ${finalAnswers[i].correct ? 'correct' : 'wrong'}">
             <div class="frp-name">${escapeHtml(p.name)}</div>
-            <div class="frp-answer">"${escapeHtml(finalAnswers[i].answer || '(no answer)')}"</div>
-            <div class="frp-wager">${finalAnswers[i].correct ? '+' : '-'}$${formatMoney(finalWagers[i])}</div>
+            <div class="frp-answer">${finalWagers[i] > 0 || finalAnswers[i].answer ? `"${escapeHtml(finalAnswers[i].answer || '(no answer)')}"` : 'Nothing to stake'}</div>
+            <div class="frp-wager">${finalWagers[i] > 0 ? `${finalAnswers[i].correct ? '+' : '-'}$${formatMoney(finalWagers[i])}` : 'Sat out'}</div>
             <div class="frp-total">${flowMoney(p.score, p.score + (finalAnswers[i].correct ? -1 : 1) * finalWagers[i])}</div>
             ${finalWagers[i] > 0 || finalAnswers[i].answer ? `
               <button class="btn-final-override" data-player="${i}">
@@ -2245,7 +2249,15 @@ function soloRank(p, gameLength) {
       : (acc >= t.acc && p.correct >= t[len]);
     if (qualifies || lastTier) {
       const next = i > 0 ? SOLO_TIERS[i - 1] : null;
-      return { ...t, next: next ? `Rank ${next.letter} needs ${next[len]}+ correct at ${Math.round(next.acc * 100)}% accuracy` : null };
+      let hint = null;
+      if (next) {
+        const more = next[len] - p.correct, pct = Math.round(next.acc * 100);
+        const needs = [];
+        if (more > 0) needs.push(`${more} more correct`);
+        if (acc < next.acc) needs.push(`${pct}% accuracy (you hit ${Math.round(acc * 100)}%)`);
+        hint = `Rank ${next.letter} needs ${needs.join(' and ') || `${next[len]}+ correct at ${pct}% accuracy`}`;
+      }
+      return { ...t, next: hint };
     }
   }
 }
