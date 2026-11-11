@@ -19,7 +19,7 @@ import { loadCharacters, characters, characterById, portraitUrl, poseUrl } from 
 import { shape, compassLoader } from './shapes.js';
 import { animate, stagger } from 'motion';
 import 'number-flow';
-import { hostFigure, hostReact, hostSay, hostMove, poseSrc, faceSrc, setFace, preloadHost, tipHat } from './host.js';
+import { hostFigure, hostReact, hostSay, hostMove, poseSrc, faceSrc, setFace, preloadHost } from './host.js';
 import { empireMap, statusMark, pointAt } from './empire.js';
 
 loadCharacters();
@@ -450,12 +450,10 @@ function renderSetup() {
             <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
           </div>
         </div>
-        <figure class="title-stage" role="img"
-                aria-label="Napoleon stands on a folded map of Europe and welcomes you to the table">
-          ${shape('compass', 'title-compass')}
-          <img class="title-map" src="./assets/title-map.webp" alt=""
-               width="1485" height="546" decoding="async">
-          ${hostFigure('welcome', 'title-fig')}
+        <figure class="title-stage title-film" role="img"
+                aria-label="Napoleon strides up to a throne, shoves the question card and the crown off it, and takes his place beside it">
+          <video class="title-video" src="./assets/title/throne.mp4" poster="./assets/title/throne-last.webp"
+                 width="1280" height="746" muted playsinline preload="auto" aria-hidden="true"></video>
         </figure>
       </section>
       <section class="table" aria-labelledby="table-title">
@@ -520,17 +518,24 @@ function renderSetup() {
   renderPlayerInputs(playerCount, savedNames, savedAvatars);
   updateModeVisibility(playerCount);
 
-  // He steps onto the map, then tips his hat. A tap on him asks for an encore.
+  // The front screen plays once: he walks up to the throne and clears it, then holds there.
+  // A tap on the picture plays it again. Reduced motion, data saver or a refused autoplay
+  // leave the last frame up: him beside his empty throne.
   const screen = app.querySelector('.setup-screen');
-  const titleFig = app.querySelector('.title-fig');
-  const titleImg = titleFig?.querySelector('.host-img');
   const calm = prefersReducedMotion();
-  if (titleImg && !calm) {
-    if (setupStep === 'title') {
-      animate(titleImg, { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, ease: EXPO, delay: 0.15 });
-      setTimeout(() => { if (screen.dataset.step === 'title') tipHat(titleFig); }, 950);
-    }
-    titleFig.addEventListener('click', () => tipHat(titleFig));
+  const film = app.querySelector('.title-video');
+  const stage = app.querySelector('.title-film');
+  const still = () => { film.poster = './assets/title/throne-last.webp'; };
+  const roll = () => {
+    if (!film || calm || navigator.connection?.saveData) return;
+    film.poster = './assets/title/throne-first.webp';
+    film.currentTime = 0;
+    film.play()?.catch(() => { film.removeAttribute('src'); film.load(); still(); });
+  };
+  if (film) {
+    if (calm || navigator.connection?.saveData) film.preload = 'none';
+    if (setupStep === 'title') roll();
+    stage.addEventListener('click', () => { if (film.paused || film.ended) roll(); });
   }
 
   // Two steps, one page: the title, then the table. Nothing is re-rendered, so every choice survives a trip back.
@@ -545,9 +550,9 @@ function renderSetup() {
         animate(screen.querySelectorAll('.table-head, .seats, .cast, .table-game, .table-go'),
           { opacity: [0, 1], y: [16, 0] }, { duration: 0.42, ease: EXPO, delay: stagger(0.05) });
       }
+      if (film && !film.paused) film.pause();
       document.getElementById('table-title')?.focus({ preventScroll: true });
     } else {
-      if (titleImg && !calm) animate(titleImg, { opacity: [0, 1], y: [18, 0] }, { duration: 0.5, ease: EXPO });
       document.getElementById('btn-play')?.focus({ preventScroll: true });
     }
   };

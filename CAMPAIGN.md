@@ -95,6 +95,11 @@ Done on Nov 10 2026 (the live host pass):
 
 Done on Nov 10 2026 (the title page):
 
+- Nov 11: the front screen is now Kelly's throne film (`public/assets/title/throne.mp4`, cut from
+  `art-src/napoleon-throne.mp4` by `scripts/build-title-film.py`): he walks up to a throne, shoves the
+  question card and the crown off it, and stays beside it. It plays once, holds on the last frame and
+  plays again on a tap; reduced motion and data saver show the last frame. The hat tip below is no
+  longer on the title (its code and film are still in the repo).
 - Napoleon tips his hat on the title, and again when tapped. The film is
   `public/assets/host/welcome-tip.mp4`, cut from `art-src/napoleon-hat-tip.mp4` by
   `scripts/build-hat-tip.py`. If the welcome pose is ever redrawn, the film has to be made

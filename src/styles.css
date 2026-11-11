@@ -4036,3 +4036,56 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 @media (prefers-reduced-motion: reduce) {
   .seat, .cast .char-option, .cast-fig img { transition: none; }
 }
+
+/* — The front screen film (Nov 11 2026): Napoleon walks up to the throne, clears the question
+     card and the crown off it, and stays beside it. The film's paper was matched to the page
+     when it was cut, and its edges fade out, so it sits on the page with no box. — */
+/* the film is wide, so the title stacks at every size: the name, the film, then Play */
+.setup-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  height: auto;
+  min-height: 100%;
+  max-width: none;
+  text-align: center;
+}
+.setup-brand { display: contents; }
+.setup-screen .logo { text-align: center; white-space: nowrap; font-size: clamp(2.6rem, 5.4vw, 5rem); }
+.setup-deck { margin-top: 8px; }
+.setup-hero .title-film { order: 1; }
+.btn-play { order: 2; margin-top: 10px; }
+.setup-hero .hall-of-fame { order: 3; justify-content: center; margin-top: 18px; }
+.setup-hero .setup-footer { order: 4; justify-content: center; margin-top: 18px; }
+.title-film {
+  position: relative;
+  /* as wide as the window allows once the name and Play have their room */
+  width: min(1120px, 100%, calc((100dvh - 330px) * 1.716));
+  max-width: none;
+  margin: 0;
+  aspect-ratio: 1280 / 746;
+  container-type: normal;
+  cursor: pointer;
+}
+.title-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
+  mask-composite: intersect;
+}
+@media (max-width: 840px) {
+  .setup-hero { min-height: calc(100dvh - 28px); }
+  .setup-hero .title-film { width: calc(100% + 28px); margin: 14px -14px 4px; }
+  .setup-screen .logo { font-size: clamp(2.4rem, 11vw, 3.4rem); }
+  .btn-play { margin-top: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .title-film { cursor: default; }
+}
