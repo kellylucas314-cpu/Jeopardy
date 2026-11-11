@@ -6,6 +6,12 @@ First cut it to the stage and drop the white side bars, from the repo root:
     mkdir -p /tmp/throne/raw
     ffmpeg -i art-src/napoleon-throne.mp4 -vf "fps=24,crop=1728:1008:96:60,scale=1280:-2:flags=lanczos" /tmp/throne/raw/r_%03d.png
 
+Tightened Nov 11 (Kelly: "he pauses too long... and it's like glitchy"): extract every source frame
+(-fps_mode passthrough, same crop and scale) to src/s_%03d.png, then build raw/ from source frames
+5-57 and 75-134 (the empty stage trimmed, the long stand before the shove and the tail cut), with
+one 50% blend frame inserted before frames 24, 86, 88 and 106, where the model's motion snaps.
+117 frames, 4.9 s.
+
 Then run this from /tmp/throne. It reads the film's paper (and its vignette) off the empty first
 frame and lifts every frame so the paper is the page's own #fff9f3 right to the edges, which is
 what lets the film sit on the page with no box. Finally:
