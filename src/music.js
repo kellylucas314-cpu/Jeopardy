@@ -1,7 +1,8 @@
 /**
- * The music: Kelly's own recordings (Nov 12 2026). "Napoleon's Little Loop" and its second
- * take share the title and the "Who's playing?" table, one after the other; "One Note Quiz"
- * plays while a final answer is weighed. Nothing plays on the board.
+ * The music: Kelly's own recordings (Nov 12 2026). Four pieces take turns on the title and
+ * the "Who's playing?" table ("Napoleon's Little Loop", its second take, "Question and
+ * Answer" and an untitled evening recording); "One Note Quiz" plays while a final answer is
+ * weighed. Nothing plays on the board.
  *
  * Her brief: "not overwhelming.. not annoying... subtle", with "a clear button to turn it
  * off". So the files are mastered quiet (about -26 LUFS, well under the sound effects),
@@ -14,7 +15,12 @@
  */
 
 const TRACKS = {
-  menu: ['./assets/music/little-loop.mp3', './assets/music/little-loop-2.mp3'],
+  menu: [
+    './assets/music/little-loop.mp3',
+    './assets/music/little-loop-2.mp3',
+    './assets/music/question-and-answer.mp3',
+    './assets/music/evening-recording.mp3',
+  ],
   think: ['./assets/music/one-note-quiz.mp3'],
 };
 const EASE_IN = 1.8;  // seconds from silence to the (quiet) full level
