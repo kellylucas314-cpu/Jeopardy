@@ -1371,7 +1371,7 @@ function renderBoard() {
         <div class="host-dock">
           <div class="host-monogram has-face" aria-hidden="true"><img src="${faceSrc(mood)}" alt=""></div>
           <div class="host-plaque" aria-live="polite">${players.length > 1 && !opening
-            ? `<strong style="color: ${PLAYER_COLORS[activePlayer]}">${escapeHtml(players[activePlayer].name)}</strong>, choose your battlefield.`
+            ? `<strong>${escapeHtml(players[activePlayer].name)}</strong>, choose your battlefield.`
             : escapeHtml(remark)}</div>
         </div>
         <div class="board-footer-info">

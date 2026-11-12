@@ -4282,11 +4282,11 @@ body:has(> .category-intro) .host-fig { view-transition-name: none; }
      "make the animatuions smaller bc they seem not super hkgh qual". Where films can play, the
      standing host is one drawing throughout: a still frame of him with his arms crossed, looking
      at the player, in the same box as the films that play over it (see the foot of src/host.js).
-     He is shown no taller than 400px, which is close to the size the clips were drawn at. The
+     He is shown no taller than 300px (see the note at the foot of this file). The
      cut-out poses remain for reduced motion and data saver. — */
-:root { --stage-h: min(48vh, 400px); }
+:root { --stage-h: min(40vh, 300px); }
 .stage-host { --host-h: var(--stage-h); }
-.board-fig { --host-h: min(92cqh, 200cqw, 400px); }
+.board-fig { --host-h: min(92cqh, 200cqw, 300px); }
 .host-body {
   position: absolute;
   inset: 0;
@@ -4383,3 +4383,37 @@ body:has(> .category-intro) .host-fig { view-transition-name: none; }
   text-wrap: balance;
 }
 .clue-feedback .answer-key strong { font-weight: 600; color: var(--cream); }
+
+/* — Sharper, and heard (Kelly, Nov 11 2026). "maybe make my animated napoleon smaller? bc he is
+     a little blurry": the clips are 656px tall, so on a Retina screen anything much over 300px
+     is the film stretched. He stands 300px tall in play and on the results page, where two
+     screen pixels get about one film pixel each.
+     His remark under the board: "i didnt even really notice it". It was a white bar the width
+     of the board and read as an empty text box. It is his speech now: a honey bubble the width
+     of its words, in his italic, with a tail toward his face. — */
+@media (min-width: 561px) { .results-host { --host-h: clamp(200px, 30vh, 300px); } }
+.host-plaque {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  flex: 0 1 auto;
+  padding: 12px 22px;
+  background: var(--honey);
+  color: var(--cream);
+  font: italic 500 1.05rem/1.35 var(--font-ui);
+}
+.host-plaque::before {
+  content: '';
+  position: absolute;
+  right: calc(100% - 1px);
+  top: 50%;
+  width: 10px;
+  height: 16px;
+  translate: 0 -50%;
+  background: inherit;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+.host-plaque strong { font-style: normal; font-weight: 700; color: inherit; }
+@media (max-width: 560px) {
+  .host-plaque { flex: 0 1 auto; padding: 10px 16px; font-size: 0.9rem; }
+}
