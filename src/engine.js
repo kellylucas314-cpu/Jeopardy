@@ -6,6 +6,7 @@ import { getState, setState } from './state.js';
 import { loadRoundCategories, loadFinalClue } from './data.js';
 import { checkAnswer } from './fuzzy.js';
 import * as sounds from './sounds.js';
+import * as music from './music.js';
 import {
   chapterRecipe, chapterTimer, themedCategory, themedFinal, recordChapterResult,
 } from './campaign.js';
@@ -508,14 +509,14 @@ export function submitFinalWagers(wagers) {
     finalWagers: wagers,
     screen: 'final-clue',
   });
-  sounds.startThinkMusic();
+  music.play('think');
 }
 
 /**
  * Submit Final Jeopardy answers and calculate results.
  */
 export function submitFinalAnswers(answers) {
-  sounds.stopThinkMusic();
+  music.stop();
 
   const { finalClue, finalWagers, players } = getState();
   const results = answers.map((answer) => {
