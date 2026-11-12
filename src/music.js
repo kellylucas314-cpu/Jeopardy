@@ -15,9 +15,9 @@
  * until the music actually starts.
  */
 
-const QUIZ = './assets/music/one-note-quiz.mp3';
+const QUIZ = './assets/music/one-note-quiz-slow.mp3';
 const TRACKS = {
-  menu: [QUIZ, './assets/music/question-and-answer.mp3', './assets/music/evening-recording.mp3'],
+  menu: [QUIZ, './assets/music/question-and-answer-soft.mp3', './assets/music/evening-recording-soft.mp3'],
   think: [QUIZ],
 };
 const EASE_IN = 1.8;  // seconds from silence to the (quiet) full level
