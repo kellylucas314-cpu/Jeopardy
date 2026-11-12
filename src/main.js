@@ -762,12 +762,14 @@ function renderSetup() {
       <section class="setup-hero" aria-labelledby="game-title">
         <div class="setup-brand">
           <h1 class="logo" id="game-title">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></h1>
-          <p class="setup-deck"><span>A trivia coup hosted by Napoleon.</span> <span>History is watching.</span></p>
-          <button type="button" class="btn-start btn-play" id="btn-play">Play</button>
-          ${hof}
-          <div class="setup-footer">
-            <button class="link-btn" id="btn-how-to">How to play</button>
-            <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
+          <div class="setup-cta">
+            <p class="setup-deck"><span>A trivia coup hosted by Napoleon.</span> <span>History is watching.</span></p>
+            <button type="button" class="btn-start btn-play" id="btn-play">Play</button>
+            ${hof}
+            <div class="setup-footer">
+              <button class="link-btn" id="btn-how-to">How to play</button>
+              <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
+            </div>
           </div>
         </div>
         <figure class="title-stage title-film" role="img"
