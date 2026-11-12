@@ -1,29 +1,32 @@
 /**
  * The music: Kelly's own recordings (Nov 12 2026), steered by her ear.
  *
- *   menu   three pieces take turns on the title and the "Who's playing?" table: "One Note
- *          Quiz" always first, then "Question and Answer" and an untitled evening recording
+ *   menu   one piece on the title and the "Who's playing?" table: an untitled evening
+ *          recording, which comes round again after a breath
  *   think  "One Note Quiz" through the final round, until the answers are locked
  *
- * The game itself (the board, the clues, the wagers) is silent: after a night with a faint
- * bed under it she said "take the music out except for the final... put the one note there".
+ * Three pieces used to take turns in the menus. Kelly, Nov 12: "for the entry page just use the
+ * third song we dont need all 3... the one note can be for the final". The game itself (the
+ * board, the clues, the wagers) is silent: after a night with a faint bed under it she said
+ * "take the music out except for the final... put the one note there".
  *
  * Her brief: "not overwhelming.. not annoying... subtle", "softer please", and "a clear
- * button to turn it off". So the files are mastered very quiet (-32 to -34 LUFS), One Note
- * Quiz is 12% slower than she recorded it, the evening recording has its heavy beat tamed
- * (bass cut, hits rounded off), each piece eases in, and there is a breath between them. The
- * level is baked into the files because an iPhone ignores a page's volume setting. A
- * re-mastered file gets a new name (-m3, -m4...) so a browser never plays a cached older one.
+ * button to turn it off". So the files are mastered very quiet: One Note Quiz at -33.5 LUFS,
+ * and the evening recording at -40 LUFS, 6 dB under where it was, after "on the entry page
+ * make the music softer". One Note Quiz is 12% slower than she recorded it, the evening
+ * recording has its heavy beat tamed (bass cut, hits rounded off), each piece eases in, and
+ * there is a breath before it comes round again. The level is baked into the files because an
+ * iPhone ignores a page's volume setting. A re-mastered file gets a new name (-m3, -m4...) so
+ * a browser never plays a cached older one.
  *
  * Browsers only let sound start after a tap or a key, so play() before that is remembered
  * and begins on the first one. One <audio> element streams everything: nothing is fetched
  * until the music actually starts.
  */
 
-const QUIZ = './assets/music/one-note-quiz-m3.mp3';
 const TRACKS = {
-  menu: [QUIZ, './assets/music/question-and-answer-m3.mp3', './assets/music/evening-recording-m3.mp3'],
-  think: [QUIZ],
+  menu: ['./assets/music/evening-recording-m4.mp3'],
+  think: ['./assets/music/one-note-quiz-m3.mp3'],
 };
 const EASE_IN = 1.8;  // seconds from silence to the (quiet) full level
 // ms of rest between one piece and the next
@@ -128,7 +131,7 @@ function sync() {
     if (resting) { resting = false; el.play()?.catch?.(() => { playing = null; }); }
     return;
   }
-  if (breathTimer) return; // between two pieces
+  if (breathTimer) return; // the breath before a piece comes round again
   begin(wanted);
 }
 
