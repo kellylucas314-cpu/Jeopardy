@@ -4580,7 +4580,11 @@ body:has(> .category-intro) .host-fig { view-transition-name: none; }
 .music-strike { opacity: 0; }
 .music-button.is-off { color: var(--text-dim); }
 .music-button.is-off .music-strike { opacity: 1; }
+/* in the game itself: just the note, beside the menu button (main.js places it there) */
+.music-button.is-compact { left: 12px; right: auto; width: 44px; padding: 0; justify-content: center; }
+.music-button.is-compact .music-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 599px) {
   /* tucked in beside the two-line "Who's playing?" */
   .music-button { gap: 6px; padding: 0 13px 0 11px; font-size: 0.82rem; }
+  .music-button.is-compact { width: 40px; min-height: 40px; padding: 0; }
 }

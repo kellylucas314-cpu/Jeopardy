@@ -1,27 +1,34 @@
 /**
- * The music: Kelly's own recordings (Nov 12 2026). Three pieces take turns on the title and
- * the "Who's playing?" table, "One Note Quiz" always first, then "Question and Answer" and
- * an untitled evening recording. "One Note Quiz" also plays while a final answer is weighed.
- * Nothing plays on the board.
+ * The music: Kelly's own recordings (Nov 12 2026), steered by her ear over one evening.
  *
- * Her brief: "not overwhelming.. not annoying... subtle", with "a clear button to turn it
- * off"; and for One Note Quiz, "slow it down and make it quiet". So the files are mastered
- * quiet (about -28 LUFS, One Note Quiz at -31 and 12% slower than she recorded it), each
- * one eases in, and there is a breath between them. The level is baked into the files
- * because an iPhone ignores a page's volume setting.
+ *   menu   three pieces take turns on the title and the "Who's playing?" table: "One Note
+ *          Quiz" always first, then "Question and Answer" and an untitled evening recording
+ *   play   "One Note Quiz" again, "very very soft", under the game itself, with a long
+ *          rest between repeats
+ *   think  "One Note Quiz" while a final answer is weighed
+ *
+ * Her brief: "not overwhelming.. not annoying... subtle", "softer please", and "a clear
+ * button to turn it off". So the files are mastered very quiet (-32 to -34 LUFS on the
+ * menu, -40 under the game), One Note Quiz is 12% slower than she recorded it, the evening
+ * recording has its heavy beat tamed (bass cut, hits rounded off), each piece eases in, and
+ * there is a breath between them. The level is baked into the files because an iPhone
+ * ignores a page's volume setting. A re-mastered file gets a new name (-m3, -m4...) so a
+ * browser never plays a cached older one.
  *
  * Browsers only let sound start after a tap or a key, so play() before that is remembered
  * and begins on the first one. One <audio> element streams everything: nothing is fetched
  * until the music actually starts.
  */
 
-const QUIZ = './assets/music/one-note-quiz-slow.mp3';
+const QUIZ = './assets/music/one-note-quiz-m3.mp3';
 const TRACKS = {
-  menu: [QUIZ, './assets/music/question-and-answer-soft.mp3', './assets/music/evening-recording-soft.mp3'],
+  menu: [QUIZ, './assets/music/question-and-answer-m3.mp3', './assets/music/evening-recording-m3.mp3'],
+  play: ['./assets/music/one-note-quiz-bed-m3.mp3'],
   think: [QUIZ],
 };
 const EASE_IN = 1.8;  // seconds from silence to the (quiet) full level
-const BREATH = 1400;  // ms of rest between one piece and the next
+// ms of rest between one piece and the next: under the game the tune comes and goes
+const BREATH = { menu: 1400, think: 1400, play: 7000 };
 
 let musicOn = true;   // the player's Music switch
 let unlocked = false; // a tap or a key has happened, so sound may start
@@ -43,7 +50,7 @@ function player() {
     // the piece has ended: breathe, then play the next one (or the same one again)
     playing = null;
     clearTimeout(breathTimer);
-    breathTimer = setTimeout(() => { breathTimer = 0; sync(); }, BREATH);
+    breathTimer = setTimeout(() => { breathTimer = 0; sync(); }, BREATH[wanted] ?? 1400);
   });
   el.addEventListener('error', () => { playing = null; }); // a missing file means silence, not a crash
   return el;
@@ -126,7 +133,7 @@ function sync() {
   begin(wanted);
 }
 
-/** Ask for music: 'menu' (title and table) or 'think' (the final clue). */
+/** Ask for music: 'menu' (title and table), 'play' (under the game) or 'think' (the final clue). */
 export function play(mode) {
   if (!TRACKS[mode]) return;
   if (wanted !== mode) { clearTimeout(breathTimer); breathTimer = 0; }

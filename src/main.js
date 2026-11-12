@@ -529,8 +529,23 @@ function syncMusicButton() {
   btn.classList.toggle('is-off', !on);
   btn.querySelector('.music-label').textContent = on ? 'Music on' : 'Music off';
   btn.title = on ? 'Turn the music off' : 'Turn the music on';
+  // In the game itself the corner belongs to the scores, so the button shrinks to its note
+  // and sits beside the menu button; it keeps that spot on the clue and wager screens too.
+  const compact = music.asked() === 'play';
+  btn.classList.toggle('is-compact', compact);
+  if (compact) {
+    const r = document.getElementById('btn-menu')?.getBoundingClientRect();
+    const small = window.innerWidth < 600; // a phone's header has no room to spare
+    if (r?.width) musicSpot = { left: Math.round(r.right + (small ? 4 : 8)), top: Math.round(r.top + (r.height - (small ? 40 : 44)) / 2) };
+  }
+  btn.style.left = compact && musicSpot ? `${musicSpot.left}px` : '';
+  btn.style.top = compact && musicSpot ? `${musicSpot.top}px` : '';
 }
+let musicSpot = null;
+window.addEventListener('resize', () => { if (document.getElementById('music-button')) syncMusicButton(); });
 music.onChange(syncMusicButton);
+// the screens of the game itself, where the music is only a faint bed (Kelly: "very very soft")
+const BED_SCREENS = new Set(['board', 'clue', 'daily-double', 'round-transition', 'final-category', 'final-wager']);
 
 function render() {
   const state = getState();
@@ -552,8 +567,11 @@ function render() {
   // Board keyboard nav only lives on the board
   if (state.screen !== 'board') detachBoardKeys();
 
-  // The menu music belongs to the title and the table: it bows out as the game begins
-  if (state.screen !== 'setup' && music.asked() === 'menu') music.stop(1.2);
+  // Music by screen: the menu pieces bow out as the game begins, a very faint One Note Quiz
+  // runs under the game itself, and the engine asks for the thinking music on the final clue.
+  if (BED_SCREENS.has(state.screen)) { if (music.asked() !== 'play') music.play('play'); }
+  else if (state.screen === 'results' || state.screen === 'error') { if (music.asked()) music.stop(1.2); }
+  else if (state.screen !== 'setup' && music.asked() === 'menu') music.stop(1.2);
 
   const draw = () => {
     switch (state.screen) {
@@ -573,6 +591,7 @@ function render() {
     }
     // a reaction clip still playing moves over to the new screen's Napoleon
     hostCarry();
+    syncMusicButton();
   };
 
   // One screen hands over to the next, and Napoleon is carried across (see

@@ -78,6 +78,10 @@ FACES = {
     'face-brow': '34-suspicious-brow',
 }
 FACE_W = 240
+# In the kit's small WebP of these cues the top of his hat is cut off flat ("his hat is cut off
+# here", Kelly, Nov 11 2026). Their full-size videos show all of it, on a flat black backdrop,
+# so these are cut from the video instead.
+FACES_FROM_VIDEO = {'face-shock', 'face-nod', 'face-brow'}
 
 
 def webp_frames(path):
@@ -93,6 +97,28 @@ def video_frames(path):
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(path), '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
                          capture_output=True, check=True).stdout
     return np.frombuffer(raw, np.uint8).reshape(-1, h, w, 3)
+
+
+def backdrop_frames(path, size=480):
+    """A face cue cut straight from its full-size video: everything that is not the flat black
+    backdrop reaching the edge of the frame. Returns frames at the WebP's size, with their ms."""
+    rate = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=r_frame_rate',
+                           '-of', 'csv=p=0', str(path)], capture_output=True, text=True, check=True).stdout.strip().split('/')
+    ms = 1000 * int(rate[1] if len(rate) > 1 else 1) / int(rate[0])
+    out = []
+    for frame in video_frames(path):
+        dark = (frame.max(axis=2) <= 10).astype(np.uint8)
+        _, labels = cv2.connectedComponents(dark, connectivity=4)
+        edge = np.unique(np.concatenate([labels[0], labels[-1], labels[:, 0], labels[:, -1]]))
+        him = (~np.isin(labels, edge[edge > 0])).astype(np.uint8)
+        # one piece (he is drawn in one), pulled in a pixel so the dark fringe of the backdrop goes
+        n, parts, stats, _ = cv2.connectedComponentsWithStats(him, connectivity=8)
+        him = (parts == 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA]))).astype(np.uint8)
+        him = cv2.erode(him, np.ones((3, 3), np.uint8), iterations=2)
+        alpha = blur(him * 255, 1.2)
+        rgba = np.dstack([frame.astype(np.float32), alpha])
+        out.append((cv2.resize(rgba, (size, size), interpolation=cv2.INTER_AREA), ms))
+    return out
 
 
 def place(small, big):
@@ -221,11 +247,32 @@ def stand(frames, ref):
 def main():
     if len(sys.argv) < 2:
         raise SystemExit(__doc__)
+    # --only face-shock,face-nod: rebuild just those face films and leave the rest as they are
+    only = None
+    if '--only' in sys.argv:
+        i = sys.argv.index('--only')
+        only = set(sys.argv[i + 1].split(','))
+        del sys.argv[i:i + 2]
+        if only - set(FACES):
+            raise SystemExit('--only takes face films: ' + ', '.join(FACES))
     kit = Path(sys.argv[1])
     OUT.mkdir(parents=True, exist_ok=True)
-    for old in OUT.glob('*'):
-        old.unlink()
-    films = {}
+    if only:
+        films = json.loads(MANIFEST.read_text().split('export const FILMS = ', 1)[1].rstrip().rstrip(';'))
+    else:
+        for old in OUT.glob('*'):
+            old.unlink()
+        films = {}
+        build_figures(kit, films)
+    build_faces(kit, films, only)
+
+    MANIFEST.write_text('// Written by scripts/build-host-films.py. Kelly\'s reaction clips, as stacked films.\n'
+                        f'export const FILMS = {json.dumps(films, indent=2)};\n')
+    total = sum(f.stat().st_size for f in OUT.glob('*'))
+    print(f'{len(films)} films, {total / 1024:.0f} KB with their stills')
+
+
+def build_figures(kit, films):
 
     # the idle: away from the home frame and back, so every idle film starts and ends on it
     held = sharp_frames(IDLE_CUE, kit)
@@ -247,8 +294,15 @@ def main():
         films[name] = {'w': frames[0].shape[1], 'h': frames[0].shape[0], 'ms': write(name, frames),
                        **stand(frames, frames[-1] if name == 'bow' else frames[0])}
 
+
+
+def build_faces(kit, films, only=None):
     for name, cue in FACES.items():
-        frames = on_clock(webp_frames(kit / 'Game' / f'{cue}.webp'))
+        if only and name not in only:
+            continue
+        held = (backdrop_frames(kit / 'MP4' / f'{cue}.mp4') if name in FACES_FROM_VIDEO
+                else webp_frames(kit / 'Game' / f'{cue}.webp'))
+        frames = on_clock(held)
         boxes = np.array([box(f) for f in frames])
         x0, y0 = max(int(boxes[:, 0].min()) - 4, 0), max(int(boxes[:, 1].min()) - 4, 0)
         x1 = min(int(boxes[:, 2].max()) + 5, frames[0].shape[1])
@@ -265,11 +319,6 @@ def main():
             ready.append(np.dstack([f[..., :3] * a[..., None] + spread * (1 - a[..., None]), f[..., 3]]))
         films[name] = {'w': FACE_W, 'h': h, 'ms': write(name, ready, (FACE_W, h))}
         still(name, cut[0], (FACE_W, h))
-
-    MANIFEST.write_text('// Written by scripts/build-host-films.py. Kelly\'s reaction clips, as stacked films.\n'
-                        f'export const FILMS = {json.dumps(films, indent=2)};\n')
-    total = sum(f.stat().st_size for f in OUT.glob('*'))
-    print(f'{len(films)} films, {total / 1024:.0f} KB with their stills')
 
 
 if __name__ == '__main__':
