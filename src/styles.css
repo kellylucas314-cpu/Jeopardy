@@ -1,4 +1,12 @@
 @font-face {
+  /* Sacred Empires (Envato licence, Kelly's): cut down to the few letters the logo and the
+     table title use, so the file is small and is not a usable copy of the font. */
+  font-family: 'Sacred Empires';
+  src: url('/assets/fonts/SacredEmpires-logo.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
   font-family: 'Instrument Sans';
   src: url('/assets/fonts/InstrumentSans-Variable.woff2') format('woff2');
   font-weight: 400 700;
@@ -873,19 +881,6 @@ input { font-family: var(--font-ui); }
 .feedback-wrong { color: var(--wrong); font-size: 1.3rem; font-weight: 700; }
 .feedback-skip { color: var(--cream-dim); font-size: 1.05rem; font-weight: 500; }
 
-.feedback-icon {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto 10px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-.feedback-correct .feedback-icon { background: rgba(60, 122, 84, 0.12); border: 1px solid var(--correct); }
-.feedback-wrong .feedback-icon { background: rgba(166, 61, 41, 0.1); border: 1px solid var(--wrong); }
 
 .correct-response { font-size: 0.95rem; margin-top: 8px; color: var(--cream-dim); font-weight: 400; }
 .correct-response strong { color: var(--cream); font-weight: 700; }
@@ -1765,12 +1760,6 @@ input { font-family: var(--font-ui); }
 @keyframes riseIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes popIn { from { opacity: 0; transform: scale(0.82); } to { opacity: 1; transform: scale(1); } }
 
-.player-amount.bump { animation: scoreBump 0.5s var(--ease); }
-@keyframes scoreBump {
-  0% { transform: scale(1); }
-  40% { transform: scale(1.14); color: var(--brass-bright); }
-  100% { transform: scale(1); }
-}
 
 /* ============================================================
    RESPONSIVE
@@ -1977,7 +1966,6 @@ input { font-family: var(--font-ui); }
   vertical-align: -0.125em;
   flex-shrink: 0;
 }
-.feedback-icon .icon { width: 1.35rem; height: 1.35rem; }
 .stat-good .icon, .stat-bad .icon { width: 0.9em; height: 0.9em; margin-right: 0.3em; }
 .buzzer-key .icon { width: 0.95em; height: 0.95em; vertical-align: -0.1em; }
 
@@ -2312,17 +2300,6 @@ input { caret-color: var(--terracotta-deep); }
   justify-content: center;
   overflow: visible;
 }
-.board-host img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
-  transform: scale(1.55);
-  transform-origin: center bottom;
-  filter: drop-shadow(0 16px 18px rgba(37, 49, 40, 0.13));
-}
 
 .board-footer {
   display: grid;
@@ -2610,28 +2587,14 @@ input { caret-color: var(--terracotta-deep); }
 .co-next { font-size: 0.85rem; font-weight: 600; color: var(--jade-deep); }
 
 .modal.empire {
-  max-width: 580px;
-  width: min(580px, 94vw);
-  max-height: 88dvh;
+  max-width: 1000px;
+  width: min(1000px, 94vw);
+  max-height: 90dvh;
   overflow-y: auto;
   text-align: left;
 }
 .empire-headline { font-weight: 700; font-size: 1.05rem; color: var(--cream); }
 .empire-note { font-size: 0.88rem; color: var(--cream-dim); margin: 2px 0 10px; line-height: 1.5; }
-.empire-bar {
-  height: 8px;
-  border-radius: 999px;
-  background: var(--surface-3);
-  overflow: hidden;
-  margin: 6px 0;
-}
-.empire-bar-fill {
-  height: 100%;
-  width: calc(var(--fill, 0) * 100%);
-  background: var(--brass);
-  border-radius: 999px;
-  transition: width 0.4s var(--ease);
-}
 .empire-meta {
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -2640,23 +2603,20 @@ input { caret-color: var(--terracotta-deep); }
   color: var(--cream-faint);
   margin-bottom: 12px;
 }
-.empire-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+.empire-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 0 0 18px; padding: 0; }
 .empire-list li {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2px 12px;
-  padding: 8px 10px;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2px 10px;
+  padding: 8px 12px;
   border-radius: 10px;
   background: var(--surface-2);
-  border-left: 3px solid var(--line-strong);
+  cursor: default;
 }
-.empire-list li.status-core { border-left-color: var(--jade-deep); }
-.empire-list li.status-annexed { border-left-color: var(--jade); }
-.empire-list li.status-satellite { border-left-color: var(--brass); }
-.empire-list li.status-allied { border-left-color: var(--terracotta); }
-.empire-list li.status-occupied { border-left-color: var(--p1); }
-.empire-list li.status-lost { border-left-color: var(--wrong); opacity: 0.72; }
-.empire-list li.status-exile { border-left-color: var(--cream-faint); }
+.empire-list li.status-lost { opacity: 0.72; }
+.empire-list li.is-on,
+.empire-list li:focus-visible { background: var(--surface-3); outline: none; }
 .eh-name { font-weight: 700; font-size: 0.92rem; color: var(--cream); }
 .eh-status {
   font-size: 0.68rem;
@@ -2667,13 +2627,13 @@ input { caret-color: var(--terracotta-deep); }
   white-space: nowrap;
   align-self: center;
 }
-.eh-note { grid-column: 1 / -1; font-size: 0.82rem; line-height: 1.45; color: var(--cream-dim); }
+.eh-note { grid-column: 2 / -1; font-size: 0.82rem; line-height: 1.45; color: var(--cream-dim); }
 
 @media (max-width: 640px) {
   .style-buttons { flex-direction: column; }
   .chapter-facts, .chapter-intro-facts { font-size: 0.74rem; }
-  .empire-list li { grid-template-columns: 1fr; }
-  .eh-status { white-space: normal; }
+  .empire-list li { grid-template-columns: auto 1fr; }
+  .eh-status { white-space: normal; grid-column: 2; }
 }
 
 /* ============================================================
@@ -2749,7 +2709,6 @@ input { caret-color: var(--terracotta-deep); }
   background: rgba(255, 253, 250, 0.38);
 }
 
-.board-host img { filter: none; }
 
 .guest-title { color: var(--jade-deep); font-size: 0.66rem; }
 .guest-names { font-size: 0.6rem; color: var(--cream); }
@@ -3017,7 +2976,7 @@ input { caret-color: var(--terracotta-deep); }
   flex: none;
   border-radius: 999px;
   object-fit: cover;
-  object-position: center 8%;
+  object-position: center;
   background: #f1e3cf;
 }
 .host-line figcaption { display: flex; flex-direction: column; gap: 3px; }
@@ -3096,24 +3055,9 @@ select:focus-visible,
 .btn-preset { border: 0; background: #f1e5d3; }
 .btn-preset:hover { background: #ead9c0; }
 
-/* — Napoleon thinks beside every clue — */
-.clue-host {
-  position: fixed;
-  z-index: 2;
-  right: clamp(16px, 4vw, 72px);
-  bottom: 0;
-  height: min(58vh, 470px);
-  width: auto;
-  pointer-events: none;
-  animation: hostIn 0.4s var(--ease) 0.1s backwards;
-}
-@keyframes hostIn { from { opacity: 0; translate: 0 14px; } }
-@media (max-width: 1099px) { .clue-host { display: none; } }
-@media (prefers-reduced-motion: reduce) { .clue-host { animation: none; } }
-
 /* — Board: Napoleon's face in the host dock — */
 .host-monogram.has-face { padding: 0; overflow: hidden; border: 0; border-radius: 999px; background: #f1e3cf; }
-.host-monogram.has-face img { width: 100%; height: 100%; object-fit: cover; object-position: center 8%; }
+.host-monogram.has-face img { width: 100%; height: 100%; object-fit: cover; }
 .board-footer { grid-template-columns: minmax(0, 1fr) auto; }
 
 /* — Results: the players on the podium, Napoleon beside them — */
@@ -3123,11 +3067,7 @@ select:focus-visible,
   justify-content: center;
   gap: clamp(16px, 4vw, 56px);
 }
-.results-host {
-  height: clamp(220px, 34vh, 400px);
-  width: auto;
-  flex: none;
-}
+.results-host { --host-h: clamp(220px, 34vh, 400px); }
 .podium-avatar { box-shadow: none; }
 .podium-avatar.has-portrait { border-width: 3px; }
 .podium-col.rank-1 .podium-avatar { width: 92px; height: 92px; }
@@ -3143,7 +3083,7 @@ select:focus-visible,
 .solo-scorecard { background: transparent; border: 0; box-shadow: none; }
 .solo-scorecard .podium-avatar { width: 96px; height: 96px; }
 @media (max-width: 560px) {
-  .results-host { height: 170px; }
+  .results-host { --host-h: 170px; }
   .results-stage { gap: 10px; }
   .podium-col.rank-1 .podium-avatar { width: 72px; height: 72px; }
 }
@@ -3202,3 +3142,1338 @@ select:focus-visible,
   text-transform: none;
 }
 .transition-note { border: 0; background: rgba(255, 253, 250, 0.72); }
+
+
+/* ============================================================
+   THE LIVE HOST PASS (Nov 10 2026): the game answers back.
+   One authored idea: Napoleon is a live host. His pose, his face
+   and his words follow the game. Around him, three quiet helpers:
+   scores that roll, screens that hand over to each other, and an
+   answer line that says how it went. Everything here moves with
+   transform and opacity only, and all of it stands still under
+   prefers-reduced-motion (the poses and words still change).
+   ============================================================ */
+
+:root { --ease-expo: cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* — The figure: a slot of fixed size; each pose stands in it at its own height — */
+.host-fig {
+  position: relative;
+  flex: none;
+  height: var(--host-h, 420px);
+  width: calc(var(--host-h, 420px) * 0.6);
+  pointer-events: none;
+  view-transition-name: host;
+}
+.host-img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  translate: -50% 0;
+  height: calc(100% * var(--k, 1));
+  width: auto;
+  max-width: none;
+  transform-origin: 50% 100%;
+  user-select: none;
+  animation: hostBreathe 3.8s ease-in-out infinite alternate;
+}
+@keyframes hostBreathe { to { scale: 1 1.012; } }
+
+/* beside the clue, the wager and the in-between screens: wide screens only */
+.stage-host {
+  position: fixed;
+  z-index: 2;
+  right: clamp(20px, 4vw, 80px);
+  bottom: 0;
+  --host-h: min(56vh, 470px);
+}
+@media (max-width: 1239px) { .stage-host { display: none; } }
+
+/* at the board: he fills his column, and a wide pose may reach over its edge */
+.board-host { container-type: size; }
+.board-fig { --host-h: min(96cqh, 200cqw, 560px); translate: -16px 0; }
+
+/* his words, on a wide screen */
+.host-say {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% * var(--k, 1) + 16px);
+  translate: -50% 0;
+  width: max-content;
+  max-width: 250px;
+  padding: 12px 18px;
+  border-radius: 20px;
+  background: #fffdfa;
+  color: var(--cream);
+  font: italic 400 1.02rem/1.35 var(--font-ui);
+  text-align: center;
+  text-wrap: balance;
+  transform-origin: 50% 100%;
+}
+.host-say::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 1px);
+  width: 18px;
+  height: 11px;
+  translate: -50% 0;
+  background: inherit;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.host-say[hidden] { display: none; }
+
+/* — The verdict: his face and line on a phone; on a wide screen the figure says it — */
+.verdict {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 440px;
+  margin: 0 auto 12px;
+  text-align: left;
+}
+.verdict-fig {
+  flex: none;
+  width: 124px;
+  height: 132px;
+  overflow: hidden;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  -webkit-mask-image: linear-gradient(#000 74%, transparent);
+  mask-image: linear-gradient(#000 74%, transparent);
+}
+.verdict-fig img { height: 268px; width: auto; max-width: none; margin-top: 6px; transform-origin: 50% 60%; }
+.verdict figcaption {
+  position: relative;
+  padding: 11px 15px;
+  border-radius: 16px;
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  font: italic 400 1.02rem/1.35 var(--font-ui);
+  color: var(--cream);
+}
+.verdict figcaption::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 26px;
+  width: 11px;
+  height: 11px;
+  rotate: 45deg;
+  background: inherit;
+  border-left: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 1240px) {
+  .clue-screen .verdict {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+.verdict-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font: 600 1.9rem/1 var(--font-ui);
+  font-variant-numeric: tabular-nums;
+}
+.verdict-score span { display: inline-block; transform-origin: 0 50%; }
+.verdict-score .icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  font-size: 1.15rem;
+  color: var(--paper);
+  background: currentColor;
+}
+.feedback-correct .verdict-score .icon { background: var(--correct); }
+.feedback-wrong .verdict-score .icon { background: var(--wrong); }
+.feedback-correct,
+.feedback-wrong { font-weight: 400; }
+.feedback-skip .verdict { margin-bottom: 6px; }
+.feedback-correct .correct-response { margin-top: 10px; }
+
+/* the line you wrote on says how it went */
+.answer-input.is-right { border-bottom-color: var(--correct); color: var(--correct); opacity: 1; }
+.answer-input.is-wrong {
+  border-bottom-color: var(--wrong);
+  color: var(--wrong);
+  opacity: 1;
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+/* — Scores roll; the difference lifts off the pill — */
+number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2em; }
+.player-score { position: relative; }
+.score-delta {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 6px);
+  translate: -50% 0;
+  z-index: 6;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font: 500 0.82rem/1 var(--font-mono);
+  color: var(--paper);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.score-delta.up { background: var(--correct); }
+.score-delta.down { background: var(--wrong); }
+
+/* the tile just played gives up its value */
+.board-clue .spent { display: inline-block; animation: spent 0.7s var(--ease-expo) 0.4s both; }
+@keyframes spent { to { opacity: 0; scale: 0.55; } }
+
+/* — One screen hands over to the next; Napoleon is carried across — */
+@keyframes handOut { to { opacity: 0; } }
+@keyframes handIn { from { opacity: 0; translate: 0 10px; } }
+::view-transition-old(root) { animation: 150ms ease-in both handOut; }
+::view-transition-new(root) { animation: 340ms var(--ease-expo) 70ms both handIn; }
+::view-transition-group(host) { animation-duration: 440ms; animation-timing-function: var(--ease-expo); }
+::view-transition-old(host),
+::view-transition-new(host) { height: 100%; width: 100%; object-fit: contain; object-position: 50% 100%; }
+
+/* — Chapter facts sit under the title, never above it — */
+.chapter-meta {
+  font: 400 0.82rem/1.4 var(--font-mono);
+  color: var(--cream-dim);
+}
+.loading-screen .chapter-meta { margin-top: 10px; }
+
+/* on a phone there is no room for the figure, so his face and his line host the board */
+@media (max-width: 560px) {
+  .host-dock { align-items: center; }
+  .host-plaque { display: block; flex: 1; min-width: 0; font-size: 0.84rem; padding: 10px 16px; }
+  /* a chapter's long round line wraps under the title instead of pushing it off the screen */
+  .board-brand { min-width: 0; max-width: 100%; }
+  .round-meta { width: auto; flex-wrap: wrap; justify-content: center; row-gap: 4px; }
+  .round-name { text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .host-img { animation: none; }
+  .board-clue .spent { display: none; }
+}
+
+
+/* ============================================================
+   THE WEAK-SPOTS PASS (Nov 10 2026)
+   The map of the Empire, his figure on phones, streaks.
+   ============================================================ */
+
+/* — The map: a faceted Europe, one mark per holding — */
+.empire-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  background: #dbe7e0;
+  overflow: hidden;
+  user-select: none;
+}
+.em-land { fill: #ead9bd; }
+.em-f0 { fill: #f6ead6; }
+.em-f1 { fill: #f1e2c8; }
+.em-f2 { fill: #ebd9ba; }
+.em-f3 { fill: #e5d0ad; }
+.em-f4 { fill: #dfc8a2; }
+.em-pin { cursor: pointer; }
+.em-shape { transform-box: fill-box; transform-origin: center; transition: scale 0.18s var(--ease-expo); }
+.em-pin.is-on .em-shape { scale: 1.55; }
+.em-shape > *,
+.em-mark > * { fill: currentColor; stroke: var(--paper); stroke-width: 2.2; paint-order: stroke; stroke-linejoin: round; }
+.em-shape > .em-hollow,
+.em-mark > .em-hollow { fill: var(--paper); stroke: currentColor; stroke-width: 2.8; }
+.em-shape > .em-cross,
+.em-mark > .em-cross { fill: none; stroke: currentColor; stroke-width: 3.2; stroke-linecap: round; }
+.status-core { color: var(--jade-deep); }
+.status-annexed { color: var(--jade-bright); }
+.status-satellite { color: var(--brass-bright); }
+.status-allied { color: var(--terracotta-deep); }
+.status-occupied { color: var(--p1); }
+.status-lost { color: var(--wrong); }
+.status-exile { color: var(--cream-faint); }
+.empire-list li { color: inherit; }
+.em-edge { font: 400 11px var(--font-mono); fill: var(--cream-dim); }
+.em-label { pointer-events: none; }
+.em-label rect { fill: var(--cream); }
+.em-label text { fill: var(--paper); font: 600 13px var(--font-ui); }
+.em-mark { width: 16px; height: 16px; flex: none; }
+.empire-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  color: var(--cream-dim);
+}
+.empire-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.empire-list .eh-name { color: var(--cream); }
+
+/* — Streaks — */
+.streak { display: inline-block; }
+.streak.is-hot { padding: 1px 7px; border-radius: 999px; background: var(--wrong); color: var(--paper); }
+
+/* — Phones: a bigger face in the dock, so his mood reads at a glance — */
+@media (max-width: 560px) {
+  .host-monogram.has-face { width: 52px; height: 52px; }
+  .verdict { align-items: flex-start; }
+  .verdict figcaption { margin-top: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .em-shape { transition: none; }
+}
+
+/* — The Empire dialog: the map stays in view while the ledger scrolls — */
+.empire-map-wrap { padding: 4px 0 10px; background: var(--surface-1); }
+@media (min-width: 900px) {
+  .empire-body { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+  .empire-list { max-height: min(64dvh, 600px); overflow-y: auto; padding-right: 6px; overscroll-behavior: contain; }
+}
+@media (max-width: 899px) {
+  .modal.empire { padding: 20px 18px; }
+  .empire-body, .empire-side { display: contents; }
+  .empire-map-wrap { position: sticky; top: 0; z-index: 2; padding-top: 10px; }
+}
+
+
+/* ============================================================
+   THE LIGHT PASS (Nov 10 2026)
+   Kelly: lighter, less heavy, keep the tans, and let colour point at
+   what matters. The rules this section sets:
+   - Paper and hairlines carry the structure. No drop shadows.
+   - Nothing selected is ever a black slab: a choice is white paper
+     with a jade line and a jade tick.
+   - Jade means "chosen" or "go". One solid button per screen.
+   - Labels are Instrument Sans, not mono.
+   ============================================================ */
+
+/* — The title: Napoleon stands on the map, hat on, nothing cut off — */
+.title-stage {
+  aspect-ratio: 10 / 7;
+  max-width: 820px;
+  background: none;
+  isolation: auto;
+  container-type: size;
+}
+.title-map { left: 5%; top: auto; bottom: 0; width: 90%; height: auto; z-index: 0; }
+.title-fig {
+  position: absolute;
+  z-index: 1;
+  left: 55%;
+  bottom: 15cqh;
+  translate: -50% 0;
+  --host-h: 82cqh;
+}
+/* where his boots meet the map */
+.title-fig::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -2.4cqh;
+  width: 64%;
+  height: 6cqh;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(58, 40, 22, 0.36), rgba(58, 40, 22, 0));
+}
+.title-compass { right: 1%; top: 3%; width: 14%; }
+
+/* — The table: tan paper, thin lines — */
+.setup-panel { border: 1px solid var(--line); }
+.setup-card h2 { font: 600 0.88rem/1.3 var(--font-ui); color: var(--cream); margin-bottom: 10px; }
+.mode-title { margin-top: 26px; }
+
+.player-count-buttons { gap: 8px; padding: 0; background: transparent; border-radius: 0; margin-bottom: 20px; }
+.btn-player-count {
+  padding: 11px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cream-dim);
+  font-weight: 500;
+}
+.btn-player-count:hover { background: rgba(255, 255, 255, 0.65); color: var(--cream); }
+.btn-player-count.selected {
+  border-color: var(--jade-deep);
+  box-shadow: inset 0 0 0 1px var(--jade-deep);
+  background: #ffffff;
+  color: var(--jade-deep);
+  font-weight: 650;
+}
+
+.btn-mode {
+  position: relative;
+  padding: 14px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  background: transparent;
+}
+.btn-mode:hover { border: 1px solid var(--line-strong); background: rgba(255, 255, 255, 0.65); }
+.btn-mode.selected {
+  border: 1px solid var(--jade-deep);
+  box-shadow: inset 0 0 0 1px var(--jade-deep);
+  background: #ffffff;
+  color: var(--cream);
+}
+.btn-mode.selected .mode-name { color: var(--jade-deep); padding-right: 24px; }
+.btn-mode.selected .mode-desc,
+.btn-mode.selected p { color: var(--cream-dim); }
+.btn-mode.selected::after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--jade-deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.4l2.6 2.6L13 6.4' fill='none' stroke='%23fff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 18px no-repeat;
+}
+
+/* — Players and their characters — */
+.player-row { margin-bottom: 14px; }
+.player-row .name-input-group { margin-bottom: 4px; gap: 12px; }
+.name-input-group .player-seal { width: 54px; height: 54px; }
+.name-input-group input { border: 1px solid var(--line-strong); border-radius: 12px; background: #ffffff; }
+.name-input-group input:focus { border-color: var(--jade-deep); outline: 2px solid var(--jade-deep); outline-offset: 0; }
+.char-change {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  width: calc(100% - 66px);
+  margin-left: 66px;
+  padding: 4px 2px;
+  border: 0;
+  background: none;
+  color: var(--cream-dim);
+  font: 400 0.84rem/1.3 var(--font-ui);
+  text-align: left;
+  cursor: pointer;
+}
+.char-change strong { color: var(--cream); font-weight: 600; }
+.char-change-cta { flex: none; color: var(--jade-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.char-change:hover .char-change-cta { color: var(--jade-bright); }
+.char-picker { margin: 8px 0 4px; border: 1px solid var(--line); border-radius: 16px; background: #ffffff; }
+.chapter-card { border: 1px solid var(--line); background: #ffffff; }
+
+@media (max-width: 840px) {
+  .title-stage { aspect-ratio: 10 / 8.4; }
+  .title-map { left: 0; width: 100%; }
+  .title-fig { bottom: 12cqh; --host-h: 86cqh; }
+}
+
+/* — The board: the headers step back, so the square you are on is the loudest thing — */
+.category-header { background: #f6dccd; color: #7a3519; }
+.board-category.themed .category-header { background: var(--jade-tint); color: var(--jade-deep); }
+.reroll-btn { border: 1px solid var(--jade-deep); background: transparent; color: var(--jade-deep); }
+.reroll-btn:hover { background: #ffffff; }
+
+
+/* ============================================================
+   THE MOLDED PASS (Nov 10 2026)
+   From the style guide Kelly chose (Refero, "illustrated industrial
+   optimism"), in our colours and our font. What it takes from it:
+   - A warm tray cradles white panels: a small white radius nested
+     in a larger tan one, instead of outlines.
+   - White panels carry one soft, layered shadow, so they feel molded.
+   - The page is flat paper. Colour lives in the illustrations and in
+     small terracotta punctuation: a full stop, a label.
+   - Jade stays the one colour for "chosen" and "go".
+   ============================================================ */
+:root {
+  --tray: #efe5d8;
+  --inset: #f8f2ea;
+  --accent: #cf5a33;
+  --accent-ink: #9c421f;
+  --accent-wash: #fbeae1;
+  --molded:
+    0 0.7px 0.7px -0.4px rgba(70, 48, 24, 0.04),
+    0 1.8px 1.8px -0.8px rgba(70, 48, 24, 0.04),
+    0 3.6px 3.6px -1.3px rgba(70, 48, 24, 0.04),
+    0 6.9px 6.9px -1.7px rgba(70, 48, 24, 0.04),
+    0 13.6px 13.6px -2.1px rgba(70, 48, 24, 0.035),
+    0 30px 30px -2.5px rgba(70, 48, 24, 0.03);
+  /* flat paper up top; the hills are an illustration along the foot of the screen, with a
+     glow above them, instead of a tint over all of it */
+  --hills:
+    linear-gradient(var(--paper) 44%, rgba(255, 249, 243, 0) 68%),
+    linear-gradient(rgba(255, 249, 243, 0.16), rgba(255, 249, 243, 0.16)),
+    var(--paper) url('/assets/board-faceted-bg.webp') center bottom / cover no-repeat;
+}
+.board-screen { background: var(--hills); }
+
+/* — A full stop in terracotta: the one spark on a headline — */
+.logo-dot { color: var(--accent); }
+
+/* — The table: a tan tray holding white panels — */
+.setup-panel { padding: 14px; border: 0; border-radius: 40px; background: var(--tray); }
+.setup-panel-heading { margin: 16px 14px 18px; }
+.tray-card { margin-bottom: 10px; padding: 22px; border-radius: 28px; background: #ffffff; box-shadow: var(--molded); }
+.tray-card > h2:first-child { margin-top: 0; }
+.tray-card > :last-child { margin-bottom: 0; }
+.btn-player-count { border: 0; background: var(--inset); }
+.btn-player-count:hover { background: #f1e8db; }
+.btn-player-count.selected { box-shadow: inset 0 0 0 2px var(--jade-deep); }
+.btn-mode,
+.btn-mode:hover { border: 0; background: var(--inset); }
+.btn-mode:hover { background: #f1e8db; }
+.btn-mode.selected { border: 0; box-shadow: inset 0 0 0 2px var(--jade-deep); background: #ffffff; }
+.name-input-group input { border-color: transparent; background: var(--inset); }
+.chapter-card { border: 0; border-radius: 20px; background: var(--inset); }
+.char-picker { border: 0; background: var(--inset); }
+.btn-start { min-height: 54px; margin: 6px 0 0; border-radius: 200px; }
+.setup-footer { margin: 14px 0 8px; }
+
+/* — The board: white squares in a tray — */
+.game-board { padding: 12px; border-radius: 32px; background: var(--tray); }
+.board-clue { border-radius: 18px; background: #ffffff; box-shadow: var(--molded); }
+.board-clue.answered { background: rgba(255, 255, 255, 0.4); box-shadow: none; }
+.category-header { border-radius: 18px; background: var(--accent-wash); color: var(--accent-ink); }
+
+/* — The clue: one white panel with a thick tan rim — */
+.clue-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(900px, 100%);
+  padding: 34px 44px 30px;
+  border: 12px solid var(--tray);
+  border-radius: 48px;
+  background: #ffffff;
+  box-shadow: var(--molded);
+}
+.clue-category {
+  padding: 8px 16px;
+  border-radius: 70px;
+  background: var(--accent-wash);
+  color: var(--accent-ink);
+  font: 600 0.86rem/1.3 var(--font-ui);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.clue-panel .verdict figcaption { border: 0; background: var(--inset); }
+.clue-panel .verdict figcaption::before { border: 0; }
+
+@media (max-width: 840px) {
+  .setup-panel { padding: 10px; border-radius: 32px; }
+  .tray-card { padding: 18px; border-radius: 24px; }
+}
+@media (max-width: 560px) {
+  .game-board { padding: 8px; border-radius: 24px; }
+  .board-clue, .category-header { border-radius: 14px; }
+  .clue-screen { padding: 14px; }
+  .clue-panel { padding: 22px 18px 20px; border-width: 8px; border-radius: 36px; }
+}
+
+/* — The wager: the same white panel as a clue; the footer notes stay readable on the hills — */
+.dd-content {
+  max-width: 460px;
+  padding: 26px 32px 28px;
+  border: 12px solid var(--tray);
+  border-radius: 44px;
+  background: #ffffff;
+  box-shadow: var(--molded);
+}
+.dd-flash { margin-bottom: 18px; }
+.reroll-btn { background: #ffffff; }
+.clues-remaining { padding: 5px 12px; border-radius: 70px; background: rgba(255, 249, 243, 0.86); color: var(--text-dim); }
+@media (max-width: 560px) {
+  .dd-content { padding: 20px 18px 22px; border-width: 8px; border-radius: 34px; }
+}
+
+/* — The hat tip: a film cut to his outline, drawn on a canvas, takes the still picture's place
+     and then hands back. The film's box is 1.0489 times the still picture's height (room for the
+     lifted hat) and shares its centre and its feet, so the two register (scripts/build-hat-tip.py). — */
+.host-tip {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  translate: -50% 0;
+  height: calc(100% * var(--k, 1) * 1.0489);
+  width: auto;
+  max-width: none;
+  user-select: none;
+  pointer-events: none;
+}
+.host-fig.is-tipping .host-img { visibility: hidden; }
+/* on the title the whole figure breathes, so the still picture and the film breathe as one */
+.title-fig { pointer-events: auto; cursor: pointer; transform-origin: 50% 100%; animation: hostBreathe 3.8s ease-in-out infinite alternate; }
+.title-fig .host-img { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .title-fig { animation: none; cursor: default; }
+}
+
+
+/* ============================================================
+   THE START IN TWO (Nov 10 2026)
+   Kelly: "split it in 2 ... they should get a bit more real estate."
+   - Step one is the title: Napoleon, the name and one Play button.
+   - Step two is the table. The players sit along the top as name cards;
+     a tap on a player hands them the cast.
+   - Kelly, Nov 11: "it should be full body". The cast stands below them
+     full length, once, with names. A numbered tag marks a held figure and
+     a white tile with a jade line marks the one being chosen.
+   - The game's four choices keep to one quiet card of pill rows.
+   Both steps live in one page (data-step on .setup-screen), so nothing
+   is lost on the way back.
+   ============================================================ */
+.setup-screen { display: block; }
+.setup-screen[data-step="title"] .table,
+.setup-screen[data-step="table"] .setup-hero { display: none; }
+@media (min-width: 841px) {
+  .setup-screen { overflow-y: auto; }
+  .setup-screen[data-step="table"] { padding-block: clamp(14px, 2.6vh, 40px); }
+}
+
+/* — Step one: the title — */
+.setup-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 72px);
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.setup-brand { display: flex; flex-direction: column; align-items: flex-start; max-width: none; }
+.setup-hero .title-stage { justify-self: center; }
+.btn-play {
+  width: auto;
+  min-width: 230px;
+  min-height: 72px;
+  margin: 36px 0 0;
+  padding: 0 48px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.setup-hero .hall-of-fame { margin: 24px 0 0; }
+.setup-hero .setup-footer { justify-content: flex-start; flex-wrap: wrap; margin: 26px 0 0; }
+
+/* — Step two: the table — */
+.table {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(350px, 0.6fr);
+  grid-template-rows: auto 1fr;
+  gap: 14px clamp(16px, 2vw, 28px);
+  min-height: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.table-cast,
+.table-game { padding: 14px; border-radius: 40px; background: var(--tray); }
+.table-cast { grid-row: 1 / span 2; display: flex; flex-direction: column; min-width: 0; }
+.table-game { grid-column: 2; min-width: 0; }
+.table-go { grid-column: 2; align-self: start; }
+.table-go .btn-start { width: 100%; min-height: 62px; margin: 0; font-size: 1.12rem; }
+
+.table-head { display: flex; align-items: center; gap: 12px; margin: 8px 8px 4px 6px; }
+.table-head h2 {
+  flex: 1;
+  min-width: 0;
+  font: 560 clamp(1.7rem, 2.7vw, 2.5rem)/1.1 var(--font-display);
+  letter-spacing: -0.035em;
+  color: var(--cream);
+  outline: none;
+}
+.table-back {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--cream);
+}
+.table-back:hover { background: var(--inset); }
+
+/* a row of pills: the picked one is white paper with a jade line */
+.seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4px; padding: 4px; border-radius: 999px; background: var(--inset); }
+.seg-btn {
+  min-height: 42px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: none;
+  color: var(--text-dim);
+  font: 500 0.9rem/1.1 var(--font-ui);
+  white-space: nowrap;
+}
+.seg-btn:hover { color: var(--cream); }
+.seg-btn.selected { background: #ffffff; color: var(--cream); box-shadow: inset 0 0 0 2px var(--jade-deep); }
+.seg-count { flex: none; background: rgba(255, 255, 255, 0.6); }
+.seg-count .seg-btn { padding: 0 16px; }
+
+/* the players: one name card each along the top */
+.seats { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 290px); justify-content: start; gap: 8px; padding: 10px 0 12px; }
+.seat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 8px 14px 8px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.seat.is-picking { background: #ffffff; box-shadow: var(--molded), inset 0 0 0 2px var(--pc); }
+.seat-face {
+  position: relative;
+  flex: none;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--inset);
+}
+.seat-face:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 3px; }
+.seat-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 20%; }
+.seat-seal {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--pc);
+  color: #ffffff;
+  font: 500 1.3rem/1 var(--font-ui);
+}
+.seat-img[hidden],
+.seat-seal[hidden] { display: none; }
+.seat-num {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--pc);
+  color: #ffffff;
+  font: 500 0.7rem/1 var(--font-mono);
+  box-shadow: 0 0 0 2px #ffffff;
+}
+.seat-text { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.seat-text input {
+  width: 100%;
+  min-width: 0;
+  padding: 2px 0;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  outline: none;
+  background: none;
+  color: var(--cream);
+  font: 600 1.02rem/1.2 var(--font-ui);
+}
+.seat-text input:focus { border-bottom-color: var(--jade-deep); }
+.seat-as { overflow: hidden; color: var(--text-dim); font: 400 0.8rem/1.3 var(--font-ui); text-overflow: ellipsis; white-space: nowrap; }
+
+/* the cast: the whole line-up, full length, once for the table */
+.cast { margin: 0; padding: 16px 16px 18px; }
+.cast-line { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 4px 12px; }
+.cast-for { color: var(--cream); font: 600 0.98rem/1.3 var(--font-ui); }
+.cast-who { color: var(--pc); font-weight: 600; }
+.cast-none {
+  position: relative;
+  flex: none;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--inset);
+  color: var(--text-dim);
+  font: 500 0.82rem/1 var(--font-ui);
+}
+.cast-none:hover { color: var(--cream); }
+.cast-none.selected { background: #ffffff; color: var(--jade-deep); box-shadow: inset 0 0 0 2px var(--jade-deep); }
+.cast-none .cast-tag { top: -8px; right: -6px; bottom: auto; }
+.cast-figures {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px 8px;
+  /* each figure as tall as the window allows: two rows under the heading and the name cards */
+  --fh: clamp(130px, calc((100vh - 360px) / 2 - 44px), 260px);
+}
+.cast .char-option,
+.cast .char-option:hover,
+.cast .char-option[aria-checked="true"] {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 12px 4px 10px;
+  border-radius: 22px;
+  /* each character's own soft tone, the same one behind their face in play */
+  background: color-mix(in srgb, var(--tone, var(--inset)) 45%, #ffffff);
+  color: var(--text-dim);
+  font: 500 0.8rem/1.2 var(--font-ui);
+  transition: background 0.15s, box-shadow 0.15s;
+}
+.cast .char-option:hover { background: color-mix(in srgb, var(--tone, var(--inset)) 80%, #ffffff); color: var(--cream); }
+.cast .char-option[aria-checked="true"] { background: #ffffff; color: var(--jade-deep); box-shadow: var(--molded), inset 0 0 0 2px var(--jade-deep); }
+.cast .char-option[aria-checked="true"] .cast-name { font-weight: 600; }
+.cast .char-option:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 3px; }
+/* the art is 640 by 960 with the feet at 928 and the tallest head near 110: fill the box with the figure */
+.cast-fig { position: relative; display: block; width: 100%; height: var(--fh); }
+.cast-fig::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: calc(var(--fh) * 0.42);
+  max-width: 90%;
+  height: 10px;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(58, 40, 22, 0.24), rgba(58, 40, 22, 0));
+}
+.cast .cast-fig img {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: calc(var(--fh) * -0.039);
+  height: calc(var(--fh) * 1.17);
+  width: calc(var(--fh) * 0.78);
+  max-width: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+  translate: -50% 0;
+  transition: translate 0.18s;
+  pointer-events: none;
+  user-select: none;
+}
+.cast .char-option:hover .cast-fig img { translate: -50% -4px; scale: 1; }
+.cast-name { max-width: 100%; margin-top: 12px; text-align: center; text-wrap: balance; }
+.cast-tag {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--pc);
+  color: #ffffff;
+  font: 500 0.74rem/1 var(--font-mono);
+  box-shadow: 0 0 0 2px #ffffff;
+}
+.cast-tag + .cast-tag { right: 28px; }
+.cast-tag + .cast-tag + .cast-tag { right: 48px; }
+
+/* the game: four quiet rows */
+.game-card { margin: 0; }
+.game-card > h2 { margin: 0 0 4px 4px; color: var(--cream); font: 600 1.08rem/1.3 var(--font-ui); }
+.opt-row { margin-top: 16px; }
+.opt-label { margin: 0 0 7px 6px; color: var(--text-dim); font: 500 0.82rem/1.2 var(--font-ui); }
+.opt-note { margin: 8px 6px 0; color: var(--text-dim); font: 400 0.82rem/1.4 var(--font-ui); }
+.opt-note:empty { display: none; }
+.game-card .chapter-card { margin: 14px 0 0; }
+
+@media (max-width: 840px) {
+  /* the title, stacked: name, Napoleon, Play */
+  .setup-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    height: auto;
+    min-height: calc(100dvh - 28px);
+    text-align: center;
+  }
+  .setup-brand { display: contents; }
+  .setup-screen .logo { text-align: center; }
+  .setup-deck { margin-top: 10px; }
+  .setup-hero .title-stage { order: 1; margin-top: 6px; }
+  .btn-play { order: 2; width: min(100%, 320px); min-height: 66px; margin-top: 18px; }
+  .setup-hero .hall-of-fame { order: 3; justify-content: center; margin-top: 18px; }
+  .setup-hero .setup-footer { order: 4; justify-content: center; margin-top: 18px; }
+
+  /* the table, stacked, with the way in always in reach */
+  .table { display: block; min-height: 0; padding-bottom: 92px; }
+  .table-cast,
+  .table-game { padding: 10px; border-radius: 32px; }
+  .table-game { margin-top: 12px; }
+  .table-go {
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 18px 14px calc(14px + env(safe-area-inset-bottom));
+    background: linear-gradient(rgba(255, 249, 243, 0), var(--paper) 38%);
+  }
+  .table-head { flex-wrap: wrap; gap: 10px 12px; margin: 6px 4px 2px; }
+  .seg-count { flex: 1 0 100%; }
+  .seats { grid-auto-columns: minmax(0, 1fr); justify-content: stretch; gap: 6px; padding: 8px 0 10px; }
+  .seats[data-count="1"] { grid-auto-columns: minmax(0, 320px); justify-content: center; }
+  .seats:not([data-count="1"]) .seat { flex-direction: column; gap: 6px; padding: 10px 6px 8px; border-radius: 22px; text-align: center; }
+  .seats:not([data-count="1"]) .seat-text input { text-align: center; font-size: 1rem; }
+  .seat-face { width: 46px; height: 46px; }
+  .seat-as { font-size: 0.72rem; }
+  .cast { padding: 14px 10px 14px; }
+  .cast-line { flex-wrap: wrap; gap: 8px; margin: 0 4px 10px; }
+  .cast-figures { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px 6px; --fh: clamp(118px, 19vh, 160px); }
+  .cast .char-option,
+  .cast .char-option:hover,
+  .cast .char-option[aria-checked="true"] { padding: 10px 2px 8px; border-radius: 18px; font-size: 0.68rem; }
+  .cast-name { margin-top: 10px; }
+  .cast-tag { top: 5px; right: 5px; width: 20px; height: 20px; font-size: 0.66rem; }
+  .cast-tag + .cast-tag { right: 22px; }
+  .cast-tag + .cast-tag + .cast-tag { right: 39px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .seat, .cast .char-option, .cast-fig img { transition: none; }
+}
+
+/* — The front screen film (Nov 11 2026): Napoleon walks up to the throne, clears the question
+     card and the crown off it, and stays beside it. The film's paper was matched to the page
+     when it was cut, and its edges fade out, so it sits on the page with no box. — */
+/* the film is wide, so the title stacks at every size: the name, the film, then Play */
+.setup-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  height: auto;
+  min-height: 100%;
+  max-width: none;
+  text-align: center;
+}
+.setup-brand { display: contents; }
+.setup-screen .logo { text-align: center; white-space: nowrap; font-size: clamp(2.6rem, 5.4vw, 5rem); }
+.setup-deck { margin-top: 8px; }
+.setup-hero .title-film { order: 1; }
+.btn-play { order: 2; margin-top: 10px; }
+.setup-hero .hall-of-fame { order: 3; justify-content: center; margin-top: 18px; }
+.setup-hero .setup-footer { order: 4; justify-content: center; margin-top: 18px; }
+.title-film {
+  position: relative;
+  /* as wide as the window allows once the name and Play have their room */
+  width: min(1120px, 100%, calc((100dvh - 330px) * 1.716));
+  max-width: none;
+  margin: 0;
+  aspect-ratio: 1280 / 746;
+  container-type: normal;
+  cursor: pointer;
+}
+.title-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
+  mask-composite: intersect;
+}
+@media (max-width: 840px) {
+  .setup-hero { min-height: calc(100dvh - 28px); }
+  .setup-hero .title-film { width: calc(100% + 28px); margin: 14px -14px 4px; }
+  .setup-screen .logo { font-size: clamp(2.4rem, 11vw, 3.4rem); }
+  .btn-play { margin-top: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .title-film { cursor: default; }
+}
+
+/* — The name, the walk-in and a calmer table (Nov 11 2026). Kelly brought Sacred Empires, an
+     engraved serif, for the name. It is set only on the name (title, board, results) and on "Who's playing?", at sizes
+     where its engraving reads; everything read or tapped stays Instrument Sans. Napoleon enters
+     the film from its right edge, so on wide screens the film runs to the window's right edge
+     with no fade there and he walks in from off screen. The table asks for less: one player to
+     begin, the answering choice only for two or more, length and questions folded into one line. — */
+.logo,
+.board-title,
+.table-head h2 {
+  font-family: 'Sacred Empires', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-synthesis: none;
+  letter-spacing: 0;
+}
+/* The served font is a solid cut of Sacred Empires: scripts/solidify-sacred-empires.py closes the
+   engraved lines inside each letter and keeps the real counters (Kelly, Nov 11). */
+.setup-screen .logo { line-height: 0.92; }
+.table-head h2 { font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1; }
+.title-video {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 3%), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 3%), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
+}
+/* the fidget: a second, short clip that sits exactly on the film and shows only while it plays */
+.title-fidget {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  /* only the part of the frame he moves in, which is also clear of the film's faded edges */
+  -webkit-mask-image: none;
+  mask-image: none;
+  clip-path: inset(6% 14.9% 4% 55.5%);
+}
+.title-fidget.on { opacity: 1; }
+/* stacked sizes (phones, tablets held upright): the film spans the whole window */
+@media (max-width: 639px), (max-aspect-ratio: 1/1) {
+  .setup-hero .title-film { width: 100vw; margin-inline: calc(50% - 50vw); }
+}
+/* landscape screens, from a small laptop window up: the name big on the left with Play under
+   it, and a smaller film coming in from the window's right edge (Kelly, Nov 11) */
+@media (min-width: 640px) and (min-aspect-ratio: 1/1) {
+  .setup-hero { flex-direction: row; align-items: center; justify-content: space-between; gap: 2vw; text-align: left; }
+  .setup-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 0 clamp(260px, 34vw, 480px);
+    position: relative;
+    z-index: 1;
+  }
+  .setup-screen .logo { text-align: left; white-space: normal; font-size: clamp(3.4rem, min(9vw, 13vh), 7.4rem); line-height: 1.34; }
+  .setup-deck { max-width: 24ch; margin-top: 14px; text-align: left; }
+  .btn-play { margin-top: clamp(16px, 3vh, 30px); }
+  .setup-hero .hall-of-fame, .setup-hero .setup-footer { justify-content: flex-start; }
+  .setup-hero .title-film {
+    flex: none;
+    width: min(calc((100dvh - 120px) * 1.716), calc(100vw - clamp(260px, 34vw, 480px) - 6vw), 60vw);
+    margin: 0 calc(50% - 50vw) 0 0;
+  }
+}
+/* length and questions, folded */
+.opt-more { margin-top: 14px; }
+.opt-more > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: var(--inset);
+  color: var(--cream);
+  font: 500 0.95rem/1.2 var(--font-ui);
+  cursor: pointer;
+  list-style: none;
+}
+.opt-more > summary::-webkit-details-marker { display: none; }
+.opt-more-change { color: var(--jade-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.opt-more[open] .opt-more-change { text-decoration: none; }
+.opt-more[open] > summary { margin-bottom: 4px; }
+.opt-more > summary:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 2px; }
+
+/* — The result comes first (Kelly, Nov 11: "the answer should be prominent and Napoleon's
+     judgement should be below that... smaller"). Once an answer is judged the Submit and Pass
+     buttons step aside, the correct response leads in large type, then the score and Continue,
+     and his remark follows small. The result scrolls itself into view, so Continue is never
+     below the fold. — */
+.clue-panel:has(.clue-feedback.show) .clue-buttons { display: none; }
+.feedback-correct, .feedback-wrong, .feedback-skip { display: flex; flex-direction: column; align-items: center; }
+.clue-feedback .correct-response { order: 1; margin: 4px 0 12px; font: 400 clamp(1.15rem, 2vw, 1.4rem)/1.3 var(--font-ui); color: var(--text-dim); }
+.clue-feedback .correct-response strong { display: block; margin-top: 4px; font: 600 clamp(1.7rem, 3.4vw, 2.5rem)/1.15 var(--font-ui); color: var(--cream); }
+.clue-feedback .verdict-score { order: 2; font-size: 1.5rem; }
+.clue-feedback .verdict-score .icon { width: 30px; height: 30px; font-size: 1rem; }
+.clue-feedback .streak-callout { order: 3; }
+.clue-feedback .feedback-actions { order: 4; margin-top: 16px; }
+.clue-feedback .verdict { order: 5; margin: 16px auto 0; gap: 8px; }
+.clue-feedback .verdict-fig { width: 64px; height: 68px; }
+.clue-feedback .verdict-fig img { height: 138px; margin-top: 3px; }
+.clue-feedback .verdict figcaption { padding: 8px 12px; font-size: 0.9rem; }
+.clue-feedback .verdict figcaption::before { top: 15px; }
+.feedback-correct .verdict-score { margin-top: 2px; }
+
+/* — The play audit (Nov 11 2026): three whole games played through on a phone and a laptop,
+     and what they turned up. — */
+/* Waterloo: "Enter answer" grew to fill the whole column (it carried the clue card's flex: 2) */
+.final-screen .btn-submit { flex: none; width: min(340px, 100%); }
+.final-answer-form .btn-submit { width: 100%; margin-top: 18px; }
+/* the wager clue names itself in words */
+.clue-value-tag { font-size: 0.72em; font-weight: 600; letter-spacing: 0.02em; }
+/* the score on the results page was the one number left in a serif */
+.solo-score-money { font-family: var(--font-display); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+/* everything tapped is at least a fingertip tall */
+.btn-preset { min-height: 44px; }
+.btn-final-override { min-height: 40px; padding-inline: 16px; }
+.results-actions .btn-quiet, #btn-reroll { min-height: 44px; }
+.cast-none { min-height: 40px; }
+.setup-footer .link-btn { display: inline-flex; align-items: center; min-height: 44px; }
+/* beside the clue he gets his own room: the card no longer slides under him and his words no
+   longer cover the clue */
+@media (min-width: 1240px) {
+  .clue-screen { padding-right: calc(clamp(20px, 4vw, 80px) + var(--stage-h) * 0.6 + 8px); }
+}
+/* buzzing in: the buzzers sit dimmed while the clue is read and light up when they open, so
+   nobody rings early by mistake (an early ring still locks that player out for a moment) */
+.buzzer-row.waiting .btn-buzzer { opacity: 0.45; }
+.buzzer-row .btn-buzzer { transition: opacity 0.2s ease; }
+
+/* — Kelly's reaction clips (Nov 11 2026). A figure film stands exactly where the still pose
+     stands: its box is --fk standing-heights tall, runs --fdrop of its height below his feet,
+     and he stands --fdx of its width off its middle (scripts/build-host-films.py measures all
+     three). A face film fills the small verdict picture on a phone. — */
+.host-film { position: absolute; pointer-events: none; user-select: none; }
+.host-fig .host-film {
+  left: 50%;
+  bottom: 0;
+  height: calc(100% * var(--fk, 1.08));
+  width: auto;
+  max-width: none;
+  translate: calc(-50% - var(--fdx, 0) * 100%) calc(var(--fdrop, 0) * 100%);
+}
+.host-fig.is-filming .host-img { visibility: hidden; }
+.verdict-fig { position: relative; }
+.verdict-fig > .host-film { left: 0; bottom: 0; width: 100%; height: auto; }
+.verdict-fig.is-filming img { visibility: hidden; }
+
+/* — The entry screen's spacing (Nov 11 2026, Kelly: "the spacing is a little off"). Wide: the
+     name sat 3vw from the left edge while Napoleon stood 13vw from the right one. The name moves
+     in and the film slides further off the right edge (he walks in from there anyway), so both
+     sides breathe the same. Stacked: the drawing was 40px left of centre, because the film keeps
+     empty paper on its right for the walk-in. The film is now wider than the window and placed
+     so the throne and Napoleon sit in the middle. The tagline breaks between its sentences. — */
+.setup-screen[data-step="title"] { overflow-x: clip; }
+.setup-deck span { display: inline-block; }
+@media (max-width: 639px), (max-aspect-ratio: 1/1) {
+  .setup-deck { margin-top: 12px; }
+  .setup-hero .title-film {
+    --fw: min(118vw, calc((100dvh - 380px) * 1.716));
+    align-self: flex-start;
+    width: var(--fw);
+    /* the drawing's middle is 39.7% across the film */
+    margin-inline: calc(50% - 0.397 * var(--fw)) 0;
+  }
+}
+@media (min-width: 640px) and (min-aspect-ratio: 1/1) {
+  .setup-brand { margin-left: 4vw; }
+  .setup-hero .title-film { margin-right: calc(50% - 56vw); }
+}
+/* his words clear the film's raised fist and its taller first frame */
+.host-fig.is-filming .host-say { bottom: calc(104% + 14px); }
+
+/* — The start of a board (Nov 11 2026): Kelly saw Napoleon flash on screen for a moment before
+     the category roll call. Two causes. The roll call faded in over the freshly drawn board; its
+     cover is there from the first frame now and only its words fade in. And screens hand Napoleon
+     across in a layer of his own, which is drawn above everything, the cover included; while the
+     roll call is up he is not handed across. — */
+.category-intro { animation: none; }
+.category-intro > * { animation: fadeIn 0.3s ease both; }
+body:has(> .category-intro) .host-fig { view-transition-name: none; }
+
+/* — Napoleon live in play (Nov 11 2026). Kelly: "i want him to be watching me i dont want still
+     like that ... should be like the fron tpage where he movevs and then he sorta is idle", and
+     "make the animatuions smaller bc they seem not super hkgh qual". Where films can play, the
+     standing host is one drawing throughout: a still frame of him with his arms crossed, looking
+     at the player, in the same box as the films that play over it (see the foot of src/host.js).
+     He is shown no taller than 300px (see the note at the foot of this file). The
+     cut-out poses remain for reduced motion and data saver. — */
+:root { --stage-h: min(40vh, 300px); }
+.stage-host { --host-h: var(--stage-h); }
+.board-fig { --host-h: min(92cqh, 200cqw, 300px); }
+.host-body {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 100%;
+  animation: hostBreathe 3.8s ease-in-out infinite alternate;
+}
+.host-fig.is-live .host-img {
+  height: calc(100% * var(--fk, 1.15));
+  translate: calc(-50% - var(--fdx, 0) * 100%) calc(var(--fdrop, 0) * 100%);
+  animation: none;
+}
+/* his words sit clear of his hat and of a raised fist, and do not move when a film starts */
+.host-fig.is-live .host-say { bottom: calc(104% + 14px); }
+/* on a phone the verdict picture is his head and shoulders, the first frame of the face clip
+   that then plays over it */
+.verdict-fig.is-bust img,
+.clue-feedback .verdict-fig.is-bust img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .host-body { animation: none; }
+}
+
+/* ——— Category explainers (Nov 11 2026) ———
+   Every category carries one plain line saying what it is about, the way a quiz
+   host explains a punny title. It is read out in the roll call, sits under the
+   category on the clue card and the wager screen, and under the name on the
+   board where there is room for it. */
+.clue-header:has(+ .clue-note) { margin-bottom: 6px; }
+.clue-note {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 0 14px;
+  font: 400 0.95rem/1.4 var(--font-ui);
+  color: var(--text-dim);
+  text-align: left;
+  text-wrap: pretty;
+}
+.dd-note {
+  display: block;
+  margin-top: 6px;
+  font: 400 0.95rem/1.4 var(--font-ui);
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-dim);
+}
+.ci-card { display: grid; justify-items: center; gap: 14px; max-width: 84vw; }
+.ci-card.pop { animation: popIn 0.4s var(--ease); }
+.ci-card .ci-name.pop { animation: none; }
+.ci-note {
+  min-height: 1.4em;
+  max-width: 34ch;
+  font: 400 clamp(1.1rem, 2.4vw, 1.5rem)/1.4 var(--font-ui);
+  color: var(--text-dim);
+  text-align: center;
+  text-wrap: balance;
+}
+.category-header { flex-direction: column; gap: 3px; }
+.cat-note { display: none; }
+@media (min-width: 1100px) and (min-height: 700px) {
+  .cat-note {
+    display: block;
+    font: 400 0.75rem/1.3 var(--font-ui);
+    text-transform: none;
+    letter-spacing: 0;
+    text-wrap: balance;
+    opacity: 0.92;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ci-card.pop { animation: none; }
+}
+
+/* Check pass, Nov 11 2026: the É of the board title cleared the top edge of a phone by nothing,
+   and beside the clue Napoleon's boots sat on the bottom edge of the window. */
+@media (max-width: 720px) { .board-brand { padding-top: 6px; } }
+.stage-host { bottom: 14px; }
+
+/* After a right answer the card still names the answer, small (Kelly, Nov 11 2026): a loose
+   spelling can be accepted and the proper one should be on show. It sits under the score and
+   never competes with it, unlike the large correct response after a miss. */
+.clue-feedback .answer-key {
+  order: 2;
+  margin-top: 6px;
+  max-width: 34ch;
+  font: 400 1rem/1.4 var(--font-ui);
+  color: var(--text-dim);
+  text-align: center;
+  text-wrap: balance;
+}
+.clue-feedback .answer-key strong { font-weight: 600; color: var(--cream); }
+
+/* — Sharper, and heard (Kelly, Nov 11 2026). "maybe make my animated napoleon smaller? bc he is
+     a little blurry": the clips are 656px tall, so on a Retina screen anything much over 300px
+     is the film stretched. He stands 300px tall in play and on the results page, where two
+     screen pixels get about one film pixel each.
+     His remark under the board: "i didnt even really notice it". It was a white bar the width
+     of the board and read as an empty text box. It is his speech now: a honey bubble the width
+     of its words, in his italic, with a tail toward his face. — */
+@media (min-width: 561px) { .results-host { --host-h: clamp(200px, 30vh, 300px); } }
+.host-plaque {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  flex: 0 1 auto;
+  padding: 12px 22px;
+  background: var(--honey);
+  color: var(--cream);
+  font: italic 500 1.05rem/1.35 var(--font-ui);
+}
+.host-plaque::before {
+  content: '';
+  position: absolute;
+  right: calc(100% - 1px);
+  top: 50%;
+  width: 10px;
+  height: 16px;
+  translate: 0 -50%;
+  background: inherit;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+.host-plaque strong { font-style: normal; font-weight: 700; color: inherit; }
+@media (max-width: 560px) {
+  .host-plaque { flex: 0 1 auto; padding: 10px 16px; font-size: 0.9rem; }
+}
+
+/* — Built while Kelly was out (Nov 11 2026, her ask: "think of what else we can do to improve
+     it ... and then go ahead and build it").
+     1. A category name can be asked about: tap or click it and its explainer goes in his speech
+        bubble. On screens too small to print the explainers they stay in the page for screen
+        readers instead of being removed.
+     2. The results page lists the clues nobody got, with their answers, folded under the
+        buttons. — */
+.category-header[role='button'] { cursor: pointer; }
+.category-header[role='button']:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 2px; }
+.cat-note {
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (min-width: 1100px) and (min-height: 700px) {
+  .cat-note { position: static; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal; }
+}
+.missed {
+  width: min(100%, 620px);
+  margin: 18px auto 0;
+  border-radius: 22px;
+  background: rgba(255, 253, 250, 0.82);
+  text-align: left;
+}
+.missed > summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 20px;
+  font: 500 0.98rem/1.2 var(--font-ui);
+  color: var(--cream);
+  cursor: pointer;
+  list-style: none;
+}
+.missed > summary::-webkit-details-marker { display: none; }
+.missed > summary::after { content: '+'; font: 400 1.2rem/1 var(--font-mono); color: var(--text-dim); }
+.missed[open] > summary::after { content: '\2212'; }
+.missed > summary:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 2px; border-radius: 22px; }
+.missed-count {
+  min-width: 26px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--accent-wash);
+  color: var(--accent-ink);
+  font: 500 0.8rem/1.2 var(--font-mono);
+  text-align: center;
+}
+.missed-list { margin: 0; padding: 0 20px 18px; list-style: none; display: grid; gap: 14px; }
+.missed-list li { display: grid; gap: 3px; padding-top: 14px; border-top: 1px solid rgba(34, 34, 34, 0.08); }
+.missed-cat { font: 500 0.75rem/1.3 var(--font-mono); letter-spacing: 0.02em; text-transform: uppercase; color: var(--accent-ink); }
+.missed-clue { font: 400 0.98rem/1.45 var(--font-ui); color: var(--text-dim); text-wrap: pretty; }
+.missed-answer { font: 600 1.05rem/1.3 var(--font-ui); color: var(--cream); }
+.host-plaque .plaque-cat { display: block; font: 600 0.78em/1.3 var(--font-ui); letter-spacing: 0.04em; }

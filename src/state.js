@@ -34,6 +34,7 @@ const state = {
 
   cluesAnswered: 0,
   totalClues: 30,    // 6 categories x 5 clues
+  missed: [],        // [{ category, clue, response, value }] clues nobody got, for the results page
 
   timerRunning: false,
   timerSeconds: 30,
@@ -83,6 +84,7 @@ export function resetForNewGame() {
   state.buzzAttempted = [];
   state.lastJudgment = null;
   state.cluesAnswered = 0;
+  state.missed = [];
   state.totalClues = 30;
   state.timerRunning = false;
   state.timerSeconds = 30;

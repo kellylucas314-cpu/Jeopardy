@@ -175,6 +175,7 @@ export function selectClue(catIndex, clueIndex) {
     value: clue.value,
     isDailyDouble: clue.isDailyDouble,
     categoryName: cat.name,
+    categoryNote: cat.note || '',
     themed: !!cat.themed,
   };
 
@@ -230,8 +231,16 @@ export function buzzIn(playerIndex) {
 }
 
 /** Mark the current clue answered on the board. */
-function markClueAnswered() {
-  const { categories, currentClue, cluesAnswered } = getState();
+function markClueAnswered(got = false) {
+  const { categories, currentClue, cluesAnswered, missed = [] } = getState();
+  // a clue that closes without a right answer is kept for the results page
+  if (!got) {
+    setState({
+      missed: [...missed, {
+        category: currentClue.categoryName, clue: currentClue.clue, response: currentClue.response, value: currentClue.value,
+      }],
+    });
+  }
   const updatedCategories = categories.map((cat, ci) =>
     ci === currentClue.catIndex
       ? {
@@ -307,7 +316,7 @@ export function submitAnswer(userAnswer) {
     lastCorrectPlayer: result.correct ? answeringPlayer : getState().lastCorrectPlayer,
   });
 
-  if (!canRebuzz) markClueAnswered();
+  if (!canRebuzz) markClueAnswered(result.correct);
 
   return {
     correct: result.correct,
@@ -358,7 +367,9 @@ export function overrideCorrect() {
     currentClue &&
     !currentClue.isDailyDouble &&
     buzzAttempted.some(a => !a);
-  if (clueStillOpen) markClueAnswered();
+  if (clueStillOpen) markClueAnswered(true);
+  // pardoned: it no longer counts as one that got away
+  else if (currentClue) setState({ missed: (getState().missed || []).filter(m => m.clue !== currentClue.clue) });
 
   sounds.playCorrect();
   return { value, bonus, legion, streak };
@@ -382,10 +393,13 @@ export function noBuzz() {
  * Called when the answer result has been shown and we return to the board.
  */
 export function returnToBoard() {
-  const { cluesAnswered, totalClues, round, players, lastCorrectPlayer, gameLength } = getState();
+  const { cluesAnswered, totalClues, round, players, lastCorrectPlayer, gameLength, gameMode, activePlayer } = getState();
 
-  // The last player to answer correctly picks the next clue
-  const nextPlayer = players.length > 1 ? lastCorrectPlayer : 0;
+  // Take turns: the board passes to the next player after every clue, right or wrong.
+  // Buzz in: whoever last answered correctly picks the next clue.
+  const nextPlayer = players.length < 2 ? 0
+    : gameMode === 'turns' ? (activePlayer + 1) % players.length
+    : lastCorrectPlayer;
 
   if (cluesAnswered >= totalClues) {
     // Round is complete

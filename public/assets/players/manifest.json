@@ -139,17 +139,6 @@
         "thinking": "thomas-edison/thinking.webp",
         "victory": "thomas-edison/victory.webp"
       }
-    },
-    {
-      "id": "elon-musk",
-      "name": "Elon Musk",
-      "tone": "#d6dfdb",
-      "portrait": "elon-musk/portrait.webp",
-      "poses": {
-        "ready": "elon-musk/ready.webp",
-        "thinking": "elon-musk/thinking.webp",
-        "victory": "elon-musk/victory.webp"
-      }
     }
   ]
 }

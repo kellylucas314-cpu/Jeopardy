@@ -17,11 +17,15 @@ import {
 import * as sounds from './sounds.js';
 import { loadCharacters, characters, characterById, portraitUrl, poseUrl } from './characters.js';
 import { shape, compassLoader } from './shapes.js';
+import { animate, stagger } from 'motion';
+import 'number-flow';
+import { hostFigure, hostReact, hostSay, hostMove, hostCarry, isLive, poseSrc, faceSrc, bustSrc, setFace, preloadHost, preloadFilms, preloadLive, playFilm } from './host.js';
+import { empireMap, statusMark, pointAt } from './empire.js';
 
 loadCharacters();
 
 // Dev-only handle for screenshots and debugging; stripped from production builds.
-if (import.meta.env.DEV) window.__cde = { getState, setState };
+if (import.meta.env.DEV) window.__cde = { getState, setState, empire: async n => { await loadCampaign(); showEmpire(getChapter(n)); } };
 
 const app = document.getElementById('app');
 let timerInterval = null;
@@ -54,22 +58,19 @@ function avatarHtml(p, i = 0) {
     : escapeHtml(p.avatar || monogram(p.name, i));
 }
 
-/** Napoleon is the one big figure: thinking while you answer, triumphant at the end. */
-const NAPOLEON = {
-  neutral: './assets/napoleon-lowpoly-full.webp',
-  thinking: './assets/napoleon-thinking.webp',
-  victory: './assets/napoleon-victory.webp',
-  face: './assets/napoleon-lowpoly-bust.webp',
-};
-
-/** A remark from the table. Napoleon's own lines carry his face; anyone else's carry their name. */
-function hostLine(text, by = 'Napoleon') {
+/** A remark from the table. Napoleon's own lines carry his face (in the mood of the moment); anyone else's carry their name. */
+function hostLine(text, by = 'Napoleon', mood = 'neutral') {
   const his = /^(Napoleon|The Emperor)/.test(by);
   const credit = by === 'Napoleon' ? '' : `<span class="host-attrib">${escapeHtml(by)}</span>`;
   return `<figure class="host-line${his ? ' is-napoleon' : ''}">
-      ${his ? `<img class="host-face" src="${NAPOLEON.face}" alt="Napoleon">` : ''}
+      ${his ? `<img class="host-face" src="${faceSrc(mood)}" alt="Napoleon">` : ''}
       <figcaption><span class="host-words">${escapeHtml(text)}</span>${credit}</figcaption>
     </figure>`;
+}
+
+/** Napoleon standing at the right of an in-between screen (wide screens only). */
+function stageHost(pose, say = false) {
+  return hostFigure(pose, 'stage-host', { say });
 }
 
 /** Map pieces behind an in-between screen: a compass rose, the Légion star, a route, a facet. */
@@ -89,22 +90,405 @@ function sceneShapes(name) {
 // The table's character picks on setup, kept across player-count changes.
 const DEFAULT_CHARACTERS = ['cleopatra', 'leonardo-da-vinci', 'marie-curie'];
 let setupCharacters = null;
+// Which half of the start is showing: the title (Napoleon and Play) or the table (who is playing)
+let setupStep = 'title';
 let prevScores = []; // for score-bump animation on the board
 let prevLeader = null; // for lead-change announcements
 
 // Personality — the game reacts like a host, not a spreadsheet
 // The Emperor's table talk — witty, dry, confident, lightly theatrical.
-const CORRECT_LINES = ['The Emperor accepts this answer.', 'A triumph worthy of the Grande Armée.', 'Précisément. Take the spoils.', 'History favors the prepared.', 'A conquest, cleanly executed.', 'The Emperor is… impressed.', 'Vive la victoire!'];
-const WRONG_LINES = ['A tactical retreat.', 'The Emperor regrets to decline.', 'Not even my cavalry could save that one.', 'Bold. Doomed, but bold.', 'We shall not speak of this again.', 'Every campaign has its setbacks.'];
-const TIMEOUT_LINES = ['Time waits for no emperor.', 'The clock has outflanked you.', 'Hesitation, the one enemy I never forgave.'];
-const NOBUZZ_LINES = ['No volunteers? Cowardice.', 'The salon falls silent…', 'Even my old guard would not charge at this one.', 'Very well. The board keeps its secret.'];
-const STEAL_LINES = ['The spoils lie unclaimed!', 'An open flank. Who will take it?', 'Seize it, or regret it.'];
-const BOARD_LINES = ['Choose your battlefield.', 'The board awaits your command.', 'Pick your ground. History is watching.', 'Retreat is unavailable. Pick a category.', 'Every square hides a small war.'];
+const CORRECT_LINES = [
+  'The Emperor accepts this answer.',
+  'A triumph worthy of the Grande Armée.',
+  'Précisément. Take the spoils.',
+  'History favors the prepared.',
+  'A conquest, cleanly executed.',
+  'The Emperor is… impressed.',
+  'Vive la victoire!',
+  'Correct. I am almost surprised.',
+  'Exactement.',
+  'You may keep your head. And the points.',
+  'Well struck.',
+  'That is how one takes a hill.',
+  'I would have said the same. Naturally.',
+  'Correct. Do not let it go to your head.',
+  'A clean victory. I allow it.',
+  'Bien joué.',
+  'The field is yours.',
+  'So you do read. Good.',
+  'There is a marshal’s baton in your knapsack.',
+  'Correct. France is pleased.',
+  'Even Talleyrand could not twist that one.',
+  'Add it to the treasury.',
+  'Magnifique. Carry on.',
+  'An answer with good posture.',
+  'Right. I expected less, frankly.',
+  'Victory. Small, but I collect those too.',
+  'You have studied. It shows.',
+  'Correct. Josephine would be charmed.',
+  'The Emperor nods. That is rare.',
+  'Flawless. Suspiciously so.',
+  'Take the points. You earned them.',
+  'Oui. Next.',
+];
+const WRONG_LINES = [
+  'A tactical retreat.',
+  'The Emperor regrets to decline.',
+  'Not even my cavalry could save that one.',
+  'Bold. Doomed, but bold.',
+  'We shall not speak of this again.',
+  'Every campaign has its setbacks.',
+  'No. But said with confidence.',
+  'Wrong. Magnificently wrong.',
+  'My horse Marengo would have known that.',
+  'A fine answer. To a different question.',
+  'Non.',
+  'I admire the courage. Only the courage.',
+  'That answer has been exiled.',
+  'Close. The way Moscow is close to Paris.',
+  'History will be kind and forget this.',
+  'A brave charge into the wrong valley.',
+  'Incorrect. I say this with affection.',
+  'The Emperor winces.',
+  'You marched north. The answer was south.',
+  'Alas. The points desert you.',
+  'Wrong. I once misjudged a winter myself.',
+  'That is not it. Onward.',
+  'I shall pretend I did not hear that.',
+  'A loss. I have survived worse.',
+  'Not today, general.',
+  'An answer only a Bourbon could love.',
+  'Mon Dieu.',
+  'The treasury takes back its coins.',
+  'Wellington sends his thanks.',
+  'That one goes in the memoirs. As a warning.',
+  'Strike that from the record.',
+  'Nearly. In the loosest sense of nearly.',
+  'Confidence is not the same as accuracy.',
+  'Even emperors miss. Rarely, in my case.',
+];
+const TIMEOUT_LINES = [
+  'Time waits for no emperor.',
+  'The clock has outflanked you.',
+  'Hesitation, the one enemy I never forgave.',
+  'The clock wins. It usually does.',
+  'Too slow. Armies starve at that pace.',
+  'Ask me for anything but time.',
+  'The moment has marched on without you.',
+  'You were still thinking. The clock was not.',
+  'Late. So was Grouchy at Waterloo.',
+  'A fine silence. A costly one.',
+  'The sand has run out, general.',
+  'Speed wins wars. Remember that.',
+];
+const NOBUZZ_LINES = [
+  'No volunteers? Cowardice.',
+  'The salon falls silent…',
+  'Even my old guard would not charge at this one.',
+  'Very well. The board keeps its secret.',
+  'Nobody? I am surrounded by diplomats.',
+  'Not one of you. Remarkable.',
+  'The clue retires undefeated.',
+];
+const STEAL_LINES = [
+  'The spoils lie unclaimed!',
+  'An open flank. Who will take it?',
+  'Seize it, or regret it.',
+  'The prize is on the table. Take it.',
+  'Their loss. Perhaps your gain.',
+];
+const BOARD_LINES = [
+  'Choose your battlefield.',
+  'The board awaits your command.',
+  'Pick your ground. History is watching.',
+  'Retreat is unavailable. Pick a category.',
+  'Every square hides a small war.',
+  'Where shall we march next?',
+  'Name your ground, general.',
+  'The map is open. Choose.',
+  'I am waiting. I do not do that well.',
+  'Pick boldly. I will judge quietly.',
+];
 
-const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+const STREAK_LINES = {
+  2: ['Twice in a row. A pattern forms.', 'Two for two. Continue.', 'Two. Do not get comfortable.', 'Twice. Luck, or the start of something.'],
+  3: ['Three in a row. Now you are dangerous.', 'Three. The enemy begins to worry.', 'Three. I begin to take notes.', 'Three straight. The line holds.'],
+  4: ['Four. They are in full retreat.', 'Four in a row. Keep marching.', 'Four. Who taught you this?', 'Four in a row. Europe trembles.'],
+  5: ['Five in a row. I have made marshals for less.', 'Unstoppable. I know the feeling.', 'Five. Shall I fetch you a crown?', 'This is becoming an empire.'],
+};
+const FAST_LINES = [
+  'Before I had finished the sentence.',
+  'Quick as a cavalry charge.',
+  'No hesitation. Good.',
+  'Faster than a courier from Paris.',
+  'Instant. I like a decisive mind.',
+  'You did not even blink.',
+  'Swift. The best victories are.',
+];
+const STREAK_BROKEN_LINES = [
+  'And there the advance ends.',
+  'Every great march meets its winter.',
+  'The run ends. They always do.',
+  'A fine streak, now a memory.',
+  'So. You are mortal after all.',
+];
+const WAGER_WON_LINES = [
+  'A wager won. That is how empires are made.',
+  'Fortune favors the bold. Today.',
+  'You bet like an emperor. And won.',
+  'The gamble pays. Remember this feeling.',
+  'A bold stake, handsomely repaid.',
+];
+const WAGER_LOST_LINES = [
+  'Waterloo. I know the feeling.',
+  'A bold wager. A costly one.',
+  'You bet the army and lost the army.',
+  'The dice were not with you.',
+  'An expensive lesson. I have had several.',
+];
+const BIG_PICK_LINES = [
+  'The heavy guns. Good.',
+  'Straight for the big prize.',
+  'Ambitious. I approve.',
+  'The top of the hill. Naturally.',
+  'No small skirmishes for you.',
+];
+const LAST_CLUE_LINES = [
+  'The last square. Make it count.',
+  'One left. Finish it.',
+  'The final square. End it well.',
+];
+const PASS_LINES = [
+  'A strategic withdrawal. Noted.',
+  'You decline the field. Very well.',
+  'Discretion. I have heard of it.',
+  'Silence. The safest answer of all.',
+  'A wise general knows which hill to skip.',
+  'You keep your powder dry. Fine.',
+  'No shot fired, no points lost.',
+  'Retreat in good order. I respect it.',
+  'Prudence. How very unlike me.',
+  'We march around this one.',
+  'You live to fight another clue.',
+  'Not every battle must be fought.',
+  'A shrug. I have seen diplomats do worse.',
+  'Very well. The clue wins this round.',
+  'Passing. My ministers would be proud.',
+  'Caution today, glory tomorrow.',
+];
+const URGENT_LINES = [
+  'Tick, tock.',
+  'Decide, general.',
+  'The clock is not your ally.',
+  'Any moment now.',
+  'The drums are getting louder.',
+  'Now, general.',
+  'Seconds, not minutes.',
+];
+const AFTER_CORRECT = [
+  'Good. Press the advantage.',
+  'Momentum, general. Use it.',
+  'Again. Just like that.',
+  'You hold the field. Choose the next.',
+  'Keep the pressure on.',
+  'They are wavering. Go on.',
+  'Good. Now do it again.',
+];
+const AFTER_WRONG = [
+  'Regroup. Choose again.',
+  'A setback. The campaign continues.',
+  'Shake it off. Pick your ground.',
+  'Forget it. Next square.',
+  'Reform the line. Pick again.',
+  'One lost skirmish. Choose.',
+  'On to the next. Chin up.',
+];
+
+/** His opening remark on each chapter's board, in campaign mode. */
+const CHAPTER_LINES = {
+  1: 'A small island, a large appetite. Begin.',
+  2: 'Give me the guns and the high ground. You take the clues.',
+  3: 'Paris is restless tonight. Be quick and be certain.',
+  4: 'Italy lies ahead. March fast and answer faster.',
+  5: 'Forty centuries look down upon you. Do not embarrass them.',
+  6: 'A government falls in two days. A board falls faster.',
+  7: 'Marengo was lost in the afternoon and won by evening. Never concede early.',
+  8: 'I placed the crown on my own head. Take your points the same way.',
+  9: 'The sun is rising over Austerlitz. Make it a good day.',
+  10: 'Prussia lasted a single afternoon. Let us see how long you last.',
+  11: 'An empire at its height has the most to lose. Choose with care.',
+  12: 'Moscow is a long walk, and the way back is longer.',
+  13: 'All of Europe is on the field against us. Hold your ground.',
+  14: 'A hundred days. Waste none of them.',
+  15: 'On this rock I have only memory. Let us see how yours holds up.',
+};
+
+/** How he takes each outcome: a pose and a move for the big figure, a face for the small one. */
+const REACTIONS = {
+  correct: { poses: ['victory'], face: 'delighted', move: 'hop', films: ['pleased', 'nod'], big: 'fist', bust: ['face-smirk', 'face-nod'], bigBust: 'face-grin' },
+  wrong: { poses: ['stepping-back', 'shocked', 'defeated'], face: 'frustrated', move: 'recoil', films: ['shrug', 'brace'], big: 'yell', bust: ['face-startled', 'face-shock'] },
+  timeout: { poses: ['arms-crossed'], face: 'annoyed', move: 'refuse', films: ['stomp'], bust: 'face-stern' },
+  pass: { poses: ['shrug'], face: 'puzzled', move: 'settle', films: ['ponder'], bust: 'face-brow' },
+  pardon: { poses: ['welcome'], face: 'smirk', move: 'settle', bust: 'face-smirk' },
+};
+let lastOutcome = null; // how the last clue went, for his stance back at the board
+let stanceTurn = 0; // so a late 'back to pointing' never lands on a newer board
+let lastPicked = null; // the tile just played, so the board can show it being spent
+let clueShownAt = 0; // to notice a quick answer
+
+const MONEY_FMT = { style: 'currency', currency: 'USD', maximumFractionDigits: 0 };
+const EXPO = [0.16, 1, 0.3, 1];
+
+// Each list is dealt like a deck: nothing comes round again until the rest of the list has
+// been used, and a fresh deal never opens with the line just heard. The decks last for the
+// visit, so a second game does not start over on the same remarks.
+const decks = new Map();
+function pick(arr) {
+  if (arr.length < 2) return arr[0];
+  let deck = decks.get(arr);
+  if (!deck || !deck.left.length) {
+    const left = arr.slice();
+    for (let i = left.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [left[i], left[j]] = [left[j], left[i]];
+    }
+    // the next one out is the end of the array: keep the line just heard away from it
+    if (deck && left[left.length - 1] === deck.last) [left[0], left[left.length - 1]] = [left[left.length - 1], left[0]];
+    deck = { left, last: deck && deck.last };
+    decks.set(arr, deck);
+  }
+  deck.last = deck.left.pop();
+  return deck.last;
+}
+
+/**
+ * Napoleon's verdict on an answer. On a wide screen the big figure takes the
+ * pose and speaks the line; on a phone his face and the line sit in the feedback.
+ */
+function verdict(kind, line, { big = false } = {}) {
+  const r = REACTIONS[kind];
+  const pose = pick(r.poses);
+  lastOutcome = kind === 'pardon' ? 'correct' : kind;
+  // One of Kelly's reaction clips where there is one: the whole of him on a wide screen,
+  // his face in the verdict picture on a phone. The still pose is the fallback for both.
+  const film = (big && r.big) || (r.films && pick(r.films));
+  const bust = (big && r.bigBust) || (Array.isArray(r.bust) ? pick(r.bust) : r.bust);
+  hostReact(pose, { move: r.move, say: line, film });
+  if (kind === 'correct' || kind === 'pardon') navigator.vibrate?.(18);
+  else if (kind === 'wrong' || kind === 'timeout') navigator.vibrate?.([36, 50, 36]);
+  return `<figure class="verdict">
+      ${verdictFig(bust, pose, r.move)}
+      <figcaption>${escapeHtml(line)}</figcaption>
+    </figure>`;
+}
+
+/**
+ * The small picture beside his verdict on a phone. Where films play it is his head and
+ * shoulders from one of the face clips, which then plays in place (`play`); otherwise it
+ * is the top of a cut-out pose, which makes one short move.
+ */
+function verdictFig(bust, pose, move, play = true) {
+  return isLive() && bust
+    ? `<span class="verdict-fig is-bust"${play ? ` data-film="${bust}"` : ''}><img src="${bustSrc(bust)}" alt=""></span>`
+    : `<span class="verdict-fig" data-move="${move}"><img src="${poseSrc(pose)}" alt=""></span>`;
+}
+
+/**
+ * After a right answer the card still says what the answer was, small: a loose spelling can be
+ * accepted, and the player should see the proper one (Kelly, Nov 11 2026).
+ */
+function answerKey(result) {
+  return result.correctResponse
+    ? `<div class="answer-key">Answer: <strong>${escapeHtml(result.correctResponse)}</strong></div>`
+    : '';
+}
+
+/** The line for a right answer: he notices a streak, a quick answer, a wager won. */
+function correctLine(result, { wager = false, seconds = 99 } = {}) {
+  if (wager) return pick(WAGER_WON_LINES);
+  // he calls out a run as it builds; past five in a row he mentions it only now and then,
+  // and a quick answer is remarked on some of the time, so neither becomes the only thing he says
+  if (result.streak >= 2 && (result.streak <= 5 || Math.random() < 0.3)) return pick(STREAK_LINES[Math.min(result.streak, 5)]);
+  if (seconds < 6 && Math.random() < 0.4) return pick(FAST_LINES);
+  return pick(CORRECT_LINES);
+}
+/** ...and for a wrong one: a lost wager, or a good run cut short. */
+function wrongLine({ wager = false, streakBefore = 0 } = {}) {
+  if (wager) return pick(WAGER_LOST_LINES);
+  if (streakBefore >= 3) return pick(STREAK_BROKEN_LINES);
+  return pick(WRONG_LINES);
+}
+
+/** Fill every <number-flow data-to> on screen. One that carries data-from rolls up (or down) from there. */
+function flowNumbers(delay = 320) {
+  app.querySelectorAll('number-flow[data-to]').forEach(el => {
+    el.format = MONEY_FMT;
+    el.locales = 'en-US';
+    const to = Number(el.dataset.to);
+    const from = el.dataset.from === undefined ? to : Number(el.dataset.from);
+    if (from === to || prefersReducedMotion()) { el.update(to); return; }
+    el.update(from);
+    setTimeout(() => { if (el.isConnected) el.update(to); }, delay);
+  });
+}
+const flowMoney = (to, from) => `<number-flow data-to="${to}"${from === undefined ? '' : ` data-from="${from}"`} aria-label="${money(to)}"></number-flow>`;
+
+/** Break a long word where a reader would: between syllables, so a narrow column never splits it mid-letter. */
+function softHyphenate(text) {
+  return text.replace(/[A-Za-zÀ-ÿ]{6,}/g, (word) => {
+    const cluster = /^(th|ch|sh|ph|wh|qu|ck)/i;
+    const vowel = c => /[aeiouyà-ÿ]/i.test(c);
+    // Three or more consonants between vowels (pass|ports, high|lights, amend|ment): break near
+    // the middle of the run, never inside a pair that is read as one sound (an|thems, chil|dren).
+    const extra = new Set();
+    const blends = new Set();
+    const stop = c => /[bcdfgkpt]/i.test(c);
+    for (let s = 1; s < word.length; s++) {
+      if (vowel(word[s]) || !vowel(word[s - 1])) continue;
+      let e = s;
+      while (e + 1 < word.length && !vowel(word[e + 1])) e++;
+      const n = e - s + 1;
+      if (n >= 3 && e + 1 < word.length) {
+        let k = s + (n === 3 ? 2 : Math.ceil(n / 2));
+        if (cluster.test(word[k - 1] + word[k]) || (n === 3 && stop(word[k - 1]) && /[lr]/i.test(word[k]))) k -= 1;
+        if (k >= 3 && word.length - k >= 3) extra.add(k - 1);
+      } else if (n === 2 && e + 1 < word.length && stop(word[s]) && /[lr]/i.test(word[e])) {
+        // a blend stays whole: play|ground, se|cret
+        blends.add(s);
+        if (s >= 3 && word.length - s >= 3) extra.add(s - 1);
+      }
+      s = e;
+    }
+    let out = '';
+    for (let i = 0; i < word.length; i++) {
+      out += word[i];
+      const left = i + 1, rest = word.length - left;
+      if (left < 3 || rest < 3) continue;
+      const a = word[i], b = word[i + 1], c = word[i + 2];
+      const vcv = vowel(a) && !vowel(b) && vowel(c);                     // ta|ble: V|CV
+      const vccv = !vowel(a) && !vowel(b) && vowel(c) && vowel(word[i - 1]) && !cluster.test(a + b) && !blends.has(i); // VC|CV
+      const beforeCluster = cluster.test(b + c) && rest >= 4 && vowel(word[i + 3] || ''); // mean|while, ma|chine
+      if ((vcv && !cluster.test(word[i - 1] + a)) || vccv || beforeCluster || extra.has(i)) out += '\u00AD';
+    }
+    return out;
+  });
+}
 
 // Buzz-mode bookkeeping (imperative, within the clue screen)
-const BUZZ_KEYS = ['q', 'p', 'b']; // player 1, 2, 3
+// Buzz in: two players share one keyboard. Player 1 owns the left half and Player 2 the right
+// half, so any key on your side rings in (Kelly, Nov 11). Codes are physical keys, so this holds
+// on any keyboard layout. Space stays shared: it skips the reading beat.
+const BUZZ_LEFT = new Set(['Backquote', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5',
+  'Tab', 'KeyQ', 'KeyW', 'KeyE', 'KeyR', 'KeyT', 'CapsLock', 'KeyA', 'KeyS', 'KeyD', 'KeyF', 'KeyG',
+  'ShiftLeft', 'IntlBackslash', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'ControlLeft', 'AltLeft', 'MetaLeft']);
+const BUZZ_RIGHT = new Set(['Digit6', 'Digit7', 'Digit8', 'Digit9', 'Digit0', 'Minus', 'Equal', 'Backspace',
+  'KeyY', 'KeyU', 'KeyI', 'KeyO', 'KeyP', 'BracketLeft', 'BracketRight', 'Backslash',
+  'KeyH', 'KeyJ', 'KeyK', 'KeyL', 'Semicolon', 'Quote', 'Enter',
+  'KeyN', 'KeyM', 'Comma', 'Period', 'Slash', 'ShiftRight', 'AltRight', 'MetaRight', 'ControlRight',
+  'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown']);
+const buzzSide = (code) => (BUZZ_LEFT.has(code) ? 0 : BUZZ_RIGHT.has(code) ? 1 : -1);
+const BUZZ_HINTS = ['left half', 'right half'];
+const touchOnly = () => window.matchMedia?.('(hover: none)').matches;
 let buzzPhase = null; // 'reading' | 'open' | 'answering' | 'done'
 let buzzLockedUntil = [];
 let buzzTimeouts = [];
@@ -112,12 +496,16 @@ let buzzKeyHandler = null;
 
 // ——— Screen Router ———
 
+let shownScreen = null;
+
 function render() {
   const state = getState();
 
   // Avoid re-rendering when only the timer ticked (no screen change)
   if (state.screen === lastScreen && state.screen === 'clue') return;
   lastScreen = state.screen;
+  const from = shownScreen;
+  shownScreen = state.screen;
 
   // Stop any running timer when leaving the clue screen
   if (state.screen !== 'clue') cleanupClue();
@@ -130,20 +518,35 @@ function render() {
   // Board keyboard nav only lives on the board
   if (state.screen !== 'board') detachBoardKeys();
 
-  switch (state.screen) {
-    case 'setup': renderSetup(); break;
-    case 'loading': renderLoading(); break;
-    case 'chapter-intro': renderChapterIntro(); break;
-    case 'error': renderError(); break;
-    case 'board': renderBoard(); break;
-    case 'clue': renderClue(); break;
-    case 'daily-double': renderDailyDouble(); break;
-    case 'round-transition': renderRoundTransition(); break;
-    case 'final-category': renderFinalCategory(); break;
-    case 'final-wager': renderFinalWager(); break;
-    case 'final-clue': renderFinalClue(); break;
-    case 'final-answer': renderFinalAnswer(); break;
-    case 'results': renderResults(); break;
+  const draw = () => {
+    switch (state.screen) {
+      case 'setup': renderSetup(); break;
+      case 'loading': renderLoading(); break;
+      case 'chapter-intro': renderChapterIntro(); break;
+      case 'error': renderError(); break;
+      case 'board': renderBoard(); break;
+      case 'clue': renderClue(); break;
+      case 'daily-double': renderDailyDouble(); break;
+      case 'round-transition': renderRoundTransition(); break;
+      case 'final-category': renderFinalCategory(); break;
+      case 'final-wager': renderFinalWager(); break;
+      case 'final-clue': renderFinalClue(); break;
+      case 'final-answer': renderFinalAnswer(); break;
+      case 'results': renderResults(); break;
+    }
+    // a reaction clip still playing moves over to the new screen's Napoleon
+    hostCarry();
+  };
+
+  // One screen hands over to the next, and Napoleon is carried across (see
+  // `view-transition-name: host`). Opening a tile has its own move instead.
+  const tileOpens = from === 'board' && (state.screen === 'clue' || state.screen === 'daily-double');
+  if (from && from !== state.screen && !tileOpens && document.startViewTransition && !prefersReducedMotion()) {
+    const t = document.startViewTransition(draw);
+    t.ready.catch(() => {});
+    t.finished.catch(() => {});
+  } else {
+    draw();
   }
 }
 
@@ -151,8 +554,11 @@ subscribe(render);
 
 // ——— Timer ———
 
+let urgentShown = false;
+
 function startTimer(totalSeconds, onExpire) {
   clearInterval(timerInterval);
+  urgentShown = false;
   let seconds = totalSeconds;
   updateTimerDisplay(seconds, totalSeconds);
 
@@ -171,6 +577,11 @@ function startTimer(totalSeconds, onExpire) {
 
 function updateTimerDisplay(seconds, total) {
   const urgent = seconds <= 5;
+  // The last five seconds: he leans in
+  if (urgent && seconds > 0 && seconds < total && !urgentShown) {
+    urgentShown = true;
+    hostReact('leaning', { move: 'lean', say: pick(URGENT_LINES), film: 'peer' });
+  }
   const timerEl = document.getElementById('timer-bar');
   if (timerEl) {
     timerEl.style.setProperty('--fill', Math.max(0, seconds) / total);
@@ -224,7 +635,7 @@ function scheduleReturn(ms) {
         && !hint.querySelector('.feedback-actions')) {
       const el = document.createElement('div');
       el.className = 'tap-hint';
-      el.textContent = 'tap or press space to continue';
+      el.textContent = touchOnly() ? 'tap to continue' : 'click or press space to continue';
       hint.appendChild(el);
     }
   }, 350);
@@ -245,8 +656,8 @@ function handleTimeExpired() {
 
   showFeedback(`
     <div class="feedback-wrong">
-      <div class="feedback-icon">${icon('clock')}</div>
-      <div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>
+      ${verdict('timeout', pick(TIMEOUT_LINES))}
+      <div class="verdict-score">${icon('clock')}<span>-$${formatMoney(result.value)}</span></div>
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
@@ -267,7 +678,7 @@ function renderSetup() {
   // New tables start with the three guests; older saves keep their monograms until someone picks.
   setupCharacters = Array.isArray(prefs.characters) ? [...prefs.characters]
     : prefs.names ? [] : [...DEFAULT_CHARACTERS];
-  const playerCount = prefs.playerCount || 2;
+  const playerCount = Math.min(prefs.playerCount || 1, 2); // a new table starts solo; two at most for now
   const gameMode = prefs.gameMode || 'turns';
   const gameLength = prefs.gameLength || 'full';
   const pack = prefs.pack === 'easy' ? 'easy' : 'fresh';
@@ -276,6 +687,7 @@ function renderSetup() {
   prevLeader = null;
   prevScores = [];
   recordedThisGame = false;
+  preloadLive(); // the still he stands on in play and his idle films, so he is ready by the first board
 
   const records = loadRecords();
   const hof = records.lastWinner ? `
@@ -284,96 +696,92 @@ function renderSetup() {
       ${records.best ? `<span class="hof-item">Best: <strong>${escapeHtml(records.best.name)}</strong> · ${money(records.best.score)}</span>` : ''}
     </div>` : '';
 
+  const seg = (cls, key, value, picked, label, note = '') => `
+              <button type="button" class="seg-btn ${cls} ${value === picked ? 'selected' : ''}" data-${key}="${value}"
+                      aria-pressed="${value === picked}"${note ? ` data-note="${note}"` : ''}>${label}</button>`;
+
   app.innerHTML = `
-    <div class="setup-screen">
+    <div class="setup-screen" data-step="${setupStep}">
       <section class="setup-hero" aria-labelledby="game-title">
         <div class="setup-brand">
-          <h1 class="logo" id="game-title">Clue d&rsquo;&Eacute;tat</h1>
-          <p class="setup-deck">A trivia coup hosted by Napoleon. History is watching.</p>
+          <h1 class="logo" id="game-title">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></h1>
+          <p class="setup-deck"><span>A trivia coup hosted by Napoleon.</span> <span>History is watching.</span></p>
+          <button type="button" class="btn-start btn-play" id="btn-play">Play</button>
+          ${hof}
+          <div class="setup-footer">
+            <label class="sound-toggle">
+              <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
+              <span>Sound Effects</span>
+            </label>
+            <button class="link-btn" id="btn-how-to">How to play</button>
+            <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
+          </div>
         </div>
-        <figure class="title-stage" role="img"
-                aria-label="Low-poly Napoleon tips his hat as he rises out of a folded map of Europe">
-          ${shape('compass', 'title-compass')}
-          <img class="title-map title-map-back" src="./assets/napoleon-map-back.webp" alt=""
-               width="1485" height="546" decoding="async">
-          <video class="title-napoleon" muted loop playsinline preload="metadata"
-                 ${prefersReducedMotion() ? '' : 'autoplay'}
-                 poster="./assets/napoleon-title-poster.webp" aria-hidden="true">
-            <source src="./assets/napoleon-title.mp4" type="video/mp4">
-          </video>
-          <img class="title-map title-map-front" src="./assets/napoleon-map-front.webp" alt=""
-               width="1485" height="546" decoding="async">
+        <figure class="title-stage title-film" role="img"
+                aria-label="Napoleon strides up to a throne, shoves the question card and the crown off it, and takes his place beside it">
+          <video class="title-video" src="./assets/title/throne.mp4" poster="./assets/title/throne-last.webp"
+                 width="1280" height="746" muted playsinline preload="auto" aria-hidden="true"></video>
+          <video class="title-video title-fidget" src="./assets/title/throne-fidget.mp4"
+                 width="1280" height="746" muted playsinline preload="none" aria-hidden="true"></video>
         </figure>
-        ${hof}
       </section>
-      <section class="setup-panel">
-        <div class="setup-panel-heading">
-          <h2>Prepare the table</h2>
-        </div>
-        <div class="setup-card">
-          <h2>How many players?</h2>
-          <div class="player-count-buttons">
-            ${[1, 2, 3].map(n => `
-              <button class="btn-player-count ${n === playerCount ? 'selected' : ''}" data-count="${n}">
-                ${n} Player${n > 1 ? 's' : ''}
-              </button>
-            `).join('')}
-          </div>
+      <section class="table" aria-labelledby="table-title">
+        <div class="table-cast">
+          <header class="table-head">
+            <button type="button" class="table-back" id="btn-back" aria-label="Back to the title">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <h2 id="table-title" tabindex="-1">Who&rsquo;s playing<span class="logo-dot" aria-hidden="true">?</span></h2>
+            <div class="seg seg-count" role="group" aria-label="How many players">
+              ${[1, 2].map(n => `
+              <button type="button" class="seg-btn btn-count ${n === playerCount ? 'selected' : ''}" data-count="${n}"
+                      aria-pressed="${n === playerCount}">${n} player${n > 1 ? 's' : ''}</button>`).join('')}
+            </div>
+          </header>
           <div id="player-names"></div>
-          <h2 class="mode-title">Play style</h2>
-          <div class="mode-buttons style-buttons">
-            <button class="btn-mode btn-style ${playStyle === 'free' ? 'selected' : ''}" data-style="free">
-              <span class="mode-name">Free Play</span>
-              <span class="mode-desc">A fresh board every night, from the pack you choose</span>
-            </button>
-            <button class="btn-mode btn-style ${playStyle === 'campaign' ? 'selected' : ''}" data-style="campaign">
-              <span class="mode-name">The Campaign</span>
-              <span class="mode-desc">Napoleon's life in 15 chapters. Win a chapter and the Empire grows</span>
-            </button>
-          </div>
-          <div id="chapter-card" class="chapter-card" ${playStyle === 'campaign' ? '' : 'hidden'}></div>
-          <h2 class="mode-title">Game length</h2>
-          <div class="player-count-buttons length-buttons">
-            <button class="btn-player-count btn-length ${gameLength === 'quick' ? 'selected' : ''}" data-length="quick">
-              Quick &middot; ~20 min
-            </button>
-            <button class="btn-player-count btn-length ${gameLength === 'full' ? 'selected' : ''}" data-length="full">
-              Full &middot; ~45 min
-            </button>
-          </div>
-          <h2 class="mode-title">Questions</h2>
-          <div class="mode-buttons pack-buttons">
-            <button class="btn-mode btn-pack ${pack === 'fresh' ? 'selected' : ''}" data-pack="fresh">
-              <span class="mode-name">Fresh Pack</span>
-              <span class="mode-desc">6,200+ original clues written for this game</span>
-            </button>
-            <button class="btn-mode btn-pack ${pack === 'easy' ? 'selected' : ''}" data-pack="easy">
-              <span class="mode-name">Easy Breezy</span>
-              <span class="mode-desc">Gentler questions, classics &amp; nostalgia</span>
-            </button>
-          </div>
-          <div id="mode-section">
-            <h2 class="mode-title">Game mode</h2>
-            <div class="mode-buttons">
-              <button class="btn-mode ${gameMode === 'turns' ? 'selected' : ''}" data-mode="turns">
-                <span class="mode-name">Take Turns</span>
-                <span class="mode-desc">Pass the keyboard, answer one at a time</span>
-              </button>
-              <button class="btn-mode ${gameMode === 'buzz' ? 'selected' : ''}" data-mode="buzz">
-                <span class="mode-name">Buzz In!</span>
-                <span class="mode-desc">Race to the buzzer, salon-style</span>
-              </button>
+        </div>
+        <div class="table-game">
+          <div class="tray-card game-card">
+            <h2>The game</h2>
+            <div class="opt-row">
+              <h3 class="opt-label" id="opt-style">Play style</h3>
+              <div class="seg" role="group" aria-labelledby="opt-style">
+                ${seg('btn-style', 'style', 'free', playStyle, 'Free Play', 'A fresh board every time.')}
+                ${seg('btn-style', 'style', 'campaign', playStyle, 'The Campaign', 'Napoleon&rsquo;s life in 15 chapters. Win a chapter and the Empire grows.')}
+              </div>
+              <p class="opt-note"></p>
+            </div>
+            <div id="chapter-card" class="chapter-card" ${playStyle === 'campaign' ? '' : 'hidden'}></div>
+            <div class="opt-row">
+              <h3 class="opt-label" id="opt-pack">Questions</h3>
+              <div class="seg" role="group" aria-labelledby="opt-pack">
+                ${seg('btn-pack', 'pack', 'easy', pack, 'Easy Breezy', 'Gentler questions: classics, nostalgia, things you half remember.')}
+                ${seg('btn-pack', 'pack', 'fresh', pack, 'Fresh Pack', 'The full challenge: trickier clues and more wordplay.')}
+              </div>
+              <p class="opt-note"></p>
+            </div>
+            <details class="opt-more">
+              <summary><span class="opt-more-sum"></span><span class="opt-more-change">Change</span></summary>
+              <div class="opt-row">
+                <h3 class="opt-label" id="opt-length">Length</h3>
+                <div class="seg" role="group" aria-labelledby="opt-length">
+                  ${seg('btn-length', 'length', 'quick', gameLength, 'Quick &middot; ~20 min')}
+                  ${seg('btn-length', 'length', 'full', gameLength, 'Full &middot; ~45 min')}
+                </div>
+              </div>
+            </details>
+            <div class="opt-row" id="mode-section">
+              <h3 class="opt-label" id="opt-mode">How you answer</h3>
+              <div class="seg" role="group" aria-labelledby="opt-mode">
+                ${seg('btn-answer', 'mode', 'turns', gameMode, 'Take turns', 'Each clue goes to the next player.')}
+                ${seg('btn-answer', 'mode', 'buzz', gameMode, 'Buzz in', 'Race to ring in: Player 1 hits any key on the left half of the keyboard, Player 2 any key on the right.')}
+              </div>
+              <p class="opt-note"></p>
             </div>
           </div>
-          <button class="btn-start" id="btn-start-game">${playStyle === 'campaign' ? 'March on' : 'Open the board'}</button>
         </div>
-        <div class="setup-footer">
-          <label class="sound-toggle">
-            <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
-            <span>Sound Effects</span>
-          </label>
-          <button class="link-btn" id="btn-how-to">How to play</button>
-          <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
+        <div class="table-go">
+          <button class="btn-start" id="btn-start-game">${playStyle === 'campaign' ? 'March on' : 'Open the board'}</button>
         </div>
       </section>
     </div>
@@ -382,59 +790,117 @@ function renderSetup() {
   renderPlayerInputs(playerCount, savedNames, savedAvatars);
   updateModeVisibility(playerCount);
 
-  // Player count buttons
-  document.querySelectorAll('.btn-player-count:not(.btn-length)').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-player-count:not(.btn-length)').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      const count = parseInt(btn.dataset.count);
-      const typed = Array.from(document.querySelectorAll('.player-name-input')).map(el => el.value);
-      renderPlayerInputs(count, typed.concat(savedNames.slice(typed.length)), savedAvatars);
-      updateModeVisibility(count);
-    });
-  });
+  // The front screen plays once: he walks up to the throne and clears it, then holds there.
+  // A tap on the picture plays it again. Reduced motion, data saver or a refused autoplay
+  // leave the last frame up: him beside his empty throne.
+  const screen = app.querySelector('.setup-screen');
+  const calm = prefersReducedMotion();
+  const film = app.querySelector('.title-video');
+  const stage = app.querySelector('.title-film');
+  const still = () => { film.poster = './assets/title/throne-last.webp'; };
+  // Once the film is over he does not freeze: every so often he turns his head to look at you,
+  // then looks away again (Kelly, Nov 11: "very subtle movement"). The fidget clip starts and
+  // ends on the film's last frame, so it sits on top of the film and nothing jumps.
+  const fidget = app.querySelector('.title-fidget');
+  let fidgetTimer = 0;
+  const rest = () => { clearTimeout(fidgetTimer); fidgetTimer = 0; };
+  const settle = () => { rest(); if (fidget) { fidget.pause(); fidget.classList.remove('on'); } };
+  const idle = (first = false) => {
+    rest();
+    if (!fidget || calm || navigator.connection?.saveData) return;
+    fidgetTimer = setTimeout(() => {
+      if (!fidget.isConnected) return;
+      if (document.hidden || setupStep !== 'title' || !film.ended) { idle(); return; }
+      fidget.currentTime = 0;
+      fidget.play()?.then(() => fidget.classList.add('on')).catch(() => {});
+    }, first ? 900 + Math.random() * 400 : 6000 + Math.random() * 6000);
+  };
+  const roll = () => {
+    if (!film || calm || navigator.connection?.saveData) return;
+    settle();
+    film.poster = './assets/title/throne-first.webp';
+    film.currentTime = 0;
+    film.play()?.catch(() => { film.removeAttribute('src'); film.load(); still(); });
+  };
+  if (film) {
+    if (calm || navigator.connection?.saveData) film.preload = 'none';
+    if (setupStep === 'title') roll();
+    stage.addEventListener('click', () => { if (film.paused || film.ended) roll(); });
+    // the fidget is fetched while the film plays, so it is ready the moment the film ends
+    film.addEventListener('playing', () => { if (fidget && !navigator.connection?.saveData) fidget.preload = 'auto'; }, { once: true });
+    film.addEventListener('ended', () => { if (fidget) fidget.preload = 'auto'; idle(true); });
+    fidget?.addEventListener('ended', () => { fidget.classList.remove('on'); idle(); });
+  }
 
-  // Game length buttons
-  document.querySelectorAll('.btn-length').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-length').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      renderChapterCard(); // the chapter's target depends on game length
-    });
-  });
+  // Two steps, one page: the title, then the table. Nothing is re-rendered, so every choice survives a trip back.
+  const goTo = step => {
+    setupStep = step;
+    screen.dataset.step = step;
+    window.scrollTo(0, 0);
+    screen.scrollTop = 0;
+    app.scrollTop = 0;
+    if (step === 'table') {
+      if (!calm) {
+        animate(screen.querySelectorAll('.table-head, .seats, .cast, .table-game, .table-go'),
+          { opacity: [0, 1], y: [16, 0] }, { duration: 0.42, ease: EXPO, delay: stagger(0.05) });
+      }
+      if (film && !film.paused) film.pause();
+      settle();
+      document.getElementById('table-title')?.focus({ preventScroll: true });
+    } else {
+      // back at the title: pick the film up where it stopped, or let him fidget again
+      if (film?.ended) idle(true);
+      else if (film && film.paused && film.currentTime > 0 && !calm) film.play()?.catch(() => {});
+      document.getElementById('btn-play')?.focus({ preventScroll: true });
+    }
+  };
+  document.getElementById('btn-play').addEventListener('click', () => { sounds.playSelect(); goTo('table'); });
+  document.getElementById('btn-back').addEventListener('click', () => goTo('title'));
 
-  // Play style buttons
-  document.querySelectorAll('.btn-style').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-style').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      const style = btn.dataset.style;
-      savePrefs({ playStyle: style });
-      const card = document.getElementById('chapter-card');
-      if (card) card.hidden = style !== 'campaign';
-      const start = document.getElementById('btn-start-game');
-      if (start && style !== 'campaign') start.textContent = 'Open the board';
-      renderChapterCard();
-    });
+  // A row of choices: one is always picked, and its note (when it has one) sits under the row
+  const wire = (selector, onPick) => {
+    const btns = Array.from(document.querySelectorAll(selector));
+    const sync = () => {
+      const on = btns.find(b => b.classList.contains('selected'));
+      const note = on?.closest('.opt-row')?.querySelector('.opt-note');
+      if (note) note.textContent = on.dataset.note || '';
+    };
+    btns.forEach(btn => btn.addEventListener('click', () => {
+      btns.forEach(b => { b.classList.toggle('selected', b === btn); b.setAttribute('aria-pressed', String(b === btn)); });
+      sync();
+      onPick?.(btn);
+    }));
+    sync();
+  };
+
+  wire('.btn-count', btn => {
+    const count = parseInt(btn.dataset.count);
+    const typed = Array.from(document.querySelectorAll('.player-name-input')).map(el => el.value);
+    renderPlayerInputs(count, typed.concat(savedNames.slice(typed.length)), savedAvatars);
+    updateModeVisibility(count);
+  });
+  // Length lives folded under one line that says what is picked. The questions used to sit there
+  // too; they are out in the open now, because how hard the game is should be a choice you can see.
+  const sumMore = () => {
+    const el = app.querySelector('.opt-more-sum');
+    if (!el) return;
+    el.textContent = app.querySelector('.btn-length.selected')?.dataset.length === 'quick'
+      ? 'Quick game \u00b7 about 20 min' : 'Full game \u00b7 about 45 min';
+  };
+  sumMore();
+  wire('.btn-length', () => { sumMore(); renderChapterCard(); }); // the chapter's target depends on game length
+  wire('.btn-style', btn => {
+    const style = btn.dataset.style;
+    savePrefs({ playStyle: style });
+    const card = document.getElementById('chapter-card');
+    if (card) card.hidden = style !== 'campaign';
+    const start = document.getElementById('btn-start-game');
+    if (start && style !== 'campaign') start.textContent = 'Open the board';
+    renderChapterCard();
   });
   renderChapterCard();
-
-  // Mode buttons
-  document.querySelectorAll('.btn-mode:not(.btn-pack)').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-mode:not(.btn-pack)').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-    });
-  });
-
-  // Question pack buttons
-  document.querySelectorAll('.btn-pack').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.btn-pack').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      savePrefs({ pack: btn.dataset.pack });
-    });
-  });
+  wire('.btn-answer');
+  wire('.btn-pack', btn => savePrefs({ pack: btn.dataset.pack }));
 
   // Sound toggle
   document.getElementById('sound-checkbox').addEventListener('change', (e) => {
@@ -453,12 +919,13 @@ function renderSetup() {
     );
     const avatars = names.map((n, i) => monogram(n, i));
     const chars = names.map((_, i) => (characterById(setupCharacters[i]) ? setupCharacters[i] : null));
-    const mode = document.querySelector('.btn-mode.selected:not(.btn-pack)')?.dataset.mode || 'turns';
+    const mode = document.querySelector('.btn-answer.selected')?.dataset.mode || 'turns';
     const length = document.querySelector('.btn-length.selected')?.dataset.length || 'full';
     const packSel = document.querySelector('.btn-pack.selected')?.dataset.pack || 'fresh';
     const style = document.querySelector('.btn-style.selected')?.dataset.style || 'free';
     savePrefs({ names, avatars, characters: setupCharacters.slice(0, 3), playerCount: names.length, gameMode: mode, gameLength: length, pack: packSel, playStyle: style, sound: sounds.isEnabled() });
     sounds.playSelect();
+    setupStep = 'table'; // a rematch comes back to the table, not the title
     if (style === 'campaign') {
       const number = selectedChapterNumber();
       loadCampaign().then(() => {
@@ -580,24 +1047,31 @@ function showEmpire(chapter) {
     emp.peopleMillions ? `about ${emp.peopleMillions} million people` : '',
   ].filter(Boolean).join(' · ');
 
+  const present = STATUS_ORDER.filter(st => holdings.some(h => h.status === st));
   const overlay = document.createElement('div');
   overlay.className = 'modal-overlay';
   overlay.innerHTML = `
     <div class="modal empire" role="dialog" aria-modal="true" aria-label="The Empire">
       <div class="modal-title">The Empire &middot; Chapter ${chapter.number} &middot; ${escapeHtml(chapter.years)}</div>
-      <div class="empire-headline">${escapeHtml(emp.headline)}</div>
-      <div class="empire-note">${escapeHtml(emp.note || '')}</div>
-      <div class="empire-bar" role="img" aria-label="Empire size ${size} of ${max}"><div class="empire-bar-fill" style="--fill:${size / max}"></div></div>
-      <div class="empire-meta">${escapeHtml(meta)}</div>
-      <ul class="empire-list">
-        ${holdings.map(h => `
-          <li class="status-${h.status}">
-            <span class="eh-name">${escapeHtml(h.name)}</span>
-            <span class="eh-status">${escapeHtml(statusLabel(h.status))}${h.since ? ` &middot; ${escapeHtml(h.since)}` : ''}</span>
-            ${h.note ? `<span class="eh-note">${escapeHtml(h.note)}</span>` : ''}
-          </li>
-        `).join('')}
-      </ul>
+      <div class="empire-body">
+        <div class="empire-side">
+          <div class="empire-headline">${escapeHtml(emp.headline)}</div>
+          <div class="empire-note">${escapeHtml(emp.note || '')}</div>
+          <div class="empire-map-wrap">${empireMap(holdings, `Map of Europe with ${holdings.length} places marked. They are listed below.`)}</div>
+          <div class="empire-legend">${present.map(st => `<span>${statusMark(st)}${escapeHtml(statusLabel(st))}</span>`).join('')}</div>
+          <div class="empire-meta">${escapeHtml(meta)}</div>
+        </div>
+        <ul class="empire-list">
+          ${holdings.map((h, i) => `
+            <li class="status-${h.status}" data-pin="${i}" tabindex="0">
+              ${statusMark(h.status)}
+              <span class="eh-name">${escapeHtml(h.name)}</span>
+              <span class="eh-status">${escapeHtml(statusLabel(h.status))}${h.since ? ` &middot; ${escapeHtml(h.since)}` : ''}</span>
+              ${h.note ? `<span class="eh-note">${escapeHtml(h.note)}</span>` : ''}
+            </li>
+          `).join('')}
+        </ul>
+      </div>
       <div class="modal-actions">
         <button class="btn-cta modal-cancel">Close</button>
       </div>
@@ -607,7 +1081,33 @@ function showEmpire(chapter) {
   const close = () => overlay.remove();
   overlay.querySelector('.modal-cancel').addEventListener('click', close);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
-  overlay.querySelector('.modal-cancel').focus();
+  overlay.querySelector('.modal-cancel').focus({ preventScroll: true });
+
+  // A row and its pin point at each other
+  const svg = overlay.querySelector('.empire-map');
+  const rows = overlay.querySelectorAll('.empire-list li');
+  const point = (i) => {
+    rows.forEach(r => r.classList.toggle('is-on', Number(r.dataset.pin) === i));
+    pointAt(svg, i, i === null ? '' : holdings[i].name);
+  };
+  rows.forEach(row => {
+    const i = Number(row.dataset.pin);
+    row.addEventListener('pointerenter', () => point(i));
+    row.addEventListener('focus', () => point(i));
+    row.addEventListener('click', () => point(i));
+  });
+  svg.querySelectorAll('.em-pin').forEach(pin => {
+    const i = Number(pin.dataset.pin);
+    pin.addEventListener('pointerenter', () => point(i));
+    pin.addEventListener('click', () => { point(i); rows[i].scrollIntoView({ block: 'nearest', behavior: prefersReducedMotion() ? 'auto' : 'smooth' }); });
+  });
+  svg.addEventListener('pointerleave', () => point(null));
+
+  // The Empire assembles: France first, then each ring of holdings
+  if (!prefersReducedMotion()) {
+    animate(svg.querySelectorAll('.em-shape'), { scale: [0, 1], opacity: [0, 1] },
+      { type: 'spring', stiffness: 380, damping: 18, delay: stagger(0.055, { startDelay: 0.25 }) });
+  }
 }
 
 function updateModeVisibility(count) {
@@ -615,87 +1115,144 @@ function updateModeVisibility(count) {
   if (section) section.style.display = count > 1 ? '' : 'none';
 }
 
+// Whose turn it is at the shared cast on the setup screen
+let castTurn = 0;
+
+/**
+ * The table: the players sit along the top as name cards, and the whole cast stands below them
+ * full length. A tap on a player hands them the cast; a tap on a figure makes it theirs.
+ */
 function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
   const container = document.getElementById('player-names');
   if (!container) return;
   const roster = characters();
-  const sealFor = (i, name) => {
-    const c = characterById(setupCharacters[i]);
-    return c ? `<img src="${c.portraitUrl}" alt="">` : escapeHtml(monogram(name, i));
-  };
-  let html = '';
+  const turn = Math.min(castTurn, count - 1);
+  const nameOf = i => savedNames[i] || `Player ${i + 1}`;
+  const held = i => characterById(setupCharacters[i]);
+  // every player's numbered tag sits on the figure they hold
+  const tagsFor = id => (count > 1
+    ? Array.from({ length: count }, (_, j) => j)
+      .filter(j => (held(j) ? setupCharacters[j] : '') === id)
+      .map(j => `<span class="cast-tag" style="--pc: ${PLAYER_COLORS[j]}">${j + 1}</span>`).join('')
+    : '');
+
+  let html = `<div class="seats" data-count="${count}">`;
   for (let i = 0; i < count; i++) {
-    const value = savedNames[i] || `Player ${i + 1}`;
-    const c = characterById(setupCharacters[i]);
+    const c = held(i);
     html += `
-      <div class="name-input-group">
-        <button type="button" class="player-seal ${c ? 'has-portrait' : ''}" data-index="${i}"
-                style="--pc: ${PLAYER_COLORS[i]}" aria-expanded="false" aria-controls="char-picker-${i}"
-                aria-label="Choose a character for player ${i + 1}${c ? `, now ${escapeHtml(c.name)}` : ''}"
-                title="Choose a character">${sealFor(i, value)}</button>
-        <label for="player-name-${i}">Player ${i + 1}</label>
-        <input type="text" class="player-name-input" placeholder="Enter name" id="player-name-${i}"
-               value="${escapeHtml(value)}" data-index="${i}"
-               style="--pc: ${PLAYER_COLORS[i]}">
+      <div class="seat ${count > 1 && i === turn ? 'is-picking' : ''}" data-index="${i}" style="--pc: ${PLAYER_COLORS[i]}">
+        <button type="button" class="seat-face" data-index="${i}"${count > 1 ? ` aria-pressed="${i === turn}"` : ''}
+                aria-label="${count > 1 ? `Choose a character for player ${i + 1}` : 'Your character'}${c ? `, now ${escapeHtml(c.name)}` : ''}">
+          <img class="seat-img" src="${c ? c.portraitUrl : ''}" alt="" ${c ? '' : 'hidden'}>
+          <span class="seat-seal" ${c ? 'hidden' : ''}>${escapeHtml(monogram(nameOf(i), i))}</span>
+          ${count > 1 ? `<span class="seat-num" aria-hidden="true">${i + 1}</span>` : ''}
+        </button>
+        <div class="seat-text">
+          <input type="text" class="player-name-input" placeholder="Name" id="player-name-${i}"
+                 aria-label="Player ${i + 1} name" value="${escapeHtml(nameOf(i))}" data-index="${i}"
+                 maxlength="24" autocomplete="off" spellcheck="false">
+          <span class="seat-as">${c ? escapeHtml(c.name) : 'Initials only'}</span>
+        </div>
       </div>
-      ${roster.length ? `
-      <div class="char-picker" id="char-picker-${i}" role="radiogroup" aria-label="Character for player ${i + 1}" hidden>
-        ${roster.map(rc => `
-          <button type="button" class="char-option" role="radio" data-index="${i}" data-id="${rc.id}"
-                  aria-checked="${rc.id === setupCharacters[i]}" style="--tone: ${rc.tone}">
-            <img src="${rc.portraitUrl}" alt="" loading="lazy">
-            <span>${escapeHtml(rc.name)}</span>
-          </button>`).join('')}
-        <button type="button" class="char-option char-none" role="radio" data-index="${i}" data-id=""
-                aria-checked="${!c}"><span class="char-none-seal" aria-hidden="true">${escapeHtml(monogram(value, i))}</span><span>Initials</span></button>
-      </div>` : ''}
     `;
   }
-  if (roster.length) html += '<p class="char-hint">Tap a face to play as one of 13 historical characters.</p>';
+  html += '</div>';
+
+  // One cast for the whole table, standing full length: the players take turns at it
+  if (roster.length) {
+    const mine = held(turn);
+    html += `
+      <div class="tray-card cast">
+        <div class="cast-line">
+          <p class="cast-for">${count > 1
+            ? `Choosing for <strong class="cast-who" style="--pc: ${PLAYER_COLORS[turn]}">${escapeHtml(nameOf(turn))}</strong>`
+            : 'Choose your character'}</p>
+          <button type="button" class="cast-none ${mine ? '' : 'selected'}" data-id="" aria-pressed="${!mine}">${tagsFor('')}Play with initials</button>
+        </div>
+        <div class="cast-figures" role="radiogroup" aria-label="Character for ${escapeHtml(nameOf(turn))}">
+          ${roster.map(rc => `
+            <button type="button" class="char-option" role="radio" data-id="${rc.id}"
+                    aria-checked="${rc.id === setupCharacters[turn]}" style="--tone: ${rc.tone}">
+              <span class="cast-fig"><img src="${rc.poseUrls.ready}" alt="" loading="lazy" decoding="async"></span>
+              ${tagsFor(rc.id)}
+              <span class="cast-name">${escapeHtml(rc.name)}</span>
+            </button>`).join('')}
+        </div>
+      </div>
+    `;
+  }
   container.innerHTML = html;
 
-  // The roster loads once per visit; draw the faces as soon as it arrives.
+  const typedNames = () => Array.from(container.querySelectorAll('.player-name-input')).map(el => el.value);
+  const redraw = () => renderPlayerInputs(count, typedNames(), savedAvatars);
+
+  // The roster loads once per visit; draw the cast as soon as it arrives.
   if (!roster.length) {
     loadCharacters().then(list => {
-      if (list.length && getState().screen === 'setup' && document.getElementById('player-names') === container) {
-        const typed = Array.from(container.querySelectorAll('.player-name-input')).map(el => el.value);
-        renderPlayerInputs(count, typed, savedAvatars);
-      }
+      if (list.length && getState().screen === 'setup' && document.getElementById('player-names') === container) redraw();
     });
   }
 
-  // The seal restrikes itself as the name is typed (when no face is chosen)
+  // A name restrikes its seal (when no face is chosen) and the line over the cast as it is typed
   container.querySelectorAll('.player-name-input').forEach(input => {
     input.addEventListener('input', () => {
       const i = Number(input.dataset.index);
-      if (characterById(setupCharacters[i])) return;
-      const seal = container.querySelector(`.player-seal[data-index="${i}"]`);
+      const who = container.querySelector('.cast-who');
+      if (who && i === turn) who.textContent = input.value.trim() || `Player ${i + 1}`;
+      const seal = container.querySelector(`.seat[data-index="${i}"] .seat-seal`);
       if (seal) seal.textContent = monogram(input.value, i);
     });
   });
 
-  container.querySelectorAll('.player-seal').forEach(seal => {
-    seal.addEventListener('click', () => {
-      const picker = document.getElementById(`char-picker-${seal.dataset.index}`);
-      if (!picker) return;
-      const open = picker.hidden;
-      container.querySelectorAll('.char-picker').forEach(pk => { pk.hidden = true; });
-      container.querySelectorAll('.player-seal').forEach(sl => sl.setAttribute('aria-expanded', 'false'));
-      picker.hidden = !open;
-      seal.setAttribute('aria-expanded', String(open));
-      if (open) (picker.querySelector('[aria-checked="true"]') || picker.querySelector('.char-option'))?.focus();
+  // A tap on a player hands the cast to that player
+  container.querySelectorAll('.seat-face').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (count === 1) { container.querySelector('.cast-figures [aria-checked="true"]')?.focus(); return; }
+      castTurn = Number(btn.dataset.index);
+      redraw();
+      document.querySelector(`.seat-face[data-index="${castTurn}"]`)?.focus({ preventScroll: true });
     });
   });
 
-  container.querySelectorAll('.char-option').forEach(opt => {
+  // Whoever the pointer or focus is on tries the face on before anyone commits
+  const seat = container.querySelector(`.seat[data-index="${turn}"]`);
+  const figures = container.querySelector('.cast-figures');
+  const wear = id => {
+    const c = characterById(id);
+    const img = seat.querySelector('.seat-img');
+    if (c && img.getAttribute('src') !== c.portraitUrl) img.src = c.portraitUrl;
+    img.hidden = !c;
+    seat.querySelector('.seat-seal').hidden = !!c;
+    seat.querySelector('.seat-as').textContent = c ? c.name : 'Initials only';
+  };
+  if (figures && seat) {
+    const tryOn = e => {
+      const opt = e.target.closest('.char-option');
+      if (opt && !(e.pointerType && e.pointerType !== 'mouse')) wear(opt.dataset.id);
+    };
+    const rest = () => wear(setupCharacters[turn]);
+    figures.addEventListener('pointerover', tryOn);
+    figures.addEventListener('focusin', tryOn);
+    figures.addEventListener('pointerleave', rest);
+    figures.addEventListener('focusout', rest);
+  }
+
+  container.querySelectorAll('.char-option, .cast-none').forEach(opt => {
     opt.addEventListener('click', () => {
-      const i = Number(opt.dataset.index);
-      setupCharacters[i] = opt.dataset.id || null;
+      const id = opt.dataset.id || null;
+      // one character per player: taking someone else's hands them yours
+      const holder = id ? setupCharacters.findIndex((cid, j) => j !== turn && j < count && cid === id) : -1;
+      if (holder >= 0) setupCharacters[holder] = setupCharacters[turn];
+      setupCharacters[turn] = id;
       savePrefs({ characters: setupCharacters.slice(0, 3) });
       sounds.playSelect();
-      const typed = Array.from(container.querySelectorAll('.player-name-input')).map(el => el.value);
-      renderPlayerInputs(count, typed, savedAvatars);
-      container.querySelector(`.player-seal[data-index="${i}"]`)?.focus();
+      redraw();
+      const picked = document.querySelector(id ? '.cast-figures [aria-checked="true"]' : '.cast-none');
+      picked?.focus({ preventScroll: true });
+      // the chosen figure steps forward
+      if (id && picked && !prefersReducedMotion()) {
+        animate(picked.querySelector('.cast-fig img'), { y: [10, -4, 0] }, { duration: 0.42, ease: EXPO });
+      }
     });
   });
 }
@@ -708,10 +1265,10 @@ function renderLoading() {
   app.innerHTML = `
     ${sceneShapes('loading')}
     <div class="loading-screen">
-      <div class="logo">Clue d&rsquo;&Eacute;tat</div>
-      ${ch ? `<div class="chapter-kicker">Chapter ${ch.number} &middot; ${escapeHtml(ch.title)}</div>` : ''}
+      <div class="logo">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></div>
       ${compassLoader('loading-compass')}
       <div class="loading-text">${ch ? 'Drawing up the order of battle&hellip;' : 'Loading clues&hellip;'}</div>
+      ${ch ? `<div class="chapter-meta">Chapter ${ch.number} &middot; ${escapeHtml(ch.title)}</div>` : ''}
     </div>
   `;
 }
@@ -725,8 +1282,8 @@ function renderChapterIntro() {
   app.innerHTML = `
     ${sceneShapes('chapter')}
     <div class="chapter-intro-screen">
-      <div class="chapter-kicker">Chapter ${ch.number} of ${chapterCount()} &middot; ${escapeHtml(ch.years)}</div>
       <h1 class="chapter-title">${escapeHtml(ch.title)}</h1>
+      <div class="chapter-meta">Chapter ${ch.number} of ${chapterCount()} &middot; ${escapeHtml(ch.years)}</div>
       <div class="chapter-stage">${escapeHtml(ch.stage)} &middot; ${escapeHtml(ch.place)}</div>
       <p class="chapter-blurb">${escapeHtml(ch.blurb)}</p>
       ${hostLine(ch.quote.text, ch.quote.by)}
@@ -739,6 +1296,7 @@ function renderChapterIntro() {
       <button class="btn-continue" id="btn-begin-chapter">To the board</button>
       <button class="link-btn" id="btn-intro-empire">The Empire at this point</button>
     </div>
+    ${stageHost('welcome')}
   `;
   const go = document.getElementById('btn-begin-chapter');
   go.focus();
@@ -749,7 +1307,7 @@ function renderChapterIntro() {
 function renderError() {
   app.innerHTML = `
     <div class="loading-screen">
-      <div class="logo">Clue d&rsquo;&Eacute;tat</div>
+      <div class="logo">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></div>
       <div class="error-box">
         <div class="error-title">Couldn't load the clues</div>
         <div class="error-body">Check your connection and try again.</div>
@@ -773,6 +1331,23 @@ function renderBoard() {
     : round === 1 ? 'Round I' : 'Round II · Doubled';
   const progress = Math.round((cluesAnswered / totalClues) * 100);
 
+  // He comes back to the board the way the last clue left him, then points at it again.
+  const outcome = lastOutcome;
+  lastOutcome = null;
+  const stance = { correct: 'hands-on-hips', wrong: 'arms-crossed', timeout: 'arms-crossed', pass: 'shrug' }[outcome]
+    || (cluesAnswered === 0 ? 'welcome' : 'choose');
+  const mood = { correct: 'delighted', wrong: 'annoyed', timeout: 'annoyed', pass: 'puzzled' }[outcome] || 'neutral';
+  const spent = lastPicked;
+  lastPicked = null;
+  const opening = chapter && cluesAnswered === 0 && round === 1 && CHAPTER_LINES[chapter.number];
+  // Where the board has no room for the explainers (phones, small windows), he says once
+  // that a category can be asked about. A chapter's opening line goes first.
+  const notesHidden = !window.matchMedia('(min-width: 1100px) and (min-height: 700px)').matches;
+  const hint = notesHidden && round === 1 && cluesAnswered === (opening ? 1 : 0) && categories.some(c => c.note)
+    ? `${touchOnly() ? 'Tap' : 'Click'} a category and I will explain it.` : '';
+  const remark = opening || hint
+    || (outcome === 'correct' ? pick(AFTER_CORRECT) : outcome && outcome !== 'pass' ? pick(AFTER_WRONG) : pick(BOARD_LINES));
+
   app.innerHTML = `
     <div class="board-screen">
       <div class="board-header">
@@ -780,7 +1355,7 @@ function renderBoard() {
           <i class="ph ph-list" aria-hidden="true"></i>
         </button>
         <div class="board-brand">
-          <div class="board-title">Clue d&rsquo;&Eacute;tat</div>
+          <div class="board-title">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></div>
           <div class="round-meta">
             <div class="round-name">${roundName}</div>
             <div class="round-progress"><div class="round-progress-fill" style="--fill:${progress / 100}"></div></div>
@@ -791,8 +1366,8 @@ function renderBoard() {
             <div class="player-score ${i === activePlayer ? 'active' : ''}" style="--pc: ${PLAYER_COLORS[i]}">
               <div class="player-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}">${avatarHtml(p, i)}</div>
               <div class="player-meta">
-                <div class="player-name">${escapeHtml(p.name)}${p.streak >= 2 ? ` <span class="streak">&times;${p.streak}</span>` : ''}</div>
-                <div class="player-amount ${p.score < 0 ? 'negative' : ''}" data-index="${i}">$${formatMoney(p.score)}</div>
+                <div class="player-name">${escapeHtml(p.name)}${p.streak >= 2 ? ` <span class="streak${p.streak >= 3 ? ' is-hot' : ''}">&times;${p.streak}</span>` : ''}</div>
+                <div class="player-amount ${p.score < 0 ? 'negative' : ''}" data-index="${i}">${flowMoney(p.score, prevScores[i])}</div>
               </div>
             </div>
           `).join('')}
@@ -802,32 +1377,34 @@ function renderBoard() {
         <div class="game-board" id="game-board">
           ${categories.map((cat, ci) => `
             <div class="board-category ${cat.themed ? 'themed' : ''}" data-cat="${ci}">
-              <div class="category-header" ${cat.themed ? 'title="This chapter\'s category: three right answers earn the Légion d\'honneur"' : ''}>${escapeHtml(cat.name)}</div>
-              ${cat.clues.map((clue, cli) => `
-                <div class="board-clue ${clue.answered ? 'answered' : ''}"
+              <div class="category-header" ${cat.note ? `role="button" tabindex="0" data-cat="${ci}" aria-label="${escapeHtml(cat.name)}: ${escapeHtml(cat.note)}"` : ''} ${cat.themed ? 'title="This chapter\'s category: three right answers earn the Légion d\'honneur"' : ''}><span class="cat-name">${escapeHtml(softHyphenate(cat.name))}</span>${cat.note ? `<span class="cat-note">${escapeHtml(cat.note)}</span>` : ''}</div>
+              ${cat.clues.map((clue, cli) => {
+                const justSpent = clue.answered && spent && spent.ci === ci && spent.cli === cli;
+                return `
+                <div class="board-clue ${clue.answered ? 'answered' : ''} ${justSpent ? 'just-spent' : ''}"
                      data-cat="${ci}" data-clue="${cli}">
-                  ${clue.answered ? '' : '$' + clue.value}
+                  ${clue.answered ? (justSpent ? `<span class="spent" aria-hidden="true">$${clue.value}</span>` : '') : '$' + clue.value}
                 </div>
-              `).join('')}
+              `; }).join('')}
             </div>
           `).join('')}
         </div>
         <aside class="board-host" aria-label="Napoleon, your host">
-          <img src="./assets/napoleon-lowpoly-full.webp" alt="Low-poly Napoleon standing at the game board">
+          ${hostFigure(stance, 'board-fig', { alt: 'Napoleon, standing by the board' })}
         </aside>
       </div>
       <div class="board-footer">
         <div class="host-dock">
-          <div class="host-monogram has-face" aria-hidden="true"><img src="${NAPOLEON.face}" alt=""></div>
-          <div class="host-plaque" aria-live="polite">${players.length > 1
-            ? `<strong style="color: ${PLAYER_COLORS[activePlayer]}">${escapeHtml(players[activePlayer].name)}</strong>, choose your battlefield.`
-            : pick(BOARD_LINES)}</div>
+          <div class="host-monogram has-face" aria-hidden="true"><img src="${faceSrc(mood)}" alt=""></div>
+          <div class="host-plaque" aria-live="polite">${players.length > 1 && !opening && !hint
+            ? `<strong>${escapeHtml(players[activePlayer].name)}</strong>, choose your battlefield.`
+            : escapeHtml(remark)}</div>
         </div>
         <div class="board-footer-info">
           ${cluesAnswered === 0 ? '<button class="reroll-btn" id="btn-reroll">Redraw the map</button>' : ''}
           <div class="clues-remaining">
-            ${totalClues - cluesAnswered} clues left${chapter ? ` &nbsp;&middot;&nbsp; target ${money(chapterTarget(chapter, gameLength))}` : ''}
-            ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${BUZZ_KEYS[i].toUpperCase()}</span>`).join(' ')}` : ''}
+            ${totalClues - cluesAnswered === 1 ? '1 clue left' : `${totalClues - cluesAnswered} clues left`}${chapter ? ` &nbsp;&middot;&nbsp; target ${money(chapterTarget(chapter, gameLength))}` : ''}
+            ${gameMode === 'buzz' ? ` &nbsp;&middot;&nbsp; buzzers: ${players.map((p, i) => `${escapeHtml(p.name)} <span class="key-hint">${touchOnly() ? 'tap' : BUZZ_HINTS[i] || ''}</span>`).join(' ')}` : ''}
           </div>
         </div>
       </div>
@@ -842,14 +1419,62 @@ function renderBoard() {
     setTimeout(() => board.classList.remove('revealing'), 800);
   }
 
-  // Pulse any score that changed since the last board render
+  // A score that changed rolls to its new value, and the difference lifts off the pill
+  flowNumbers();
   players.forEach((p, i) => {
-    if (prevScores[i] !== undefined && prevScores[i] !== p.score) {
-      const el = document.querySelector(`.player-amount[data-index="${i}"]`);
-      if (el) el.classList.add('bump');
-    }
+    if (prevScores[i] === undefined || prevScores[i] === p.score) return;
+    const pill = document.querySelector(`.player-amount[data-index="${i}"]`)?.closest('.player-score');
+    if (!pill) return;
+    const diff = p.score - prevScores[i];
+    const chip = document.createElement('span');
+    chip.className = `score-delta ${diff > 0 ? 'up' : 'down'}`;
+    chip.textContent = `${diff > 0 ? '+' : '-'}$${formatMoney(Math.abs(diff))}`;
+    pill.appendChild(chip);
+    if (prefersReducedMotion()) setTimeout(() => chip.remove(), 1800);
+    else animate(chip, { opacity: [0, 1, 1, 0], y: [-6, 0, 0, 10], scale: [0.8, 1, 1, 1] },
+      { duration: 1.9, times: [0, 0.14, 0.78, 1], ease: 'easeOut', delay: 0.25 }).then(() => chip.remove());
   });
   prevScores = players.map(p => p.score);
+  if (outcome && !prefersReducedMotion()) {
+    const dockFace = document.querySelector('.host-monogram.has-face');
+    if (dockFace) animate(dockFace, { scale: [0.7, 1] }, { type: 'spring', stiffness: 420, damping: 14 });
+    const badge = document.querySelector('.player-score .streak');
+    if (badge && outcome === 'correct') animate(badge, { scale: [0, 1.25, 1] }, { duration: 0.5, ease: EXPO, delay: 0.5 });
+  }
+
+  // Ask him about a category: its explainer goes in his speech bubble
+  document.querySelectorAll('.category-header[data-cat]').forEach((head) => {
+    const explain = () => {
+      const cat = getState().categories[+head.dataset.cat];
+      const plaque = document.querySelector('.host-plaque');
+      if (!cat || !cat.note || !plaque) return;
+      plaque.innerHTML = `<strong class="plaque-cat">${escapeHtml(cat.name)}</strong>${escapeHtml(cat.note)}`;
+      if (!prefersReducedMotion()) animate(plaque, { scale: [0.94, 1] }, { type: 'spring', stiffness: 480, damping: 20 });
+    };
+    head.addEventListener('click', explain);
+    head.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      e.preventDefault();
+      explain();
+    });
+  });
+
+  preloadHost(['delighted', 'frustrated', 'annoyed', 'puzzled', 'smirk', 'surprised', 'suspicious']);
+  // Kelly's reaction clips: only the ones this screen size shows. (His idle films are fetched
+  // from the title page on.)
+  preloadFilms([
+    ...(window.matchMedia('(min-width: 1240px)').matches
+      ? ['pleased', 'nod', 'shrug', 'brace', 'ponder', 'peer', 'stomp', 'fist', 'yell']
+      : ['face-smirk', 'face-nod', 'face-startled', 'face-shock', 'face-brow', 'face-stern', 'face-grin']),
+    'bow',
+  ]);
+  // Where he is not live, he goes back to pointing at the board after his reaction
+  const turn = ++stanceTurn;
+  if (stance !== 'choose') {
+    setTimeout(() => {
+      if (turn === stanceTurn && shownScreen === 'board') hostReact('choose');
+    }, 1700);
+  }
 
   // Lead-change announcement — keeps the race dramatic and visible
   if (players.length > 1) {
@@ -870,6 +1495,7 @@ function renderBoard() {
   const openClue = (el) => {
     const ci = parseInt(el.dataset.cat);
     const cli = parseInt(el.dataset.clue);
+    lastPicked = { ci, cli };
     zoomFromCell(el, () => selectClue(ci, cli));
   };
 
@@ -899,7 +1525,7 @@ function showHowTo() {
         <li><strong>Pick a clue</strong> from the board. Higher rows are worth more.</li>
         <li><strong>Answer</strong> in plain words. Spelling and phrasing are forgiven, and you don't need "What is…".</li>
         <li><strong>Right</strong> adds the value; <strong>wrong</strong> subtracts it. Get 3 right in a row for <strong>Campaign Momentum</strong>, a growing bonus.</li>
-        <li><strong>Buzz In! mode:</strong> race to ring in with your key (or tap) once the clue is read. Buzz too early and you're locked out briefly.</li>
+        <li><strong>Playing together?</strong> Everyone plays around one screen. <strong>Take turns</strong> passes each clue to the next player. In <strong>Buzz in</strong>, Napoleon reads the clue and then everyone races to ring in. Player 1 can hit any key on the left half of the keyboard, Player 2 any key on the right half, or tap your buzzer on a phone. Buzz too early and you're locked out briefly.</li>
         <li><strong>Waterloo Wagers</strong> hide on the board and let you bet your winnings. Then it's <strong>Waterloo</strong>: one clue, secret wagers, winner takes the night.</li>
         <li>The table is the judge: hit <strong>"The Emperor accepts it"</strong> if a close answer got marked wrong.</li>
         <li><strong>Playing solo?</strong> Chase a Rank (S is Grand Champion) and beat your personal best.</li>
@@ -966,6 +1592,7 @@ window.addEventListener('keydown', (e) => {
 let boardKeyHandler = null;
 let boardCursor = { c: 0, r: 0 };
 
+let boardKeysUsed = false; // the cursor tile appears once someone steers with the keyboard
 function detachBoardKeys() {
   if (boardKeyHandler) { window.removeEventListener('keydown', boardKeyHandler); boardKeyHandler = null; }
 }
@@ -987,6 +1614,8 @@ function attachBoardKeys(openClue) {
     if (getState().screen !== 'board') return;
     if (document.querySelector('.modal-overlay, .category-intro')) return;
     let handled = true;
+    // the first arrow only shows the cursor where it stands
+    if (!boardKeysUsed && e.key.startsWith('Arrow')) { e.preventDefault(); boardKeysUsed = true; paint(); return; }
     if (e.key === 'ArrowLeft') boardCursor.c = (boardCursor.c + 5) % 6;
     else if (e.key === 'ArrowRight') boardCursor.c = (boardCursor.c + 1) % 6;
     else if (e.key === 'ArrowUp') boardCursor.r = (boardCursor.r + 4) % 5;
@@ -996,10 +1625,10 @@ function attachBoardKeys(openClue) {
       if (el && !el.classList.contains('answered')) { detachBoardKeys(); openClue(el); }
       handled = true;
     } else handled = false;
-    if (handled) { e.preventDefault(); paint(); }
+    if (handled) { e.preventDefault(); boardKeysUsed = true; paint(); }
   };
   window.addEventListener('keydown', boardKeyHandler);
-  paint();
+  if (boardKeysUsed) paint();
 }
 
 /** TV-chyron style announcement banner. */
@@ -1033,25 +1662,34 @@ function playCategoryIntro(categories) {
   overlay.className = 'category-intro';
   overlay.innerHTML = `
     <div class="ci-label">Tonight&rsquo;s battlefields&hellip;</div>
-    <div class="ci-name" id="ci-name"></div>
+    <div class="ci-card" id="ci-card">
+      <div class="ci-name" id="ci-name"></div>
+      <div class="ci-note" id="ci-note"></div>
+    </div>
     <div class="ci-skip">tap to skip</div>
   `;
   // Mounted on <body> so board re-renders can't wipe it mid-sequence
   document.body.appendChild(overlay);
 
+  const card = overlay.querySelector('#ci-card');
   const nameEl = overlay.querySelector('#ci-name');
+  const noteEl = overlay.querySelector('#ci-note');
   let i = 0;
   let timeout = null;
 
+  // Each category is read out with its one-line explainer, the way a quiz host says what a
+  // category is about. A name with an explainer stays up long enough to read both.
   function showNext() {
     if (i >= categories.length) { finish(); return; }
-    nameEl.textContent = categories[i].name;
-    nameEl.classList.remove('pop');
-    void nameEl.offsetWidth; // restart animation
-    nameEl.classList.add('pop');
+    const { name, note } = categories[i];
+    nameEl.textContent = name;
+    noteEl.textContent = note || '';
+    card.classList.remove('pop');
+    void card.offsetWidth; // restart animation
+    card.classList.add('pop');
     sounds.playCategoryBlip();
     i++;
-    timeout = setTimeout(showNext, 1100);
+    timeout = setTimeout(showNext, note ? 1100 + Math.min(900, note.length * 22) : 1100);
   }
 
   function finish() {
@@ -1085,10 +1723,12 @@ function clueShell(extraHtml) {
   return `
     ${sceneShapes('clue')}
     <div class="clue-screen">
+     <div class="clue-panel">
       <div class="clue-header">
         <span class="clue-category">${escapeHtml(currentClue.categoryName)}</span>
-        <span class="clue-value">${isDailyDouble ? 'DD ' : ''}$${formatMoney(displayValue)}</span>
+        <span class="clue-value">${isDailyDouble ? '<span class="clue-value-tag">Wager</span> ' : ''}$${formatMoney(displayValue)}</span>
       </div>
+      ${currentClue.categoryNote ? `<p class="clue-note">${escapeHtml(currentClue.categoryNote)}</p>` : ''}
       <div class="clue-timer">
         <div class="timer-bar-bg">
           <div class="timer-bar" id="timer-bar"></div>
@@ -1098,8 +1738,9 @@ function clueShell(extraHtml) {
       <div class="clue-text">${escapeHtml(currentClue.clue)}</div>
       ${extraHtml}
       <div class="clue-feedback" id="clue-feedback" role="status" aria-live="polite"></div>
+     </div>
     </div>
-    <img class="clue-host" id="clue-host" src="${NAPOLEON.thinking}" alt="">
+    ${stageHost('thinking', true)}
   `;
 }
 
@@ -1108,12 +1749,31 @@ function showFeedback(html) {
   if (!feedback) return;
   feedback.innerHTML = html;
   feedback.classList.add('show');
+  // the result must never sit below the fold: bring Continue into view
+  const last = feedback.querySelector('.feedback-actions') || feedback;
+  requestAnimationFrame(() => last.scrollIntoView?.({ block: 'nearest', behavior: prefersReducedMotion() ? 'auto' : 'smooth' }));
+  if (prefersReducedMotion()) return;
+  const parts = feedback.querySelectorAll('.verdict, .verdict-score, .answer-key, .streak-callout, .correct-response, .feedback-actions');
+  if (parts.length) animate(parts, { opacity: [0, 1], y: [10, 0] }, { duration: 0.32, ease: EXPO, delay: stagger(0.07) });
+  const fig = feedback.querySelector('.verdict-fig');
+  // on a phone his face reacts in the verdict picture; without a film the still pose makes its move
+  if (fig && !(fig.offsetWidth > 1 && fig.dataset.film && playFilm(fig, fig.dataset.film))) hostMove(fig.querySelector('img'), fig.dataset.move);
+  const score = feedback.querySelector('.verdict-score span');
+  if (score) animate(score, { scale: [0.6, 1] }, { type: 'spring', stiffness: 520, damping: 17, delay: 0.07 });
+}
+
+/** The answer line itself says how it went: jade when right, a shake and red when wrong. */
+function markAnswer(correct) {
+  const input = document.getElementById('answer-input');
+  if (!input) return;
+  input.classList.remove('is-right', 'is-wrong');
+  input.classList.add(correct ? 'is-right' : 'is-wrong');
+  if (!correct && !prefersReducedMotion()) animate(input, { x: [0, -9, 8, -6, 4, 0] }, { duration: 0.4, ease: 'easeOut' });
 }
 
 /** Brief full-screen tint for a juicy correct/wrong beat. */
 function flashScreen(kind) {
-  const host = document.getElementById('clue-host');
-  if (host && kind === 'correct') host.src = NAPOLEON.victory;
+  markAnswer(kind === 'correct');
   const el = document.createElement('div');
   el.className = `screen-flash ${kind}`;
   document.body.appendChild(el);
@@ -1135,7 +1795,7 @@ function renderTurnsClue() {
 
   app.innerHTML = clueShell(`
     <div class="clue-player">
-      ${portraitUrl(players[answeringPlayer].character) ? `<span class="clue-player-face">${avatarHtml(players[answeringPlayer], answeringPlayer)}</span>` : ''}
+      ${players.length > 1 && portraitUrl(players[answeringPlayer].character) ? `<span class="clue-player-face">${avatarHtml(players[answeringPlayer], answeringPlayer)}</span>` : ''}
       ${players.length > 1 ? `<span>${escapeHtml(players[answeringPlayer].name)}'s ${currentClue.isDailyDouble && gameMode === 'buzz' ? 'Waterloo Wager' : 'turn'}</span>` : ''}
     </div>
     <div class="clue-answer-area">
@@ -1149,6 +1809,17 @@ function renderTurnsClue() {
   `);
 
   startTimer(getState().clueSeconds || 30, handleTimeExpired);
+  clueShownAt = Date.now();
+
+  // He remarks on the pick, briefly, then lets you think
+  const { cluesAnswered, totalClues, categories } = getState();
+  const top = Math.max(...categories.flatMap(c => c.clues.map(cl => cl.value)));
+  const remark = totalClues - cluesAnswered === 1 ? pick(LAST_CLUE_LINES)
+    : !currentClue.isDailyDouble && currentClue.value === top ? pick(BIG_PICK_LINES) : '';
+  if (remark) {
+    hostSay(remark);
+    setTimeout(() => { if (shownScreen === 'clue' && !document.querySelector('#clue-feedback.show') && !urgentShown) hostSay(''); }, 2400);
+  }
 
   const input = document.getElementById('answer-input');
   setTimeout(() => input.focus(), 50);
@@ -1163,7 +1834,7 @@ function renderTurnsClue() {
 
 function handleSubmitAnswer() {
   const input = document.getElementById('answer-input');
-  if (!input) return;
+  if (!input || input.disabled) return;
   const answer = input.value.trim();
   if (!answer) return;
 
@@ -1172,45 +1843,68 @@ function handleSubmitAnswer() {
   document.getElementById('btn-submit').disabled = true;
   document.getElementById('btn-skip').disabled = true;
 
-  const result = submitAnswer(answer);
-  if (!result) return;
-  flashScreen(result.correct ? "correct" : "wrong");
+  const { currentClue, players, answeringPlayer } = getState();
+  const wager = !!currentClue.isDailyDouble;
+  const streakBefore = players[answeringPlayer].streak;
+  const seconds = (Date.now() - clueShownAt) / 1000;
 
-  if (result.correct) {
-    showFeedback(`
-      <div class="feedback-correct">
-        <div class="feedback-icon">${icon('check')}</div>
-        <div>${pick(CORRECT_LINES)} +$${formatMoney(result.value)}</div>
-        ${bonusHtml(result)}
-      </div>
-    `);
-    scheduleReturn(result.bonus ? 2400 : 2000);
-  } else {
-    showFeedback(`
-      <div class="feedback-wrong">
-        <div class="feedback-icon">${icon('cross')}</div>
-        <div>${pick(WRONG_LINES)} -$${formatMoney(result.value)}</div>
-        <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
-        <div class="feedback-actions">
-          <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
-          <button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it</button>
+  const judge = () => {
+    if (shownScreen !== 'clue') return;
+    const result = submitAnswer(answer);
+    if (!result) return;
+    flashScreen(result.correct ? "correct" : "wrong");
+
+    if (result.correct) {
+      showFeedback(`
+        <div class="feedback-correct">
+          ${verdict('correct', correctLine(result, { wager, seconds }), { big: wager || result.streak >= 3 })}
+          <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
+          ${answerKey(result)}
+          ${bonusHtml(result)}
         </div>
-      </div>
-    `);
-    document.getElementById('btn-fb-continue').addEventListener('click', () => {
-      lastScreen = null; returnToBoard();
-    });
-    document.getElementById('btn-fb-accept').addEventListener('click', handleOverride);
+      `);
+      scheduleReturn(result.bonus ? 3000 : 2600);
+    } else {
+      showFeedback(`
+        <div class="feedback-wrong">
+          ${verdict('wrong', wrongLine({ wager, streakBefore }), { big: wager || streakBefore >= 3 })}
+          <div class="verdict-score">${icon('cross')}<span>-$${formatMoney(result.value)}</span></div>
+          <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
+          <div class="feedback-actions">
+            <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
+            <button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it</button>
+          </div>
+        </div>
+      `);
+      document.getElementById('btn-fb-continue').addEventListener('click', () => {
+        lastScreen = null; returnToBoard();
+      });
+      document.getElementById('btn-fb-accept').addEventListener('click', handleOverride);
+    }
+  };
+
+  // A wager is a big moment, and a big moment gets a windup: he weighs the answer first
+  if (wager && !prefersReducedMotion()) {
+    hostReact('suspicious', { move: 'lean', say: 'Hm.' });
+    showFeedback(`<figure class="verdict">
+        ${verdictFig('face-stern', 'suspicious', 'lean', false)}
+        <figcaption>Hm.</figcaption>
+      </figure>`);
+    setTimeout(judge, 750);
+  } else {
+    judge();
   }
 }
 
 function handleOverride() {
   const result = overrideCorrect();
   if (!result) return;
+  markAnswer(true);
   showFeedback(`
     <div class="feedback-correct">
-      <div class="feedback-icon">${icon('check')}</div>
-      <div>We'll accept it! +$${formatMoney(result.value)} (penalty refunded)</div>
+      ${verdict('pardon', 'Very well. The Emperor accepts it.')}
+      <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
+      <div class="correct-response">Penalty refunded</div>
       ${bonusHtml(result)}
     </div>
   `);
@@ -1224,7 +1918,7 @@ function handleSkip() {
 
   showFeedback(`
     <div class="feedback-skip">
-      <div>Passed</div>
+      ${verdict('pass', pick(PASS_LINES))}
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
@@ -1237,7 +1931,7 @@ function renderBuzzClue() {
   const { currentClue } = getState();
 
   app.innerHTML = clueShell(`
-    <div class="buzz-status" id="buzz-status" title="Space to open buzzers">Read the clue&hellip; <span class="buzz-skip-hint">(space to ring in)</span></div>
+    <div class="buzz-status" id="buzz-status" title="Space to open buzzers">Read the clue&hellip; <span class="buzz-skip-hint">${touchOnly() ? '(tap here to open the buzzers)' : '(space opens the buzzers)'}</span></div>
     <div class="clue-answer-area" id="answer-area" style="display:none">
       <div class="clue-player" id="answering-name"></div>
       <input type="text" id="answer-input" class="answer-input"
@@ -1246,7 +1940,7 @@ function renderBuzzClue() {
         <button class="btn-submit" id="btn-submit">Submit</button>
       </div>
     </div>
-    <div class="buzzer-row" id="buzzer-row"></div>
+    <div class="buzzer-row waiting" id="buzzer-row"></div>
   `);
 
   buzzPhase = 'reading';
@@ -1273,7 +1967,7 @@ function renderBuzzerRow() {
     <button class="btn-buzzer ${buzzAttempted[i] ? 'out' : ''}" data-player="${i}"
             style="--pc: ${PLAYER_COLORS[i]}" ${buzzAttempted[i] ? 'disabled' : ''}>
       <span class="buzzer-name">${escapeHtml(p.name)}</span>
-      <span class="buzzer-key">${buzzAttempted[i] ? icon('cross') : BUZZ_KEYS[i].toUpperCase()}</span>
+      <span class="buzzer-key">${buzzAttempted[i] ? icon('cross') : touchOnly() ? 'Tap' : `Any key, ${BUZZ_HINTS[i] || ''}`}</span>
     </button>
   `).join('');
 
@@ -1292,7 +1986,8 @@ function attachBuzzKeys() {
       openBuzzers();
       return;
     }
-    const idx = BUZZ_KEYS.indexOf(e.key.toLowerCase());
+    if (e.metaKey || e.ctrlKey) return; // leave browser shortcuts alone
+    const idx = buzzSide(e.code);
     if (idx >= 0 && idx < getState().players.length) {
       e.preventDefault();
       tryBuzz(idx);
@@ -1310,6 +2005,8 @@ function openBuzzers() {
     status.innerHTML = 'BUZZ IN!';
     status.classList.add('open');
   }
+  document.getElementById('buzzer-row')?.classList.remove('waiting');
+  hostReact('welcome', { say: 'Well? Who dares?' });
   sounds.playBuzzersOpen();
 
   // Nobody buzzes within the window → reveal the answer, no penalty
@@ -1341,6 +2038,7 @@ function tryBuzz(playerIndex) {
   buzzIn(playerIndex);
 
   const { players } = getState();
+  hostReact('choose', { move: 'lean', say: `${players[playerIndex].name}. Speak.` });
 
   // Highlight who buzzed, hide the rest
   const status = document.getElementById('buzz-status');
@@ -1390,19 +2088,20 @@ function resolveBuzzAnswer(answer, timedOut) {
     buzzPhase = 'done';
     showFeedback(`
       <div class="feedback-correct">
-        <div class="feedback-icon">${icon('check')}</div>
-        <div>${pick(CORRECT_LINES)} +$${formatMoney(result.value)}</div>
+        ${verdict('correct', correctLine(result), { big: result.streak >= 3 })}
+        <div class="verdict-score">${icon('check')}<span>+$${formatMoney(result.value)}</span></div>
+        ${answerKey(result)}
         ${bonusHtml(result)}
       </div>
     `);
-    scheduleReturn(result.bonus ? 2400 : 2000);
+    scheduleReturn(result.bonus ? 3000 : 2600);
     return;
   }
 
   // Wrong (or silent) — maybe others can still steal it
   const header = timedOut
-    ? `<div class="feedback-icon">${icon('clock')}</div><div>${pick(TIMEOUT_LINES)} -$${formatMoney(result.value)}</div>`
-    : `<div class="feedback-icon">${icon('cross')}</div><div>${pick(WRONG_LINES)} -$${formatMoney(result.value)}</div>`;
+    ? `${verdict('timeout', pick(TIMEOUT_LINES))}<div class="verdict-score">${icon('clock')}<span>-$${formatMoney(result.value)}</span></div>`
+    : `${verdict('wrong', pick(WRONG_LINES))}<div class="verdict-score">${icon('cross')}<span>-$${formatMoney(result.value)}</span></div>`;
 
   if (result.canRebuzz) {
     showFeedback(`
@@ -1441,6 +2140,7 @@ function resolveBuzzAnswer(answer, timedOut) {
 function reopenBuzzers() {
   const feedback = document.getElementById('clue-feedback');
   if (feedback) { feedback.innerHTML = ''; feedback.classList.remove('show'); }
+  document.getElementById('answer-input')?.classList.remove('is-right', 'is-wrong');
 
   const area = document.getElementById('answer-area');
   if (area) {
@@ -1467,7 +2167,7 @@ function handleNoBuzz() {
 
   showFeedback(`
     <div class="feedback-skip">
-      <div>${pick(NOBUZZ_LINES)}</div>
+      ${verdict('pass', pick(NOBUZZ_LINES))}
       <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
@@ -1486,10 +2186,10 @@ function renderDailyDouble() {
     <div class="daily-double-screen">
       <div class="dd-flash">
         <div class="dd-title">Waterloo<br>Wager</div>
-        ${hostLine('A bold wager. I approve of nothing less.')}
+        ${hostLine('Name your stake. I am watching.', 'Napoleon', 'suspicious')}
       </div>
       <div class="dd-content">
-        <div class="dd-category">${escapeHtml(currentClue.categoryName)}</div>
+        <div class="dd-category">${escapeHtml(currentClue.categoryName)}${currentClue.categoryNote ? `<span class="dd-note">${escapeHtml(currentClue.categoryNote)}</span>` : ''}</div>
         <div class="dd-player">${escapeHtml(player.name)}</div>
         <div class="dd-score">Current score: $${formatMoney(player.score)}</div>
         <div class="dd-wager-area">
@@ -1510,15 +2210,40 @@ function renderDailyDouble() {
         </div>
       </div>
     </div>
+    ${stageHost('suspicious')}
   `;
 
   const input = document.getElementById('wager-input');
   input.focus();
   input.select();
 
+  // He has an opinion about the size of the stake
+  const TAKES = {
+    all: ['shocked', 'surprised', 'recoil', 'All of it? Even I kept a reserve.'],
+    bold: ['hands-on-hips', 'smirk', 'settle', 'Now that is a wager.'],
+    small: ['arms-crossed', 'annoyed', 'refuse', 'A skirmish, then. Very well.'],
+  };
+  let take = null;
+  const react = () => {
+    const amount = parseInt(input.value) || 0;
+    const next = amount >= maxWager ? 'all' : amount >= maxWager / 2 ? 'bold' : 'small';
+    if (next === take) return;
+    take = next;
+    const [pose, face, move, line] = TAKES[next];
+    hostReact(pose, { move });
+    setFace(document.querySelector('.dd-flash .host-face'), face);
+    const words = document.querySelector('.dd-flash .host-words');
+    if (words) {
+      words.textContent = line;
+      if (!prefersReducedMotion()) animate(words, { opacity: [0, 1], y: [6, 0] }, { duration: 0.25, ease: EXPO });
+    }
+  };
+  input.addEventListener('input', react);
+
   document.querySelectorAll('.btn-preset').forEach(btn => {
     btn.addEventListener('click', () => {
       input.value = btn.dataset.amount;
+      react();
     });
   });
 
@@ -1560,7 +2285,9 @@ function renderRoundTransition() {
       ${players.length > 1 ? `<div class="transition-note"><strong>${escapeHtml(players[lowest].name)}</strong> is trailing and gets first pick</div>` : ''}
       <button class="btn-continue" id="btn-continue">March on</button>
     </div>
+    ${stageHost('marching')}
   `;
+  hostReact('marching', { move: 'march' });
 
   sounds.playRoundTransition();
 
@@ -1598,8 +2325,9 @@ function renderFinalCategory() {
         <div class="final-category-name">${escapeHtml(finalClue.name)}</div>
         ${hostLine('Waterloo. Where everything is decided.')}
       </div>
-      <button class="btn-continue" id="btn-final-wager">Place wagers</button>
+      <button class="btn-continue" id="btn-final-wager">${getState().players.length === 1 ? "Place your wager" : "Place wagers"}</button>
     </div>
+    ${stageHost('hands-on-hips')}
   `;
 
   sounds.playFanfare();
@@ -1623,6 +2351,7 @@ function passCover(playerIdx, sub, onReady) {
         <button class="btn-cta pass-go" id="pass-go">I'm ${escapeHtml(p.name)}, ready</button>
       </div>
     </div>
+    ${stageHost('pivot')}
   `;
   const go = document.getElementById('pass-go');
   go.focus();
@@ -1654,7 +2383,7 @@ function renderFinalWager() {
         <div class="final-header">${finalHeader()}</div>
         <div class="final-subtitle" style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)}, you have $${formatMoney(p.score)}</div>
         <div class="dd-wager-area" style="max-width:380px;width:100%">
-          <label>Your secret wager</label>
+          <label>${players.length === 1 ? "Your wager" : "Your secret wager"}</label>
           <div class="wager-input-row">
             <span class="wager-dollar">$</span>
             <input type="number" id="wager-input" class="wager-input" min="0" max="${maxW}" value="${Math.min(1000, maxW)}" step="100">
@@ -1668,6 +2397,7 @@ function renderFinalWager() {
           <button class="btn-wager-submit" id="btn-lock">${qi < queue.length - 1 ? 'Lock in and pass' : 'Lock in wager'}</button>
         </div>
       </div>
+      ${stageHost('suspicious')}
     `;
     const input = document.getElementById('wager-input');
     input.focus(); input.select();
@@ -1700,10 +2430,11 @@ function renderFinalClue() {
       <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
       <div class="final-clue-text">${escapeHtml(finalClue.clue)}</div>
       <div class="think-music-note">&#9835; Think music playing…</div>
-      <button class="btn-submit" id="btn-begin-answers" style="max-width:340px">
-        ${solo ? 'Enter Answer' : 'Enter Answers'}
+      <button class="btn-submit" id="btn-begin-answers">
+        ${solo ? 'Enter answer' : 'Enter answers'}
       </button>
     </div>
+    ${stageHost('thinking')}
   `;
 
   document.getElementById('btn-begin-answers').addEventListener('click', () => {
@@ -1728,9 +2459,10 @@ function renderFinalClue() {
               <label style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)}, your response</label>
               <input type="text" id="final-answer-input" class="answer-input" placeholder="What is…" autocomplete="off">
             </div>
-            <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock in and pass' : 'Reveal answers'}</button>
+            <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock in and pass' : solo ? 'Reveal answer' : 'Reveal answers'}</button>
           </div>
         </div>
+        ${stageHost('thinking')}
       `;
       const input = document.getElementById('final-answer-input');
       input.focus();
@@ -1757,9 +2489,9 @@ function renderFinalAnswer() {
         ${players.map((p, i) => `
           <div class="final-result-player ${finalAnswers[i].correct ? 'correct' : 'wrong'}">
             <div class="frp-name">${escapeHtml(p.name)}</div>
-            <div class="frp-answer">"${escapeHtml(finalAnswers[i].answer || '(no answer)')}"</div>
-            <div class="frp-wager">${finalAnswers[i].correct ? '+' : '-'}$${formatMoney(finalWagers[i])}</div>
-            <div class="frp-total">$${formatMoney(p.score)}</div>
+            <div class="frp-answer">${finalWagers[i] > 0 || finalAnswers[i].answer ? `"${escapeHtml(finalAnswers[i].answer || '(no answer)')}"` : 'Nothing to stake'}</div>
+            <div class="frp-wager">${finalWagers[i] > 0 ? `${finalAnswers[i].correct ? '+' : '-'}$${formatMoney(finalWagers[i])}` : 'Sat out'}</div>
+            <div class="frp-total">${flowMoney(p.score, p.score + (finalAnswers[i].correct ? -1 : 1) * finalWagers[i])}</div>
             ${finalWagers[i] > 0 || finalAnswers[i].answer ? `
               <button class="btn-final-override" data-player="${i}">
                 ${finalAnswers[i].correct ? 'Mark wrong' : 'The Emperor accepts it'}
@@ -1770,7 +2502,17 @@ function renderFinalAnswer() {
       </div>
       <button class="btn-continue" id="btn-show-results">Final scores</button>
     </div>
+    ${stageHost(finalAnswers.some(a => a.correct) ? 'victory' : 'defeated')}
   `;
+  const finalWon = finalAnswers.some(a => a.correct);
+  hostReact(finalWon ? 'victory' : 'defeated', { move: finalWon ? 'hop' : 'settle', film: finalWon ? 'fist' : 'shrug' });
+
+  // The reveal, one player at a time
+  const revealRows = document.querySelectorAll('.final-result-player');
+  if (!prefersReducedMotion() && revealRows.length) {
+    animate(revealRows, { opacity: [0, 1], y: [16, 0] }, { duration: 0.4, ease: EXPO, delay: stagger(0.45, { startDelay: 0.35 }) });
+  }
+  flowNumbers(500 + 450 * Math.max(0, revealRows.length - 1));
 
   document.querySelectorAll('.btn-final-override').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1807,7 +2549,15 @@ function soloRank(p, gameLength) {
       : (acc >= t.acc && p.correct >= t[len]);
     if (qualifies || lastTier) {
       const next = i > 0 ? SOLO_TIERS[i - 1] : null;
-      return { ...t, next: next ? `Rank ${next.letter} needs ${next[len]}+ correct at ${Math.round(next.acc * 100)}% accuracy` : null };
+      let hint = null;
+      if (next) {
+        const more = next[len] - p.correct, pct = Math.round(next.acc * 100);
+        const needs = [];
+        if (more > 0) needs.push(`${more} more correct`);
+        if (acc < next.acc) needs.push(`${pct}% accuracy (you hit ${Math.round(acc * 100)}%)`);
+        hint = `Rank ${next.letter} needs ${needs.join(' and ') || `${next[len]}+ correct at ${pct}% accuracy`}`;
+      }
+      return { ...t, next: hint };
     }
   }
 }
@@ -1840,7 +2590,7 @@ function chapterOutcomeHtml() {
 }
 
 function renderResults() {
-  const { players, gameLength, campaign } = getState();
+  const { players, gameLength, campaign, missed = [] } = getState();
   const rec = loadRecords();
   const prevBest = rec.best ? rec.best.score : null;
   if (!recordedThisGame) { recordGame(players); recordedThisGame = true; }
@@ -1858,6 +2608,7 @@ function renderResults() {
     : ranked.length === 2 ? [ranked[1], ranked[0]]
     : [ranked[0]];
   const medal = ['I', 'II', 'III'];
+  const hostPose = solo && winner.score <= 0 ? 'shrug' : isTie ? 'welcome' : 'victory';
 
   app.innerHTML = `
     ${sceneShapes('results')}
@@ -1867,13 +2618,13 @@ function renderResults() {
         : isTie ? "It's a Tie!" : `${escapeHtml(winner.name)} Wins!`}</div>
       ${newBest ? '<div class="solo-best-callout">New personal best!</div>' : ''}
       ${solo && rank.next ? `<div class="solo-next-hint">${rank.next}</div>` : ''}
-      ${!solo && !isTie ? hostLine('Not since Austerlitz have I seen such form.') : ''}
+      ${!solo && !isTie ? hostLine('Not since Austerlitz have I seen such form.', 'Napoleon', 'delighted') : ''}
       ${chapterOutcomeHtml()}
       <div class="results-stage">
       ${solo ? `
       <div class="solo-scorecard" style="--pc: ${PLAYER_COLORS[0]}">
         <div class="podium-avatar ${portraitUrl(winner.character) ? 'has-portrait' : ''}">${avatarHtml(winner, 0)}</div>
-        <div class="solo-score-money ${winner.score < 0 ? 'negative' : ''}">${money(winner.score)}</div>
+        <div class="solo-score-money ${winner.score < 0 ? 'negative' : ''}">${flowMoney(winner.score, 0)}</div>
         <div class="solo-score-sub">${escapeHtml(winner.name)}'s winnings</div>
       </div>
       ` : `
@@ -1884,14 +2635,14 @@ function renderResults() {
             <div class="podium-col rank-${place}" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">
               <div class="podium-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}">${avatarHtml(p, p.originalIndex)}</div>
               <div class="podium-name">${escapeHtml(p.name)}</div>
-              <div class="podium-money ${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</div>
+              <div class="podium-money ${p.score < 0 ? 'negative' : ''}">${flowMoney(p.score, 0)}</div>
               <div class="podium-block">${medal[place - 1]}</div>
             </div>
           `;
         }).join('')}
       </div>
       `}
-      <img class="results-host" src="${solo && winner.score <= 0 ? NAPOLEON.neutral : NAPOLEON.victory}" alt="Napoleon ${solo && winner.score <= 0 ? 'stands at ease' : 'raises a fist in triumph'}">
+      ${hostFigure(hostPose, 'results-host', { alt: hostPose === 'victory' ? 'Napoleon raises a fist in triumph' : hostPose === 'shrug' ? 'Napoleon shrugs' : 'Napoleon opens a hand to the table' })}
       </div>
       <div class="results-stats-list">
         ${ranked.map(p => {
@@ -1915,11 +2666,29 @@ function renderResults() {
         ${campaign ? '<button class="btn-quiet" id="btn-results-empire">The Empire</button>' : ''}
         <button class="btn-quiet btn-share" id="btn-share">Share result</button>
       </div>
+      ${missed.length ? `
+      <details class="missed">
+        <summary>The ones that got away <span class="missed-count">${missed.length}</span></summary>
+        <ol class="missed-list">
+          ${missed.map(m => `
+            <li>
+              <span class="missed-cat">${escapeHtml(m.category)} &middot; $${formatMoney(m.value)}</span>
+              <span class="missed-clue">${escapeHtml(m.clue)}</span>
+              <strong class="missed-answer">${escapeHtml(m.response)}</strong>
+            </li>`).join('')}
+        </ol>
+      </details>` : ''}
     </div>
   `;
 
   sounds.playFanfare();
   if (!isTie || ranked[0].score > 0) spawnConfetti();
+  flowNumbers(450);
+  // he bows to a winner and shrugs at a solo game that ended in the red, then goes back to watching
+  preloadFilms([hostPose === 'victory' ? 'bow' : 'shrug']);
+  if (hostPose !== 'welcome') setTimeout(() => {
+    if (shownScreen === 'results') hostReact(hostPose, { move: hostPose === 'victory' ? 'hop' : 'settle', film: hostPose === 'victory' ? 'bow' : 'shrug' });
+  }, 700);
 
   document.getElementById('btn-play-again').addEventListener('click', () => {
     lastScreen = null;

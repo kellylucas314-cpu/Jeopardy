@@ -50,7 +50,8 @@ zenith; 600,000+ men crossed the Niemen in 1812.
 - **Difficulty ramp.** Tiers 1–5 set the recipe for the other five categories, the
   clue timer (35s → 22s), and the score target. Recipes are relative to the pack the
   table chose: Easy Breezy tables climb from all-easy to an easy/Fresh mix; Fresh
-  tables from an easy-tinged board to Round-2 material. See `chapterRecipe` in `src/campaign.js`.
+  tables open on an all-easy first round (chapters 1 to 3) and climb to Round-2 material.
+  See `chapterRecipe` in `src/campaign.js`.
 - **Targets.** Full games: $2,500 / $4,000 / $5,500 / $7,000 / $9,000 by tier; Quick
   games: $1,200 / $2,000 / $2,800 / $3,600 / $4,500. The top score at the table must
   reach the target. After two setbacks on a chapter the target eases one tier, so a
@@ -73,7 +74,43 @@ accepts natural answers.
 
 ## Next steps (front-end pass)
 
-- A real map: the ledger's holdings are the data; an SVG of Europe with the annexed /
-  satellite / allied layers per chapter would make "the Empire grows" visible.
-- Chapter art from the Napoleon character sheets on the intro and results screens.
-- Host lines that reference the chapter ("Forty centuries look down upon you…").
+- Real borders on the map. Today a holding is a pin at its capital; drawing the borders of
+  1800 needs a historical boundary dataset, which the ledger does not have.
+
+Done on Nov 10 2026 (the weak-spots pass):
+
+- The map. "The Empire" dialog draws a faceted Europe with one mark per holding, shaped and
+  coloured by status; a row and its pin point at each other (`src/empire.js`; the coast and
+  the pin positions are written by `scripts/build-empire-map.mjs` into `src/empire-map.js`).
+  A new holding in `chapters.json` needs a line in that script's `PLACES`, or the build stops.
+- Napoleon's figure and his line show on phones after every answer.
+- He answers specific play: streaks, quick answers, a won or lost Waterloo Wager, a run cut
+  short, the top-value square, the last square.
+
+Done on Nov 10 2026 (the live host pass):
+
+- Napoleon's poses from the character sheets stand on the intro, the board, the clue, the
+  wager and the results, and change with the game (`src/host.js`, cut by
+  `scripts/build-host-poses.py`).
+- Each chapter's board opens with a host line of its own (`CHAPTER_LINES` in `src/main.js`).
+
+Done on Nov 10 2026 (the title page):
+
+- Nov 11: the front screen is now Kelly's throne film (`public/assets/title/throne.mp4`, cut from
+  `art-src/napoleon-throne.mp4` by `scripts/build-title-film.py`): he walks up to a throne, shoves the
+  question card and the crown off it, and stays beside it. It plays once, holds on the last frame and
+  plays again on a tap; reduced motion and data saver show the last frame. The hat tip below is no
+  longer on the title (its code and film are still in the repo).
+- Napoleon tips his hat on the title, and again when tapped. The film is
+  `public/assets/host/welcome-tip.mp4`, cut from `art-src/napoleon-hat-tip.mp4` by
+  `scripts/build-hat-tip.py`. If the welcome pose is ever redrawn, the film has to be made
+  again from the new picture, or the two will not line up.
+- The start is two steps on one page (`data-step` on `.setup-screen`, so nothing is lost on
+  the way back). Step one is the title: Napoleon, the name and one Play button. Step two is
+  the table, "Who's playing?": the players sit along the top as name cards, the whole cast
+  stands below them full length (the `ready` pose) with names, and the game's four choices
+  (play style, length, questions, answering) keep to one card of pill rows. A tap on a player
+  hands them the cast, each player's numbered tag sits on their figure, and taking a figure
+  someone else holds swaps the two. A rematch comes back to the table, not the title.
+- Elon Musk left the cast on Nov 11 (the only living person in it, Kelly's call). His art is
+  kept in `art-src/retired-players/`; an old save that picked him falls back to initials.

@@ -122,7 +122,7 @@ export function chapterTimer(chapter) {
  * Which packs feed the five non-themed categories on each round's board.
  * The ramp is relative to the pack the table chose on the setup screen:
  * Easy Breezy tables climb from all-easy to a Fresh mix, Fresh tables from
- * easy-tinged to Round-2 fare.
+ * an easy first round to Round-2 fare.
  * Each entry is { pack, dir, count }; counts sum to 5.
  */
 export function chapterRecipe(chapter, round, basePack = 'fresh') {
@@ -143,8 +143,10 @@ export function chapterRecipe(chapter, round, basePack = 'fresh') {
   }
   // Fresh (default)
   const ladder = {
-    1: r2 ? [easy('double', 2), fresh('jeopardy', 3)] : [easy('jeopardy', 3), fresh('jeopardy', 2)],
-    2: r2 ? [fresh('jeopardy', 3), fresh('double', 2)] : [easy('jeopardy', 1), fresh('jeopardy', 4)],
+  // The first chapters open gently whatever the table picked (Kelly, Nov 11 2026: the Fresh
+  // clues felt hard cold), and the climb starts in chapter four.
+    1: r2 ? [easy('double', 3), fresh('jeopardy', 2)] : [easy('jeopardy', 5)],
+    2: r2 ? [fresh('jeopardy', 3), fresh('double', 2)] : [easy('jeopardy', 2), fresh('jeopardy', 3)],
     3: r2 ? [fresh('double', 5)] : [fresh('jeopardy', 5)],
     4: r2 ? [fresh('double', 5)] : [fresh('jeopardy', 3), fresh('double', 2)],
     5: r2 ? [fresh('double', 5)] : [fresh('jeopardy', 1), fresh('double', 4)],
@@ -166,10 +168,14 @@ const R2 = [400, 800, 1200, 1600, 2000];
 export function themedCategory(chapter, round, gameLength = 'full') {
   // A quick game has one board, so it gets Napoleon's own chapter; a full game
   // opens with the wider world of the year and saves the chapter for Round 2.
-  const src = gameLength === 'quick' || round === 2 ? chapter.chapter : chapter.era;
+  const own = gameLength === 'quick' || round === 2;
+  const src = own ? chapter.chapter : chapter.era;
   const values = round === 2 ? R2 : R1;
+  const span = chapter.years.replace('–', ' to ');
   return {
     name: src.name,
+    // the explainer every category carries; these two kinds explain themselves the same way each chapter
+    note: own ? `Napoleon's own story, ${span}` : `What the rest of the world was up to, ${span}`,
     themed: true,
     clues: src.clues.map((c, i) => ({
       clue: c.clue,
