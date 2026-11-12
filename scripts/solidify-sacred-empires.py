@@ -6,8 +6,8 @@ The font is Kelly's (Envato licence) and is not in the repo. With her copy:
 
     pip install fonttools brotli shapely numpy
     python3 scripts/solidify-sacred-empires.py "Sacred Empires.ttf" /tmp/SE-solid.ttf 0.03 0.04 0.035 55
-    pyftsubset /tmp/SE-solid.ttf --text="Clue d’État. Who’s playing?" --flavor=woff2 \
-      --layout-features='kern,liga' --output-file=public/assets/fonts/SacredEmpires-logo.woff2
+    pyftsubset /tmp/SE-solid.ttf --text="Clue d’État. Who’s playing? Waterloo Wager. The Decisive Hour." --flavor=woff2 \
+      --layout-features='kern,liga' --output-file=public/assets/fonts/SacredEmpires-titles.woff2
 
 The numbers, all shares of the em except the last:
   0.03   the narrowest hole kept as a counter
@@ -29,7 +29,8 @@ smooth = float(sys.argv[4]) if len(sys.argv) > 4 else 0.0
 reach = float(sys.argv[5]) if len(sys.argv) > 5 else 0.03
 turn = float(sys.argv[6]) if len(sys.argv) > 6 else 50
 allcorners = []
-TEXT = "Clue d’État. Who’s playing?"
+# every word the game sets in this face; pass another string as the seventh argument to change it
+TEXT = sys.argv[7] if len(sys.argv) > 7 else "Clue d’État. Who’s playing? Waterloo Wager. The Decisive Hour."
 
 class Flat(BasePen):
     def __init__(self, gs):

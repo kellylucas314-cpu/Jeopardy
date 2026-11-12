@@ -1,8 +1,9 @@
 @font-face {
-  /* Sacred Empires (Envato licence, Kelly's): cut down to the few letters the logo and the
-     table title use, so the file is small and is not a usable copy of the font. */
+  /* Sacred Empires (Envato licence, Kelly's): cut down to the few letters the fixed titles
+     use (the logo, Who's playing?, Waterloo Wager, The Decisive Hour), so the file is small
+     and is not a usable copy of the font. */
   font-family: 'Sacred Empires';
-  src: url('/assets/fonts/SacredEmpires-logo.woff2') format('woff2');
+  src: url('/assets/fonts/SacredEmpires-titles.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
@@ -4587,4 +4588,333 @@ body:has(> .category-intro) .host-fig { view-transition-name: none; }
   /* tucked in beside the two-line "Who's playing?" */
   .music-button { gap: 6px; padding: 0 13px 0 11px; font-size: 0.82rem; }
   .music-button.is-compact { width: 40px; min-height: 40px; padding: 0; }
+}
+
+/* ============================================================
+   THE NIGHT PASS (Nov 12 2026). Kelly: "do another pass where u brainstorm what can make it
+   better ... then go ahead and execute on that". A whole game played fresh on a laptop and a
+   phone said the weakest part of the game was its ending, and the part met most often, the
+   clue card, jumped about.
+   - Waterloo is one white panel, like every clue, under its name in the title's face. The clue
+     keeps its size and its place from the first reading to the last answer.
+   - Results: the players stand full length in their arches, as they do on the table, the
+     winner bigger and in honey. A solo game wears its rank as a seal. Napoleon's last word
+     depends on how the game went.
+   - The clue card hangs from the top of the screen, so a verdict grows it downward and the
+     clue never moves. On a phone the verdict fits without scrolling.
+   - Scores on the board are the size of something you look for.
+   ============================================================ */
+
+/* — Waterloo — */
+.fin {
+  justify-content: flex-start;
+  gap: clamp(14px, 2.6vh, 28px);
+  padding: clamp(20px, calc((100dvh - 640px) / 2.6), 110px) 16px 28px;
+  animation: none;
+}
+.fin-title,
+.dd-title {
+  font-family: 'Sacred Empires', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-synthesis: none;
+  letter-spacing: 0;
+}
+.fin-title { color: var(--cream); font-size: clamp(2.5rem, 6.6vw, 4.6rem); line-height: 1.14; text-align: center; text-wrap: balance; }
+.dd-title { color: var(--cream); font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.16; text-wrap: balance; }
+.transition-screen.fin { width: 100%; height: 100%; overflow-y: auto; }
+.dd-title::after { content: '.'; color: var(--accent); }
+.fin-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: min(620px, 100%);
+  padding: 30px 40px 32px;
+  border: 12px solid var(--tray);
+  border-radius: 48px;
+  background: #ffffff;
+  box-shadow: var(--molded);
+  text-align: center;
+  animation: riseIn 0.4s var(--ease);
+}
+.fin[data-step="clue"] .fin-panel,
+.fin[data-step="answer"] .fin-panel,
+.fin[data-step="reveal"] .fin-panel { width: min(780px, 100%); }
+.fin-label { color: var(--accent-ink); font: 400 0.82rem/1.3 var(--font-mono); }
+.fin-category {
+  margin-top: -8px;
+  color: var(--cream);
+  font: 600 clamp(1.7rem, 4.6vw, 2.6rem)/1.08 var(--font-ui);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.fin-face {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--pc);
+  color: #ffffff;
+  font: 500 1rem/1 var(--font-ui);
+}
+.fin-face.has-portrait { background: #ffffff; box-shadow: 0 0 0 2px var(--pc); }
+.fin-face img { width: 100%; height: 100%; object-fit: cover; }
+.fin-standings { display: grid; gap: 2px; width: min(380px, 100%); margin: 2px 0; padding: 6px; border-radius: 26px; background: var(--inset); list-style: none; }
+.fin-standings li { display: flex; align-items: center; gap: 12px; padding: 7px 16px 7px 7px; }
+.fin-standing-name { flex: 1; min-width: 0; overflow: hidden; color: var(--cream); font: 500 1.02rem/1.2 var(--font-ui); text-align: left; text-overflow: ellipsis; white-space: nowrap; }
+.fin-standing-money { color: var(--cream); font: 600 1.12rem/1 var(--font-ui); font-variant-numeric: tabular-nums; }
+.fin .host-line { margin: 0; }
+.fin .btn-continue,
+.fin .btn-submit,
+.fin .btn-wager-submit,
+.fin .pass-go { flex: none; width: min(320px, 100%); min-height: 54px; margin: 4px 0 0; font-size: 1.05rem; }
+.fin-who { display: flex; align-items: center; gap: 12px; color: var(--cream); font: 400 1.12rem/1.3 var(--font-ui); text-align: left; }
+.fin-wager { width: min(380px, 100%); }
+.fin-wager .btn-wager-submit { width: 100%; }
+.fin-clue { max-width: 27em; margin: 8px 0 2px; color: var(--cream); font: 500 clamp(1.4rem, 3.3vw, 2.1rem)/1.38 var(--font-ui); text-wrap: balance; }
+.fin-stake { color: var(--text-dim); font: 400 1rem/1.4 var(--font-ui); }
+.fin-stake strong { color: var(--cream); font-weight: 600; }
+.fin-doubled { color: var(--cream); font: 500 1.12rem/1.35 var(--font-ui); text-wrap: balance; }
+.fin-answer { display: flex; flex-direction: column; align-items: stretch; width: min(480px, 100%); max-width: none; margin-top: 4px; }
+.fin-answer-label { margin-bottom: 2px; color: var(--text-dim); font: 500 0.92rem/1.3 var(--font-ui); text-align: left; }
+.fin-answer .btn-submit { width: 100%; margin-top: 18px; }
+.fin-pass { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 4px 0; }
+.fin-pass .fin-face { width: 88px; height: 88px; margin-bottom: 4px; font-size: 1.9rem; }
+.fin-pass-name { color: var(--cream); font: 600 1.55rem/1.2 var(--font-ui); letter-spacing: -0.01em; text-wrap: balance; }
+.fin-pass-sub { color: var(--text-dim); font: 400 1rem/1.4 var(--font-ui); }
+.fin-response { margin-top: -8px; color: var(--cream); font: 600 clamp(1.6rem, 4.2vw, 2.5rem)/1.14 var(--font-ui); letter-spacing: -0.015em; text-wrap: balance; }
+.fin-rows { display: grid; gap: 8px; width: 100%; margin: 6px 0 2px; padding: 0; list-style: none; }
+.fin-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 12px 20px 12px 12px;
+  border-radius: 26px;
+  background: var(--inset);
+  text-align: left;
+}
+.fin-row.correct { background: color-mix(in oklab, var(--correct) 10%, #ffffff); }
+.fin-row.wrong { background: color-mix(in oklab, var(--wrong) 8%, #ffffff); }
+.fin-row-main { display: grid; gap: 2px; min-width: 0; }
+.fin-row-name { color: var(--cream); font: 600 1.05rem/1.2 var(--font-ui); }
+.fin-said { color: var(--text-dim); font: 400 1rem/1.3 var(--font-ui); overflow-wrap: anywhere; }
+.fin-row-nums { display: grid; justify-items: end; gap: 3px; font-variant-numeric: tabular-nums; }
+.fin-delta { color: var(--text-dim); font: 600 1.2rem/1.1 var(--font-ui); }
+.fin-row.correct .fin-delta { color: var(--correct); }
+.fin-row.wrong .fin-delta { color: var(--wrong); }
+.fin-total { color: var(--text-dim); font: 500 0.94rem/1.1 var(--font-ui); }
+.fin-row .btn-final-override { grid-column: 2 / -1; justify-self: start; margin: 0; }
+@media (max-width: 560px) {
+  /* the title starts under the music switch */
+  .fin { padding: 64px 14px 22px; gap: 12px; }
+  .fin-panel { gap: 14px; padding: 22px 18px 24px; border-width: 8px; border-radius: 36px; }
+  .fin-row { padding: 10px 14px 10px 10px; border-radius: 22px; }
+}
+
+/* — Results — */
+.end { gap: clamp(12px, 2vh, 20px); padding: clamp(18px, 4vh, 44px) 16px 28px; }
+.end-head { text-align: center; }
+.end-title { color: var(--cream); font: 600 clamp(2.1rem, 5.6vw, 3.7rem)/1.04 var(--font-ui); letter-spacing: -0.028em; text-wrap: balance; }
+.end-facts { margin-top: 8px; color: var(--text-dim); font: 400 1.02rem/1.4 var(--font-ui); text-wrap: balance; }
+.end-best {
+  width: fit-content;
+  margin: 12px auto 0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent-wash);
+  color: var(--accent-ink);
+  font: 600 0.9rem/1.2 var(--font-ui);
+}
+.end-stage { display: flex; align-items: flex-end; justify-content: center; gap: clamp(8px, 3vw, 44px); margin-top: 4px; }
+.end-cast { display: flex; align-items: flex-end; justify-content: center; gap: clamp(8px, 2.6vw, 40px); --eh: clamp(170px, calc(100dvh - 590px), 370px); }
+.end-player { display: flex; flex-direction: column; align-items: center; min-width: 0; margin: 0; --sh: calc(var(--eh) * 0.8); }
+.end-player.is-winner,
+.end[data-players="1"] .end-player { --sh: var(--eh); }
+.end-player[data-place="3"]:not(.is-winner) { --sh: calc(var(--eh) * 0.72); }
+.end-fig { position: relative; flex: none; width: calc(var(--sh) * 0.8); height: var(--sh); }
+/* the same arch as the table: a round head on square shoulders, the figure's head clear of it */
+.end-fig::before {
+  content: '';
+  position: absolute;
+  inset: 22% 0 -12px;
+  border-radius: 50% 50% 28px 28px / calc(var(--sh) * 0.4) calc(var(--sh) * 0.4) 28px 28px;
+  background: color-mix(in oklab, var(--tone, var(--tray)) 84%, #a98a66);
+}
+.end-player.is-winner .end-fig::before { background: var(--honey); }
+.end-fig-img {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: calc(var(--sh) * -0.039);
+  width: calc(var(--sh) * 0.78);
+  height: calc(var(--sh) * 1.17);
+  max-width: none;
+  object-fit: contain;
+  translate: -50% 0;
+  pointer-events: none;
+  user-select: none;
+}
+.end-seal {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 61%;
+  display: grid;
+  place-items: center;
+  width: 50%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: var(--pc);
+  color: #ffffff;
+  font: 500 calc(var(--sh) * 0.17)/1 var(--font-ui);
+}
+/* a solo game's rank: a white seal with a tan rim, pressed onto the corner of the arch */
+.end-rank {
+  position: absolute;
+  z-index: 2;
+  right: -16%;
+  top: 16%;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  width: clamp(68px, calc(var(--sh) * 0.3), 98px);
+  aspect-ratio: 1;
+  border: 6px solid var(--tray);
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: var(--molded);
+  color: var(--cream);
+  font: 600 clamp(1.7rem, calc(var(--sh) * 0.13), 2.5rem)/0.95 var(--font-ui);
+}
+.end-rank small { color: var(--accent-ink); font: 400 0.72rem/1.2 var(--font-mono); }
+.end-player figcaption { display: grid; justify-items: center; gap: 3px; margin-top: 22px; }
+.end-name { max-width: 15ch; overflow: hidden; color: var(--cream); font: 500 1.05rem/1.2 var(--font-ui); text-overflow: ellipsis; white-space: nowrap; }
+.end-money { color: var(--brass-bright); font: 600 clamp(1.5rem, 3.4vw, 2.3rem)/1.05 var(--font-ui); font-variant-numeric: tabular-nums; letter-spacing: -0.015em; }
+.end-player:not(.is-winner) .end-money { font-size: clamp(1.2rem, 2.6vw, 1.7rem); }
+.end .host-line { margin: 0; }
+.end-stats { display: grid; gap: 6px; max-width: 100%; padding: 6px; border-radius: 28px; background: var(--tray); }
+.end-stat-row { display: flex; align-items: stretch; gap: 6px; }
+.end-stat-name {
+  display: flex;
+  align-items: center;
+  flex: 1.5 1 0;
+  min-width: 0;
+  padding: 0 16px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #ffffff;
+  color: var(--pc);
+  font: 600 1rem/1.2 var(--font-ui);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.end-stat { display: grid; flex: 1 1 0; justify-items: center; align-content: center; gap: 3px; min-width: 92px; padding: 11px 10px; border-radius: 22px; background: #ffffff; }
+.end-stat b { color: var(--cream); font: 600 1.4rem/1 var(--font-ui); font-variant-numeric: tabular-nums; }
+.end-stat b.stat-good { color: var(--correct); }
+.end-stat b.stat-bad { color: var(--wrong); }
+.end-stat small { color: var(--text-dim); font: 400 0.8rem/1.2 var(--font-ui); }
+.end-actions { display: flex; flex-flow: row wrap; align-items: center; justify-content: center; gap: 10px; }
+.end-actions .btn-play-again { min-width: 200px; min-height: 54px; font-size: 1.05rem; }
+@media (max-width: 560px) {
+  .end { padding: 26px 12px 24px; }
+  .end-cast { --eh: min(25vh, 43vw, 200px); gap: 8px; }
+  .end[data-players="1"] .end-cast { --eh: clamp(180px, 31vh, 260px); }
+  .end .results-host { --host-h: 150px; }
+  .end[data-players="3"] .results-host { display: none; }
+  .end-player figcaption { margin-top: 18px; }
+  .end-name { max-width: 11ch; font-size: 0.98rem; }
+  .end-stats { width: 100%; }
+  .end-stat { min-width: 0; padding: 9px 4px; border-radius: 18px; }
+  .end-stat b { font-size: 1.2rem; }
+  .end-stat-name { flex-basis: 100%; min-height: 34px; padding: 0 12px; border-radius: 18px; font-size: 0.94rem; }
+  .end-stat-row { flex-wrap: wrap; }
+  .end-rank { right: -22%; border-width: 5px; }
+}
+@media (prefers-reduced-motion: reduce) { .fin-panel { animation: none; } }
+
+/* — The clue card hangs from the top — */
+.clue-screen { justify-content: flex-start; padding-top: clamp(8px, calc((100dvh - 700px) / 2), 150px); }
+/* between a phone and a laptop the card fills the width, so it starts under the music note */
+@media (min-width: 561px) and (max-width: 1239px) { .clue-screen { padding-top: max(64px, calc((100dvh - 700px) / 2)); } }
+/* a short laptop window: a tighter card, so a verdict still ends above the fold */
+@media (min-width: 561px) and (max-height: 760px) {
+  .clue-panel { padding-block: 22px 20px; }
+  .clue-text { margin-bottom: 20px; }
+  .clue-feedback.show { margin-top: 16px; }
+}
+@media (max-width: 560px) {
+  /* clear of the music note, which sits where the menu button is on the board */
+  .clue-screen { padding-top: 62px; }
+  /* once it is judged, the card drops what sits under the clue and is no longer needed, so the
+     verdict fits the screen and the clue itself does not move */
+  .clue-panel:has(.clue-feedback.show) .clue-player { display: none; }
+  .clue-panel:has(.clue-feedback.show) .clue-text { margin-bottom: 16px; }
+  .clue-panel:has(.clue-feedback.show) .clue-feedback { margin-top: 14px; }
+}
+/* a short phone window (an in-app browser): the stopped timer goes too, which lifts the clue a
+   little but saves a scroll */
+@media (max-width: 560px) and (max-height: 740px) {
+  .clue-panel:has(.clue-feedback.show) .clue-timer { display: none; }
+}
+@media (max-width: 560px) { .daily-double-screen { padding-top: 64px; } }
+/* the note steps aside when a long card is scrolled under it */
+.music-button.is-compact { transition: opacity 0.2s; }
+body.is-scrolled .music-button.is-compact { opacity: 0; pointer-events: none; }
+
+/* — The board: scores you can read from the sofa — */
+@media (min-width: 900px) {
+  .board-header .player-score { gap: 12px; padding: 8px 24px 8px 8px; }
+  .board-header .player-avatar { width: 46px; height: 46px; }
+  .board-header .player-name { font-size: 0.82rem; }
+  .board-header .player-amount { font-size: 1.45rem; letter-spacing: -0.01em; }
+}
+
+/* — The title poster (Nov 12 2026, Kelly: "what do u think about the layout and spacing?") —
+   Napoleon was small beside his own name, so on landscape screens the film is wider and starts
+   further left (its left edge is empty paper, and the name sits above it). The film is laid
+   onto the page with multiply after its paper is lifted to white, so its paper IS the page's
+   and no box shows around it. The sound effects switch moved into How to play. */
+.title-film { mix-blend-mode: multiply; filter: brightness(1.07); }
+@media (min-width: 640px) and (min-aspect-ratio: 1/1) {
+  .setup-hero .title-film {
+    /* as big as the window's height allows, without the crown reaching the Play button */
+    --tw: min(calc((100dvh - 110px) * 1.716), calc((96vw - clamp(260px, 34vw, 480px) - 40px) / 0.87), 1180px);
+    width: var(--tw);
+    /* its left edge is empty paper too, and may run under the name instead of pushing the row wide */
+    margin-left: -24vw;
+    /* the film's last 13% is the empty paper he walks in over: that part hangs off the window */
+    /* (out to the window's edge, or on a very wide screen to the edge of the page's own box) */
+    margin-right: calc(-1 * min(50vw - 50%, 46px) - 0.13 * var(--tw));
+  }
+}
+/* How to play was taller than a phone and could not scroll, so its title and its button were
+   both cut off: now the list scrolls between them */
+.modal.how-to { display: flex; flex-direction: column; max-height: calc(100dvh - 48px); }
+.how-to .how-to-list { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; margin-bottom: 16px; padding-right: 6px; }
+.how-to .modal-title, .how-to .modal-actions { flex: none; }
+.how-to .how-to-actions { justify-content: space-between; align-items: center; gap: 16px; }
+.how-to .how-to-actions button { width: auto; min-width: 150px; }
+.how-to-actions .sound-toggle { color: var(--text-dim); font-size: 0.92rem; min-height: 44px; }
+
+/* — The tagline, Play and the links as one block (Kelly, Nov 12: "looks not centered") —
+   Each had its own width and its own left edge: the tagline ran past the button, and the links
+   sat 4px in and off to one side under it. On landscape screens the three now share one box
+   exactly as wide as the tagline's longer line: the button fills it and the links are centred
+   under it. On phones the box dissolves and the stacked, centred layout is as it was. */
+.setup-cta { display: contents; }
+@media (min-width: 640px) and (min-aspect-ratio: 1/1) {
+  .setup-cta { display: flex; flex-direction: column; align-items: stretch; width: fit-content; max-width: 100%; }
+  .setup-cta .setup-deck { width: max-content; max-width: none; }
+  .setup-cta .setup-deck span { display: block; }
+  .setup-cta .btn-play { width: 100%; min-width: 0; padding-inline: 24px; }
+  /* neither of these may widen the box (width 0, then stretched to it) */
+  .setup-hero .setup-cta .setup-footer { justify-content: center; width: 0; min-width: 100%; }
+  /* (the records line goes last, so Play and its links stay together) */
+  .setup-hero .setup-cta .hall-of-fame { order: 5; justify-content: center; width: 0; min-width: 100%; margin-top: 10px; }
 }

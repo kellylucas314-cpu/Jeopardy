@@ -529,23 +529,21 @@ function syncMusicButton() {
   btn.classList.toggle('is-off', !on);
   btn.querySelector('.music-label').textContent = on ? 'Music on' : 'Music off';
   btn.title = on ? 'Turn the music off' : 'Turn the music on';
-  // In the game itself the corner belongs to the scores, so the button shrinks to its note
-  // and sits beside the menu button; it keeps that spot on the clue and wager screens too.
-  const compact = music.asked() === 'play';
-  btn.classList.toggle('is-compact', compact);
-  if (compact) {
-    const r = document.getElementById('btn-menu')?.getBoundingClientRect();
-    const small = window.innerWidth < 600; // a phone's header has no room to spare
-    if (r?.width) musicSpot = { left: Math.round(r.right + (small ? 4 : 8)), top: Math.round(r.top + (r.height - (small ? 40 : 44)) / 2) };
-  }
-  btn.style.left = compact && musicSpot ? `${musicSpot.left}px` : '';
-  btn.style.top = compact && musicSpot ? `${musicSpot.top}px` : '';
+  // On the menus it is a labelled pill in the top right. In the final round, the only part of
+  // the game with music, it shrinks to its note in the top left corner, which those screens
+  // keep clear for it (styles.css).
+  btn.classList.toggle('is-compact', music.asked() !== 'menu');
 }
-let musicSpot = null;
 window.addEventListener('resize', () => { if (document.getElementById('music-button')) syncMusicButton(); });
 music.onChange(syncMusicButton);
-// the screens of the game itself, where the music is only a faint bed (Kelly: "very very soft")
-const BED_SCREENS = new Set(['board', 'clue', 'daily-double', 'round-transition', 'final-category', 'final-wager']);
+// A long card scrolled under the note on a phone: the note steps aside (styles.css fades it).
+document.addEventListener('scroll', (e) => {
+  const t = e.target === document ? document.scrollingElement : e.target;
+  if (t === document.scrollingElement || t === document.body || t === app) document.body.classList.toggle('is-scrolled', (t?.scrollTop || 0) > 8);
+}, { capture: true, passive: true });
+// the only screens of the game itself with music (Kelly: "take the music out except for the
+// final"): it comes in with the final category and the engine stops it when the answers lock
+const MUSIC_SCREENS = new Set(['final-category', 'final-wager', 'final-clue']);
 
 function render() {
   const state = getState();
@@ -567,11 +565,10 @@ function render() {
   // Board keyboard nav only lives on the board
   if (state.screen !== 'board') detachBoardKeys();
 
-  // Music by screen: the menu pieces bow out as the game begins, a very faint One Note Quiz
-  // runs under the game itself, and the engine asks for the thinking music on the final clue.
-  if (BED_SCREENS.has(state.screen)) { if (music.asked() !== 'play') music.play('play'); }
-  else if (state.screen === 'results' || state.screen === 'error') { if (music.asked()) music.stop(1.2); }
-  else if (state.screen !== 'setup' && music.asked() === 'menu') music.stop(1.2);
+  // Music by screen: the menu pieces on the title and the table, One Note Quiz through the
+  // final round, silence in between and after.
+  if (MUSIC_SCREENS.has(state.screen)) { if (music.asked() !== 'think') music.play('think'); }
+  else if (state.screen !== 'setup' && music.asked()) music.stop(1.2);
 
   const draw = () => {
     switch (state.screen) {
@@ -591,6 +588,7 @@ function render() {
     }
     // a reaction clip still playing moves over to the new screen's Napoleon
     hostCarry();
+    document.body.classList.remove('is-scrolled');
     syncMusicButton();
   };
 
@@ -764,16 +762,14 @@ function renderSetup() {
       <section class="setup-hero" aria-labelledby="game-title">
         <div class="setup-brand">
           <h1 class="logo" id="game-title">Clue d&rsquo;&Eacute;tat<span class="logo-dot" aria-hidden="true">.</span></h1>
-          <p class="setup-deck"><span>A trivia coup hosted by Napoleon.</span> <span>History is watching.</span></p>
-          <button type="button" class="btn-start btn-play" id="btn-play">Play</button>
-          ${hof}
-          <div class="setup-footer">
-            <label class="sound-toggle">
-              <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
-              <span>Sound Effects</span>
-            </label>
-            <button class="link-btn" id="btn-how-to">How to play</button>
-            <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
+          <div class="setup-cta">
+            <p class="setup-deck"><span>A trivia coup hosted by Napoleon.</span> <span>History is watching.</span></p>
+            <button type="button" class="btn-start btn-play" id="btn-play">Play</button>
+            ${hof}
+            <div class="setup-footer">
+              <button class="link-btn" id="btn-how-to">How to play</button>
+              <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
+            </div>
           </div>
         </div>
         <figure class="title-stage title-film" role="img"
@@ -860,22 +856,73 @@ function renderSetup() {
   const film = app.querySelector('.title-video');
   const stage = app.querySelector('.title-film');
   const still = () => { film.poster = './assets/title/throne-last.webp'; };
-  // Once the film is over he does not freeze: every so often he turns his head to look at you,
-  // then looks away again (Kelly, Nov 11: "very subtle movement"). The fidget clip starts and
-  // ends on the film's last frame, so it sits on top of the film and nothing jumps.
+  // Once the film is over he does not freeze, and he does not loop either (Kelly, Nov 12: "not
+  // like suchhh a loop... standing still but he is alive"). The fidget clip is one slow turn of
+  // the head towards you and back, 34 frames each way, so every frame in between is a place his
+  // head can rest. He drifts from one to another at his own pace: a small shift, a long look at
+  // you, half way back, away again, never the same twice. The clip mirrors itself (frame n and
+  // frame 68 - n are the same picture), so going back is the second half played forwards, and
+  // the one jump between halves happens while he is still, where it cannot be seen. It starts
+  // and ends on the film's last frame, so it sits on top of the film and nothing jumps.
   const fidget = app.querySelector('.title-fidget');
+  const FPS = 24, LOOK = 34, END = 68;
+  let head = 0;         // where his head is: 0 as the film left him, LOOK facing you
   let fidgetTimer = 0;
-  const rest = () => { clearTimeout(fidgetTimer); fidgetTimer = 0; };
-  const settle = () => { rest(); if (fidget) { fidget.pause(); fidget.classList.remove('on'); } };
+  let fidgetRaf = 0;
+  let turn = 0;         // each move's number: a move that was called off does nothing when it wakes
+  const rest = () => { clearTimeout(fidgetTimer); fidgetTimer = 0; cancelAnimationFrame(fidgetRaf); fidgetRaf = 0; turn += 1; };
+  const settle = () => { rest(); if (fidget) { fidget.pause(); fidget.classList.remove('on'); head = 0; } };
+  const between = (a, b) => a + Math.random() * (b - a);
+  const turnTo = (to, rate, done) => {
+    const towards = to > head;
+    const start = (towards ? head : END - head) / FPS + 0.5 / FPS;
+    const stop = (towards ? to : END - to) / FPS;
+    const mine = turn;
+    const go = () => {
+      if (mine !== turn) return;
+      fidget.playbackRate = rate;
+      fidget.play()?.then(() => {
+        if (mine !== turn) { fidget.pause(); return; }
+        fidget.classList.add('on');
+        const watch = () => {
+          if (!fidget.isConnected || mine !== turn) return;
+          if (fidget.ended || fidget.currentTime >= stop) {
+            fidget.pause();
+            head = to;
+            if (to === 0) fidget.classList.remove('on');
+            done();
+            return;
+          }
+          fidgetRaf = requestAnimationFrame(watch);
+        };
+        watch();
+      }).catch(() => {});
+    };
+    if (Math.abs(fidget.currentTime - start) > 0.6 / FPS) {
+      fidget.addEventListener('seeked', go, { once: true });
+      fidget.currentTime = start;
+    } else go();
+  };
   const idle = (first = false) => {
     rest();
     if (!fidget || calm || navigator.connection?.saveData) return;
+    // how long he holds still: longest when he is looking away or straight at you
+    const hold = first ? 220 : head === 0 ? between(2200, 5500) : head >= LOOK - 2 ? between(1800, 4800) : between(1100, 3200);
     fidgetTimer = setTimeout(() => {
+      fidgetTimer = 0;
       if (!fidget.isConnected) return;
       if (document.hidden || setupStep !== 'title' || !film.ended) { idle(); return; }
-      fidget.currentTime = 0;
-      fidget.play()?.then(() => fidget.classList.add('on')).catch(() => {});
-    }, first ? 900 + Math.random() * 400 : 6000 + Math.random() * 6000);
+      const r = Math.random();
+      let to;
+      if (first) to = LOOK;                                          // the film ends and he looks up at you
+      // from rest: a full look, a shift of his weight that barely shows, or a glance part of the way
+      else if (head === 0) to = r < 0.25 ? LOOK : r < 0.6 ? Math.round(between(3, 7)) : Math.round(between(8, 24));
+      // from looking at you: away again, a small easing off, or half way back
+      else if (head >= LOOK - 2) to = r < 0.45 ? 0 : r < 0.7 ? Math.round(between(LOOK - 8, LOOK - 4)) : Math.round(between(9, 22));
+      else to = r < 0.4 ? 0 : r < 0.7 ? LOOK : Math.round(Math.min(LOOK - 4, Math.max(6, head + (Math.random() < 0.5 ? -1 : 1) * between(6, 12))));
+      if (to === head) to = head === 0 ? LOOK : 0;
+      turnTo(to, first ? 0.8 : between(0.55, 0.85), () => idle());
+    }, hold);
   };
   const roll = () => {
     if (!film || calm || navigator.connection?.saveData) return;
@@ -891,7 +938,6 @@ function renderSetup() {
     // the fidget is fetched while the film plays, so it is ready the moment the film ends
     film.addEventListener('playing', () => { if (fidget && !navigator.connection?.saveData) fidget.preload = 'auto'; }, { once: true });
     film.addEventListener('ended', () => { if (fidget) fidget.preload = 'auto'; idle(true); });
-    fidget?.addEventListener('ended', () => { fidget.classList.remove('on'); idle(); });
   }
 
   // Two steps, one page: the title, then the table. Nothing is re-rendered, so every choice survives a trip back.
@@ -964,12 +1010,6 @@ function renderSetup() {
   renderChapterCard();
   wire('.btn-answer');
   wire('.btn-pack', btn => savePrefs({ pack: btn.dataset.pack }));
-
-  // Sound toggle
-  document.getElementById('sound-checkbox').addEventListener('change', (e) => {
-    sounds.setEnabled(e.target.checked);
-    savePrefs({ sound: e.target.checked });
-  });
 
   // How to play
   document.getElementById('btn-how-to').addEventListener('click', showHowTo);
@@ -1436,6 +1476,8 @@ function renderBoard() {
   // Where the board has no room for the explainers (phones, small windows), he says once
   // that a category can be asked about. A chapter's opening line goes first.
   const notesHidden = !window.matchMedia('(min-width: 1100px) and (min-height: 700px)').matches;
+  // a wide column holds a long word whole; only narrow ones need the syllable breaks
+  const wideBoard = window.innerWidth >= 900;
   const hint = notesHidden && round === 1 && cluesAnswered === (opening ? 1 : 0) && categories.some(c => c.note)
     ? `${touchOnly() ? 'Tap' : 'Click'} a category and I will explain it.` : '';
   const remark = opening || hint
@@ -1470,7 +1512,7 @@ function renderBoard() {
         <div class="game-board" id="game-board">
           ${categories.map((cat, ci) => `
             <div class="board-category ${cat.themed ? 'themed' : ''}" data-cat="${ci}">
-              <div class="category-header" ${cat.note ? `role="button" tabindex="0" data-cat="${ci}" aria-label="${escapeHtml(cat.name)}: ${escapeHtml(cat.note)}"` : ''} ${cat.themed ? 'title="This chapter\'s category: three right answers earn the Légion d\'honneur"' : ''}><span class="cat-name">${escapeHtml(softHyphenate(cat.name))}</span>${cat.note ? `<span class="cat-note">${escapeHtml(cat.note)}</span>` : ''}</div>
+              <div class="category-header" ${cat.note ? `role="button" tabindex="0" data-cat="${ci}" aria-label="${escapeHtml(cat.name)}: ${escapeHtml(cat.note)}"` : ''} ${cat.themed ? 'title="This chapter\'s category: three right answers earn the Légion d\'honneur"' : ''}><span class="cat-name">${escapeHtml(wideBoard ? cat.name : softHyphenate(cat.name))}</span>${cat.note ? `<span class="cat-note">${escapeHtml(cat.note)}</span>` : ''}</div>
               ${cat.clues.map((clue, cli) => {
                 const justSpent = clue.answered && spent && spent.ci === ci && spent.cli === cli;
                 return `
@@ -1625,13 +1667,22 @@ function showHowTo() {
         <li><strong>Question packs:</strong> Fresh Pack is written just for this game, and Easy Breezy is gentler for casual and older players. The game remembers what you've played, so no categories repeat until you've seen a whole pack.</li>
         <li><strong>The Campaign:</strong> Napoleon's life in 15 chapters, from cadet to Saint Helena. Each chapter is one game with a category about that year and one about Napoleon himself; the rest of the board climbs in difficulty as the chapters do. Reach the chapter's score target and the Empire on your ledger grows, exactly as history did, peaking in 1811. Three right answers in the chapter category earn the <strong>Légion d'honneur</strong> bonus.</li>
       </ul>
-      <div class="modal-actions">
+      <div class="modal-actions how-to-actions">
+        <label class="sound-toggle">
+          <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
+          <span>Sound effects</span>
+        </label>
         <button class="btn-cta modal-cancel">Got it</button>
       </div>
     </div>
   `;
   document.body.appendChild(overlay);
   const close = () => overlay.remove();
+  // the sound effects switch lives here, off the title poster (the Music button is its own)
+  overlay.querySelector('#sound-checkbox').addEventListener('change', (e) => {
+    sounds.setEnabled(e.target.checked);
+    savePrefs({ sound: e.target.checked });
+  });
   overlay.querySelector('.modal-cancel').addEventListener('click', close);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
   overlay.querySelector('.modal-cancel').focus();
@@ -2278,7 +2329,7 @@ function renderDailyDouble() {
     ${sceneShapes('wager')}
     <div class="daily-double-screen">
       <div class="dd-flash">
-        <div class="dd-title">Waterloo<br>Wager</div>
+        <div class="dd-title">Waterloo Wager</div>
         ${hostLine('Name your stake. I am watching.', 'Napoleon', 'suspicious')}
       </div>
       <div class="dd-content">
@@ -2363,20 +2414,23 @@ function renderRoundTransition() {
 
   app.innerHTML = `
     ${sceneShapes('round')}
-    <div class="transition-screen">
-      <div class="transition-scores">
-        <h3>End of Round I</h3>
-        ${players.map(p => `
-          <div class="transition-player">
-            <span>${escapeHtml(p.name)}</span>
-            <span class="${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</span>
-          </div>
-        `).join('')}
+    <div class="transition-screen fin" data-step="round">
+      <h1 class="end-title">Round II<span class="logo-dot" aria-hidden="true">.</span></h1>
+      <div class="fin-panel">
+        <p class="fin-label">End of Round I</p>
+        <ul class="fin-standings">
+          ${players.map((p, i) => `
+            <li>
+              ${faceChip(p, i)}
+              <span class="fin-standing-name">${escapeHtml(p.name)}</span>
+              <span class="fin-standing-money ${p.score < 0 ? 'negative' : ''}">${money(p.score)}</span>
+            </li>
+          `).join('')}
+        </ul>
+        <p class="fin-doubled">All values are doubled.${getState().campaign ? ' Napoleon&rsquo;s own chapter joins the board.' : ''}</p>
+        ${players.length > 1 ? `<p class="fin-stake"><strong>${escapeHtml(players[lowest].name)}</strong> is trailing and gets first pick.</p>` : ''}
+        <button class="btn-continue" id="btn-continue">March on</button>
       </div>
-      <div class="transition-title">Round II</div>
-      <div class="transition-subtitle">All values are doubled!${getState().campaign ? ' Napoleon\'s own chapter joins the board.' : ''}</div>
-      ${players.length > 1 ? `<div class="transition-note"><strong>${escapeHtml(players[lowest].name)}</strong> is trailing and gets first pick</div>` : ''}
-      <button class="btn-continue" id="btn-continue">March on</button>
     </div>
     ${stageHost('marching')}
   `;
@@ -2398,30 +2452,42 @@ function finalHeader() {
   return campaign ? 'The Decisive Hour' : 'Waterloo';
 }
 
+/** One frame for every step of the final: the title in the name's face over one white panel. */
+function finalShell(step, inner, hostPose) {
+  return `
+    ${sceneShapes('final')}
+    <div class="final-screen fin" data-step="${step}">
+      <h1 class="fin-title">${finalHeader()}<span class="logo-dot" aria-hidden="true">.</span></h1>
+      <div class="fin-panel">${inner}</div>
+    </div>
+    ${stageHost(hostPose)}
+  `;
+}
+
+/** A player's small round face (or their initial) for a row. */
+function faceChip(p, i) {
+  return `<span class="fin-face ${portraitUrl(p.character) ? 'has-portrait' : ''}" style="--pc: ${PLAYER_COLORS[i]}">${avatarHtml(p, i)}</span>`;
+}
+
 function renderFinalCategory() {
   const { finalClue, players } = getState();
+  const solo = players.length === 1;
 
-  app.innerHTML = `
-    ${sceneShapes('final')}
-    <div class="final-screen">
-      <div class="final-header">${finalHeader()}</div>
-      <div class="final-scores">
-        ${players.map(p => `
-          <div class="transition-player">
-            <span>${escapeHtml(p.name)}</span>
-            <span class="${p.score < 0 ? 'negative' : ''}">$${formatMoney(p.score)}</span>
-          </div>
+  app.innerHTML = finalShell('category', `
+      <p class="fin-label">The final battlefield</p>
+      <h2 class="fin-category">${escapeHtml(finalClue.name)}</h2>
+      <ul class="fin-standings">
+        ${players.map((p, i) => `
+          <li>
+            ${faceChip(p, i)}
+            <span class="fin-standing-name">${escapeHtml(p.name)}</span>
+            <span class="fin-standing-money ${p.score < 0 ? 'negative' : ''}">${money(p.score)}</span>
+          </li>
         `).join('')}
-      </div>
-      <div class="final-category-reveal">
-        <div class="final-category-label">The final battlefield</div>
-        <div class="final-category-name">${escapeHtml(finalClue.name)}</div>
-        ${hostLine('Waterloo. Where everything is decided.')}
-      </div>
-      <button class="btn-continue" id="btn-final-wager">${getState().players.length === 1 ? "Place your wager" : "Place wagers"}</button>
-    </div>
-    ${stageHost('hands-on-hips')}
-  `;
+      </ul>
+      ${hostLine(getState().campaign ? 'One question. The chapter turns on it.' : 'Waterloo. Where everything is decided.')}
+      <button class="btn-continue" id="btn-final-wager">${solo ? 'Place your wager' : 'Place wagers'}</button>
+  `, 'hands-on-hips');
 
   sounds.playFanfare();
 
@@ -2433,26 +2499,21 @@ function renderFinalCategory() {
 // A "hand the device to X" cover so nobody sees the next player's secret entry.
 function passCover(playerIdx, sub, onReady) {
   const p = getState().players[playerIdx];
-  app.innerHTML = `
-    ${sceneShapes('final')}
-    <div class="final-screen">
-      <div class="final-header">${finalHeader()}</div>
-      <div class="pass-card">
-        <div class="pass-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}" style="--pc: ${PLAYER_COLORS[playerIdx]}">${avatarHtml(p, playerIdx)}</div>
-        <div class="pass-name">Pass the device to ${escapeHtml(p.name)}</div>
-        <div class="pass-sub">${sub}</div>
+  app.innerHTML = finalShell('pass', `
+      <div class="fin-pass">
+        ${faceChip(p, playerIdx)}
+        <h2 class="fin-pass-name">Pass the device to ${escapeHtml(p.name)}</h2>
+        <p class="fin-pass-sub">${sub}</p>
         <button class="btn-cta pass-go" id="pass-go">I'm ${escapeHtml(p.name)}, ready</button>
       </div>
-    </div>
-    ${stageHost('pivot')}
-  `;
+  `, 'pivot');
   const go = document.getElementById('pass-go');
   go.focus();
   go.addEventListener('click', onReady);
 }
 
 function renderFinalWager() {
-  const { players } = getState();
+  const { players, finalClue } = getState();
   const wagers = players.map(() => 0);
   const queue = players.map((_, i) => i).filter(i => players[i].score > 0);
   const solo = players.length === 1;
@@ -2470,16 +2531,17 @@ function renderFinalWager() {
   function wagerEntry(idx) {
     const p = players[idx];
     const maxW = Math.max(0, p.score);
-    app.innerHTML = `
-      ${sceneShapes('final')}
-    <div class="final-screen">
-        <div class="final-header">${finalHeader()}</div>
-        <div class="final-subtitle" style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)}, you have $${formatMoney(p.score)}</div>
-        <div class="dd-wager-area" style="max-width:380px;width:100%">
-          <label>${players.length === 1 ? "Your wager" : "Your secret wager"}</label>
+    app.innerHTML = finalShell('wager', `
+        <span class="clue-category">${escapeHtml(finalClue.name)}</span>
+        <div class="fin-who">
+          ${faceChip(p, idx)}
+          <span><strong>${escapeHtml(p.name)}</strong>, you have ${money(p.score)}</span>
+        </div>
+        <div class="dd-wager-area fin-wager">
+          <label for="wager-input">${solo ? 'Your wager' : 'Your secret wager'}</label>
           <div class="wager-input-row">
             <span class="wager-dollar">$</span>
-            <input type="number" id="wager-input" class="wager-input" min="0" max="${maxW}" value="${Math.min(1000, maxW)}" step="100">
+            <input type="number" id="wager-input" class="wager-input" min="0" max="${maxW}" value="${Math.min(1000, maxW)}" step="100" inputmode="numeric">
           </div>
           <div class="wager-range">$0 to $${formatMoney(maxW)}</div>
           <div class="wager-presets">
@@ -2489,9 +2551,7 @@ function renderFinalWager() {
           </div>
           <button class="btn-wager-submit" id="btn-lock">${qi < queue.length - 1 ? 'Lock in and pass' : 'Lock in wager'}</button>
         </div>
-      </div>
-      ${stageHost('suspicious')}
-    `;
+    `, 'suspicious');
     const input = document.getElementById('wager-input');
     input.focus(); input.select();
     document.querySelectorAll('.btn-preset').forEach(b =>
@@ -2514,20 +2574,20 @@ function renderFinalClue() {
   const solo = players.length === 1;
   const answers = players.map(() => '');
   const queue = players.map((_, i) => i).filter(i => finalWagers[i] > 0 || players[i].score > 0);
+  // The clue keeps its place and its size from the first reading to the last answer.
+  const clueHead = `
+      <span class="clue-category">${escapeHtml(finalClue.name)}</span>
+      <div class="fin-clue">${escapeHtml(finalClue.clue)}</div>`;
+  const stake = solo
+    ? (finalWagers[0] > 0 ? `${money(finalWagers[0])} rides on this.` : 'Nothing staked. Answer for honour.')
+    : 'The wagers are locked. Read it together.';
 
   // Everyone reads the clue together, think music playing.
-  app.innerHTML = `
-    ${sceneShapes('final')}
-    <div class="final-screen">
-      <div class="final-header">${finalHeader()}</div>
-      <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
-      <div class="final-clue-text">${escapeHtml(finalClue.clue)}</div>
-      <button class="btn-submit" id="btn-begin-answers">
-        ${solo ? 'Enter answer' : 'Enter answers'}
-      </button>
-    </div>
-    ${stageHost('thinking')}
-  `;
+  app.innerHTML = finalShell('clue', `
+      ${clueHead}
+      <p class="fin-stake">${stake}</p>
+      <button class="btn-submit" id="btn-begin-answers">${solo ? 'Enter answer' : 'Enter answers'}</button>
+  `, 'thinking');
 
   document.getElementById('btn-begin-answers').addEventListener('click', () => {
     if (queue.length === 0) { music.stop(); submitFinalAnswers(answers); return; }
@@ -2540,22 +2600,14 @@ function renderFinalClue() {
     };
     function answerEntry(idx) {
       const p = players[idx];
-      app.innerHTML = `
-        ${sceneShapes('final')}
-    <div class="final-screen">
-          <div class="final-header">${finalHeader()}</div>
-          <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
-          <div class="final-clue-text" style="font-size:1.3rem">${escapeHtml(finalClue.clue)}</div>
-          <div class="final-answer-form">
-            <div class="final-answer-player">
-              <label style="--pc:${PLAYER_COLORS[idx]}">${escapeHtml(p.name)}, your response</label>
-              <input type="text" id="final-answer-input" class="answer-input" placeholder="What is…" autocomplete="off">
-            </div>
+      app.innerHTML = finalShell('answer', `
+          ${clueHead}
+          <div class="final-answer-form fin-answer">
+            <label class="fin-answer-label" for="final-answer-input" style="--pc:${PLAYER_COLORS[idx]}">${solo ? 'Your response' : `${escapeHtml(p.name)}, your response`}</label>
+            <input type="text" id="final-answer-input" class="answer-input" placeholder="What is…" autocomplete="off">
             <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock in and pass' : solo ? 'Reveal answer' : 'Reveal answers'}</button>
           </div>
-        </div>
-        ${stageHost('thinking')}
-      `;
+      `, 'thinking');
       const input = document.getElementById('final-answer-input');
       input.focus();
       const lock = () => { answers[idx] = input.value.trim(); qi++; nextAnswer(); };
@@ -2568,39 +2620,38 @@ function renderFinalClue() {
 
 function renderFinalAnswer() {
   const { finalClue, finalAnswers, finalWagers, players } = getState();
+  const played = i => finalWagers[i] > 0 || finalAnswers[i].answer;
 
-  app.innerHTML = `
-    ${sceneShapes('final')}
-    <div class="final-screen">
-      <div class="final-header">${finalHeader()}</div>
-      <div class="final-correct-response">
-        <div class="label">Correct response:</div>
-        <div class="response">${escapeHtml(finalClue.response)}</div>
-      </div>
-      <div class="final-results-list">
+  app.innerHTML = finalShell('reveal', `
+      <p class="fin-label">The correct response</p>
+      <div class="fin-response">${escapeHtml(finalClue.response)}</div>
+      <ul class="fin-rows">
         ${players.map((p, i) => `
-          <div class="final-result-player ${finalAnswers[i].correct ? 'correct' : 'wrong'}">
-            <div class="frp-name">${escapeHtml(p.name)}</div>
-            <div class="frp-answer">${finalWagers[i] > 0 || finalAnswers[i].answer ? `"${escapeHtml(finalAnswers[i].answer || '(no answer)')}"` : 'Nothing to stake'}</div>
-            <div class="frp-wager">${finalWagers[i] > 0 ? `${finalAnswers[i].correct ? '+' : '-'}$${formatMoney(finalWagers[i])}` : 'Sat out'}</div>
-            <div class="frp-total">${flowMoney(p.score, p.score + (finalAnswers[i].correct ? -1 : 1) * finalWagers[i])}</div>
-            ${finalWagers[i] > 0 || finalAnswers[i].answer ? `
+          <li class="fin-row ${played(i) ? (finalAnswers[i].correct ? 'correct' : 'wrong') : 'sat-out'}">
+            ${faceChip(p, i)}
+            <div class="fin-row-main">
+              <strong class="fin-row-name">${escapeHtml(p.name)}</strong>
+              <span class="fin-said">${played(i) ? `&ldquo;${escapeHtml(finalAnswers[i].answer || 'no answer')}&rdquo;` : 'Nothing to stake'}</span>
+            </div>
+            <div class="fin-row-nums">
+              <span class="fin-delta">${finalWagers[i] > 0 ? `${finalAnswers[i].correct ? '+' : '&minus;'}$${formatMoney(finalWagers[i])}` : played(i) ? '$0' : 'Sat out'}</span>
+              <span class="fin-total">${flowMoney(p.score, p.score + (finalAnswers[i].correct ? -1 : 1) * finalWagers[i])}</span>
+            </div>
+            ${played(i) ? `
               <button class="btn-final-override" data-player="${i}">
                 ${finalAnswers[i].correct ? 'Mark wrong' : 'The Emperor accepts it'}
               </button>
             ` : ''}
-          </div>
+          </li>
         `).join('')}
-      </div>
+      </ul>
       <button class="btn-continue" id="btn-show-results">Final scores</button>
-    </div>
-    ${stageHost(finalAnswers.some(a => a.correct) ? 'victory' : 'defeated')}
-  `;
+  `, finalAnswers.some(a => a.correct) ? 'victory' : 'defeated');
   const finalWon = finalAnswers.some(a => a.correct);
   hostReact(finalWon ? 'victory' : 'defeated', { move: finalWon ? 'hop' : 'settle', film: finalWon ? 'fist' : 'shrug' });
 
   // The reveal, one player at a time
-  const revealRows = document.querySelectorAll('.final-result-player');
+  const revealRows = document.querySelectorAll('.fin-row');
   if (!prefersReducedMotion() && revealRows.length) {
     animate(revealRows, { opacity: [0, 1], y: [16, 0] }, { duration: 0.4, ease: EXPO, delay: stagger(0.45, { startDelay: 0.35 }) });
   }
@@ -2681,11 +2732,44 @@ function chapterOutcomeHtml() {
   `;
 }
 
+// His last word on the game, by how it went. Dealt like every other deck of his lines.
+const END_LINES = {
+  S: ['I have crowned myself for less.', 'Take the throne. I shall stand, this once.', 'Flawless. I suspect you of cheating, and I approve.'],
+  A: ['There is a marshal’s baton in your knapsack.', 'One more campaign like that and I will learn your name.', 'Très bien. The Old Guard would have you.'],
+  B: ['Promising. I have promoted worse.', 'You hold the field. Barely, but you hold it.', 'A respectable day. Do not let it be your best.'],
+  C: ['A skirmish, not a victory. Again.', 'You survived. That is where every campaign begins.', 'The ground was won slowly. It still counts.'],
+  D: ['We shall call that reconnaissance.', 'I have seen retreats with more dignity.', 'History will not mention today. You are welcome.'],
+  rout: ['Not since Austerlitz have I seen such form.', 'That was not a contest. That was an annexation.', 'One of you came to play. The other came to watch.'],
+  close: ['Decided by a whisker. My favourite kind of war.', 'A near-run thing. I know the feeling.', 'So close. One answer, and history reads differently.'],
+  win: ['The field is yours. Be gracious about it. Or do not.', 'A clean victory. Send word to Paris.', 'Well fought. The loser buys the wine.'],
+  tie: ['A draw. The diplomats will be thrilled.', 'Nobody wins. How very Congress of Vienna.', 'Evenly matched. Settle it again, at once.'],
+};
+let endLine = null; // one line per game, so a second look at the page does not change his mind
+
+/** A player standing in their arch on the results page: full length, as on the table. */
+function endPlayerHtml(p, { winner, place, solo, rank }) {
+  const c = characterById(p.character);
+  const pose = c && (winner ? c.poseUrls.victory : c.poseUrls.thinking || c.poseUrls.ready);
+  return `
+    <figure class="end-player ${winner ? 'is-winner' : ''}" data-place="${place}" style="--pc: ${PLAYER_COLORS[p.originalIndex]}${c ? `; --tone: ${c.tone}` : ''}">
+      <div class="end-fig">
+        ${c ? `<img class="end-fig-img" src="${pose}" alt="${escapeHtml(c.name)}" draggable="false">`
+          : `<span class="end-seal" aria-hidden="true">${escapeHtml(monogram(p.name, p.originalIndex))}</span>`}
+        ${solo ? `<span class="end-rank" aria-label="Rank ${rank.letter}"><small>Rank</small>${rank.letter}</span>` : ''}
+      </div>
+      <figcaption>
+        <span class="end-name">${escapeHtml(p.name)}</span>
+        <span class="end-money ${p.score < 0 ? 'negative' : ''}">${flowMoney(p.score, 0)}</span>
+      </figcaption>
+    </figure>`;
+}
+
 function renderResults() {
   const { players, gameLength, campaign, missed = [] } = getState();
   const rec = loadRecords();
   const prevBest = rec.best ? rec.best.score : null;
-  if (!recordedThisGame) { recordGame(players); recordedThisGame = true; }
+  const firstLook = !recordedThisGame;
+  if (firstLook) { recordGame(players); recordedThisGame = true; }
   const ranked = players
     .map((p, originalIndex) => ({ ...p, originalIndex }))
     .sort((a, b) => b.score - a.score);
@@ -2694,66 +2778,61 @@ function renderResults() {
   const solo = players.length === 1;
   const rank = solo ? soloRank(winner, gameLength) : null;
   const newBest = solo && winner.score > 0 && (prevBest === null || winner.score > prevBest);
+  const lead = solo ? 0 : winner.score - ranked[1].score;
 
-  // Podium display order: 2nd, 1st, 3rd (1st in the middle, tallest)
-  const podiumOrder = ranked.length === 3 ? [ranked[1], ranked[0], ranked[2]]
+  // On the stage the winner stands in the middle of three, or last of two (next to Napoleon)
+  const stageOrder = ranked.length === 3 ? [ranked[1], ranked[0], ranked[2]]
     : ranked.length === 2 ? [ranked[1], ranked[0]]
     : [ranked[0]];
-  const medal = ['I', 'II', 'III'];
   const hostPose = solo && winner.score <= 0 ? 'shrug' : isTie ? 'welcome' : 'victory';
+  const sour = solo && (winner.score <= 0 || rank.letter === 'D');
+  if (firstLook || !endLine) {
+    const key = solo ? (winner.score <= 0 ? 'D' : rank.letter)
+      : isTie ? 'tie'
+      : winner.score > 0 && ranked[1].score <= winner.score / 2 ? 'rout'
+      : lead <= Math.max(400, winner.score * 0.1) ? 'close' : 'win';
+    endLine = pick(END_LINES[key]);
+  }
+  const title = solo ? rank.title : isTie ? 'It’s a tie' : `${escapeHtml(winner.name)} wins`;
+  const facts = solo
+    ? [rank.next ? escapeHtml(rank.next) : 'The top rank. Nothing left to prove.']
+    : isTie ? [`Level at ${money(winner.score)}`] : [`Ahead by ${money(lead)}`];
 
   app.innerHTML = `
     ${sceneShapes('results')}
-    <div class="results-screen">
-      <div class="results-title">${solo
-        ? `Rank ${rank.letter}: ${rank.title}`
-        : isTie ? "It's a Tie!" : `${escapeHtml(winner.name)} Wins!`}</div>
-      ${newBest ? '<div class="solo-best-callout">New personal best!</div>' : ''}
-      ${solo && rank.next ? `<div class="solo-next-hint">${rank.next}</div>` : ''}
-      ${!solo && !isTie ? hostLine('Not since Austerlitz have I seen such form.', 'Napoleon', 'delighted') : ''}
+    <div class="results-screen end" data-players="${players.length}">
+      <header class="end-head">
+        <h1 class="end-title">${title}<span class="logo-dot" aria-hidden="true">.</span></h1>
+        ${newBest ? '<p class="end-best">New personal best</p>' : ''}
+        <p class="end-facts">${facts.join(' ')}</p>
+      </header>
       ${chapterOutcomeHtml()}
-      <div class="results-stage">
-      ${solo ? `
-      <div class="solo-scorecard" style="--pc: ${PLAYER_COLORS[0]}">
-        <div class="podium-avatar ${portraitUrl(winner.character) ? 'has-portrait' : ''}">${avatarHtml(winner, 0)}</div>
-        <div class="solo-score-money ${winner.score < 0 ? 'negative' : ''}">${flowMoney(winner.score, 0)}</div>
-        <div class="solo-score-sub">${escapeHtml(winner.name)}'s winnings</div>
+      <div class="end-stage">
+        <div class="end-cast">
+          ${stageOrder.map(p => endPlayerHtml(p, {
+            winner: solo ? !sour : p.score === winner.score,
+            place: ranked.indexOf(p) + 1, solo, rank,
+          })).join('')}
+        </div>
+        ${hostFigure(hostPose, 'results-host', { alt: hostPose === 'victory' ? 'Napoleon raises a fist in triumph' : hostPose === 'shrug' ? 'Napoleon shrugs' : 'Napoleon opens a hand to the table' })}
       </div>
-      ` : `
-      <div class="podium">
-        ${podiumOrder.map(p => {
-          const place = ranked.indexOf(p) + 1;
-          return `
-            <div class="podium-col rank-${place}" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">
-              <div class="podium-avatar ${portraitUrl(p.character) ? 'has-portrait' : ''}">${avatarHtml(p, p.originalIndex)}</div>
-              <div class="podium-name">${escapeHtml(p.name)}</div>
-              <div class="podium-money ${p.score < 0 ? 'negative' : ''}">${flowMoney(p.score, 0)}</div>
-              <div class="podium-block">${medal[place - 1]}</div>
-            </div>
-          `;
-        }).join('')}
-      </div>
-      `}
-      ${hostFigure(hostPose, 'results-host', { alt: hostPose === 'victory' ? 'Napoleon raises a fist in triumph' : hostPose === 'shrug' ? 'Napoleon shrugs' : 'Napoleon opens a hand to the table' })}
-      </div>
-      <div class="results-stats-list">
+      ${hostLine(endLine, 'Napoleon', sour ? 'annoyed' : isTie ? 'puzzled' : 'delighted')}
+      <div class="end-stats">
         ${ranked.map(p => {
           const attempts = p.correct + p.wrong;
           const accuracy = attempts > 0 ? Math.round((p.correct / attempts) * 100) : 0;
           return `
-            <div class="result-stats-row">
-              <span class="rsr-name" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">${escapeHtml(p.name)}</span>
-              <span class="rsr-stats">
-                <span class="stat-good">${icon('check')}${p.correct}</span>
-                <span class="stat-bad">${icon('cross')}${p.wrong}</span>
-                <span>${accuracy}%</span>
-                ${p.bestStreak >= 2 ? `<span>best run &times;${p.bestStreak}</span>` : ''}
-              </span>
+            <div class="end-stat-row" style="--pc: ${PLAYER_COLORS[p.originalIndex]}">
+              ${solo ? '' : `<span class="end-stat-name">${escapeHtml(p.name)}</span>`}
+              <span class="end-stat"><b class="stat-good">${p.correct}</b><small>right</small></span>
+              <span class="end-stat"><b class="stat-bad">${p.wrong}</b><small>wrong</small></span>
+              <span class="end-stat"><b>${accuracy}%</b><small>accuracy</small></span>
+              <span class="end-stat"><b>${p.bestStreak >= 2 ? p.bestStreak : '&ndash;'}</b><small>best run</small></span>
             </div>
           `;
         }).join('')}
       </div>
-      <div class="results-actions">
+      <div class="results-actions end-actions">
         <button class="btn-play-again" id="btn-play-again">${campaign && getState().chapterOutcome?.won && !getState().chapterOutcome?.campaignComplete ? 'Next chapter' : 'Play again'}</button>
         ${campaign ? '<button class="btn-quiet" id="btn-results-empire">The Empire</button>' : ''}
         <button class="btn-quiet btn-share" id="btn-share">Share result</button>
@@ -2776,6 +2855,12 @@ function renderResults() {
   sounds.playFanfare();
   if (!isTie || ranked[0].score > 0) spawnConfetti();
   flowNumbers(450);
+  if (!prefersReducedMotion()) {
+    const figs = document.querySelectorAll('.end-player');
+    animate(figs, { opacity: [0, 1], y: [22, 0] }, { duration: 0.5, ease: EXPO, delay: stagger(0.12, { startDelay: 0.1 }) });
+    const seal = document.querySelector('.end-rank');
+    if (seal) animate(seal, { scale: [0, 1], rotate: [-18, 0] }, { type: 'spring', stiffness: 380, damping: 16, delay: 0.75 });
+  }
   // he bows to a winner and shrugs at a solo game that ended in the red, then goes back to watching
   preloadFilms([hostPose === 'victory' ? 'bow' : 'shrug']);
   if (hostPose !== 'welcome') setTimeout(() => {
@@ -2787,6 +2872,7 @@ function renderResults() {
     boardRevealDone = false;
     prevScores = [];
     prevLeader = null;
+    endLine = null;
     resetForNewGame();
   });
 
@@ -2794,7 +2880,7 @@ function renderResults() {
   document.getElementById('btn-results-empire')?.addEventListener('click', () => showEmpire(campaign.chapter));
 }
 
-/** Copy a shareable summary of the game to the clipboard. */
+/** Hand a summary of the game to the phone's share sheet, or copy it where there is none. */
 function shareResult(ranked, isTie) {
   const medals = ['I', 'II', 'III'];
   const solo = ranked.length === 1;
@@ -2804,13 +2890,18 @@ function shareResult(ranked, isTie) {
   const chapterNote = campaign ? `, Chapter ${campaign.chapter.number}, ${campaign.chapter.title}${chapterOutcome?.won ? ', won' : ''}` : '';
   const header = solo ? `${ranked[0].name} hit Rank ${rank.letter} (${rank.title}) on Clue d'État${chapterNote}!`
     : isTie ? `It's a tie on Clue d'État${chapterNote}!` : `${ranked[0].name} won Clue d'État${chapterNote}!`;
-  const text = `${header}\n${lines.join('\n')}\n\nPlay: https://kellylucas314-cpu.github.io/Jeopardy/`;
+  const url = 'https://kellylucas314-cpu.github.io/Jeopardy/';
+  const body = `${header}\n${lines.join('\n')}`;
+  const text = `${body}\n\nPlay: ${url}`;
   const done = () => showToast('Result copied. Go brag!', 'var(--brass)');
-  if (navigator.clipboard?.writeText) {
-    navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
-  } else {
-    fallbackCopy(text, done);
-  }
+  const copy = () => {
+    if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+    else fallbackCopy(text, done);
+  };
+  // a phone has a share sheet (Messages, Mail); a laptop gets the clipboard
+  if (touchOnly() && navigator.share) {
+    navigator.share({ title: 'Clue d’État', text: body, url }).catch((err) => { if (err?.name !== 'AbortError') copy(); });
+  } else copy();
 }
 
 function fallbackCopy(text, done) {
