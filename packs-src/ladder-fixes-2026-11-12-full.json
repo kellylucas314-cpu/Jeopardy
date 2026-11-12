@@ -182,6 +182,244 @@
       ],
       "why": "Turing is easier than ENIAC.",
       "done": "Microsoft|IBM|the floppy disk|Alan Turing|ENIAC"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "LOWER 48 LORE",
+      "order": [
+        3,
+        1,
+        2,
+        4,
+        5
+      ],
+      "why": "Key West and Florida is the easiest.",
+      "done": "Florida|California|Arizona|Maine|Washington"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "BIOMES OF THE WORLD",
+      "order": [
+        2,
+        1,
+        3,
+        5,
+        4
+      ],
+      "why": "The Amazon is the easiest, and taiga is easier than chaparral.",
+      "done": "the Amazon|the tundra|the steppe|the taiga (boreal forest)|chaparral (Mediterranean scrub)"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "LAB REPORT",
+      "order": [
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "why": "Hawking radiation is easier than Mohs hardness.",
+      "done": "nitrogen|Celsius|Stephen Hawking|hardness|Werner Heisenberg"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "POLYGLOT PAGES",
+      "order": [
+        2,
+        1,
+        3,
+        4,
+        5
+      ],
+      "why": "O Canada and French is the easiest.",
+      "done": "French|the Rosetta Stone|James Joyce|Vladimir Nabokov|Behistun"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "MACRO MANAGEMENT",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "Amino acids are easier than glycogen.",
+      "done": "protein|carbohydrates|fiber|amino acids|glycogen"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "WORLD RELIGIONS",
+      "order": [
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      "why": "Shinto is easier than Jainism.",
+      "done": "Islam|Shinto|Jainism|the Bahai Faith (Baha'i)|Mandaeism (Mandaeans)"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "INSECTS & THEIR KIN",
+      "order": [
+        2,
+        1,
+        3,
+        4,
+        5
+      ],
+      "why": "The mosquito is easier than the termite.",
+      "done": "the mosquito|the termite|the cicada|the scarab (dung beetle)|Arachnida (arachnids)"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "HOW A BILL BECOMES A HEADACHE",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "Pork barrel is easier than the pocket veto.",
+      "done": "a veto|a filibuster|gerrymandering|pork barrel (pork)|a pocket veto"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "NUTRITION FACTS",
+      "order": [
+        1,
+        4,
+        2,
+        3,
+        5
+      ],
+      "why": "Sodium is easier than anemia and omega-3.",
+      "done": "calorie|sodium|anemia|omega-3|glycemic index"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "ANIMAL BEHAVIOR",
+      "order": [
+        3,
+        2,
+        1,
+        4,
+        5
+      ],
+      "why": "Hibernation and playing possum are easier than the waggle dance.",
+      "done": "hibernation|playing possum|the waggle dance|mutualism|imprinting"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "FAITH IN THE DETAILS",
+      "order": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "why": "Nirvana is easier than the Five Ks and Kabbalah.",
+      "done": "Ramadan|karma|nirvana|Sikhism|Kabbalah"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "ROCK SOLID",
+      "order": [
+        4,
+        1,
+        2,
+        3,
+        5
+      ],
+      "why": "Michelangelo's marble is the easiest.",
+      "done": "marble|igneous|the Mohs scale|basalt|olivine"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "VENUE, VIDI, VICI",
+      "order": [
+        1,
+        4,
+        3,
+        2,
+        5
+      ],
+      "why": "Chariot racing is a gimme, and Zaire is harder than Wembley.",
+      "done": "New York|chariot racing|Wembley|Zaire|Siena"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "PERSIA MAJEURE",
+      "order": [
+        2,
+        1,
+        3,
+        4,
+        5
+      ],
+      "why": "The 300 Spartans at Thermopylae are easier than Cyrus.",
+      "done": "Thermopylae|Cyrus the Great|Persepolis|the Royal Road|satraps"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "IRON CURTAIN CALLS",
+      "order": [
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      "why": "The Cuban Missile Crisis is easier than Fulton, Missouri.",
+      "done": "the Berlin Wall|the Cuban Missile Crisis|Missouri|Hungary|Helsinki"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "LIBERATORS & LAST EMPERORS",
+      "order": [
+        1,
+        2,
+        5,
+        4,
+        3
+      ],
+      "why": "Atahualpa's room of gold is easier than Pedro II.",
+      "done": "Simón Bolívar|Montezuma (Moctezuma II)|Atahualpa (Atahuallpa)|Benito Juárez|Pedro II (Dom Pedro II)"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "MONSOON SEASON",
+      "order": [
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      "why": "Bali is easier than Java Man.",
+      "done": "Singapore|Bali|Java|Ha Long Bay (Halong Bay)|Brunei"
     }
   ]
 }
