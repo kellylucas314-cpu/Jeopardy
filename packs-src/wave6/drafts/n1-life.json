@@ -1,0 +1,362 @@
+[
+ {
+  "name": "DICTIONARY DARLINGS",
+  "clues": [
+   {
+    "clue": "Oxford's word for 2023, this four-letter term for romantic charm is clipped from 'charisma'",
+    "response": "rizz",
+    "value": 200
+   },
+   {
+    "clue": "Merriam-Webster's 2022 word, taken from a 1944 film title, means making someone doubt their own reality",
+    "response": "gaslighting",
+    "value": 400
+   },
+   {
+    "clue": "Oxford's 2024 choice, this two-word phrase describes a mind dulled by endless scrolling",
+    "response": "brain rot",
+    "value": 600
+   },
+   {
+    "clue": "A 'very mindful' TikTok video led Dictionary.com to pick this word meaning 'modest' for 2024",
+    "response": "demure",
+    "value": 800
+   },
+   {
+    "clue": "Merriam-Webster's 2025 word, this four-letter term for pig feed now means low-quality AI-made content",
+    "response": "slop",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "APP-SOLUTELY",
+  "clues": [
+   {
+    "clue": "In 2023 Elon Musk replaced Twitter's name and blue bird with this single letter",
+    "response": "X",
+    "value": 200
+   },
+   {
+    "clue": "Launched in late 2022, this OpenAI chatbot reached 100 million users in about two months",
+    "response": "ChatGPT",
+    "value": 400
+   },
+   {
+    "clue": "Meta launched this text-based rival to Twitter, tied to Instagram accounts, in July 2023",
+    "response": "Threads",
+    "value": 600
+   },
+   {
+    "clue": "At a random moment each day, this French app gave users two minutes to post with both phone cameras",
+    "response": "BeReal",
+    "value": 800
+   },
+   {
+    "clue": "A butterfly is the logo of this decentralized social network that began as a project inside Twitter",
+    "response": "Bluesky",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "ARTIFICIALLY INTELLIGENT",
+  "clues": [
+   {
+    "clue": "Sam Altman runs this San Francisco company whose chatbot kicked off the AI boom",
+    "response": "OpenAI",
+    "value": 200
+   },
+   {
+    "clue": "When a chatbot confidently invents facts, it is said to do this, like a person seeing things",
+    "response": "hallucinate",
+    "value": 400
+   },
+   {
+    "clue": "Demand for AI chips made this company, led by leather-jacketed Jensen Huang, one of the world's most valuable",
+    "response": "Nvidia",
+    "value": 600
+   },
+   {
+    "clue": "Former OpenAI researchers founded this company in 2021; its AI models are named Claude",
+    "response": "Anthropic",
+    "value": 800
+   },
+   {
+    "clue": "A low-cost model from this Chinese AI lab rattled American tech stocks in January 2025",
+    "response": "DeepSeek",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "THE NEW SPACE RACE",
+  "clues": [
+   {
+    "clue": "NASA's program to return astronauts to the Moon is named for this twin sister of Apollo",
+    "response": "Artemis",
+    "value": 200
+   },
+   {
+    "clue": "At 90, William Shatner flew to the edge of space in 2021 on a rocket from this Jeff Bezos company",
+    "response": "Blue Origin",
+    "value": 400
+   },
+   {
+    "clue": "In 2022 NASA's DART spacecraft deliberately smashed into one of these to nudge its path",
+    "response": "an asteroid",
+    "value": 600
+   },
+   {
+    "clue": "In 2024 SpaceX caught a returning booster of this giant rocket in midair with mechanical 'chopsticks'",
+    "response": "Starship",
+    "value": 800
+   },
+   {
+    "clue": "In 2021 this little NASA helicopter made the first powered flight on another planet",
+    "response": "Ingenuity",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "WHAT WE ATE",
+  "clues": [
+   {
+    "clue": "Cafes ran short of this powdered Japanese green tea as lattes made with it boomed in 2025",
+    "response": "matcha",
+    "value": 200
+   },
+   {
+    "clue": "TikTok's pasta craze of 2021 baked cherry tomatoes around a block of this Greek cheese",
+    "response": "feta",
+    "value": 400
+   },
+   {
+    "clue": "Fix Dessert Chocolatier's pistachio-stuffed 'Can't Get Knafeh of It' bar set off a 2024 craze for chocolate named after this emirate",
+    "response": "Dubai",
+    "value": 600
+   },
+   {
+    "clue": "In 2023 McDonald's sold a bright purple shake for the birthday of this blobby mascot",
+    "response": "Grimace",
+    "value": 800
+   },
+   {
+    "clue": "'Swicy', a menu buzzword of 2024, blends these two tastes",
+    "response": "sweet and spicy",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "TALK THE TALK",
+  "clues": [
+   {
+    "clue": "'No' this three-letter word, says Gen Z, means 'I'm not lying'",
+    "response": "cap",
+    "value": 200
+   },
+   {
+    "clue": "Short for 'suspicious', this three-letter word spread with the game Among Us",
+    "response": "sus",
+    "value": 400
+   },
+   {
+    "clue": "In 2021 this word mocked anything dated or trying too hard, like 'Live, Laugh, Love' signs",
+    "response": "cheugy",
+    "value": 600
+   },
+   {
+    "clue": "'Delulu' is a playful shortening of this adjective",
+    "response": "delusional",
+    "value": 800
+   },
+   {
+    "clue": "Gen Alpha's all-purpose nonsense word, it comes from online videos of singing heads in toilets",
+    "response": "skibidi",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "FIT CHECK",
+  "clues": [
+   {
+    "clue": "Wearers decorate these foam clogs by snapping Jibbitz charms into their holes",
+    "response": "Crocs",
+    "value": 200
+   },
+   {
+    "clue": "'Barbiecore' painted the summer of 2023 this color",
+    "response": "pink",
+    "value": 400
+   },
+   {
+    "clue": "In 2024 shoppers lined up before dawn for limited editions of this brand's 40-ounce Quencher tumbler",
+    "response": "Stanley",
+    "value": 600
+   },
+   {
+    "clue": "Roger Federer invested in this Swiss running shoe brand with a two-letter name",
+    "response": "On",
+    "value": 800
+   },
+   {
+    "clue": "Pantone's Color of the Year for 2025 was this warm brown named for coffee and a fluffy dessert",
+    "response": "Mocha Mousse",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "TOY BOX",
+  "clues": [
+   {
+    "clue": "These toothy, elf-eared plush monsters from Pop Mart dangled from handbags everywhere in 2025",
+    "response": "Labubus",
+    "value": 200
+   },
+   {
+    "clue": "Collectors hoard these round, marshmallow-soft plush animals, each sold with a name and a little biography",
+    "response": "Squishmallows",
+    "value": 400
+   },
+   {
+    "clue": "Kids in 2021 pressed the silicone bubbles of this fidget toy in and out like endless bubble wrap",
+    "response": "a Pop It",
+    "value": 600
+   },
+   {
+    "clue": "First a hit in 1998, this chattering, big-eyed robotic pet was relaunched in 2023",
+    "response": "Furby",
+    "value": 800
+   },
+   {
+    "clue": "This London company makes smiling plush croissants, boiled eggs and peanuts",
+    "response": "Jellycat",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "STONKS ONLY GO UP",
+  "clues": [
+   {
+    "clue": "Reddit traders sent shares of this video game retailer soaring in January 2021",
+    "response": "GameStop",
+    "value": 200
+   },
+   {
+    "clue": "In NFT, the digital collectible craze of 2021, the T stands for this",
+    "response": "token",
+    "value": 400
+   },
+   {
+    "clue": "Sam Bankman-Fried went to prison after the 2022 collapse of this crypto exchange",
+    "response": "FTX",
+    "value": 600
+   },
+   {
+    "clue": "A 2023 run on this Santa Clara lender to tech start-ups brought it down in two days",
+    "response": "Silicon Valley Bank",
+    "value": 800
+   },
+   {
+    "clue": "Demand for Ozempic and Wegovy made this Danish drugmaker Europe's most valuable company for a time",
+    "response": "Novo Nordisk",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "CROWNING ACHIEVEMENTS",
+  "clues": [
+   {
+    "clue": "King Charles III was crowned in May 2023 in this London church",
+    "response": "Westminster Abbey",
+    "value": 200
+   },
+   {
+    "clue": "Prince Harry's 2023 memoir bore this one-word title, the second half of 'the heir and the'",
+    "response": "Spare",
+    "value": 400
+   },
+   {
+    "clue": "In a 2022 sketch with Paddington Bear, the Queen pulled this kind of sandwich from her handbag",
+    "response": "marmalade",
+    "value": 600
+   },
+   {
+    "clue": "In June 2022 Britain threw a four-day party for this Jubilee, marking the Queen's 70 years on the throne",
+    "response": "Platinum",
+    "value": 800
+   },
+   {
+    "clue": "For the coronation, the Stone of Scone was brought to London from this Scottish fortress",
+    "response": "Edinburgh Castle",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "PEER REVIEWED",
+  "clues": [
+   {
+    "clue": "On April 8, 2024, millions from Texas to Maine put on special glasses to watch one of these",
+    "response": "a total solar eclipse",
+    "value": 200
+   },
+   {
+    "clue": "Ozempic, a blockbuster for weight loss, was first approved to treat type 2 of this disease",
+    "response": "diabetes",
+    "value": 400
+   },
+   {
+    "clue": "One of the first mRNA Covid vaccines came from Germany's BioNTech and this American drug giant",
+    "response": "Pfizer",
+    "value": 600
+   },
+   {
+    "clue": "In 2023 India's Chandrayaan-3 became the first spacecraft to land near this end of the Moon",
+    "response": "the south pole",
+    "value": 800
+   },
+   {
+    "clue": "In December 2022 a California lab's fusion shot first released more of this than its lasers delivered",
+    "response": "energy",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BREAKING THE INTERNET",
+  "clues": [
+   {
+    "clue": "At the 2022 Oscars, Will Smith walked on stage and slapped this comedian",
+    "response": "Chris Rock",
+    "value": 200
+   },
+   {
+    "clue": "A boy named Tariq went viral in 2022 for praising this buttery vegetable as 'a big lump with knobs'",
+    "response": "corn",
+    "value": 400
+   },
+   {
+    "clue": "In early 2023 Americans tracked a Chinese one of these across the country until a fighter jet shot it down",
+    "response": "a balloon",
+    "value": 600
+   },
+   {
+    "clue": "A photo of Bernie Sanders at the 2021 inauguration became a meme thanks to these knitted hand warmers",
+    "response": "mittens",
+    "value": 800
+   },
+   {
+    "clue": "Born at a Thai zoo in 2024, this sassy pygmy hippo became the year's breakout animal star",
+    "response": "Moo Deng",
+    "value": 1000
+   }
+  ]
+ }
+]
