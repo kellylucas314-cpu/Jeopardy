@@ -4874,3 +4874,30 @@ body.is-scrolled .music-button.is-compact { opacity: 0; pointer-events: none; }
   .board-header .player-name { font-size: 0.82rem; }
   .board-header .player-amount { font-size: 1.45rem; letter-spacing: -0.01em; }
 }
+
+/* — The title poster (Nov 12 2026, Kelly: "what do u think about the layout and spacing?") —
+   Napoleon was small beside his own name, so on landscape screens the film is wider and starts
+   further left (its left edge is empty paper, and the name sits above it). The film is laid
+   onto the page with multiply after its paper is lifted to white, so its paper IS the page's
+   and no box shows around it. The sound effects switch moved into How to play. */
+.title-film { mix-blend-mode: multiply; filter: brightness(1.07); }
+@media (min-width: 640px) and (min-aspect-ratio: 1/1) {
+  .setup-hero .title-film {
+    /* as big as the window's height allows, without the crown reaching the Play button */
+    --tw: min(calc((100dvh - 110px) * 1.716), calc((96vw - clamp(260px, 34vw, 480px) - 40px) / 0.87), 1180px);
+    width: var(--tw);
+    /* its left edge is empty paper too, and may run under the name instead of pushing the row wide */
+    margin-left: -24vw;
+    /* the film's last 13% is the empty paper he walks in over: that part hangs off the window */
+    /* (out to the window's edge, or on a very wide screen to the edge of the page's own box) */
+    margin-right: calc(-1 * min(50vw - 50%, 46px) - 0.13 * var(--tw));
+  }
+}
+/* How to play was taller than a phone and could not scroll, so its title and its button were
+   both cut off: now the list scrolls between them */
+.modal.how-to { display: flex; flex-direction: column; max-height: calc(100dvh - 48px); }
+.how-to .how-to-list { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; margin-bottom: 16px; padding-right: 6px; }
+.how-to .modal-title, .how-to .modal-actions { flex: none; }
+.how-to .how-to-actions { justify-content: space-between; align-items: center; gap: 16px; }
+.how-to .how-to-actions button { width: auto; min-width: 150px; }
+.how-to-actions .sound-toggle { color: var(--text-dim); font-size: 0.92rem; min-height: 44px; }

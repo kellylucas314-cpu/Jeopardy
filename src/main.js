@@ -529,9 +529,10 @@ function syncMusicButton() {
   btn.classList.toggle('is-off', !on);
   btn.querySelector('.music-label').textContent = on ? 'Music on' : 'Music off';
   btn.title = on ? 'Turn the music off' : 'Turn the music on';
-  // The music only plays in the final round, so the button only shows there: a round note in
-  // the top left corner, which those screens keep clear for it (styles.css).
-  btn.classList.add('is-compact');
+  // On the menus it is a labelled pill in the top right. In the final round, the only part of
+  // the game with music, it shrinks to its note in the top left corner, which those screens
+  // keep clear for it (styles.css).
+  btn.classList.toggle('is-compact', music.asked() !== 'menu');
 }
 window.addEventListener('resize', () => { if (document.getElementById('music-button')) syncMusicButton(); });
 music.onChange(syncMusicButton);
@@ -540,8 +541,8 @@ document.addEventListener('scroll', (e) => {
   const t = e.target === document ? document.scrollingElement : e.target;
   if (t === document.scrollingElement || t === document.body || t === app) document.body.classList.toggle('is-scrolled', (t?.scrollTop || 0) > 8);
 }, { capture: true, passive: true });
-// the only screens with music (Kelly: "take the music out except for the final"): it comes in
-// with the final category and the engine stops it when the answers are locked
+// the only screens of the game itself with music (Kelly: "take the music out except for the
+// final"): it comes in with the final category and the engine stops it when the answers lock
 const MUSIC_SCREENS = new Set(['final-category', 'final-wager', 'final-clue']);
 
 function render() {
@@ -564,9 +565,10 @@ function render() {
   // Board keyboard nav only lives on the board
   if (state.screen !== 'board') detachBoardKeys();
 
-  // Music by screen: One Note Quiz through the final round, silence everywhere else.
+  // Music by screen: the menu pieces on the title and the table, One Note Quiz through the
+  // final round, silence in between and after.
   if (MUSIC_SCREENS.has(state.screen)) { if (music.asked() !== 'think') music.play('think'); }
-  else if (music.asked()) music.stop(1.2);
+  else if (state.screen !== 'setup' && music.asked()) music.stop(1.2);
 
   const draw = () => {
     switch (state.screen) {
@@ -736,8 +738,9 @@ function renderSetup() {
   const pack = prefs.pack === 'easy' ? 'easy' : 'fresh';
   const playStyle = prefs.playStyle === 'campaign' ? 'campaign' : 'free';
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
-  // the player's Music switch (the music itself waits for the final round)
+  // the music plays on the title and the table (from the first tap or key: browsers insist)
   music.setMusic(prefs.music !== false);
+  music.play('menu');
   prevLeader = null;
   prevScores = [];
   recordedThisGame = false;
@@ -763,10 +766,6 @@ function renderSetup() {
           <button type="button" class="btn-start btn-play" id="btn-play">Play</button>
           ${hof}
           <div class="setup-footer">
-            <label class="sound-toggle">
-              <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
-              <span>Sound Effects</span>
-            </label>
             <button class="link-btn" id="btn-how-to">How to play</button>
             <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
           </div>
@@ -855,22 +854,73 @@ function renderSetup() {
   const film = app.querySelector('.title-video');
   const stage = app.querySelector('.title-film');
   const still = () => { film.poster = './assets/title/throne-last.webp'; };
-  // Once the film is over he does not freeze: every so often he turns his head to look at you,
-  // then looks away again (Kelly, Nov 11: "very subtle movement"). The fidget clip starts and
-  // ends on the film's last frame, so it sits on top of the film and nothing jumps.
+  // Once the film is over he does not freeze, and he does not loop either (Kelly, Nov 12: "not
+  // like suchhh a loop... standing still but he is alive"). The fidget clip is one slow turn of
+  // the head towards you and back, 34 frames each way, so every frame in between is a place his
+  // head can rest. He drifts from one to another at his own pace: a small shift, a long look at
+  // you, half way back, away again, never the same twice. The clip mirrors itself (frame n and
+  // frame 68 - n are the same picture), so going back is the second half played forwards, and
+  // the one jump between halves happens while he is still, where it cannot be seen. It starts
+  // and ends on the film's last frame, so it sits on top of the film and nothing jumps.
   const fidget = app.querySelector('.title-fidget');
+  const FPS = 24, LOOK = 34, END = 68;
+  let head = 0;         // where his head is: 0 as the film left him, LOOK facing you
   let fidgetTimer = 0;
-  const rest = () => { clearTimeout(fidgetTimer); fidgetTimer = 0; };
-  const settle = () => { rest(); if (fidget) { fidget.pause(); fidget.classList.remove('on'); } };
+  let fidgetRaf = 0;
+  let turn = 0;         // each move's number: a move that was called off does nothing when it wakes
+  const rest = () => { clearTimeout(fidgetTimer); fidgetTimer = 0; cancelAnimationFrame(fidgetRaf); fidgetRaf = 0; turn += 1; };
+  const settle = () => { rest(); if (fidget) { fidget.pause(); fidget.classList.remove('on'); head = 0; } };
+  const between = (a, b) => a + Math.random() * (b - a);
+  const turnTo = (to, rate, done) => {
+    const towards = to > head;
+    const start = (towards ? head : END - head) / FPS + 0.5 / FPS;
+    const stop = (towards ? to : END - to) / FPS;
+    const mine = turn;
+    const go = () => {
+      if (mine !== turn) return;
+      fidget.playbackRate = rate;
+      fidget.play()?.then(() => {
+        if (mine !== turn) { fidget.pause(); return; }
+        fidget.classList.add('on');
+        const watch = () => {
+          if (!fidget.isConnected || mine !== turn) return;
+          if (fidget.ended || fidget.currentTime >= stop) {
+            fidget.pause();
+            head = to;
+            if (to === 0) fidget.classList.remove('on');
+            done();
+            return;
+          }
+          fidgetRaf = requestAnimationFrame(watch);
+        };
+        watch();
+      }).catch(() => {});
+    };
+    if (Math.abs(fidget.currentTime - start) > 0.6 / FPS) {
+      fidget.addEventListener('seeked', go, { once: true });
+      fidget.currentTime = start;
+    } else go();
+  };
   const idle = (first = false) => {
     rest();
     if (!fidget || calm || navigator.connection?.saveData) return;
+    // how long he holds still: longest when he is looking away or straight at you
+    const hold = first ? 220 : head === 0 ? between(2200, 5500) : head >= LOOK - 2 ? between(1800, 4800) : between(1100, 3200);
     fidgetTimer = setTimeout(() => {
+      fidgetTimer = 0;
       if (!fidget.isConnected) return;
       if (document.hidden || setupStep !== 'title' || !film.ended) { idle(); return; }
-      fidget.currentTime = 0;
-      fidget.play()?.then(() => fidget.classList.add('on')).catch(() => {});
-    }, first ? 900 + Math.random() * 400 : 6000 + Math.random() * 6000);
+      const r = Math.random();
+      let to;
+      if (first) to = LOOK;                                          // the film ends and he looks up at you
+      // from rest: a full look, a shift of his weight that barely shows, or a glance part of the way
+      else if (head === 0) to = r < 0.25 ? LOOK : r < 0.6 ? Math.round(between(3, 7)) : Math.round(between(8, 24));
+      // from looking at you: away again, a small easing off, or half way back
+      else if (head >= LOOK - 2) to = r < 0.45 ? 0 : r < 0.7 ? Math.round(between(LOOK - 8, LOOK - 4)) : Math.round(between(9, 22));
+      else to = r < 0.4 ? 0 : r < 0.7 ? LOOK : Math.round(Math.min(LOOK - 4, Math.max(6, head + (Math.random() < 0.5 ? -1 : 1) * between(6, 12))));
+      if (to === head) to = head === 0 ? LOOK : 0;
+      turnTo(to, first ? 0.8 : between(0.55, 0.85), () => idle());
+    }, hold);
   };
   const roll = () => {
     if (!film || calm || navigator.connection?.saveData) return;
@@ -886,7 +936,6 @@ function renderSetup() {
     // the fidget is fetched while the film plays, so it is ready the moment the film ends
     film.addEventListener('playing', () => { if (fidget && !navigator.connection?.saveData) fidget.preload = 'auto'; }, { once: true });
     film.addEventListener('ended', () => { if (fidget) fidget.preload = 'auto'; idle(true); });
-    fidget?.addEventListener('ended', () => { fidget.classList.remove('on'); idle(); });
   }
 
   // Two steps, one page: the title, then the table. Nothing is re-rendered, so every choice survives a trip back.
@@ -959,12 +1008,6 @@ function renderSetup() {
   renderChapterCard();
   wire('.btn-answer');
   wire('.btn-pack', btn => savePrefs({ pack: btn.dataset.pack }));
-
-  // Sound toggle
-  document.getElementById('sound-checkbox').addEventListener('change', (e) => {
-    sounds.setEnabled(e.target.checked);
-    savePrefs({ sound: e.target.checked });
-  });
 
   // How to play
   document.getElementById('btn-how-to').addEventListener('click', showHowTo);
@@ -1622,13 +1665,22 @@ function showHowTo() {
         <li><strong>Question packs:</strong> Fresh Pack is written just for this game, and Easy Breezy is gentler for casual and older players. The game remembers what you've played, so no categories repeat until you've seen a whole pack.</li>
         <li><strong>The Campaign:</strong> Napoleon's life in 15 chapters, from cadet to Saint Helena. Each chapter is one game with a category about that year and one about Napoleon himself; the rest of the board climbs in difficulty as the chapters do. Reach the chapter's score target and the Empire on your ledger grows, exactly as history did, peaking in 1811. Three right answers in the chapter category earn the <strong>Légion d'honneur</strong> bonus.</li>
       </ul>
-      <div class="modal-actions">
+      <div class="modal-actions how-to-actions">
+        <label class="sound-toggle">
+          <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
+          <span>Sound effects</span>
+        </label>
         <button class="btn-cta modal-cancel">Got it</button>
       </div>
     </div>
   `;
   document.body.appendChild(overlay);
   const close = () => overlay.remove();
+  // the sound effects switch lives here, off the title poster (the Music button is its own)
+  overlay.querySelector('#sound-checkbox').addEventListener('change', (e) => {
+    sounds.setEnabled(e.target.checked);
+    savePrefs({ sound: e.target.checked });
+  });
   overlay.querySelector('.modal-cancel').addEventListener('click', close);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
   overlay.querySelector('.modal-cancel').focus();
