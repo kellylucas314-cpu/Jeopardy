@@ -1,34 +1,28 @@
 /**
- * The music: Kelly's own recordings (Nov 12 2026), steered by her ear over one evening.
+ * The music: Kelly's own recording, "One Note Quiz", and only in the final round.
  *
- *   menu   three pieces take turns on the title and the "Who's playing?" table: "One Note
- *          Quiz" always first, then "Question and Answer" and an untitled evening recording
- *   play   "One Note Quiz" again, "very very soft", under the game itself, with a long
- *          rest between repeats
- *   think  "One Note Quiz" while a final answer is weighed
+ * It began (Nov 12 2026) as three pieces on the menus and a faint bed under the game. After
+ * a night with it she said: "take the music out except for the final ... put the one note
+ * there". So the game is quiet, and the one tune arrives with the final category and stays
+ * until the answers are locked.
  *
- * Her brief: "not overwhelming.. not annoying... subtle", "softer please", and "a clear
- * button to turn it off". So the files are mastered very quiet (-32 to -34 LUFS on the
- * menu, -40 under the game), One Note Quiz is 12% slower than she recorded it, the evening
- * recording has its heavy beat tamed (bass cut, hits rounded off), each piece eases in, and
- * there is a breath between them. The level is baked into the files because an iPhone
- * ignores a page's volume setting. A re-mastered file gets a new name (-m3, -m4...) so a
- * browser never plays a cached older one.
+ * Her brief still holds: "not overwhelming.. not annoying... subtle" and "a clear button to
+ * turn it off". The file is mastered quiet (-33 LUFS) and 12% slower than she recorded it,
+ * it eases in, and there is a breath before it repeats. The level is baked into the file
+ * because an iPhone ignores a page's volume setting. A re-mastered file gets a new name
+ * (-m3, -m4...) so a browser never plays a cached older one.
  *
  * Browsers only let sound start after a tap or a key, so play() before that is remembered
- * and begins on the first one. One <audio> element streams everything: nothing is fetched
- * until the music actually starts.
+ * and begins on the first one. One <audio> element streams it: nothing is fetched until the
+ * music actually starts.
  */
 
-const QUIZ = './assets/music/one-note-quiz-m3.mp3';
 const TRACKS = {
-  menu: [QUIZ, './assets/music/question-and-answer-m3.mp3', './assets/music/evening-recording-m3.mp3'],
-  play: ['./assets/music/one-note-quiz-bed-m3.mp3'],
-  think: [QUIZ],
+  think: ['./assets/music/one-note-quiz-m3.mp3'],
 };
 const EASE_IN = 1.8;  // seconds from silence to the (quiet) full level
-// ms of rest between one piece and the next: under the game the tune comes and goes
-const BREATH = { menu: 1400, think: 1400, play: 7000 };
+// ms of rest before the tune comes round again
+const BREATH = { think: 1400 };
 
 let musicOn = true;   // the player's Music switch
 let unlocked = false; // a tap or a key has happened, so sound may start
@@ -133,7 +127,7 @@ function sync() {
   begin(wanted);
 }
 
-/** Ask for music: 'menu' (title and table), 'play' (under the game) or 'think' (the final clue). */
+/** Ask for music: 'think' (the final round) is the only kind there is. */
 export function play(mode) {
   if (!TRACKS[mode]) return;
   if (wanted !== mode) { clearTimeout(breathTimer); breathTimer = 0; }

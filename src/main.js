@@ -529,15 +529,9 @@ function syncMusicButton() {
   btn.classList.toggle('is-off', !on);
   btn.querySelector('.music-label').textContent = on ? 'Music on' : 'Music off';
   btn.title = on ? 'Turn the music off' : 'Turn the music on';
-  // In the game itself the corner belongs to the scores, so the button shrinks to its note. On
-  // the board it sits beside the menu button; on the clue, wager and final screens it takes the
-  // top left corner, which those screens keep clear for it (styles.css).
-  const compact = music.asked() === 'play';
-  btn.classList.toggle('is-compact', compact);
-  const r = compact ? document.getElementById('btn-menu')?.getBoundingClientRect() : null;
-  const small = window.innerWidth < 600; // a phone's header has no room to spare
-  btn.style.left = r?.width ? `${Math.round(r.right + (small ? 4 : 8))}px` : '';
-  btn.style.top = r?.width ? `${Math.round(r.top + (r.height - (small ? 40 : 44)) / 2)}px` : '';
+  // The music only plays in the final round, so the button only shows there: a round note in
+  // the top left corner, which those screens keep clear for it (styles.css).
+  btn.classList.add('is-compact');
 }
 window.addEventListener('resize', () => { if (document.getElementById('music-button')) syncMusicButton(); });
 music.onChange(syncMusicButton);
@@ -546,8 +540,9 @@ document.addEventListener('scroll', (e) => {
   const t = e.target === document ? document.scrollingElement : e.target;
   if (t === document.scrollingElement || t === document.body || t === app) document.body.classList.toggle('is-scrolled', (t?.scrollTop || 0) > 8);
 }, { capture: true, passive: true });
-// the screens of the game itself, where the music is only a faint bed (Kelly: "very very soft")
-const BED_SCREENS = new Set(['board', 'clue', 'daily-double', 'round-transition', 'final-category', 'final-wager']);
+// the only screens with music (Kelly: "take the music out except for the final"): it comes in
+// with the final category and the engine stops it when the answers are locked
+const MUSIC_SCREENS = new Set(['final-category', 'final-wager', 'final-clue']);
 
 function render() {
   const state = getState();
@@ -569,11 +564,9 @@ function render() {
   // Board keyboard nav only lives on the board
   if (state.screen !== 'board') detachBoardKeys();
 
-  // Music by screen: the menu pieces bow out as the game begins, a very faint One Note Quiz
-  // runs under the game itself, and the engine asks for the thinking music on the final clue.
-  if (BED_SCREENS.has(state.screen)) { if (music.asked() !== 'play') music.play('play'); }
-  else if (state.screen === 'results' || state.screen === 'error') { if (music.asked()) music.stop(1.2); }
-  else if (state.screen !== 'setup' && music.asked() === 'menu') music.stop(1.2);
+  // Music by screen: One Note Quiz through the final round, silence everywhere else.
+  if (MUSIC_SCREENS.has(state.screen)) { if (music.asked() !== 'think') music.play('think'); }
+  else if (music.asked()) music.stop(1.2);
 
   const draw = () => {
     switch (state.screen) {
@@ -743,9 +736,8 @@ function renderSetup() {
   const pack = prefs.pack === 'easy' ? 'easy' : 'fresh';
   const playStyle = prefs.playStyle === 'campaign' ? 'campaign' : 'free';
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
-  // the music plays on the title and the table (from the first tap or key: browsers insist)
+  // the player's Music switch (the music itself waits for the final round)
   music.setMusic(prefs.music !== false);
-  music.play('menu');
   prevLeader = null;
   prevScores = [];
   recordedThisGame = false;
