@@ -30,8 +30,9 @@ const words = s => norm(s).split(/\s+/).filter(w => w.length >= 3 && !STOP.has(w
 const share = (a, b) => { const x = stem(a), y = stem(b); if (x === y) return true; const n = Math.min(x.length, y.length); return n >= 5 && x.slice(0, n) === y.slice(0, n); };
 const hits = [];
 let total = 0;
-for (const pack of ['original', 'easy']) for (const dir of ['jeopardy', 'double', 'final']) {
+for (const pack of ['original', 'easy', 'recent']) for (const dir of ['jeopardy', 'double', 'final']) {
   const d = path.join(root, pack, dir);
+  if (!fs.existsSync(d)) continue;
   for (const f of fs.readdirSync(d).filter(x => x.endsWith('.json')).sort()) {
     const arr = JSON.parse(fs.readFileSync(path.join(d, f), 'utf8'));
     const cats = dir === 'final' ? arr.map(c => ({ name: c.name || c.category, clues: [c] })) : arr;

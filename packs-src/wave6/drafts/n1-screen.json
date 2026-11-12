@@ -1,0 +1,302 @@
+[
+ {
+  "name": "BARBENHEIMER & FRIENDS",
+  "clues": [
+   {
+    "clue": "Margot Robbie's doll leaves her Dreamhouse for the real world in this very pink 2023 smash",
+    "response": "Barbie",
+    "value": 200
+   },
+   {
+    "clue": "Cillian Murphy won an Oscar as the 'father of the atomic bomb' in this Christopher Nolan epic",
+    "response": "Oppenheimer",
+    "value": 400
+   },
+   {
+    "clue": "A Brooklyn plumber and his brother Luigi made this animated film 2023's second-biggest hit",
+    "response": "The Super Mario Bros. Movie",
+    "value": 600
+   },
+   {
+    "clue": "Emma Stone won her second Oscar as Bella Baxter, a woman with an infant's brain, in this odd tale",
+    "response": "Poor Things",
+    "value": 800
+   },
+   {
+    "clue": "Lily Gladstone starred in this Scorsese epic about a string of murders in the Osage Nation",
+    "response": "Killers of the Flower Moon",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "STREAM OF CONSCIOUSNESS",
+  "clues": [
+   {
+    "clue": "Debt-ridden players in green tracksuits risk death in playground contests in this Korean smash of 2021",
+    "response": "Squid Game",
+    "value": 200
+   },
+   {
+    "clue": "Jenna Ortega's deadpan dance went viral when this Addams daughter got her own series in 2022",
+    "response": "Wednesday",
+    "value": 400
+   },
+   {
+    "clue": "An American football coach takes over AFC Richmond, an English soccer club, in this Apple comedy",
+    "response": "Ted Lasso",
+    "value": 600
+   },
+   {
+    "clue": "'Yes, Chef!': Carmy swaps fine dining for his family's Chicago sandwich shop in this series",
+    "response": "The Bear",
+    "value": 800
+   },
+   {
+    "clue": "Lumon workers split their office and home memories in this Apple thriller from Ben Stiller",
+    "response": "Severance",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "SEQUEL SEASON",
+  "clues": [
+   {
+    "clue": "Timothée Chalamet's Paul leads the Fremen against House Harkonnen in 'Part Two', the 2024 sequel to this film",
+    "response": "Dune",
+    "value": 200
+   },
+   {
+    "clue": "James Cameron returned to Pandora in 2022 with a sequel to this film, subtitled 'The Way of Water'",
+    "response": "Avatar",
+    "value": 400
+   },
+   {
+    "clue": "Anxiety, a frazzled orange newcomer, grabs the controls of Riley's mind in this 2024 Pixar hit",
+    "response": "Inside Out 2",
+    "value": 600
+   },
+   {
+    "clue": "Ryan Reynolds and Hugh Jackman bickered through this R-rated Marvel team-up of 2024",
+    "response": "Deadpool & Wolverine",
+    "value": 800
+   },
+   {
+    "clue": "Paul Mescal fought in the Colosseum in Ridley Scott's 2024 follow-up to this 2000 Best Picture",
+    "response": "Gladiator",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BEST IN SHOW BUSINESS",
+  "clues": [
+   {
+    "clue": "A laundromat owner leaps across the multiverse in this 2022 film that won seven Oscars",
+    "response": "Everything Everywhere All at Once",
+    "value": 200
+   },
+   {
+    "clue": "Frances McDormand's widow lives out of her van in this Chloé Zhao film, the big winner of 2021",
+    "response": "Nomadland",
+    "value": 400
+   },
+   {
+    "clue": "In 2022 this film about the hearing daughter of a deaf fishing family won it all for Apple TV+",
+    "response": "CODA",
+    "value": 600
+   },
+   {
+    "clue": "Mikey Madison played a Brooklyn dancer who weds a Russian oligarch's son in this 2025 winner",
+    "response": "Anora",
+    "value": 800
+   },
+   {
+    "clue": "Paul Thomas Anderson loosely based this 2026 winner on Thomas Pynchon's novel 'Vineland'",
+    "response": "One Battle After Another",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "DRAWN THIS WAY",
+  "clues": [
+   {
+    "clue": "'We Don't Talk About Bruno' came from this 2021 Disney film about the magical Madrigal family",
+    "response": "Encanto",
+    "value": 200
+   },
+   {
+    "clue": "The girl group Huntrix fights soul-stealing monsters with songs like 'Golden' in this 2025 Netflix hit",
+    "response": "KPop Demon Hunters",
+    "value": 400
+   },
+   {
+    "clue": "Miles Morales swings 'Across' this in the title of his 2023 animated sequel",
+    "response": "the Spider-Verse",
+    "value": 600
+   },
+   {
+    "clue": "Thirteen-year-old Mei poofs into a huge, fluffy panda of a certain color whenever she gets excited in this 2022 Pixar film",
+    "response": "Turning Red",
+    "value": 800
+   },
+   {
+    "clue": "Not a word is spoken in this Latvian film about a cat in a flood, an Oscar winner in 2025",
+    "response": "Flow",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "MAIN CHARACTER ENERGY",
+  "clues": [
+   {
+    "clue": "He played Peter Parker alongside two earlier Spider-Men in 2021's 'No Way Home'",
+    "response": "Tom Holland",
+    "value": 200
+   },
+   {
+    "clue": "He sang as a young chocolatier in 'Wonka', then as Bob Dylan a year later",
+    "response": "Timothée Chalamet",
+    "value": 400
+   },
+   {
+    "clue": "This Chilean-born star guarded Grogu in 'The Mandalorian' and Ellie in 'The Last of Us'",
+    "response": "Pedro Pascal",
+    "value": 600
+   },
+   {
+    "clue": "His drawl lingered long after he played the King in Baz Luhrmann's 2022 'Elvis'",
+    "response": "Austin Butler",
+    "value": 800
+   },
+   {
+    "clue": "Carmy on 'The Bear', he also played wrestler Kerry Von Erich in 'The Iron Claw'",
+    "response": "Jeremy Allen White",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "SPIN-OFF DOCTORS",
+  "clues": [
+   {
+    "clue": "Joel and Ellie cross a fungus-ravaged America in this HBO series based on a PlayStation game",
+    "response": "The Last of Us",
+    "value": 200
+   },
+   {
+    "clue": "Targaryens feud nearly two centuries before 'Game of Thrones' in this HBO prequel",
+    "response": "House of the Dragon",
+    "value": 400
+   },
+   {
+    "clue": "Amazon's hugely expensive 2022 prequel series is set thousands of years before this Tolkien trilogy",
+    "response": "The Lord of the Rings",
+    "value": 600
+   },
+   {
+    "clue": "Diego Luna's rebel spy earned two acclaimed seasons in this 'Rogue One' prequel on Disney+",
+    "response": "Andor",
+    "value": 800
+   },
+   {
+    "clue": "Walton Goggins is a noseless gunslinger called the Ghoul in this series set in a nuclear wasteland",
+    "response": "Fallout",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "SING OUT, LOUISE",
+  "clues": [
+   {
+    "clue": "Cynthia Erivo and Ariana Grande played Elphaba and Glinda in this two-part film of a Broadway smash",
+    "response": "Wicked",
+    "value": 200
+   },
+   {
+    "clue": "Steven Spielberg remade this Jets-and-Sharks musical in 2021, and Ariana DeBose won an Oscar as Anita",
+    "response": "West Side Story",
+    "value": 400
+   },
+   {
+    "clue": "Lady Gaga's Harley Quinn sings with Joaquin Phoenix in 'Folie à Deux', the 2024 sequel to this film",
+    "response": "Joker",
+    "value": 600
+   },
+   {
+    "clue": "Fantasia Barrino played Celie in the 2023 movie musical of this Alice Walker novel",
+    "response": "The Color Purple",
+    "value": 800
+   },
+   {
+    "clue": "Jacques Audiard's 2024 musical about a Mexican cartel boss led the Oscar field with 13 nominations",
+    "response": "Emilia Pérez",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "SERIES FINALE-LY",
+  "clues": [
+   {
+    "clue": "The Hawkins kids faced Vecna one last time when this Netflix hit ended on New Year's Eve 2025",
+    "response": "Stranger Things",
+    "value": 200
+   },
+   {
+    "clue": "The Roy siblings finally learned who would run Waystar Royco when this HBO drama ended in 2023",
+    "response": "Succession",
+    "value": 400
+   },
+   {
+    "clue": "Jimmy McGill's long slide into a crooked strip-mall lawyer ended in 2022 on this 'Breaking Bad' prequel",
+    "response": "Better Call Saul",
+    "value": 600
+   },
+   {
+    "clue": "Larry David said goodbye, again, when this HBO comedy wrapped after 12 seasons in 2024",
+    "response": "Curb Your Enthusiasm",
+    "value": 800
+   },
+   {
+    "clue": "Stephen Colbert signed off in May 2026 as CBS ended this nightly franchise after 33 years",
+    "response": "The Late Show",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "CAPES & COWLS",
+  "clues": [
+   {
+    "clue": "Robert Pattinson's brooding hero hunts the Riddler through a rain-soaked Gotham in this 2022 film",
+    "response": "The Batman",
+    "value": 200
+   },
+   {
+    "clue": "A grieving Avenger builds herself a sitcom world in the town of Westview in this first Marvel series for Disney+",
+    "response": "WandaVision",
+    "value": 400
+   },
+   {
+    "clue": "David Corenswet first wore the red cape in this 2025 James Gunn reboot",
+    "response": "Superman",
+    "value": 600
+   },
+   {
+    "clue": "Shuri steps up after King T'Challa's death in 'Wakanda Forever', the 2022 sequel to this film",
+    "response": "Black Panther",
+    "value": 800
+   },
+   {
+    "clue": "Colin Farrell vanished under prosthetics to play Gotham gangster Oz Cobb in this 2024 HBO series",
+    "response": "The Penguin",
+    "value": 1000
+   }
+  ]
+ }
+]

@@ -1,8 +1,9 @@
 /**
  * Add a wave of NEW categories to a deployed pack without touching what is there.
  *
- * Usage: node scripts/append-pack.cjs <source-dir> <fresh|easy>
- *   fresh reads n1-/n2-/nf- files, easy reads e1-/e2-/ef- files.
+ * Usage: node scripts/append-pack.cjs <source-dir> <fresh|easy|recent>
+ *   fresh and recent read n1-/n2-/nf- files, easy reads e1-/e2-/ef- files.
+ *   recent is the shelf of 2020s categories that Fresh boards draw one from each round.
  *
  * The compiled chunks in public/data are the source of truth for clues already
  * shipped (build-original-pack.cjs rebuilds a pack from scratch and is only for
@@ -17,9 +18,10 @@ const [SRC, PACK] = process.argv.slice(2);
 const PACKS = {
   fresh: { outDir: 'original', r1: 'n1-', r2: 'n2-', finals: 'nf-' },
   easy: { outDir: 'easy', r1: 'e1-', r2: 'e2-', finals: 'ef-' },
+  recent: { outDir: 'recent', r1: 'n1-', r2: 'n2-', finals: 'nf-' },
 };
 const cfg = PACKS[PACK];
-if (!SRC || !cfg) { console.error('usage: node scripts/append-pack.cjs <source-dir> <fresh|easy>'); process.exit(1); }
+if (!SRC || !cfg) { console.error('usage: node scripts/append-pack.cjs <source-dir> <fresh|easy|recent>'); process.exit(1); }
 
 const OUT = path.join(__dirname, '..', 'public', 'data', cfg.outDir);
 const R1 = [200, 400, 600, 800, 1000];
@@ -42,6 +44,7 @@ function board(cats, values) {
 }
 function append(dir, items, size) {
   const full = path.join(OUT, dir);
+  fs.mkdirSync(full, { recursive: true });
   const existing = fs.readdirSync(full).filter(f => /^chunk-\d+\.json$/.test(f)).length;
   let n = existing;
   for (let i = 0; i < items.length; i += size) {
@@ -54,6 +57,18 @@ function append(dir, items, size) {
 const r1 = shuffle(board(load(cfg.r1), R1));
 const r2 = shuffle(board(load(cfg.r2), R2));
 const finals = shuffle(load(cfg.finals).map(c => ({ name: c.name.trim(), clue: c.clue.trim(), response: String(c.response).trim() })));
+
+// A category name must be unique across every pack: the explainers and the
+// repeat memory are both keyed by name.
+const taken = new Set();
+const DATA = path.join(__dirname, '..', 'public', 'data');
+for (const p of ['original', 'easy', 'recent']) for (const d of ['jeopardy', 'double', 'final']) {
+  const dir = path.join(DATA, p, d);
+  if (!fs.existsSync(dir)) continue;
+  for (const f of fs.readdirSync(dir).filter(x => /^chunk-\d+\.json$/.test(x))) for (const c of JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'))) taken.add(c.name.trim().toUpperCase());
+}
+const clashes = [...r1, ...r2, ...finals].map(c => c.name).filter((n, i, all) => taken.has(n.toUpperCase()) || all.indexOf(n) !== i);
+if (clashes.length) { console.error(`These names already exist, rename them first:\n  ${clashes.join('\n  ')}`); process.exit(1); }
 
 const counts = { jeopardy: append('jeopardy', r1, 12), double: append('double', r2, 12), final: append('final', finals, 30) };
 const manifestPath = path.join(__dirname, '..', 'public', 'data', 'manifest.json');

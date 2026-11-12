@@ -1,0 +1,392 @@
+[
+ {
+  "name": "BACK FOR MORE",
+  "clues": [
+   {
+    "clue": "Harrison Ford cracked the whip one last time in 2023's 'The Dial of Destiny' as this archaeologist",
+    "response": "Indiana Jones",
+    "value": 200
+   },
+   {
+    "clue": "Michael Keaton's ghost with the most came back in this 2024 sequel that says his name twice",
+    "response": "Beetlejuice Beetlejuice",
+    "value": 400
+   },
+   {
+    "clue": "Lindsay Lohan and Jamie Lee Curtis swapped bodies again, 22 years later, in this 2025 sequel",
+    "response": "Freakier Friday",
+    "value": 600
+   },
+   {
+    "clue": "Glen Powell chased tornadoes across Oklahoma in this 2024 follow-up to a 1996 storm movie",
+    "response": "Twisters",
+    "value": 800
+   },
+   {
+    "clue": "Keanu Reeves and Carrie-Anne Moss returned as Neo and Trinity in 'Resurrections', the 2021 fourth film in this series",
+    "response": "The Matrix",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "FROM CONSOLE TO SCREEN",
+  "clues": [
+   {
+    "clue": "Jack Black played Steve in a 2025 hit movie built from this blocky building game",
+    "response": "Minecraft",
+    "value": 200
+   },
+   {
+    "clue": "Jim Carrey's Dr. Robotnik chases this speedy blue hedgehog through a string of hit films",
+    "response": "Sonic",
+    "value": 400
+   },
+   {
+    "clue": "Animatronic mascots stalk a night guard at a run-down pizzeria in this 2023 horror hit, 'Five Nights at' this",
+    "response": "Freddy's",
+    "value": 600
+   },
+   {
+    "clue": "Henry Cavill played monster hunter Geralt of Rivia in this Netflix fantasy series",
+    "response": "The Witcher",
+    "value": 800
+   },
+   {
+    "clue": "Tom Holland played treasure hunter Nathan Drake in this 2022 film of a PlayStation series",
+    "response": "Uncharted",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "THE REMAKE MACHINE",
+  "clues": [
+   {
+    "clue": "Halle Bailey sang 'Part of Your World' as Ariel in this 2023 remake",
+    "response": "The Little Mermaid",
+    "value": 200
+   },
+   {
+    "clue": "A lonely girl and a blue alien bonded again in Hawaii in this 2025 remake, a billion-dollar hit",
+    "response": "Lilo & Stitch",
+    "value": 400
+   },
+   {
+    "clue": "Donald Glover and Beyoncé voiced Simba and Nala in this 2019 computer-animated remake",
+    "response": "The Lion King",
+    "value": 600
+   },
+   {
+    "clue": "Rachel Zegler played this fairest-of-them-all princess in a 2025 remake",
+    "response": "Snow White",
+    "value": 800
+   },
+   {
+    "clue": "In 2020 this remake about a woman warrior of China skipped most theaters and went to Disney+",
+    "response": "Mulan",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HOUSE OF MOUSE, LATELY",
+  "clues": [
+   {
+    "clue": "A wayfinder and the demigod Maui set sail again in this 2024 sequel",
+    "response": "Moana 2",
+    "value": 200
+   },
+   {
+    "clue": "Rabbit cop Judy Hopps and fox Nick Wilde were partners again in this 2025 sequel",
+    "response": "Zootopia 2",
+    "value": 400
+   },
+   {
+    "clue": "A sea monster boy spends a summer on the Italian Riviera in this 2021 Pixar film",
+    "response": "Luca",
+    "value": 600
+   },
+   {
+    "clue": "Fire girl Ember and water guy Wade fall for each other in this 2023 Pixar film",
+    "response": "Elemental",
+    "value": 800
+   },
+   {
+    "clue": "Disney marked its 100th birthday in 2023 with this film about a girl named Asha and a fallen star",
+    "response": "Wish",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "COMFORT VIEWING",
+  "clues": [
+   {
+    "clue": "Quinta Brunson created and stars in this mockumentary about Philadelphia schoolteachers",
+    "response": "Abbott Elementary",
+    "value": 200
+   },
+   {
+    "clue": "Steve Martin, Martin Short and Selena Gomez solve crimes in their apartment house on 'Only Murders in' this",
+    "response": "the Building",
+    "value": 400
+   },
+   {
+    "clue": "Jean Smart plays Las Vegas comedy legend Deborah Vance on this series",
+    "response": "Hacks",
+    "value": 600
+   },
+   {
+    "clue": "Jason Segel is a grieving therapist and Harrison Ford his gruff colleague on this Apple comedy",
+    "response": "Shrinking",
+    "value": 800
+   },
+   {
+    "clue": "Kristen Bell's podcaster falls for Adam Brody's rabbi on this Netflix romantic comedy",
+    "response": "Nobody Wants This",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "COSTUMES AND COWBOYS",
+  "clues": [
+   {
+    "clue": "Kevin Costner played Montana rancher John Dutton on this hit",
+    "response": "Yellowstone",
+    "value": 200
+   },
+   {
+    "clue": "Claire Foy, Olivia Colman and Imelda Staunton each played Elizabeth II on this Netflix drama",
+    "response": "The Crown",
+    "value": 400
+   },
+   {
+    "clue": "Lady Whistledown narrates Regency romance in this Netflix hit from producer Shonda Rhimes",
+    "response": "Bridgerton",
+    "value": 600
+   },
+   {
+    "clue": "Zendaya won two Emmys as Rue, a teenager battling addiction, on this HBO drama",
+    "response": "Euphoria",
+    "value": 800
+   },
+   {
+    "clue": "Old money battles new in 1880s New York on this HBO drama from the creator of 'Downton Abbey'",
+    "response": "The Gilded Age",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "FRESH FACES OF FILM",
+  "clues": [
+   {
+    "clue": "She was MJ to Tom Holland's Spider-Man and Chani in 'Dune'",
+    "response": "Zendaya",
+    "value": 200
+   },
+   {
+    "clue": "The cocky pilot Hangman in 'Top Gun: Maverick', he became a leading man in 'Anyone but You'",
+    "response": "Glen Powell",
+    "value": 400
+   },
+   {
+    "clue": "This Englishwoman of 'Midsommar' and 'Little Women' played Jean Tatlock in 'Oppenheimer'",
+    "response": "Florence Pugh",
+    "value": 600
+   },
+   {
+    "clue": "She played chess prodigy Beth Harmon, then the title road warrior in 2024's 'Furiosa'",
+    "response": "Anya Taylor-Joy",
+    "value": 800
+   },
+   {
+    "clue": "This Australian played Elvis in 'Priscilla' and the Creature in 2025's 'Frankenstein'",
+    "response": "Jacob Elordi",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "WHICH STREAMER?",
+  "clues": [
+   {
+    "clue": "Launched in November 2019, this service is home to 'The Mandalorian' and decades of animated classics",
+    "response": "Disney+",
+    "value": 200
+   },
+   {
+    "clue": "This service named for a showy bird is where NBC moved 'The Office' in 2021",
+    "response": "Peacock",
+    "value": 400
+   },
+   {
+    "clue": "'Ted Lasso' and 'Severance' made this iPhone maker a force in television",
+    "response": "Apple",
+    "value": 600
+   },
+   {
+    "clue": "Amazon's streaming service, home of 'The Boys' and 'Reacher', goes by this name",
+    "response": "Prime Video",
+    "value": 800
+   },
+   {
+    "clue": "Owned by Fox, this free, ad-supported service streamed the Super Bowl in 2025",
+    "response": "Tubi",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "MULTIVERSE OF MARVEL",
+  "clues": [
+   {
+    "clue": "2019's 'Avengers:' this closed the Infinity Saga and became one of the biggest films ever",
+    "response": "Endgame",
+    "value": 200
+   },
+   {
+    "clue": "Tom Hiddleston's god of mischief got his own time-hopping Disney+ series in 2021",
+    "response": "Loki",
+    "value": 400
+   },
+   {
+    "clue": "Scarlett Johansson finally got a solo film in 2021 as this Russian-trained spy",
+    "response": "Black Widow",
+    "value": 600
+   },
+   {
+    "clue": "Simu Liu starred in 2021 as this master of kung fu, 'and the Legend of the Ten Rings'",
+    "response": "Shang-Chi",
+    "value": 800
+   },
+   {
+    "clue": "In 2025 Pedro Pascal and Vanessa Kirby led this superhero family's 'First Steps'",
+    "response": "the Fantastic Four",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BOUNTY HUNTERS AND JEDI",
+  "clues": [
+   {
+    "clue": "Fans nicknamed Grogu, the tiny green foundling, 'Baby' this",
+    "response": "Yoda",
+    "value": 200
+   },
+   {
+    "clue": "A helmeted bounty hunter named Din Djarin is the hero of this first live-action Star Wars series",
+    "response": "The Mandalorian",
+    "value": 400
+   },
+   {
+    "clue": "Ewan McGregor returned in 2022 as this exiled Jedi master in a series bearing his name",
+    "response": "Obi-Wan Kenobi",
+    "value": 600
+   },
+   {
+    "clue": "Temuera Morrison starred in 'The Book of' this bounty hunter who escaped the Sarlacc pit",
+    "response": "Boba Fett",
+    "value": 800
+   },
+   {
+    "clue": "Rosario Dawson plays this former apprentice of Anakin Skywalker in a 2023 series",
+    "response": "Ahsoka Tano",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "ALL HAIL QUEEN BEY",
+  "clues": [
+   {
+    "clue": "Before going solo, Beyoncé sang 'Say My Name' with this group",
+    "response": "Destiny's Child",
+    "value": 200
+   },
+   {
+    "clue": "She married this rapper and mogul in 2008",
+    "response": "Jay-Z",
+    "value": 400
+   },
+   {
+    "clue": "Her 2016 visual album, home of 'Formation', is named for this tart drink",
+    "response": "Lemonade",
+    "value": 600
+   },
+   {
+    "clue": "Her 2018 set at this desert festival near Palm Springs, filmed as 'Homecoming', made her its first Black woman headliner",
+    "response": "Coachella",
+    "value": 800
+   },
+   {
+    "clue": "At age nine, this daughter of hers became one of the youngest Grammy winners ever",
+    "response": "Blue Ivy Carter",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "FOND FAREWELLS",
+  "clues": [
+   {
+    "clue": "This Lakers legend died in a helicopter crash in January 2020",
+    "response": "Kobe Bryant",
+    "value": 200
+   },
+   {
+    "clue": "This 'Golden Girl' died on the last day of 2021, weeks before her 100th birthday",
+    "response": "Betty White",
+    "value": 400
+   },
+   {
+    "clue": "The sarcastic one among six New York pals on a 1990s sitcom, this actor died in 2023 at 54",
+    "response": "Matthew Perry",
+    "value": 600
+   },
+   {
+    "clue": "The 'Queen of Rock 'n' Roll', she sang 'Proud Mary' and died in Switzerland in 2023",
+    "response": "Tina Turner",
+    "value": 800
+   },
+   {
+    "clue": "The star of 'Black Panther', he died of cancer at 43 in 2020",
+    "response": "Chadwick Boseman",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "SUPER SUNDAYS, 2020 TO 2025",
+  "clues": [
+   {
+    "clue": "Kansas City lost Super Bowl LIX, 40-22, to this team from Philadelphia",
+    "response": "the Eagles",
+    "value": 200
+   },
+   {
+    "clue": "A loss in the 2025 Super Bowl ended the Chiefs' bid for this rhyming feat, a third straight championship",
+    "response": "a three-peat",
+    "value": 400
+   },
+   {
+    "clue": "In 2022 this Los Angeles team won the title in its own stadium",
+    "response": "the Rams",
+    "value": 600
+   },
+   {
+    "clue": "Once benched at halftime of a college title game, this quarterback was named MVP of Super Bowl LIX",
+    "response": "Jalen Hurts",
+    "value": 800
+   },
+   {
+    "clue": "MVP of Super Bowl LVI, this receiver caught the winning touchdown with under two minutes left",
+    "response": "Cooper Kupp",
+    "value": 1000
+   }
+  ]
+ }
+]

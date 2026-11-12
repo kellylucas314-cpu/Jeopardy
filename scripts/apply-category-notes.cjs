@@ -22,9 +22,10 @@ const check = process.argv.includes('--check');
 let total = 0, changed = 0;
 const missing = [];
 const used = new Set();
-for (const pack of ['original', 'easy']) {
+for (const pack of ['original', 'easy', 'recent']) {
   for (const round of ['jeopardy', 'double']) {
     const dir = path.join(ROOT, 'public', 'data', pack, round);
+    if (!fs.existsSync(dir)) continue;
     for (const file of fs.readdirSync(dir).filter(f => /^chunk-\d+\.json$/.test(f)).sort()) {
       const full = path.join(dir, file);
       const before = fs.readFileSync(full, 'utf8');
