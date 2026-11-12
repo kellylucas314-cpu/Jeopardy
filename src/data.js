@@ -4,6 +4,8 @@
  * Two packs ship with the game, both written for it:
  *  - 'fresh' → data/original/…  Original clues (default).
  *  - 'easy'  → data/easy/…      Gentler original clues, nostalgia-friendly.
+ * A third shelf, data/recent/…, holds categories about the 2020s. Nobody picks
+ * it: every Fresh board takes one category from it per round (see recentInfo).
  * (The old Deep Archive of televised clues is no longer served; it lives in
  * archive-data/ only so scripts/check-new-clues.cjs can guard against copying.)
  *
@@ -85,7 +87,22 @@ async function packInfoFor(pack, dir) {
   if (pack === 'easy' && m.easy && m.easy[dir] > 0) {
     return { pack, base: 'easy/', dir, total: m.easy[dir] };
   }
+  if (pack === 'recent' && m.recent && m.recent[dir] > 0) {
+    return { pack, base: 'recent/', dir, total: m.recent[dir] };
+  }
   return { pack: 'fresh', base: 'original/', dir, total: m.original[dir] };
+}
+
+/**
+ * The recent shelf (public/data/recent): categories about the 2020s. It is not
+ * a pack anyone picks; Fresh boards take one category from it each round so the
+ * game always has something current. Null when the shelf has nothing for `dir`.
+ */
+const RECENT_PER_ROUND = 1;
+const RECENT_FINAL_ODDS = 0.15; // roughly one Fresh game in seven ends on a recent final
+async function recentInfo(dir) {
+  const m = await loadManifest();
+  return m.recent && m.recent[dir] > 0 ? { pack: 'recent', base: 'recent/', dir, total: m.recent[dir] } : null;
 }
 
 /** Pack info for the active pack and a round number (1, 2, or 'final'). */
@@ -264,6 +281,10 @@ export async function loadRoundCategories(round, seen = new Set(), opts = {}) {
       drawn.push(...(await drawCategories(info, entry.count, seen)));
     }
   }
+  else if (currentPack() === 'fresh') {
+    const recent = await recentInfo(dir);
+    if (recent) drawn.push(...(await drawCategories(recent, Math.min(RECENT_PER_ROUND, want), seen)));
+  }
   if (drawn.length < want) {
     const info = await packInfo(round);
     drawn.push(...(await drawCategories(info, want - drawn.length, seen)));
@@ -276,7 +297,9 @@ export async function loadRoundCategories(round, seen = new Set(), opts = {}) {
  * Load a random Final clue, avoiding ones already played on this device.
  */
 export async function loadFinalClue(seen = new Set()) {
-  const { pack, base, dir, total } = await packInfo('final');
+  let info = await packInfo('final');
+  if (info.pack === 'fresh' && Math.random() < RECENT_FINAL_ODDS) info = (await recentInfo('final')) || info;
+  const { pack, base, dir, total } = info;
   const playedKey = `${pack}-final`;
   const played = playedSet(playedKey);
 

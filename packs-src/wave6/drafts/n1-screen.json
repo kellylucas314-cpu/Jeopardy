@@ -63,7 +63,7 @@
   "name": "SEQUEL SEASON",
   "clues": [
    {
-    "clue": "Paul Atreides learns to ride a giant sandworm in 'Part Two', the 2024 sequel to this desert-planet epic",
+    "clue": "Timothée Chalamet's Paul leads the Fremen against House Harkonnen in 'Part Two', the 2024 sequel to this film",
     "response": "Dune",
     "value": 200
    },
@@ -138,43 +138,13 @@
     "value": 600
    },
    {
-    "clue": "Thirteen-year-old Mei turns into a giant red panda in this 2022 Pixar film set in Toronto",
+    "clue": "Thirteen-year-old Mei poofs into a giant panda of a certain color whenever she gets excited in this 2022 Pixar film",
     "response": "Turning Red",
     "value": 800
    },
    {
     "clue": "Not a word is spoken in this Latvian film about a cat in a flood, an Oscar winner in 2025",
     "response": "Flow",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "UNSCRIPTED, ALLEGEDLY",
-  "clues": [
-   {
-    "clue": "Singles get engaged through a wall, sight unseen, in the 'pods' of this Netflix dating show",
-    "response": "Love Is Blind",
-    "value": 200
-   },
-   {
-    "clue": "Alan Cumming hosts as players in a Scottish castle hunt for the title backstabbers on this show",
-    "response": "The Traitors",
-    "value": 400
-   },
-   {
-    "clue": "In 2023, 72-year-old Gerry Turner handed out the roses as the first man with this ABC title",
-    "response": "The Golden Bachelor",
-    "value": 600
-   },
-   {
-    "clue": "MrBeast gave 1,000 contestants a shot at $5 million on this Amazon competition that began in 2024",
-    "response": "Beast Games",
-    "value": 800
-   },
-   {
-    "clue": "Ronald Gladden had no idea everyone else in court was an actor on this 2023 mock documentary",
-    "response": "Jury Duty",
     "value": 1000
    }
   ]
@@ -293,7 +263,7 @@
     "value": 800
    },
    {
-    "clue": "Stephen Colbert signed off in May 2026 as CBS ended this talk-show franchise after 33 years",
+    "clue": "Stephen Colbert signed off in May 2026 as CBS ended this nightly franchise after 33 years",
     "response": "The Late Show",
     "value": 1000
    }
@@ -308,7 +278,7 @@
     "value": 200
    },
    {
-    "clue": "Wanda builds herself a sitcom world in the town of Westview in this first Marvel series for Disney+",
+    "clue": "A grieving Avenger builds herself a sitcom world in the town of Westview in this first Marvel series for Disney+",
     "response": "WandaVision",
     "value": 400
    },
@@ -325,36 +295,6 @@
    {
     "clue": "Colin Farrell vanished under prosthetics to play Gotham gangster Oz Cobb in this 2024 HBO series",
     "response": "The Penguin",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "TRUE-ISH STORIES",
-  "clues": [
-   {
-    "clue": "His nephew Jaafar plays the King of Pop in this 2026 biopic titled with just a first name",
-    "response": "Michael",
-    "value": 200
-   },
-   {
-    "clue": "Matt Damon and Ben Affleck showed how Nike signed a rookie Michael Jordan in this 2023 film",
-    "response": "Air",
-    "value": 400
-   },
-   {
-    "clue": "Amanda Seyfried played Theranos founder Elizabeth Holmes in this 2022 Hulu series",
-    "response": "The Dropout",
-    "value": 600
-   },
-   {
-    "clue": "James Mangold directed this 2024 film about Bob Dylan plugging in at the Newport Folk Festival",
-    "response": "A Complete Unknown",
-    "value": 800
-   },
-   {
-    "clue": "A Scottish comedian turned his own stalking ordeal into this 2024 Netflix series with a cuddly title",
-    "response": "Baby Reindeer",
     "value": 1000
    }
   ]

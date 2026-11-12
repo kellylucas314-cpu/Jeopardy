@@ -83,8 +83,8 @@
     "value": 800
    },
    {
-    "clue": "Tampa rapper Doechii won the 2025 Best Rap Album Grammy for this mixtape with a swamp reptile in its title",
-    "response": "Alligator Bites Never Heal",
+    "clue": "Ariana Grande named her 2024 album 'Eternal' this, after a film about a spotless mind",
+    "response": "Sunshine",
     "value": 1000
    }
   ]
@@ -123,7 +123,7 @@
   "name": "BOOT SCOOTIN' CROSSOVER",
   "clues": [
    {
-    "clue": "Beyoncé went country in 2024 with this album that pairs 'Cowboy' with her married name",
+    "clue": "Beyoncé went country in 2024 with this album whose title pairs a ranch hand with her married name",
     "response": "Cowboy Carter",
     "value": 200
    },
@@ -143,8 +143,8 @@
     "value": 800
    },
    {
-    "clue": "Ella Langley spent months at No. 1 in 2026 with a hit about 'Choosin'' this state",
-    "response": "Texas",
+    "clue": "Zach Bryan and Kacey Musgraves went to No. 1 in 2023 with a duet titled 'I Remember' this",
+    "response": "Everything",
     "value": 1000
    }
   ]
@@ -173,8 +173,8 @@
     "value": 800
    },
    {
-    "clue": "A Netflix series showed how this six-member 'global girl group' of 'Gnarly' fame was assembled",
-    "response": "Katseye",
+    "clue": "Jung Kook, the youngest member of BTS, sang 'Dreamers' at the opening of this 2022 sporting event in Qatar",
+    "response": "the World Cup",
     "value": 1000
    }
   ]
@@ -203,8 +203,8 @@
     "value": 800
    },
    {
-    "clue": "Tom DeLonge rejoined this 'All the Small Things' pop-punk trio for a reunion tour in 2023",
-    "response": "Blink-182",
+    "clue": "Adele spent many 'Weekends' from 2022 to 2024 singing at the Colosseum of this Las Vegas hotel",
+    "response": "Caesars Palace",
     "value": 1000
    }
   ]
@@ -240,36 +240,6 @@
   ]
  },
  {
-  "name": "IT CAME FROM THE FEED",
-  "clues": [
-   {
-    "clue": "Kate Bush's 1985 'Running Up That Hill' became a global hit in 2022 thanks to this Netflix series",
-    "response": "Stranger Things",
-    "value": 200
-   },
-   {
-    "clue": "TikTok went overboard in early 2021 for 'Wellerman', an example of this kind of sailors' work tune",
-    "response": "a sea shanty",
-    "value": 400
-   },
-   {
-    "clue": "Lil Nas X slid down a pole to hell in the video for this 2021 No. 1 subtitled 'Call Me by Your Name'",
-    "response": "Montero",
-    "value": 600
-   },
-   {
-    "clue": "This Glass Animals sleeper took a record 59 weeks to climb to No. 1, finally arriving in 2022",
-    "response": "Heat Waves",
-    "value": 800
-   },
-   {
-    "clue": "Sophie Ellis-Bextor's 2001 'Murder on the Dancefloor' charted again after this 2023 Barry Keoghan film",
-    "response": "Saltburn",
-    "value": 1000
-   }
-  ]
- },
- {
   "name": "BARS & BEEFS",
   "clues": [
    {
@@ -288,8 +258,8 @@
     "value": 600
    },
    {
-    "clue": "Travis Scott named his chart-topping 2023 album for this kind of imaginary perfect place",
-    "response": "Utopia",
+    "clue": "In 2023 Missy Elliott became the first female rapper inducted into this Cleveland institution",
+    "response": "the Rock and Roll Hall of Fame",
     "value": 800
    },
    {
@@ -323,8 +293,8 @@
     "value": 800
    },
    {
-    "clue": "Linkin Park returned in 2024 with this new co-lead singer",
-    "response": "Emily Armstrong",
+    "clue": "Weeks before he died in 2025, Ozzy Osbourne played a farewell show in Birmingham with this band",
+    "response": "Black Sabbath",
     "value": 1000
    }
   ]

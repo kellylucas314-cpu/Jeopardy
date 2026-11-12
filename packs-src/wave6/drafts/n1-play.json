@@ -3,8 +3,8 @@
   "name": "PARIS IS FOR WINNERS",
   "clues": [
    {
-    "clue": "Instead of a stadium march, the 2024 opening ceremony sent athletes by boat down this river",
-    "response": "the Seine",
+    "clue": "LeBron James, Stephen Curry and Kevin Durant led the United States to gold in this sport",
+    "response": "basketball",
     "value": 200
    },
    {
@@ -13,13 +13,13 @@
     "value": 400
    },
    {
-    "clue": "Bespectacled pommel horse hero Stephen Nedoroscik was likened to this mild-mannered Superman alter ego",
-    "response": "Clark Kent",
+    "clue": "Instead of a stadium march, the 2024 opening ceremony sent athletes by boat down this river",
+    "response": "the Seine",
     "value": 600
    },
    {
-    "clue": "Australia's Rachael Gunn, known as Raygun, became a meme in the Olympic debut of this dance sport",
-    "response": "breaking",
+    "clue": "Beach volleyball was played in a temporary stadium at the foot of this landmark",
+    "response": "the Eiffel Tower",
     "value": 800
    },
    {
@@ -253,8 +253,8 @@
     "value": 400
    },
    {
-    "clue": "This Georgia team's dancing, stilt-walking 'Banana Ball' filled major league stadiums",
-    "response": "the Savannah Bananas",
+    "clue": "Flag football and this bat-and-ball sport beloved in India were added to the program for the 2028 Olympics",
+    "response": "cricket",
     "value": 600
    },
    {
@@ -270,7 +270,7 @@
   ]
  },
  {
-  "name": "FIVE-RING CIRCUS",
+  "name": "GAMES OF THE DECADE",
   "clues": [
    {
     "clue": "Delayed a year by the pandemic, the 2020 Summer Games were held in this city in 2021, without fans",
@@ -293,8 +293,8 @@
     "value": 800
    },
    {
-    "clue": "Stoats named Tina and Milo were the mascots of the 2026 Winter Games, shared by Milan and this Alpine resort",
-    "response": "Cortina d'Ampezzo",
+    "clue": "The 2026 Winter Games added this sport of climbing a snowy slope under your own power and racing back down, nicknamed 'skimo'",
+    "response": "ski mountaineering",
     "value": 1000
    }
   ]
@@ -325,36 +325,6 @@
    {
     "clue": "Olympic gold in Paris earned this New Zealander the final point she needed for the LPGA Hall of Fame",
     "response": "Lydia Ko",
-    "value": 1000
-   }
-  ]
- },
- {
-  "name": "YOUR MOVE",
-  "clues": [
-   {
-    "clue": "Sales of this ancient board game soared after Netflix's 'The Queen's Gambit'",
-    "response": "chess",
-    "value": 200
-   },
-   {
-    "clue": "Solvers sort 16 words into four hidden groups in this New York Times puzzle launched in 2023",
-    "response": "Connections",
-    "value": 400
-   },
-   {
-    "clue": "Players build an aviary of egg-laying, card-drawing birds in this hit board game by Elizabeth Hargrave",
-    "response": "Wingspan",
-    "value": 600
-   },
-   {
-    "clue": "Mickey, Elsa and Stitch appear as 'glimmers' in this Disney trading card game launched in 2023",
-    "response": "Lorcana",
-    "value": 800
-   },
-   {
-    "clue": "In 2022 this Norwegian world champion quit a tournament and accused young Hans Niemann of cheating",
-    "response": "Magnus Carlsen",
     "value": 1000
    }
   ]

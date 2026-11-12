@@ -25,7 +25,7 @@ const fresh = files.flatMap(f => rows(JSON.parse(fs.readFileSync(f, 'utf8')), pa
 const newNames = new Set(fresh.map(r => r.cat.toUpperCase()));
 
 let old = [];
-for (const [p, label] of [['original', 'Fresh'], ['easy', 'Easy']]) for (const d of ['jeopardy', 'double', 'final']) old.push(...rows(read(path.join(DATA, p, d)), `${label} ${d}`));
+for (const [p, label] of [['original', 'Fresh'], ['easy', 'Easy'], ['recent', 'Recent']]) for (const d of ['jeopardy', 'double', 'final']) old.push(...rows(read(path.join(DATA, p, d)), `${label} ${d}`));
 const camp = JSON.parse(fs.readFileSync(path.join(DATA, 'campaign', 'chapters.json'), 'utf8'));
 for (const ch of camp.chapters) old.push(...rows([ch.era, ch.chapter, ch.final].filter(Boolean), 'Campaign'));
 old = old.filter(r => !newNames.has(String(r.cat).toUpperCase()));

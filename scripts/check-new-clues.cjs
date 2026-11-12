@@ -89,7 +89,7 @@ for (const f of files) { try { for (const it of JSON.parse(fs.readFileSync(f, 'u
 // ——— existing material ———
 const ours = [];
 const ourNames = new Map();
-for (const [pack, label] of [['original', 'Fresh'], ['easy', 'Easy Breezy']]) {
+for (const [pack, label] of [['original', 'Fresh'], ['easy', 'Easy Breezy'], ['recent', 'Recent']]) {
   for (const dir of ['jeopardy', 'double', 'final']) {
     const items = readChunks(path.join(DATA, pack, dir));
     const kept = items.filter(it => !inputNames.has(String(it.name).trim().toUpperCase()));
