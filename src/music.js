@@ -1,12 +1,13 @@
 /**
- * The music: Kelly's own recordings (Nov 12 2026). Four pieces take turns on the title and
- * the "Who's playing?" table ("Napoleon's Little Loop", its second take, "Question and
- * Answer" and an untitled evening recording); "One Note Quiz" plays while a final answer is
- * weighed. Nothing plays on the board.
+ * The music: Kelly's own recordings (Nov 12 2026). Three pieces take turns on the title and
+ * the "Who's playing?" table, "One Note Quiz" always first, then "Question and Answer" and
+ * an untitled evening recording. "One Note Quiz" also plays while a final answer is weighed.
+ * Nothing plays on the board.
  *
  * Her brief: "not overwhelming.. not annoying... subtle", with "a clear button to turn it
- * off". So the files are mastered quiet (about -26 LUFS, well under the sound effects),
- * each one eases in, and there is a breath between them. The level is baked into the files
+ * off"; and for One Note Quiz, "slow it down and make it quiet". So the files are mastered
+ * quiet (about -28 LUFS, One Note Quiz at -31 and 12% slower than she recorded it), each
+ * one eases in, and there is a breath between them. The level is baked into the files
  * because an iPhone ignores a page's volume setting.
  *
  * Browsers only let sound start after a tap or a key, so play() before that is remembered
@@ -14,14 +15,10 @@
  * until the music actually starts.
  */
 
+const QUIZ = './assets/music/one-note-quiz.mp3';
 const TRACKS = {
-  menu: [
-    './assets/music/little-loop.mp3',
-    './assets/music/little-loop-2.mp3',
-    './assets/music/question-and-answer.mp3',
-    './assets/music/evening-recording.mp3',
-  ],
-  think: ['./assets/music/one-note-quiz.mp3'],
+  menu: [QUIZ, './assets/music/question-and-answer.mp3', './assets/music/evening-recording.mp3'],
+  think: [QUIZ],
 };
 const EASE_IN = 1.8;  // seconds from silence to the (quiet) full level
 const BREATH = 1400;  // ms of rest between one piece and the next
