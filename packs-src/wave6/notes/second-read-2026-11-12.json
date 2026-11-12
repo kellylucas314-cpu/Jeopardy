@@ -1,0 +1,19 @@
+{
+  "about": "Second read of the recent shelf, Nov 12 2026. Wording fixes only: present-tense claims that would go stale are put in the past with a year, and a few loose details are tightened. 'why' says what was wrong.",
+  "edits": [
+    {"old": "Thirteen-year-old Mei poofs into a giant panda of a certain color whenever she gets excited in this 2022 Pixar film", "new": "Thirteen-year-old Mei poofs into a huge, fluffy panda of a certain color whenever she gets excited in this 2022 Pixar film", "why": "A giant panda is a different animal from a red panda."},
+    {"old": "Sam Altman runs this San Francisco company whose chatbot kicked off the AI boom", "new": "Sam Altman co-founded this San Francisco company whose chatbot kicked off the AI boom in 2022", "why": "Present tense goes stale."},
+    {"old": "This South African-born billionaire runs both Tesla and SpaceX", "new": "Born in South Africa, he founded SpaceX in 2002 and became Tesla's chief executive in 2008", "why": "Present tense goes stale."},
+    {"old": "Since 2022 William and Catherine have been the Prince and Princess of this", "new": "In 2022 William and Catherine became the Prince and Princess of this", "why": "Present tense goes stale."},
+    {"old": "This rapper and mogul has been her husband since 2008", "new": "She married this rapper and mogul in 2008", "why": "Present tense goes stale."},
+    {"old": "Re-elected in 2022, he has been France's president since 2017", "new": "First elected in 2017 at age 39, he won a second term as France's president in 2022", "why": "Present tense goes stale; his term ends in 2027."},
+    {"old": "India's prime minister since 2014, he won a third term in 2024", "new": "He became India's prime minister in 2014 and won a third straight term in 2024", "why": "Present tense goes stale."},
+    {"old": "ByteDance is the Chinese parent of this short-video app that boomed during the 2020 lockdowns", "new": "China's ByteDance built this short-video app that boomed during the 2020 lockdowns", "why": "Ownership is changing; who built it will not."},
+    {"old": "iRobot makes this disc-shaped robot vacuum", "new": "iRobot introduced this disc-shaped robot vacuum in 2002", "why": "Present tense goes stale."},
+    {"old": "Elton John returned to the top ten in 2021 with 'Cold Heart', a duet with this 'Levitating' singer", "new": "Elton John scored his biggest hit in decades with 2021's 'Cold Heart', a duet with this 'Levitating' singer", "why": "The top-ten date was true in Britain but 2022 in America."},
+    {"old": "Epic Universe, which opened in Orlando in May 2025, belongs to this movie studio's resort", "new": "This movie studio's Orlando resort opened a whole new theme park, home to a land of classic monsters, in May 2025", "why": "The park's name gave the answer away."},
+    {"old": "In 2022 searchers found this ship of Ernest Shackleton's, crushed by Antarctic ice in 1915, two miles under the Weddell Sea", "new": "In 2022 searchers found this ship of Ernest Shackleton's, crushed by Antarctic ice in 1915, nearly two miles down in the Weddell Sea", "why": "The wreck lies at 3,008 meters, a little under two miles."},
+    {"old": "In December 2020 Margaret Keenan, 90, of England became the first person outside a trial to receive one of these", "new": "In December 2020 in Coventry, England, 90-year-old Margaret Keenan became the first person outside a trial to receive one of these", "why": "She is from Northern Ireland; the jab was given in Coventry."},
+    {"old": "When Finland joined NATO in 2023, the alliance's land border with this country more than doubled", "new": "When Finland joined NATO in 2023, the alliance's land border with this country roughly doubled", "why": "Roughly doubled is the safer wording."}
+  ]
+}

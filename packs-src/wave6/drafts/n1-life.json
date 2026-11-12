@@ -48,7 +48,7 @@
     "value": 600
    },
    {
-    "clue": "ByteDance is the Chinese parent of this short-video app that boomed during the 2020 lockdowns",
+    "clue": "China's ByteDance built this short-video app that boomed during the 2020 lockdowns",
     "response": "TikTok",
     "value": 800
    },
@@ -63,7 +63,7 @@
   "name": "ARTIFICIALLY INTELLIGENT",
   "clues": [
    {
-    "clue": "Sam Altman runs this San Francisco company whose chatbot kicked off the AI boom",
+    "clue": "Sam Altman co-founded this San Francisco company whose chatbot kicked off the AI boom in 2022",
     "response": "OpenAI",
     "value": 200
    },

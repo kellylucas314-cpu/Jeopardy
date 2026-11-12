@@ -218,23 +218,23 @@
     "value": 400
    },
    {
+    "clue": "This movie studio's Orlando resort opened a whole new theme park, home to a land of classic monsters, in May 2025",
+    "response": "Universal",
+    "value": 800
+   },
+   {
     "clue": "Bowser's castle looms over this land that opened in Hollywood in 2023",
     "response": "Super Nintendo World",
-    "value": 800
+    "value": 1200
    },
    {
     "clue": "Epcot's indoor coaster 'Cosmic Rewind', opened in 2022, stars this Marvel team",
     "response": "the Guardians of the Galaxy",
-    "value": 1200
+    "value": 1600
    },
    {
     "clue": "Riders board glowing motorbikes on a Magic Kingdom coaster themed to this 1982 Disney film",
     "response": "Tron",
-    "value": 1600
-   },
-   {
-    "clue": "Epic Universe, which opened in Orlando in May 2025, belongs to this movie studio's resort",
-    "response": "Universal",
     "value": 2000
    }
   ]

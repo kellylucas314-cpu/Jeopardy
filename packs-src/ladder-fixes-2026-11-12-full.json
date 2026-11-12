@@ -1,0 +1,33 @@
+{
+  "about": "Full read of every category, Nov 12 2026 (the first pass read 346; this one read the rest, plus the recent shelf). Each entry reorders one category's five clues so they climb; values stay on their rows and no clue text changes. 'order' lists the old row numbers in their new order.",
+  "fixes": [
+    {
+      "pack": "recent",
+      "round": "jeopardy",
+      "name": "SMART STUFF",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "The Roomba clue is easier than the Shark Tank doorbell.",
+      "done": "Siri|Alexa|AirPods|the Roomba|Ring"
+    },
+    {
+      "pack": "recent",
+      "round": "double",
+      "name": "MUST BE THIS TALL",
+      "order": [
+        1,
+        5,
+        2,
+        3,
+        4
+      ],
+      "why": "The Universal clue is the second easiest, not the hardest.",
+      "done": "Splash Mountain|Universal|Super Nintendo World|the Guardians of the Galaxy|Tron"
+    }
+  ]
+}

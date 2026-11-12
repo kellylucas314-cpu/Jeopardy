@@ -9,11 +9,11 @@ Merriam-Webster's 2025 word, this four-letter term for pig feed came to mean low
 In 2023 Elon Musk replaced Twitter's name and blue bird with this single letter => X
 Launched in late 2022, this OpenAI chatbot reached 100 million users in about two months => ChatGPT
 Meta launched this text-based rival to Twitter, tied to Instagram accounts, in July 2023 => Threads
-ByteDance is the Chinese parent of this short-video app that boomed during the 2020 lockdowns => TikTok
+China's ByteDance built this short-video app that boomed during the 2020 lockdowns => TikTok
 A butterfly is the logo of this decentralized social network that began as a project inside Twitter => Bluesky
 
 ## ARTIFICIALLY INTELLIGENT | The AI boom
-Sam Altman runs this San Francisco company whose chatbot kicked off the AI boom => OpenAI
+Sam Altman co-founded this San Francisco company whose chatbot kicked off the AI boom in 2022 => OpenAI
 When a chatbot confidently invents facts, it is said to do this, like a person seeing things => hallucinate
 Demand for AI chips made this company, led by leather-jacketed Jensen Huang, one of the world's most valuable => Nvidia
 Former OpenAI researchers founded this company in 2021; its AI models are named Claude => Anthropic

@@ -93,7 +93,7 @@
   "name": "THE CORNER OFFICE, SILICON VALLEY",
   "clues": [
    {
-    "clue": "This South African-born billionaire runs both Tesla and SpaceX",
+    "clue": "Born in South Africa, he founded SpaceX in 2002 and became Tesla's chief executive in 2008",
     "response": "Elon Musk",
     "value": 200
    },
@@ -138,13 +138,13 @@
     "value": 600
    },
    {
-    "clue": "Turned down on 'Shark Tank', this video doorbell company was bought by Amazon in 2018",
-    "response": "Ring",
+    "clue": "iRobot introduced this disc-shaped robot vacuum in 2002",
+    "response": "the Roomba",
     "value": 800
    },
    {
-    "clue": "iRobot makes this disc-shaped robot vacuum",
-    "response": "the Roomba",
+    "clue": "Turned down on 'Shark Tank', this video doorbell company was bought by Amazon in 2018",
+    "response": "Ring",
     "value": 1000
    }
   ]
@@ -258,7 +258,7 @@
     "value": 600
    },
    {
-    "clue": "Since 2022 William and Catherine have been the Prince and Princess of this",
+    "clue": "In 2022 William and Catherine became the Prince and Princess of this",
     "response": "Wales",
     "value": 800
    },
@@ -363,7 +363,7 @@
   "name": "WHO RUNS THE WORLD",
   "clues": [
    {
-    "clue": "Re-elected in 2022, he has been France's president since 2017",
+    "clue": "First elected in 2017 at age 39, he won a second term as France's president in 2022",
     "response": "Emmanuel Macron",
     "value": 200
    },
@@ -373,7 +373,7 @@
     "value": 400
    },
    {
-    "clue": "India's prime minister since 2014, he won a third term in 2024",
+    "clue": "He became India's prime minister in 2014 and won a third straight term in 2024",
     "response": "Narendra Modi",
     "value": 600
    },
