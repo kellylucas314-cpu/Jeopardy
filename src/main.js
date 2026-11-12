@@ -924,11 +924,31 @@ function renderSetup() {
       turnTo(to, first ? 0.8 : between(0.55, 0.85), () => idle());
     }, hold);
   };
+  // The shove has sound (Kelly, Nov 12: "when he pushes the thing off the chair i think it should
+  // have a sound effect"). Each one fires as the film passes its frame, a touch early so it is
+  // heard on the frame: his arm starts across at 2.8 s and meets the card at 2.92 s, the card's
+  // corner finds the floor at 3.40 s, the crown lands at 3.54 s. Tied to the film's own clock, so
+  // a film that stalls keeps its sound in step, and a moment the page missed (a hidden tab) is
+  // let go, not played late.
+  const CUES = [[2.78, sounds.playShove], [3.37, sounds.playCardLand], [3.51, sounds.playCrownLand]];
+  let cue = 0;
+  let cueRaf = 0;
+  const followFilm = () => {
+    cueRaf = 0;
+    if (!film.isConnected || film.paused || film.ended) return;
+    const t = film.currentTime;
+    while (cue < CUES.length && t >= CUES[cue][0]) {
+      if (t - CUES[cue][0] < 0.2) CUES[cue][1]();
+      cue += 1;
+    }
+    if (cue < CUES.length) cueRaf = requestAnimationFrame(followFilm);
+  };
   const roll = () => {
     if (!film || calm || navigator.connection?.saveData) return;
     settle();
     film.poster = './assets/title/throne-first.webp';
     film.currentTime = 0;
+    cue = 0;
     film.play()?.catch(() => { film.removeAttribute('src'); film.load(); still(); });
   };
   if (film) {
@@ -938,6 +958,7 @@ function renderSetup() {
     // the fidget is fetched while the film plays, so it is ready the moment the film ends
     film.addEventListener('playing', () => { if (fidget && !navigator.connection?.saveData) fidget.preload = 'auto'; }, { once: true });
     film.addEventListener('ended', () => { if (fidget) fidget.preload = 'auto'; idle(true); });
+    film.addEventListener('playing', () => { cancelAnimationFrame(cueRaf); cueRaf = requestAnimationFrame(followFilm); });
   }
 
   // Two steps, one page: the title, then the table. Nothing is re-rendered, so every choice survives a trip back.
@@ -957,9 +978,11 @@ function renderSetup() {
       warmCast();
       document.getElementById('table-title')?.focus({ preventScroll: true });
     } else {
-      // back at the title: pick the film up where it stopped, or let him fidget again
+      // back at the title: pick the film up where it stopped, or let him fidget again. After a
+      // game the page opens on the table, so the film has not run yet: he makes his entrance now.
       if (film?.ended) idle(true);
       else if (film && film.paused && film.currentTime > 0 && !calm) film.play()?.catch(() => {});
+      else if (film && film.paused) roll();
       document.getElementById('btn-play')?.focus({ preventScroll: true });
     }
   };
