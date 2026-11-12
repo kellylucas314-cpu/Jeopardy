@@ -1296,7 +1296,6 @@ input { font-family: var(--font-ui); }
 }
 .final-answer-input:focus { border-color: var(--jade); }
 
-.think-music-note { font-size: 0.85rem; color: var(--cream-faint); }
 
 /* Pass-the-device cover for private Final entries */
 .pass-card {
@@ -3762,22 +3761,34 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 .setup-hero .hall-of-fame { margin: 24px 0 0; }
 .setup-hero .setup-footer { justify-content: flex-start; flex-wrap: wrap; margin: 26px 0 0; }
 
-/* — Step two: the table — */
+/* — Step two: the table (rebuilt Nov 12 2026). Kelly: "i think we can improve the look of
+     this page". It read as a settings form: a tray holding a panel holding twelve pale tiles,
+     with the player a small pill in a corner. Now the cast stands on the paper in a hall of
+     niches, each arch in the character's own tone. The figure under the pointer greets you,
+     and the one you hold stands in a honey arch. Your pick stands big at the head of the right
+     column over your name, with the game and the way in under it. One tray is left on the
+     page: the game. — */
 .table {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(350px, 0.6fr);
-  grid-template-rows: auto 1fr;
-  gap: 14px clamp(16px, 2vw, 28px);
+  grid-template-columns: minmax(0, 1fr) clamp(320px, 27vw, 390px);
+  align-items: start;
+  align-content: center;
+  gap: clamp(22px, 3.2vw, 56px);
   min-height: 100%;
-  max-width: 1320px;
+  max-width: 1560px;
   margin: 0 auto;
 }
-.table-cast,
-.table-game { padding: 14px; border-radius: 40px; background: var(--tray); }
-.table-cast { grid-row: 1 / span 2; display: flex; flex-direction: column; min-width: 0; }
-.table-game { grid-column: 2; min-width: 0; }
-.table-go { grid-column: 2; align-self: start; }
-.table-go .btn-start { width: 100%; min-height: 62px; margin: 0; font-size: 1.12rem; }
+.table-cast { display: flex; flex-direction: column; min-width: 0; }
+.table-side { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.table-game { min-width: 0; padding: 12px; border-radius: 36px; background: var(--tray); }
+.table-go .btn-start { width: 100%; min-height: 64px; margin: 0; font-size: 1.14rem; }
+#player-names { container-type: inline-size; }
+@media (min-width: 1000px) {
+  /* a big window gives the hall more room, so the figures grow with it */
+  .setup-screen[data-step="table"] { width: min(1720px, 100%); }
+  /* a short window: the way in stays in reach while the column scrolls under it */
+  .table-go { position: sticky; z-index: 3; bottom: 0; margin-top: -14px; padding-top: 14px; background: linear-gradient(rgba(255, 249, 243, 0), var(--paper) 30%); }
+}
 
 .table-head { display: flex; align-items: center; gap: 12px; margin: 8px 8px 4px 6px; }
 .table-head h2 {
@@ -3798,7 +3809,8 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   background: #ffffff;
   color: var(--cream);
 }
-.table-back:hover { background: var(--inset); }
+.table-back { background: var(--tray); }
+.table-back:hover { background: #e6d9c8; }
 
 /* a row of pills: the picked one is white paper with a jade line */
 .seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4px; padding: 4px; border-radius: 999px; background: var(--inset); }
@@ -3813,88 +3825,124 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 }
 .seg-btn:hover { color: var(--cream); }
 .seg-btn.selected { background: #ffffff; color: var(--cream); box-shadow: inset 0 0 0 2px var(--jade-deep); }
-.seg-count { flex: none; background: rgba(255, 255, 255, 0.6); }
+.seg-count { flex: none; background: var(--tray); }
 .seg-count .seg-btn { padding: 0 16px; }
 
-/* the players: one name card each along the top */
-.seats { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 290px); justify-content: start; gap: 8px; padding: 10px 0 12px; }
-.seat {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-  padding: 8px 14px 8px 8px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.55);
-  transition: background 0.2s, box-shadow 0.2s;
+/* the players: each stands big in a honey arch over their name */
+.seats {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 10px;
+  --sh: clamp(140px, calc(100vh - 660px), 300px);
 }
-.seat.is-picking { background: #ffffff; box-shadow: var(--molded), inset 0 0 0 2px var(--pc); }
+.seats:not([data-count="1"]) { --sh: clamp(130px, calc(100vh - 680px), 200px); }
+.seat { display: flex; flex-direction: column; align-items: center; min-width: 0; text-align: center; }
 .seat-face {
   position: relative;
   flex: none;
-  width: 52px;
-  height: 52px;
+  width: min(100%, calc(var(--sh) * 0.8));
+  height: var(--sh);
   padding: 0;
-  border-radius: 50%;
-  background: var(--inset);
+  border-radius: 0;
+  background: none;
 }
-.seat-face:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 3px; }
-.seat-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 20%; }
+.seats[data-count="1"] .seat-face { cursor: default; }
+/* the arch: the figure's head stands clear of it */
+.seat-face::before {
+  content: '';
+  position: absolute;
+  inset: 22% 0 -12px;
+  /* a round head on square shoulders: the top is half as tall as the arch is wide */
+  border-radius: 50% 50% 28px 28px / calc(var(--sh) * 0.4) calc(var(--sh) * 0.4) 28px 28px;
+  background: var(--honey);
+  transition: background 0.2s;
+}
+.seats:not([data-count="1"]) .seat:not(.is-picking) .seat-face::before { background: var(--tray); }
+.seat-face:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 6px; border-radius: 12px; }
+/* the art is 640 by 960 with the feet at 928 and the tallest head near 110: fill the box with the figure */
+.seat-img {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: calc(var(--sh) * -0.039);
+  width: calc(var(--sh) * 0.78);
+  height: calc(var(--sh) * 1.17);
+  max-width: none;
+  border-radius: 0;
+  object-fit: contain;
+  translate: -50% 0;
+  pointer-events: none;
+  user-select: none;
+}
 .seat-seal {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 61%;
   display: grid;
   place-items: center;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
   border-radius: 50%;
   background: var(--pc);
   color: #ffffff;
-  font: 500 1.3rem/1 var(--font-ui);
+  font: 500 calc(var(--sh) * 0.17)/1 var(--font-ui);
 }
 .seat-img[hidden],
 .seat-seal[hidden] { display: none; }
 .seat-num {
   position: absolute;
-  right: -4px;
-  bottom: -4px;
+  z-index: 2;
+  right: 4%;
+  top: 24%;
   display: grid;
   place-items: center;
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: var(--pc);
   color: #ffffff;
-  font: 500 0.7rem/1 var(--font-mono);
-  box-shadow: 0 0 0 2px #ffffff;
+  font: 500 0.78rem/1 var(--font-mono);
+  box-shadow: 0 0 0 2px var(--paper);
 }
-.seat-text { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.seat-text { display: flex; flex-direction: column; align-items: center; width: 100%; min-width: 0; margin-top: 24px; }
 .seat-text input {
   width: 100%;
   min-width: 0;
-  padding: 2px 0;
+  min-height: 44px;
+  padding: 2px 0 4px;
   border: 0;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
   outline: none;
   background: none;
   color: var(--cream);
-  font: 600 1.02rem/1.2 var(--font-ui);
+  font: 600 1.7rem/1.15 var(--font-ui);
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-overflow: ellipsis;
 }
+.seats:not([data-count="1"]) .seat-text input { font-size: 1.15rem; letter-spacing: -0.01em; }
+.seat-text input:hover { border-bottom-color: rgba(34, 34, 34, 0.14); }
 .seat-text input:focus { border-bottom-color: var(--jade-deep); }
-.seat-as { overflow: hidden; color: var(--text-dim); font: 400 0.8rem/1.3 var(--font-ui); text-overflow: ellipsis; white-space: nowrap; }
+.seat-as { max-width: 100%; margin-top: 2px; overflow: hidden; color: var(--text-dim); font: 400 0.92rem/1.3 var(--font-ui); text-overflow: ellipsis; white-space: nowrap; }
 
-/* the cast: the whole line-up, full length, once for the table */
-.cast { margin: 0; padding: 16px 16px 18px; }
-.cast-line { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 4px 12px; }
-.cast-for { color: var(--cream); font: 600 0.98rem/1.3 var(--font-ui); }
+/* the cast: a hall of niches, the whole line-up full length, once for the table */
+.cast { margin: 10px 0 0; }
+.cast-line { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 2px 4px; }
+.cast-for { color: var(--text-dim); font: 500 1rem/1.3 var(--font-ui); }
 .cast-who { color: var(--pc); font-weight: 600; }
 .cast-none {
   position: relative;
   flex: none;
-  min-height: 36px;
-  padding: 0 14px;
+  min-height: 40px;
+  padding: 0 16px;
   border-radius: 999px;
-  background: var(--inset);
+  background: var(--tray);
   color: var(--text-dim);
-  font: 500 0.82rem/1 var(--font-ui);
+  font: 500 0.86rem/1 var(--font-ui);
 }
 .cast-none:hover { color: var(--cream); }
 .cast-none.selected { background: #ffffff; color: var(--jade-deep); box-shadow: inset 0 0 0 2px var(--jade-deep); }
@@ -3902,9 +3950,11 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 .cast-figures {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 10px 8px;
-  /* each figure as tall as the window allows: two rows under the heading and the name cards */
-  --fh: clamp(130px, calc((100vh - 360px) / 2 - 44px), 260px);
+  gap: 16px 10px;
+  /* room over the back row for a raised hat or a wave */
+  padding-top: calc(var(--fh) * 0.07);
+  /* each figure as tall as the window and its column allow: two rows under the heading */
+  --fh: clamp(118px, min(calc((100vh - 336px) / 2), 25cqw), 330px);
 }
 .cast .char-option,
 .cast .char-option:hover,
@@ -3914,31 +3964,42 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   flex-direction: column;
   align-items: center;
   min-width: 0;
-  padding: 12px 4px 10px;
-  border-radius: 22px;
-  /* each character's own soft tone, the same one behind their face in play */
-  background: color-mix(in srgb, var(--tone, var(--inset)) 45%, #ffffff);
+  padding: 0 0 2px;
+  border-radius: 20px;
+  background: none;
+  box-shadow: none;
   color: var(--text-dim);
-  font: 500 0.8rem/1.2 var(--font-ui);
-  transition: background 0.15s, box-shadow 0.15s;
+  font: 500 0.86rem/1.2 var(--font-ui);
 }
-.cast .char-option:hover { background: color-mix(in srgb, var(--tone, var(--inset)) 80%, #ffffff); color: var(--cream); }
-.cast .char-option[aria-checked="true"] { background: #ffffff; color: var(--jade-deep); box-shadow: var(--molded), inset 0 0 0 2px var(--jade-deep); }
-.cast .char-option[aria-checked="true"] .cast-name { font-weight: 600; }
 .cast .char-option:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 3px; }
-/* the art is 640 by 960 with the feet at 928 and the tallest head near 110: fill the box with the figure */
 .cast-fig { position: relative; display: block; width: 100%; height: var(--fh); }
+/* the niche, in the character's own tone (the same one behind their face in play) */
+.cast-fig::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  width: min(100%, calc(var(--fh) * 0.64));
+  height: calc(78% + 12px);
+  translate: -50% 0;
+  transform-origin: 50% 100%;
+  border-radius: 50% 50% 24px 24px / calc(var(--fh) * 0.32) calc(var(--fh) * 0.32) 24px 24px;
+  background: color-mix(in oklab, var(--tone, var(--tray)) 84%, #a98a66);
+  transition: background 0.18s, scale 0.24s var(--ease-expo);
+}
+.cast .char-option:hover .cast-fig::before { scale: 1.04; background: color-mix(in oklab, var(--tone, var(--tray)) 70%, #a98a66); }
+.cast .char-option[aria-checked="true"] .cast-fig::before { scale: 1.04; background: var(--honey); }
 .cast-fig::after {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: -5px;
+  bottom: -4px;
   width: calc(var(--fh) * 0.42);
-  max-width: 90%;
+  max-width: 86%;
   height: 10px;
   translate: -50% 0;
   border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(58, 40, 22, 0.24), rgba(58, 40, 22, 0));
+  background: radial-gradient(closest-side, rgba(58, 40, 22, 0.26), rgba(58, 40, 22, 0));
 }
 .cast .cast-fig img {
   position: absolute;
@@ -3955,29 +4016,33 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   opacity: 1;
   filter: none;
   translate: -50% 0;
-  transition: translate 0.18s;
+  scale: 1;
+  transform-origin: 50% 97%;
+  transition: translate 0.2s var(--ease-expo), scale 0.24s var(--ease-expo);
   pointer-events: none;
   user-select: none;
 }
-.cast .char-option:hover .cast-fig img { translate: -50% -4px; scale: 1; }
-.cast-name { max-width: 100%; margin-top: 12px; text-align: center; text-wrap: balance; }
+.cast .char-option:hover .cast-fig img { translate: -50% -5px; scale: 1; }
+.cast .char-option[aria-checked="true"] .cast-fig img { scale: 1.06; }
+.cast-name { max-width: 100%; margin-top: 18px; padding: 5px 10px; border-radius: 999px; text-align: center; text-wrap: balance; transition: background 0.18s, color 0.18s; }
+.cast .char-option:hover .cast-name { color: var(--cream); }
+.cast .char-option[aria-checked="true"] .cast-name { background: var(--jade-deep); color: #ffffff; font-weight: 600; }
 .cast-tag {
   position: absolute;
   z-index: 2;
-  top: 8px;
-  right: 8px;
+  top: calc(var(--fh) * 0.2);
+  right: max(2px, calc(50% - var(--fh) * 0.32));
   display: grid;
   place-items: center;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: var(--pc);
   color: #ffffff;
-  font: 500 0.74rem/1 var(--font-mono);
-  box-shadow: 0 0 0 2px #ffffff;
+  font: 500 0.78rem/1 var(--font-mono);
+  box-shadow: 0 0 0 2px var(--paper);
 }
-.cast-tag + .cast-tag { right: 28px; }
-.cast-tag + .cast-tag + .cast-tag { right: 48px; }
+.cast-tag + .cast-tag { translate: -24px 0; }
 
 /* the game: four quiet rows */
 .game-card { margin: 0; }
@@ -4008,11 +4073,16 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
   .setup-hero .hall-of-fame { order: 3; justify-content: center; margin-top: 18px; }
   .setup-hero .setup-footer { order: 4; justify-content: center; margin-top: 18px; }
 
-  /* the table, stacked, with the way in always in reach */
-  .table { display: block; min-height: 0; padding-bottom: 92px; }
+}
+/* the table, stacked: the players, then the cast, then the game, with the way in always in reach */
+@media (max-width: 999px) {
+  .table { display: flex; flex-direction: column; align-items: stretch; gap: 12px; min-height: 0; padding-bottom: 96px; }
   .table-cast,
-  .table-game { padding: 10px; border-radius: 32px; }
-  .table-game { margin-top: 12px; }
+  .table-side { display: contents; }
+  .table-head { order: 1; flex-wrap: wrap; gap: 10px 12px; margin: 6px 4px 2px; }
+  #player-seats { order: 2; }
+  #player-names { order: 3; }
+  .table-game { order: 4; padding: 10px; border-radius: 32px; }
   .table-go {
     position: fixed;
     z-index: 6;
@@ -4022,27 +4092,32 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
     padding: 18px 14px calc(14px + env(safe-area-inset-bottom));
     background: linear-gradient(rgba(255, 249, 243, 0), var(--paper) 38%);
   }
-  .table-head { flex-wrap: wrap; gap: 10px 12px; margin: 6px 4px 2px; }
+  .table-go .btn-start { max-width: 560px; margin: 0 auto; display: block; }
   .seg-count { flex: 1 0 100%; }
-  .seats { grid-auto-columns: minmax(0, 1fr); justify-content: stretch; gap: 6px; padding: 8px 0 10px; }
-  .seats[data-count="1"] { grid-auto-columns: minmax(0, 320px); justify-content: center; }
-  .seats:not([data-count="1"]) .seat { flex-direction: column; gap: 6px; padding: 10px 6px 8px; border-radius: 22px; text-align: center; }
-  .seats:not([data-count="1"]) .seat-text input { text-align: center; font-size: 1rem; }
-  .seat-face { width: 46px; height: 46px; }
-  .seat-as { font-size: 0.72rem; }
-  .cast { padding: 14px 10px 14px; }
-  .cast-line { flex-wrap: wrap; gap: 8px; margin: 0 4px 10px; }
-  .cast-figures { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px 6px; --fh: clamp(118px, 19vh, 160px); }
+  /* one player: the figure beside the name */
+  .seats { --sh: clamp(128px, 22vw, 190px); padding: 4px 0 18px; }
+  .seats[data-count="1"] .seat { flex-direction: row; justify-content: center; gap: 20px; text-align: left; }
+  .seats[data-count="1"] .seat-text { align-items: flex-start; width: auto; max-width: 60%; margin-top: 22%; }
+  .seats[data-count="1"] .seat-text input { text-align: left; font-size: 1.5rem; }
+  .seats:not([data-count="1"]) { --sh: clamp(116px, 20vw, 170px); }
+  .seats:not([data-count="1"]) .seat-text { margin-top: 18px; }
+  .seats:not([data-count="1"]) .seat-text input { font-size: 1.05rem; }
+  .seat-as { font-size: 0.84rem; }
+  .cast { margin-top: 0; }
+  .cast-line { flex-wrap: wrap; gap: 8px; }
+  .cast-figures { --fh: clamp(118px, 25cqw, 230px); }
+}
+@media (max-width: 599px) {
+  .cast-figures { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 6px; --fh: clamp(100px, 37cqw, 170px); }
   .cast .char-option,
   .cast .char-option:hover,
-  .cast .char-option[aria-checked="true"] { padding: 10px 2px 8px; border-radius: 18px; font-size: 0.68rem; }
-  .cast-name { margin-top: 10px; }
-  .cast-tag { top: 5px; right: 5px; width: 20px; height: 20px; font-size: 0.66rem; }
-  .cast-tag + .cast-tag { right: 22px; }
-  .cast-tag + .cast-tag + .cast-tag { right: 39px; }
+  .cast .char-option[aria-checked="true"] { font-size: 0.72rem; }
+  .cast-name { margin-top: 16px; padding: 4px 7px; border-radius: 12px; }
+  .cast-tag { width: 22px; height: 22px; font-size: 0.72rem; }
+  .cast-tag + .cast-tag { translate: -20px 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .seat, .cast .char-option, .cast-fig img { transition: none; }
+  .seat-face::before, .cast-fig::before, .cast .cast-fig img, .cast-name { transition: none; }
 }
 
 /* — The front screen film (Nov 11 2026): Napoleon walks up to the throne, clears the question
@@ -4115,7 +4190,7 @@ number-flow { font-variant-numeric: tabular-nums; --number-flow-mask-height: 0.2
 /* The served font is a solid cut of Sacred Empires: scripts/solidify-sacred-empires.py closes the
    engraved lines inside each letter and keeps the real counters (Kelly, Nov 11). */
 .setup-screen .logo { line-height: 0.92; }
-.table-head h2 { font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1; }
+.table-head h2 { font-size: clamp(2rem, 3.6vw, 3.4rem); line-height: 1; }
 .title-video {
   -webkit-mask-image: linear-gradient(to right, transparent, #000 3%), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 3%), linear-gradient(to bottom, transparent, #000 6%, #000 96%, transparent);
@@ -4477,3 +4552,39 @@ body:has(> .category-intro) .host-fig { view-transition-name: none; }
 .missed-clue { font: 400 0.98rem/1.45 var(--font-ui); color: var(--text-dim); text-wrap: pretty; }
 .missed-answer { font: 600 1.05rem/1.3 var(--font-ui); color: var(--cream); }
 .host-plaque .plaque-cat { display: block; font: 600 0.78em/1.3 var(--font-ui); letter-spacing: 0.04em; }
+
+/* ——— The music button (Nov 12 2026) ———
+   One clear switch for the music, fixed at the top right wherever music plays (the title,
+   the table, the final clue). Paper pill, jade when on; greyed with a strike when off. */
+.music-button {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  right: max(12px, env(safe-area-inset-right));
+  z-index: 44;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px 0 13px;
+  border-radius: 999px;
+  background: var(--paper);
+  box-shadow: var(--molded), 0 0 0 1px var(--line);
+  color: var(--jade-deep);
+  font: 500 0.88rem/1 var(--font-ui);
+  white-space: nowrap;
+}
+.music-button[hidden] { display: none; }
+.music-button svg { flex: none; width: 20px; height: 20px; }
+.music-button:hover { background: #ffffff; }
+.music-button:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 2px; }
+.music-strike { opacity: 0; }
+.music-button.is-off { color: var(--text-dim); }
+.music-button.is-off .music-strike { opacity: 1; }
+/* in the game itself: just the note, beside the menu button (main.js places it there) */
+.music-button.is-compact { left: 12px; right: auto; width: 44px; padding: 0; justify-content: center; }
+.music-button.is-compact .music-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 599px) {
+  /* tucked in beside the two-line "Who's playing?" */
+  .music-button { gap: 6px; padding: 0 13px 0 11px; font-size: 0.82rem; }
+  .music-button.is-compact { width: 40px; min-height: 40px; padding: 0; }
+}

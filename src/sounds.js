@@ -20,6 +20,11 @@ export function setEnabled(on) {
   enabled = on;
 }
 
+/** The shared audio context, woken if the browser had it asleep (the music plays through it). */
+export function audioContext() {
+  return ensureResumed();
+}
+
 export function isEnabled() {
   return enabled;
 }
@@ -143,32 +148,6 @@ export function playBuzzer() {
   if (!enabled) return;
   playTone(196, 0.5, 'triangle', 0.16, 0);
   playTone(164.81, 0.5, 'sine', 0.12, 0);
-}
-
-/** Think music for Final Jeopardy — simple melody loop */
-let thinkInterval = null;
-
-export function startThinkMusic() {
-  if (!enabled) return;
-  // Classic think music approximation — repeating pattern
-  const melody = [
-    392, 440, 392, 330, 392, 440, 392, 0,
-    392, 440, 392, 440, 523, 494, 440, 0,
-    392, 440, 392, 330, 392, 440, 392, 0,
-    330, 349, 330, 294, 262, 294, 330, 0,
-  ];
-  let i = 0;
-  thinkInterval = setInterval(() => {
-    if (melody[i] > 0) playTone(melody[i], 0.35, 'triangle', 0.12);
-    i = (i + 1) % melody.length;
-  }, 400);
-}
-
-export function stopThinkMusic() {
-  if (thinkInterval) {
-    clearInterval(thinkInterval);
-    thinkInterval = null;
-  }
 }
 
 /** Round transition dramatic sound */

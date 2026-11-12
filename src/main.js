@@ -16,6 +16,7 @@ import {
 } from './campaign.js';
 import * as sounds from './sounds.js';
 import { loadCharacters, characters, characterById, portraitUrl, poseUrl } from './characters.js';
+import * as music from './music.js';
 import { shape, compassLoader } from './shapes.js';
 import { animate, stagger } from 'motion';
 import 'number-flow';
@@ -25,7 +26,7 @@ import { empireMap, statusMark, pointAt } from './empire.js';
 loadCharacters();
 
 // Dev-only handle for screenshots and debugging; stripped from production builds.
-if (import.meta.env.DEV) window.__cde = { getState, setState, empire: async n => { await loadCampaign(); showEmpire(getChapter(n)); } };
+if (import.meta.env.DEV) window.__cde = { getState, setState, music, empire: async n => { await loadCampaign(); showEmpire(getChapter(n)); } };
 
 const app = document.getElementById('app');
 let timerInterval = null;
@@ -498,6 +499,54 @@ let buzzKeyHandler = null;
 
 let shownScreen = null;
 
+// ——— The music button: one clear switch, in reach wherever music plays ———
+// (Kelly, Nov 12 2026: "make sure there is a clear button to turn it off".) It lives outside
+// #app so a re-render never drops it, and shows only while music is asked for.
+function syncMusicButton() {
+  let btn = document.getElementById('music-button');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'music-button';
+    btn.className = 'music-button';
+    btn.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M9 18V6l11-2v12"/>
+        <ellipse cx="6.5" cy="18" rx="2.5" ry="2" fill="currentColor"/>
+        <ellipse cx="17.5" cy="16" rx="2.5" ry="2" fill="currentColor"/>
+        <path class="music-strike" d="M3.5 3.5l17 17"/>
+      </svg>
+      <span class="music-label"></span>`;
+    btn.addEventListener('click', () => {
+      const on = !music.isMusicOn();
+      savePrefs({ music: on });
+      music.setMusic(on);
+    });
+    document.body.appendChild(btn);
+  }
+  const on = music.isMusicOn();
+  btn.hidden = !music.asked();
+  btn.classList.toggle('is-off', !on);
+  btn.querySelector('.music-label').textContent = on ? 'Music on' : 'Music off';
+  btn.title = on ? 'Turn the music off' : 'Turn the music on';
+  // In the game itself the corner belongs to the scores, so the button shrinks to its note
+  // and sits beside the menu button; it keeps that spot on the clue and wager screens too.
+  const compact = music.asked() === 'play';
+  btn.classList.toggle('is-compact', compact);
+  if (compact) {
+    const r = document.getElementById('btn-menu')?.getBoundingClientRect();
+    const small = window.innerWidth < 600; // a phone's header has no room to spare
+    if (r?.width) musicSpot = { left: Math.round(r.right + (small ? 4 : 8)), top: Math.round(r.top + (r.height - (small ? 40 : 44)) / 2) };
+  }
+  btn.style.left = compact && musicSpot ? `${musicSpot.left}px` : '';
+  btn.style.top = compact && musicSpot ? `${musicSpot.top}px` : '';
+}
+let musicSpot = null;
+window.addEventListener('resize', () => { if (document.getElementById('music-button')) syncMusicButton(); });
+music.onChange(syncMusicButton);
+// the screens of the game itself, where the music is only a faint bed (Kelly: "very very soft")
+const BED_SCREENS = new Set(['board', 'clue', 'daily-double', 'round-transition', 'final-category', 'final-wager']);
+
 function render() {
   const state = getState();
 
@@ -518,6 +567,12 @@ function render() {
   // Board keyboard nav only lives on the board
   if (state.screen !== 'board') detachBoardKeys();
 
+  // Music by screen: the menu pieces bow out as the game begins, a very faint One Note Quiz
+  // runs under the game itself, and the engine asks for the thinking music on the final clue.
+  if (BED_SCREENS.has(state.screen)) { if (music.asked() !== 'play') music.play('play'); }
+  else if (state.screen === 'results' || state.screen === 'error') { if (music.asked()) music.stop(1.2); }
+  else if (state.screen !== 'setup' && music.asked() === 'menu') music.stop(1.2);
+
   const draw = () => {
     switch (state.screen) {
       case 'setup': renderSetup(); break;
@@ -536,6 +591,7 @@ function render() {
     }
     // a reaction clip still playing moves over to the new screen's Napoleon
     hostCarry();
+    syncMusicButton();
   };
 
   // One screen hands over to the next, and Napoleon is carried across (see
@@ -684,6 +740,9 @@ function renderSetup() {
   const pack = prefs.pack === 'easy' ? 'easy' : 'fresh';
   const playStyle = prefs.playStyle === 'campaign' ? 'campaign' : 'free';
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
+  // the music plays on the title and the table (from the first tap or key: browsers insist)
+  music.setMusic(prefs.music !== false);
+  music.play('menu');
   prevLeader = null;
   prevScores = [];
   recordedThisGame = false;
@@ -740,6 +799,8 @@ function renderSetup() {
           </header>
           <div id="player-names"></div>
         </div>
+        <div class="table-side">
+        <div id="player-seats"></div>
         <div class="table-game">
           <div class="tray-card game-card">
             <h2>The game</h2>
@@ -782,6 +843,7 @@ function renderSetup() {
         </div>
         <div class="table-go">
           <button class="btn-start" id="btn-start-game">${playStyle === 'campaign' ? 'March on' : 'Open the board'}</button>
+        </div>
         </div>
       </section>
     </div>
@@ -846,6 +908,7 @@ function renderSetup() {
       }
       if (film && !film.paused) film.pause();
       settle();
+      warmCast();
       document.getElementById('table-title')?.focus({ preventScroll: true });
     } else {
       // back at the title: pick the film up where it stopped, or let him fidget again
@@ -1118,13 +1181,27 @@ function updateModeVisibility(count) {
 // Whose turn it is at the shared cast on the setup screen
 let castTurn = 0;
 
+// The cast's second pose (a wave, a raised hat) is fetched once the table is open, so the
+// first figure the pointer meets answers at once.
+let castWarmed = false;
+function warmCast() {
+  if (castWarmed || navigator.connection?.saveData) return;
+  const roster = characters();
+  if (!roster.length) return;
+  castWarmed = true;
+  roster.forEach((rc) => { new Image().src = rc.poseUrls.victory; });
+}
+
 /**
- * The table: the players sit along the top as name cards, and the whole cast stands below them
- * full length. A tap on a player hands them the cast; a tap on a figure makes it theirs.
+ * The table: the whole cast stands in a hall of niches, full length, and each player stands
+ * big at the head of the right column over their name. A tap on a player hands them the cast;
+ * a tap on a figure makes it theirs. The figure under the pointer greets you (its victory
+ * pose), and the one you hold keeps that pose.
  */
 function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
   const container = document.getElementById('player-names');
-  if (!container) return;
+  const seatsBox = document.getElementById('player-seats');
+  if (!container || !seatsBox) return;
   const roster = characters();
   const turn = Math.min(castTurn, count - 1);
   const nameOf = i => savedNames[i] || `Player ${i + 1}`;
@@ -1136,14 +1213,16 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
       .map(j => `<span class="cast-tag" style="--pc: ${PLAYER_COLORS[j]}">${j + 1}</span>`).join('')
     : '');
 
-  let html = `<div class="seats" data-count="${count}">`;
+  const asLine = c => (c ? `as ${c.name}` : 'Initials only');
+  let seats = `<div class="seats" data-count="${count}">`;
+  let html = '';
   for (let i = 0; i < count; i++) {
     const c = held(i);
-    html += `
+    seats += `
       <div class="seat ${count > 1 && i === turn ? 'is-picking' : ''}" data-index="${i}" style="--pc: ${PLAYER_COLORS[i]}">
         <button type="button" class="seat-face" data-index="${i}"${count > 1 ? ` aria-pressed="${i === turn}"` : ''}
                 aria-label="${count > 1 ? `Choose a character for player ${i + 1}` : 'Your character'}${c ? `, now ${escapeHtml(c.name)}` : ''}">
-          <img class="seat-img" src="${c ? c.portraitUrl : ''}" alt="" ${c ? '' : 'hidden'}>
+          <img class="seat-img" src="${c ? c.poseUrls.ready : ''}" alt="" ${c ? '' : 'hidden'}>
           <span class="seat-seal" ${c ? 'hidden' : ''}>${escapeHtml(monogram(nameOf(i), i))}</span>
           ${count > 1 ? `<span class="seat-num" aria-hidden="true">${i + 1}</span>` : ''}
         </button>
@@ -1151,18 +1230,18 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
           <input type="text" class="player-name-input" placeholder="Name" id="player-name-${i}"
                  aria-label="Player ${i + 1} name" value="${escapeHtml(nameOf(i))}" data-index="${i}"
                  maxlength="24" autocomplete="off" spellcheck="false">
-          <span class="seat-as">${c ? escapeHtml(c.name) : 'Initials only'}</span>
+          <span class="seat-as">${escapeHtml(asLine(c))}</span>
         </div>
       </div>
     `;
   }
-  html += '</div>';
+  seats += '</div>';
 
   // One cast for the whole table, standing full length: the players take turns at it
   if (roster.length) {
     const mine = held(turn);
     html += `
-      <div class="tray-card cast">
+      <div class="cast">
         <div class="cast-line">
           <p class="cast-for">${count > 1
             ? `Choosing for <strong class="cast-who" style="--pc: ${PLAYER_COLORS[turn]}">${escapeHtml(nameOf(turn))}</strong>`
@@ -1171,9 +1250,9 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
         </div>
         <div class="cast-figures" role="radiogroup" aria-label="Character for ${escapeHtml(nameOf(turn))}">
           ${roster.map(rc => `
-            <button type="button" class="char-option" role="radio" data-id="${rc.id}"
+            <button type="button" class="char-option${count > 1 && tagsFor(rc.id) ? ' is-held' : ''}" role="radio" data-id="${rc.id}"
                     aria-checked="${rc.id === setupCharacters[turn]}" style="--tone: ${rc.tone}">
-              <span class="cast-fig"><img src="${rc.poseUrls.ready}" alt="" loading="lazy" decoding="async"></span>
+              <span class="cast-fig"><img src="${rc.id === setupCharacters[turn] ? rc.poseUrls.victory : rc.poseUrls.ready}" alt="" loading="lazy" decoding="async"></span>
               ${tagsFor(rc.id)}
               <span class="cast-name">${escapeHtml(rc.name)}</span>
             </button>`).join('')}
@@ -1182,8 +1261,10 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
     `;
   }
   container.innerHTML = html;
+  seatsBox.innerHTML = seats;
+  if (setupStep === 'table') warmCast();
 
-  const typedNames = () => Array.from(container.querySelectorAll('.player-name-input')).map(el => el.value);
+  const typedNames = () => Array.from(seatsBox.querySelectorAll('.player-name-input')).map(el => el.value);
   const redraw = () => renderPlayerInputs(count, typedNames(), savedAvatars);
 
   // The roster loads once per visit; draw the cast as soon as it arrives.
@@ -1194,18 +1275,18 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
   }
 
   // A name restrikes its seal (when no face is chosen) and the line over the cast as it is typed
-  container.querySelectorAll('.player-name-input').forEach(input => {
+  seatsBox.querySelectorAll('.player-name-input').forEach(input => {
     input.addEventListener('input', () => {
       const i = Number(input.dataset.index);
       const who = container.querySelector('.cast-who');
       if (who && i === turn) who.textContent = input.value.trim() || `Player ${i + 1}`;
-      const seal = container.querySelector(`.seat[data-index="${i}"] .seat-seal`);
+      const seal = seatsBox.querySelector(`.seat[data-index="${i}"] .seat-seal`);
       if (seal) seal.textContent = monogram(input.value, i);
     });
   });
 
   // A tap on a player hands the cast to that player
-  container.querySelectorAll('.seat-face').forEach(btn => {
+  seatsBox.querySelectorAll('.seat-face').forEach(btn => {
     btn.addEventListener('click', () => {
       if (count === 1) { container.querySelector('.cast-figures [aria-checked="true"]')?.focus(); return; }
       castTurn = Number(btn.dataset.index);
@@ -1215,22 +1296,32 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
   });
 
   // Whoever the pointer or focus is on tries the face on before anyone commits
-  const seat = container.querySelector(`.seat[data-index="${turn}"]`);
+  const seat = seatsBox.querySelector(`.seat[data-index="${turn}"]`);
   const figures = container.querySelector('.cast-figures');
   const wear = id => {
     const c = characterById(id);
     const img = seat.querySelector('.seat-img');
-    if (c && img.getAttribute('src') !== c.portraitUrl) img.src = c.portraitUrl;
+    if (c && img.getAttribute('src') !== c.poseUrls.ready) img.src = c.poseUrls.ready;
     img.hidden = !c;
     seat.querySelector('.seat-seal').hidden = !!c;
-    seat.querySelector('.seat-as').textContent = c ? c.name : 'Initials only';
+    seat.querySelector('.seat-as').textContent = asLine(c);
+  };
+  // the figure under the pointer greets you; the one this player holds keeps the pose
+  const greet = (hot) => {
+    figures.querySelectorAll('.char-option').forEach((opt) => {
+      const c = characterById(opt.dataset.id);
+      const img = opt.querySelector('.cast-fig img');
+      if (!c || !img) return;
+      const url = opt === hot || opt.getAttribute('aria-checked') === 'true' ? c.poseUrls.victory : c.poseUrls.ready;
+      if (img.getAttribute('src') !== url) img.src = url;
+    });
   };
   if (figures && seat) {
     const tryOn = e => {
       const opt = e.target.closest('.char-option');
-      if (opt && !(e.pointerType && e.pointerType !== 'mouse')) wear(opt.dataset.id);
+      if (opt && !(e.pointerType && e.pointerType !== 'mouse')) { wear(opt.dataset.id); greet(opt); }
     };
-    const rest = () => wear(setupCharacters[turn]);
+    const rest = () => { wear(setupCharacters[turn]); greet(null); };
     figures.addEventListener('pointerover', tryOn);
     figures.addEventListener('focusin', tryOn);
     figures.addEventListener('pointerleave', rest);
@@ -1249,9 +1340,11 @@ function renderPlayerInputs(count, savedNames = [], savedAvatars = []) {
       redraw();
       const picked = document.querySelector(id ? '.cast-figures [aria-checked="true"]' : '.cast-none');
       picked?.focus({ preventScroll: true });
-      // the chosen figure steps forward
+      // the chosen figure steps forward, and so does the big one over the player's name
       if (id && picked && !prefersReducedMotion()) {
         animate(picked.querySelector('.cast-fig img'), { y: [10, -4, 0] }, { duration: 0.42, ease: EXPO });
+        const big = document.querySelector(`#player-seats .seat[data-index="${turn}"] .seat-img`);
+        if (big) animate(big, { y: [14, -6, 0] }, { duration: 0.5, ease: EXPO });
       }
     });
   });
@@ -1570,7 +1663,7 @@ function confirmQuit() {
     boardRevealDone = false;
     prevScores = [];
     prevLeader = null;
-    sounds.stopThinkMusic();
+    music.stop(0.9);
     resetForNewGame();
   });
   overlay.querySelector('.modal-cancel').focus();
@@ -2429,7 +2522,6 @@ function renderFinalClue() {
       <div class="final-header">${finalHeader()}</div>
       <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
       <div class="final-clue-text">${escapeHtml(finalClue.clue)}</div>
-      <div class="think-music-note">&#9835; Think music playing…</div>
       <button class="btn-submit" id="btn-begin-answers">
         ${solo ? 'Enter answer' : 'Enter answers'}
       </button>
@@ -2438,10 +2530,10 @@ function renderFinalClue() {
   `;
 
   document.getElementById('btn-begin-answers').addEventListener('click', () => {
-    if (queue.length === 0) { sounds.stopThinkMusic(); submitFinalAnswers(answers); return; }
+    if (queue.length === 0) { music.stop(); submitFinalAnswers(answers); return; }
     let qi = 0;
     const nextAnswer = () => {
-      if (qi >= queue.length) { sounds.stopThinkMusic(); submitFinalAnswers(answers); return; }
+      if (qi >= queue.length) { music.stop(); submitFinalAnswers(answers); return; }
       const idx = queue[qi];
       if (solo) answerEntry(idx);
       else passCover(idx, 'Type your response (no peeking!)', () => answerEntry(idx));
