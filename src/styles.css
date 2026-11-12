@@ -1296,7 +1296,6 @@ input { font-family: var(--font-ui); }
 }
 .final-answer-input:focus { border-color: var(--jade); }
 
-.think-music-note { font-size: 0.85rem; color: var(--cream-faint); }
 
 /* Pass-the-device cover for private Final entries */
 .pass-card {
@@ -4553,3 +4552,35 @@ body:has(> .category-intro) .host-fig { view-transition-name: none; }
 .missed-clue { font: 400 0.98rem/1.45 var(--font-ui); color: var(--text-dim); text-wrap: pretty; }
 .missed-answer { font: 600 1.05rem/1.3 var(--font-ui); color: var(--cream); }
 .host-plaque .plaque-cat { display: block; font: 600 0.78em/1.3 var(--font-ui); letter-spacing: 0.04em; }
+
+/* ——— The music button (Nov 12 2026) ———
+   One clear switch for the music, fixed at the top right wherever music plays (the title,
+   the table, the final clue). Paper pill, jade when on; greyed with a strike when off. */
+.music-button {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  right: max(12px, env(safe-area-inset-right));
+  z-index: 44;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px 0 13px;
+  border-radius: 999px;
+  background: var(--paper);
+  box-shadow: var(--molded), 0 0 0 1px var(--line);
+  color: var(--jade-deep);
+  font: 500 0.88rem/1 var(--font-ui);
+  white-space: nowrap;
+}
+.music-button[hidden] { display: none; }
+.music-button svg { flex: none; width: 20px; height: 20px; }
+.music-button:hover { background: #ffffff; }
+.music-button:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 2px; }
+.music-strike { opacity: 0; }
+.music-button.is-off { color: var(--text-dim); }
+.music-button.is-off .music-strike { opacity: 1; }
+@media (max-width: 599px) {
+  /* tucked in beside the two-line "Who's playing?" */
+  .music-button { gap: 6px; padding: 0 13px 0 11px; font-size: 0.82rem; }
+}

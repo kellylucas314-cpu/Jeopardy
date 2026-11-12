@@ -26,7 +26,7 @@ import { empireMap, statusMark, pointAt } from './empire.js';
 loadCharacters();
 
 // Dev-only handle for screenshots and debugging; stripped from production builds.
-if (import.meta.env.DEV) window.__cde = { getState, setState, empire: async n => { await loadCampaign(); showEmpire(getChapter(n)); } };
+if (import.meta.env.DEV) window.__cde = { getState, setState, music, empire: async n => { await loadCampaign(); showEmpire(getChapter(n)); } };
 
 const app = document.getElementById('app');
 let timerInterval = null;
@@ -499,6 +499,39 @@ let buzzKeyHandler = null;
 
 let shownScreen = null;
 
+// ——— The music button: one clear switch, in reach wherever music plays ———
+// (Kelly, Nov 12 2026: "make sure there is a clear button to turn it off".) It lives outside
+// #app so a re-render never drops it, and shows only while music is asked for.
+function syncMusicButton() {
+  let btn = document.getElementById('music-button');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'music-button';
+    btn.className = 'music-button';
+    btn.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M9 18V6l11-2v12"/>
+        <ellipse cx="6.5" cy="18" rx="2.5" ry="2" fill="currentColor"/>
+        <ellipse cx="17.5" cy="16" rx="2.5" ry="2" fill="currentColor"/>
+        <path class="music-strike" d="M3.5 3.5l17 17"/>
+      </svg>
+      <span class="music-label"></span>`;
+    btn.addEventListener('click', () => {
+      const on = !music.isMusicOn();
+      savePrefs({ music: on });
+      music.setMusic(on);
+    });
+    document.body.appendChild(btn);
+  }
+  const on = music.isMusicOn();
+  btn.hidden = !music.asked();
+  btn.classList.toggle('is-off', !on);
+  btn.querySelector('.music-label').textContent = on ? 'Music on' : 'Music off';
+  btn.title = on ? 'Turn the music off' : 'Turn the music on';
+}
+music.onChange(syncMusicButton);
+
 function render() {
   const state = getState();
 
@@ -519,7 +552,7 @@ function render() {
   // Board keyboard nav only lives on the board
   if (state.screen !== 'board') detachBoardKeys();
 
-  // The theme belongs to the title and the table: it bows out as the game begins
+  // The menu music belongs to the title and the table: it bows out as the game begins
   if (state.screen !== 'setup' && music.asked() === 'menu') music.stop(1.2);
 
   const draw = () => {
@@ -688,7 +721,7 @@ function renderSetup() {
   const pack = prefs.pack === 'easy' ? 'easy' : 'fresh';
   const playStyle = prefs.playStyle === 'campaign' ? 'campaign' : 'free';
   if (typeof prefs.sound === 'boolean') sounds.setEnabled(prefs.sound);
-  // the theme plays on the title and the table (from the first tap or key: browsers insist)
+  // the music plays on the title and the table (from the first tap or key: browsers insist)
   music.setMusic(prefs.music !== false);
   music.play('menu');
   prevLeader = null;
@@ -719,10 +752,6 @@ function renderSetup() {
             <label class="sound-toggle">
               <input type="checkbox" id="sound-checkbox" ${sounds.isEnabled() ? 'checked' : ''}>
               <span>Sound Effects</span>
-            </label>
-            <label class="sound-toggle">
-              <input type="checkbox" id="music-checkbox" ${prefs.music !== false ? 'checked' : ''}>
-              <span>Music</span>
             </label>
             <button class="link-btn" id="btn-how-to">How to play</button>
             <a class="link-btn" href="https://kellylucas.dev/army.html">The Army</a>
@@ -921,11 +950,6 @@ function renderSetup() {
   document.getElementById('sound-checkbox').addEventListener('change', (e) => {
     sounds.setEnabled(e.target.checked);
     savePrefs({ sound: e.target.checked });
-    music.refresh();
-  });
-  document.getElementById('music-checkbox').addEventListener('change', (e) => {
-    savePrefs({ music: e.target.checked });
-    music.setMusic(e.target.checked);
   });
 
   // How to play
@@ -2479,7 +2503,6 @@ function renderFinalClue() {
       <div class="final-header">${finalHeader()}</div>
       <div class="final-category-name small">${escapeHtml(finalClue.name)}</div>
       <div class="final-clue-text">${escapeHtml(finalClue.clue)}</div>
-      <div class="think-music-note"${music.isMusicOn() && sounds.isEnabled() ? '' : ' hidden'}>&#9835; Think music playing…</div>
       <button class="btn-submit" id="btn-begin-answers">
         ${solo ? 'Enter answer' : 'Enter answers'}
       </button>
@@ -2732,7 +2755,6 @@ function renderResults() {
   `;
 
   sounds.playFanfare();
-  music.play('reprise'); // the theme's last eight bars, once
   if (!isTie || ranked[0].score > 0) spawnConfetti();
   flowNumbers(450);
   // he bows to a winner and shrugs at a solo game that ended in the red, then goes back to watching
