@@ -712,7 +712,7 @@ function handleTimeExpired() {
     <div class="feedback-wrong">
       ${verdict('timeout', pick(TIMEOUT_LINES))}
       <div class="verdict-score">${icon('clock')}<span>-$${formatMoney(result.value)}</span></div>
-      <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
+      <div class="correct-response">The answer: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
   scheduleReturn(3000);
@@ -1658,7 +1658,7 @@ function showHowTo() {
       <div class="modal-title">How to play</div>
       <ul class="how-to-list">
         <li><strong>Pick a clue</strong> from the board. Higher rows are worth more.</li>
-        <li><strong>Answer</strong> in plain words. Spelling and phrasing are forgiven, and you don't need "What is…".</li>
+        <li><strong>Answer</strong> in plain words. Spelling and phrasing are forgiven.</li>
         <li><strong>Right</strong> adds the value; <strong>wrong</strong> subtracts it. Get 3 right in a row for <strong>Campaign Momentum</strong>, a growing bonus.</li>
         <li><strong>Playing together?</strong> Everyone plays around one screen. <strong>Take turns</strong> passes each clue to the next player. In <strong>Buzz in</strong>, Napoleon reads the clue and then everyone races to ring in. Player 1 can hit any key on the left half of the keyboard, Player 2 any key on the right half, or tap your buzzer on a phone. Buzz too early and you're locked out briefly.</li>
         <li><strong>Waterloo Wagers</strong> hide on the board and let you bet your winnings. Then it's <strong>Waterloo</strong>: one clue, secret wagers, winner takes the night.</li>
@@ -1944,7 +1944,7 @@ function renderTurnsClue() {
     </div>
     <div class="clue-answer-area">
       <input type="text" id="answer-input" class="answer-input"
-             placeholder="What is…" autocomplete="off">
+             placeholder="Your answer" autocomplete="off">
       <div class="clue-buttons">
         <button class="btn-submit" id="btn-submit">Submit</button>
         <button class="btn-skip" id="btn-skip">Pass</button>
@@ -2013,7 +2013,7 @@ function handleSubmitAnswer() {
         <div class="feedback-wrong">
           ${verdict('wrong', wrongLine({ wager, streakBefore }), { big: wager || streakBefore >= 3 })}
           <div class="verdict-score">${icon('cross')}<span>-$${formatMoney(result.value)}</span></div>
-          <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
+          <div class="correct-response">The answer: <strong>${escapeHtml(result.correctResponse)}</strong></div>
           <div class="feedback-actions">
             <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
             <button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it</button>
@@ -2063,7 +2063,7 @@ function handleSkip() {
   showFeedback(`
     <div class="feedback-skip">
       ${verdict('pass', pick(PASS_LINES))}
-      <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
+      <div class="correct-response">The answer: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
   scheduleReturn(2500);
@@ -2079,7 +2079,7 @@ function renderBuzzClue() {
     <div class="clue-answer-area" id="answer-area" style="display:none">
       <div class="clue-player" id="answering-name"></div>
       <input type="text" id="answer-input" class="answer-input"
-             placeholder="What is…" autocomplete="off">
+             placeholder="Your answer" autocomplete="off">
       <div class="clue-buttons">
         <button class="btn-submit" id="btn-submit">Submit</button>
       </div>
@@ -2266,7 +2266,7 @@ function resolveBuzzAnswer(answer, timedOut) {
     showFeedback(`
       <div class="feedback-wrong">
         ${header}
-        <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
+        <div class="correct-response">The answer: <strong>${escapeHtml(result.correctResponse)}</strong></div>
         <div class="feedback-actions">
           <button class="btn-feedback-continue" id="btn-fb-continue">Continue</button>
           ${timedOut ? '' : `<button class="btn-feedback-accept" id="btn-fb-accept">The Emperor accepts it</button>`}
@@ -2312,7 +2312,7 @@ function handleNoBuzz() {
   showFeedback(`
     <div class="feedback-skip">
       ${verdict('pass', pick(NOBUZZ_LINES))}
-      <div class="correct-response">The correct response: <strong>${escapeHtml(result.correctResponse)}</strong></div>
+      <div class="correct-response">The answer: <strong>${escapeHtml(result.correctResponse)}</strong></div>
     </div>
   `);
   scheduleReturn(2500);
@@ -2596,15 +2596,15 @@ function renderFinalClue() {
       if (qi >= queue.length) { music.stop(); submitFinalAnswers(answers); return; }
       const idx = queue[qi];
       if (solo) answerEntry(idx);
-      else passCover(idx, 'Type your response (no peeking!)', () => answerEntry(idx));
+      else passCover(idx, 'Type your answer (no peeking!)', () => answerEntry(idx));
     };
     function answerEntry(idx) {
       const p = players[idx];
       app.innerHTML = finalShell('answer', `
           ${clueHead}
           <div class="final-answer-form fin-answer">
-            <label class="fin-answer-label" for="final-answer-input" style="--pc:${PLAYER_COLORS[idx]}">${solo ? 'Your response' : `${escapeHtml(p.name)}, your response`}</label>
-            <input type="text" id="final-answer-input" class="answer-input" placeholder="What is…" autocomplete="off">
+            <label class="fin-answer-label" for="final-answer-input" style="--pc:${PLAYER_COLORS[idx]}">${solo ? 'Your answer' : `${escapeHtml(p.name)}, your answer`}</label>
+            <input type="text" id="final-answer-input" class="answer-input" placeholder="Your answer" autocomplete="off">
             <button class="btn-submit" id="btn-lock-answer">${qi < queue.length - 1 ? 'Lock in and pass' : solo ? 'Reveal answer' : 'Reveal answers'}</button>
           </div>
       `, 'thinking');
@@ -2623,7 +2623,7 @@ function renderFinalAnswer() {
   const played = i => finalWagers[i] > 0 || finalAnswers[i].answer;
 
   app.innerHTML = finalShell('reveal', `
-      <p class="fin-label">The correct response</p>
+      <p class="fin-label">The answer</p>
       <div class="fin-response">${escapeHtml(finalClue.response)}</div>
       <ul class="fin-rows">
         ${players.map((p, i) => `
