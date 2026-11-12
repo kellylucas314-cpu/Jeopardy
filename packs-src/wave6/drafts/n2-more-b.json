@@ -1,0 +1,392 @@
+[
+ {
+  "name": "KEEPING THE LIGHTS ON",
+  "clues": [
+   {
+    "clue": "Electric car batteries depend on this lightest of metals, element number 3",
+    "response": "lithium",
+    "value": 400
+   },
+   {
+    "clue": "This appliance warms and cools a home by moving thermal energy around instead of burning fuel",
+    "response": "a heat pump",
+    "value": 800
+   },
+   {
+    "clue": "In 2024 Microsoft agreed to buy power from this Pennsylvania plant, site of a 1979 accident, once it restarts",
+    "response": "Three Mile Island",
+    "value": 1200
+   },
+   {
+    "clue": "Units 3 and 4 at Georgia's Plant Vogtle, finished in 2023 and 2024, were the first new American ones of these in decades",
+    "response": "nuclear reactors",
+    "value": 1600
+   },
+   {
+    "clue": "The big U.S. climate and energy law of 2022 went by this name about bringing prices down",
+    "response": "the Inflation Reduction Act",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "MACHINES THAT LEARN",
+  "clues": [
+   {
+    "clue": "This company's Copilot put an AI assistant into Word, Excel and Windows",
+    "response": "Microsoft",
+    "value": 400
+   },
+   {
+    "clue": "This term names an AI-made video that puts words in a real person's mouth",
+    "response": "a deepfake",
+    "value": 800
+   },
+   {
+    "clue": "Google's chatbot, first called Bard, took this zodiac name in 2024",
+    "response": "Gemini",
+    "value": 1200
+   },
+   {
+    "clue": "Chatbots are built on LLMs, short for this three-word phrase",
+    "response": "large language model",
+    "value": 1600
+   },
+   {
+    "clue": "Called a 'godfather of AI', this Nobel winner left Google in 2023 to warn about the technology",
+    "response": "Geoffrey Hinton",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "LOG IN, SCROLL ON",
+  "clues": [
+   {
+    "clue": "In 2024 this YouTuber, born Jimmy Donaldson, became the platform's most-subscribed creator",
+    "response": "MrBeast",
+    "value": 400
+   },
+   {
+    "clue": "Calling itself 'the front page of the internet', this site of user-run communities went public in 2024",
+    "response": "Reddit",
+    "value": 800
+   },
+   {
+    "clue": "Amazon owns this platform where millions watch other people play video games live",
+    "response": "Twitch",
+    "value": 1200
+   },
+   {
+    "clue": "Gamers and friends gather in 'servers' on this chat app",
+    "response": "Discord",
+    "value": 1600
+   },
+   {
+    "clue": "Writers sell newsletters straight to their readers on this platform founded in 2017",
+    "response": "Substack",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "PODCAST NATION",
+  "clues": [
+   {
+    "clue": "This comedian and UFC commentator took his 'Experience' to Spotify in a 2020 deal",
+    "response": "Joe Rogan",
+    "value": 400
+   },
+   {
+    "clue": "'The Daily' comes from this newspaper",
+    "response": "The New York Times",
+    "value": 800
+   },
+   {
+    "clue": "In 2014 this true-crime podcast about the case of Adnan Syed made the format a phenomenon",
+    "response": "Serial",
+    "value": 1200
+   },
+   {
+    "clue": "Jason and Travis, these football brothers, host 'New Heights'",
+    "response": "the Kelces",
+    "value": 1600
+   },
+   {
+    "clue": "Jason Bateman, Will Arnett and Sean Hayes surprise one another with mystery guests on this show",
+    "response": "SmartLess",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "DATELINE: THE WORLD",
+  "clues": [
+   {
+    "clue": "In August 2021 the Taliban retook this capital as American forces left",
+    "response": "Kabul",
+    "value": 400
+   },
+   {
+    "clue": "In August 2020 a stockpile of ammonium nitrate exploded at the port of this Lebanese capital",
+    "response": "Beirut",
+    "value": 800
+   },
+   {
+    "clue": "In February 2021 generals in this country seized power and detained Aung San Suu Kyi",
+    "response": "Myanmar",
+    "value": 1200
+   },
+   {
+    "clue": "The 2022 death of Mahsa Amini in police custody set off months of protest in this country",
+    "response": "Iran",
+    "value": 1600
+   },
+   {
+    "clue": "In 2022 protesters swam in the president's pool after storming his residence in this island nation",
+    "response": "Sri Lanka",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ONLY IN WASHINGTON",
+  "clues": [
+   {
+    "clue": "This former mayor of South Bend, Indiana, became transportation secretary in 2021",
+    "response": "Pete Buttigieg",
+    "value": 400
+   },
+   {
+    "clue": "This Kentuckian, the longest-serving Senate party leader in history, gave up the post at the start of 2025",
+    "response": "Mitch McConnell",
+    "value": 800
+   },
+   {
+    "clue": "In 2021 Deb Haaland became the first Native American cabinet secretary, leading this department",
+    "response": "the Interior",
+    "value": 1200
+   },
+   {
+    "clue": "It took this many ballots for Kevin McCarthy to be elected Speaker in January 2023",
+    "response": "15",
+    "value": 1600
+   },
+   {
+    "clue": "In 2023 this New York congressman became only the sixth House member ever expelled",
+    "response": "George Santos",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "TELL-ALL",
+  "clues": [
+   {
+    "clue": "'A Promised Land', published in 2020, is the first volume of this president's memoirs",
+    "response": "Barack Obama",
+    "value": 400
+   },
+   {
+    "clue": "Her 970-page 2023 memoir is titled 'My Name Is' this",
+    "response": "Barbra",
+    "value": 800
+   },
+   {
+    "clue": "This 'iCarly' star's 2022 memoir bore the startling title 'I'm Glad My Mom Died'",
+    "response": "Jennette McCurdy",
+    "value": 1200
+   },
+   {
+    "clue": "Michelle Zauner of the band Japanese Breakfast wrote of grief and Korean food in 'Crying in' this supermarket",
+    "response": "H Mart",
+    "value": 1600
+   },
+   {
+    "clue": "Raised by survivalists in Idaho, Tara Westover told how she got to Cambridge in this 2018 memoir",
+    "response": "Educated",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "TONY, TONY, TONY",
+  "clues": [
+   {
+    "clue": "This 'Girl on Fire' singer turned her own teenage years into the musical 'Hell's Kitchen'",
+    "response": "Alicia Keys",
+    "value": 400
+   },
+   {
+    "clue": "Orpheus follows Eurydice down to the underworld in this folk musical, a 2019 Tony winner",
+    "response": "Hadestown",
+    "value": 800
+   },
+   {
+    "clue": "A teenager who ages too fast is the heroine of this 2023 Best Musical, 'Kimberly' this",
+    "response": "Akimbo",
+    "value": 1200
+   },
+   {
+    "clue": "This 2024 drama about a 1970s rock band making an album set a record for Tony nominations for a play",
+    "response": "Stereophonic",
+    "value": 1600
+   },
+   {
+    "clue": "Michael R. Jackson won a Pulitzer and the 2022 Best Musical Tony for this show about an usher writing a musical",
+    "response": "A Strange Loop",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "STILL GOT IT",
+  "clues": [
+   {
+    "clue": "She tried to turn down the Rock Hall in 2022, got in anyway, and answered with the 2023 album 'Rockstar'",
+    "response": "Dolly Parton",
+    "value": 400
+   },
+   {
+    "clue": "In 2022 he headlined Glastonbury a week after turning 80",
+    "response": "Paul McCartney",
+    "value": 800
+   },
+   {
+    "clue": "In 2024 she ended her Celebration Tour with a free concert for more than a million on Copacabana Beach",
+    "response": "Madonna",
+    "value": 1200
+   },
+   {
+    "clue": "Six decades into her career, the singer of 'Believe' was finally voted into the Rock Hall in 2024",
+    "response": "Cher",
+    "value": 1600
+   },
+   {
+    "clue": "This country outlaw turned 90 in 2023 with a two-night party at the Hollywood Bowl",
+    "response": "Willie Nelson",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "MAJOR MOMENTS",
+  "clues": [
+   {
+    "clue": "This Spaniard won the 2023 Masters, then jumped to LIV Golf",
+    "response": "Jon Rahm",
+    "value": 400
+   },
+   {
+    "clue": "Nicknamed 'the Scientist', he won his second U.S. Open in 2024 at Pinehurst",
+    "response": "Bryson DeChambeau",
+    "value": 800
+   },
+   {
+    "clue": "The 2021 Masters champion, he was the first Japanese man to win a major",
+    "response": "Hideki Matsuyama",
+    "value": 1200
+   },
+   {
+    "clue": "She won five straight LPGA starts in the spring of 2024",
+    "response": "Nelly Korda",
+    "value": 1600
+   },
+   {
+    "clue": "In 2024 he won both the PGA Championship and the British Open for his first two majors",
+    "response": "Xander Schauffele",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ADVANTAGE, NEXT GENERATION",
+  "clues": [
+   {
+    "clue": "She lit the Olympic cauldron at the Tokyo Games",
+    "response": "Naomi Osaka",
+    "value": 400
+   },
+   {
+    "clue": "This Polish star won four French Open titles in five years",
+    "response": "Iga Świątek",
+    "value": 800
+   },
+   {
+    "clue": "This Australian retired in 2022 at 25, ranked No. 1 and weeks after winning her home major",
+    "response": "Ash Barty",
+    "value": 1200
+   },
+   {
+    "clue": "In 2021 this British teenager won the U.S. Open as a qualifier without dropping a set",
+    "response": "Emma Raducanu",
+    "value": 1600
+   },
+   {
+    "clue": "His win in the 2021 U.S. Open final denied Novak Djokovic a calendar Grand Slam",
+    "response": "Daniil Medvedev",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SATURDAY'S HEROES",
+  "clues": [
+   {
+    "clue": "He retired in 2024 after winning seven national titles, six of them at Alabama",
+    "response": "Nick Saban",
+    "value": 400
+   },
+   {
+    "clue": "Kirby Smart's Bulldogs won back-to-back titles after the 2021 and 2022 seasons for this school",
+    "response": "Georgia",
+    "value": 800
+   },
+   {
+    "clue": "He coached Michigan to the 2023 title, then left for the NFL's Chargers",
+    "response": "Jim Harbaugh",
+    "value": 1200
+   },
+   {
+    "clue": "Colorado's two-way star, a cornerback and receiver at once, won the 2024 Heisman",
+    "response": "Travis Hunter",
+    "value": 1600
+   },
+   {
+    "clue": "Long known for basketball, this school beat Miami in January 2026 for its first football national title",
+    "response": "Indiana",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "RINGSIDE SEATS",
+  "clues": [
+   {
+    "clue": "In 2024 this 58-year-old former champ fought YouTuber Jake Paul on Netflix",
+    "response": "Mike Tyson",
+    "value": 400
+   },
+   {
+    "clue": "In 2024 this Ukrainian became the first undisputed heavyweight champion in 24 years",
+    "response": "Oleksandr Usyk",
+    "value": 800
+   },
+   {
+    "clue": "This British heavyweight, the self-styled 'Gypsy King', lost twice to Usyk in 2024",
+    "response": "Tyson Fury",
+    "value": 1200
+   },
+   {
+    "clue": "This Irish champion beat Amanda Serrano in 2022 in the first women's fight to headline Madison Square Garden",
+    "response": "Katie Taylor",
+    "value": 1600
+   },
+   {
+    "clue": "In September 2025 this Nebraskan moved up two weight classes and beat Canelo Álvarez",
+    "response": "Terence Crawford",
+    "value": 2000
+   }
+  ]
+ }
+]
