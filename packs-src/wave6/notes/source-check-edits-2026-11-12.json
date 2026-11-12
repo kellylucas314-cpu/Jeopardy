@@ -1,0 +1,15 @@
+{
+  "about": "Wording fixes that came out of the Wikipedia source check of the recent shelf, Nov 12 2026. See source-check-2026-11-12.md for what was read.",
+  "edits": [
+    {
+      "old": "This Australian retired in 2022 at 25, ranked No. 1 and weeks after winning her home major",
+      "new": "This Australian retired in 2022 at 25, ranked No. 1 and two months after winning her home major",
+      "why": "Her page says she retired in March 2022, 'just two months after her Australian Open title'."
+    },
+    {
+      "old": "In 2025 this Compton rapper performed 'Not Like Us' as the first solo hip-hop headliner",
+      "new": "In 2025 this Compton rapper performed 'Not Like Us' at halftime, one week after the song won five Grammys",
+      "why": "The halftime show's page does not say 'first solo hip-hop headliner'. The five Grammys (2 Feb 2025) and the show (9 Feb 2025) are both on pages that were read."
+    }
+  ]
+}
