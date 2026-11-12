@@ -1,0 +1,159 @@
+{
+  "about": "The 12 November 2026 full read found categories that were near twins of an older category in the same pack: four or five of the same answers, often the very same facts. In each pair the older category stays as it was and the twin below gets new clues on the same theme with different answers, so a player never meets the same board twice. Values and Daily Double flags stay on their rows. `rows` lists all five clues of the category after the rewrite, easiest first; a row marked keep is the old clue that was not a repeat. `singles` replace one clue that told the same fact as a clue elsewhere. Apply with: node scripts/apply-category-rewrites.cjs packs-src/twin-rewrites-2026-11-12.json",
+  "rewrites": [
+    { "pack": "original", "round": "jeopardy", "name": "CAPITAL OFFENSES", "twin": "NOT THE BIGGEST CITY", "rows": [
+      ["The Brandenburg Gate, once stranded beside a wall, stands at the heart of this reunited capital", "Berlin"],
+      ["Trekkers bound for Mount Everest usually start out in this capital of Nepal", "Kathmandu"],
+      ["At nearly 12,000 feet, this seat of Bolivia's government is the highest capital city in the world", "La Paz"],
+      ["Renamed 'Red Hero' in 1924, this capital is home to nearly half of Mongolia's people", "Ulaanbaatar"],
+      ["Named for a U.S. president, this capital of Liberia was settled by freed American slaves in the 1820s", "Monrovia"] ] },
+    { "pack": "original", "round": "double", "name": "OPENING LINES", "twin": "FAMOUS FIRST LINES", "rows": [
+      ["Its opening sentence says all children grow up, except one: the boy hero of this J.M. Barrie story", "Peter Pan"],
+      ["A comfortable hole in the ground, home to a certain Mr. Baggins, is where this 1937 adventure begins", "The Hobbit"],
+      ["Narrator Nick Carraway opens this 1925 novel with advice his father gave him in his 'younger and more vulnerable years'", "The Great Gatsby"],
+      ["Facing a firing squad, Colonel Aureliano Buendía recalls discovering ice as this García Márquez novel begins", "One Hundred Years of Solitude"],
+      ["'Stately, plump Buck Mulligan' kicks off this 1922 novel spanning a single Dublin day", "Ulysses", "keep"] ] },
+    { "pack": "original", "round": "double", "name": "POLES APART", "twin": "ICE TO MEET YOU", "rows": [
+      ["He reached the South Pole in January 1912 only to find a Norwegian tent, and died on the march home", "Robert Falcon Scott"],
+      ["This American naval aviator claimed a 1926 flight over the North Pole, then flew over the South Pole in 1929", "Richard Byrd"],
+      ["This Black explorer from Maryland, a partner on Arctic expeditions for two decades, may have stood at the North Pole first in 1909", "Matthew Henson"],
+      ["Sir John Franklin died seeking this sea route over Canada's top, which a Norwegian finally sailed in 1903-06", "the Northwest Passage", "keep"],
+      ["After both his companions died in 1912-13, this Australian geologist trudged 100 miles alone back to Cape Denison", "Douglas Mawson"] ] },
+    { "pack": "original", "round": "double", "name": "COINED BY THE QUILL", "twin": "FRESHLY MINTED WORDS", "rows": [
+      ["Jonathan Swift invented this island of six-inch-tall people, whose name now describes anything tiny", "Lilliput (Lilliputian)"],
+      ["Sir Walter Scott's 'Ivanhoe' used this word for a knight whose spear was for hire; today it's a writer without a boss", "freelance"],
+      ["Milton coined this name for the capital of Hell in 'Paradise Lost', and today it means sheer uproar", "pandemonium", "keep"],
+      ["Norman Mailer coined this word in his 1973 book on Marilyn Monroe for a 'fact' that exists only because it was printed", "factoid"],
+      ["In 1954 writer Sylvia Wright coined this word for a misheard lyric, having heard 'laid him on the green' as a lady's name", "mondegreen"] ] },
+    { "pack": "original", "round": "jeopardy", "name": "POP ICONS", "twin": "POP STARS ALIGN", "rows": [
+      ["'Girls Just Want to Have Fun' was the 1983 breakout for this singer with the rainbow-bright hair", "Cyndi Lauper"],
+      ["He left the Commodores, danced on the ceiling and co-wrote 'We Are the World' with Michael Jackson", "Lionel Richie"],
+      ["'Control' and 'Rhythm Nation' made this youngest of nine siblings from Gary, Indiana a superstar in her own right", "Janet Jackson"],
+      ["After Wham!, he went solo with the 1987 album 'Faith' and its leather-jacketed title hit", "George Michael"],
+      ["Born Reginald Dwight, he borrowed both halves of his stage name from bandmates in Bluesology", "Elton John", "keep"] ] },
+    { "pack": "original", "round": "jeopardy", "name": "BARD TO THE BONE", "twin": "THE PLAY'S THE THING", "rows": [
+      ["'Et tu, Brute?' gasps the title Roman as the daggers find him in this tragedy", "Julius Caesar"],
+      ["Puck's love potion and a weaver wearing a donkey's head enliven this comedy set in an Athenian wood", "A Midsummer Night's Dream"],
+      ["Suitors must choose among caskets of gold, silver and lead to win the heiress Portia in this play", "The Merchant of Venice"],
+      ["On a storm-lashed heath, a mad old king rages with only his Fool and the disguised Kent for company in this tragedy", "King Lear"],
+      ["The sorcerer Prospero, exiled duke of Milan, whips up the title storm in this late romance", "The Tempest"] ] },
+    { "pack": "original", "round": "jeopardy", "name": "OVER THE MOONS", "twin": "SPACED OUT", "rows": [
+      ["Twelve astronauts walked on this world between 1969 and 1972", "the Moon"],
+      ["A salty ocean may lie under the cracked ice of this moon of Jupiter that shares its name with a continent", "Europa"],
+      ["No moon anywhere is bigger than this one of Jupiter's, which even outsizes the planet Mercury", "Ganymede"],
+      ["Half as wide as Pluto itself, this moon discovered in 1978 is named for the ferryman of the dead", "Charon"],
+      ["The outermost of Jupiter's four big moons, it is one of the most heavily cratered bodies in the solar system", "Callisto"] ] },
+    { "pack": "original", "round": "double", "name": "THE AGE OF DISCOVERY", "twin": "KEEP CALM AND CARAVEL ON", "rows": [
+      ["In 1507 mapmaker Martin Waldseemüller put this Florentine navigator's first name on the New World", "Amerigo Vespucci"],
+      ["This Portuguese prince never sailed on a voyage of discovery himself, but he sponsored the captains who mapped Africa's coast", "Henry the Navigator"],
+      ["This Spaniard crossed the Isthmus of Panama in 1513 and claimed the Pacific for Spain", "Vasco Nunez de Balboa", "keep"],
+      ["A New York bridge honors this Florentine, who sailed into the harbor for France in 1524", "Giovanni da Verrazzano"],
+      ["Swinging wide of Africa on his way to India in 1500, this Portuguese captain landed in Brazil and claimed it", "Pedro Álvares Cabral"] ] },
+    { "pack": "original", "round": "jeopardy", "name": "PUNCHING THE TV CLOCK", "twin": "LAUGHING ON THE JOB", "rows": [
+      ["Candice Bergen played this title TV journalist, the star reporter of the newsmagazine 'FYI'", "Murphy Brown"],
+      ["Andy Kaufman played Latka Gravas, the garage's mechanic from a made-up homeland, on this sitcom", "Taxi", "keep"],
+      ["America Ferrera stocked the shelves at Cloud 9, a big-box store in St. Louis, on this sitcom", "Superstore"],
+      ["Judge Harry Stone, a magic-loving Mel Tormé fan, heard Manhattan's late-shift cases on this sitcom", "Night Court"],
+      ["Hal Linden's weary captain ran the detectives' squad room of New York's 12th Precinct on this 1970s sitcom", "Barney Miller"] ] },
+    { "pack": "original", "round": "double", "name": "DECIPHER ME THIS", "twin": "CRACKING THE CODE", "rows": [
+      ["Until the 1820s nobody could read this picture writing of ancient Egypt, whose Greek name means 'sacred carvings'", "hieroglyphs"],
+      ["Sir Arthur Evans dug up the first Linear B tablets at this Cretan palace tied to the legend of King Minos", "Knossos"],
+      ["This English polymath, famed for his double-slit experiment with light, read a few hieroglyphs before a French rival finished the job", "Thomas Young"],
+      ["The middle band of text on the Rosetta Stone is in this everyday Egyptian script, named from the Greek for 'of the people'", "demotic"],
+      ["In Soviet Leningrad, Yuri Knorozov proved this civilization's glyphs spelled sounds, not just ideas", "the Maya", "keep"] ] },
+    { "pack": "original", "round": "double", "name": "DRY HUMOR", "twin": "SAND TRAPS", "rows": [
+      ["Death Valley and Joshua trees lie in this desert of southeastern California", "the Mojave"],
+      ["By the rule of scant precipitation, this ice-covered continent is the largest desert on Earth", "Antarctica"],
+      ["The San people have long hunted and foraged in this desert that covers much of Botswana", "the Kalahari"],
+      ["Also called the Great Indian Desert, it straddles Rajasthan and Pakistan", "the Thar"],
+      ["Silk Road caravans skirted this desert of Xinjiang, whose name is popularly said to mean 'go in and you won't come out'", "the Taklamakan"] ] },
+    { "pack": "original", "round": "double", "name": "THIRST QUARTERS", "twin": "SAND TRAPS", "rows": [
+      ["The saguaro cactus grows wild only in this desert of Arizona and northwestern Mexico", "the Sonoran"],
+      ["David Ben-Gurion retired to the kibbutz Sde Boker in this desert, which makes up more than half of Israel's land", "the Negev"],
+      ["Big Bend National Park lies in this desert, North America's largest, shared by Texas and Mexico", "the Chihuahuan"],
+      ["This cold, windswept expanse of southern Argentina lies in the rain shadow of the Andes", "the Patagonian Desert"],
+      ["A burning gas crater nicknamed the 'Door to Hell' glows in this desert covering most of Turkmenistan", "the Karakum"] ] },
+    { "pack": "original", "round": "double", "name": "ART MOVES", "twin": "MOVEMENT CLASS", "rows": [
+      ["Thomas Cole and Frederic Church painted glowing American wilderness as leaders of this group of painters named for a New York river", "the Hudson River School"],
+      ["Fragonard's 'The Swing', all pink silk and flirtation, sums up this frothy 18th-century French style", "Rococo"],
+      ["In 1848 Rossetti, Millais and Holman Hunt formed this English brotherhood, named for art before a certain Renaissance master", "the Pre-Raphaelites"],
+      ["Courbet's 'The Stone Breakers' showed laborers without flattery, a landmark of this mid-1800s movement", "Realism"],
+      ["Vladimir Tatlin's spiraling, never-built Monument to the Third International is an icon of this Soviet movement", "Constructivism"] ] },
+    { "pack": "easy", "round": "jeopardy", "name": "DOWN AT THE LANES", "twin": "RIGHT UP YOUR ALLEY", "rows": [
+      ["Roll your ball off the lane into one of these side channels and you score nothing", "the gutter"],
+      ["A game of bowling is divided into this many frames", "ten"],
+      ["Step past this boundary at the start of the lane and your throw counts for zero", "the foul line"],
+      ["Three strikes in a row earn this nickname you might also see on a Thanksgiving table", "a turkey", "keep"],
+      ["The pin at the very front of the triangle, number 1, goes by this name", "the headpin"] ] },
+    { "pack": "easy", "round": "jeopardy", "name": "WISH YOU WERE HERE", "twin": "COAST-TO-COAST LANDMARKS", "rows": [
+      ["Nine white letters, each about 45 feet tall, spell out this neighborhood's name on a Los Angeles hillside", "Hollywood (the Hollywood Sign)"],
+      ["Sightseers ride up to the 86th-floor deck of this Fifth Avenue skyscraper, which topped out at 102 stories in 1931", "the Empire State Building"],
+      ["Honest Abe sits 19 feet tall in marble inside this temple-like landmark at the west end of the National Mall", "the Lincoln Memorial"],
+      ["Opened in 1883, this span with stone Gothic towers carries walkers and traffic from Manhattan over the East River", "the Brooklyn Bridge"],
+      ["Once called Boulder Dam, this Colorado River giant created Lake Mead in the 1930s", "Hoover Dam", "keep"] ] },
+    { "pack": "easy", "round": "jeopardy", "name": "AT THE RECORD HOP", "twin": "ROCK 'N' ROLL PIONEERS", "rows": [
+      ["The swivel-hipped 'King of Rock and Roll' warned folks off his blue suede shoes", "Elvis Presley", "keep"],
+      ["This teen idol of 'Travelin' Man' later sang about a 'Garden Party' where he couldn't please everyone", "Ricky Nelson"],
+      ["Behind dark glasses, this Texan with the soaring voice sang 'Oh, Pretty Woman'", "Roy Orbison"],
+      ["'Hello, baby!' This Texas disc jockey scored with 'Chantilly Lace' in 1958", "the Big Bopper"],
+      ["This rocker in black leather hiccuped his way through 'Be-Bop-A-Lula' in 1956", "Gene Vincent"] ] },
+    { "pack": "easy", "round": "double", "name": "FUN AT THE FAIR", "twin": "AT THE COUNTY FAIR", "rows": [
+      ["Painted horses go up and down to organ music on this gentle ride", "the merry-go-round (carousel)"],
+      ["Drivers happily crash into each other in these little electric vehicles with rubber rims", "bumper cars"],
+      ["Warped reflections make you look ten feet tall or two feet wide in this walk-through attraction", "the fun house (house of mirrors)"],
+      ["Hit the target with a baseball and the volunteer on the seat drops into the water of this booth", "the dunk tank"],
+      ["Hands behind your back! Faces go straight into the blueberry filling in this messy competition", "a pie-eating contest"] ] },
+    { "pack": "easy", "round": "jeopardy", "name": "HOMEGROWN", "twin": "THE VEGETABLE PATCH", "rows": [
+      ["'Knee-high by the Fourth of July' is the old yardstick for this tall crop eaten on the cob", "corn"],
+      ["Left to grow big and orange, this vine crop becomes October's jack-o'-lantern", "the pumpkin"],
+      ["Shell these round green seeds from their pods; the 'sweet' kind is a garden classic", "peas"],
+      ["Dig up these underground tubers, also called spuds, after the plants' tops die back", "potatoes"],
+      ["Ready in under a month, this peppery little red root is one of the fastest crops in the garden", "the radish"] ] },
+    { "pack": "easy", "round": "jeopardy", "name": "TV'S WILD WEST", "twin": "PRIME-TIME COWBOYS", "rows": [
+      ["Hugh O'Brian wore the badge as this real-life Tombstone lawman in a 1950s series", "Wyatt Earp"],
+      ["Secret agent James West rode a private train full of gadgets on this 1960s Western with a doubled word in its title", "The Wild Wild West"],
+      ["Barbara Stanwyck ruled the Barkley ranch as matriarch Victoria on this Western", "The Big Valley"],
+      ["Before the movies made him a star, Steve McQueen played bounty hunter Josh Randall on this Western", "Wanted: Dead or Alive"],
+      ["Ward Bond's Major Seth Adams led settlers west from Missouri on this Western", "Wagon Train", "keep"] ] },
+    { "pack": "easy", "round": "double", "name": "THE TV CORRAL", "twin": "PRIME-TIME COWBOYS", "rows": [
+      ["Guy Williams carved a Z with his sword as this masked Disney hero of old California", "Zorro"],
+      ["Fess Parker traded Davy Crockett's coonskin cap for the role of this Kentucky frontiersman in a 1960s series", "Daniel Boone"],
+      ["James Drury played the title foreman of Shiloh Ranch on this 90-minute Western", "The Virginian"],
+      ["Chuck Connors spun his trusty Winchester as rancher Lucas McCain on this series", "The Rifleman", "keep"],
+      ["Ronald Reagan hosted this long-running anthology, sponsored by 20 Mule Team Borax, in the mid-1960s", "Death Valley Days"] ] },
+    { "pack": "easy", "round": "jeopardy", "name": "THE CROONERS", "twin": "CROONER'S CORNER", "rows": [
+      ["'Moon River' was the theme song of this smooth singer famous for his Christmas TV specials", "Andy Williams"],
+      ["He crooned 'White Christmas' and hit the 'Road' with Bob Hope", "Bing Crosby", "keep"],
+      ["'Chances Are' and 'Misty' are signature songs of this velvet-voiced singer", "Johnny Mathis"],
+      ["In white buck shoes, this clean-cut singer scored with 'Love Letters in the Sand'", "Pat Boone"],
+      ["A megaphone was the trademark of this 1920s crooner who led the Connecticut Yankees", "Rudy Vallée"] ] },
+    { "pack": "easy", "round": "jeopardy", "name": "CROONER CORNER", "twin": "CROONER'S CORNER", "rows": [
+      ["'Mr. Las Vegas' made 'Danke Schoen' his signature song", "Wayne Newton"],
+      ["The 'Polish Prince' topped the charts in 1963 with 'Blue Velvet'", "Bobby Vinton"],
+      ["This 'Splish Splash' and 'Mack the Knife' singer married actress Sandra Dee in 1960", "Bobby Darin", "keep"],
+      ["This singer nicknamed 'the Velvet Fog' co-wrote 'The Christmas Song'", "Mel Tormé"],
+      ["He sang 'Oh! My Pa-Pa,' then left Debbie Reynolds for Elizabeth Taylor", "Eddie Fisher"] ] },
+    { "pack": "easy", "round": "jeopardy", "name": "SWING TIME", "twin": "BIG BAND DAYS", "rows": [
+      ["Every New Year's Eve, this bandleader and his Royal Canadians played 'Auld Lang Syne'", "Guy Lombardo"],
+      ["'Hi-de-ho!' This Cotton Club bandleader in a white zoot suit sang 'Minnie the Moocher'", "Cab Calloway"],
+      ["His golden trumpet soared on 'Ciribiribin' and 'You Made Me Love You'", "Harry James"],
+      ["Young Frank Sinatra got his break singing for this trombone-playing brother of Jimmy", "Tommy Dorsey", "keep"],
+      ["This clarinetist's 1938 record of 'Begin the Beguine' made him a rival to the 'King of Swing'", "Artie Shaw"] ] },
+    { "pack": "easy", "round": "jeopardy", "name": "BIG BAND STAND", "twin": "BIG BAND DAYS", "rows": [
+      ["Before 'I Love Lucy,' this Cuban bandleader was known for pounding a conga drum to 'Babalu'", "Desi Arnaz"],
+      ["Doris Day sang 'Sentimental Journey' with this leader's 'Band of Renown'", "Les Brown"],
+      ["This gum-chewing drummer of 'Sing, Sing, Sing' fame went on to lead a big band of his own", "Gene Krupa"],
+      ["This master of the vibraphone led a hard-swinging band famous for 'Flying Home'", "Lionel Hampton"],
+      ["Dressed in cap and gown, the 'Ol' Professor' ran a 'Kollege of Musical Knowledge' on radio", "Kay Kyser"] ] },
+    { "pack": "easy", "round": "double", "name": "ROLLIN' ON THE RIVER", "twin": "OL' MAN RIVER", "rows": [
+      ["George Washington crossed this icy river on Christmas night 1776", "the Delaware"],
+      ["The nation's capital sits on this river, which flows past Mount Vernon", "the Potomac"],
+      ["In 2009 Captain 'Sully' Sullenberger landed a jetliner safely on this New York river", "the Hudson"],
+      ["Stephen Foster's 'Old Folks at Home' made this Florida river famous", "the Suwannee", "keep"],
+      ["Lewis and Clark followed this great river of the Northwest to the Pacific in 1805", "the Columbia"] ] }
+  ],
+  "singles": [
+    {"pack": "original", "round": "jeopardy", "name": "MYTH DEMEANORS", "oldResponse": "Leto", "clue": "Zeus sewed this unborn god of wine into his own thigh and later gave birth to him", "response": "Dionysus", "why": "The Leto clue told the same fact as GREEKING OUT's last clue."},
+    {"pack": "original", "round": "jeopardy", "name": "ELEMENT-ARY SCHOOL", "oldResponse": "polonium", "clue": "Bananas are famous for this alkali metal, whose symbol K comes from its Latin name, kalium", "response": "potassium", "why": "The polonium clue told the same fact as ELEMENTARY, MY DEAR's last clue."}
+  ]
+}

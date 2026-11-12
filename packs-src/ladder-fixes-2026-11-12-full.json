@@ -28,6 +28,160 @@
       ],
       "why": "The Universal clue is the second easiest, not the hardest.",
       "done": "Splash Mountain|Universal|Super Nintendo World|the Guardians of the Galaxy|Tron"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "A WALK IN THE PARK",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "Denali is easier than Arches.",
+      "done": "Yellowstone|the Grand Canyon|Yosemite|Denali|Arches"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "NET WORTH",
+      "order": [
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "why": "Wilt's 100-point game is easier than the Minneapolis Lakers.",
+      "done": "three|Shaquille O'Neal|Wilt Chamberlain|Minneapolis|Springfield"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "IN YOUR BLOODSTREAM",
+      "order": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "why": "Plasma is the easiest of the last three.",
+      "done": "oxygen|hemoglobin|plasma|platelets|O negative (type O negative)"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "GROUP DYNAMICS",
+      "order": [
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "why": "Gladys Knight is easier than the Four Tops.",
+      "done": "the Supremes|the Temptations|Gladys Knight|the Four Tops|the Funk Brothers"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "WORLD OF INSECTS",
+      "order": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "why": "The mosquito is the easiest of the last three.",
+      "done": "a butterfly|(honey)bees|a mosquito|ants|a scarab (dung beetle)"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "REVOLTING DEVELOPMENTS",
+      "order": [
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "why": "Iran in 1979 is easier than Haiti in 1804.",
+      "done": "the Bastille|Russia|Iran|Haiti|the Velvet Revolution"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "STATE YOUR NAME",
+      "order": [
+        1,
+        4,
+        2,
+        3,
+        5
+      ],
+      "why": "Alaska is the second easiest.",
+      "done": "Arizona|Alaska|Montana|North Dakota|Tennessee"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "GRAVITY & OTHER ATTRACTIONS",
+      "order": [
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      "why": "Einstein is easier than air resistance.",
+      "done": "Isaac Newton|Albert Einstein|air resistance (drag)|the event horizon|falling"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "EVERYDAY MEDICINE",
+      "order": [
+        2,
+        3,
+        1,
+        4,
+        5
+      ],
+      "why": "Aspirin and antibiotics are easier than acetaminophen.",
+      "done": "aspirin|antibiotics|acetaminophen (paracetamol)|nonsteroidal anti-inflammatory drugs|diphenhydramine"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "PUP QUIZ",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "Laika is easier than the basenji.",
+      "done": "Dalmatian|Chihuahua|Siberian husky|Laika|basenji"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "CTRL + ALT + DELIGHT",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "Turing is easier than ENIAC.",
+      "done": "Microsoft|IBM|the floppy disk|Alan Turing|ENIAC"
     }
   ]
 }
