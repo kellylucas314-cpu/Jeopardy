@@ -2890,7 +2890,7 @@ function shareResult(ranked, isTie) {
   const chapterNote = campaign ? `, Chapter ${campaign.chapter.number}, ${campaign.chapter.title}${chapterOutcome?.won ? ', won' : ''}` : '';
   const header = solo ? `${ranked[0].name} hit Rank ${rank.letter} (${rank.title}) on Clue d'État${chapterNote}!`
     : isTie ? `It's a tie on Clue d'État${chapterNote}!` : `${ranked[0].name} won Clue d'État${chapterNote}!`;
-  const url = 'https://kellylucas314-cpu.github.io/Jeopardy/';
+  const url = 'https://cluedetat.com/';
   const body = `${header}\n${lines.join('\n')}`;
   const text = `${body}\n\nPlay: ${url}`;
   const done = () => showToast('Result copied. Go brag!', 'var(--brass)');
