@@ -231,8 +231,16 @@ export function buzzIn(playerIndex) {
 }
 
 /** Mark the current clue answered on the board. */
-function markClueAnswered() {
-  const { categories, currentClue, cluesAnswered } = getState();
+function markClueAnswered(got = false) {
+  const { categories, currentClue, cluesAnswered, missed = [] } = getState();
+  // a clue that closes without a right answer is kept for the results page
+  if (!got) {
+    setState({
+      missed: [...missed, {
+        category: currentClue.categoryName, clue: currentClue.clue, response: currentClue.response, value: currentClue.value,
+      }],
+    });
+  }
   const updatedCategories = categories.map((cat, ci) =>
     ci === currentClue.catIndex
       ? {
@@ -308,7 +316,7 @@ export function submitAnswer(userAnswer) {
     lastCorrectPlayer: result.correct ? answeringPlayer : getState().lastCorrectPlayer,
   });
 
-  if (!canRebuzz) markClueAnswered();
+  if (!canRebuzz) markClueAnswered(result.correct);
 
   return {
     correct: result.correct,
@@ -359,7 +367,9 @@ export function overrideCorrect() {
     currentClue &&
     !currentClue.isDailyDouble &&
     buzzAttempted.some(a => !a);
-  if (clueStillOpen) markClueAnswered();
+  if (clueStillOpen) markClueAnswered(true);
+  // pardoned: it no longer counts as one that got away
+  else if (currentClue) setState({ missed: (getState().missed || []).filter(m => m.clue !== currentClue.clue) });
 
   sounds.playCorrect();
   return { value, bonus, legion, streak };

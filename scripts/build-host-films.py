@@ -62,12 +62,20 @@ FIGURES = {
     'yell': '23-throw-hands-up-and-yell',
     'stomp': '15-impatient-boot-stomps',
     'bow': '20-sweeping-victory-bow',
+    # a second way to take each outcome, so the same clip is not the only thing he does
+    'nod': '18-pleased-at-attention',
+    'brace': '22-straighten-coat-and-brace',
+    'ponder': '28-hands-on-hips-to-chin',
+    'peer': '25-step-forward-and-peer',
 }
 FACES = {
     'face-smirk': '38-amused-smirk',
     'face-grin': '31-break-into-a-grin',
     'face-startled': '39-startled-double-take',
     'face-stern': '30-stern-sidelong-look',
+    'face-shock': '35-wide-eyed-shock',
+    'face-nod': '36-grudging-nod',
+    'face-brow': '34-suspicious-brow',
 }
 FACE_W = 240
 

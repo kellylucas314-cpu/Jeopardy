@@ -4417,3 +4417,63 @@ body:has(> .category-intro) .host-fig { view-transition-name: none; }
 @media (max-width: 560px) {
   .host-plaque { flex: 0 1 auto; padding: 10px 16px; font-size: 0.9rem; }
 }
+
+/* — Built while Kelly was out (Nov 11 2026, her ask: "think of what else we can do to improve
+     it ... and then go ahead and build it").
+     1. A category name can be asked about: tap or click it and its explainer goes in his speech
+        bubble. On screens too small to print the explainers they stay in the page for screen
+        readers instead of being removed.
+     2. The results page lists the clues nobody got, with their answers, folded under the
+        buttons. — */
+.category-header[role='button'] { cursor: pointer; }
+.category-header[role='button']:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 2px; }
+.cat-note {
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (min-width: 1100px) and (min-height: 700px) {
+  .cat-note { position: static; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal; }
+}
+.missed {
+  width: min(100%, 620px);
+  margin: 18px auto 0;
+  border-radius: 22px;
+  background: rgba(255, 253, 250, 0.82);
+  text-align: left;
+}
+.missed > summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 20px;
+  font: 500 0.98rem/1.2 var(--font-ui);
+  color: var(--cream);
+  cursor: pointer;
+  list-style: none;
+}
+.missed > summary::-webkit-details-marker { display: none; }
+.missed > summary::after { content: '+'; font: 400 1.2rem/1 var(--font-mono); color: var(--text-dim); }
+.missed[open] > summary::after { content: '\2212'; }
+.missed > summary:focus-visible { outline: 2px solid var(--jade-deep); outline-offset: 2px; border-radius: 22px; }
+.missed-count {
+  min-width: 26px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--accent-wash);
+  color: var(--accent-ink);
+  font: 500 0.8rem/1.2 var(--font-mono);
+  text-align: center;
+}
+.missed-list { margin: 0; padding: 0 20px 18px; list-style: none; display: grid; gap: 14px; }
+.missed-list li { display: grid; gap: 3px; padding-top: 14px; border-top: 1px solid rgba(34, 34, 34, 0.08); }
+.missed-cat { font: 500 0.75rem/1.3 var(--font-mono); letter-spacing: 0.02em; text-transform: uppercase; color: var(--accent-ink); }
+.missed-clue { font: 400 0.98rem/1.45 var(--font-ui); color: var(--text-dim); text-wrap: pretty; }
+.missed-answer { font: 600 1.05rem/1.3 var(--font-ui); color: var(--cream); }
+.host-plaque .plaque-cat { display: block; font: 600 0.78em/1.3 var(--font-ui); letter-spacing: 0.04em; }

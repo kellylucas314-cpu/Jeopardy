@@ -325,10 +325,10 @@ const CHAPTER_LINES = {
 
 /** How he takes each outcome: a pose and a move for the big figure, a face for the small one. */
 const REACTIONS = {
-  correct: { poses: ['victory'], face: 'delighted', move: 'hop', films: ['pleased'], big: 'fist', bust: 'face-smirk', bigBust: 'face-grin' },
-  wrong: { poses: ['stepping-back', 'shocked', 'defeated'], face: 'frustrated', move: 'recoil', films: ['shrug'], big: 'yell', bust: 'face-startled' },
+  correct: { poses: ['victory'], face: 'delighted', move: 'hop', films: ['pleased', 'nod'], big: 'fist', bust: ['face-smirk', 'face-nod'], bigBust: 'face-grin' },
+  wrong: { poses: ['stepping-back', 'shocked', 'defeated'], face: 'frustrated', move: 'recoil', films: ['shrug', 'brace'], big: 'yell', bust: ['face-startled', 'face-shock'] },
   timeout: { poses: ['arms-crossed'], face: 'annoyed', move: 'refuse', films: ['stomp'], bust: 'face-stern' },
-  pass: { poses: ['shrug'], face: 'puzzled', move: 'settle', bust: 'face-stern' },
+  pass: { poses: ['shrug'], face: 'puzzled', move: 'settle', films: ['ponder'], bust: 'face-brow' },
   pardon: { poses: ['welcome'], face: 'smirk', move: 'settle', bust: 'face-smirk' },
 };
 let lastOutcome = null; // how the last clue went, for his stance back at the board
@@ -372,7 +372,7 @@ function verdict(kind, line, { big = false } = {}) {
   // One of Kelly's reaction clips where there is one: the whole of him on a wide screen,
   // his face in the verdict picture on a phone. The still pose is the fallback for both.
   const film = (big && r.big) || (r.films && pick(r.films));
-  const bust = (big && r.bigBust) || r.bust;
+  const bust = (big && r.bigBust) || (Array.isArray(r.bust) ? pick(r.bust) : r.bust);
   hostReact(pose, { move: r.move, say: line, film });
   if (kind === 'correct' || kind === 'pardon') navigator.vibrate?.(18);
   else if (kind === 'wrong' || kind === 'timeout') navigator.vibrate?.([36, 50, 36]);
@@ -438,6 +438,27 @@ function softHyphenate(text) {
   return text.replace(/[A-Za-zÀ-ÿ]{6,}/g, (word) => {
     const cluster = /^(th|ch|sh|ph|wh|qu|ck)/i;
     const vowel = c => /[aeiouyà-ÿ]/i.test(c);
+    // Three or more consonants between vowels (pass|ports, high|lights, amend|ment): break near
+    // the middle of the run, never inside a pair that is read as one sound (an|thems, chil|dren).
+    const extra = new Set();
+    const blends = new Set();
+    const stop = c => /[bcdfgkpt]/i.test(c);
+    for (let s = 1; s < word.length; s++) {
+      if (vowel(word[s]) || !vowel(word[s - 1])) continue;
+      let e = s;
+      while (e + 1 < word.length && !vowel(word[e + 1])) e++;
+      const n = e - s + 1;
+      if (n >= 3 && e + 1 < word.length) {
+        let k = s + (n === 3 ? 2 : Math.ceil(n / 2));
+        if (cluster.test(word[k - 1] + word[k]) || (n === 3 && stop(word[k - 1]) && /[lr]/i.test(word[k]))) k -= 1;
+        if (k >= 3 && word.length - k >= 3) extra.add(k - 1);
+      } else if (n === 2 && e + 1 < word.length && stop(word[s]) && /[lr]/i.test(word[e])) {
+        // a blend stays whole: play|ground, se|cret
+        blends.add(s);
+        if (s >= 3 && word.length - s >= 3) extra.add(s - 1);
+      }
+      s = e;
+    }
     let out = '';
     for (let i = 0; i < word.length; i++) {
       out += word[i];
@@ -445,9 +466,9 @@ function softHyphenate(text) {
       if (left < 3 || rest < 3) continue;
       const a = word[i], b = word[i + 1], c = word[i + 2];
       const vcv = vowel(a) && !vowel(b) && vowel(c);                     // ta|ble: V|CV
-      const vccv = !vowel(a) && !vowel(b) && vowel(c) && vowel(word[i - 1]) && !cluster.test(a + b); // VC|CV
+      const vccv = !vowel(a) && !vowel(b) && vowel(c) && vowel(word[i - 1]) && !cluster.test(a + b) && !blends.has(i); // VC|CV
       const beforeCluster = cluster.test(b + c) && rest >= 4 && vowel(word[i + 3] || ''); // mean|while, ma|chine
-      if ((vcv && !cluster.test(word[i - 1] + a)) || vccv || beforeCluster) out += '\u00AD';
+      if ((vcv && !cluster.test(word[i - 1] + a)) || vccv || beforeCluster || extra.has(i)) out += '\u00AD';
     }
     return out;
   });
@@ -559,7 +580,7 @@ function updateTimerDisplay(seconds, total) {
   // The last five seconds: he leans in
   if (urgent && seconds > 0 && seconds < total && !urgentShown) {
     urgentShown = true;
-    hostReact('leaning', { move: 'lean', say: pick(URGENT_LINES) });
+    hostReact('leaning', { move: 'lean', say: pick(URGENT_LINES), film: 'peer' });
   }
   const timerEl = document.getElementById('timer-bar');
   if (timerEl) {
@@ -1319,7 +1340,12 @@ function renderBoard() {
   const spent = lastPicked;
   lastPicked = null;
   const opening = chapter && cluesAnswered === 0 && round === 1 && CHAPTER_LINES[chapter.number];
-  const remark = opening
+  // Where the board has no room for the explainers (phones, small windows), he says once
+  // that a category can be asked about. A chapter's opening line goes first.
+  const notesHidden = !window.matchMedia('(min-width: 1100px) and (min-height: 700px)').matches;
+  const hint = notesHidden && round === 1 && cluesAnswered === (opening ? 1 : 0) && categories.some(c => c.note)
+    ? `${touchOnly() ? 'Tap' : 'Click'} a category and I will explain it.` : '';
+  const remark = opening || hint
     || (outcome === 'correct' ? pick(AFTER_CORRECT) : outcome && outcome !== 'pass' ? pick(AFTER_WRONG) : pick(BOARD_LINES));
 
   app.innerHTML = `
@@ -1351,7 +1377,7 @@ function renderBoard() {
         <div class="game-board" id="game-board">
           ${categories.map((cat, ci) => `
             <div class="board-category ${cat.themed ? 'themed' : ''}" data-cat="${ci}">
-              <div class="category-header" ${cat.themed ? 'title="This chapter\'s category: three right answers earn the Légion d\'honneur"' : ''}><span class="cat-name">${escapeHtml(softHyphenate(cat.name))}</span>${cat.note ? `<span class="cat-note">${escapeHtml(cat.note)}</span>` : ''}</div>
+              <div class="category-header" ${cat.note ? `role="button" tabindex="0" data-cat="${ci}" aria-label="${escapeHtml(cat.name)}: ${escapeHtml(cat.note)}"` : ''} ${cat.themed ? 'title="This chapter\'s category: three right answers earn the Légion d\'honneur"' : ''}><span class="cat-name">${escapeHtml(softHyphenate(cat.name))}</span>${cat.note ? `<span class="cat-note">${escapeHtml(cat.note)}</span>` : ''}</div>
               ${cat.clues.map((clue, cli) => {
                 const justSpent = clue.answered && spent && spent.ci === ci && spent.cli === cli;
                 return `
@@ -1370,7 +1396,7 @@ function renderBoard() {
       <div class="board-footer">
         <div class="host-dock">
           <div class="host-monogram has-face" aria-hidden="true"><img src="${faceSrc(mood)}" alt=""></div>
-          <div class="host-plaque" aria-live="polite">${players.length > 1 && !opening
+          <div class="host-plaque" aria-live="polite">${players.length > 1 && !opening && !hint
             ? `<strong>${escapeHtml(players[activePlayer].name)}</strong>, choose your battlefield.`
             : escapeHtml(remark)}</div>
         </div>
@@ -1416,13 +1442,30 @@ function renderBoard() {
     if (badge && outcome === 'correct') animate(badge, { scale: [0, 1.25, 1] }, { duration: 0.5, ease: EXPO, delay: 0.5 });
   }
 
+  // Ask him about a category: its explainer goes in his speech bubble
+  document.querySelectorAll('.category-header[data-cat]').forEach((head) => {
+    const explain = () => {
+      const cat = getState().categories[+head.dataset.cat];
+      const plaque = document.querySelector('.host-plaque');
+      if (!cat || !cat.note || !plaque) return;
+      plaque.innerHTML = `<strong class="plaque-cat">${escapeHtml(cat.name)}</strong>${escapeHtml(cat.note)}`;
+      if (!prefersReducedMotion()) animate(plaque, { scale: [0.94, 1] }, { type: 'spring', stiffness: 480, damping: 20 });
+    };
+    head.addEventListener('click', explain);
+    head.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      e.preventDefault();
+      explain();
+    });
+  });
+
   preloadHost(['delighted', 'frustrated', 'annoyed', 'puzzled', 'smirk', 'surprised', 'suspicious']);
   // Kelly's reaction clips: only the ones this screen size shows. (His idle films are fetched
   // from the title page on.)
   preloadFilms([
     ...(window.matchMedia('(min-width: 1240px)').matches
-      ? ['pleased', 'shrug', 'stomp', 'fist', 'yell']
-      : ['face-smirk', 'face-startled', 'face-stern', 'face-grin']),
+      ? ['pleased', 'nod', 'shrug', 'brace', 'ponder', 'peer', 'stomp', 'fist', 'yell']
+      : ['face-smirk', 'face-nod', 'face-startled', 'face-shock', 'face-brow', 'face-stern', 'face-grin']),
     'bow',
   ]);
   // Where he is not live, he goes back to pointing at the board after his reaction
@@ -2547,7 +2590,7 @@ function chapterOutcomeHtml() {
 }
 
 function renderResults() {
-  const { players, gameLength, campaign } = getState();
+  const { players, gameLength, campaign, missed = [] } = getState();
   const rec = loadRecords();
   const prevBest = rec.best ? rec.best.score : null;
   if (!recordedThisGame) { recordGame(players); recordedThisGame = true; }
@@ -2623,6 +2666,18 @@ function renderResults() {
         ${campaign ? '<button class="btn-quiet" id="btn-results-empire">The Empire</button>' : ''}
         <button class="btn-quiet btn-share" id="btn-share">Share result</button>
       </div>
+      ${missed.length ? `
+      <details class="missed">
+        <summary>The ones that got away <span class="missed-count">${missed.length}</span></summary>
+        <ol class="missed-list">
+          ${missed.map(m => `
+            <li>
+              <span class="missed-cat">${escapeHtml(m.category)} &middot; $${formatMoney(m.value)}</span>
+              <span class="missed-clue">${escapeHtml(m.clue)}</span>
+              <strong class="missed-answer">${escapeHtml(m.response)}</strong>
+            </li>`).join('')}
+        </ol>
+      </details>` : ''}
     </div>
   `;
 
