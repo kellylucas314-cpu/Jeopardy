@@ -1,0 +1,302 @@
+[
+ {
+  "name": "HEADS OF STATE OF MIND",
+  "clues": [
+   {
+    "clue": "A former TV comedian, he became the wartime face of Ukraine",
+    "response": "Volodymyr Zelensky",
+    "value": 400
+   },
+   {
+    "clue": "Giorgia Meloni took office in 2022 as this country's first woman prime minister",
+    "response": "Italy",
+    "value": 800
+   },
+   {
+    "clue": "In 2024 Claudia Sheinbaum, a climate scientist, became this country's first woman president",
+    "response": "Mexico",
+    "value": 1200
+   },
+   {
+    "clue": "Outlasted by a head of lettuce, this British prime minister lasted just 49 days in office in 2022",
+    "response": "Liz Truss",
+    "value": 1600
+   },
+   {
+    "clue": "Waving a chainsaw at rallies, this libertarian economist won Argentina's presidency in 2023",
+    "response": "Javier Milei",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "HABEMUS PAPAM",
+  "clues": [
+   {
+    "clue": "This Argentine pope died on Easter Monday 2025",
+    "response": "Francis",
+    "value": 400
+   },
+   {
+    "clue": "Ralph Fiennes runs a papal election in this 2024 film with a one-word title",
+    "response": "Conclave",
+    "value": 800
+   },
+   {
+    "clue": "Pope Leo XIV, elected in 2025, grew up in and around this Midwestern city",
+    "response": "Chicago",
+    "value": 1200
+   },
+   {
+    "clue": "Benedict XVI, who died on the last day of 2022, had been the first pope in nearly six centuries to do this",
+    "response": "resign",
+    "value": 1600
+   },
+   {
+    "clue": "Leo XIV belongs to this religious order named for a saint of Hippo",
+    "response": "the Augustinians",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FIRST MONDAY IN OCTOBER",
+  "clues": [
+   {
+    "clue": "The 2022 Dobbs decision overturned this 1973 abortion ruling",
+    "response": "Roe v. Wade",
+    "value": 400
+   },
+   {
+    "clue": "Sworn in during June 2022, she is the first Black woman to serve as a justice",
+    "response": "Ketanji Brown Jackson",
+    "value": 800
+   },
+   {
+    "clue": "In October 2020 she filled the seat left by Ruth Bader Ginsburg",
+    "response": "Amy Coney Barrett",
+    "value": 1200
+   },
+   {
+    "clue": "In 2024 the Court ruled 6-3 that presidents have broad this from prosecution for official acts",
+    "response": "immunity",
+    "value": 1600
+   },
+   {
+    "clue": "A 2023 ruling on admissions at Harvard and this Tar Heel school ended race-conscious admissions",
+    "response": "the University of North Carolina",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "MOONSHOTS AND STARGAZERS",
+  "clues": [
+   {
+    "clue": "The Perseverance rover touched down in 2021 in Jezero Crater on this planet",
+    "response": "Mars",
+    "value": 400
+   },
+   {
+    "clue": "In July 2021 this British billionaire rode his own Virgin Galactic rocket plane to the edge of space",
+    "response": "Richard Branson",
+    "value": 800
+   },
+   {
+    "clue": "In 2024 Intuitive Machines' Odysseus became the first Moon lander built by one of these to touch down softly",
+    "response": "a private company",
+    "value": 1200
+   },
+   {
+    "clue": "On Artemis II in 2026, this astronaut became the first woman to fly around the Moon",
+    "response": "Christina Koch",
+    "value": 1600
+   },
+   {
+    "clue": "The Artemis II crew traveled farther from Earth than this 1970 mission, the old record holder",
+    "response": "Apollo 13",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "STOCKHOLM CALLING",
+  "clues": [
+   {
+    "clue": "The 2020 Chemistry prize honored two women for this gene-editing tool, often likened to molecular scissors",
+    "response": "CRISPR",
+    "value": 400
+   },
+   {
+    "clue": "Katalin Karikó and Drew Weissman won in 2023 for the mRNA discoveries behind vaccines for this disease",
+    "response": "Covid-19",
+    "value": 800
+   },
+   {
+    "clue": "The 2024 Literature prize went to Han Kang, author of 'The Vegetarian', from this country",
+    "response": "South Korea",
+    "value": 1200
+   },
+   {
+    "clue": "The 2024 Peace Prize honored Nihon Hidankyo, a group of survivors of these 1945 attacks",
+    "response": "the atomic bombings",
+    "value": 1600
+   },
+   {
+    "clue": "This Venezuelan opposition leader won the 2025 Peace Prize",
+    "response": "María Corina Machado",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "THE DECADE'S BALANCE SHEET",
+  "clues": [
+   {
+    "clue": "In 2022 Elon Musk paid $44 billion for this social network",
+    "response": "Twitter",
+    "value": 400
+   },
+   {
+    "clue": "In December 2024 this cryptocurrency passed $100,000 for the first time",
+    "response": "Bitcoin",
+    "value": 800
+   },
+   {
+    "clue": "In November 2025 the U.S. Mint struck the last of these coins made for circulation",
+    "response": "pennies",
+    "value": 1200
+   },
+   {
+    "clue": "In 2023 this Swiss banking giant swallowed its fallen rival Credit Suisse",
+    "response": "UBS",
+    "value": 1600
+   },
+   {
+    "clue": "U.S. inflation peaked at about 9 percent in June of this year, a four-decade high",
+    "response": "2022",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "REDRAWING THE MAP",
+  "clues": [
+   {
+    "clue": "In 2023 this country passed China as the world's most populous",
+    "response": "India",
+    "value": 400
+   },
+   {
+    "clue": "In November 2022 the world's population reached this many billion",
+    "response": "eight",
+    "value": 800
+   },
+   {
+    "clue": "Finland in 2023 and Sweden in 2024 joined this alliance",
+    "response": "NATO",
+    "value": 1200
+   },
+   {
+    "clue": "In 2021 this Caribbean island removed the Queen as head of state and became a republic",
+    "response": "Barbados",
+    "value": 1600
+   },
+   {
+    "clue": "In 2022 this country asked the world to spell its name with a Ü",
+    "response": "Turkey (Türkiye)",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FRESHLY PRINTED FICTION",
+  "clues": [
+   {
+    "clue": "Sally Rooney, whose 'Intermezzo' was a 2024 bestseller, writes from this country",
+    "response": "Ireland",
+    "value": 400
+   },
+   {
+    "clue": "Percival Everett's 'James', a 2025 Pulitzer winner, retells this Mark Twain novel from Jim's side",
+    "response": "Adventures of Huckleberry Finn",
+    "value": 800
+   },
+   {
+    "clue": "Gabrielle Zevin's 2022 novel about two video game designers repeats this word three times in its title",
+    "response": "Tomorrow",
+    "value": 1200
+   },
+   {
+    "clue": "Kristin Hannah's 2024 bestseller 'The Women' follows an Army nurse in this war",
+    "response": "the Vietnam War",
+    "value": 1600
+   },
+   {
+    "clue": "Abdulrazak Gurnah, the 2021 Nobel laureate in Literature, was born on this island off Tanzania",
+    "response": "Zanzibar",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "GRAND OPENINGS",
+  "clues": [
+   {
+    "clue": "The Academy Museum of Motion Pictures opened in 2021 in this city",
+    "response": "Los Angeles",
+    "value": 400
+   },
+   {
+    "clue": "Egypt's vast Grand Egyptian Museum, fully opened in 2025, shows all of this boy king's tomb treasures together",
+    "response": "Tutankhamun",
+    "value": 800
+   },
+   {
+    "clue": "Begun in 1882, this Gaudí basilica in Barcelona passed Ulm Minster in 2025 to become the world's tallest church",
+    "response": "the Sagrada Família",
+    "value": 1200
+   },
+   {
+    "clue": "London's long-delayed east-west railway opened in 2022 as this railway named for the Queen",
+    "response": "the Elizabeth line",
+    "value": 1600
+   },
+   {
+    "clue": "Merdeka 118, completed in 2023 in this Malaysian capital, became the world's second-tallest building",
+    "response": "Kuala Lumpur",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "GADGETS OF THE DECADE",
+  "clues": [
+   {
+    "clue": "Sony released this console, the fifth in its line, in November 2020",
+    "response": "PlayStation 5",
+    "value": 400
+   },
+   {
+    "clue": "Starlink, a satellite internet service, is run by this rocket company",
+    "response": "SpaceX",
+    "value": 800
+   },
+   {
+    "clue": "Driverless taxis from this Alphabet company began carrying paying riders in Phoenix and San Francisco",
+    "response": "Waymo",
+    "value": 1200
+   },
+   {
+    "clue": "Apple sold this $3,499 headset, released in 2024, as a 'spatial computer'",
+    "response": "Vision Pro",
+    "value": 1600
+   },
+   {
+    "clue": "In July 2024 a faulty update from this cybersecurity firm crashed millions of Windows PCs and grounded flights",
+    "response": "CrowdStrike",
+    "value": 2000
+   }
+  ]
+ }
+]

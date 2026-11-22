@@ -1,0 +1,32 @@
+[
+ {
+  "name": "TEAM ORDERS",
+  "clues": [
+   {
+    "clue": "In 2021 the name of this British carmaker, James Bond's favorite, returned to the grid after 61 years",
+    "response": "Aston Martin",
+    "value": 400
+   },
+   {
+    "clue": "In 2024 this British team in papaya orange won its first constructors' crown since 1998",
+    "response": "McLaren",
+    "value": 800
+   },
+   {
+    "clue": "In 2026 this General Motors luxury brand became the first brand-new team on the grid in a decade",
+    "response": "Cadillac",
+    "value": 1200
+   },
+   {
+    "clue": "This Volkswagen Group brand from Ingolstadt took over the Sauber team to enter Formula 1 in 2026",
+    "response": "Audi",
+    "value": 1600
+   },
+   {
+    "clue": "In 2021 Renault renamed its F1 team for this sports-car brand of its own, itself named for mountains",
+    "response": "Alpine",
+    "value": 2000
+   }
+  ]
+ }
+]

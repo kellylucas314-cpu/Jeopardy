@@ -1,0 +1,189 @@
+{
+ "about": "Second batch from the full read of the older packs, 2026-11-12: five more near-twin categories and four single clues that repeated a fact in their own round.",
+ "rewrites": [
+  {
+   "pack": "original",
+   "round": "double",
+   "name": "SHOVEL READY",
+   "twin": "CAN YOU DIG IT?",
+   "rows": [
+    [
+     "A Bedouin shepherd's stone, tossed into a cave near Qumran in 1947, led to these ancient manuscripts",
+     "the Dead Sea Scrolls"
+    ],
+    [
+     "In 1940 four teenagers stumbled on Ice Age paintings of bulls and horses in this French cave",
+     "Lascaux"
+    ],
+    [
+     "Hikers in the Alps in 1991 came upon this 5,300-year-old mummy, tattoos, copper axe and all",
+     "Ötzi (the Iceman)"
+    ],
+    [
+     "Leonard Woolley's digs of the 1920s at this Sumerian city in Iraq uncovered royal tombs heaped with gold",
+     "Ur"
+    ],
+    [
+     "After digging up the labyrinthine palace at Knossos, Arthur Evans named this Cretan culture for a mythic king",
+     "the Minoans",
+     "keep"
+    ]
+   ]
+  },
+  {
+   "pack": "original",
+   "round": "double",
+   "name": "BUBBLE TROUBLE",
+   "twin": "THIS TOO SHALL POP",
+   "rows": [
+    [
+     "At the height of a 1630s Dutch mania, a single bulb of this flower could trade for more than a house",
+     "the tulip",
+     "keep"
+    ],
+    [
+     "Risky 'subprime' mortgages went bad in 2007 and 2008, bursting the bubble in this market and shaking banks worldwide",
+     "housing (real estate)"
+    ],
+    [
+     "In the 1920s speculators snapped up swampy lots in this state, a land boom that a 1926 hurricane helped flatten",
+     "Florida"
+    ],
+    [
+     "In the 1840s Britons poured their savings into shares of hundreds of new lines for this kind of transport, a 'Mania' that ruined thousands",
+     "railways (railroads)"
+    ],
+    [
+     "Japan's 'bubble economy' peaked in December 1989, when this Tokyo stock index came within a whisker of 39,000",
+     "the Nikkei (Nikkei 225)"
+    ]
+   ]
+  },
+  {
+   "pack": "original",
+   "round": "double",
+   "name": "THE PHILANTHROPIST'S STONE",
+   "twin": "GILDED AGE GIVERS",
+   "rows": [
+    [
+     "This Microsoft co-founder started a foundation in 2000 that grew into the world's biggest private charity, fighting malaria and polio",
+     "Bill Gates"
+    ],
+    [
+     "In 2006 this 'Oracle of Omaha' pledged most of his fortune to charity, and he later co-founded the Giving Pledge",
+     "Warren Buffett"
+    ],
+    [
+     "This Kodak founder gave away most of his fortune, including millions sent to MIT under the alias 'Mr. Smith'",
+     "George Eastman"
+    ],
+    [
+     "Called America's first self-made female millionaire, this hair-care mogul bankrolled anti-lynching efforts",
+     "Madam C.J. Walker",
+     "keep"
+    ],
+    [
+     "This Sears, Roebuck president teamed up with Booker T. Washington to help build some 5,000 schools for Black children in the rural South",
+     "Julius Rosenwald"
+    ]
+   ]
+  },
+  {
+   "pack": "easy",
+   "round": "jeopardy",
+   "name": "FOUR-LEGGED FILM STARS",
+   "twin": "FOUR-LEGGED FAVORITES",
+   "rows": [
+    [
+     "This scruffy little mutt rescues two kidnapped children in a 1974 family film that carries his name",
+     "Benji"
+    ],
+    [
+     "This polite little pig learns to herd sheep in a 1995 barnyard film",
+     "Babe"
+    ],
+    [
+     "A slobbery St. Bernard named for this composer turns the Newton family's house upside down in a 1992 comedy",
+     "Beethoven"
+    ],
+    [
+     "This wire fox terrier sniffed out clues for Nick and Nora Charles in the 'Thin Man' movies",
+     "Asta"
+    ],
+    [
+     "This talking Army mule starred in a series of 1950s comedies with Donald O'Connor",
+     "Francis",
+     "keep"
+    ]
+   ]
+  },
+  {
+   "pack": "easy",
+   "round": "jeopardy",
+   "name": "THE MOTOWN SOUND",
+   "twin": "HITSVILLE U.S.A.",
+   "rows": [
+    [
+     "Young Michael sang lead for this brother act from Gary, Indiana, on 'ABC' and 'I Want You Back'",
+     "the Jackson 5"
+    ],
+    [
+     "'Baby I Need Your Loving' and 'I Can't Help Myself (Sugar Pie, Honey Bunch)' were smashes for this Motown quartet",
+     "the Four Tops"
+    ],
+    [
+     "This Miracles frontman sang 'The Tracks of My Tears' and wrote 'My Guy'",
+     "Smokey Robinson",
+     "keep"
+    ],
+    [
+     "'Please Mr. Postman' gave Motown its first No. 1 pop hit in 1961, sung by this girl group",
+     "the Marvelettes"
+    ],
+    [
+     "With an $800 family loan, this former boxer built Motown Records in Detroit",
+     "Berry Gordy",
+     "keep"
+    ]
+   ]
+  }
+ ],
+ "singles": [
+  {
+   "pack": "original",
+   "round": "double",
+   "name": "DEEP SKY DIVING",
+   "oldResponse": "Andromeda",
+   "clue": "Our solar system sits in a spiral arm of this galaxy, seen from Earth as a pale band across a dark night sky",
+   "response": "the Milky Way",
+   "why": "Andromeda repeated FAR OUT #1 in the same round."
+  },
+  {
+   "pack": "original",
+   "round": "double",
+   "name": "A TAXING SITUATION",
+   "oldResponse": "the Boston Tea Party",
+   "clue": "'No taxation without' this, cried colonists angry at duties passed by a Parliament in which they had no seats",
+   "response": "representation",
+   "why": "The Boston Tea Party repeated UP IN ARMS #1 in the same round."
+  },
+  {
+   "pack": "original",
+   "round": "double",
+   "name": "A TAXING SITUATION",
+   "oldResponse": "the Whiskey Rebellion",
+   "clue": "In 1765 Parliament taxed the colonists' newspapers, legal papers and even playing cards with this measure, repealed within a year",
+   "response": "the Stamp Act",
+   "why": "The Whiskey Rebellion repeated UP IN ARMS #2 in the same round."
+  },
+  {
+   "pack": "original",
+   "round": "double",
+   "name": "DECIPHER ME THIS",
+   "oldResponse": "hieroglyphs",
+   "clue": "Carved on Viking memorial stones, the angular letters of the futhark alphabet go by this name, also a word for any mysterious sign",
+   "response": "runes",
+   "why": "The hieroglyphs clue told the same fact as THE WRITE STUFF #1 in the same round."
+  }
+ ]
+}

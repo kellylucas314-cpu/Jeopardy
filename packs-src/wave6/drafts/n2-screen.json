@@ -1,0 +1,302 @@
+[
+ {
+  "name": "DIRECTOR'S CUTS",
+  "clues": [
+   {
+    "clue": "After two decades of acclaimed films, this British-American director finally won his first Oscars for 2023's 'Oppenheimer'",
+    "response": "Christopher Nolan",
+    "value": 400
+   },
+   {
+    "clue": "This French-Canadian brought the sands of Arrakis to the screen in two 'Dune' films",
+    "response": "Denis Villeneuve",
+    "value": 800
+   },
+   {
+    "clue": "His 2022 film 'Nope' parked something hungry in the clouds above a California horse ranch",
+    "response": "Jordan Peele",
+    "value": 1200
+   },
+   {
+    "clue": "Kwan and Scheinert, the directing duo behind 2022's multiverse Best Picture, are billed together under this one-word name",
+    "response": "Daniels",
+    "value": 1600
+   },
+   {
+    "clue": "Her courtroom drama 'Anatomy of a Fall' won the Palme d'Or at Cannes in 2023",
+    "response": "Justine Triet",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ARTHOUSE RULES",
+  "clues": [
+   {
+    "clue": "Demi Moore's fading star injects a black-market serum to spawn a younger self in this 2024 satire",
+    "response": "The Substance",
+    "value": 400
+   },
+   {
+    "clue": "Brendan Fraser won an Oscar as a housebound 600-pound teacher in this 2022 drama",
+    "response": "The Whale",
+    "value": 800
+   },
+   {
+    "clue": "Childhood sweethearts from Seoul meet again in New York in this tender 2023 debut by Celine Song",
+    "response": "Past Lives",
+    "value": 1200
+   },
+   {
+    "clue": "'I just don't like you no more': Colin Farrell is dumped by his best friend on an Irish island in this 2022 film",
+    "response": "The Banshees of Inisherin",
+    "value": 1600
+   },
+   {
+    "clue": "A commandant's family gardens beside the wall of Auschwitz in this chilling 2023 Jonathan Glazer film",
+    "response": "The Zone of Interest",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "GOLDEN AGE, STILL GOING",
+  "clues": [
+   {
+    "clue": "Rich guests behave badly at luxury resorts in Hawaii, Sicily and Thailand in this HBO satire",
+    "response": "The White Lotus",
+    "value": 400
+   },
+   {
+    "clue": "This FX epic of feudal Japan, remade from a James Clavell novel, won a record 18 Emmys in 2024",
+    "response": "Shōgun",
+    "value": 800
+   },
+   {
+    "clue": "A 13-year-old is arrested for murder in this 2025 British drama, every episode filmed in one continuous take",
+    "response": "Adolescence",
+    "value": 1200
+   },
+   {
+    "clue": "Noah Wyle works one long shift in a Pennsylvania emergency room in this back-to-back Emmy winner",
+    "response": "The Pitt",
+    "value": 1600
+   },
+   {
+    "clue": "Seth Rogen is a movie executive in over his head in this Apple satire, the top comedy at the 2025 Emmys",
+    "response": "The Studio",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ENVELOPE, PLEASE",
+  "clues": [
+   {
+    "clue": "Troy Kotsur of 'CODA' became the first male actor who is this to win an Oscar",
+    "response": "deaf",
+    "value": 400
+   },
+   {
+    "clue": "Ke Huy Quan, a tearful winner in 2023, was a child star as Short Round in this 1984 adventure",
+    "response": "Indiana Jones and the Temple of Doom",
+    "value": 800
+   },
+   {
+    "clue": "This lanky redheaded talk-show veteran hosted the Oscars in both 2025 and 2026",
+    "response": "Conan O'Brien",
+    "value": 1200
+   },
+   {
+    "clue": "Sean Baker's four Oscars in one night for 'Anora' matched a 1954 feat by this studio founder",
+    "response": "Walt Disney",
+    "value": 1600
+   },
+   {
+    "clue": "In 2026 Cassandra Kulukundis won the first Oscar ever given for this behind-the-scenes job",
+    "response": "casting",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "JUMP SCARE CITY",
+  "clues": [
+   {
+    "clue": "A lifelike robot doll dances down a hallway before a kill in this 2023 hit spelled with a 3",
+    "response": "M3GAN",
+    "value": 400
+   },
+   {
+    "clue": "Michael B. Jordan plays twins who open a juke joint in vampire-ridden 1932 Mississippi in this 2025 smash",
+    "response": "Sinners",
+    "value": 800
+   },
+   {
+    "clue": "Amy Madigan won an Oscar as creepy Aunt Gladys in this 2025 film about a classroom of vanished children",
+    "response": "Weapons",
+    "value": 1200
+   },
+   {
+    "clue": "This director of 'The Witch' and 'The Lighthouse' remade the silent vampire classic 'Nosferatu' in 2024",
+    "response": "Robert Eggers",
+    "value": 1600
+   },
+   {
+    "clue": "Art the Clown slashes through this low-budget series, whose third film topped the box office in 2024",
+    "response": "Terrifier",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FROM PAGE TO PREMIERE",
+  "clues": [
+   {
+    "clue": "Blake Lively starred as florist Lily Bloom in this 2024 film of a Colleen Hoover bestseller",
+    "response": "It Ends with Us",
+    "value": 400
+   },
+   {
+    "clue": "A young Coriolanus Snow mentors a tribute in this 'Hunger Games' prequel, 'The Ballad of Songbirds and' these",
+    "response": "Snakes",
+    "value": 800
+   },
+   {
+    "clue": "Daisy Edgar-Jones played the 'Marsh Girl' in the 2022 film of this Delia Owens novel",
+    "response": "Where the Crawdads Sing",
+    "value": 1200
+   },
+   {
+    "clue": "Ryan Gosling wakes up alone on a spaceship, with a mission to save the Sun, in this 2026 film of an Andy Weir novel",
+    "response": "Project Hail Mary",
+    "value": 1600
+   },
+   {
+    "clue": "Jessie Buckley won the 2026 Best Actress Oscar as Shakespeare's wife in this film of a Maggie O'Farrell novel",
+    "response": "Hamnet",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "LIVE FROM NEW YORK AND ELSEWHERE",
+  "clues": [
+   {
+    "clue": "This NBC sketch institution marked its 50th season with a star-packed anniversary special in 2025",
+    "response": "Saturday Night Live",
+    "value": 400
+   },
+   {
+    "clue": "Trevor Noah stepped down in 2022 after seven years behind the desk of this Comedy Central news satire",
+    "response": "The Daily Show",
+    "value": 800
+   },
+   {
+    "clue": "Hollywood stopped work in 2023 when actors joined members of this union on the picket lines",
+    "response": "the Writers Guild",
+    "value": 1200
+   },
+   {
+    "clue": "After Alex Trebek died in 2020, this record-setting champion became a host of 'Jeopardy!'",
+    "response": "Ken Jennings",
+    "value": 1600
+   },
+   {
+    "clue": "On Christmas Day 2024 this streaming service carried its first NFL games, with Beyoncé at halftime",
+    "response": "Netflix",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "WORLD TOUR OF TELEVISION",
+  "clues": [
+   {
+    "clue": "Thieves in red jumpsuits and Dalí masks finished their run in 2021 in this Spanish Netflix series",
+    "response": "Money Heist",
+    "value": 400
+   },
+   {
+    "clue": "On a French Netflix hit, Omar Sy's thief Assane Diop models himself on this gentleman burglar of fiction",
+    "response": "Arsène Lupin",
+    "value": 800
+   },
+   {
+    "clue": "'Naatu Naatu', a dance-off from this Telugu-language epic, won the Best Song Oscar in 2023",
+    "response": "RRR",
+    "value": 1200
+   },
+   {
+    "clue": "This 2023 Japanese film won its 70-year-old monster franchise's first Oscar, for visual effects",
+    "response": "Godzilla Minus One",
+    "value": 1600
+   },
+   {
+    "clue": "The top-grossing film of 2025 worldwide was this Chinese animated sequel about a demon child",
+    "response": "Ne Zha 2",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SATURDAY MORNING, ALL WEEK",
+  "clues": [
+   {
+    "clue": "This Australian cattle-dog pup and her little sister Bingo became a worldwide preschool obsession",
+    "response": "Bluey",
+    "value": 400
+   },
+   {
+    "clue": "Sisters Vi and Jinx fight on opposite sides in this Netflix series based on League of Legends",
+    "response": "Arcane",
+    "value": 800
+   },
+   {
+    "clue": "J.K. Simmons voices Omni-Man, a superhero father with a dark secret, in this Amazon series",
+    "response": "Invincible",
+    "value": 1200
+   },
+   {
+    "clue": "Tanjiro and friends fight through the 'Infinity Castle' in a 2025 blockbuster from this anime",
+    "response": "Demon Slayer",
+    "value": 1600
+   },
+   {
+    "clue": "Hayao Miyazaki came out of retirement for this film, an Oscar winner in 2024",
+    "response": "The Boy and the Heron",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "THE ROLE OF A DECADE",
+  "clues": [
+   {
+    "clue": "She played a trapped Princess Diana over one Christmas in 2021's 'Spencer'",
+    "response": "Kristen Stewart",
+    "value": 400
+   },
+   {
+    "clue": "He directed himself as conductor Leonard Bernstein in 2023's 'Maestro'",
+    "response": "Bradley Cooper",
+    "value": 800
+   },
+   {
+    "clue": "She returned to leading roles as opera diva Maria Callas in 2024's 'Maria'",
+    "response": "Angelina Jolie",
+    "value": 1200
+   },
+   {
+    "clue": "She won an Emmy as Sydney, the ambitious sous-chef on 'The Bear'",
+    "response": "Ayo Edebiri",
+    "value": 1600
+   },
+   {
+    "clue": "He was nominated for an Oscar as civil rights organizer Bayard Rustin in 2023's 'Rustin'",
+    "response": "Colman Domingo",
+    "value": 2000
+   }
+  ]
+ }
+]

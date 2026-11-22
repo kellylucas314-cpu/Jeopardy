@@ -1,0 +1,187 @@
+{
+  "about": "Difficulty-ladder audit, Nov 12 2026. Each entry reorders one category's five clues so they climb; values stay on their rows and no clue text changes. 'order' lists the old row numbers in their new order. Found by reading 346 categories in full: 246 that a data check flagged (answers getting more familiar as the value rose) and 100 picked at random.",
+  "fixes": [
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "DECKED OUT",
+      "order": [
+        1,
+        5,
+        2,
+        3,
+        4
+      ],
+      "why": "The China clue names the Tang dynasty, so it was the easiest clue sitting on the top value.",
+      "done": "the joker|China|spades|Bicycle|hearts"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "SEA THE WORLD",
+      "order": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "why": "'This ocean' is a one-in-four guess; the Coral Sea two-step is the hardest.",
+      "done": "a rip current (riptide)|the equator|the Pacific (South Pacific)|the Gulf Stream|the Coral Sea"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "MEDIEVAL TIMES",
+      "order": [
+        3,
+        2,
+        1,
+        4,
+        5
+      ],
+      "why": "The Black Death is easier than a knight's squire.",
+      "done": "the Black Death|Magna Carta|a squire|the Crusades|Hastings (the Battle of Hastings)"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "TEE-RIFFIC",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "The albatross clue hands over 'rare seabird'; the oldest major is harder.",
+      "done": "a mulligan|the green jacket|the Moon|an albatross (double eagle)|the Open Championship (British Open)"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "DEVELOPING STORY",
+      "order": [
+        2,
+        5,
+        1,
+        3,
+        4
+      ],
+      "why": "Child labor and Life magazine are the easy ones; Mathew Brady was too hard to open on.",
+      "done": "child labor|Life|Mathew Brady|Henri Cartier-Bresson|Steve McCurry"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "DIAMOND MINDS",
+      "order": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "why": "A walk-off homer is everyday baseball talk; 'a can of corn' is the deep cut.",
+      "done": "Fenway Park|Wrigley Field|walk-off|Roberto Clemente|corn"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "JAPANESE MASTERS",
+      "order": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "why": "Three daughters and a Shakespeare tragedy give King Lear away; Ozu is the hard one.",
+      "done": "Seven Samurai|Hayao Miyazaki|King Lear|Rashomon|Yasujirō Ozu"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "THE TRANSLATORS",
+      "order": [
+        1,
+        5,
+        3,
+        2,
+        4
+      ],
+      "why": "The top clue named 'One Hundred Years of Solitude', so its author was a gift.",
+      "done": "the King James Version|Gabriel Garcia Marquez|Omar Khayyam|the Vulgate|seventy"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "SURROUNDED!",
+      "order": [
+        1,
+        4,
+        2,
+        3,
+        5
+      ],
+      "why": "Ceuta and Melilla belonging to Spain is easier than Lesotho's low point or Kaliningrad.",
+      "done": "Vatican City|Spain|Lesotho|Kaliningrad|Azerbaijan"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "CROWNS OF AFRICA",
+      "order": [
+        3,
+        2,
+        1,
+        4,
+        5
+      ],
+      "why": "Ras Tafari and the Rastafarians make Haile Selassie the opener; Mansa Musa sits mid-board.",
+      "done": "Haile Selassie|Shaka|Mansa Musa|Lesotho|Menelik II (Menelik)"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "CONSTITUTIONAL NUMBERS",
+      "order": [
+        1,
+        4,
+        2,
+        3,
+        5
+      ],
+      "why": "Two terms is the easiest answer on the board and sat on the second-highest value.",
+      "done": "the First (First Amendment)|two|the 19th (19th Amendment)|the 18th (18th Amendment)|the 27th (27th Amendment)"
+    },
+    {
+      "pack": "easy",
+      "round": "double",
+      "name": "WHITE COAT WONDERS",
+      "order": [
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      "why": "Darwin and the Beagle is easier than Salk testing his vaccine at home.",
+      "done": "Isaac Newton|Charles Darwin|Jonas Salk|Benjamin Spock (Dr. Spock)|Galileo"
+    },
+    {
+      "pack": "easy",
+      "round": "double",
+      "name": "LIFTOFF!",
+      "order": [
+        1,
+        4,
+        2,
+        3,
+        5
+      ],
+      "why": "John Glenn's return to space is easier than Laika or Gagarin's shout.",
+      "done": "the countdown|John Glenn|Laika|Yuri Gagarin|Alan Shepard"
+    }
+  ]
+}

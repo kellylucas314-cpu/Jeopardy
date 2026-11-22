@@ -1,0 +1,332 @@
+[
+ {
+  "name": "SWIFT JUSTICE",
+  "clues": [
+   {
+    "clue": "Her record-breaking run of stadium shows in 2023 and 2024 went by this name",
+    "response": "the Eras Tour",
+    "value": 200
+   },
+   {
+    "clue": "Fans made and traded these beaded wrist accessories by the armful at her concerts",
+    "response": "friendship bracelets",
+    "value": 400
+   },
+   {
+    "clue": "Starting in 2021 she re-recorded her old albums, tagging each with these two words in parentheses",
+    "response": "Taylor's Version",
+    "value": 600
+   },
+   {
+    "clue": "She announced this 2024 double album, 'The Tortured' these, while accepting a Grammy",
+    "response": "Poets Department",
+    "value": 800
+   },
+   {
+    "clue": "Her 2025 album 'The Life of a Showgirl' led with a single about 'The Fate of' this Hamlet character",
+    "response": "Ophelia",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HOT 100 PROOF",
+  "clues": [
+   {
+    "clue": "Miley Cyrus can buy herself these, she sang in the title of her 2023 smash",
+    "response": "flowers",
+    "value": 200
+   },
+   {
+    "clue": "Olivia Rodrigo's 2021 debut single was named for this card she had just earned",
+    "response": "a driver's license",
+    "value": 400
+   },
+   {
+    "clue": "Harry Styles spent 15 weeks at No. 1 in 2022 with this hit: 'You know it's not the same'",
+    "response": "As It Was",
+    "value": 600
+   },
+   {
+    "clue": "Shaboozey's 'A Bar Song' spent 19 weeks at No. 1 in 2024 with this boozy word in parentheses",
+    "response": "Tipsy",
+    "value": 800
+   },
+   {
+    "clue": "Lady Gaga and Bruno Mars face the end of the world together in this duet, 2025's biggest Hot 100 hit",
+    "response": "Die with a Smile",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "POP GIRL SUMMER",
+  "clues": [
+   {
+    "clue": "Sabrina Carpenter sang 'that's that me' this in a 2024 summer smash named for strong coffee",
+    "response": "Espresso",
+    "value": 200
+   },
+   {
+    "clue": "Charli XCX's lime-green 2024 album lent this one-word name to a whole summer",
+    "response": "Brat",
+    "value": 400
+   },
+   {
+    "clue": "This 'Midwest Princess' sang 'Good Luck, Babe!' and was the Grammys' Best New Artist of 2025",
+    "response": "Chappell Roan",
+    "value": 600
+   },
+   {
+    "clue": "Billie Eilish's 'Birds of a Feather' came from her 2024 album 'Hit Me Hard and' this",
+    "response": "Soft",
+    "value": 800
+   },
+   {
+    "clue": "Ariana Grande named her 2024 album 'Eternal' this, after a film about a spotless mind",
+    "response": "Sunshine",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "HALFTIME REPORT",
+  "clues": [
+   {
+    "clue": "Floating high above the field in red, Rihanna revealed she was this during her 2023 show",
+    "response": "pregnant",
+    "value": 200
+   },
+   {
+    "clue": "In 2025 this Compton rapper performed 'Not Like Us' at halftime, one week after the song won five Grammys",
+    "response": "Kendrick Lamar",
+    "value": 400
+   },
+   {
+    "clue": "This Puerto Rican star's 2026 set was sung almost entirely in Spanish, with Lady Gaga dropping in",
+    "response": "Bad Bunny",
+    "value": 600
+   },
+   {
+    "clue": "The 'Yeah!' singer roller-skated through his 2024 show in Las Vegas",
+    "response": "Usher",
+    "value": 800
+   },
+   {
+    "clue": "Dr. Dre, Snoop Dogg, Eminem and Mary J. Blige played the 2022 show at this new home of the Rams and Chargers",
+    "response": "SoFi Stadium",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BOOT SCOOTIN' CROSSOVER",
+  "clues": [
+   {
+    "clue": "Beyoncé went country in 2024 with this album whose title pairs a ranch hand with her married name",
+    "response": "Cowboy Carter",
+    "value": 200
+   },
+   {
+    "clue": "Luke Combs took this 1988 Tracy Chapman classic about escaping in an automobile back up the charts",
+    "response": "Fast Car",
+    "value": 400
+   },
+   {
+    "clue": "Morgan Wallen's 'Last Night' came from his 2023 album 'One Thing at' this",
+    "response": "a Time",
+    "value": 600
+   },
+   {
+    "clue": "This face-tattooed rapper went country in 2024, teaming with Morgan Wallen on 'I Had Some Help'",
+    "response": "Post Malone",
+    "value": 800
+   },
+   {
+    "clue": "Zach Bryan and Kacey Musgraves went to No. 1 in 2023 with a duet titled 'I Remember' this",
+    "response": "Everything",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "SEOUL MUSIC",
+  "clues": [
+   {
+    "clue": "'Butter' and 'Dynamite' were English-language No. 1 hits for this seven-member boy band",
+    "response": "BTS",
+    "value": 200
+   },
+   {
+    "clue": "Jennie, Jisoo, Rosé and Lisa make up this girl group that headlined Coachella in 2023",
+    "response": "Blackpink",
+    "value": 400
+   },
+   {
+    "clue": "Rosé teamed with Bruno Mars in 2024 for this hit named for a Korean drinking game",
+    "response": "APT.",
+    "value": 600
+   },
+   {
+    "clue": "The members of BTS paused the group in 2022 to complete this duty required of South Korean men",
+    "response": "military service",
+    "value": 800
+   },
+   {
+    "clue": "Jung Kook, the youngest member of BTS, sang 'Dreamers' at the opening of this 2022 sporting event in Qatar",
+    "response": "the World Cup",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "TICKETMASTER CLASS",
+  "clues": [
+   {
+    "clue": "U2 opened this giant LED-wrapped Las Vegas dome with a residency in 2023",
+    "response": "the Sphere",
+    "value": 200
+   },
+   {
+    "clue": "Beyoncé's 2023 world tour took the name of this dance-floor album of hers",
+    "response": "Renaissance",
+    "value": 400
+   },
+   {
+    "clue": "Brothers Liam and Noel ended a 15-year feud for this band's 2025 reunion tour",
+    "response": "Oasis",
+    "value": 600
+   },
+   {
+    "clue": "Instead of touring the mainland, Bad Bunny played a 2025 residency in this, his home island's capital",
+    "response": "San Juan",
+    "value": 800
+   },
+   {
+    "clue": "Adele spent many 'Weekends' from 2022 to 2024 singing at the Colosseum of this Las Vegas hotel",
+    "response": "Caesars Palace",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "GOLDEN GRAMOPHONES",
+  "clues": [
+   {
+    "clue": "This 'Bad Guy' singer won Song of the Year in 2024 for 'What Was I Made For?'",
+    "response": "Billie Eilish",
+    "value": 200
+   },
+   {
+    "clue": "This former One Direction member won Album of the Year in 2023 for an album named for his house",
+    "response": "Harry Styles",
+    "value": 400
+   },
+   {
+    "clue": "'Midnights' made Taylor Swift the first artist to win this top prize four times",
+    "response": "Album of the Year",
+    "value": 600
+   },
+   {
+    "clue": "In 2026 Bad Bunny's 'Debí Tirar Más Fotos' became the first Album of the Year sung in this language",
+    "response": "Spanish",
+    "value": 800
+   },
+   {
+    "clue": "Anderson .Paak and Bruno Mars borrowed 1970s soul style for this duo, which went four for four at the 2022 Grammys",
+    "response": "Silk Sonic",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "BARS & BEEFS",
+  "clues": [
+   {
+    "clue": "Kendrick Lamar's 'Not Like Us' was the knockout punch in his 2024 feud with this Toronto rapper",
+    "response": "Drake",
+    "value": 200
+   },
+   {
+    "clue": "Houston's 'Savage' and 'Hot Girl Summer' rapper, a Grammy Best New Artist, uses this equine stage name",
+    "response": "Megan Thee Stallion",
+    "value": 400
+   },
+   {
+    "clue": "In 2023 hip-hop celebrated this birthday, counted from a 1973 Bronx party thrown by DJ Kool Herc",
+    "response": "its 50th",
+    "value": 600
+   },
+   {
+    "clue": "In 2023 Missy Elliott became the first female rapper inducted into this Cleveland institution",
+    "response": "the Rock and Roll Hall of Fame",
+    "value": 800
+   },
+   {
+    "clue": "André 3000 of this Atlanta duo startled fans in 2023 with an album of flute music",
+    "response": "Outkast",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "STILL ROCKING",
+  "clues": [
+   {
+    "clue": "'Hackney Diamonds' in 2023 was this band's first album of new songs in 18 years",
+    "response": "the Rolling Stones",
+    "value": 200
+   },
+   {
+    "clue": "Dave Grohl's band carried on after the 2022 death of drummer Taylor Hawkins",
+    "response": "Foo Fighters",
+    "value": 400
+   },
+   {
+    "clue": "Måneskin, the glam rockers who won Eurovision in 2021, come from this country",
+    "response": "Italy",
+    "value": 600
+   },
+   {
+    "clue": "Software lifted John Lennon's voice off an old demo for this 2023 single billed as the last Beatles song",
+    "response": "Now and Then",
+    "value": 800
+   },
+   {
+    "clue": "Weeks before he died in 2025, Ozzy Osbourne played a farewell show in Birmingham with this band",
+    "response": "Black Sabbath",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "CALIENTE",
+  "clues": [
+   {
+    "clue": "The 'Hips Don't Lie' singer took aim at her soccer-star ex in a 2023 hit with producer Bizarrap",
+    "response": "Shakira",
+    "value": 200
+   },
+   {
+    "clue": "Karol G, who filled stadiums on her 'Mañana Será Bonito' tour, comes from Medellín in this country",
+    "response": "Colombia",
+    "value": 400
+   },
+   {
+    "clue": "Peso Pluma carried corridos tumbados, a style from this country, up the U.S. charts in 2023",
+    "response": "Mexico",
+    "value": 600
+   },
+   {
+    "clue": "This Spanish singer mixed flamenco with reggaeton on her 2022 album 'Motomami'",
+    "response": "Rosalía",
+    "value": 800
+   },
+   {
+    "clue": "The title of Bad Bunny's 'Un Verano Sin Ti', the biggest album of 2022, means 'A Summer Without' this",
+    "response": "You",
+    "value": 1000
+   }
+  ]
+ }
+]

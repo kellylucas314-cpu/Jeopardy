@@ -1,0 +1,302 @@
+[
+ {
+  "name": "ALBUM DROP",
+  "clues": [
+   {
+    "clue": "She followed her 2021 debut 'Sour' with 2023's 'Guts'",
+    "response": "Olivia Rodrigo",
+    "value": 400
+   },
+   {
+    "clue": "'30', released in 2021, was her first album in six years",
+    "response": "Adele",
+    "value": 800
+   },
+   {
+    "clue": "Her album 'SOS' spent ten weeks at No. 1 across late 2022 and 2023",
+    "response": "SZA",
+    "value": 1200
+   },
+   {
+    "clue": "'Planet Her' in 2021 made a superstar of this singer-rapper born Amala Dlamini",
+    "response": "Doja Cat",
+    "value": 1600
+   },
+   {
+    "clue": "'Stick Season', written in a Vermont winter, turned this folk-pop singer into an arena act",
+    "response": "Noah Kahan",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "TWO NAMES ON THE LABEL",
+  "clues": [
+   {
+    "clue": "Elton John scored his biggest hit in decades with 2021's 'Cold Heart', a duet with this 'Levitating' singer",
+    "response": "Dua Lipa",
+    "value": 400
+   },
+   {
+    "clue": "Justin Bieber's 2021 hit with Daniel Caesar and Giveon was named for these Georgia fruits",
+    "response": "Peaches",
+    "value": 800
+   },
+   {
+    "clue": "Lady Gaga and Ariana Grande danced through a downpour in this 2020 duet, 'Rain on' this",
+    "response": "Me",
+    "value": 1200
+   },
+   {
+    "clue": "Sam Smith's 2022 chart-topper 'Unholy' featured this German pop singer",
+    "response": "Kim Petras",
+    "value": 1600
+   },
+   {
+    "clue": "The 2026 Record of the Year, a Kendrick Lamar and SZA duet, borrows this first name of the late Mr. Vandross",
+    "response": "Luther",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "DOUZE POINTS",
+  "clues": [
+   {
+    "clue": "Kalush Orchestra won the 2022 contest for this country, three months after it was invaded",
+    "response": "Ukraine",
+    "value": 400
+   },
+   {
+    "clue": "Because the 2022 winner could not safely host, the 2023 contest moved to this hometown of the Beatles",
+    "response": "Liverpool",
+    "value": 800
+   },
+   {
+    "clue": "Loreen's second victory, in 2023, tied this country with Ireland at seven wins",
+    "response": "Sweden",
+    "value": 1200
+   },
+   {
+    "clue": "Nemo's 'The Code' won in 2024 for this Alpine country, host of the very first contest in 1956",
+    "response": "Switzerland",
+    "value": 1600
+   },
+   {
+    "clue": "Dara's 'Bangaranga' gave this Balkan country its first Eurovision win, at Vienna in 2026",
+    "response": "Bulgaria",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "WHAT'S IN A STAGE NAME?",
+  "clues": [
+   {
+    "clue": "Born Destiny Hope, this 'Flowers' singer made her childhood nickname legal in 2008",
+    "response": "Miley Cyrus",
+    "value": 400
+   },
+   {
+    "clue": "Bronx-born Belcalis Almánzar raps under this name taken from a rum brand",
+    "response": "Cardi B",
+    "value": 800
+   },
+   {
+    "clue": "Montero Hill rode an 'Old Town Road' to fame under this name",
+    "response": "Lil Nas X",
+    "value": 1200
+   },
+   {
+    "clue": "New Zealander Ella Yelich-O'Connor chose this aristocratic-sounding stage name",
+    "response": "Lorde",
+    "value": 1600
+   },
+   {
+    "clue": "Jaylah Hickmon, a Tampa rapper, won a 2025 Grammy under this name",
+    "response": "Doechii",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "CURTAIN UP ON BROADWAY",
+  "clues": [
+   {
+    "clue": "This former boy wizard won a Tony in 2024 for the revival of Sondheim's 'Merrily We Roll Along'",
+    "response": "Daniel Radcliffe",
+    "value": 400
+   },
+   {
+    "clue": "The pop musical 'Six' gives a microphone to each wife of this English king",
+    "response": "Henry VIII",
+    "value": 800
+   },
+   {
+    "clue": "Two retired 'Helperbots' fall for each other in this South Korean-born show, Best Musical of 2025",
+    "response": "Maybe Happy Ending",
+    "value": 1200
+   },
+   {
+    "clue": "The 2024 Best Musical was 'The Outsiders', from the 1967 novel this author wrote as a teenager",
+    "response": "S.E. Hinton",
+    "value": 1600
+   },
+   {
+    "clue": "Cole Escola wrote and starred as a boozy, stage-struck First Lady of 1865 in this 2024 farce",
+    "response": "Oh, Mary!",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "BACK FROM THE HIATUS",
+  "clues": [
+   {
+    "clue": "In 2021 this Swedish quartet released 'Voyage', its first album in 40 years",
+    "response": "ABBA",
+    "value": 400
+   },
+   {
+    "clue": "At 80, this Canadian songwriter gave her first Grammys performance in 2024, singing 'Both Sides Now'",
+    "response": "Joni Mitchell",
+    "value": 800
+   },
+   {
+    "clue": "Guitarist John Frusciante was back for this California band's 2022 album 'Unlimited Love'",
+    "response": "Red Hot Chili Peppers",
+    "value": 1200
+   },
+   {
+    "clue": "Robert Smith's band waited 16 years to release 'Songs of a Lost World' in 2024",
+    "response": "The Cure",
+    "value": 1600
+   },
+   {
+    "clue": "In 2026 this thrash band led by Dave Mustaine topped the album chart for the first time, with its farewell record",
+    "response": "Megadeth",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "SETTING THE SCORE",
+  "clues": [
+   {
+    "clue": "Billie Eilish and Finneas won an Oscar for the title theme of this Daniel Craig Bond finale",
+    "response": "No Time to Die",
+    "value": 400
+   },
+   {
+    "clue": "The 'Uptown Funk' producer co-wrote 'I'm Just Ken' for 'Barbie'",
+    "response": "Mark Ronson",
+    "value": 800
+   },
+   {
+    "clue": "Trent Reznor and Atticus Ross set this 2024 tennis love triangle to pounding techno",
+    "response": "Challengers",
+    "value": 1200
+   },
+   {
+    "clue": "Jon Batiste shared an Oscar for the music of this Pixar film about a jazz pianist's afterlife",
+    "response": "Soul",
+    "value": 1600
+   },
+   {
+    "clue": "He wrote the songs for 'Wicked' on Broadway and added new ones for the two-part film",
+    "response": "Stephen Schwartz",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "AFROBEATS AND BEYOND",
+  "clues": [
+   {
+    "clue": "Rema's global smash 'Calm Down' got a remix with this former Disney Channel star",
+    "response": "Selena Gomez",
+    "value": 400
+   },
+   {
+    "clue": "Burna Boy and Wizkid are stadium-filling stars from this country",
+    "response": "Nigeria",
+    "value": 800
+   },
+   {
+    "clue": "This South African singer's 2023 hit 'Water' came with its own hip-swiveling dance challenge",
+    "response": "Tyla",
+    "value": 1200
+   },
+   {
+    "clue": "CKay's viral 2021 hit was titled 'Love' this, an Igbo word meaning 'small'",
+    "response": "Nwantiti",
+    "value": 1600
+   },
+   {
+    "clue": "Rumbling log drums and slow piano chords mark this South African house style whose name suggests 'the pianos'",
+    "response": "amapiano",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "ROCKUMENTARY",
+  "clues": [
+   {
+    "clue": "Kingsley Ben-Adir played this reggae legend in the 2024 biopic 'One Love'",
+    "response": "Bob Marley",
+    "value": 400
+   },
+   {
+    "clue": "Naomi Ackie played this singer in 2022's 'I Wanna Dance with Somebody'",
+    "response": "Whitney Houston",
+    "value": 800
+   },
+   {
+    "clue": "Questlove's Oscar-winning 'Summer of Soul' unearthed footage of a 1969 festival in this New York neighborhood",
+    "response": "Harlem",
+    "value": 1200
+   },
+   {
+    "clue": "In 2024's 'Better Man', British pop star Robbie Williams is played by a computer-generated one of these",
+    "response": "a chimpanzee",
+    "value": 1600
+   },
+   {
+    "clue": "Jeremy Allen White played Bruce Springsteen in a 2025 film about the making of this stark 1982 album",
+    "response": "Nebraska",
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "name": "FOR THE RECORD BOOKS",
+  "clues": [
+   {
+    "clue": "Released in 1994, this Mariah Carey single has climbed back to No. 1 nearly every holiday season since 2019",
+    "response": "All I Want for Christmas Is You",
+    "value": 400
+   },
+   {
+    "clue": "In 2022 Taylor Swift became the first artist to fill the entire top ten of the Hot 100, thanks to this album",
+    "response": "Midnights",
+    "value": 800
+   },
+   {
+    "clue": "In 2021 Billboard named his 'Blinding Lights' the biggest Hot 100 hit of all time",
+    "response": "The Weeknd",
+    "value": 1200
+   },
+   {
+    "clue": "Elton John's farewell tour, the first to gross over $900 million, was named for this paved path to Oz",
+    "response": "the Yellow Brick Road",
+    "value": 1600
+   },
+   {
+    "clue": "In 2023 Beyoncé passed this Hungarian-born conductor for the most Grammy wins ever",
+    "response": "Georg Solti",
+    "value": 2000
+   }
+  ]
+ }
+]

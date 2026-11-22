@@ -1,0 +1,425 @@
+{
+  "about": "Full read of every category, Nov 12 2026 (the first pass read 346; this one read the rest, plus the recent shelf). Each entry reorders one category's five clues so they climb; values stay on their rows and no clue text changes. 'order' lists the old row numbers in their new order.",
+  "fixes": [
+    {
+      "pack": "recent",
+      "round": "jeopardy",
+      "name": "SMART STUFF",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "The Roomba clue is easier than the Shark Tank doorbell.",
+      "done": "Siri|Alexa|AirPods|the Roomba|Ring"
+    },
+    {
+      "pack": "recent",
+      "round": "double",
+      "name": "MUST BE THIS TALL",
+      "order": [
+        1,
+        5,
+        2,
+        3,
+        4
+      ],
+      "why": "The Universal clue is the second easiest, not the hardest.",
+      "done": "Splash Mountain|Universal|Super Nintendo World|the Guardians of the Galaxy|Tron"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "A WALK IN THE PARK",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "Denali is easier than Arches.",
+      "done": "Yellowstone|the Grand Canyon|Yosemite|Denali|Arches"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "NET WORTH",
+      "order": [
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "why": "Wilt's 100-point game is easier than the Minneapolis Lakers.",
+      "done": "three|Shaquille O'Neal|Wilt Chamberlain|Minneapolis|Springfield"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "IN YOUR BLOODSTREAM",
+      "order": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "why": "Plasma is the easiest of the last three.",
+      "done": "oxygen|hemoglobin|plasma|platelets|O negative (type O negative)"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "GROUP DYNAMICS",
+      "order": [
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "why": "Gladys Knight is easier than the Four Tops.",
+      "done": "the Supremes|the Temptations|Gladys Knight|the Four Tops|the Funk Brothers"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "WORLD OF INSECTS",
+      "order": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "why": "The mosquito is the easiest of the last three.",
+      "done": "a butterfly|(honey)bees|a mosquito|ants|a scarab (dung beetle)"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "REVOLTING DEVELOPMENTS",
+      "order": [
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "why": "Iran in 1979 is easier than Haiti in 1804.",
+      "done": "the Bastille|Russia|Iran|Haiti|the Velvet Revolution"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "STATE YOUR NAME",
+      "order": [
+        1,
+        4,
+        2,
+        3,
+        5
+      ],
+      "why": "Alaska is the second easiest.",
+      "done": "Arizona|Alaska|Montana|North Dakota|Tennessee"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "GRAVITY & OTHER ATTRACTIONS",
+      "order": [
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      "why": "Einstein is easier than air resistance.",
+      "done": "Isaac Newton|Albert Einstein|air resistance (drag)|the event horizon|falling"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "EVERYDAY MEDICINE",
+      "order": [
+        2,
+        3,
+        1,
+        4,
+        5
+      ],
+      "why": "Aspirin and antibiotics are easier than acetaminophen.",
+      "done": "aspirin|antibiotics|acetaminophen (paracetamol)|nonsteroidal anti-inflammatory drugs|diphenhydramine"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "PUP QUIZ",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "Laika is easier than the basenji.",
+      "done": "Dalmatian|Chihuahua|Siberian husky|Laika|basenji"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "CTRL + ALT + DELIGHT",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "Turing is easier than ENIAC.",
+      "done": "Microsoft|IBM|the floppy disk|Alan Turing|ENIAC"
+    },
+    {
+      "pack": "original",
+      "round": "jeopardy",
+      "name": "LOWER 48 LORE",
+      "order": [
+        3,
+        1,
+        2,
+        4,
+        5
+      ],
+      "why": "Key West and Florida is the easiest.",
+      "done": "Florida|California|Arizona|Maine|Washington"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "BIOMES OF THE WORLD",
+      "order": [
+        2,
+        1,
+        3,
+        5,
+        4
+      ],
+      "why": "The Amazon is the easiest, and taiga is easier than chaparral.",
+      "done": "the Amazon|the tundra|the steppe|the taiga (boreal forest)|chaparral (Mediterranean scrub)"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "LAB REPORT",
+      "order": [
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "why": "Hawking radiation is easier than Mohs hardness.",
+      "done": "nitrogen|Celsius|Stephen Hawking|hardness|Werner Heisenberg"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "POLYGLOT PAGES",
+      "order": [
+        2,
+        1,
+        3,
+        4,
+        5
+      ],
+      "why": "O Canada and French is the easiest.",
+      "done": "French|the Rosetta Stone|James Joyce|Vladimir Nabokov|Behistun"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "MACRO MANAGEMENT",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "Amino acids are easier than glycogen.",
+      "done": "protein|carbohydrates|fiber|amino acids|glycogen"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "WORLD RELIGIONS",
+      "order": [
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      "why": "Shinto is easier than Jainism.",
+      "done": "Islam|Shinto|Jainism|the Bahai Faith (Baha'i)|Mandaeism (Mandaeans)"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "INSECTS & THEIR KIN",
+      "order": [
+        2,
+        1,
+        3,
+        4,
+        5
+      ],
+      "why": "The mosquito is easier than the termite.",
+      "done": "the mosquito|the termite|the cicada|the scarab (dung beetle)|Arachnida (arachnids)"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "HOW A BILL BECOMES A HEADACHE",
+      "order": [
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "why": "Pork barrel is easier than the pocket veto.",
+      "done": "a veto|a filibuster|gerrymandering|pork barrel (pork)|a pocket veto"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "NUTRITION FACTS",
+      "order": [
+        1,
+        4,
+        2,
+        3,
+        5
+      ],
+      "why": "Sodium is easier than anemia and omega-3.",
+      "done": "calorie|sodium|anemia|omega-3|glycemic index"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "ANIMAL BEHAVIOR",
+      "order": [
+        3,
+        2,
+        1,
+        4,
+        5
+      ],
+      "why": "Hibernation and playing possum are easier than the waggle dance.",
+      "done": "hibernation|playing possum|the waggle dance|mutualism|imprinting"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "FAITH IN THE DETAILS",
+      "order": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "why": "Nirvana is easier than the Five Ks and Kabbalah.",
+      "done": "Ramadan|karma|nirvana|Sikhism|Kabbalah"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "ROCK SOLID",
+      "order": [
+        4,
+        1,
+        2,
+        3,
+        5
+      ],
+      "why": "Michelangelo's marble is the easiest.",
+      "done": "marble|igneous|the Mohs scale|basalt|olivine"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "VENUE, VIDI, VICI",
+      "order": [
+        1,
+        4,
+        3,
+        2,
+        5
+      ],
+      "why": "Chariot racing is a gimme, and Zaire is harder than Wembley.",
+      "done": "New York|chariot racing|Wembley|Zaire|Siena"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "PERSIA MAJEURE",
+      "order": [
+        2,
+        1,
+        3,
+        4,
+        5
+      ],
+      "why": "The 300 Spartans at Thermopylae are easier than Cyrus.",
+      "done": "Thermopylae|Cyrus the Great|Persepolis|the Royal Road|satraps"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "IRON CURTAIN CALLS",
+      "order": [
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      "why": "The Cuban Missile Crisis is easier than Fulton, Missouri.",
+      "done": "the Berlin Wall|the Cuban Missile Crisis|Missouri|Hungary|Helsinki"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "LIBERATORS & LAST EMPERORS",
+      "order": [
+        1,
+        2,
+        5,
+        4,
+        3
+      ],
+      "why": "Atahualpa's room of gold is easier than Pedro II.",
+      "done": "Simón Bolívar|Montezuma (Moctezuma II)|Atahualpa (Atahuallpa)|Benito Juárez|Pedro II (Dom Pedro II)"
+    },
+    {
+      "pack": "original",
+      "round": "double",
+      "name": "MONSOON SEASON",
+      "order": [
+        1,
+        3,
+        2,
+        4,
+        5
+      ],
+      "why": "Bali is easier than Java Man.",
+      "done": "Singapore|Bali|Java|Ha Long Bay (Halong Bay)|Brunei"
+    }
+  ]
+}

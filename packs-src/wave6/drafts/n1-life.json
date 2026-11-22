@@ -1,0 +1,302 @@
+[
+ {
+  "name": "DICTIONARY DARLINGS",
+  "clues": [
+   {
+    "clue": "Merriam-Webster's word for 2021 was this seven-letter word for a shot in the arm",
+    "response": "vaccine",
+    "value": 200
+   },
+   {
+    "clue": "Merriam-Webster's 2022 word, taken from a 1944 film title, means making someone doubt their own reality",
+    "response": "gaslighting",
+    "value": 400
+   },
+   {
+    "clue": "Oxford's word for 2023, this four-letter term for romantic charm is clipped from 'charisma'",
+    "response": "rizz",
+    "value": 600
+   },
+   {
+    "clue": "Oxford's 2024 choice, this two-word phrase describes a mind dulled by endless scrolling",
+    "response": "brain rot",
+    "value": 800
+   },
+   {
+    "clue": "Merriam-Webster's 2025 word, this four-letter term for pig feed came to mean low-quality AI-made content",
+    "response": "slop",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "APP-SOLUTELY",
+  "clues": [
+   {
+    "clue": "In 2023 Elon Musk replaced Twitter's name and blue bird with this single letter",
+    "response": "X",
+    "value": 200
+   },
+   {
+    "clue": "Launched in late 2022, this OpenAI chatbot reached 100 million users in about two months",
+    "response": "ChatGPT",
+    "value": 400
+   },
+   {
+    "clue": "Meta launched this text-based rival to Twitter, tied to Instagram accounts, in July 2023",
+    "response": "Threads",
+    "value": 600
+   },
+   {
+    "clue": "China's ByteDance built this short-video app that boomed during the 2020 lockdowns",
+    "response": "TikTok",
+    "value": 800
+   },
+   {
+    "clue": "A butterfly is the logo of this decentralized social network that began as a project inside Twitter",
+    "response": "Bluesky",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "ARTIFICIALLY INTELLIGENT",
+  "clues": [
+   {
+    "clue": "Sam Altman co-founded this San Francisco company whose chatbot kicked off the AI boom in 2022",
+    "response": "OpenAI",
+    "value": 200
+   },
+   {
+    "clue": "When a chatbot confidently invents facts, it is said to do this, like a person seeing things",
+    "response": "hallucinate",
+    "value": 400
+   },
+   {
+    "clue": "Demand for AI chips made this company, led by leather-jacketed Jensen Huang, one of the world's most valuable",
+    "response": "Nvidia",
+    "value": 600
+   },
+   {
+    "clue": "Former OpenAI researchers founded this company in 2021; its AI models are named Claude",
+    "response": "Anthropic",
+    "value": 800
+   },
+   {
+    "clue": "In 2024 AI pioneers John Hopfield and Geoffrey Hinton shared the Nobel Prize in this science",
+    "response": "Physics",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "THE NEW SPACE RACE",
+  "clues": [
+   {
+    "clue": "NASA's program to return astronauts to the Moon is named for this twin sister of Apollo",
+    "response": "Artemis",
+    "value": 200
+   },
+   {
+    "clue": "At 90, William Shatner flew to the edge of space in 2021 on a rocket from this Jeff Bezos company",
+    "response": "Blue Origin",
+    "value": 400
+   },
+   {
+    "clue": "In 2022 NASA's DART spacecraft deliberately smashed into one of these to nudge its path",
+    "response": "an asteroid",
+    "value": 600
+   },
+   {
+    "clue": "In 2024 SpaceX caught a returning booster of this giant rocket in midair with mechanical 'chopsticks'",
+    "response": "Starship",
+    "value": 800
+   },
+   {
+    "clue": "In 2021 this little NASA helicopter made the first powered flight on another planet",
+    "response": "Ingenuity",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "STONKS ONLY GO UP",
+  "clues": [
+   {
+    "clue": "Reddit traders sent shares of this video game retailer soaring in January 2021",
+    "response": "GameStop",
+    "value": 200
+   },
+   {
+    "clue": "In NFT, the digital collectible craze of 2021, the T stands for this",
+    "response": "token",
+    "value": 400
+   },
+   {
+    "clue": "Sam Bankman-Fried went to prison after the 2022 collapse of this crypto exchange",
+    "response": "FTX",
+    "value": 600
+   },
+   {
+    "clue": "A 2023 run on this Santa Clara lender to tech start-ups brought it down in two days",
+    "response": "Silicon Valley Bank",
+    "value": 800
+   },
+   {
+    "clue": "Demand for Ozempic and Wegovy made this Danish drugmaker Europe's most valuable company for a time",
+    "response": "Novo Nordisk",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "CROWNING ACHIEVEMENTS",
+  "clues": [
+   {
+    "clue": "King Charles III was crowned in May 2023 in this London church",
+    "response": "Westminster Abbey",
+    "value": 200
+   },
+   {
+    "clue": "Prince Harry's 2023 memoir bore this one-word title, the second half of 'the heir and the'",
+    "response": "Spare",
+    "value": 400
+   },
+   {
+    "clue": "In a 2022 sketch with Paddington Bear, the Queen pulled this kind of sandwich from her handbag",
+    "response": "marmalade",
+    "value": 600
+   },
+   {
+    "clue": "In June 2022 Britain threw a four-day party for this Jubilee, marking the Queen's 70 years on the throne",
+    "response": "Platinum",
+    "value": 800
+   },
+   {
+    "clue": "For the coronation, the Stone of Scone was brought to London from this Scottish fortress",
+    "response": "Edinburgh Castle",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "PEER REVIEWED",
+  "clues": [
+   {
+    "clue": "On April 8, 2024, millions from Texas to Maine put on special glasses to watch one of these",
+    "response": "a total solar eclipse",
+    "value": 200
+   },
+   {
+    "clue": "Ozempic, a blockbuster for weight loss, was first approved to treat type 2 of this disease",
+    "response": "diabetes",
+    "value": 400
+   },
+   {
+    "clue": "One of the first mRNA Covid vaccines came from Germany's BioNTech and this American drug giant",
+    "response": "Pfizer",
+    "value": 600
+   },
+   {
+    "clue": "In 2023 India's Chandrayaan-3 became the first spacecraft to land near this end of the Moon",
+    "response": "the south pole",
+    "value": 800
+   },
+   {
+    "clue": "In December 2022 a California lab's fusion shot first released more of this than its lasers delivered",
+    "response": "energy",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "THE YEAR EVERYTHING STOPPED",
+  "clues": [
+   {
+    "clue": "In 2020 office workers everywhere learned to say 'you're on mute' on this video-call app",
+    "response": "Zoom",
+    "value": 200
+   },
+   {
+    "clue": "Staying six feet apart from other people in 2020 went by this two-word name",
+    "response": "social distancing",
+    "value": 400
+   },
+   {
+    "clue": "Covid-19 was first identified in December 2019 in this city on China's Yangtze River",
+    "response": "Wuhan",
+    "value": 600
+   },
+   {
+    "clue": "This doctor, longtime head of the U.S. infectious disease institute, became the face of the American response",
+    "response": "Anthony Fauci",
+    "value": 800
+   },
+   {
+    "clue": "Variants were named for Greek letters; this one, the 15th letter, swept the world in late 2021",
+    "response": "Omicron",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "THE DECADE'S FRONT PAGES",
+  "clues": [
+   {
+    "clue": "In February 2022 Russia launched a full-scale invasion of this neighbor",
+    "response": "Ukraine",
+    "value": 200
+   },
+   {
+    "clue": "On January 6, 2021, a mob stormed this building as Congress met to certify the election",
+    "response": "the U.S. Capitol",
+    "value": 400
+   },
+   {
+    "clue": "In May 2025 Robert Prevost became the first American ever to hold this job",
+    "response": "pope",
+    "value": 600
+   },
+   {
+    "clue": "This Paris cathedral reopened in December 2024, five years after its great fire",
+    "response": "Notre-Dame",
+    "value": 800
+   },
+   {
+    "clue": "In December 2024 rebels swept into Damascus and ended the 24-year rule of this Syrian president",
+    "response": "Bashar al-Assad",
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "name": "NEW ON THE NIGHTSTAND",
+  "clues": [
+   {
+    "clue": "Britney Spears told her own story in a 2023 memoir titled 'The Woman in' this",
+    "response": "Me",
+    "value": 200
+   },
+   {
+    "clue": "Rebecca Yarros sent readers to a war college for dragon riders in a 2023 smash titled 'Fourth' this",
+    "response": "Wing",
+    "value": 400
+   },
+   {
+    "clue": "At 22, Amanda Gorman read her poem 'The Hill We Climb' at this January 2021 ceremony",
+    "response": "the presidential inauguration",
+    "value": 600
+   },
+   {
+    "clue": "Chemist Elizabeth Zott becomes a 1960s TV cooking star in this Bonnie Garmus bestseller",
+    "response": "Lessons in Chemistry",
+    "value": 800
+   },
+   {
+    "clue": "Barbara Kingsolver moved 'David Copperfield' to Appalachia in this novel, a 2023 Pulitzer winner",
+    "response": "Demon Copperhead",
+    "value": 1000
+   }
+  ]
+ }
+]
