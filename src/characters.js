@@ -1,7 +1,7 @@
 /**
  * The 13 player characters (public/assets/players/manifest.json).
  * Paths resolve against the manifest's own folder through the page's base URL,
- * so they work locally and under /Jeopardy/ on GitHub Pages.
+ * so they work locally and at any web address the game is served from.
  */
 
 const MANIFEST_URL = new URL('assets/players/manifest.json', document.baseURI);

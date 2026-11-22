@@ -29,6 +29,26 @@ export function isEnabled() {
   return enabled;
 }
 
+// A browser keeps a page silent until the first tap or key. Most sounds here answer a tap, so
+// they never notice. The ones nobody taps for (the title film) wait for that first touch: it
+// wakes the audio here, and until it has they stay quiet instead of piling up and all going
+// off at once when the sound does wake.
+let woken = false;
+if (typeof window !== 'undefined') {
+  const types = ['pointerup', 'click', 'keydown', 'touchend'];
+  const wake = () => {
+    woken = true;
+    if (enabled) ensureResumed();
+    for (const type of types) window.removeEventListener(type, wake, true);
+  };
+  for (const type of types) window.addEventListener(type, wake, { capture: true, passive: true });
+}
+
+/** May a sound play that nobody tapped for? Only once the browser lets this page be heard. */
+function heard() {
+  return enabled && woken && ensureResumed().state === 'running';
+}
+
 // A shared gentle low-pass keeps everything warm rather than piercing.
 let masterFilter = null;
 function master() {
@@ -158,3 +178,93 @@ export function playRoundTransition() {
     setTimeout(() => playTone(freq, 0.4, 'triangle', 0.15), i * 100);
   });
 }
+
+// ---- The title film: Napoleon clears the throne ----------------------------------------------
+// Kelly, Nov 12: "when he pushes the thing off the chair i think it should have a sound effect".
+// Three small sounds, each fired by the film as it passes the frame (see renderSetup): his hand
+// meets the card, the card finds the floor, the crown lands and skips. Made here like the rest,
+// so there is nothing to download, and kept soft: a prop falling over, not a crash.
+
+let noiseBuffer = null;
+function noiseSource(c) {
+  if (!noiseBuffer) {
+    noiseBuffer = c.createBuffer(1, c.sampleRate, c.sampleRate);
+    const data = noiseBuffer.getChannelData(0);
+    for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
+  }
+  const src = c.createBufferSource();
+  src.buffer = noiseBuffer;
+  return src;
+}
+
+/** A puff of filtered noise: the air of a swish, the pat of card on a floor. */
+function playNoise(duration, { filter = 'bandpass', from = 1000, to = from, q = 1, gain = 0.1, attack = 0.004, when = 0 } = {}) {
+  const c = ensureResumed();
+  const t = c.currentTime + when;
+  const src = noiseSource(c);
+  const f = c.createBiquadFilter();
+  f.type = filter;
+  f.Q.value = q;
+  f.frequency.setValueAtTime(from, t);
+  if (to !== from) f.frequency.exponentialRampToValueAtTime(to, t + duration);
+  const g = c.createGain();
+  g.gain.setValueAtTime(0.0001, t);
+  g.gain.exponentialRampToValueAtTime(gain, t + attack);
+  g.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+  src.connect(f);
+  f.connect(g);
+  g.connect(master());
+  src.start(t, Math.random() * 0.4);
+  src.stop(t + duration + 0.02);
+}
+
+/** A struck note: there at once, then falling away. A thump also drops in pitch as it goes. */
+function playStrike(freq, duration, { to = freq, gain = 0.1, type = 'sine', when = 0 } = {}) {
+  const c = ensureResumed();
+  const t = c.currentTime + when;
+  const osc = c.createOscillator();
+  const g = c.createGain();
+  osc.type = type;
+  osc.frequency.setValueAtTime(freq, t);
+  if (to !== freq) osc.frequency.exponentialRampToValueAtTime(to, t + duration);
+  g.gain.setValueAtTime(0.0001, t);
+  g.gain.exponentialRampToValueAtTime(gain, t + 0.003);
+  g.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+  osc.connect(g);
+  g.connect(master());
+  osc.start(t);
+  osc.stop(t + duration + 0.02);
+}
+
+/** The lunge and the shove: the air of his arm coming across, then his hand meeting the card. */
+export function playShove() {
+  if (!heard()) return;
+  playNoise(0.24, { from: 420, to: 2400, q: 0.9, gain: 0.13, attack: 0.11 });
+  playStrike(170, 0.15, { to: 70, gain: 0.2, when: 0.13 });
+}
+
+/** The card finds the floor on its corner, then slaps flat a moment later. */
+export function playCardLand() {
+  if (!heard()) return;
+  playNoise(0.07, { from: 1900, q: 1.1, gain: 0.13 });
+  playStrike(230, 0.07, { to: 140, gain: 0.1 });
+  playNoise(0.1, { filter: 'lowpass', from: 1100, q: 0.5, gain: 0.09, when: 0.36 });
+}
+
+/** The crown lands, skips twice and rings a little: thin gold on a hard floor. */
+export function playCrownLand() {
+  if (!heard()) return;
+  // one bell-ish clink is a handful of partials that do not line up; each skip is smaller and a touch off the last
+  const partials = [[1, 0.085], [1.47, 0.06], [2.09, 0.045], [2.56, 0.03], [3.12, 0.02]];
+  const skips = [[0, 1240, 1, 0.46], [0.14, 1300, 0.5, 0.3], [0.24, 1190, 0.28, 0.24]];
+  playStrike(420, 0.07, { to: 280, gain: 0.08 });   // the weight of it meeting the floor
+  for (const [when, base, level, ring] of skips) {
+    playNoise(0.022, { filter: 'highpass', from: 2200, q: 0.6, gain: 0.07 * level, attack: 0.002, when });
+    for (const [ratio, gain] of partials) {
+      playStrike(base * ratio, ring / Math.sqrt(ratio), { gain: gain * level, when });
+    }
+  }
+  // what is left ringing after it has stopped moving
+  playStrike(2592, 0.7, { gain: 0.02, when: 0.26 });
+}
+

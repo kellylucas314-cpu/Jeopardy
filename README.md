@@ -2,7 +2,7 @@
 
 A browser-based Jeopardy game built for game night — **play it here:**
 
-### 👉 https://kellylucas314-cpu.github.io/Jeopardy/
+### 👉 https://cluedetat.com/
 
 Share that link with friends and play on any device.
 
