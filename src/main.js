@@ -529,9 +529,9 @@ function syncMusicButton() {
   btn.classList.toggle('is-off', !on);
   btn.querySelector('.music-label').textContent = on ? 'Music on' : 'Music off';
   btn.title = on ? 'Turn the music off' : 'Turn the music on';
-  // On the menus it is a labelled pill in the top right. In the final round, the only part of
-  // the game with music, it shrinks to its note in the top left corner, which those screens
-  // keep clear for it (styles.css).
+  // On the menus it is a labelled pill in the top right. In the final round and on the results
+  // page it shrinks to its note in the top left corner, which those screens keep clear for it
+  // (styles.css).
   btn.classList.toggle('is-compact', music.asked() !== 'menu');
 }
 window.addEventListener('resize', () => { if (document.getElementById('music-button')) syncMusicButton(); });
@@ -542,7 +542,8 @@ document.addEventListener('scroll', (e) => {
   if (t === document.scrollingElement || t === document.body || t === app) document.body.classList.toggle('is-scrolled', (t?.scrollTop || 0) > 8);
 }, { capture: true, passive: true });
 // the only screens of the game itself with music (Kelly: "take the music out except for the
-// final"): it comes in with the final category and the engine stops it when the answers lock
+// final"): it comes in with the final category and the engine stops it when the answers lock.
+// The results page, once the game is over, has its own piece.
 const MUSIC_SCREENS = new Set(['final-category', 'final-wager', 'final-clue']);
 
 function render() {
@@ -565,9 +566,10 @@ function render() {
   // Board keyboard nav only lives on the board
   if (state.screen !== 'board') detachBoardKeys();
 
-  // Music by screen: the menu pieces on the title and the table, One Note Quiz through the
-  // final round, silence in between and after.
+  // Music by screen: one piece on the title and the table, One Note Quiz through the final
+  // round, another for the results page, silence through the game itself.
   if (MUSIC_SCREENS.has(state.screen)) { if (music.asked() !== 'think') music.play('think'); }
+  else if (state.screen === 'results') { if (music.asked() !== 'results') music.play('results'); }
   else if (state.screen !== 'setup' && music.asked()) music.stop(1.2);
 
   const draw = () => {

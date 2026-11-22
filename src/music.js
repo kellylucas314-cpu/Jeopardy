@@ -1,39 +1,53 @@
 /**
  * The music: Kelly's own recordings (Nov 12 2026), steered by her ear.
  *
- *   menu   three pieces take turns on the title and the "Who's playing?" table: "One Note
- *          Quiz" always first, then "Question and Answer" and an untitled evening recording
- *   think  "One Note Quiz" through the final round, until the answers are locked
+ *   menu     the title and the "Who's playing?" table: an untitled evening recording
+ *   think    "One Note Quiz" through the final round, until the answers are locked
+ *   results  the results page: "Quiz-Game Hook"
  *
- * The game itself (the board, the clues, the wagers) is silent: after a night with a faint
- * bed under it she said "take the music out except for the final... put the one note there".
+ * Each place has one piece, which comes round again after a breath. Moving from one place to
+ * the next (results back to the table), the old piece bows out before the new one eases in.
+ *
+ * Three pieces used to take turns in the menus. Kelly, Nov 12: "for the entry page just use the
+ * third song we dont need all 3... the one note can be for the final". The game itself (the
+ * board, the clues, the wagers) is silent: after a night with a faint bed under it she said
+ * "take the music out except for the final... put the one note there".
  *
  * Her brief: "not overwhelming.. not annoying... subtle", "softer please", and "a clear
- * button to turn it off". So the files are mastered very quiet (-32 to -34 LUFS), One Note
- * Quiz is 12% slower than she recorded it, the evening recording has its heavy beat tamed
- * (bass cut, hits rounded off), each piece eases in, and there is a breath between them. The
- * level is baked into the files because an iPhone ignores a page's volume setting. A
- * re-mastered file gets a new name (-m3, -m4...) so a browser never plays a cached older one.
+ * button to turn it off". So the files are mastered very quiet: One Note Quiz at -33.5 LUFS,
+ * and the evening recording at -40 LUFS, 6 dB under where it was, after "on the entry page
+ * make the music softer". One Note Quiz is 12% slower than she recorded it, the evening
+ * recording has its heavy beat tamed (bass cut, hits rounded off), each piece eases in, and
+ * there is a breath before it comes round again. The level is baked into the files because an
+ * iPhone ignores a page's volume setting. A re-mastered file gets a new name (-m3, -m4...) so
+ * a browser never plays a cached older one.
+ *
+ * "Quiz-Game Hook" came later the same day with a second piece ("more music"). Her placing:
+ * "title and whos playing should stay the same song... results yeah could play quix game hook.
+ * skip salong gambit". The Hook was half bass, so its low end is turned down to sit like the
+ * evening recording, and it is at -38 LUFS: under the final round, a little over the menus.
  *
  * Browsers only let sound start after a tap or a key, so play() before that is remembered
  * and begins on the first one. One <audio> element streams everything: nothing is fetched
  * until the music actually starts.
  */
 
-const QUIZ = './assets/music/one-note-quiz-m3.mp3';
 const TRACKS = {
-  menu: [QUIZ, './assets/music/question-and-answer-m3.mp3', './assets/music/evening-recording-m3.mp3'],
-  think: [QUIZ],
+  menu: ['./assets/music/evening-recording-m4.mp3'],
+  think: ['./assets/music/one-note-quiz-m3.mp3'],
+  results: ['./assets/music/quiz-game-hook-m1.mp3'],
 };
 const EASE_IN = 1.8;  // seconds from silence to the (quiet) full level
 // ms of rest between one piece and the next
-const BREATH = { menu: 1400, think: 1400 };
+const BREATH = { menu: 1400, think: 1400, results: 1400 };
+const BOW_OUT = 0.5;  // seconds the old piece takes to leave when the place changes
 
 let musicOn = true;   // the player's Music switch
 let unlocked = false; // a tap or a key has happened, so sound may start
 let wanted = null;    // what should be playing
 let playing = null;   // what is playing
 let resting = false;  // paused because the tab is hidden
+let leaving = false;  // the last place's piece is bowing out before the next one begins
 let el = null;
 let turn = -1;        // which of a mode's pieces played last
 let fadeTimer = 0;
@@ -92,6 +106,7 @@ function halt(seconds = 0.4) {
   breathTimer = 0;
   playing = null;
   resting = false;
+  leaving = false;
   if (!el || el.paused) { clearInterval(fadeTimer); fadeTimer = 0; return; }
   const a = el;
   fade(a, 0, seconds, () => a.pause());
@@ -107,6 +122,7 @@ function begin(mode) {
   turn = (turn + 1) % list.length;
   playing = mode;
   resting = false;
+  leaving = false;
   a.src = list[turn];
   if (fadable(a)) a.volume = 0;
   const ease = () => { if (playing === mode) fade(a, 1, EASE_IN); };
@@ -128,11 +144,20 @@ function sync() {
     if (resting) { resting = false; el.play()?.catch?.(() => { playing = null; }); }
     return;
   }
-  if (breathTimer) return; // between two pieces
+  if (leaving) return;     // the old piece is on its way out; the new one follows it
+  if (playing && el && !el.paused) {
+    // another place's piece is on: it bows out, then this place's begins
+    leaving = true;
+    clearTimeout(breathTimer);
+    breathTimer = 0;
+    fade(el, 0, BOW_OUT, () => { leaving = false; playing = null; el.pause(); sync(); });
+    return;
+  }
+  if (breathTimer) return; // the breath before a piece comes round again
   begin(wanted);
 }
 
-/** Ask for music: 'menu' (title and table) or 'think' (the final round). */
+/** Ask for music: 'menu' (title and table), 'think' (the final round) or 'results'. */
 export function play(mode) {
   if (!TRACKS[mode]) return;
   if (wanted !== mode) { clearTimeout(breathTimer); breathTimer = 0; }
